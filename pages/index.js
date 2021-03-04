@@ -41,16 +41,16 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Networklist</title>
+        <title>Chainlist</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.main}>
         <div className={ classes.container }>
           <div className={ classes.copyContainer }>
-            <Typography variant='h1' className={ classes.chainListSpacing }>Networklist</Typography>
+            <Typography variant='h1' className={ classes.chainListSpacing }>Chainlist</Typography>
             <Typography variant='h4' className={ classes.helpignParagraph }><span className={ classes.helpingUnderline }>Helping users</span> connect to EVM powered networks</Typography>
-            <Typography variant='h5'>Networklist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
+            <Typography variant='h5'>Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
             <Button
               color='primary'
               variant='contained'
@@ -106,7 +106,7 @@ export default function Home(props) {
 }
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps  = async () => {
 
   try {
     const chainsResponse = await fetch('https://chainid.network/chains.json')
