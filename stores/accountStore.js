@@ -49,28 +49,28 @@ class Store {
   };
 
   configure = async () => {
-    if (window.ethereum) {
-      window.web3 = new Web3(ethereum);
-      try {
-        await ethereum.enable();
-        var accounts= await web3.eth.getAccounts();
-        this.setStore({ account: { address: accounts[0] }, web3: window.web3 })
-        this.emitter.emit(ACCOUNT_CONFIGURED)
-      } catch (error) {
-        // User denied account access...
-      }
-
-      this.updateAccount()
-
-    } else if (window.web3) {
-      window.web3 = new Web3(web3.currentProvider);
-      // Acccounts always exposed
-      web3.eth.sendTransaction({/* ... */});
-    }
-    // Non-dapp browsers...
-    else {
-      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
-    }
+    // if (window.ethereum) {
+    //   window.web3 = new Web3(ethereum);
+    //   try {
+    //     await ethereum.enable();
+    //     var accounts= await web3.eth.getAccounts();
+    //     this.setStore({ account: { address: accounts[0] }, web3: window.web3 })
+    //     this.emitter.emit(ACCOUNT_CONFIGURED)
+    //   } catch (error) {
+    //     // User denied account access...
+    //   }
+    //
+    //   this.updateAccount()
+    //
+    // } else if (window.web3) {
+    //   window.web3 = new Web3(web3.currentProvider);
+    //   // Acccounts always exposed
+    //   web3.eth.sendTransaction({/* ... */});
+    // }
+    // // Non-dapp browsers...
+    // else {
+    //   console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+    // }
   };
 
   updateAccount = () => {
