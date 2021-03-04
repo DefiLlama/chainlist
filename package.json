@@ -1,5 +1,5 @@
 {
-  "name": "test-get-initial-props",
+  "name": "chainlist",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "flux": "^4.0.1",
     "next": "10.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "web3": "^1.3.4"
   }
 }

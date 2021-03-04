@@ -1,0 +1,19 @@
+.chainContainer {
+  width: 100%;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.addButton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name {
+  margin-bottom: 24px !important;
+}
+
+.dataPoint {
+  margin-bottom: 12px;
+}

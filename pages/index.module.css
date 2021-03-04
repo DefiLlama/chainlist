@@ -1,0 +1,73 @@
+.container {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 48px;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+.copyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 10rem;
+  height: fit-content;
+  justify-content: center;
+  top: 16rem;
+}
+
+
+.listContainer {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 48px;
+  align-items: flex-start;
+}
+
+.chainListSpacing {
+  margin-bottom: 12px !important;
+}
+
+.helpingUnderline {
+  color: #2F80ED;
+}
+
+.helpignParagraph {
+  margin-bottom: 48px !important;
+}
+
+.addNetworkButton {
+  margin-top: 12px !important;
+  width: fit-content;
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 18px;
+}
+
+.searchContainer {
+  margin-right: 24px !important;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .copyContainer {
+    position: relative;
+    top: 0px;
+    min-height: calc(100vh - 100px);
+  }
+
+  .listContainer {
+
+  }
+}

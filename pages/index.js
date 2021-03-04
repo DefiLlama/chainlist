@@ -1,65 +1,167 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import path from 'path'
+import {
+  Grid,
+  Typography,
+  Button,
+  TextField,
+  InputAdornment
+} from '@material-ui/core'
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import Chain from '../components/chain'
 
-export default function Home() {
+import SearchIcon from '@material-ui/icons/Search';
+import AppsIcon from '@material-ui/icons/Apps';
+import ListIcon from '@material-ui/icons/List';
+
+import classes from './index.module.css'
+
+export default function Home(props) {
+  const [ layout, setLayout ] = useState('grid')
+  const [ search, setSearch ] = useState('')
+
+  const onSearchChanged = (event) => {
+    setSearch(event.target.value)
+  }
+
+  const handleLayoutChanged = (event, newVal) => {
+    if(newVal !== null) {
+      setLayout(newVal)
+      localStorage.setItem('yearn.finance-invest-layout', newVal ? newVal : '')
+    }
+  }
+
+  const addNetwork = () => {
+    window.open('https://github.com/ethereum-lists/chains', '_blank')
+  }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Chainlist</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={ classes.container }>
+          <div className={ classes.copyContainer }>
+            <Typography variant='h1' className={ classes.chainListSpacing }>Chainlist</Typography>
+            <Typography variant='h4' className={ classes.helpignParagraph }><span className={ classes.helpingUnderline }>Helping users</span> connect to EVM powered networks</Typography>
+            <Typography variant='h5'>Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
+            <Button
+              color='primary'
+              variant='contained'
+              className={ classes.addNetworkButton }
+              onClick={ addNetwork }
+            >
+              Add Your Network
+            </Button>
+          </div>
+          <Grid container spacing={4} className={ classes.listContainer }>
+            <div className={ classes.filterRow }>
+              <TextField
+                className={ classes.searchContainer }
+                variant="outlined"
+                placeholder="ETH, Fantom, ..."
+                value={ search }
+                onChange={ onSearchChanged }
+                InputProps={{
+                  startAdornment: <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>,
+                }}
+              />
+              {/*<ToggleButtonGroup className={ classes.layoutToggleButtons } value={ layout } onChange={ handleLayoutChanged } exclusive >
+                <ToggleButton className={ classes.layoutToggleButton } value={ 'grid' }>
+                  <AppsIcon />
+                </ToggleButton>
+                <ToggleButton className={ classes.layoutToggleButton } value={ 'list' }>
+                  <ListIcon />
+                </ToggleButton>
+            </ToggleButtonGroup>*/}
+            </div>
+            {
+              props.chains.filter((chain) => {
+                if(search === '') {
+                  return true
+                } else {
+                  //filter
+                  return (chain.chain.toLowerCase().includes(search.toLowerCase()) ||
+                  chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
+                  chain.name.toLowerCase().includes(search.toLowerCase()) ||
+                  (chain.nativeCurrency ? chain.nativeCurrency.symbol : '').toLowerCase().includes(search.toLowerCase()))
+                }
+              }).map((chain) => {
+                return <Chain chain={ chain } />
+              })
+            }
+          </Grid>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
+
+
+export const getServerSideProps = async () => {
+
+  try {
+    const chainsResponse = await fetch('https://chainid.network/chains.json')
+    const chainsJson = await chainsResponse.json()
+
+    return {
+      props: {
+        chains: chainsJson
+      }
+    }
+  } catch (ex) {
+    return {
+      props: {
+        chains: []
+      }
+    }
+  }
+
+}
+//
+// export const getStaticProps = async () => {
+//
+//   try {
+//
+//
+//     const chainsDirectory = path.join(process.cwd(), '/public/chains')
+//     const filenames = await fs.readdir(chainsDirectory)
+//
+//     const chains = filenames.map(async (filename) => {
+//       try {
+//         const filePath = path.join(chainsDirectory, filename)
+//         const fileContents = await fs.readFile(filePath, 'utf8')
+//         const fileContentsJson = JSON.parse(fileContents)
+//         return {
+//           filename,
+//           content: fileContentsJson,
+//         }
+//       } catch(ex) {
+//         return null
+//       }
+//
+//     })
+//
+//     return {
+//       props: {
+//         chains: await Promise.all(chains),
+//       },
+//     }
+//   } catch (ex) {
+//     console.log(ex)
+//     return {
+//       props: {
+//         chains: []
+//       }
+//     }
+//   }
+//
+// }
