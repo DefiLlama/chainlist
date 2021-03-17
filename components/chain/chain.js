@@ -46,6 +46,14 @@ export default function Chain({ chain }) {
     })
   }
 
+  const renderProviderText = () => {
+    if (typeof window !== "undefined") {
+      if (window.ethereum.isMetaMask) return 'Add to Metamask'
+      if (window.ethereum.isImToken) return 'Add to imToken'
+    }
+    return 'Add to Wallet'
+  }
+
   if(!chain) {
     return <div></div>
   }
@@ -68,7 +76,7 @@ export default function Chain({ chain }) {
             color='primary'
             onClick={ addToNetwork }
           >
-            Add to Metamask
+            { renderProviderText() }
           </Button>
         </div>
       </Paper>
