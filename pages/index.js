@@ -115,7 +115,8 @@ export const getStaticProps  = async () => {
     return {
       props: {
         chains: chainsJson
-      }
+      },
+      revalidate: 60,
     }
   } catch (ex) {
     return {
