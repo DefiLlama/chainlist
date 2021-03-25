@@ -6,6 +6,7 @@ import Web3 from 'web3';
 import classes from './chain.module.css'
 
 import stores from '../../stores/index.js'
+import { getProvider } from '../../utils'
 
 import {
   ERROR,
@@ -47,11 +48,12 @@ export default function Chain({ chain }) {
   }
 
   const renderProviderText = () => {
-    if (typeof window !== "undefined") {
-      if (window.ethereum.isMetaMask) return 'Add to Metamask'
-      if (window.ethereum.isImToken) return 'Add to imToken'
+    const providerTextList = {
+      Metamask: 'Add to Metamask',
+      imToken: 'Add to imToken',
+      Wallet: 'Add to Wallet'
     }
-    return 'Add to Wallet'
+    return providerTextList[getProvider()]
   }
 
   if(!chain) {

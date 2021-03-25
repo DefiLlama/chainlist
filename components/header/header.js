@@ -17,7 +17,7 @@ import {
 // import Unlock from '../unlock'
 
 import stores from '../../stores'
-import { formatAddress } from '../../utils'
+import { formatAddress, getProvider } from '../../utils'
 
 import classes from './header.module.css'
 
@@ -113,6 +113,15 @@ function Header(props) {
     stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET })
   }
 
+  const renderProviderLogo = () => {
+    const providerLogoList = {
+      Metamask: 'metmask',
+      imToken: 'imtoken',
+      Wallet: 'metamask',
+    }
+    return providerLogoList[getProvider()]
+  }
+
   useEffect(function() {
     const localStorageDarkMode = window.localStorage.getItem('yearn.finance-dark-mode')
     setDarkMode(localStorageDarkMode ? localStorageDarkMode === 'dark' : false)
@@ -148,7 +157,7 @@ function Header(props) {
         color='secondary'
         onClick={ onAddressClicked }
         >
-        { account && account.address && <div className={ `${classes.accountIcon} ${classes.metamask}` }></div>}
+        { account && account.address && <div className={ `${classes.accountIcon} ${classes[renderProviderLogo()]}` }></div>}
         <Typography variant='h5'>{ (account && account.address)? formatAddress(account.address) : 'Connect Wallet' }</Typography>
       </Button>
     </div>
