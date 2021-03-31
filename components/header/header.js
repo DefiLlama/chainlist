@@ -81,9 +81,7 @@ function Header(props) {
 
   useEffect(() => {
     const accountConfigure = () => {
-      console.log('accountConfigure')
       const accountStore = stores.accountStore.getStore('account')
-      console.log(accountStore)
       setAccount(accountStore)
     }
     const connectWallet = () => {
@@ -126,8 +124,6 @@ function Header(props) {
     const localStorageDarkMode = window.localStorage.getItem('yearn.finance-dark-mode')
     setDarkMode(localStorageDarkMode ? localStorageDarkMode === 'dark' : false)
   },[]);
-
-  console.log(account)
 
   return (
     <div className={ classes.headerContainer }>

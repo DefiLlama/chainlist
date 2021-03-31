@@ -24,7 +24,6 @@ class Store {
 
     dispatcher.register(
       function (payload) {
-        console.log(payload)
         switch (payload.type) {
           case CONFIGURE:
             this.configure(payload);
@@ -103,11 +102,10 @@ class Store {
     if (window.ethereum) {
       window.web3 = new Web3(ethereum);
       try {
-          await ethereum.enable();
-          var accounts= await web3.eth.getAccounts();
-          console.log(accounts)
-          this.setStore({ account: { address: accounts[0] }, web3: window.web3 })
-          this.emitter.emit(ACCOUNT_CONFIGURED)
+        await ethereum.enable();
+        var accounts= await web3.eth.getAccounts();
+        this.setStore({ account: { address: accounts[0] }, web3: window.web3 })
+        this.emitter.emit(ACCOUNT_CONFIGURED)
       } catch (error) {
           // User denied account access...
       }
@@ -115,8 +113,9 @@ class Store {
     // Legacy dapp browsers...
     else if (window.web3) {
       window.web3 = new Web3(web3.currentProvider);
-      // Acccounts always exposed
-      web3.eth.sendTransaction({/* ... */});
+      var accounts= await web3.eth.getAccounts();
+      this.setStore({ account: { address: accounts[0] }, web3: window.web3 })
+      this.emitter.emit(ACCOUNT_CONFIGURED)
     }
     // Non-dapp browsers...
     else {

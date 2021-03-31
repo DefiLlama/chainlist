@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Typography, Paper, Grid, Button } from '@material-ui/core'
 import Skeleton from '@material-ui/lab/Skeleton';
 import { useRouter } from 'next/router'
@@ -10,16 +11,41 @@ import { getProvider } from '../../utils'
 
 import {
   ERROR,
+  CONNECT_WALLET,
+  TRY_CONNECT_WALLET,
+  ACCOUNT_CONFIGURED
 } from '../../stores/constants'
 
 export default function Chain({ chain }) {
   const router = useRouter()
+
+  const [ account, setAccount ] = useState(null)
+
+  useEffect(() => {
+    const accountConfigure = () => {
+      const accountStore = stores.accountStore.getStore('account')
+      setAccount(accountStore)
+    }
+
+    stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure)
+
+    const accountStore = stores.accountStore.getStore('account')
+    setAccount(accountStore)
+
+    return () => {
+      stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure)
+    }
+  }, [])
 
   const toHex = (num) => {
     return '0x'+num.toString(16)
   }
 
   const addToNetwork = () => {
+    if(!(account && account.address)) {
+      stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET })
+      return
+    }
 
     const params = {
       chainId: toHex(chain.chainId), // A 0x-prefixed hexadecimal string
@@ -48,12 +74,18 @@ export default function Chain({ chain }) {
   }
 
   const renderProviderText = () => {
-    const providerTextList = {
-      Metamask: 'Add to Metamask',
-      imToken: 'Add to imToken',
-      Wallet: 'Add to Wallet'
+
+    if(account && account.address) {
+      const providerTextList = {
+        Metamask: 'Add to Metamask',
+        imToken: 'Add to imToken',
+        Wallet: 'Add to Wallet'
+      }
+      return providerTextList[getProvider()]
+    } else {
+      return 'Connect wallet'
     }
-    return providerTextList[getProvider()]
+
   }
 
   if(!chain) {

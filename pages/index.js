@@ -142,7 +142,7 @@ function Home({ chains, changeTheme, theme }) {
                 </svg>
                 <Typography variant='body1' className={ classes.sourceCode }>View Source Code</Typography>
               </a>
-              <Typography variant='subtitle1' className={ classes.version }>Version 1.0.2</Typography>
+              <Typography variant='subtitle1' className={ classes.version }>Version 1.0.3</Typography>
             </div>
           </div>
           <div className={ theme.palette.type === 'dark' ? classes.listContainerDark : classes.listContainer }>
