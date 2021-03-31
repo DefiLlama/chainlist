@@ -96,7 +96,16 @@ export default function Chain({ chain }) {
   return (
     <Paper elevation={ 1 } className={ classes.chainContainer } key={ chain.chainId }>
       <div className={ classes.chainNameContainer }>
-        <img src='/connectors/icn-imtoken.svg' width={ 28 } height={ 28 } className={ classes.avatar } />
+        <img
+          src='/connectors/icn-asd.svg'
+          onError={e => {
+            e.target.onerror = null;
+            e.target.src = "/chains/unknown-logo.png";
+          }}
+          width={ 28 }
+          height={ 28 }
+          className={ classes.avatar }
+        />
         <Typography variant='h3' className={ classes.name } noWrap>{ chain.name }</Typography>
       </div>
       <div className={ classes.chainInfoContainer }>
