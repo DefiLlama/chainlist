@@ -24,6 +24,16 @@ const theme = createMuiTheme({
   },
   overrides: {
     ...coreTheme.overrides,
+    MuiButton: {
+      ...coreTheme.overrides.MuiButton,
+      outlinedPrimary: {
+        border: '1px solid #EAEAEA',
+        "&:hover": {
+          backgroundColor: '#2F80ED !important',
+          color: '#fff'
+        }
+      }
+    },
     MuiInputBase: {
       ...coreTheme.overrides.MuiInputBase,
       root: {

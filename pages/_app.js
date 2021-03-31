@@ -20,7 +20,15 @@ function MyApp({ Component, pageProps }) {
 
   const changeTheme = (dark) => {
     setThemeConfig(dark ? darkTheme : lightTheme)
+    localStorage.setItem("yearn.finance-dark-mode", dark ? "dark" : "light");
   }
+
+  useEffect(function() {
+    const localStorageDarkMode = window.localStorage.getItem(
+      "yearn.finance-dark-mode"
+    );
+    changeTheme(localStorageDarkMode ? localStorageDarkMode === "dark" : false);
+  }, []);
 
   useEffect(function() {
     stores.dispatcher.dispatch({ type: CONFIGURE })
