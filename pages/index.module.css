@@ -41,7 +41,6 @@
   background: linear-gradient(#f3f3f3 90%, transparent 100%);
   padding: 24px 80px 48px 80px;
   z-index: 1;
-  width: 100%;
 }
 
 .headerContainerDark {
@@ -56,7 +55,6 @@
   background: linear-gradient(#23252E 90%, transparent 100%);
   padding: 24px 80px 48px 80px;
   z-index: 1;
-  width: 100%;
 }
 
 .listContainer {
@@ -78,8 +76,9 @@
 .cardsContainer {
   padding: 0px 80px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: calc(33% - 15px) calc(33% - 15px) calc(33% - 15px);
   gap: 30px;
+  max-width: 1400px;
 }
 
 .chainListSpacing {
@@ -154,12 +153,16 @@
 
 @media screen and (max-width: 1700px) {
   .cardsContainer {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   .container {
+    grid-template-columns: 500px calc(100vw - 517px);
+  }
+
+  .containerDark {
     grid-template-columns: 500px calc(100vw - 517px);
   }
 
@@ -172,8 +175,13 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerDark {
     display: flex;
     flex-direction: column;
   }
@@ -181,15 +189,28 @@
   .copyContainer {
     position: relative;
     top: 0px;
-    min-height: calc(100vh - 100px);
+    min-height: 100vh;
   }
 
   .listContainer {
+    width: calc(100vw - 17px);
+    padding: 0px;
+  }
 
+  .listContainerDark {
+    width: calc(100vw - 17px);
+    padding: 0px;
   }
 
   .socials {
     position: relative;
     margin-top: 2em;
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardsContainer {
+    grid-template-columns: 100%;
   }
 }

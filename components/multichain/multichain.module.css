@@ -51,3 +51,23 @@
   align-items: center;
   justify-content: space-between;
 }
+
+
+@media screen and (max-width: 1700px) {
+  .chainContainer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .chainContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
