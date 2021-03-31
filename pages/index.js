@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { withTheme } from '@material-ui/core/styles';
+import { withTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import path from 'path'
 import {
   Grid,
@@ -24,7 +24,59 @@ import AddIcon from '@material-ui/icons/Add';
 
 import classes from './index.module.css'
 
-function Home({ chains, changeTheme }) {
+const searchTheme = createMuiTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#2F80ED',
+    },
+  },
+  shape: {
+    borderRadius: '10px'
+  },
+  typography: {
+    fontFamily: [
+      'Inter',
+      'Arial',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    body1: {
+      fontSize: '12px'
+    }
+  },
+  overrides: {
+    MuiPaper: {
+      elevation1: {
+        "box-shadow": '0px 7px 7px #0000000A;',
+        "-webkit-box-shadow": '0px 7px 7px #0000000A;',
+        "-moz-box-shadow": '0px 7px 7px #0000000A;',
+      }
+    },
+    MuiInputBase: {
+      input: {
+        fontSize: '14px'
+      },
+    },
+    MuiOutlinedInput: {
+      input: {
+        padding: '12.5px 14px'
+      },
+      notchedOutline: {
+        borderColor: "#FFF",
+      }
+    },
+  },
+});
+
+function Home({ chains, changeTheme, theme }) {
   const [ layout, setLayout ] = useState('grid')
   const [ search, setSearch ] = useState('')
   const [ hideMultichain, setHideMultichain ] = useState('1')
@@ -66,7 +118,7 @@ function Home({ chains, changeTheme }) {
       </Head>
 
       <main className={styles.main}>
-        <div className={ classes.container }>
+      <div className={ theme.palette.type === 'dark' ? classes.containerDark : classes.container }>
           <div className={ classes.copyContainer }>
             <div className={ classes.copyCentered }>
               <Typography variant='h1' className={ classes.chainListSpacing }><span className={ classes.helpingUnderline }>Chainlist</span></Typography>
@@ -93,29 +145,31 @@ function Home({ chains, changeTheme }) {
               <Typography variant='subtitle1' className={ classes.version }>Version 1.0.2</Typography>
             </div>
           </div>
-          <div className={ classes.listContainer }>
-            <div className={ classes.headerContainer }>
+          <div className={ theme.palette.type === 'dark' ? classes.listContainerDark : classes.listContainer }>
+            <div className={ theme.palette.type === 'dark' ? classes.headerContainerDark : classes.headerContainer }>
               <div className={ classes.filterRow }>
-                <Paper className={ classes.searchPaper }>
-                  <TextField
-                    fullWidth
-                    className={ classes.searchContainer }
-                    variant="outlined"
-                    placeholder="ETH, Fantom, ..."
-                    value={ search }
-                    onChange={ onSearchChanged }
-                    InputProps={{
-                      endAdornment: <InputAdornment position="end">
-                        <SearchIcon fontSize="small"  />
-                      </InputAdornment>,
-                      startAdornment: <InputAdornment position="start">
-                        <Typography className={ classes.searchInputAdnornment }>
-                          Search Networks
-                        </Typography>
-                      </InputAdornment>
-                    }}
-                  />
-                </Paper>
+                <ThemeProvider theme={searchTheme}>
+                  <Paper className={ classes.searchPaper }>
+                    <TextField
+                      fullWidth
+                      className={ classes.searchContainer }
+                      variant="outlined"
+                      placeholder="ETH, Fantom, ..."
+                      value={ search }
+                      onChange={ onSearchChanged }
+                      InputProps={{
+                        endAdornment: <InputAdornment position="end">
+                          <SearchIcon fontSize="small"  />
+                        </InputAdornment>,
+                        startAdornment: <InputAdornment position="start">
+                          <Typography className={ classes.searchInputAdnornment }>
+                            Search Networks
+                          </Typography>
+                        </InputAdornment>
+                      }}
+                    />
+                  </Paper>
+                </ThemeProvider>
               </div>
               <Header changeTheme={ changeTheme } />
             </div>

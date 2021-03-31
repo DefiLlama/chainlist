@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.containerDark {
+  display: grid;
+  grid-template-columns: 700px calc(100vw - 717px);
+  position: relative;
+  box-sizing: border-box;
+  background: #2B2E3C;
+}
+
 .copyContainer {
   display: flex;
   flex-direction: column;
@@ -36,6 +44,21 @@
   width: 100%;
 }
 
+.headerContainerDark {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  padding-top: 24px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(#23252E 90%, transparent 100%);
+  padding: 24px 80px 48px 80px;
+  z-index: 1;
+  width: 100%;
+}
+
 .listContainer {
   min-height: 100vh;
   width: 100%;
@@ -44,11 +67,19 @@
   padding: 0px 24px;
 }
 
+.listContainerDark {
+  min-height: 100vh;
+  width: 100%;
+  align-items: flex-start;
+  background: #23252E;
+  padding: 0px 24px;
+}
+
 .cardsContainer {
   padding: 0px 80px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  gap: 10px;
+  gap: 30px;
 }
 
 .chainListSpacing {

@@ -146,6 +146,13 @@ const coreTheme = {
       },
       label: {
         textTransform: 'capitalize'
+      },
+      outlinedPrimary: {
+        border: '1px solid #EAEAEA',
+        "&:hover": {
+          backgroundColor: colors.blue+' !important',
+          color: '#fff'
+        }
       }
     },
     MuiDialog: {
