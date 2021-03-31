@@ -8,7 +8,7 @@ const theme = createMuiTheme({
     ...coreTheme.palette,
     background: {
       default: '#22252E',
-      paper: '#2A2E3C'
+      paper: '#2B2E3C'
     },
     primary: {
       main: '#2F80ED',
@@ -17,10 +17,22 @@ const theme = createMuiTheme({
   },
   overrides: {
     ...coreTheme.overrides,
+    MuiInputBase: {
+      ...coreTheme.overrides.MuiInputBase,
+      root: {
+        background: "#fff"
+      }
+    },
+    MuiOutlinedInput: {
+      ...coreTheme.overrides.MuiOutlinedInput,
+      notchedOutline: {
+        borderColor: "#FFF"
+      }
+    },
     MuiSnackbarContent: {
       root: {
         color: '#fff',
-        backgroundColor: '#2A2E3C',
+        backgroundColor: '#2B2E3C',
         padding: '0px',
         minWidth: 'auto',
         '@media (min-width: 960px)': {

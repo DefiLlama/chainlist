@@ -1,19 +1,41 @@
 .chainContainer {
   width: 100%;
   border-radius: 10px;
-  padding: 12px;
+  padding: 30px;
 }
 
 .addButton {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .name {
-  margin-bottom: 24px !important;
+}
+
+.chainInfoContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 52px;
+  margin-bottom: 20px;
 }
 
 .dataPoint {
-  margin-bottom: 12px;
+  flex: 1;
+}
+
+.dataPointHeader {
+  padding-bottom: 7px;
+}
+
+.avatar {
+  margin-right: 24px;
+}
+
+.chainNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 12px !important;
 }

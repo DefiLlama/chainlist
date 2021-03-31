@@ -1,10 +1,8 @@
 .container {
   display: grid;
-  grid-template-columns: 460px 1fr;
-  gap: 48px;
+  grid-template-columns: 700px 1fr;
   position: relative;
   box-sizing: border-box;
-  max-width: 1200px;
 }
 
 .copyContainer {
@@ -16,30 +14,55 @@
   height: fit-content;
   justify-content: center;
   top: 16rem;
+  align-items: center;
 }
 
+.copyCentered {
+  width: 425px;
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  padding-top: 24px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(#f3f3f3 90%, transparent 100%);
+  padding: 24px 80px 48px 80px;
+  z-index: 1;
+  width: 100%;
+}
 
 .listContainer {
   min-height: 100vh;
   width: 100%;
-  padding-top: 48px;
   align-items: flex-start;
+  background: #f3f3f3;
+  padding: 0px 24px;
+}
+
+.cardsContainer {
+  padding: 0px 80px;
 }
 
 .chainListSpacing {
-  margin-bottom: 12px !important;
+  margin-bottom: 21px !important;
 }
 
 .helpingUnderline {
   color: #2F80ED;
 }
 
-.helpignParagraph {
-  margin-bottom: 48px !important;
+.helpingParagraph {
+  margin-bottom: 30px !important;
+  max-width: 320px;
 }
 
 .addNetworkButton {
-  margin-top: 12px !important;
+  margin-top: 50px !important;
   width: fit-content;
 }
 
@@ -48,7 +71,7 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  padding: 18px;
+  flex: 1;
 }
 
 .searchContainer {
@@ -57,7 +80,8 @@
 
 .socials {
   position: fixed;
-  bottom: 24px;
+  bottom: 48px;
+  width: 425px;
 }
 
 .socialButton {
@@ -71,6 +95,41 @@
 
 .version {
   padding-left: 30px;
+}
+
+.searchPaper {
+  width: 100%;
+}
+
+.searchInputAdnornment {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+.buttonLabel {
+  text-transform: capitalize !important;
+  font-weight: 500 !important;
+}
+
+.buttonText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    grid-template-columns: 500px 1fr;
+  }
+
+  .headerContainer {
+    padding: 24px 48px 48px 48px;
+  }
+
+  .cardsContainer {
+    padding: 0px 48px;
+  }
 }
 
 @media screen and (max-width: 900px) {

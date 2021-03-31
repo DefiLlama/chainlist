@@ -1,0 +1,49 @@
+.chainContainer {
+  width: 100%;
+  border-radius: 10px;
+  background: #0074de !important;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tryButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.descriptionText {
+  width: 100%;
+  color: #fff !important;
+}
+
+.topInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.bottomActions {
+  border-top: 1px solid #FFFFFF1A;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 6px 24px;
+}
+
+
+.buttonLabel {
+  text-transform: none !important;
+  font-weight: 500 !important;
+}
+
+.buttonText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

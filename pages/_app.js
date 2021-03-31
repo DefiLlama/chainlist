@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Header from '../components/header'
 import SnackbarController from '../components/snackbar'
 
 import stores from '../stores/index.js'
@@ -30,8 +29,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={ themeConfig }>
       <CssBaseline />
-      <Header changeTheme={ changeTheme } />
-      <Component {...pageProps} />
+      <Component {...pageProps} changeTheme={ changeTheme } />
         <SnackbarController />
     </ThemeProvider>
   )

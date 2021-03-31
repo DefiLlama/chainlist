@@ -2,14 +2,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 24px 48px 0px 48px;
 }
 
 .accountButton {
   display: flex;
   align-items: center;
-  margin-left: 24px !important;
+  margin-left: 12px !important;
   min-height: 40px;
+  width: 250px;
 }
 
 .accountIcon {
@@ -39,7 +39,7 @@
 }
 
 .themeSelectContainer {
-
+  margin-left: 12px !important;
 }
 
 .switchIcon {
@@ -49,10 +49,4 @@
 
 .backButton {
   flex: 1;
-}
-
-@media screen and (max-width: 900px) {
-  .headerContainer {
-    padding: 12px
-  }
 }

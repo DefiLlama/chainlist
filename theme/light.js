@@ -17,10 +17,25 @@ const theme = createMuiTheme({
     primary: {
       main: '#2F80ED',
     },
+    secondary: {
+      main: '#DEDEDE'
+    },
     type: 'light',
   },
   overrides: {
     ...coreTheme.overrides,
+    MuiInputBase: {
+      ...coreTheme.overrides.MuiInputBase,
+      root: {
+        background: "#fff"
+      }
+    },
+    MuiOutlinedInput: {
+      ...coreTheme.overrides.MuiOutlinedInput,
+      notchedOutline: {
+        borderColor: "#FFF"
+      }
+    },
     MuiSnackbarContent: {
       root: {
         color: 'rgba(0, 0, 0, 0.87)',

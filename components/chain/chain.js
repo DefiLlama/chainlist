@@ -61,16 +61,21 @@ export default function Chain({ chain }) {
   }
 
   return (
-    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={ chain.chainId } >
-      <Paper elevation={ 2 } className={ classes.chainContainer }>
-        <Typography variant='h2' className={ classes.name }>{ chain.name }</Typography>
-        <div className={ classes.dataPoint }>
-          <Typography variant='subtitle1' color='textSecondary'>ChainID</Typography>
-          <Typography variant='h5'>{ chain.chainId }</Typography>
+    <Grid item xs={12} sm={12} md={6} lg={6} xl={4} key={ chain.chainId } >
+      <Paper elevation={ 1 } className={ classes.chainContainer }>
+        <div className={ classes.chainNameContainer }>
+          <img src='/connectors/icn-imtoken.svg' width={ 28 } height={ 28 } className={ classes.avatar } />
+          <Typography variant='h3' className={ classes.name } noWrap>{ chain.name }</Typography>
         </div>
-        <div>
-          <Typography variant='subtitle1' color='textSecondary'>Currency</Typography>
-          <Typography variant='h5'>{ chain.nativeCurrency ? chain.nativeCurrency.symbol : 'none' }</Typography>
+        <div className={ classes.chainInfoContainer }>
+          <div className={ classes.dataPoint }>
+            <Typography variant='subtitle1' color='textSecondary' className={ classes.dataPointHeader} >ChainID</Typography>
+            <Typography variant='h5'>{ chain.chainId }</Typography>
+          </div>
+          <div className={ classes.dataPoint }>
+            <Typography variant='subtitle1' color='textSecondary' className={ classes.dataPointHeader}>Currency</Typography>
+            <Typography variant='h5'>{ chain.nativeCurrency ? chain.nativeCurrency.symbol : 'none' }</Typography>
+          </div>
         </div>
         <div className={ classes.addButton }>
           <Button

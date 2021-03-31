@@ -35,54 +35,36 @@ const coreTheme = {
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
-      fontSize: '3.4rem',
+      fontFamily: [
+        '"Helvetica Neue"',
+        'Inter',
+      ],
+      fontSize: '60px',
       fontWeight: 700,
       lineHeight: 1.167,
       letterSpacing: '1px'
     },
     h2: {
-      fontSize: '1.2rem',
-      fontWeight: 500,
-      lineHeight: 1.5,
-      ['@media (max-width:576px)']: {
-        fontSize: '1rem'
-      }
+      fontSize: '24px',
+      fontWeight: 700,
+      lineHeight: 1.167
     },
     h3: {
       fontFamily: [
-        'Druk Wide Bold',
         'Inter',
-        'Arial',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'sans-serif',
       ],
-      fontSize: '2rem',
-      fontWeight: 800,
-      lineHeight: 0,
-      ['@media (max-width:576px)']: {
-        fontSize: '1.2rem'
-      }
+      fontSize: '20px',
+      fontWeight: 600
     },
-    h4: {   // yearn title text finance
+    h4: {
       fontSize: '1.5rem',
-      letterSpacing: '0.2rem',
-      fontWeight: 300,
-      lineHeight: 1.167,
-      ['@media (max-width:576px)']: { // eslint-disable-line no-useless-computed-key
-        fontSize: '1.2rem'
-      }
+      fontWeight: 600,
+      lineHeight: 1.167
     },
     h5: {   // card headers
-      fontSize: '0.9rem',
-      fontWeight: 300,
-      lineHeight: 1.167,
-      ['@media (max-width:576px)']: { // eslint-disable-line no-useless-computed-key
-        fontSize: '0.7rem'
-      }
+      fontSize: '15px',
+      fontWeight: 700,
+      lineHeight: 1.167
     },
     h6: {   // card headers
       fontSize: '1.5rem',
@@ -94,7 +76,7 @@ const coreTheme = {
       }
     },
     subtitle1: {
-      fontSize: '0.9rem',
+      fontSize: '14px',
       fontWeight: 300,
       lineHeight: 1.167,
       ['@media (max-width:576px)']: { // eslint-disable-line no-useless-computed-key
@@ -102,9 +84,9 @@ const coreTheme = {
       }
     },
     body1: {
-      fontSize: '1rem',
-      fontWeight: 300,
-      lineHeight: 1.3,
+      fontSize: '16px',
+      fontWeight: 500,
+      lineHeight: 1.7,
       ['@media (max-width:576px)']: { // eslint-disable-line no-useless-computed-key
         fontSize: '0.8rem'
       }
@@ -122,9 +104,16 @@ const coreTheme = {
     }
   },
   overrides: {
+    MuiPaper: {
+      elevation1: {
+        "box-shadow": '0px 7px 7px #0000000A;',
+        "-webkit-box-shadow": '0px 7px 7px #0000000A;',
+        "-moz-box-shadow": '0px 7px 7px #0000000A;',
+      }
+    },
     MuiOutlinedInput: {
       input: {
-        padding: '12px 14px'
+        padding: '12.5px 14px'
       }
     },
     MuiTooltip: {
@@ -133,8 +122,14 @@ const coreTheme = {
       }
     },
     MuiButton: {
+      sizeLarge: {
+        borderRadius: '50px',
+        width: '260px',
+        height: '60px'
+      },
       root: {
-        minWidth: '50px'
+        minWidth: '50px',
+        borderRadius: '32px'
       },
       outlinedSizeSmall: {
         fontSize: '0.7rem',
@@ -143,15 +138,14 @@ const coreTheme = {
           padding: '3px 0px',
         }
       },
-      sizeLarge: {
-        padding: '19px 24px',
-        minWidth: '150px'
-      },
       textSizeLarge: {
         fontSize: '2.4rem',
         ['@media (max-width:576px)']: { // eslint-disable-line no-useless-computed-key
           fontSize: '2rem'
         }
+      },
+      label: {
+        textTransform: 'capitalize'
       }
     },
     MuiDialog: {
@@ -179,6 +173,9 @@ const coreTheme = {
       }
     },
     MuiInputBase: {
+      input: {
+        fontSize: '14px'
+      },
       root: {
         margin: '0px',
         '&:before': { //underline color when textfield is inactive
