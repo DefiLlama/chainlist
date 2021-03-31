@@ -2,9 +2,13 @@
   width: 100%;
   border-radius: 10px;
   background: #0074de !important;
-  height: 440px;
   display: flex;
   flex-direction: column;
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .tryButton {

@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 700px 1fr;
+  grid-template-columns: 700px calc(100vw - 717px);
   position: relative;
   box-sizing: border-box;
 }
@@ -46,6 +46,9 @@
 
 .cardsContainer {
   padding: 0px 80px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
 }
 
 .chainListSpacing {
@@ -118,9 +121,15 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 1700px) {
+  .cardsContainer {
+    grid-template-columns: 50% 50%;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .container {
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 500px calc(100vw - 517px);
   }
 
   .headerContainer {

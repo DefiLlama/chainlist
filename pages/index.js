@@ -119,7 +119,7 @@ function Home({ chains, changeTheme }) {
               </div>
               <Header changeTheme={ changeTheme } />
             </div>
-            <Grid container spacing={3} className={ classes.cardsContainer }>
+            <div className={ classes.cardsContainer }>
               { hideMultichain === '0' && <MultiChain closeMultichain={ closeMultichain } /> }
               {
                 chains.filter((chain) => {
@@ -136,7 +136,7 @@ function Home({ chains, changeTheme }) {
                   return <Chain chain={ chain } />
                 })
               }
-            </Grid>
+            </div>
           </div>
         </div>
       </main>
