@@ -50,3 +50,15 @@
 .backButton {
   flex: 1;
 }
+
+@media screen and (max-width: 600px) {
+  .headerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .accountButton {
+    width: 100%;
+  }
+}
