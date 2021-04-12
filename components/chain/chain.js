@@ -56,7 +56,7 @@ export default function Chain({ chain }) {
         decimals: chain.nativeCurrency.decimals,
       },
       rpcUrls: chain.rpc,
-      blockExplorerUrls: [chain.infoURL]
+      blockExplorerUrls: [ ((chain.explorers && chain.explorers.url) ? chain.explorers.url : chain.infoURL) ]
     }
 
     window.web3.eth.getAccounts((error, accounts) => {
