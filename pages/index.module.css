@@ -10,7 +10,7 @@
   grid-template-columns: 700px calc(100vw - 717px);
   position: relative;
   box-sizing: border-box;
-  background: #2B2E3C;
+  background: #2b2e3c;
 }
 
 .copyContainer {
@@ -52,7 +52,7 @@
   padding-top: 24px;
   position: sticky;
   top: 0;
-  background: linear-gradient(#23252E 90%, transparent 100%);
+  background: linear-gradient(#23252e 90%, transparent 100%);
   padding: 24px 80px 48px 80px;
   z-index: 1;
 }
@@ -69,7 +69,7 @@
   min-height: 100vh;
   width: 100%;
   align-items: flex-start;
-  background: #23252E;
+  background: #23252e;
   padding: 0px 24px;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .helpingUnderline {
-  color: #2F80ED;
+  color: #2f80ed;
 }
 
 .helpingParagraph {
@@ -210,7 +210,46 @@
 }
 
 @media screen and (max-width: 600px) {
+  .copyContainer,
+  .socialButton,
+  .version,
+  .socials {
+    max-width: 100vw;
+  }
+  .copyContainer {
+    text-align: center;
+  }
+  .cardsContainer {
+    padding: 0 20px;
+  }
+  .helpingParagraph {
+    margin: 10px !important;
+    max-width: 100vw;
+  }
+  .copyCentered {
+    max-width: 100vw;
+  }
+  .subTitle {
+    padding: 0 10px;
+  }
+  .socialButton {
+    text-align: center;
+    justify-content: center;
+  }
+  .version {
+    padding-left: 0;
+  }
   .cardsContainer {
     grid-template-columns: 100%;
+  }
+  .listContainer,
+  .listContainerDark {
+    width: 100vw;
+  }
+  .headerContainer,
+  .headerContainerDark {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
   }
 }
