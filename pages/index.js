@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import { withTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import path from 'path'
@@ -80,7 +81,12 @@ function Home({ chains, changeTheme, theme }) {
   const [ layout, setLayout ] = useState('grid')
   const [ search, setSearch ] = useState('')
   const [ hideMultichain, setHideMultichain ] = useState('1')
-
+  const router = useRouter()
+  if (router.query.search) {
+    setSearch(router.query.search)
+    delete router.query.search
+  }
+  
   const onSearchChanged = (event) => {
     setSearch(event.target.value)
   }
