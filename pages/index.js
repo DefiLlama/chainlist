@@ -22,6 +22,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AppsIcon from '@material-ui/icons/Apps';
 import ListIcon from '@material-ui/icons/List';
 import AddIcon from '@material-ui/icons/Add';
+import useSWR from 'swr'
 
 import classes from './index.module.css'
 
@@ -77,7 +78,11 @@ const searchTheme = createMuiTheme({
   },
 });
 
-function Home({ chains, changeTheme, theme }) {
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+
+function Home({ changeTheme, theme }) {
+  const { data, error } = useSWR('https://chainid.network/chains.json', fetcher)
+
   const [ layout, setLayout ] = useState('grid')
   const [ search, setSearch ] = useState('')
   const [ hideMultichain, setHideMultichain ] = useState('1')
@@ -148,7 +153,7 @@ function Home({ chains, changeTheme, theme }) {
                 </svg>
                 <Typography variant='body1' className={ classes.sourceCode }>View Source Code</Typography>
               </a>
-              <Typography variant='subtitle1' className={ classes.version }>Version 1.0.5</Typography>
+              <Typography variant='subtitle1' className={ classes.version }>Version 1.0.6</Typography>
             </div>
           </div>
           <div className={ theme.palette.type === 'dark' ? classes.listContainerDark : classes.listContainer }>
@@ -182,7 +187,7 @@ function Home({ chains, changeTheme, theme }) {
             <div className={ classes.cardsContainer }>
               { hideMultichain === '0' && <MultiChain closeMultichain={ closeMultichain } /> }
               {
-                chains.filter((chain) => {
+                data && data.filter((chain) => {
                   if(search === '') {
                     return true
                   } else {
@@ -206,24 +211,24 @@ function Home({ chains, changeTheme, theme }) {
 
 export default withTheme(Home)
 
-export const getStaticProps  = async () => {
-
-  try {
-    const chainsResponse = await fetch('https://chainid.network/chains.json')
-    const chainsJson = await chainsResponse.json()
-
-    return {
-      props: {
-        chains: chainsJson
-      },
-      revalidate: 60,
-    }
-  } catch (ex) {
-    return {
-      props: {
-        chains: []
-      }
-    }
-  }
-
-}
+// export const getStaticProps  = async () => {
+//
+//   try {
+//     const chainsResponse = await fetch('https://chainid.network/chains.json')
+//     const chainsJson = await chainsResponse.json()
+//
+//     return {
+//       props: {
+//         chains: chainsJson
+//       },
+//       revalidate: 60,
+//     }
+//   } catch (ex) {
+//     return {
+//       props: {
+//         chains: []
+//       }
+//     }
+//   }
+//
+// }
