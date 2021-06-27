@@ -166,7 +166,8 @@
     grid-template-columns: 500px calc(100vw - 517px);
   }
 
-  .headerContainer {
+  .headerContainer,
+  .headerContainerDark {
     padding: 24px 48px 48px 48px;
   }
 
