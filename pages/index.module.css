@@ -16,17 +16,19 @@
 .copyContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   position: sticky;
-  top: 10rem;
-  height: fit-content;
   justify-content: center;
-  top: 16rem;
   align-items: center;
+  min-height: 100vh;
+  height: fit-content;
+  top: 0;
 }
 
 .copyCentered {
+  position: absolute;
+  bottom: 0;
   width: 425px;
+  padding-bottom: 30px;
 }
 
 .headerContainer {
@@ -38,7 +40,7 @@
   padding-top: 24px;
   position: sticky;
   top: 0;
-  background: linear-gradient(#f3f3f3 90%, transparent 100%);
+  background: linear-gradient(rgba(243, 243, 243, 1) 90%, rgba(243, 243, 243, 0) 100%);
   padding: 24px 80px 48px 80px;
   z-index: 1;
 }
@@ -52,7 +54,7 @@
   padding-top: 24px;
   position: sticky;
   top: 0;
-  background: linear-gradient(#23252e 90%, transparent 100%);
+  background: linear-gradient(rgba(35, 37, 46, 1) 90%, rgba(35, 37, 46, 0) 100%);
   padding: 24px 80px 48px 80px;
   z-index: 1;
 }
@@ -62,7 +64,7 @@
   width: 100%;
   align-items: flex-start;
   background: #f3f3f3;
-  padding: 0px 24px;
+  padding: 0px 24px 24px;
 }
 
 .listContainerDark {
@@ -112,9 +114,7 @@
 }
 
 .socials {
-  position: fixed;
-  bottom: 48px;
-  width: 425px;
+  margin-top: 50px;
 }
 
 .socialButton {
@@ -172,7 +172,7 @@
   }
 
   .cardsContainer {
-    padding: 0px 48px;
+    padding: 0px 48px 48px;
   }
 }
 
@@ -193,6 +193,11 @@
     min-height: 100vh;
   }
 
+  .copyCentered {
+    position: static;
+    padding-bottom: 0px;
+  }
+
   .listContainer {
     width: calc(100vw - 17px);
     padding: 0px;
@@ -205,7 +210,7 @@
 
   .socials {
     position: relative;
-    margin-top: 2em;
+    margin-top: calc(2em + 10px);
     bottom: 0px;
   }
 }
@@ -221,7 +226,7 @@
     text-align: center;
   }
   .cardsContainer {
-    padding: 0 20px;
+    padding: 0 20px 20px;
   }
   .helpingParagraph {
     margin: 10px !important;
