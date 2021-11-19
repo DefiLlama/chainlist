@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Paper, Grid, Button } from '@material-ui/core'
+import { Typography, Paper, Grid, Button, Tooltip } from '@material-ui/core'
 import Skeleton from '@material-ui/lab/Skeleton';
 import { useRouter } from 'next/router'
 import Web3 from 'web3';
@@ -106,11 +106,13 @@ export default function Chain({ chain }) {
           height={ 28 }
           className={ classes.avatar }
         />
-        <Typography variant='h3' className={ classes.name } noWrap>
-          <a href={ chain.infoURL } target="_blank" rel="noreferrer">
-            { chain.name }
-          </a>
-        </Typography>
+        <Tooltip title={ chain.name }>
+          <Typography variant='h3' className={ classes.name } noWrap>
+            <a href={ chain.infoURL } target="_blank" rel="noreferrer">
+              { chain.name }
+            </a>
+          </Typography>
+        </Tooltip>
       </div>
       <div className={ classes.chainInfoContainer }>
         <div className={ classes.dataPoint }>

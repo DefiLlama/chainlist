@@ -25,10 +25,7 @@
 }
 
 .copyCentered {
-  position: absolute;
-  bottom: 0;
   width: 425px;
-  padding-bottom: 30px;
 }
 
 .headerContainer {

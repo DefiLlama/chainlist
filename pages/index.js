@@ -152,7 +152,7 @@ function Home({ changeTheme, theme }) {
                   </svg>
                   <Typography variant='body1' className={ classes.sourceCode }>View Source Code</Typography>
                 </a>
-                <Typography variant='subtitle1' className={ classes.version }>Version 1.0.6</Typography>
+                <Typography variant='subtitle1' className={ classes.version }>Version 1.0.7</Typography>
               </div>
             </div>
           </div>
