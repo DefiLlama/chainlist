@@ -129,7 +129,7 @@ function Home({ changeTheme, theme }) {
       </Head>
 
       <main className={styles.main}>
-      <div className={ theme.palette.type === 'dark' ? classes.containerDark : classes.container }>
+        <div className={ theme.palette.type === 'dark' ? classes.containerDark : classes.container }>
           <div className={ classes.copyContainer }>
             <div className={ classes.copyCentered }>
               <Typography variant='h1' className={ classes.chainListSpacing }><span className={ classes.helpingUnderline }>Chainlist</span></Typography>
