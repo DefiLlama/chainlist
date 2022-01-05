@@ -955,26 +955,6 @@
     "infoURL": "https://ether1.org"
   },
   {
-    "name": "NEAR MainNet",
-    "chainId": 1313161554,
-    "shortName": "near",
-    "chain": "NEAR",
-    "network": "mainnet",
-    "networkId": 1313161554,
-    "nativeCurrency": {
-      "name": "NEAR",
-      "symbol": "NEAR",
-      "decimals": 24
-    },
-    "rpc": [
-
-    ],
-    "faucets": [
-
-    ],
-    "infoURL": "https://near.org/"
-  },
-  {
     "name": "NEAR TestNet",
     "chainId": 1313161555,
     "shortName": "neart",
