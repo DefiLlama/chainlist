@@ -35,7 +35,6 @@ export default function Chain({ chain }) {
     return () => {
       stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure)
     }
-
   }, [])
 
   const toHex = (num) => {
