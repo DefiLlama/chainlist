@@ -3175,5 +3175,55 @@
       "color_chain_bg": "0x78d64b",
       "color_chain_text": "0xFFFFFF"
     }
+  },
+  {
+    "name": "Vision Mainnet",
+    "chainId": 888888,
+    "shortName": "Vision",
+    "chain": "Vision - Mainnet",
+    "network": "mainnet",
+    "networkId": 888888,
+    "nativeCurrency": {
+      "name": "VS",
+      "symbol": "VS",
+      "decimals": 6
+    },
+    "rpc": [
+      "https://infragrid.v.network/ethereum/compatible"
+    ],
+    "faucets": [
+
+    ],
+    "infoURL": "https://visionscan.org",
+    "app_resource": {
+      "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/select-88px.png",
+      "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/unselect-88px.png",
+      "color_chain_bg": "0x000000"
+    }
+  },
+  {
+    "name": "Vision - Vpioneer Testnet",
+    "chainId": 666666,
+    "shortName": "Vpioneer",
+    "chain": "Vision - Vpioneer",
+    "network": "Vpioneer",
+    "networkId": 666666,
+    "nativeCurrency": {
+      "name": "VS",
+      "symbol": "VS",
+      "decimals": 6
+    },
+    "rpc": [
+      "https://vpioneer.infragrid.v.network/ethereum/compatible"
+    ],
+    "faucets": [
+      "https://vpioneerfaucet.visionscan.org"
+    ],
+    "infoURL": "https://visionscan.org",
+    "app_resource": {
+      "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/select-88px.png",
+      "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/unselect-88px.png",
+      "color_chain_bg": "0x000000"
+    }
   }
 ]
