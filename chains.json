@@ -3196,8 +3196,8 @@
     ],
     "infoURL": "https://visionscan.org",
     "app_resource": {
-      "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/select-88px.png",
-      "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/unselect-88px.png",
+      "ic_chain_select": "https://vision-1.oss-accelerate.aliyuncs.com/u/0/0/202201/o/d23f7961d62743aa8b3926d3917c232e12a188eadc0b4dffa4b7ba4e4dcb4059.png",
+      "ic_chain_unselect": "https://vision-1.oss-accelerate.aliyuncs.com/u/0/0/202201/o/798239fa73f24eb2977e17e0b0d0a6e8ee8826007995420aa93a213ab06695c0.png",
       "color_chain_bg": "0x000000"
     }
   },
@@ -3221,8 +3221,8 @@
     ],
     "infoURL": "https://visionscan.org",
     "app_resource": {
-      "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/select-88px.png",
-      "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/vision/unselect-88px.png",
+      "ic_chain_select": "https://vision-1.oss-accelerate.aliyuncs.com/u/0/0/202201/o/d23f7961d62743aa8b3926d3917c232e12a188eadc0b4dffa4b7ba4e4dcb4059.png",
+      "ic_chain_unselect": "https://vision-1.oss-accelerate.aliyuncs.com/u/0/0/202201/o/798239fa73f24eb2977e17e0b0d0a6e8ee8826007995420aa93a213ab06695c0.png",
       "color_chain_bg": "0x000000"
     }
   }
