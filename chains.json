@@ -2951,19 +2951,19 @@
     "network": "testnet",
     "networkId": 123778899,
     "nativeCurrency": {
-        "name": "SL2",
-        "symbol": "SL2",
-        "decimals": 18
+      "name": "SL2",
+      "symbol": "SL2",
+      "decimals": 18
     },
     "rpc": [
-        "http://123.58.210.13:8546",
+      "http://123.58.210.13:8546",
     ],
     "faucets": [],
     "infoURL": "",
     "app_resource": {
-        "ic_chain_select": "http://106.75.144.161/icon/Smartx_H.png",
-        "ic_chain_unselect": "http://106.75.144.161/icon/Smartx_U.png",
-        "color_chain_bg": "0x8250df"
+      "ic_chain_select": "http://106.75.144.161/icon/Smartx_H.png",
+      "ic_chain_unselect": "http://106.75.144.161/icon/Smartx_U.png",
+      "color_chain_bg": "0x8250df"
     }
   }
 ]
