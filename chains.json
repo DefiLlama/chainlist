@@ -2905,7 +2905,7 @@
     "nativeCurrency": {
       "name": "VS",
       "symbol": "VS",
-      "decimals": 6
+      "decimals": 18
     },
     "rpc": [
       "https://infragrid.v.network/ethereum/compatible"
@@ -2928,7 +2928,7 @@
     "nativeCurrency": {
       "name": "VS",
       "symbol": "VS",
-      "decimals": 6
+      "decimals": 18
     },
     "rpc": [
       "https://vpioneer.infragrid.v.network/ethereum/compatible"
