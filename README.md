@@ -39,9 +39,9 @@ Example:
 `app_resource` is optional, which is only affect the appearance in TokenPocket Wallet. You can follow the standard below:
 
 
-![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-1.png)
-![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-2.png)
-![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-3.png)
-![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-4.png)
-![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-5.png)
+![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-11.png)
+![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-12.png)
+![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-13.png)
+![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-14.png)
+![standard](https://tp-statics.tokenpocket.pro/images/custom-chains-standard-15.png)
 
