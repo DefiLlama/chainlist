@@ -15,6 +15,7 @@ import {
   TRY_CONNECT_WALLET,
   ACCOUNT_CONFIGURED
 } from '../../stores/constants'
+import Image from 'next/image'
 
 export default function Chain({ chain }) {
   const router = useRouter()
@@ -96,8 +97,8 @@ export default function Chain({ chain }) {
   return (
     <Paper elevation={ 1 } className={ classes.chainContainer } key={ chain.chainId }>
       <div className={ classes.chainNameContainer }>
-        <img
-          src='/connectors/icn-asd.svg'
+        <Image
+          src="/chains/unknown-logo.png"
           onError={e => {
             e.target.onerror = null;
             e.target.src = "/chains/unknown-logo.png";
@@ -107,7 +108,7 @@ export default function Chain({ chain }) {
           className={ classes.avatar }
         />
         <Tooltip title={ chain.name }>
-          <Typography variant='h3' className={ classes.name } noWrap>
+          <Typography variant='h3' className={ classes.name } noWrap style={{marginLeft:"24px"}}>
             <a href={ chain.infoURL } target="_blank" rel="noreferrer">
               { chain.name }
             </a>

@@ -82,9 +82,9 @@ const searchTheme = createMuiTheme({
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
-function Home({ changeTheme, theme }) {
-  const { data: chains, error } = useSWR('https://chainid.network/chains.json', fetcher)
-  const { data: chainTvls } = useSWR('https://api.llama.fi/chains', fetcher)
+export async function getStaticProps({ params }) {
+  const chains = await fetcher('https://chainid.network/chains.json')
+  const chainTvls = await fetcher('https://api.llama.fi/chains')
 
   function getChainTvl(chain){
     const chainSlug = chainIds[chain.chainId];
@@ -95,9 +95,23 @@ function Home({ changeTheme, theme }) {
     return 0
   }
 
-  const data = chains !== undefined && chainTvls !== undefined? chains.sort((a,b)=>{
-    return getChainTvl(b) - getChainTvl(a)
-  }) : undefined
+  const sortedChains = chains
+    .filter(c=>c.name !== "420coin") // same chainId as ronin
+    .sort((a,b)=>{
+      return getChainTvl(b) - getChainTvl(a)
+    })
+
+  return {
+    props: {
+      sortedChains
+    },
+    revalidate: 3600
+  }
+}
+
+
+function Home({ changeTheme, theme, sortedChains }) {
+  const data = sortedChains
 
   const [ layout, setLayout ] = useState('grid')
   const [ search, setSearch ] = useState('')
@@ -187,17 +201,13 @@ function Home({ changeTheme, theme }) {
             </div>
             <div className={ classes.cardsContainer }>
               {
-                data && data.filter((chain) => {
-                  if(search === '') {
-                    return true
-                  } else {
+                (search === ''? data: data.filter((chain) => {
                     //filter
                     return (chain.chain.toLowerCase().includes(search.toLowerCase()) ||
                     chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
                     chain.name.toLowerCase().includes(search.toLowerCase()) ||
                     (chain.nativeCurrency ? chain.nativeCurrency.symbol : '').toLowerCase().includes(search.toLowerCase()))
-                  }
-                }).map((chain, idx) => {
+                })).map((chain, idx) => {
                   return <Chain chain={ chain } key={ idx } />
                 })
               }
