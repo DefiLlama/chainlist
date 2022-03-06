@@ -26,7 +26,7 @@ import useSWR from 'swr'
 
 import classes from './index.module.css'
 
-import {chainIds} from './chains'
+import {chainIds} from '../components/chains'
 
 const searchTheme = createMuiTheme({
   palette: {
