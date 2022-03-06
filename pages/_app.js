@@ -15,8 +15,12 @@ import '../styles/globals.css'
 import lightTheme from '../theme/light';
 import darkTheme from '../theme/dark';
 
+import { useRouter } from 'next/router';
+import * as Fathom from 'fathom-client';
+
 function MyApp({ Component, pageProps }) {
   const [ themeConfig, setThemeConfig ] = useState(lightTheme);
+  const router = useRouter()
 
   const changeTheme = (dark) => {
     setThemeConfig(dark ? darkTheme : lightTheme)
@@ -33,6 +37,25 @@ function MyApp({ Component, pageProps }) {
   useEffect(function() {
     stores.dispatcher.dispatch({ type: CONFIGURE })
   },[]);
+
+  useEffect(() => {
+    Fathom.load('TKCNGGEZ', {
+      includedDomains: ['chainlist.defillama.com'],
+      url: 'https://surprising-powerful.llama.fi/script.js',
+    })
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete);
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete);
+    };
+  }, [])
+
 
   return (
     <ThemeProvider theme={ themeConfig }>
