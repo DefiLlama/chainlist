@@ -140,7 +140,7 @@ function Home({ changeTheme, theme, sortedChains }) {
     <div className={styles.container}>
       <Head>
         <title>Chainlist</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
