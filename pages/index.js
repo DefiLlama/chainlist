@@ -1,34 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
-import { withTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import path from 'path'
+import { withTheme, createTheme, ThemeProvider } from '@material-ui/core/styles';
 import {
-  Grid,
   Typography,
   Button,
   TextField,
   InputAdornment,
   Paper
 } from '@material-ui/core'
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import Chain from '../components/chain'
-import MultiChain from '../components/multichain'
 import Header from '../components/header'
 
 import SearchIcon from '@material-ui/icons/Search';
-import AppsIcon from '@material-ui/icons/Apps';
-import ListIcon from '@material-ui/icons/List';
 import AddIcon from '@material-ui/icons/Add';
-import useSWR from 'swr'
 
 import classes from './index.module.css'
 
 import {chainIds} from '../components/chains'
 
-const searchTheme = createMuiTheme({
+const searchTheme = createTheme({
   palette: {
     type: 'light',
     primary: {
