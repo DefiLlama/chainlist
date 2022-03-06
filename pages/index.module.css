@@ -148,6 +148,12 @@
   justify-content: space-between;
 }
 
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1700px) {
   .cardsContainer {
     grid-template-columns: calc(50% - 15px) calc(50% - 15px);
