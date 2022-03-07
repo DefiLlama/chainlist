@@ -67,7 +67,7 @@ const searchTheme = createTheme({
 const StyledSwitch = withStyles({
   switchBase: {
     "&$checked": {
-      color: '#2f80ed',
+      color: "#2f80ed",
     },
   },
   checked: {},
