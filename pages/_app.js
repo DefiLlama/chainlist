@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     Fathom.load('TKCNGGEZ', {
-      includedDomains: ['chainlist.defillama.com'],
+      includedDomains: ['chainlist.defillama.com', 'chainlist.org'],
       url: 'https://surprising-powerful.llama.fi/script.js',
     })
 
