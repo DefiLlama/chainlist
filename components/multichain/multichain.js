@@ -16,7 +16,7 @@ export default function Multichain({ closeMultichain }) {
   const [checked, setChecked] = useState(false)
 
   const navigateToMultichain = () => {
-    window.open("https://www.transit.finance/", "_blank")
+    window.open("https://www.transit.finance/?from=chainlist", "_blank")
   }
 
   const handleChange = () => {
@@ -71,7 +71,7 @@ export default function Multichain({ closeMultichain }) {
     <Paper elevation={1} className={classes.chainContainer} key={'multichain'} >
       <ThemeProvider theme={theme}>
         <div className={classes.topInfo}>
-          <img src='/NetworkList/multichain-logo.png' width={126} height={126} className={classes.avatar} />
+          <img src='/chains/transit-logo.png' width={126} height={126} className={classes.avatar} />
           <Typography variant='subtitle1' className={classes.descriptionText} align='center' >Manage over 120 tokens and multi-chain assets with fully supported cross chain transactions.</Typography>
           <Button
             className={classes.tryButton}
