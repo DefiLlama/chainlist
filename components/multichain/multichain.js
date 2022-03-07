@@ -13,10 +13,10 @@ import { getProvider } from '../../utils'
 
 export default function Multichain({ closeMultichain }) {
 
-  const [ checked, setChecked ] = useState(false)
+  const [checked, setChecked] = useState(false)
 
   const navigateToMultichain = () => {
-    window.open("https://multichain.xyz", "_blank")
+    window.open("https://www.transit.finance/", "_blank")
   }
 
   const handleChange = () => {
@@ -68,33 +68,33 @@ export default function Multichain({ closeMultichain }) {
   });
 
   return (
-    <Paper elevation={ 1 } className={ classes.chainContainer } key={ 'multichain' } >
+    <Paper elevation={1} className={classes.chainContainer} key={'multichain'} >
       <ThemeProvider theme={theme}>
-        <div className={ classes.topInfo }>
-          <img src='/NetworkList/multichain-logo.png' width={ 126 } height={ 126 } className={ classes.avatar } />
-          <Typography variant='subtitle1' className={ classes.descriptionText} align='center' >Manage over 120 tokens and multi-chain assets with fully supported cross chain transactions.</Typography>
+        <div className={classes.topInfo}>
+          <img src='/NetworkList/multichain-logo.png' width={126} height={126} className={classes.avatar} />
+          <Typography variant='subtitle1' className={classes.descriptionText} align='center' >Manage over 120 tokens and multi-chain assets with fully supported cross chain transactions.</Typography>
           <Button
-            className={ classes.tryButton }
+            className={classes.tryButton}
             variant='contained'
             disableElevation
-            onClick={ navigateToMultichain }
+            onClick={navigateToMultichain}
             color='secondary'
             endIcon={<ArrowForwardIcon />}
           >
-            <Typography className={ classes.buttonLabel }>Try out <b>multichain.xyz</b></Typography>
+            <Typography className={classes.buttonLabel}>Try out <b>Transit.finance</b></Typography>
           </Button>
         </div>
-        <div className={ classes.bottomActions }>
+        <div className={classes.bottomActions}>
           <FormControlLabel
-            control={<Checkbox checked={ checked } onChange={handleChange} name="checked" />}
+            control={<Checkbox checked={checked} onChange={handleChange} name="checked" />}
             label="Don't show again"
           />
           <Button
             size='small'
-            onClick={ () => { closeMultichain(checked) } }
+            onClick={() => { closeMultichain(checked) }}
             endIcon={<CloseIcon />}
           >
-            <Typography className={ classes.buttonLabel }>Close</Typography>
+            <Typography className={classes.buttonLabel}>Close</Typography>
           </Button>
         </div>
       </ThemeProvider>
