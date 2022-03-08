@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
-import { withTheme, createTheme, ThemeProvider } from "@material-ui/core/styles";
+import { withTheme, createTheme, ThemeProvider, withStyles } from "@material-ui/core/styles";
 import { Typography, Button, TextField, InputAdornment, Paper } from "@material-ui/core";
 import Chain from "../components/chain";
 import Header from "../components/header";
@@ -10,16 +10,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import AddIcon from "@material-ui/icons/Add";
 import classes from "./index.module.css";
 import { chainIds } from "../components/chains";
+import Switch from "@material-ui/core/Switch";
 
-import SearchIcon from "@material-ui/icons/Search";
-import AppsIcon from "@material-ui/icons/Apps";
-import ListIcon from "@material-ui/icons/List";
-import AddIcon from "@material-ui/icons/Add";
-import useSWR from "swr";
-
-import classes from "./index.module.css";
-
-const searchTheme = createMuiTheme({
+const searchTheme = createTheme({
   palette: {
     type: "light",
     primary: {
@@ -73,12 +66,45 @@ const searchTheme = createMuiTheme({
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-function Home({ changeTheme, theme }) {
-  const { data, error } = useSWR("https://chainid.network/chains.json", fetcher);
+export async function getStaticProps({ params }) {
+  const chains = await fetcher("https://chainid.network/chains.json");
+  const chainTvls = await fetcher("https://api.llama.fi/chains");
 
-  const [layout, setLayout] = useState("grid");
+  function populateChain(chain) {
+    const chainSlug = chainIds[chain.chainId];
+    if (chainSlug !== undefined) {
+      const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
+      return defiChain === undefined
+        ? chain
+        : {
+            ...chain,
+            tvl: defiChain.tvl,
+            chainSlug,
+          };
+    }
+    return chain;
+  }
+
+  const sortedChains = chains
+    .filter((c) => c.name !== "420coin") // same chainId as ronin
+    .map(populateChain)
+    .sort((a, b) => {
+      return (b.tvl ?? 0) - (a.tvl ?? 0);
+    });
+
+  return {
+    props: {
+      sortedChains,
+    },
+    revalidate: 3600,
+  };
+}
+
+function Home({ changeTheme, theme, sortedChains }) {
+  const data = sortedChains;
+
   const [search, setSearch] = useState("");
-  const [hideMultichain, setHideMultichain] = useState("1");
+  const [testnets, setTestnets] = useState(false);
   const router = useRouter();
   if (router.query.search) {
     setSearch(router.query.search);
@@ -89,36 +115,31 @@ function Home({ changeTheme, theme }) {
     setSearch(event.target.value);
   };
 
-  const handleLayoutChanged = (event, newVal) => {
-    if (newVal !== null) {
-      setLayout(newVal);
-      localStorage.setItem("yearn.finance-invest-layout", newVal ? newVal : "");
-    }
-  };
-
   const addNetwork = () => {
     window.open("https://github.com/ethereum-lists/chains", "_blank");
   };
 
-  const closeMultichain = (perma) => {
-    setHideMultichain("1");
-    localStorage.setItem("chainlist.org-hideMultichain", perma ? "1" : "0");
-  };
+  const chains = useMemo(() => {
+    if (!testnets) {
+      return data.filter((item) => {
+        const testnet =
+          item.name?.toLowerCase().includes("test") ||
+          item.title?.toLowerCase().includes("test") ||
+          item.network?.toLowerCase().includes("test");
+        return !testnet;
+      });
+    } else return data;
+  }, [testnets]);
 
-  useEffect(() => {
-    const multi = localStorage.getItem("chainlist.org-hideMultichain");
-    if (multi) {
-      setHideMultichain(multi);
-    } else {
-      setHideMultichain("0");
-    }
-  }, []);
+  const toggleTestnets = () => {
+    setTestnets(!testnets);
+  };
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Chainlist</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -148,7 +169,7 @@ function Home({ changeTheme, theme }) {
               <div className={classes.socials}>
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://github.com/antonnell/networklist-org.git"
+                  href="https://github.com/DefiLlama/chainlist"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -196,30 +217,25 @@ function Home({ changeTheme, theme }) {
                   </Paper>
                 </ThemeProvider>
               </div>
-              <Header changeTheme={changeTheme} />
+              <Header changeTheme={changeTheme} testnets={testnets} toggleTestnets={toggleTestnets} />
             </div>
             <div className={classes.cardsContainer}>
-              {hideMultichain === "0" && <MultiChain closeMultichain={closeMultichain} />}
-              {data &&
-                data
-                  .filter((chain) => {
-                    if (search === "") {
-                      return true;
-                    } else {
-                      //filter
-                      return (
-                        chain.chain.toLowerCase().includes(search.toLowerCase()) ||
-                        chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
-                        chain.name.toLowerCase().includes(search.toLowerCase()) ||
-                        (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
-                          .toLowerCase()
-                          .includes(search.toLowerCase())
-                      );
-                    }
+              {(search === ""
+                ? chains
+                : chains.filter((chain) => {
+                    //filter
+                    return (
+                      chain.chain.toLowerCase().includes(search.toLowerCase()) ||
+                      chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
+                      chain.name.toLowerCase().includes(search.toLowerCase()) ||
+                      (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
+                        .toLowerCase()
+                        .includes(search.toLowerCase())
+                    );
                   })
-                  .map((chain, idx) => {
-                    return <Chain chain={chain} key={idx} />;
-                  })}
+              ).map((chain, idx) => {
+                return <Chain chain={chain} key={idx} />;
+              })}
             </div>
           </div>
         </div>
@@ -229,25 +245,3 @@ function Home({ changeTheme, theme }) {
 }
 
 export default withTheme(Home);
-
-// export const getStaticProps  = async () => {
-//
-//   try {
-//     const chainsResponse = await fetch('https://chainid.network/chains.json')
-//     const chainsJson = await chainsResponse.json()
-//
-//     return {
-//       props: {
-//         chains: chainsJson
-//       },
-//       revalidate: 60,
-//     }
-//   } catch (ex) {
-//     return {
-//       props: {
-//         chains: []
-//       }
-//     }
-//   }
-//
-// }

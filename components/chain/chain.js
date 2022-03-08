@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Typography, Paper, Button, Tooltip } from "@material-ui/core";
+import { Typography, Paper, Grid, Button, Tooltip } from "@material-ui/core";
+import Skeleton from "@material-ui/lab/Skeleton";
 import { useRouter } from "next/router";
+import Web3 from "web3";
+
 import classes from "./chain.module.css";
+
 import stores from "../../stores/index.js";
-import { getProvider, toK } from "../../utils";
-import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
+import { getProvider } from "../../utils";
+
+import { ERROR, CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
 import Image from "next/image";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import Popover from "@material-ui/core/Popover";
 
 export default function Chain({ chain }) {
   const router = useRouter();
@@ -85,18 +88,9 @@ export default function Chain({ chain }) {
     }
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
+  const icon = useMemo(() => {
+    return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+  }, [chain]);
 
   if (!chain) {
     return <div></div>;
@@ -105,8 +99,8 @@ export default function Chain({ chain }) {
   return (
     <Paper elevation={1} className={classes.chainContainer} key={chain.chainId}>
       <div className={classes.chainNameContainer}>
-        <img
-          src="/connectors/icn-asd.svg"
+        <Image
+          src={icon}
           onError={(e) => {
             e.target.onerror = null;
             e.target.src = "/chains/unknown-logo.png";
@@ -115,8 +109,9 @@ export default function Chain({ chain }) {
           height={28}
           className={classes.avatar}
         />
+
         <Tooltip title={chain.name}>
-          <Typography variant="h3" className={classes.name} noWrap>
+          <Typography variant="h3" className={classes.name} noWrap style={{ marginLeft: "24px" }}>
             <a href={chain.infoURL} target="_blank" rel="noreferrer">
               {chain.name}
             </a>

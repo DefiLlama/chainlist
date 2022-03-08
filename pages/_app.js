@@ -3,7 +3,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import SnackbarController from '../components/snackbar'
-import ShutdownNotice from '../components/shutdownNotice'
 
 import stores from '../stores/index.js'
 
@@ -16,8 +15,12 @@ import '../styles/globals.css'
 import lightTheme from '../theme/light';
 import darkTheme from '../theme/dark';
 
+import { useRouter } from 'next/router';
+import * as Fathom from 'fathom-client';
+
 function MyApp({ Component, pageProps }) {
   const [ themeConfig, setThemeConfig ] = useState(lightTheme);
+  const router = useRouter()
 
   const changeTheme = (dark) => {
     setThemeConfig(dark ? darkTheme : lightTheme)
@@ -35,19 +38,30 @@ function MyApp({ Component, pageProps }) {
     stores.dispatcher.dispatch({ type: CONFIGURE })
   },[]);
 
-  const [shutdownNoticeOpen, setShutdownNoticeOpen] = useState(true);
-  const closeShutdown = () => {
-    setShutdownNoticeOpen(false)
-  }
+  useEffect(() => {
+    Fathom.load('TKCNGGEZ', {
+      includedDomains: ['chainlist.defillama.com', 'chainlist.org'],
+      url: 'https://surprising-powerful.llama.fi/script.js',
+    })
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete);
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete);
+    };
+  }, [])
+
 
   return (
     <ThemeProvider theme={ themeConfig }>
       <CssBaseline />
       <Component {...pageProps} changeTheme={ changeTheme } />
-      <SnackbarController />
-      { shutdownNoticeOpen &&
-        <ShutdownNotice close={ closeShutdown } />
-      }
+        <SnackbarController />
     </ThemeProvider>
   )
 }
