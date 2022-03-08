@@ -80,19 +80,24 @@ export async function getStaticProps({ params }) {
   const chains = await fetcher("https://chainid.network/chains.json");
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
-  function getChainTvl(chain) {
+  function populateChain(chain) {
     const chainSlug = chainIds[chain.chainId];
     if (chainSlug !== undefined) {
       const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
-      return defiChain?.tvl ?? 0;
+      return defiChain === undefined ? chain :{
+        ...chain,
+        tvl: defiChain.tvl,
+        chainSlug
+      };
     }
-    return 0;
+    return chain;
   }
 
   const sortedChains = chains
     .filter((c) => c.name !== "420coin") // same chainId as ronin
+    .map(populateChain)
     .sort((a, b) => {
-      return getChainTvl(b) - getChainTvl(a);
+      return (b.tvl ?? 0) - (a.tvl ?? 0)
     });
 
   return {

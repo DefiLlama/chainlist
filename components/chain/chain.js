@@ -11,7 +11,6 @@ import { getProvider } from "../../utils";
 
 import { ERROR, CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
 import Image from "next/image";
-import { icons } from "../../utils/icons";
 
 export default function Chain({ chain }) {
   const router = useRouter();
@@ -90,8 +89,7 @@ export default function Chain({ chain }) {
   };
 
   const icon = useMemo(() => {
-    const chainName = chain.name.toLowerCase().split(" ")[0];
-    return (chain.icon && icons[chain.icon]) || (chainName && icons[chainName]) || "/chains/unknown-logo.png";
+    return chain.chainSlug? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : "/chains/unknown-logo.png";
   }, [chain]);
 
   if (!chain) {
