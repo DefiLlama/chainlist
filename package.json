@@ -15,6 +15,7 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "flux": "^4.0.1",
     "next": "10.0.7",
+    "numeral": "^2.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "swr": "^0.5.6",

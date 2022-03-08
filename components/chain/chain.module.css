@@ -39,3 +39,7 @@
   width: 100%;
   margin-bottom: 12px !important;
 }
+
+.popover {
+  padding: 12px;
+}
