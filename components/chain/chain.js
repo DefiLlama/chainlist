@@ -1,20 +1,14 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Typography, Paper, Grid, Button, Tooltip } from "@material-ui/core";
-import Skeleton from "@material-ui/lab/Skeleton";
-import { useRouter } from "next/router";
-import Web3 from "web3";
-
+import { Typography, Paper, Button, Tooltip } from "@material-ui/core";
 import classes from "./chain.module.css";
-
 import stores from "../../stores/index.js";
-import { getProvider } from "../../utils";
-
-import { ERROR, CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
+import { getProvider, toK } from "../../utils";
+import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
 import Image from "next/image";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import Popover from "@material-ui/core/Popover";
 
 export default function Chain({ chain }) {
-  const router = useRouter();
-
   const [account, setAccount] = useState(null);
 
   useEffect(() => {
@@ -91,6 +85,19 @@ export default function Chain({ chain }) {
   const icon = useMemo(() => {
     return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   if (!chain) {
     return <div></div>;

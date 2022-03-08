@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
-import { withTheme, createTheme, ThemeProvider, withStyles } from "@material-ui/core/styles";
+import { withTheme, createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Typography, Button, TextField, InputAdornment, Paper } from "@material-ui/core";
 import Chain from "../components/chain";
 import Header from "../components/header";
@@ -10,7 +10,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import AddIcon from "@material-ui/icons/Add";
 import classes from "./index.module.css";
 import { chainIds } from "../components/chains";
-import Switch from "@material-ui/core/Switch";
 
 const searchTheme = createTheme({
   palette: {
