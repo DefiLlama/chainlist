@@ -89,7 +89,7 @@ export default function Chain({ chain }) {
   };
 
   const icon = useMemo(() => {
-    return chain.chainSlug? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : "/chains/unknown-logo.png";
+    return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
 
   if (!chain) {

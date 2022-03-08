@@ -64,16 +64,6 @@ const searchTheme = createTheme({
   },
 });
 
-const StyledSwitch = withStyles({
-  switchBase: {
-    "&$checked": {
-      color: "#2f80ed",
-    },
-  },
-  checked: {},
-  track: {},
-})(Switch);
-
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export async function getStaticProps({ params }) {
@@ -84,11 +74,13 @@ export async function getStaticProps({ params }) {
     const chainSlug = chainIds[chain.chainId];
     if (chainSlug !== undefined) {
       const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
-      return defiChain === undefined ? chain :{
-        ...chain,
-        tvl: defiChain.tvl,
-        chainSlug
-      };
+      return defiChain === undefined
+        ? chain
+        : {
+            ...chain,
+            tvl: defiChain.tvl,
+            chainSlug,
+          };
     }
     return chain;
   }
@@ -97,7 +89,7 @@ export async function getStaticProps({ params }) {
     .filter((c) => c.name !== "420coin") // same chainId as ronin
     .map(populateChain)
     .sort((a, b) => {
-      return (b.tvl ?? 0) - (a.tvl ?? 0)
+      return (b.tvl ?? 0) - (a.tvl ?? 0);
     });
 
   return {
@@ -112,7 +104,7 @@ function Home({ changeTheme, theme, sortedChains }) {
   const data = sortedChains;
 
   const [search, setSearch] = useState("");
-  const [includeTestnets, setIncludeTestnets] = useState(false);
+  const [testnets, setTestnets] = useState(false);
   const router = useRouter();
   if (router.query.search) {
     setSearch(router.query.search);
@@ -128,7 +120,7 @@ function Home({ changeTheme, theme, sortedChains }) {
   };
 
   const chains = useMemo(() => {
-    if (!includeTestnets) {
+    if (!testnets) {
       return data.filter((item) => {
         const testnet =
           item.name?.toLowerCase().includes("test") ||
@@ -137,7 +129,11 @@ function Home({ changeTheme, theme, sortedChains }) {
         return !testnet;
       });
     } else return data;
-  }, [includeTestnets]);
+  }, [testnets]);
+
+  const toggleTestnets = () => {
+    setTestnets(!testnets);
+  };
 
   return (
     <div className={styles.container}>
@@ -221,14 +217,8 @@ function Home({ changeTheme, theme, sortedChains }) {
                   </Paper>
                 </ThemeProvider>
               </div>
-              <Header changeTheme={changeTheme} />
+              <Header changeTheme={changeTheme} testnets={testnets} toggleTestnets={toggleTestnets} />
             </div>
-            <form className={classes.form}>
-              <label>
-                <StyledSwitch checked={includeTestnets} onChange={() => setIncludeTestnets(!includeTestnets)} />
-                <span>Include Testnets</span>
-              </label>
-            </form>
             <div className={classes.cardsContainer}>
               {(search === ""
                 ? chains
