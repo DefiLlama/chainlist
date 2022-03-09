@@ -1,25 +1,24 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { Typography, Paper, Button, Tooltip } from "@material-ui/core";
-import classes from "./chain.module.css";
-import stores from "../../stores/index.js";
-import { getProvider, toK } from "../../utils";
-import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
-import Image from "next/image";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import Popover from "@material-ui/core/Popover";
+import React, { useState, useEffect, useMemo } from 'react';
+import { Typography, Paper, Button, Tooltip } from '@material-ui/core';
+import classes from './chain.module.css';
+import stores from '../../stores/index.js';
+import { getProvider } from '../../utils';
+import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Chain({ chain }) {
   const [account, setAccount] = useState(null);
 
   useEffect(() => {
     const accountConfigure = () => {
-      const accountStore = stores.accountStore.getStore("account");
+      const accountStore = stores.accountStore.getStore('account');
       setAccount(accountStore);
     };
 
     stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure);
 
-    const accountStore = stores.accountStore.getStore("account");
+    const accountStore = stores.accountStore.getStore('account');
     setAccount(accountStore);
 
     return () => {
@@ -28,7 +27,7 @@ export default function Chain({ chain }) {
   }, []);
 
   const toHex = (num) => {
-    return "0x" + num.toString(16);
+    return '0x' + num.toString(16);
   };
 
   const addToNetwork = () => {
@@ -56,7 +55,7 @@ export default function Chain({ chain }) {
     window.web3.eth.getAccounts((error, accounts) => {
       window.ethereum
         .request({
-          method: "wallet_addEthereumChain",
+          method: 'wallet_addEthereumChain',
           params: [params, accounts[0]],
         })
         .then((result) => {
@@ -72,32 +71,19 @@ export default function Chain({ chain }) {
   const renderProviderText = () => {
     if (account && account.address) {
       const providerTextList = {
-        Metamask: "Add to Metamask",
-        imToken: "Add to imToken",
-        Wallet: "Add to Wallet",
+        Metamask: 'Add to Metamask',
+        imToken: 'Add to imToken',
+        Wallet: 'Add to Wallet',
       };
       return providerTextList[getProvider()];
     } else {
-      return "Connect wallet";
+      return 'Connect wallet';
     }
   };
 
   const icon = useMemo(() => {
-    return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : '/unknown-logo.png';
   }, [chain]);
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
 
   if (!chain) {
     return <div></div>;
@@ -110,18 +96,15 @@ export default function Chain({ chain }) {
           src={icon}
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = "/chains/unknown-logo.png";
+            e.target.src = '/chains/unknown-logo.png';
           }}
           width={28}
           height={28}
           className={classes.avatar}
         />
-
         <Tooltip title={chain.name}>
-          <Typography variant="h3" className={classes.name} noWrap style={{ marginLeft: "24px" }}>
-            <a href={chain.infoURL} target="_blank" rel="noreferrer">
-              {chain.name}
-            </a>
+          <Typography variant="h3" className={classes.name} noWrap style={{ marginLeft: '24px' }}>
+            <Link href={`/chain/${encodeURIComponent(chain.name)}`}>{chain.name}</Link>
           </Typography>
         </Tooltip>
       </div>
@@ -136,36 +119,13 @@ export default function Chain({ chain }) {
           <Typography variant="subtitle1" color="textSecondary" className={classes.dataPointHeader}>
             Currency
           </Typography>
-          <Typography variant="h5">{chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}</Typography>
+          <Typography variant="h5">{chain.nativeCurrency ? chain.nativeCurrency.symbol : 'none'}</Typography>
         </div>
       </div>
       <div className={classes.addButton}>
         <Button variant="outlined" color="primary" onClick={addToNetwork}>
           {renderProviderText()}
         </Button>
-        {chain.tvl && (
-          <>
-            <Button aria-label="Show chain info" aria-describedby={id} onClick={handleClick}>
-              <MoreHorizIcon />
-            </Button>
-            <Popover
-              id={id}
-              open={open}
-              anchorEl={anchorEl}
-              onClose={handleClose}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "center",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "center",
-              }}
-            >
-              <Typography className={classes.popover}>{`TVL : $${toK(chain.tvl)}`}</Typography>
-            </Popover>
-          </>
-        )}
       </div>
     </Paper>
   );
