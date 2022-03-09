@@ -8,8 +8,8 @@ import BigNumber from 'bignumber.js'
 //   return window.navigator.language;
 // }
 
-export function formatCurrency(amount, decimals=2) {
-  if(!isNaN(amount)) {
+export function formatCurrency(amount, decimals = 2) {
+  if (!isNaN(amount)) {
     const formatter = new Intl.NumberFormat(undefined, {
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals,
@@ -21,12 +21,12 @@ export function formatCurrency(amount, decimals=2) {
   }
 }
 
-export function formatAddress(address, length='short') {
-  if (address && length==='short') {
-    address = address.substring(0,6)+'...'+address.substring(address.length-4,address.length)
+export function formatAddress(address, length = 'short') {
+  if (address && length === 'short') {
+    address = address.substring(0, 6) + '...' + address.substring(address.length - 4, address.length)
     return address
-  } else if (address && length==='long') {
-    address = address.substring(0,12)+'...'+address.substring(address.length-8,address.length)
+  } else if (address && length === 'long') {
+    address = address.substring(0, 12) + '...' + address.substring(address.length - 8, address.length)
     return address
   } else {
     return null
@@ -35,11 +35,13 @@ export function formatAddress(address, length='short') {
 
 export function bnDec(decimals) {
   return new BigNumber(10)
-          .pow(parseInt(decimals))
+    .pow(parseInt(decimals))
 }
 
 export function getProvider() {
-  if (typeof window !== "undefined" && typeof window.ethereum !== "undefined" ) {
+  if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
+    if (window.ethereum.isDfox) return 'dfox'
+    if (window.ethereum.isTokenPocket) return 'tokenpocket'
     if (window.ethereum.isMetaMask) return 'Metamask'
     if (window.ethereum.isImToken) return 'imToken'
   }

@@ -22,18 +22,31 @@
 .metamask {
   background-image: url('/connectors/icn-metamask.svg');
 }
+
+.dfox {
+  background-image: url('/connectors/icn-dfox.svg');
+}
+
+.tokenpocket {
+  background-image: url('/connectors/icn-tokenpocket.svg');
+}
+
 .imtoken {
   background-image: url('/connectors/icn-imtoken.svg');
 }
+
 .ledger {
   background-image: url('/connectors/icn-ledger.svg');
 }
+
 .coinbase {
   background-image: url('/connectors/coinbaseWalletIcon.svg');
 }
+
 .torus {
   background-image: url('/connectors/torus.jpg');
 }
+
 .trust {
   background-image: url('/connectors/trustWallet.png');
 }
@@ -58,6 +71,7 @@
     justify-content: space-between;
     margin-bottom: 10px;
   }
+
   .accountButton {
     width: 100%;
   }

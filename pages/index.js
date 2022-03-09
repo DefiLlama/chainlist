@@ -137,6 +137,7 @@ function Home({ changeTheme, theme }) {
               <Typography variant='h1' className={classes.chainListSpacing}><span className={classes.helpingUnderline}>Chainlist</span></Typography>
               <Typography variant='h2' className={classes.helpingParagraph}>Helping users connect to EVM powered networks</Typography>
               <Typography className={classes.subTitle}>Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
+
               <Button
                 size='large'
                 color='primary'
@@ -147,6 +148,9 @@ function Home({ changeTheme, theme }) {
               >
                 <Typography className={classes.buttonLabel}>Add Your Network</Typography>
               </Button>
+
+              <a target="_blank" href="https://help.tokenpocket.pro/en/wallet-operation/how-to-add-custom-network" ><img style={{ width: '90%', marginTop: '36px' }} src="https://chainlist.tokenpocket.pro/add-to-tokenpocket.png" /></a>
+
               <div className={classes.socials}>
                 <a className={`${classes.socialButton}`} href='https://github.com/TP-Lab/networklist-org/' target='_blank' rel="noopener noreferrer" >
                   <svg version="1.1" width="24" height="24" viewBox="0 0 24 24">

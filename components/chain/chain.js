@@ -78,6 +78,8 @@ export default function Chain({ chain }) {
 
     if (account && account.address) {
       const providerTextList = {
+        tokenpocket: 'Add to TokenPocket',
+        dfox: 'Add to dfox',
         Metamask: 'Add to Metamask',
         imToken: 'Add to imToken',
         Wallet: 'Add to Wallet'

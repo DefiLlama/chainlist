@@ -75,9 +75,9 @@ const StyledSwitch = withStyles((theme) => ({
 
 function Header(props) {
 
-  const [ account, setAccount ] = useState(null)
-  const [ darkMode, setDarkMode ] = useState(props.theme.palette.type === 'dark' ? true : false);
-  const [ unlockOpen, setUnlockOpen ] = useState(false);
+  const [account, setAccount] = useState(null)
+  const [darkMode, setDarkMode] = useState(props.theme.palette.type === 'dark' ? true : false);
+  const [unlockOpen, setUnlockOpen] = useState(false);
 
   useEffect(() => {
     const accountConfigure = () => {
@@ -114,47 +114,49 @@ function Header(props) {
   const renderProviderLogo = () => {
     const providerLogoList = {
       Metamask: 'metamask',
+      dfox: 'dfox',
+      tokenpocket: 'tokenpocket',
       imToken: 'imtoken',
       Wallet: 'metamask',
     }
     return providerLogoList[getProvider()]
   }
 
-  useEffect(function() {
+  useEffect(function () {
     const localStorageDarkMode = window.localStorage.getItem('yearn.finance-dark-mode')
     setDarkMode(localStorageDarkMode ? localStorageDarkMode === 'dark' : false)
-  },[]);
+  }, []);
 
   return (
-    <div className={ classes.headerContainer }>
-      { props.backClicked && (
-        <div className={ classes.backButton }>
+    <div className={classes.headerContainer}>
+      {props.backClicked && (
+        <div className={classes.backButton}>
           <Button
-          color={ props.theme.palette.type === 'light' ? 'primary' : 'secondary' }
-          onClick={ props.backClicked }
+            color={props.theme.palette.type === 'light' ? 'primary' : 'secondary'}
+            onClick={props.backClicked}
             disableElevation
-            >
-            <ArrowBackIcon fontSize={ 'large' } />
+          >
+            <ArrowBackIcon fontSize={'large'} />
           </Button>
         </div>
       )}
-      <div className={ classes.themeSelectContainer }>
+      <div className={classes.themeSelectContainer}>
         <StyledSwitch
-          icon={ <Brightness2Icon className={ classes.switchIcon }/> }
-          checkedIcon={ <WbSunnyOutlinedIcon className={ classes.switchIcon }/> }
-          checked={ darkMode }
-          onChange={ handleToggleChange }
+          icon={<Brightness2Icon className={classes.switchIcon} />}
+          checkedIcon={<WbSunnyOutlinedIcon className={classes.switchIcon} />}
+          checked={darkMode}
+          onChange={handleToggleChange}
         />
       </div>
       <Button
         disableElevation
-        className={ classes.accountButton }
+        className={classes.accountButton}
         variant='contained'
         color='secondary'
-        onClick={ onAddressClicked }
-        >
-        { account && account.address && <div className={ `${classes.accountIcon} ${classes[renderProviderLogo()]}` }></div>}
-        <Typography variant='h5'>{ (account && account.address)? formatAddress(account.address) : 'Connect Wallet' }</Typography>
+        onClick={onAddressClicked}
+      >
+        {account && account.address && <div className={`${classes.accountIcon} ${classes[renderProviderLogo()]}`}></div>}
+        <Typography variant='h5'>{(account && account.address) ? formatAddress(account.address) : 'Connect Wallet'}</Typography>
       </Button>
     </div>
   )
