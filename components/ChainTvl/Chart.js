@@ -1,190 +1,210 @@
-import React, { useMemo, useCallback } from 'react';
-import { AreaClosed, Line, Bar } from '@visx/shape';
-import { curveMonotoneX } from '@visx/curve';
-import { GridRows, GridColumns } from '@visx/grid';
-import { scaleTime, scaleLinear } from '@visx/scale';
-import { withTooltip, Tooltip, TooltipWithBounds, defaultStyles } from '@visx/tooltip';
-import { localPoint } from '@visx/event';
-import { LinearGradient } from '@visx/gradient';
-import { max, extent, bisector } from 'd3-array';
-import { timeFormat } from 'd3-time-format';
+import React, { useEffect, useRef, useMemo } from 'react';
+import { createChart } from 'lightweight-charts';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import { toK } from '../../utils/utils';
 
-export const background = '#3b6978';
-export const background2 = '#204051';
-export const accentColor = '#edffea';
-export const accentColorDark = '#75daad';
-const tooltipStyles = {
-  ...defaultStyles,
-  background,
-  border: '1px solid white',
-  color: 'white',
+dayjs.extend(utc);
+
+export const CHART_TYPES = {
+  BAR: 'BAR',
+  AREA: 'AREA',
 };
 
-// util
-const formatDate = timeFormat("%b %d, '%y");
+const formattedNum = (value, units) => `${units + toK(value)}`;
 
-// accessors
-const getDate = (d) => new Date(d.date);
-const getDataValue = (d) => d?.value;
-const bisectDate = bisector((d) => new Date(d.date)).left;
+// constant height for charts
+const HEIGHT = 300;
 
-export default withTooltip(
-  ({
-    width,
-    height,
-    data,
-    margin = { top: 0, right: 0, bottom: 0, left: 0 },
-    showTooltip,
-    hideTooltip,
-    tooltipData,
-    tooltipTop = 0,
-    tooltipLeft = 0,
-  }) => {
-    if (width < 10) return null;
+const TradingViewChart = ({
+  type = CHART_TYPES.BAR,
+  data = [],
+  base,
+  baseChange,
+  field,
+  title,
+  width,
+  units = '$',
+  chainId = 1,
+  useWeekly = false,
+}) => {
+  // reference for DOM element to create with chart
+  const ref = useRef();
 
-    // bounds
-    const innerWidth = width - margin.left - margin.right;
-    const innerHeight = height - margin.top - margin.bottom;
+  // parse the data and format for tardingview consumption
+  const formattedData = useMemo(() => {
+    return data.map((entry) => {
+      return {
+        time: dayjs.unix(entry[0]).utc().format('YYYY-MM-DD'),
+        value: parseFloat(entry[field]),
+      };
+    });
+  }, [data, field]);
 
-    // scales
-    const dateScale = useMemo(
-      () =>
-        scaleTime({
-          range: [margin.left, innerWidth + margin.left],
-          domain: extent(data, getDate),
-        }),
-      [innerWidth, margin.left]
-    );
-    const dataValueScale = useMemo(
-      () =>
-        scaleLinear({
-          range: [innerHeight + margin.top, margin.top],
-          domain: [0, (max(data, getDataValue) || 0) + innerHeight / 3],
-          nice: true,
-        }),
-      [margin.top, innerHeight]
-    );
+  // adjust the scale based on the type of chart
+  const topScale = type === CHART_TYPES.AREA ? 0.32 : 0.2;
 
-    // tooltip handler
-    const handleTooltip = useCallback(
-      (event) => {
-        const { x } = localPoint(event) || { x: 0 };
-        const x0 = dateScale.invert(x);
-        const index = bisectDate(data, x0, 1);
-        const d0 = data[index - 1];
-        const d1 = data[index];
-        let d = d0;
-        if (d1 && getDate(d1)) {
-          d = x0.valueOf() - getDate(d0).valueOf() > getDate(d1).valueOf() - x0.valueOf() ? d1 : d0;
-        }
-        showTooltip({
-          tooltipData: d,
-          tooltipLeft: x,
-          tooltipTop: dataValueScale(getDataValue(d)),
-        });
+  const darkMode = false;
+
+  useEffect(() => {
+    const textColor = darkMode ? 'white' : 'black';
+    const crossHairColor = darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(32, 38, 46, 0.1)';
+
+    const chart = createChart(ref.current, {
+      width: width,
+      height: HEIGHT,
+      layout: {
+        backgroundColor: 'transparent',
+        textColor: textColor,
       },
-      [showTooltip, dataValueScale, dateScale]
-    );
+      rightPriceScale: {
+        scaleMargins: {
+          top: topScale,
+          bottom: 0,
+        },
+        borderVisible: false,
+      },
+      timeScale: {
+        borderVisible: false,
+      },
+      grid: {
+        horzLines: {
+          color: 'rgba(197, 203, 206, 0.5)',
+          visible: false,
+        },
+        vertLines: {
+          color: 'rgba(197, 203, 206, 0.5)',
+          visible: false,
+        },
+      },
+      crosshair: {
+        horzLine: {
+          visible: false,
+          labelVisible: false,
+        },
+        vertLine: {
+          visible: true,
+          style: 0,
+          width: 2,
+          color: crossHairColor,
+          labelVisible: false,
+        },
+      },
+      localization: {
+        priceFormatter: (val) => formattedNum(val, units),
+      },
+    });
 
-    return (
-      <div>
-        <svg width={width} height={height}>
-          <rect x={0} y={0} width={width} height={height} fill="url(#area-background-gradient)" rx={14} />
-          <LinearGradient id="area-background-gradient" from={background} to={background2} />
-          <LinearGradient id="area-gradient" from={accentColor} to={accentColor} toOpacity={0.1} />
-          <GridRows
-            left={margin.left}
-            scale={dataValueScale}
-            width={innerWidth}
-            strokeDasharray="1,3"
-            stroke={accentColor}
-            strokeOpacity={0}
-            pointerEvents="none"
-          />
-          <GridColumns
-            top={margin.top}
-            scale={dateScale}
-            height={innerHeight}
-            strokeDasharray="1,3"
-            stroke={accentColor}
-            strokeOpacity={0.2}
-            pointerEvents="none"
-          />
-          <AreaClosed
-            data={data}
-            x={(d) => dateScale(getDate(d)) ?? 0}
-            y={(d) => dataValueScale(getDataValue(d)) ?? 0}
-            yScale={dataValueScale}
-            strokeWidth={1}
-            stroke="url(#area-gradient)"
-            fill="url(#area-gradient)"
-            curve={curveMonotoneX}
-          />
-          <Bar
-            x={margin.left}
-            y={margin.top}
-            width={innerWidth}
-            height={innerHeight}
-            fill="transparent"
-            rx={14}
-            onTouchStart={handleTooltip}
-            onTouchMove={handleTooltip}
-            onMouseMove={handleTooltip}
-            onMouseLeave={() => hideTooltip()}
-          />
-          {tooltipData && (
-            <g>
-              <Line
-                from={{ x: tooltipLeft, y: margin.top }}
-                to={{ x: tooltipLeft, y: innerHeight + margin.top }}
-                stroke={accentColorDark}
-                strokeWidth={2}
-                pointerEvents="none"
-                strokeDasharray="5,2"
-              />
-              <circle
-                cx={tooltipLeft}
-                cy={tooltipTop + 1}
-                r={4}
-                fill="black"
-                fillOpacity={0.1}
-                stroke="black"
-                strokeOpacity={0.1}
-                strokeWidth={2}
-                pointerEvents="none"
-              />
-              <circle
-                cx={tooltipLeft}
-                cy={tooltipTop}
-                r={4}
-                fill={accentColorDark}
-                stroke="white"
-                strokeWidth={2}
-                pointerEvents="none"
-              />
-            </g>
-          )}
-        </svg>
-        {tooltipData && (
-          <div>
-            <TooltipWithBounds key={Math.random()} top={tooltipTop - 12} left={tooltipLeft + 12} style={tooltipStyles}>
-              {`$${getDataValue(tooltipData)}`}
-            </TooltipWithBounds>
-            <Tooltip
-              top={innerHeight + margin.top - 14}
-              left={tooltipLeft}
-              style={{
-                ...defaultStyles,
-                minWidth: 72,
-                textAlign: 'center',
-                transform: 'translateX(-50%)',
-              }}
-            >
-              {formatDate(getDate(tooltipData))}
-            </Tooltip>
-          </div>
-        )}
-      </div>
-    );
-  }
-);
+    const series =
+      type === CHART_TYPES.BAR
+        ? chart.addHistogramSeries({
+            color: '#394990',
+            priceFormat: {
+              type: 'volume',
+            },
+            scaleMargins: {
+              top: 0.32,
+              bottom: 0,
+            },
+            lineColor: '#394990',
+            lineWidth: 3,
+          })
+        : chart.addAreaSeries({
+            topColor: '#394990',
+            bottomColor: 'rgba(112, 82, 64, 0)',
+            lineColor: '#394990',
+            lineWidth: 3,
+          });
+
+    series.setData(formattedData);
+
+    const prevTooltip = document.getElementById('tooltip-id' + chainId + type);
+    const node = document.getElementById('test-id' + chainId + type);
+
+    if (prevTooltip && node) {
+      node.removeChild(prevTooltip);
+    }
+
+    const toolTip = document.createElement('div');
+    toolTip.setAttribute('id', 'tooltip-id' + chainId + type);
+    toolTip.className = darkMode ? 'three-line-legend-dark' : 'three-line-legend';
+
+    ref.current.appendChild(toolTip);
+
+    toolTip.style.display = 'block';
+    toolTip.style.fontWeight = '500';
+    toolTip.style.left = 0;
+    toolTip.style.top = '-6px';
+    toolTip.style.backgroundColor = 'transparent';
+    toolTip.style.position = 'absolute';
+
+    // format numbers
+    let percentChange = baseChange?.toFixed(2);
+    let formattedPercentChange = (percentChange > 0 ? '+' : '') + percentChange + '%';
+    let color = percentChange >= 0 ? 'green' : 'red';
+
+    // get the title of the chart
+    function setLastBarText() {
+      toolTip.innerHTML =
+        `<div style="font-size: 16px; margin: 4px 0px; color: ${textColor};">${title} ${
+          type === CHART_TYPES.BAR && !useWeekly ? '(24hr)' : ''
+        }</div>` +
+        `<div style="font-size: 22px; margin: 4px 0px; color:${textColor}" >` +
+        formattedNum(base ?? 0, units) +
+        (baseChange
+          ? `<span style="margin-left: 10px; font-size: 16px; color: ${color};">${formattedPercentChange}</span>`
+          : '') +
+        '</div>';
+    }
+    setLastBarText();
+
+    // update the title when hovering on the chart
+    chart.subscribeCrosshairMove(function (param) {
+      if (
+        param === undefined ||
+        param.time === undefined ||
+        param.point.x < 0 ||
+        param.point.x > width ||
+        param.point.y < 0 ||
+        param.point.y > HEIGHT
+      ) {
+        setLastBarText();
+      } else {
+        let dateStr = useWeekly
+          ? dayjs(param.time.year + '-' + param.time.month + '-' + param.time.day)
+              .startOf('week')
+              .format('MMMM D, YYYY') +
+            '-' +
+            dayjs(param.time.year + '-' + param.time.month + '-' + param.time.day)
+              .endOf('week')
+              .format('MMMM D, YYYY')
+          : dayjs(param.time.year + '-' + param.time.month + '-' + param.time.day).format('MMMM D, YYYY');
+
+        const price = param.seriesPrices.get(series);
+
+        toolTip.innerHTML =
+          `<div style="font-size: 16px; margin: 4px 0px; color: ${textColor};">${title}</div>` +
+          `<div style="font-size: 22px; margin: 4px 0px; color: ${textColor}">` +
+          formattedNum(price, units) +
+          '</div>' +
+          '<div>' +
+          dateStr +
+          '</div>';
+      }
+    });
+
+    chart.timeScale().fitContent();
+
+    return () => {
+      chart.remove();
+    };
+  }, [base, baseChange, title, topScale, type, useWeekly, width, units, formattedData, darkMode]);
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <div ref={ref} id={'test-id' + chainId + type} />
+    </div>
+  );
+};
+
+export default TradingViewChart;
