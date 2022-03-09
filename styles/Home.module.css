@@ -1,6 +1,7 @@
 .cardsContainer {
   display: grid;
-  grid-template-columns: calc(33% - 15px) calc(33% - 15px) calc(33% - 15px);
+  grid-template-columns: repeat(auto-fit, calc(33% - 15px));
+  grid-auto-flow: dense;
   gap: 30px;
   max-width: 1400px;
 }
@@ -12,7 +13,7 @@
 
 @media screen and (max-width: 1700px) {
   .cardsContainer {
-    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-template-columns: repeat(auto-fit, calc(50% - 15px));
   }
 }
 
@@ -30,6 +31,6 @@
   }
 
   .cardsContainer {
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(auto-fit, 100%);
   }
 }

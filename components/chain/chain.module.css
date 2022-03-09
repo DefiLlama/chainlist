@@ -41,3 +41,7 @@
 .popover {
   padding: 12px;
 }
+
+.rotate {
+  transform: rotate(180deg);
+}

@@ -1,11 +1,21 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Typography, Paper, Button, Tooltip } from '@material-ui/core';
+import { Typography, Paper, Button, Tooltip, withStyles } from '@material-ui/core';
 import classes from './chain.module.css';
 import stores from '../../stores/index.js';
 import { getProvider } from '../../utils';
 import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ChainTvl from '../ChainTvl';
+
+const ExpanButton = withStyles((theme) => ({
+  root: {
+    width: '100%',
+    marginTop: '12px',
+    marginBottom: '-24px',
+  },
+}))(Button);
 
 export default function Chain({ chain }) {
   const [account, setAccount] = useState(null);
@@ -85,48 +95,60 @@ export default function Chain({ chain }) {
     return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : '/unknown-logo.png';
   }, [chain]);
 
+  const [displayChart, setDisplayChart] = useState(false);
+
+  const handleClick = () => {
+    setDisplayChart(!displayChart);
+  };
+
   if (!chain) {
     return <div></div>;
   }
 
   return (
-    <Paper elevation={1} className={classes.chainContainer} key={chain.chainId}>
-      <div className={classes.chainNameContainer}>
-        <Image
-          src={icon}
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = '/chains/unknown-logo.png';
-          }}
-          width={28}
-          height={28}
-          className={classes.avatar}
-        />
-        <Tooltip title={chain.name}>
-          <Typography variant="h3" className={classes.name} noWrap style={{ marginLeft: '24px' }}>
-            <Link href={`/chain/${encodeURIComponent(chain.name)}`}>{chain.name}</Link>
-          </Typography>
-        </Tooltip>
-      </div>
-      <div className={classes.chainInfoContainer}>
-        <div className={classes.dataPoint}>
-          <Typography variant="subtitle1" color="textSecondary" className={classes.dataPointHeader}>
-            ChainID
-          </Typography>
-          <Typography variant="h5">{chain.chainId}</Typography>
+    <>
+      <Paper elevation={1} className={classes.chainContainer} key={chain.chainId}>
+        <div className={classes.chainNameContainer}>
+          <Image
+            src={icon}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = '/chains/unknown-logo.png';
+            }}
+            width={28}
+            height={28}
+            className={classes.avatar}
+          />
+          <Tooltip title={chain.name}>
+            <Typography variant="h3" className={classes.name} noWrap style={{ marginLeft: '24px' }}>
+              <Link href={`/chain/${encodeURIComponent(chain.name)}`}>{chain.name}</Link>
+            </Typography>
+          </Tooltip>
         </div>
-        <div className={classes.dataPoint}>
-          <Typography variant="subtitle1" color="textSecondary" className={classes.dataPointHeader}>
-            Currency
-          </Typography>
-          <Typography variant="h5">{chain.nativeCurrency ? chain.nativeCurrency.symbol : 'none'}</Typography>
+        <div className={classes.chainInfoContainer}>
+          <div className={classes.dataPoint}>
+            <Typography variant="subtitle1" color="textSecondary" className={classes.dataPointHeader}>
+              ChainID
+            </Typography>
+            <Typography variant="h5">{chain.chainId}</Typography>
+          </div>
+          <div className={classes.dataPoint}>
+            <Typography variant="subtitle1" color="textSecondary" className={classes.dataPointHeader}>
+              Currency
+            </Typography>
+            <Typography variant="h5">{chain.nativeCurrency ? chain.nativeCurrency.symbol : 'none'}</Typography>
+          </div>
         </div>
-      </div>
-      <div className={classes.addButton}>
-        <Button variant="outlined" color="primary" onClick={addToNetwork}>
-          {renderProviderText()}
-        </Button>
-      </div>
-    </Paper>
+        <div className={classes.addButton}>
+          <Button variant="outlined" color="primary" onClick={addToNetwork}>
+            {renderProviderText()}
+          </Button>
+        </div>
+        <ExpanButton onClick={handleClick}>
+          <ExpandMoreIcon style={{ transform: displayChart ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
+        </ExpanButton>
+      </Paper>
+      {displayChart && <ChainTvl tvl={chain.tvl} />}
+    </>
   );
 }
