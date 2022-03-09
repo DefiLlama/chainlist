@@ -144,11 +144,13 @@ export default function Chain({ chain }) {
             {renderProviderText()}
           </Button>
         </div>
-        <ExpanButton onClick={handleClick}>
-          <ExpandMoreIcon style={{ transform: displayChart ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
-        </ExpanButton>
+        {chain.tvl && (
+          <ExpanButton onClick={handleClick}>
+            <ExpandMoreIcon style={{ transform: displayChart ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
+          </ExpanButton>
+        )}
       </Paper>
-      {displayChart && <ChainTvl tvl={chain.tvl} />}
+      {chain.tvl && displayChart && <ChainTvl chain={chain} />}
     </>
   );
 }

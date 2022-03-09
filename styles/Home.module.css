@@ -1,6 +1,6 @@
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, calc(33% - 15px));
+  grid-template-columns: repeat(auto-fit, calc(33% - 20px));
   grid-auto-flow: dense;
   gap: 30px;
   max-width: 1400px;
@@ -31,6 +31,6 @@
   }
 
   .cardsContainer {
-    grid-template-columns: repeat(auto-fit, 100%);
+    grid-template-columns: 100%;
   }
 }
