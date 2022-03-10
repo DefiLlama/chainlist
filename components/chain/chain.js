@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Typography, Paper, Button, Tooltip, withStyles } from '@material-ui/core';
 import classes from './chain.module.css';
-import stores from '../../stores/index.js';
+import stores, { useChart } from '../../stores/index.js';
 import { getProvider } from '../../utils';
 import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
 import Image from 'next/image';
@@ -96,10 +96,15 @@ export default function Chain({ chain }) {
   }, [chain]);
 
   const [displayChart, setDisplayChart] = useState(false);
+  const chartId = useChart((state) => state.id);
+  const updateChart = useChart((state) => state.updateChart);
 
   const handleClick = () => {
     setDisplayChart(!displayChart);
+    updateChart(chain.chainId);
   };
+
+  const showChart = chain.tvl && displayChart && chain.chainId === chartId;
 
   if (!chain) {
     return <div></div>;
@@ -146,11 +151,11 @@ export default function Chain({ chain }) {
         </div>
         {chain.tvl && (
           <ExpanButton onClick={handleClick}>
-            <ExpandMoreIcon style={{ transform: displayChart ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
+            <ExpandMoreIcon style={{ transform: showChart ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
           </ExpanButton>
         )}
       </Paper>
-      {chain.tvl && displayChart && <ChainTvl chain={chain} />}
+      {showChart && <ChainTvl chain={chain} />}
     </>
   );
 }

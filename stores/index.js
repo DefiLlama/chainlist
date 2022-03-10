@@ -24,3 +24,8 @@ export const useSearch = create((set) => ({
   search: '',
   handleSearch: (text) => set(() => ({ search: text })),
 }));
+
+export const useChart = create((set) => ({
+  id: null,
+  updateChart: (id) => set(() => ({ id })),
+}));
