@@ -2,7 +2,6 @@ import classes from './index.module.css';
 
 export default function RPCList({ chain }) {
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
-
   return (
     <table
       className={classes.table}
@@ -18,12 +17,14 @@ export default function RPCList({ chain }) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>https://rpc.ankr.com/fantom</td>
-          <td>33064722</td>
-          <td>0.576s</td>
-        </tr>
+        {chain.rpc?.map((item, index) => (
+          <tr>
+            <td>{index + 1}</td>
+            <td>{item}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
