@@ -1,7 +1,6 @@
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, calc(33% - 20px));
-  grid-auto-flow: dense;
   gap: 30px;
   max-width: 1400px;
 }
