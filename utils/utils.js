@@ -73,13 +73,38 @@ export function useDebounce(value, delay) {
   return debouncedValue;
 }
 
+const rpcPostBody = { jsonrpc: '2.0', method: 'eth_getBlockByNumber', params: ['latest', false], id: 1 };
+
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+export const rpcFetcher = (...args) =>
+  fetch(...args, {
+    method: 'POST',
+    body: JSON.stringify(rpcPostBody),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((res) => res.json());
 
 export function useChain(name) {
   const { data, error } = useSWR(`https://api.llama.fi/charts/${name}`, fetcher);
 
   return {
     data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export function useRPCData(url) {
+  const { data, error } = useSWR(url, rpcFetcher, { refreshInterval: 10000 });
+  let height = data?.result?.number ?? null;
+  if (height) {
+    const hexString = height.toString(16);
+    height = parseInt(hexString, 16);
+  }
+  return {
+    data: height,
     isLoading: !error && !data,
     isError: error,
   };

@@ -35,6 +35,7 @@ export default function ChainInfo({ chain }) {
 
   return (
     <Paper elevation={1} className={classes.disclosure}>
+      <RPCList chain={chain} />
       {chain.tvl && (
         <div className={classes.chartContainer}>
           {isLoading ? (
@@ -58,7 +59,6 @@ export default function ChainInfo({ chain }) {
           )}
         </div>
       )}
-      <RPCList chain={chain} />
     </Paper>
   );
 }
