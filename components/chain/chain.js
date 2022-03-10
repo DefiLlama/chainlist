@@ -5,11 +5,10 @@ import stores, { useChart } from '../../stores/index.js';
 import { getProvider } from '../../utils';
 import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
 import Image from 'next/image';
-import Link from 'next/link';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ChainTvl from '../ChainTvl';
+import ChainInfo from '../ChainInfo';
 
-const ExpanButton = withStyles((theme) => ({
+const ExpandButton = withStyles((theme) => ({
   root: {
     width: '100%',
     marginTop: '12px',
@@ -95,16 +94,18 @@ export default function Chain({ chain }) {
     return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : '/unknown-logo.png';
   }, [chain]);
 
-  const [displayChart, setDisplayChart] = useState(false);
   const chartId = useChart((state) => state.id);
   const updateChart = useChart((state) => state.updateChart);
 
   const handleClick = () => {
-    setDisplayChart(!displayChart);
-    updateChart(chain.chainId);
+    if (chain.chainId === chartId) {
+      updateChart(null);
+    } else {
+      updateChart(chain.chainId);
+    }
   };
 
-  const showChart = chain.tvl && displayChart && chain.chainId === chartId;
+  const showAddlInfo = chain.chainId === chartId;
 
   if (!chain) {
     return <div></div>;
@@ -126,7 +127,9 @@ export default function Chain({ chain }) {
           />
           <Tooltip title={chain.name}>
             <Typography variant="h3" className={classes.name} noWrap style={{ marginLeft: '24px' }}>
-              <Link href={`/chain/${encodeURIComponent(chain.name)}`}>{chain.name}</Link>
+              <a href={chain.infoURL} target="_blank" rel="noreferrer">
+                {chain.name}
+              </a>
             </Typography>
           </Tooltip>
         </div>
@@ -149,13 +152,12 @@ export default function Chain({ chain }) {
             {renderProviderText()}
           </Button>
         </div>
-        {chain.tvl && (
-          <ExpanButton onClick={handleClick}>
-            <ExpandMoreIcon style={{ transform: showChart ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
-          </ExpanButton>
-        )}
+
+        <ExpandButton onClick={handleClick}>
+          <ExpandMoreIcon style={{ transform: showAddlInfo ? 'rotate(180deg)' : '', transition: 'all 0.2s ease' }} />
+        </ExpandButton>
       </Paper>
-      {showChart && <ChainTvl chain={chain} />}
+      {showAddlInfo && <ChainInfo chain={chain} />}
     </>
   );
 }

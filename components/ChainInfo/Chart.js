@@ -44,7 +44,7 @@ const TradingViewChart = ({
   // adjust the scale based on the type of chart
   const topScale = type === CHART_TYPES.AREA ? 0.32 : 0.2;
 
-  const darkMode = false;
+  const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
 
   useEffect(() => {
     const textColor = darkMode ? 'white' : 'black';

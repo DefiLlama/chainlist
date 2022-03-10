@@ -1,0 +1,36 @@
+.disclosure {
+  grid-column: 1 / -1;
+  position: relative;
+  padding: 16px;
+}
+
+.chartContainer {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.table caption,
+.table th,
+.table td {
+  padding: 2px 12px;
+  border: 1px solid var(--border-color);
+}
+
+.table caption {
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 0;
+}
+
+.table th {
+  font-weight: 500;
+}
