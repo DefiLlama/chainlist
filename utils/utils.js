@@ -77,14 +77,19 @@ const rpcPostBody = { jsonrpc: '2.0', method: 'eth_getBlockByNumber', params: ['
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-export const rpcFetcher = (...args) =>
-  fetch(...args, {
-    method: 'POST',
-    body: JSON.stringify(rpcPostBody),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((res) => res.json());
+export const rpcFetcher = (...urls) => {
+  return Promise.allSettled(
+    urls.map((url) =>
+      fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(rpcPostBody),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((res) => res.json())
+    )
+  );
+};
 
 export function useChain(name) {
   const { data, error } = useSWR(`https://api.llama.fi/charts/${name}`, fetcher);
@@ -96,15 +101,49 @@ export function useChain(name) {
   };
 }
 
-export function useRPCData(url) {
-  const { data, error } = useSWR(url, rpcFetcher, { refreshInterval: 10000 });
-  let height = data?.result?.number ?? null;
-  if (height) {
-    const hexString = height.toString(16);
-    height = parseInt(hexString, 16);
-  }
+const sortValues = (a, b, key, asc = true) => {
+  if (a[key] === undefined || a[key] === null) {
+    return 1;
+  } else if (b[key] === undefined || b[key] === null) {
+    return -1;
+  } else return asc ? a[key] - b[key] : b[key] - a[key];
+};
+
+export function useRPCData(urls) {
+  const { data, error } = useSWR(urls, rpcFetcher, { refreshInterval: 10000 });
+
+  let blocks = urls.map((url) => ({ url: url }));
+
+  const resourceList = window.performance.getEntriesByType('resource');
+
+  data?.forEach((item, index) => {
+    if (item.status === 'fulfilled') {
+      let height = item.value?.result?.number ?? null;
+      if (height) {
+        const hexString = height.toString(16);
+        height = parseInt(hexString, 16);
+      }
+      blocks[index]['height'] = height;
+      let url = blocks[index].url;
+
+      if (url.slice(-1) !== '/') {
+        url += '/';
+      }
+
+      let resource = resourceList
+        .slice()
+        .reverse()
+        .find((item) => item.initiatorType === 'fetch' && (item.name === blocks[index].url || item.name === url));
+
+      const latency = resource ? (resource.duration / 1000).toFixed(3) + 's' : null;
+
+      blocks[index]['latency'] = latency;
+    }
+  });
+  blocks = blocks.sort((a, b) => sortValues(a, b, 'height', false)).sort((a, b) => sortValues(a, b, 'latency'));
+
   return {
-    data: height,
+    data: blocks,
     isLoading: !error && !data,
     isError: error,
   };

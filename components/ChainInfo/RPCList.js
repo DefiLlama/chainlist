@@ -1,9 +1,22 @@
+import { useEffect } from 'react';
 import { useRPCData } from '../../utils/utils';
 import classes from './index.module.css';
 
 export default function RPCList({ chain }) {
-  const { data } = useRPCData(chain.rpc[0]);
+  const { data } = useRPCData(chain.rpc);
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
+
+  useEffect(() => {
+    // clear network resources list for better performance to find latency of each rpc url
+    window.performance.clearResourceTimings();
+
+    const interval = setInterval(() => {
+      window.performance.clearResourceTimings();
+    }, 15000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <table
       className={classes.table}
@@ -19,12 +32,12 @@ export default function RPCList({ chain }) {
         </tr>
       </thead>
       <tbody>
-        {chain.rpc?.map((item, index) => (
+        {data?.map((item, index) => (
           <tr key={index}>
             <td>{index + 1}</td>
-            <td>{item}</td>
-            <td>{data}</td>
-            <td></td>
+            <td>{item.url}</td>
+            <td>{item.height}</td>
+            <td>{item.latency}</td>
           </tr>
         ))}
       </tbody>
