@@ -1,0 +1,32 @@
+.disclosure {
+  grid-column: 1 / -1;
+  position: relative;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.table {
+  white-space: nowrap;
+}
+
+.table caption,
+.table th,
+.table td {
+  padding: 2px 12px;
+  border: 1px solid var(--border-color);
+}
+
+.table caption {
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 0;
+}
+
+.table th {
+  font-weight: 500;
+}

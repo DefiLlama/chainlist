@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { Typography, Switch, Button } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/core/styles";
+import { Typography, Switch, Button, Paper, TextField, InputAdornment } from '@material-ui/core';
+import { withStyles, withTheme, createTheme, ThemeProvider } from '@material-ui/core/styles';
 
-import WbSunnyOutlinedIcon from "@material-ui/icons/WbSunnyOutlined";
-import Brightness2Icon from "@material-ui/icons/Brightness2";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
+import Brightness2Icon from '@material-ui/icons/Brightness2';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import SearchIcon from '@material-ui/icons/Search';
 
-import { CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from "../../stores/constants";
+import { CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
 
 // import Unlock from '../unlock'
 
-import stores from "../../stores";
-import { formatAddress, getProvider } from "../../utils";
+import stores, { useSearch, useTestnets } from '../../stores';
+import { formatAddress, getProvider, useDebounce } from '../../utils';
 
-import classes from "./header.module.css";
+import classes from './header.module.css';
 
 const StyledSwitch = withStyles((theme) => ({
   root: {
@@ -26,17 +26,17 @@ const StyledSwitch = withStyles((theme) => ({
   },
   switchBase: {
     padding: 1,
-    "&$checked": {
-      transform: "translateX(28px)",
-      color: "#212529",
-      "& + $track": {
-        backgroundColor: "#ffffff",
+    '&$checked': {
+      transform: 'translateX(28px)',
+      color: '#212529',
+      '& + $track': {
+        backgroundColor: '#ffffff',
         opacity: 1,
       },
     },
-    "&$focusVisible $thumb": {
-      color: "#ffffff",
-      border: "6px solid #fff",
+    '&$focusVisible $thumb': {
+      color: '#ffffff',
+      border: '6px solid #fff',
     },
   },
   thumb: {
@@ -46,9 +46,9 @@ const StyledSwitch = withStyles((theme) => ({
   track: {
     borderRadius: 32 / 2,
     border: `1px solid #212529`,
-    backgroundColor: "#212529",
+    backgroundColor: '#212529',
     opacity: 1,
-    transition: theme.transitions.create(["background-color", "border"]),
+    transition: theme.transitions.create(['background-color', 'border']),
   },
   checked: {},
   focusVisible: {},
@@ -69,24 +69,75 @@ const StyledSwitch = withStyles((theme) => ({
   );
 });
 
+const searchTheme = createTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#2F80ED',
+    },
+  },
+  shape: {
+    borderRadius: '10px',
+  },
+  typography: {
+    fontFamily: [
+      'Inter',
+      'Arial',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    body1: {
+      fontSize: '12px',
+    },
+  },
+  overrides: {
+    MuiPaper: {
+      elevation1: {
+        'box-shadow': '0px 7px 7px #0000000A;',
+        '-webkit-box-shadow': '0px 7px 7px #0000000A;',
+        '-moz-box-shadow': '0px 7px 7px #0000000A;',
+      },
+    },
+    MuiInputBase: {
+      input: {
+        fontSize: '14px',
+      },
+    },
+    MuiOutlinedInput: {
+      input: {
+        padding: '12.5px 14px',
+      },
+      notchedOutline: {
+        borderColor: '#FFF',
+      },
+    },
+  },
+});
+
 const TestnetSwitch = withStyles({
   switchBase: {
-    "&$checked": {
-      color: "#2f80ed",
+    '&$checked': {
+      color: '#2f80ed',
     },
   },
   checked: {},
   track: {},
 })(Switch);
 
-function Header({ testnets, toggleTestnets, ...props }) {
+function Header(props) {
   const [account, setAccount] = useState(null);
-  const [darkMode, setDarkMode] = useState(props.theme.palette.type === "dark" ? true : false);
-  const [unlockOpen, setUnlockOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(props.theme.palette.type === 'dark' ? true : false);
 
   useEffect(() => {
     const accountConfigure = () => {
-      const accountStore = stores.accountStore.getStore("account");
+      const accountStore = stores.accountStore.getStore('account');
       setAccount(accountStore);
     };
     const connectWallet = () => {
@@ -97,7 +148,7 @@ function Header({ testnets, toggleTestnets, ...props }) {
     stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure);
     stores.emitter.on(CONNECT_WALLET, connectWallet);
 
-    const accountStore = stores.accountStore.getStore("account");
+    const accountStore = stores.accountStore.getStore('account');
     setAccount(accountStore);
 
     return () => {
@@ -117,57 +168,100 @@ function Header({ testnets, toggleTestnets, ...props }) {
 
   const renderProviderLogo = () => {
     const providerLogoList = {
-      Metamask: "metamask",
-      imToken: "imtoken",
-      Wallet: "metamask",
+      Metamask: 'metamask',
+      imToken: 'imtoken',
+      Wallet: 'metamask',
     };
     return providerLogoList[getProvider()];
   };
 
   useEffect(function () {
-    const localStorageDarkMode = window.localStorage.getItem("yearn.finance-dark-mode");
-    setDarkMode(localStorageDarkMode ? localStorageDarkMode === "dark" : false);
+    const localStorageDarkMode = window.localStorage.getItem('yearn.finance-dark-mode');
+    setDarkMode(localStorageDarkMode ? localStorageDarkMode === 'dark' : false);
   }, []);
 
+  const testnets = useTestnets((state) => state.testnets);
+  const handleSearch = useSearch((state) => state.handleSearch);
+  const toggleTestnets = useTestnets((state) => state.toggleTestnets);
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+
+  useEffect(() => {
+    if (debouncedSearchTerm) {
+      handleSearch(debouncedSearchTerm);
+    } else {
+      handleSearch('');
+    }
+  }, [debouncedSearchTerm]);
+
   return (
-    <div className={classes.headerContainer}>
-      {props.backClicked && (
-        <div className={classes.backButton}>
-          <Button
-            color={props.theme.palette.type === "light" ? "primary" : "secondary"}
-            onClick={props.backClicked}
-            disableElevation
-          >
-            <ArrowBackIcon fontSize={"large"} />
-          </Button>
-        </div>
-      )}
-      <label className={classes.label}>
-        <TestnetSwitch checked={testnets} onChange={toggleTestnets} />
-        <span>Testnets</span>
-      </label>
-      <div className={classes.themeSelectContainer}>
-        <StyledSwitch
-          icon={<Brightness2Icon className={classes.switchIcon} />}
-          checkedIcon={<WbSunnyOutlinedIcon className={classes.switchIcon} />}
-          checked={darkMode}
-          onChange={handleToggleChange}
-        />
+    <div className={props.theme.palette.type === 'dark' ? classes.headerContainerDark : classes.headerContainer}>
+      <div className={classes.filterRow}>
+        <ThemeProvider theme={searchTheme}>
+          <Paper className={classes.searchPaper}>
+            <TextField
+              fullWidth
+              className={classes.searchContainer}
+              variant="outlined"
+              placeholder="ETH, Fantom, ..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <SearchIcon fontSize="small" />
+                  </InputAdornment>
+                ),
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Typography className={classes.searchInputAdnornment}>Search Networks</Typography>
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </Paper>
+        </ThemeProvider>
       </div>
-      <Button
-        disableElevation
-        className={classes.accountButton}
-        variant="contained"
-        color="secondary"
-        onClick={onAddressClicked}
-      >
-        {account && account.address && (
-          <div className={`${classes.accountIcon} ${classes[renderProviderLogo()]}`}></div>
+      <div className={classes.connector}>
+        {props.backClicked && (
+          <div className={classes.backButton}>
+            <Button
+              color={props.theme.palette.type === 'light' ? 'primary' : 'secondary'}
+              onClick={props.backClicked}
+              disableElevation
+            >
+              <ArrowBackIcon fontSize={'large'} />
+            </Button>
+          </div>
         )}
-        <Typography variant="h5">
-          {account && account.address ? formatAddress(account.address) : "Connect Wallet"}
-        </Typography>
-      </Button>
+        <label className={classes.label}>
+          <TestnetSwitch checked={testnets} onChange={toggleTestnets} />
+          <span>Testnets</span>
+        </label>
+        <div className={classes.themeSelectContainer}>
+          <StyledSwitch
+            icon={<Brightness2Icon className={classes.switchIcon} />}
+            checkedIcon={<WbSunnyOutlinedIcon className={classes.switchIcon} />}
+            checked={darkMode}
+            onChange={handleToggleChange}
+          />
+        </div>
+        <Button
+          disableElevation
+          className={classes.accountButton}
+          variant="contained"
+          color="secondary"
+          onClick={onAddressClicked}
+        >
+          {account && account.address && (
+            <div className={`${classes.accountIcon} ${classes[renderProviderLogo()]}`}></div>
+          )}
+          <Typography variant="h5">
+            {account && account.address ? formatAddress(account.address) : 'Connect Wallet'}
+          </Typography>
+        </Button>
+      </div>
     </div>
   );
 }

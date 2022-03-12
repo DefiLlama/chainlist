@@ -1,4 +1,32 @@
 .headerContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  padding-top: 24px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(rgba(243, 243, 243, 1) 90%, rgba(243, 243, 243, 0) 100%);
+  padding: 24px 80px 48px 80px;
+  z-index: 1;
+}
+
+.headerContainerDark {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  padding-top: 24px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(rgba(35, 37, 46, 1) 90%, rgba(35, 37, 46, 0) 100%);
+  padding: 24px 80px 48px 80px;
+  z-index: 1;
+}
+
+.connector {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -20,22 +48,22 @@
 }
 
 .metamask {
-  background-image: url("/connectors/icn-metamask.svg");
+  background-image: url('/connectors/icn-metamask.svg');
 }
 .imtoken {
-  background-image: url("/connectors/icn-imtoken.svg");
+  background-image: url('/connectors/icn-imtoken.svg');
 }
 .ledger {
-  background-image: url("/connectors/icn-ledger.svg");
+  background-image: url('/connectors/icn-ledger.svg');
 }
 .coinbase {
-  background-image: url("/connectors/coinbaseWalletIcon.svg");
+  background-image: url('/connectors/coinbaseWalletIcon.svg');
 }
 .torus {
-  background-image: url("/connectors/torus.jpg");
+  background-image: url('/connectors/torus.jpg');
 }
 .trust {
-  background-image: url("/connectors/trustWallet.png");
+  background-image: url('/connectors/trustWallet.png');
 }
 
 .themeSelectContainer {
@@ -55,8 +83,21 @@
   white-space: nowrap;
 }
 
+.searchContainer {
+  margin-right: 24px !important;
+}
+
+.searchPaper {
+  width: 100%;
+}
+
+.searchInputAdnornment {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
 @media screen and (max-width: 600px) {
-  .headerContainer {
+  .connector {
     width: 100%;
     display: flex;
     justify-content: space-between;
