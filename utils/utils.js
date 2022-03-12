@@ -86,12 +86,30 @@ export const rpcFetcher = (...urls) => {
   );
 };
 
-const sortValues = (a, b, key, asc = true) => {
-  if (a[key] === undefined || a[key] === null) {
+const sortUrls = (a, b) => {
+  var h1 = a.height;
+  var h2 = b.height;
+
+  var l1 = a.latency;
+  var l2 = b.latency;
+
+  if (h2 - h1 > 0) {
     return 1;
-  } else if (b[key] === undefined || b[key] === null) {
+  }
+
+  if (h2 - h1 < 0) {
     return -1;
-  } else return asc ? a[key] - b[key] : b[key] - a[key];
+  }
+
+  if (h1 === h2) {
+    if (l1 < l2) {
+      return -1;
+    } else {
+      return 1;
+    }
+  }
+
+  return two - one;
 };
 
 export function useRPCData(urls) {
@@ -125,10 +143,9 @@ export function useRPCData(urls) {
       blocks[index]['latency'] = latency;
     }
   });
-  blocks = blocks.sort((a, b) => sortValues(a, b, 'height', false)).sort((a, b) => sortValues(a, b, 'latency'));
 
   return {
-    data: blocks,
+    data: blocks.sort(sortUrls),
     isLoading: !error && !data,
     isError: error,
   };
