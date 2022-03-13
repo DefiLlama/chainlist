@@ -87,11 +87,15 @@ export const rpcFetcher = (...urls) => {
 };
 
 const sortUrls = (a, b) => {
-  var h1 = a.height;
-  var h2 = b.height;
+  const h1 = a.height;
+  const h2 = b.height;
 
-  var l1 = a.latency;
-  var l2 = b.latency;
+  const l1 = a.latency;
+  const l2 = b.latency;
+
+  if (!h2) {
+    return -1;
+  }
 
   if (h2 - h1 > 0) {
     return 1;
@@ -108,8 +112,6 @@ const sortUrls = (a, b) => {
       return 1;
     }
   }
-
-  return two - one;
 };
 
 export function useRPCData(urls) {

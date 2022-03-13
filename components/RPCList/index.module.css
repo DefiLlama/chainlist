@@ -30,3 +30,22 @@
 .table th {
   font-weight: 500;
 }
+
+.shimmer {
+  border-radius: 4px;
+  height: 16px;
+  width: 100%;
+  background-image: var(--linear-gradient);
+  background-size: 600px;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -100px;
+  }
+  40%,
+  100% {
+    background-position: 140px;
+  }
+}

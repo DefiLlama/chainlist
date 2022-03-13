@@ -4,7 +4,7 @@ import { useRPCData } from '../../utils/utils';
 import classes from './index.module.css';
 
 export default function RPCList({ chain }) {
-  const { data } = useRPCData(chain.rpc);
+  const { data, isLoading } = useRPCData(chain.rpc);
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
 
   useEffect(() => {
@@ -37,8 +37,8 @@ export default function RPCList({ chain }) {
           {data?.map((item, index) => (
             <tr key={index}>
               <td>{item.url}</td>
-              <td>{item.height}</td>
-              <td>{item.latency}</td>
+              <td>{isLoading ? <Shimmer /> : item.height}</td>
+              <td>{isLoading ? <Shimmer /> : item.latency}</td>
               <td>Add to Wallet</td>
             </tr>
           ))}
@@ -47,3 +47,11 @@ export default function RPCList({ chain }) {
     </Paper>
   );
 }
+
+const Shimmer = () => {
+  const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
+  const linearGradient = darkMode
+    ? 'linear-gradient(90deg, rgb(255 247 247 / 7%) 0px, rgb(85 85 85 / 80%) 40px, rgb(255 247 247 / 7%) 80px)'
+    : 'linear-gradient(90deg, #f4f4f4 0px, rgba(229, 229, 229, 0.8) 40px, #f4f4f4 80px)';
+  return <div className={classes.shimmer} style={{ '--linear-gradient': linearGradient }}></div>;
+};
