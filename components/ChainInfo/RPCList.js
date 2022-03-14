@@ -37,7 +37,7 @@ export default function RPCList({ chain }) {
             <td>{index + 1}</td>
             <td>{item.url}</td>
             <td>{item.height}</td>
-            <td>{item.latency}</td>
+            <td>{item.latency ? (item.latency / 1000).toFixed(3) + 's' : null}</td>
           </tr>
         ))}
       </tbody>

@@ -101,14 +101,6 @@ export function useChain(name) {
   };
 }
 
-const sortValues = (a, b, key, asc = true) => {
-  if (a[key] === undefined || a[key] === null) {
-    return 1;
-  } else if (b[key] === undefined || b[key] === null) {
-    return -1;
-  } else return asc ? a[key] - b[key] : b[key] - a[key];
-};
-
 export function useRPCData(urls) {
   const { data, error } = useSWR(urls, rpcFetcher, { refreshInterval: 10000 });
 
@@ -135,12 +127,18 @@ export function useRPCData(urls) {
         .reverse()
         .find((item) => item.initiatorType === 'fetch' && (item.name === blocks[index].url || item.name === url));
 
-      const latency = resource ? (resource.duration / 1000).toFixed(3) + 's' : null;
+      const latency = resource?.duration;
 
       blocks[index]['latency'] = latency;
     }
   });
-  blocks = blocks.sort((a, b) => sortValues(a, b, 'height', false)).sort((a, b) => sortValues(a, b, 'latency'));
+  blocks = blocks.sort((a, b) =>{
+    if((a.height ?? 0) !== (b.height ?? 0)){
+      return (b.height ?? 0) - (a.height ?? 0)
+    } else {
+      return (a.latency ?? 0) - (b.latency ?? 0)
+    }
+  });
 
   return {
     data: blocks,
