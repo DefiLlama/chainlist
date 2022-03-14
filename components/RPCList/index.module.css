@@ -33,8 +33,9 @@
 
 .shimmer {
   border-radius: 4px;
-  height: 16px;
+  height: 20px;
   width: 100%;
+  min-width: 40px;
   background-image: var(--linear-gradient);
   background-size: 600px;
   animation: loading 2s infinite;
