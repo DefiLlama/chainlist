@@ -13,15 +13,19 @@ import { fetcher } from '../utils/utils';
 import { useSearch, useTestnets } from '../stores';
 import allExtraRpcs from '../utils/extraRpcs.json'
 
+function removeEndingSlash(rpc){
+  return rpc.endsWith('/')?rpc.substr(0, rpc.length-1):rpc
+}
+
 export async function getStaticProps({ params }) {
   const chains = await fetcher('https://chainid.network/chains.json');
   const chainTvls = await fetcher('https://api.llama.fi/chains');
 
   function populateChain(chain) {
-    const extraRpcs = allExtraRpcs[chain.name]
+    const extraRpcs = allExtraRpcs[chain.name]?.rpcs
     if(extraRpcs !== undefined){
-      const rpcs = new Set(chain.rpc)
-      extraRpcs.forEach(rpc=>rpcs.add(rpc))
+      const rpcs = new Set(chain.rpc.map(removeEndingSlash).filter(rpc=>!rpc.includes("${INFURA_API_KEY}")))
+      extraRpcs.forEach(rpc=>rpcs.add(removeEndingSlash(rpc)))
       chain.rpc = Array.from(rpcs)
     }
     const chainSlug = chainIds[chain.chainId];

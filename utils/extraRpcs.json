@@ -1,790 +1,1278 @@
+
 {
-    "Ethereum Mainnet":[
-        "https://api.mycryptoapi.com/eth",
-        "https://rpc.flashbots.net/",
-        "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
-        "https://cloudflare-eth.com/",
-        "https://mainnet-nethermind.blockscout.com/",
-        "https://nodes.mewapi.io/rpc/eth",
-        "https://main-rpc.linkpool.io/",
-        "https://mainnet.eth.cloud.ava.do/",
-        "https://ethereumnodelight.app.runonflux.io",
-        "https://rpc.ankr.com/eth",
-        "https://eth-rpc.gateway.pokt.network",
-        "https://main-light.eth.linkpool.io"
-    ],
-    "BNB Chain":[
-        "https://bsc-dataseed.binance.org/",
-        "https://bsc-dataseed1.defibit.io/",
-        "https://bsc-dataseed1.ninicoin.io/",
-        "https://bsc-dataseed2.defibit.io/",
-        "https://bsc-dataseed3.defibit.io/",
-        "https://bsc-dataseed4.defibit.io/",
-        "https://bsc-dataseed2.ninicoin.io/",
-        "https://bsc-dataseed3.ninicoin.io/",
-        "https://bsc-dataseed4.ninicoin.io/",
-        "https://bsc-dataseed1.binance.org/",
-        "https://bsc-dataseed2.binance.org/",
-        "https://bsc-dataseed3.binance.org/",
-        "https://bsc-dataseed4.binance.org/",
-        "https://rpc.ankr.com/bsc",
-        "https://bscrpc.com",
-        "https://bsc.mytokenpocket.vip",
-        "https://binance.nodereal.io"        
-    ],
-    "Avalanche":[
-        "https://api.avax.network/ext/bc/C/rpc",
-        "https://rpc.ankr.com/avalanche"
-    ],
-    "Fantom":[
-        "https://rpc.ftm.tools/",
-        "https://rpc.ankr.com/fantom",
-        "https://rpc.fantom.network",
-        "https://rpc2.fantom.network",
-        "https://rpc3.fantom.network",
-        "https://rpcapi.fantom.network"
-    ],
-    "Polygon":[
-        "https://polygon-rpc.com",
-        "https://rpc-mainnet.matic.network",
-        "https://rpc-mainnet.maticvigil.com",
-        "https://rpc-mainnet.matic.quiknode.pro",
-        "https://matic-mainnet.chainstacklabs.com",
-        "https://matic-mainnet-full-rpc.bwarelabs.com",
-        "https://matic-mainnet-archive-rpc.bwarelabs.com",
-        "https://poly-rpc.gateway.pokt.network/",
-        "https://rpc.ankr.com/polygon",
-        "https://rpc-mainnet.maticvigil.com/"
-    ],
-    "Cronos":[
-        "https://evm-cronos.crypto.org",
-        "https://cronosrpc-1.xstaking.sg/",
-        "https://cronos-rpc.elk.finance/"
-    ],
-    "Arbitrum One":[
-        "https://arb1.arbitrum.io/rpc",
-        "https://rpc.ankr.com/arbitrum"
-    ],
-    "Klaytn Mainnet Cypress":[
-        "http://175.209.78.135:8551",
-        "https://public-node-api.klaytnapi.com/v1/cypress"
-    ],
-    "Harmony":[
-        "https://harmony-0-rpc.gateway.pokt.network",
-        "https://api.harmony.one",
-        "https://api.harmony.one",
-        "https://a.api.s0.t.hmny.io",
-        "https://api.s0.t.hmny.io",
-        "https://rpc.s1.t.hmny.io",
-        "https://rpc.s2.t.hmny.io",
-        "https://rpc.s3.t.hmny.io",
-        "https://harmony-0-rpc.gateway.pokt.network/",
-        "https://rpc.heavenswail.one/",
-        "https://api.fuzz.fi/"
-    ],
-    "Aurora":[
-        "https://mainnet.aurora.dev"
-    ],
-    "Heco":[
-        "https://http-mainnet-node.huobichain.com",
-        "https://http-mainnet.hecochain.com",
-        "https://pub001.hg.network/rpc"
-    ],
-    "Celo":[
-        "https://forno.celo.org",
-        "https://rpc.ankr.com/celo"
-    ],
-    "Optimism":[
-        "https://mainnet.optimism.io/"
-    ],
-    "Metis Andromeda Mainnet":[
-        "https://andromeda.metis.io/?owner=1088"
-    ],
-    "Gnosis Chain":[
-        "https://rpc.gnosischain.com",
-        "https://rpc.xdaichain.com",
-        "https://xdai.poanetwork.dev",
-        "https://xdai-rpc.gateway.pokt.network",
-        "https://dai.poa.network",
-        "https://xdai-archive.blockscout.com",
-        "https://rpc-df.xdaichain.com/"
-    ],
-    "Moonriver": [
-        "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
-        "https://moonriver.api.onfinality.io/public"
-    ],
-    "Theta Mainnet":[
-        "https://eth-rpc-api.thetatoken.org/rpc"
-    ],
-    "Emerald Paratime Mainnet":[
-        "https://emerald.oasis.dev/"
-    ],
-    "Telos EVM Mainnet":[
-        "https://mainnet.telos.net/evm",
-        "https://rpc1.eu.telos.net/evm",
-        "https://rpc1.us.telos.net/evm"
-    ],
-    "Fusion Mainnet":[
-        "https://mainnet.anyswap.exchange",
-        "https://mainway.freemoon.xyz/gate",
-        "https://fsn.dev/api"
-    ],
-    "Moonbeam":[
-        "https://rpc.api.moonbeam.network"
-    ],
-    "RSK Mainnet":[
-        "https://public-node.rsk.co"
-    ],
-    "IoTeX Network Mainnet":[
-        "https://iotex-mainnet.gateway.pokt.network/v1/lb/6176f902e19001003499f492",
-        "https://rpc.ankr.com/iotex",
-        "https://babel-api.mainnet.iotex.io",
-        "https://babel-api.mainnet.iotex.one",
-        "https://pokt-api.iotex.io"
-    ],
-    "OKExChain Mainnet":[
+    "Ethereum Mainnet":{
+        "rpcs":[
+            "https://api.mycryptoapi.com/eth",
+            "https://rpc.flashbots.net/",
+            "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
+            "https://cloudflare-eth.com/",
+            "https://mainnet-nethermind.blockscout.com/",
+            "https://nodes.mewapi.io/rpc/eth",
+            "https://main-rpc.linkpool.io/",
+            "https://mainnet.eth.cloud.ava.do/",
+            "https://ethereumnodelight.app.runonflux.io",
+            "https://rpc.ankr.com/eth",
+            "https://eth-rpc.gateway.pokt.network",
+            "https://main-light.eth.linkpool.io"
+        ]
+    },
+    "Binance Smart Chain Mainnet": {
+        "rpcs":[
+            "https://bsc-dataseed.binance.org/",
+            "https://bsc-dataseed1.defibit.io/",
+            "https://bsc-dataseed1.ninicoin.io/",
+            "https://bsc-dataseed2.defibit.io/",
+            "https://bsc-dataseed3.defibit.io/",
+            "https://bsc-dataseed4.defibit.io/",
+            "https://bsc-dataseed2.ninicoin.io/",
+            "https://bsc-dataseed3.ninicoin.io/",
+            "https://bsc-dataseed4.ninicoin.io/",
+            "https://bsc-dataseed1.binance.org/",
+            "https://bsc-dataseed2.binance.org/",
+            "https://bsc-dataseed3.binance.org/",
+            "https://bsc-dataseed4.binance.org/",
+            "https://rpc.ankr.com/bsc",
+            "https://bscrpc.com",
+            "https://bsc.mytokenpocket.vip",
+            "https://binance.nodereal.io"        
+        ]
+    },
+    "Avalanche C-Chain": {
+        "rpcs":[
+            "https://api.avax.network/ext/bc/C/rpc",
+            "https://rpc.ankr.com/avalanche"
+        ]
+    },
+    "Fantom Opera":{
+        "rpcs":[
+            "https://rpc.ftm.tools/",
+            "https://rpc.ankr.com/fantom",
+            "https://rpc.fantom.network",
+            "https://rpc2.fantom.network",
+            "https://rpc3.fantom.network",
+            "https://rpcapi.fantom.network"
+        ]
+    },
+    "Polygon Mainnet":{
+        "rpcs":[
+            "https://polygon-rpc.com",
+            "https://rpc-mainnet.matic.network",
+            "https://rpc-mainnet.maticvigil.com",
+            "https://rpc-mainnet.matic.quiknode.pro",
+            "https://matic-mainnet.chainstacklabs.com",
+            "https://matic-mainnet-full-rpc.bwarelabs.com",
+            "https://matic-mainnet-archive-rpc.bwarelabs.com",
+            "https://poly-rpc.gateway.pokt.network/",
+            "https://rpc.ankr.com/polygon",
+            "https://rpc-mainnet.maticvigil.com/"
+        ]
+    },
+    "Cronos Mainnet Beta":{
+        "rpcs":[
+            "https://evm-cronos.crypto.org",
+            "https://cronosrpc-1.xstaking.sg/",
+            "https://cronos-rpc.elk.finance/"
+        ]
+    },
+    "Arbitrum One":{
+        "rpcs":[
+            "https://arb1.arbitrum.io/rpc",
+            "https://rpc.ankr.com/arbitrum"
+        ]
+    }   ,
+    "Klaytn Mainnet Cypress":{
+        "rpcs":[
+            "http://175.209.78.135:8551",
+            "https://public-node-api.klaytnapi.com/v1/cypress"
+        ]
+    },
+    "Harmony Mainnet Shard 0":{
+        "rpcs":[
+            "https://harmony-0-rpc.gateway.pokt.network",
+            "https://api.harmony.one",
+            "https://api.harmony.one",
+            "https://a.api.s0.t.hmny.io",
+            "https://api.s0.t.hmny.io",
+            "https://rpc.s1.t.hmny.io",
+            "https://rpc.s2.t.hmny.io",
+            "https://rpc.s3.t.hmny.io",
+            "https://harmony-0-rpc.gateway.pokt.network/",
+            "https://rpc.heavenswail.one/",
+            "https://api.fuzz.fi/"
+        ]
+    },
+    "Aurora Mainnet":{
+        "rpcs":[
+            "https://mainnet.aurora.dev"
+        ]
+    },
+    "Huobi ECO Chain Mainnet":{
+        "rpcs":[
+            "https://http-mainnet-node.huobichain.com",
+            "https://http-mainnet.hecochain.com",
+            "https://pub001.hg.network/rpc"
+        ]
+    },
+    "Celo Mainnet":{
+        "rpcs":[
+            "https://forno.celo.org",
+            "https://rpc.ankr.com/celo"
+        ]
+    },
+    "Optimism":{
+        "rpcs":[
+            "https://mainnet.optimism.io/"
+        ]
+    },
+    "Metis Andromeda Mainnet":{
+        "rpcs":[
+            "https://andromeda.metis.io/?owner=1088"
+        ]
+    },
+    "Gnosis Chain (formerly xDai)":{
+        "rpcs":[
+            "https://rpc.gnosischain.com",
+            "https://rpc.xdaichain.com",
+            "https://xdai.poanetwork.dev",
+            "https://xdai-rpc.gateway.pokt.network",
+            "https://dai.poa.network",
+            "https://xdai-archive.blockscout.com",
+            "https://rpc-df.xdaichain.com/"
+        ]
+    },
+    "Moonriver": {
+        "rpcs":[
+            "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
+            "https://moonriver.api.onfinality.io/public"
+        ]
+    },
+    "Theta Mainnet":{
+        "rpcs":[
+            "https://eth-rpc-api.thetatoken.org/rpc"
+        ]
+    },
+    "Emerald Paratime Mainnet":{
+        "rpcs":[
+            "https://emerald.oasis.dev/"
+        ]
+    },
+    "Telos EVM Mainnet":{
+        "rpcs":[
+            "https://mainnet.telos.net/evm",
+            "https://rpc1.eu.telos.net/evm",
+            "https://rpc1.us.telos.net/evm"
+        ]
+    },
+    "Fusion Mainnet":{
+        "rpcs":[
+            "https://mainnet.anyswap.exchange",
+            "https://mainway.freemoon.xyz/gate",
+            "https://fsn.dev/api"
+        ]
+    },
+    "Moonbeam":{
+        "rpcs":[
+            "https://rpc.api.moonbeam.network"
+        ]
+    },
+    "RSK Mainnet":{
+        "rpcs":[
+            "https://public-node.rsk.co"
+        ]
+    },
+    "IoTeX Network Mainnet":{
+        "rpcs":[
+            "https://iotex-mainnet.gateway.pokt.network/v1/lb/6176f902e19001003499f492",
+            "https://rpc.ankr.com/iotex",
+            "https://babel-api.mainnet.iotex.io",
+            "https://babel-api.mainnet.iotex.one",
+            "https://pokt-api.iotex.io"
+        ]
+    },
+    "OKExChain Mainnet":{
+        "rpcs":[
         "https://exchainrpc.okex.org"
-    ],
-    "Boba Network":[
-        "https://mainnet.boba.network/"
-    ],
-    "KCC Mainnet":[
-        "https://rpc-mainnet.kcc.network/"
-    ],
-    "Wanchain":[
-        "https://gwan-ssl.wandevs.org:56891"
-    ],
-    "Velas EVM Mainnet":[
-        "https://evmexplorer.velas.com/rpc"
-    ],
-    "Smart Bitcoin Cash":[
-        "https://smartbch.fountainhead.cash/mainnet",
-        "https://smartbch.greyh.at",
-        "https://global.uat.cash",
-        "https://rpc.uatvo.com"
-    ],
-    "Songbird Canary-Network":[
-        "https://songbird.towolabs.com/rpc"
-    ],
-    "Fuse Mainnet":[
-        "https://fuse-rpc.gateway.pokt.network/",
-        "https://rpc.fuse.io"
-    ],
-    "Shiden":[
-        "https://rpc.shiden.astar.network:8545/"
-    ],
-    "Astar":[
-        "https://rpc.astar.network:8545"
-    ],
-    "Godwoken":[
-        "https://mainnet.godwoken.io/rpc/eth-wallet"
-    ],
-    "Kardia Chain":[
-        "https://rpc.kardiachain.io/"
-    ],
-    "CoinEx Smart Chain Mainnet":[
-        "https://rpc.coinex.net/",
-        "https://rpc1.coinex.net/",
-        "https://rpc2.coinex.net/",
-        "https://rpc3.coinex.net/",
-        "https://rpc4.coinex.net/"
-    ],
-    "Callisto Mainnet":[
-        "https://clo-geth.0xinfra.com/"
-    ],
-    "ThunderCore Mainnet":[
-        "https://mainnet-rpc.thundercore.com"
-    ],
-    "Elastos Smart Chain":[
-        "https://api.elastos.io/eth",
-        "https://api.trinity-tech.cn/eth"
-    ],
-    "Meter Mainnet":[
-        "https://rpc.meter.io"
-    ],
-    "Nahmii":[
-        "https://l2.nahmii.io/"
-    ],
-    "TomoChain":[
-        "https://rpc.tomochain.com"
-    ],
-    "Energy Web Chain":[
-        "https://rpc.energyweb.org"
-    ],
-    "Syscoin Mainnet":[
-        "https://rpc.syscoin.org"
-    ],
-    "Ubiq":[
-        "https://rpc.octano.dev"
-    ],
-    "LiquidChain":[
-        "https://rpc.liquidchain.net/",
-        "https://rpc.xlcscan.com/"
-    ],
-    "Polis Mainnet":[
-        "https://rpc.polis.tech"
-    ],
-    "Zyx Mainnet":[
-        "https://rpc-1.zyx.network/",
-        "https://rpc-2.zyx.network/",
-        "https://rpc-3.zyx.network/",
-        "https://rpc-5.zyx.network/"
-    ],
-    "High Performance Blockchain":[
-        "https://hpbnode.com"
-    ],
-    "GoChain":[
-        "https://rpc.gochain.io"
-    ],
-    "Palm":[
-        "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
-    ],
-    "Expanse Network":[
-        "https://node.expanse.tech"
-    ],
-    "ThaiChain":[
-        "https://rpc.dome.cloud"
-    ],
-    "Metadium Mainnet":[
-        "https://api.metadium.com/dev"
-    ],
-    "Flare Mainnet":[
-        "rpcWorking:false"
-    ],
-    "Diode Prenet":[
-        "https://prenet.diode.io:8443/"
-    ],
-    "ThaiChain 2.0 ThaiFi":[
-        "https://rpc.thaifi.com"
-    ],
-    "ELA-DID-Sidechain Mainnet":[
-        "https://eid.elastos.io/api/eth-rpc",
-        "https://api.trinity-tech.io/eid",
-        "https://api.elastos.io/eid"
-    ],
-    "Dithereum Mainnet":[
-        "https://node-mainnet.dithereum.io  "
-    ],
-    "ShibaChain":[
-        "https://rpc.shibachain.net",
-        "website:https://shibachain.net/"
-    ],
-    "Genesis L1":[
-        "https://rpc.genesisl1.org"
-    ],
-    "GoodData Mainnet":[
-        "rpcWorking:false"
-    ],
-    "TBWG Chain":[
-        "https://rpc.tbwg.io"
-    ],
-    "Valorbit":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Darwinia Crab Network":[
-        "rpcWorking:false"
-    ],
-    "XinFin Network Mainnet":[
-        "https://rpc.xinfin.network"
-    ],
-    "Ontology Mainnet":[
-        "https://dappnode1.ont.io:10339",
-        "https://dappnode2.ont.io:10339",
-        "https://dappnode3.ont.io:10339",
-        "https://dappnode4.ont.io:10339"
-    ],
-    "EOS Mainnet":[
-        "https://api.eosargentina.io"
-    ],
-    "Ethereum Classic Mainnet":[
-        "https://blockscout.com/etc/mainnet/api/eth-rpc",
-        "https://www.ethercluster.com/etc"
-    ],
-    "Ronin": [
-        "https://api.roninchain.com/rpc"
-    ],
-    "Ellaism":[
-        "websiteDead:true"
-    ],
-    "SoterOne Mainnet":[
-        "rpcWorking:false"
-    ],
-    "IDChain Mainnet":[
-        "https://idchain.one/rpc/"
-    ],
-    "Mix":[
-        "rpcWorking:false",
-        "It is now a Polkadot chain project renamed: Acuity being built on substrate"
-    ],
-    "POA Network Sokol":[
-        "https://sokol.poa.network"
-    ],
-    "PrimusChain mainnet":[
-        "https://ethnode.primusmoney.com/mainnet"
-    ],
-    "GeneChain":[
-        "rpcWorking:false",
-        "website:https://genechain.io/en/index.html"
-
-    ],
-    "GateChain Mainnet":[
-        "https://evm.gatenode.cc"
-    ],
-    "Nova Network":[
-        "https://rpc.novanetwork.io:9070"
-    ],
-    "Garizon Stage0":[
-        "https://s0.garizon.net/rpc"
-    ],
-    "Garizon Stage1":[
-        "https://s1.garizon.net/rpc"
-    ],
-    "Garizon Stage2":[
-        "https://s2.garizon.net/rpc"
-    ],
-    "Garizon Stage3":[
-        "https://s3.garizon.net/rpc"
-    ],
-    "NEXT Smart Chain":[
-        "https://rpc.nextsmartchain.com"
-    ],
-    "POA Network Core":[
-        "https://core.poanetwork.dev"
-    ],
-    "EtherInc":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "EtherLite Chain":[
-        "https://rpc.etherlite.org"
-    ],
-    "Fuse Sparknet":[
-        "https://rpc.fusespark.io"
-    ],
-    "Decentralized Web Mainnet":[
-        "rpcWorking:false"
-    ],
-    "OYchain Mainnet":[
-        "https://rpc.mainnet.oychain.io",
-        "rpcWorking:false"
-
-    ],
-    "Factory 127 Mainnet":[
-        "rpcWorking:false"
-    ],
-    "DAX CHAIN":[
-        "https://rpc.prodax.io"
-    ],
-    "Lightstreams Mainnet":[
-        "https://node.mainnet.lightstreams.io"
-    ],
-    "Seele Mainnet":[
-        "https://rpc.seelen.pro/"
-    ],
-    "BMC Mainnet":[
-        "https://mainnet.bmcchain.com/"
-    ],
-    "BitTorrent Chain Mainnet":[
-        "https://rpc.bittorrentchain.io/"
-    ],
-    "Arbitrum on xDai":[
-        "https://arbitrum.xdaichain.com"
-    ],
-    "Hoo Smart Chain": [
-        "https://http-mainnet.hoosmartchain.com"
-    ],
-    "Freight Trust Network":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Permission":[
-        "https://blockchain-api-mainnet.permission.io/rpc"
-    ],
-    "Setheum":[
-        "rpcWorking:false"
-    ],
-    "SUR Blockchain Network":[
-        "https://sur.nilin.org"
-    ],
-    "Web3Q Mainnet":[
-        "rpcWorking:false"
-    ],
-    "PulseChain Mainnet":[
-        "rpcWorking:false"
-    ],
-    "Lisinski":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Rupaya":[
-        "rpcWorking:false",
-        "website:https://rupayacoin.org/"
-    ],
-    "Double-A Chain Mainnet":[
-        "https://rpc.acuteangle.com"
-    ],
-    "Vela1 Chain Mainnet":[
-        "https://rpc.velaverse.io"
-    ],
-    "Tao Network":[
-        "https://rpc.tao.network"
-    ],
-    "Karura Network":[
-        "rpcWorking:false"
-    ],
-    "BlockChain Station Mainnet":[
-        "rpcWorking:false"
-    ],
-    "cheapETH":[
-        "https://node.cheapeth.org/rpc"
-    ],
-    "Acala Network":[
-        "rpcWorking:false"
-    ],
-    "Haic":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Ambros Chain Mainnet":[
-        "https://mainnet.ambroschain.com"
-    ],
-    "Nepal Blockchain Network":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Lucky Network":[
-        "https://rpc.luckynetwork.org"
-    ],
-    "Evrice Network":[
-        "https://meta.evrice.com"
-    ],
-    "Newton":[
-        "https://global.rpc.mainnet.newtonproject.org"
-    ],
-    "Sakura":[
-        "rpcWorking:false",
-        "websiteDead: Possible rebrand to Clover CLV"
-    ],
-    "Clover Mainnet":[
-        "https://rpc-ivy.clover.finance",
-        "https://rpc-ivy-2.clover.finance",
-        "https://rpc-ivy-3.clover.finance"
-    ],
-    "Conflux eSpace":[
-        "https://evm.confluxrpc.com"
-    ],
-    "MathChain L2":[
-        "https://mathchain.maiziqianbao.net/rpc"
-    ],
-    "Iora Chain":[
-        "rpcWorking:false"
-    ],
-    "World Trade Technical Chain Mainnet":[
-        "https://rpc.cadaut.com"
-    ],
-    "Popcateum Mainnet":[
-        "https://dataseed.popcateum.org"
-    ],
-    "EnterChain Mainnet":[
-        "rpcWorking:false"
-    ],
-    "HALO Mainnet":[
-        "https://nodes.halo.land"
-    ],
-    "Moonbase Alpha":[
-        "https://rpc.testnet.moonbeam.network"
-    ],
-    "Moonrock":[
-        "rpcWorking:false"
-    ],
-    "Catecoin Chain Mainnet":[
-        "https://send.catechain.com"
-    ],
-    "Atheios":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Btachain":[
-        "https://dataseed1.btachain.com/"
-    ],
-    "Teslafunds":[
-        "rpcWorking:false"
-    ],
-    "EtherGem":[
-        "https://jsonrpc.egem.io/custom"
-    ],
-    "Edgeware Mainnet":[
-        "https://mainnet2.edgewa.re/evm",
-        "https://mainnet3.edgewa.re/evm"
-    ],
-    "Rangers Protocol Mainnet":[
-        "https://mainnet.rangersprotocol.com/api/jsonrpc"
-    ],
-    "Ecoball Mainnet":[
-        "https://api.ecoball.org/ecoball/"
-    ],
-    "Evanesco Mainnet":[
-        "https://seed4.evanesco.org:8546"
-    ],
-    "Kortho Mainnet":[
-        "rpcWorking:false"
-    ],
-    "Bittex Mainnet":[
-        "https://rpc1.bittexscan.info"
-    ],
-    "EraSwap Mainnet":[
-        "https://mainnet.eraswap.network"
-    ],
-    "Uzmi Network Mainnet":[
-        "rpcWorking:false"
-    ],
-    "Wegochain Rubidium Mainnet":[
-        "https://proxy.wegochain.io"
-    ],
-    "Pixie Chain Mainnet":[
-        "https://http-mainnet.chain.pixie.xyz"
-    ],
-    "Shyft Mainnet":[
-        "https://rpc.shyft.network/"
-    ],
-    "Teleport":[
-        "https://dataseed.testnet.teleport.network"
-    ],
-    "TOOL Global Mainnet":[
-        "https://mainnet-web3.wolot.io"
-    ],
-    "bloxberg":[
-        "https://core.bloxberg.org"
-    ],
-    "Evmos":[
-        "https://eth.bd.evmos.org:8545/"
-    ],
-    "Curio Fit-Betelgeuse":[
-        "https://mainnet-api.skalenodes.com/v1/fit-betelgeuse"
-    ],
-    "Genesis Coin":[
-        "rpcWorking:false"
-    ],
-    "Blockchain Genesis Mainnet":[
-        "https://eu.mainnet.xixoio.com"
-    ],
-    "WAGMI":[
-        "https://api.trywagmi.xyz/rpc"
-    ],
-    "Singularity ZERO Mainnet":[
-        "https://zerorpc.singularity.gold"
-    ],
-    "Phoenix Mainnet":[
-        "https://rpc.phoenixplorer.com/"
-    ],
-    "MetaDot Mainnet":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "BTCIX Network":[
-        "https://seed.btcix.org/rpc"
-    ],
-    "omChain Mainnet":[
-        "https://seed.omlira.com"
-    ],
-    "Webchain":[
-        "rpcWorking:false"
-    ],
-    "MintMe.com Coin":[
-        "https://node1.mintme.com"
-    ],
-    "Ethersocial Network":[
-        "rpcWorking:false"
-    ],
-    "Energi Mainnet":[
-        "https://nodeapi.energi.network",
-        "https://explorer.energi.network/api/eth-rpc"
-    ],
-    "pegglecoin":[
-        "rpcWorking:false"
-    ],
-    "Athereum":[
-        "rpcWorking:false"
-    ],
-    "REI Network":[
-        "https://rpc.rei.network"
-    ],
-    "REI Chain Mainnet":[
-        "https://rei-rpc.moonrhythm.io"
-    ],
-    "eCredits Mainnet":[
-        "https://rpc.ecredits.com"
-    ],
-    "Thinkium Mainnet Chain 0":[
-        "rpcWorking:false"
-    ],
-    "Thinkium Mainnet Chain 1":[
-        "https://proxy1.thinkiumrpc.net/"
-    ],
-    "Thinkium Mainnet Chain 2":[
-        "https://proxy2.thinkiumrpc.net/"
-    ],
-    "Thinkium Mainnet Chain 103":[
-        "https://proxy103.thinkiumrpc.net/"
-    ],
-    "UB Smart Chain":[
-        "https://rpc.uschain.network"
-    ],
-    "QuarkChain Mainnet Root":[
-        "rpcWorking:false"
-    ],
-    "QuarkChain Mainnet Shard 0":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39000"
-    ],
-    "QuarkChain Mainnet Shard 1":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39001"
-    ],
-    "QuarkChain Mainnet Shard 2":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39002"
-    ],
-    "QuarkChain Mainnet Shard 3":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39003"
-    ],
-    "QuarkChain Mainnet Shard 4":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39004"
-    ],
-    "QuarkChain Mainnet Shard 5":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39005"
-    ],
-    "QuarkChain Mainnet Shard 6":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39006"
-    ],
-    "QuarkChain Mainnet Shard 7":[
-        "http://eth-jrpc.mainnet.quarkchain.io:39007"
-    ],
-    "BROChain Mainnet":[
-        "rpcWorking:false"
-    ],
-    "QuarkChain Devnet Root":[
-        "rpcWorking:false"
-    ],
-    "QuarkChain Devnet Shard 0":[
-        "http://eth-jrpc.devnet.quarkchain.io:39900"
-    ],
-    "QuarkChain Devnet Shard 1":[
-        "http://eth-jrpc.devnet.quarkchain.io:39901"
-    ],
-    "QuarkChain Devnet Shard 2":[
-        "http://eth-jrpc.devnet.quarkchain.io:39902"
-    ],
-    "QuarkChain Devnet Shard 3":[
-        "http://eth-jrpc.devnet.quarkchain.io:39903"
-    ],
-    "QuarkChain Devnet Shard 4":[
-        "http://eth-jrpc.devnet.quarkchain.io:39904"
-    ],
-    "QuarkChain Devnet Shard 5":[
-        "http://eth-jrpc.devnet.quarkchain.io:39905"
-    ],
-    "QuarkChain Devnet Shard 6":[
-        "http://eth-jrpc.devnet.quarkchain.io:39906"
-    ],
-    "QuarkChain Devnet Shard 7":[
-        "http://eth-jrpc.devnet.quarkchain.io:39907"
-    ],
-    "Akroma":[
-        "rpcWorking:false"
-    ],
-    "Alaya Mainnet":[
-        "https://openapi.alaya.network/rpc"
-    ],
-    "PlatON Mainnet":[
-        "rpcWorking:false"
-    ],
-    "ARTIS sigma1":[
-        "https://rpc.sigma1.artis.network"
-    ],
-    "Social Smart Chain Mainnet":[
-        "rpcWorking:false"
-    ],
-    "Vision - Mainnet":[
-        "https://infragrid.v.network/ethereum/compatible"
-    ],
-    "Eluvio Content Fabric":[
-        "https://host-76-74-28-226.contentfabric.io/eth/"
-    ],
-    "Etho Protocol":[
-        "https://rpc.ethoprotocol.com"
-    ],
-    "Xerom":[
-        "https://rpc.xerom.org"
-    ],
-    "Musicoin":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "PepChain Churchill":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "IOLite":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "quarkblockchain":[
-        "https://hz.rpc.qkiscan.cn"
-    ],
-    "Auxilium Network Mainnet":[
-        "rpcWorking:false"
-    ],
-    "Joys Digital Mainnet":[
-        "https://node.joys.digital"
-    ],
-    "Aquachain":[
-        "https://c.onical.org"
-    ],
-    "Gather Mainnet Network":[
-        "https://mainnet.gather.network"
-    ],
-    "Neon EVM DevNet":[
-        "https://proxy.devnet.neonlabs.org/solana"
-    ],
-    "Neon EVM MainNet":[
-        "rpcWorking:false"
-    ],
-    "OneLedger Mainnet":[
-        "https://mainnet-rpc.oneledger.network"
-    ],
-    "Gather Tesnet Network":[
-        "https://testnet.gather.network"
-    ],
-    "Gather Devnet Network":[
-        "https://devnet.gather.network"
-    ],
-    "IPOS Network:":[
-        "rpcWorking:false"
-    ],
-    "Aurora BetaNet":[
-        "http://localhost:8545"
-    ],
-    "Harmony Mainnet Shard 1":[
-        "https://s1.api.harmony.one"
-    ],
-    "Harmony Mainnet Shard 2":[
-        "https://s2.api.harmony.one"
-    ],
-    "Harmony Mainnet Shard 3":[
-        "rpcWorking:false"
-    ],
-    "DataHopper":[
-        "rpcWorking:false",
-        "websiteDead:true"
-    ],
-    "Pirl":[
-        "rpcWorking:false"
-    ],
-    "Ntity Mainnet":[
-        "https://rpc.ntity.io"
-    ],
-    "Molereum Network":[
-        "https://molereum.jdubedition.com",
-        "websiteDead:true"
-    ]    
+        ]
+    },
+    "Boba Network":{
+        "rpcs":[
+            "https://mainnet.boba.network/"
+        ]
+    },
+    "KCC Mainnet":{
+        "rpcs":[
+            "https://rpc-mainnet.kcc.network/"
+        ]
+    },
+    "Wanchain":{
+        "rpcs":[
+            "https://gwan-ssl.wandevs.org:56891"
+        ]
+    },
+    "Velas EVM Mainnet":{
+        "rpcs":[
+            "https://evmexplorer.velas.com/rpc"
+        ]
+    },
+    "Smart Bitcoin Cash":{
+        "rpcs":[
+            "https://smartbch.fountainhead.cash/mainnet",
+            "https://smartbch.greyh.at",
+            "https://global.uat.cash",
+            "https://rpc.uatvo.com"
+        ]
+    },
+    "Songbird Canary-Network":{
+        "rpcs":[
+            "https://songbird.towolabs.com/rpc"
+        ]
+    },
+    "Fuse Mainnet":{
+        "rpcs":[
+            "https://fuse-rpc.gateway.pokt.network/",
+            "https://rpc.fuse.io"
+        ]
+    },
+    "Shiden":{
+        "rpcs":[
+            "https://rpc.shiden.astar.network:8545/"
+        ]
+    },
+    "Astar":{
+        "rpcs":[
+            "https://rpc.astar.network:8545"
+        ]
+    },
+    "Godwoken":{
+        "rpcs":[
+            "https://mainnet.godwoken.io/rpc/eth-wallet"
+        ]
+    },
+    "Kardia Chain":{
+        "rpcs":[
+            "https://rpc.kardiachain.io/"
+        ]
+    },
+    "CoinEx Smart Chain Mainnet":{
+        "rpcs":[
+            "https://rpc.coinex.net/",
+            "https://rpc1.coinex.net/",
+            "https://rpc2.coinex.net/",
+            "https://rpc3.coinex.net/",
+            "https://rpc4.coinex.net/"
+        ]
+    },
+    "Callisto Mainnet":{
+        "rpcs":[
+            "https://clo-geth.0xinfra.com/"
+        ]
+    },
+    "ThunderCore Mainnet":{
+        "rpcs":[
+            "https://mainnet-rpc.thundercore.com"
+        ]
+    },
+    "Elastos Smart Chain":{
+        "rpcs":[
+            "https://api.elastos.io/eth",
+            "https://api.trinity-tech.cn/eth"
+        ]
+    },
+    "Meter Mainnet":{
+        "rpcs":[
+            "https://rpc.meter.io"
+        ]
+    },
+    "Nahmii":{
+        "rpcs":[
+            "https://l2.nahmii.io/"
+        ]
+    },
+    "TomoChain":{
+        "rpcs":[
+            "https://rpc.tomochain.com"
+        ]
+    },
+    "Energy Web Chain":{
+        "rpcs":[
+            "https://rpc.energyweb.org"
+        ]
+    },
+    "Syscoin Mainnet":{
+        "rpcs":[
+            "https://rpc.syscoin.org"
+        ]
+    },
+    "Ubiq":{
+        "rpcs":[
+            "https://rpc.octano.dev"
+        ]
+    },
+    "LiquidChain":{
+        "rpcs":[
+            "https://rpc.liquidchain.net/",
+            "https://rpc.xlcscan.com/"
+        ]
+    },
+    "Polis Mainnet":{
+        "rpcs":[
+            "https://rpc.polis.tech"
+        ]
+    },
+    "Zyx Mainnet":{
+        "rpcs":[
+            "https://rpc-1.zyx.network/",
+            "https://rpc-2.zyx.network/",
+            "https://rpc-3.zyx.network/",
+            "https://rpc-5.zyx.network/"
+        ]
+    },
+    "High Performance Blockchain":{
+        "rpcs":[
+            "https://hpbnode.com"
+        ]
+    },
+    "GoChain":{
+        "rpcs":[
+            "https://rpc.gochain.io"
+        ]
+    },
+    "Palm":{
+        "rpcs":[
+            "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
+        ]
+    },
+    "Expanse Network":{
+        "rpcs":[
+            "https://node.expanse.tech"
+        ]
+    },
+    "ThaiChain":{
+        "rpcs":[
+            "https://rpc.dome.cloud"
+        ]
+    },
+    "Metadium Mainnet":{
+        "rpcs":[
+            "https://api.metadium.com/dev"
+        ]
+    },
+    "Flare Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Diode Prenet":{
+        "rpcs":[
+            "https://prenet.diode.io:8443/"
+        ]
+    },
+    "ThaiChain 2.0 ThaiFi":{
+        "rpcs":[
+            "https://rpc.thaifi.com"
+        ]
+    },
+    "ELA-DID-Sidechain Mainnet":{
+        "rpcs":[
+            "https://eid.elastos.io/api/eth-rpc",
+            "https://api.trinity-tech.io/eid",
+            "https://api.elastos.io/eid"
+        ]
+    },
+    "Dithereum Mainnet":{
+        "rpcs":[
+            "https://node-mainnet.dithereum.io  "
+        ]
+    },
+    "ShibaChain":{
+        "rpcs":[
+            "https://rpc.shibachain.net"
+        ],
+        "websiteUrl":"https://shibachain.net/"
+    },
+    "Genesis L1":{
+        "rpcs":[
+            "https://rpc.genesisl1.org"
+        ]
+    },
+    "GoodData Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "TBWG Chain":{
+        "rpcs":[
+            "https://rpc.tbwg.io"
+        ]
+    },
+    "Valorbit":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "Darwinia Crab Network":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "XinFin Network Mainnet":{
+        "rpcs":[
+            "https://rpc.xinfin.network"
+        ]
+    },
+    "Ontology Mainnet":{
+        "rpcs":[
+            "https://dappnode1.ont.io:10339",
+            "https://dappnode2.ont.io:10339",
+            "https://dappnode3.ont.io:10339",
+            "https://dappnode4.ont.io:10339"
+        ]
+    },
+    "EOS Mainnet":{
+        "rpcs":[
+            "https://api.eosargentina.io"
+        ]
+    },
+    "Ethereum Classic Mainnet":{
+        "rpcs":[
+            "https://blockscout.com/etc/mainnet/api/eth-rpc",
+            "https://www.ethercluster.com/etc"
+        ]
+    },
+    "Ronin": {
+        "rpcs":[
+            "https://api.roninchain.com/rpc"
+        ]
+    },
+    "Ellaism":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+},
+    "SoterOne Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "IDChain Mainnet":{
+        "rpcs":[
+            "https://idchain.one/rpc/"
+        ]
+    },
+    "Mix":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false,
+        "possibleRebrand":"It is now a Polkadot chain project renamed: Acuity being built on substrate"
+    },
+    "POA Network Sokol":{
+        "rpcs":[
+            "https://sokol.poa.network"
+        ]
+    },
+    "PrimusChain mainnet":{
+        "rpcs":[
+            "https://ethnode.primusmoney.com/mainnet"
+        ]
+    },
+    "GeneChain":{
+        "rpcs":[
+            "website:https://genechain.io/en/index.html"
+        ],
+        "rpcWorking":false
+    },
+    "GateChain Mainnet":{
+        "rpcs":[
+            "https://evm.gatenode.cc"
+        ]
+    },
+    "Nova Network":{
+        "rpcs":[
+            "https://rpc.novanetwork.io:9070"
+        ]
+    },
+    "Garizon Stage0":{
+        "rpcs":[
+            "https://s0.garizon.net/rpc"
+        ]
+    },
+    "Garizon Stage1":{
+        "rpcs":[
+            "https://s1.garizon.net/rpc"
+        ]
+    },
+    "Garizon Stage2":{
+        "rpcs":[
+            "https://s2.garizon.net/rpc"
+        ]
+    },
+    "Garizon Stage3":{
+        "rpcs":[
+            "https://s3.garizon.net/rpc"
+        ]
+    },
+    "NEXT Smart Chain":{
+        "rpcs":[
+            "https://rpc.nextsmartchain.com"
+        ]
+    },
+    "POA Network Core":{
+        "rpcs":[
+            "https://core.poanetwork.dev"
+        ]
+    },
+    "EtherInc":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "EtherLite Chain":{
+        "rpcs":[
+            "https://rpc.etherlite.org"
+        ]
+    },
+    "Fuse Sparknet":{
+        "rpcs":[
+            "https://rpc.fusespark.io"
+        ]
+    },
+    "Decentralized Web Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "OYchain Mainnet":{
+        "rpcs":[
+            "https://rpc.mainnet.oychain.io"
+        ],
+        "rpcWorking":false
+    },
+    "Factory 127 Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "DAX CHAIN":{
+        "rpcs":[
+            "https://rpc.prodax.io"
+        ]
+    },
+    "Lightstreams Mainnet":{
+        "rpcs":[
+            "https://node.mainnet.lightstreams.io"
+        ]
+    },
+    "Seele Mainnet":{
+        "rpcs":[
+            "https://rpc.seelen.pro/"
+        ]
+    },
+    "BMC Mainnet":{
+        "rpcs":[
+            "https://mainnet.bmcchain.com/"
+        ]
+    },
+    "BitTorrent Chain Mainnet":{
+        "rpcs":[
+            "https://rpc.bittorrentchain.io/"
+        ]
+    },
+    "Arbitrum on xDai":{
+        "rpcs":[
+            "https://arbitrum.xdaichain.com"
+        ]
+    },
+    "Hoo Smart Chain": {
+        "rpcs":[
+            "https://http-mainnet.hoosmartchain.com"
+        ]
+    },
+    "Freight Trust Network":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "Permission":{
+        "rpcs":[
+            "https://blockchain-api-mainnet.permission.io/rpc"
+        ]
+    },
+    "Setheum":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "SUR Blockchain Network":{
+        "rpcs":[
+            "https://sur.nilin.org"
+        ]
+    },
+    "Web3Q Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "PulseChain Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Lisinski":{
+        "rpcs":[
+        
+        ],    
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "Rupaya":{
+        "rpcs":[
+    
+        ],
+        "rpcWorking":false,
+        "website":"https://rupayacoin.org/"
+    },
+    "Double-A Chain Mainnet":{
+        "rpcs":[
+            "https://rpc.acuteangle.com"
+        ]
+    },
+    "Vela1 Chain Mainnet":{
+        "rpcs":[
+            "https://rpc.velaverse.io"
+        ]
+    },
+    "Tao Network":{
+        "rpcs":[
+            "https://rpc.tao.network"
+        ]
+    },
+    "Karura Network":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "BlockChain Station Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "cheapETH":{
+        "rpcs":[
+            "https://node.cheapeth.org/rpc"
+        ]
+    },
+    "Acala Network":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Haic":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "Ambros Chain Mainnet":{
+        "rpcs":[
+            "https://mainnet.ambroschain.com"
+        ]
+    },
+    "Nepal Blockchain Network":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "Lucky Network":{
+        "rpcs":[
+            "https://rpc.luckynetwork.org"
+        ]
+    },
+    "Evrice Network":{
+        "rpcs":[
+            "https://meta.evrice.com"
+        ]
+    },
+    "Newton":{
+        "rpcs":[
+            "https://global.rpc.mainnet.newtonproject.org"
+        ]
+    },
+    "Sakura":{
+        "rpcs":[
+        ],
+        "websiteDead":"Possible rebrand to Clover CLV",
+        "rpcWorking":false
+    },
+    "Clover Mainnet":{
+        "rpcs":[
+            "https://rpc-ivy.clover.finance",
+            "https://rpc-ivy-2.clover.finance",
+            "https://rpc-ivy-3.clover.finance"
+        ]
+    },
+    "Conflux eSpace":{
+        "rpcs":[
+            "https://evm.confluxrpc.com"
+        ]
+    },
+    "MathChain L2":{
+        "rpcs":[
+            "https://mathchain.maiziqianbao.net/rpc"
+        ]
+    },
+    "Iora Chain":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "World Trade Technical Chain Mainnet":{
+        "rpcs":[
+            "https://rpc.cadaut.com"
+        ]
+    },
+    "Popcateum Mainnet":{
+        "rpcs":[
+            "https://dataseed.popcateum.org"
+        ]
+    },
+    "EnterChain Mainnet":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false
+    },
+    "HALO Mainnet":{
+        "rpcs":[
+            "https://nodes.halo.land"
+        ]
+    },
+    "Moonbase Alpha":{
+        "rpcs":[
+            "https://rpc.testnet.moonbeam.network"
+        ]
+    },
+    "Moonrock":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Catecoin Chain Mainnet":{
+        "rpcs":[
+            "https://send.catechain.com"
+        ]
+    },
+    "Atheios":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "Btachain":{
+        "rpcs":[
+            "https://dataseed1.btachain.com/"
+        ]
+    },
+    "Teslafunds":{
+        "rpcs":[
+            "rpcWorking:false"
+        ],
+        "rpcWorking":false
+    },
+    "EtherGem":{
+        "rpcs":[
+            "https://jsonrpc.egem.io/custom"
+        ]
+    },
+    "Edgeware Mainnet":{
+        "rpcs":[
+            "https://mainnet2.edgewa.re/evm",
+            "https://mainnet3.edgewa.re/evm"
+        ]
+    },
+    "Rangers Protocol Mainnet":{
+        "rpcs":[
+            "https://mainnet.rangersprotocol.com/api/jsonrpc"
+        ]
+    },
+    "Ecoball Mainnet":{
+        "rpcs":[
+            "https://api.ecoball.org/ecoball/"
+        ]
+    },
+    "Evanesco Mainnet":{
+        "rpcs":[
+            "https://seed4.evanesco.org:8546"
+        ]
+    },
+    "Kortho Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Bittex Mainnet":{
+        "rpcs":[
+            "https://rpc1.bittexscan.info"
+        ]
+    },
+    "EraSwap Mainnet":{
+        "rpcs":[
+            "https://mainnet.eraswap.network"
+        ]
+    },
+    "Uzmi Network Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Wegochain Rubidium Mainnet":{
+        "rpcs":[
+            "https://proxy.wegochain.io"
+        ]
+    },
+    "Pixie Chain Mainnet":{
+        "rpcs":[
+            "https://http-mainnet.chain.pixie.xyz"
+        ]
+    },
+    "Shyft Mainnet":{
+        "rpcs":[
+            "https://rpc.shyft.network/"
+        ]
+    },
+    "Teleport":{
+        "rpcs":[
+            "https://dataseed.testnet.teleport.network"
+        ]
+    },
+    "TOOL Global Mainnet":{
+        "rpcs":[
+            "https://mainnet-web3.wolot.io"
+        ]
+    },
+    "bloxberg":{
+        "rpcs":[
+            "https://core.bloxberg.org"
+        ]
+    },
+    "Evmos":{
+        "rpcs":[
+            "https://eth.bd.evmos.org:8545/"
+        ]
+    },
+    "Curio Fit-Betelgeuse":{
+        "rpcs":[
+            "https://mainnet-api.skalenodes.com/v1/fit-betelgeuse"
+        ]
+    },
+    "Genesis Coin":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "Blockchain Genesis Mainnet":{
+        "rpcs":[
+            "https://eu.mainnet.xixoio.com"
+        ]
+    },
+    "WAGMI":{
+        "rpcs":[
+            "https://api.trywagmi.xyz/rpc"
+        ]
+    },
+    "Singularity ZERO Mainnet":{
+        "rpcs":[
+            "https://zerorpc.singularity.gold"
+        ]
+    },
+    "Phoenix Mainnet":{
+        "rpcs":[
+            "https://rpc.phoenixplorer.com/"
+        ]
+    },
+    "MetaDot Mainnet":{
+        "rpcs":[
+        
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "BTCIX Network":{
+        "rpcs":[
+            "https://seed.btcix.org/rpc"
+        ]
+    },
+    "omChain Mainnet":{
+        "rpcs":[
+            "https://seed.omlira.com"
+        ]
+    },
+    "Webchain":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "MintMe.com Coin":{
+        "rpcs":[
+            "https://node1.mintme.com"
+        ]
+    },
+    "Ethersocial Network":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "Energi Mainnet":{
+        "rpcs":[
+            "https://nodeapi.energi.network",
+            "https://explorer.energi.network/api/eth-rpc"
+        ]
+    },
+    "pegglecoin":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "Athereum":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "REI Network":{
+        "rpcs":[
+            "https://rpc.rei.network"
+        ]
+    },
+    "REI Chain Mainnet":{
+        "rpcs":[
+            "https://rei-rpc.moonrhythm.io"
+        ]
+    },
+    "eCredits Mainnet":{
+        "rpcs":[
+            "https://rpc.ecredits.com"
+        ]
+    },
+    "Thinkium Mainnet Chain 0":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Thinkium Mainnet Chain 1":{
+        "rpcs":[
+            "https://proxy1.thinkiumrpc.net/"
+        ]
+    },
+    "Thinkium Mainnet Chain 2":{
+        "rpcs":[
+            "https://proxy2.thinkiumrpc.net/"
+        ]
+    },
+    "Thinkium Mainnet Chain 103":{
+        "rpcs":[
+            "https://proxy103.thinkiumrpc.net/"
+        ]
+    },
+    "UB Smart Chain":{
+        "rpcs":[
+            "https://rpc.uschain.network"
+        ]
+    },
+    "QuarkChain Mainnet Root":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "QuarkChain Mainnet Shard 0":{
+        "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39000"
+        ]
+    },
+    "QuarkChain Mainnet Shard 1":{
+        "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39001"
+        ]
+    },
+    "QuarkChain Mainnet Shard 2":{
+    "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39002"
+        ]
+    },
+    "QuarkChain Mainnet Shard 3":{
+        "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39003"
+        ]
+    },
+    "QuarkChain Mainnet Shard 4":{
+        "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39004"
+        ]
+    },
+    "QuarkChain Mainnet Shard 5":{
+    "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39005"
+        ]
+    },
+    "QuarkChain Mainnet Shard 6":{
+        "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39006"
+        ]
+    },
+    "QuarkChain Mainnet Shard 7":{
+        "rpcs":[
+            "http://eth-jrpc.mainnet.quarkchain.io:39007"
+        ]
+    },
+    "BROChain Mainnet":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "QuarkChain Devnet Root":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "QuarkChain Devnet Shard 0":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39900"
+        ]
+    },
+    "QuarkChain Devnet Shard 1":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39901"
+        ]
+    },
+    "QuarkChain Devnet Shard 2":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39902"
+        ]
+    },
+    "QuarkChain Devnet Shard 3":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39903"
+        ]
+    },
+    "QuarkChain Devnet Shard 4":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39904"
+        ]
+    },
+    "QuarkChain Devnet Shard 5":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39905"
+        ]
+    },
+    "QuarkChain Devnet Shard 6":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39906"
+        ]
+    },
+    "QuarkChain Devnet Shard 7":{
+        "rpcs":[
+            "http://eth-jrpc.devnet.quarkchain.io:39907"
+        ]
+    },
+    "Akroma":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "Alaya Mainnet":{
+        "rpcs":[
+            "https://openapi.alaya.network/rpc"
+        ]
+    },
+    "PlatON Mainnet":{
+        "rpcs":[
+        
+        ],
+        "rpcWorking":false
+    },
+    "ARTIS sigma1":{
+        "rpcs":[
+            "https://rpc.sigma1.artis.network"
+        ]
+    },
+    "Social Smart Chain Mainnet":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "Vision - Mainnet":{
+        "rpcs":[
+            "https://infragrid.v.network/ethereum/compatible"
+        ]
+    },
+    "Eluvio Content Fabric":{
+        "rpcs":[
+            "https://host-76-74-28-226.contentfabric.io/eth/"
+        ]
+    },
+    "Etho Protocol":{
+        "rpcs":[
+            "https://rpc.ethoprotocol.com"
+        ]
+    },
+    "Xerom":{
+        "rpcs":[
+            "https://rpc.xerom.org"
+        ]
+    },
+    "Musicoin":{
+        "rpcs":[
+            
+        ],  
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "PepChain Churchill":{
+        "rpcs":[
+            
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "IOLite":{
+        "rpcs":[
+            
+        ],
+        "websiteDead":true,
+        "rpcWorking":false
+    },
+    "quarkblockchain":{
+        "rpcs":[
+            "https://hz.rpc.qkiscan.cn"
+        ]
+    },
+    "Auxilium Network Mainnet":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false
+    },
+    "Joys Digital Mainnet":{
+        "rpcs":[
+            "https://node.joys.digital"
+        ]
+    },
+    "Aquachain":{
+        "rpcs":[
+            "https://c.onical.org"
+        ]
+    },
+    "Gather Mainnet Network":{
+        "rpcs":[
+            "https://mainnet.gather.network"
+        ]
+    },
+    "Neon EVM DevNet":{
+        "rpcs":[
+            "https://proxy.devnet.neonlabs.org/solana"
+        ]
+    },
+    "Neon EVM MainNet":{
+        "rpcs":[
+            "rpcWorking:false"
+        ]
+    },
+    "OneLedger Mainnet":{
+        "rpcs":[
+            "https://mainnet-rpc.oneledger.network"
+        ]
+    },
+    "Gather Tesnet Network":{
+        "rpcs":[
+            "https://testnet.gather.network"
+        ]
+    },
+    "Gather Devnet Network":{
+        "rpcs":[
+            "https://devnet.gather.network"
+        ]
+    },
+    "IPOS Network:":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false
+    },
+    "Aurora BetaNet":{
+        "rpcs":[
+            "http://localhost:8545"
+        ]
+    },
+    "Harmony Mainnet Shard 1":{
+        "rpcs":[
+            "https://s1.api.harmony.one"
+        ]
+    },
+    "Harmony Mainnet Shard 2":{
+        "rpcs":[
+            "https://s2.api.harmony.one"
+        ]
+    },
+    "Harmony Mainnet Shard 3":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false
+    },
+    "DataHopper":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false,
+        "websiteDead":true
+    },
+    "Pirl":{
+        "rpcs":[
+            
+        ],
+        "rpcWorking":false
+    },
+    "Ntity Mainnet":{
+        "rpcs":[
+            "https://rpc.ntity.io"
+        ]
+    },
+    "Molereum Network":{
+        "rpcs":[
+            "https://molereum.jdubedition.com"
+        ],
+        "websiteDead":true
+    }
 }
 
