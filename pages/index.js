@@ -5,6 +5,7 @@ import { chainIds } from '../components/chains';
 import Layout from '../components/Layout';
 import { useSearch, useTestnets } from '../stores';
 import classes from '../styles/Home.module.css';
+import allExtraRpcs from '../utils/extraRpcs.json'
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -13,6 +14,12 @@ export async function getStaticProps({ params }) {
   const chainTvls = await fetcher('https://api.llama.fi/chains');
 
   function populateChain(chain) {
+    const extraRpcs = allExtraRpcs[chain.name]
+    if(extraRpcs !== undefined){
+      const rpcs = new Set(chain.rpc)
+      extraRpcs.forEach(rpc=>rpcs.add(rpc))
+      chain.rpc = Array.from(rpcs)
+    }
     const chainSlug = chainIds[chain.chainId];
     if (chainSlug !== undefined) {
       const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
