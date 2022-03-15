@@ -10,6 +10,7 @@ const body = JSON.stringify({
 });
 
 const fetchChain = async (baseURL) => {
+  if (baseURL.includes('wss://')) return null;
   try {
     let API = axios.create({
       baseURL,

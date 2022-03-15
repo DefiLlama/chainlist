@@ -17,7 +17,7 @@
 .table caption,
 .table th,
 .table td {
-  padding: 2px 12px;
+  padding: 4px 12px;
   border: 1px solid var(--border-color);
 }
 

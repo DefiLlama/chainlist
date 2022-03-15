@@ -1,10 +1,11 @@
-import { Paper } from '@material-ui/core';
+import { Button, Paper } from '@material-ui/core';
 import { useEffect, useMemo } from 'react';
 import useRPCData from '../../hooks/useRPCData';
-import { useRpcStore } from '../../stores';
+import { useAccount, useRpcStore } from '../../stores';
+import { addToNetwork, renderProviderText } from '../../utils/utils';
 import classes from './index.module.css';
 
-export default function RPCList({ chain }) {
+export default function RPCList({ chain, providerText }) {
   const chains = useRPCData(chain.rpc);
 
   const data = useMemo(() => {
@@ -40,6 +41,19 @@ export default function RPCList({ chain }) {
 
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
 
+  useEffect(() => {
+    const socket = new WebSocket('wss://arb1.arbitrum.io/ws');
+
+    socket.addEventListener('open', function (event) {
+      socket.send('Hello Server!');
+    });
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+      console.log('Message from server ', event.data);
+    });
+  }, []);
+
   return (
     <Paper elevation={1} className={classes.disclosure}>
       <table
@@ -57,7 +71,7 @@ export default function RPCList({ chain }) {
         </thead>
         <tbody>
           {data.map((item, index) => (
-            <Row values={item} key={index} />
+            <Row values={item} chain={chain} key={index} />
           ))}
         </tbody>
       </table>
@@ -73,11 +87,12 @@ const Shimmer = () => {
   return <div className={classes.shimmer} style={{ '--linear-gradient': linearGradient }}></div>;
 };
 
-const Row = ({ values }) => {
+const Row = ({ values, chain }) => {
   const { data, isLoading, refetch } = values;
 
   const rpcs = useRpcStore((state) => state.rpcs);
   const addRpc = useRpcStore((state) => state.addRpc);
+  const account = useAccount((state) => state.account);
 
   useEffect(() => {
     // ignore first request to a url and refetch to calculate latency which doesn't include DNS lookup
@@ -92,7 +107,15 @@ const Row = ({ values }) => {
       <td>{isLoading ? <Shimmer /> : data?.url}</td>
       <td>{isLoading ? <Shimmer /> : data?.height}</td>
       <td>{isLoading ? <Shimmer /> : data?.latency}</td>
-      <td>{isLoading ? <Shimmer /> : 'Add to Wallet'}</td>
+      <td>
+        {isLoading ? (
+          <Shimmer />
+        ) : (
+          <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
+            {renderProviderText(account)}
+          </Button>
+        )}
+      </td>
     </tr>
   );
 };

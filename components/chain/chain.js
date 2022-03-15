@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Typography, Paper, Button, Tooltip, withStyles } from '@material-ui/core';
 import classes from './chain.module.css';
-import stores, { useChain } from '../../stores/index.js';
-import { getProvider } from '../../utils';
-import { ERROR, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
+import stores, { useAccount, useChain } from '../../stores/index.js';
+import { ACCOUNT_CONFIGURED } from '../../stores/constants';
 import Image from 'next/image';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RPCList from '../RPCList';
+import { addToNetwork, renderProviderText } from '../../utils';
 
 const ExpandButton = withStyles((theme) => ({
   root: {
@@ -17,7 +17,8 @@ const ExpandButton = withStyles((theme) => ({
 }))(Button);
 
 export default function Chain({ chain }) {
-  const [account, setAccount] = useState(null);
+  const account = useAccount((state) => state.account);
+  const setAccount = useAccount((state) => state.setAccount);
 
   useEffect(() => {
     const accountConfigure = () => {
@@ -34,61 +35,6 @@ export default function Chain({ chain }) {
       stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure);
     };
   }, []);
-
-  const toHex = (num) => {
-    return '0x' + num.toString(16);
-  };
-
-  const addToNetwork = () => {
-    if (!(account && account.address)) {
-      stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET });
-      return;
-    }
-
-    const params = {
-      chainId: toHex(chain.chainId), // A 0x-prefixed hexadecimal string
-      chainName: chain.name,
-      nativeCurrency: {
-        name: chain.nativeCurrency.name,
-        symbol: chain.nativeCurrency.symbol, // 2-6 characters long
-        decimals: chain.nativeCurrency.decimals,
-      },
-      rpcUrls: chain.rpc,
-      blockExplorerUrls: [
-        chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
-          ? chain.explorers[0].url
-          : chain.infoURL,
-      ],
-    };
-
-    window.web3.eth.getAccounts((error, accounts) => {
-      window.ethereum
-        .request({
-          method: 'wallet_addEthereumChain',
-          params: [params, accounts[0]],
-        })
-        .then((result) => {
-          console.log(result);
-        })
-        .catch((error) => {
-          stores.emitter.emit(ERROR, error.message ? error.message : error);
-          console.log(error);
-        });
-    });
-  };
-
-  const renderProviderText = () => {
-    if (account && account.address) {
-      const providerTextList = {
-        Metamask: 'Add to Metamask',
-        imToken: 'Add to imToken',
-        Wallet: 'Add to Wallet',
-      };
-      return providerTextList[getProvider()];
-    } else {
-      return 'Connect wallet';
-    }
-  };
 
   const icon = useMemo(() => {
     return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : '/unknown-logo.png';
@@ -149,8 +95,8 @@ export default function Chain({ chain }) {
           </div>
         </div>
         <div className={classes.addButton}>
-          <Button variant="outlined" color="primary" onClick={addToNetwork}>
-            {renderProviderText()}
+          <Button variant="outlined" color="primary" onClick={() => addToNetwork(account, chain)}>
+            {renderProviderText(account)}
           </Button>
         </div>
         <ExpandButton onClick={handleClick}>
