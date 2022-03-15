@@ -41,19 +41,6 @@ export default function RPCList({ chain, providerText }) {
 
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
 
-  useEffect(() => {
-    const socket = new WebSocket('wss://arb1.arbitrum.io/ws');
-
-    socket.addEventListener('open', function (event) {
-      socket.send('Hello Server!');
-    });
-
-    // Listen for messages
-    socket.addEventListener('message', function (event) {
-      console.log('Message from server ', event.data);
-    });
-  }, []);
-
   return (
     <Paper elevation={1} className={classes.disclosure}>
       <table
