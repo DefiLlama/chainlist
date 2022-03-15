@@ -45,7 +45,7 @@
 }
 
 .cardsContainer {
-  padding: 0px 80px;
+  padding: 0px 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, calc(33% - 20px));
   grid-auto-flow: dense;
@@ -69,14 +69,6 @@
 .addNetworkButton {
   margin-top: 50px !important;
   width: fit-content;
-}
-
-.filterRow {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  flex: 1;
 }
 
 .socials {

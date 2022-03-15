@@ -5,12 +5,9 @@ import { withStyles, withTheme, createTheme, ThemeProvider } from '@material-ui/
 
 import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import SearchIcon from '@material-ui/icons/Search';
 
 import { CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../stores/constants';
-
-// import Unlock from '../unlock'
 
 import stores, { useSearch, useTestnets } from '../../stores';
 import { formatAddress, getProvider, useDebounce } from '../../utils';
@@ -223,18 +220,8 @@ function Header(props) {
           </Paper>
         </ThemeProvider>
       </div>
-      <div className={classes.connector}>
-        {props.backClicked && (
-          <div className={classes.backButton}>
-            <Button
-              color={props.theme.palette.type === 'light' ? 'primary' : 'secondary'}
-              onClick={props.backClicked}
-              disableElevation
-            >
-              <ArrowBackIcon fontSize={'large'} />
-            </Button>
-          </div>
-        )}
+
+      <div className={classes.switchContainer}>
         <label className={classes.label}>
           <TestnetSwitch checked={testnets} onChange={toggleTestnets} />
           <span>Testnets</span>
@@ -247,21 +234,22 @@ function Header(props) {
             onChange={handleToggleChange}
           />
         </div>
-        <Button
-          disableElevation
-          className={classes.accountButton}
-          variant="contained"
-          color="secondary"
-          onClick={onAddressClicked}
-        >
-          {account && account.address && (
-            <div className={`${classes.accountIcon} ${classes[renderProviderLogo()]}`}></div>
-          )}
-          <Typography variant="h5">
-            {account && account.address ? formatAddress(account.address) : 'Connect Wallet'}
-          </Typography>
-        </Button>
       </div>
+
+      <Button
+        disableElevation
+        className={classes.accountButton}
+        variant="contained"
+        color="secondary"
+        onClick={onAddressClicked}
+      >
+        {account && account.address && (
+          <div className={`${classes.accountIcon} ${classes[renderProviderLogo()]}`}></div>
+        )}
+        <Typography variant="h5">
+          {account && account.address ? formatAddress(account.address) : 'Connect Wallet'}
+        </Typography>
+      </Button>
     </div>
   );
 }

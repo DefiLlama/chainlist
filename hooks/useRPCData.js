@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { useQueries } from 'react-query';
-import { useRpcStore } from '../stores';
 import axios from 'axios';
 
 const body = JSON.stringify({
@@ -10,7 +9,7 @@ const body = JSON.stringify({
   id: 1,
 });
 
-const fetchChain = async (baseURL, rpcs, addRpc) => {
+const fetchChain = async (baseURL) => {
   try {
     let API = axios.create({
       baseURL,
@@ -40,13 +39,6 @@ const fetchChain = async (baseURL, rpcs, addRpc) => {
 
     let { data, latency } = await API.post('', body);
 
-    // ignore first request to a url to calculate latency which doesn't include DNS lookup
-    // if (!rpcs.includes(url)) {
-    //   requestStart = new Date().getTime();
-    //   data = await rpcFetcher(url);
-    //   addRpc(url);
-    // }
-
     return { ...data, latency };
   } catch (error) {
     return null;
@@ -54,12 +46,10 @@ const fetchChain = async (baseURL, rpcs, addRpc) => {
 };
 
 const useRPCData = (urls) => {
-  const rpcs = useRpcStore((state) => state.rpcs);
-  const addRpc = useRpcStore((state) => state.addRpc);
-
   const queries = urls.map((url) => ({
     queryKey: [url],
-    queryFn: () => fetchChain(url, rpcs, addRpc),
+    queryFn: () => fetchChain(url),
+    refetchInterval: 10000,
     select: useCallback((data) => {
       let height = data?.result?.number ?? null;
       let latency = data?.latency ?? null;

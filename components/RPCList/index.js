@@ -1,6 +1,7 @@
 import { Paper } from '@material-ui/core';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import useRPCData from '../../hooks/useRPCData';
+import { useRpcStore } from '../../stores';
 import classes from './index.module.css';
 
 export default function RPCList({ chain }) {
@@ -73,7 +74,18 @@ const Shimmer = () => {
 };
 
 const Row = ({ values }) => {
-  const { data, isLoading } = values;
+  const { data, isLoading, refetch } = values;
+
+  const rpcs = useRpcStore((state) => state.rpcs);
+  const addRpc = useRpcStore((state) => state.addRpc);
+
+  useEffect(() => {
+    // ignore first request to a url and refetch to calculate latency which doesn't include DNS lookup
+    if (data && !rpcs.includes(data.url)) {
+      refetch();
+      addRpc(data.url);
+    }
+  }, [data, rpcs, addRpc, refetch]);
 
   return (
     <tr>
