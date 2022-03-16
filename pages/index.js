@@ -11,10 +11,10 @@ import classes from './index.module.css';
 import { chainIds } from '../components/chains';
 import { fetcher } from '../utils/utils';
 import { useSearch, useTestnets } from '../stores';
-import allExtraRpcs from '../utils/extraRpcs.json'
+import allExtraRpcs from '../utils/extraRpcs.json';
 
-function removeEndingSlash(rpc){
-  return rpc.endsWith('/')?rpc.substr(0, rpc.length-1):rpc
+function removeEndingSlash(rpc) {
+  return rpc.endsWith('/') ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
 export async function getStaticProps({ params }) {
@@ -22,11 +22,11 @@ export async function getStaticProps({ params }) {
   const chainTvls = await fetcher('https://api.llama.fi/chains');
 
   function populateChain(chain) {
-    const extraRpcs = allExtraRpcs[chain.name]?.rpcs
-    if(extraRpcs !== undefined){
-      const rpcs = new Set(chain.rpc.map(removeEndingSlash).filter(rpc=>!rpc.includes("${INFURA_API_KEY}")))
-      extraRpcs.forEach(rpc=>rpcs.add(removeEndingSlash(rpc)))
-      chain.rpc = Array.from(rpcs)
+    const extraRpcs = allExtraRpcs[chain.name]?.rpcs;
+    if (extraRpcs !== undefined) {
+      const rpcs = new Set(chain.rpc.map(removeEndingSlash).filter((rpc) => !rpc.includes('${INFURA_API_KEY}')));
+      extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlash(rpc)));
+      chain.rpc = Array.from(rpcs);
     }
     const chainSlug = chainIds[chain.chainId];
     if (chainSlug !== undefined) {

@@ -5,7 +5,7 @@ import { useAccount, useRpcStore } from '../../stores';
 import { addToNetwork, renderProviderText } from '../../utils/utils';
 import classes from './index.module.css';
 
-export default function RPCList({ chain, providerText }) {
+export default function RPCList({ chain }) {
   const chains = useRPCData(chain.rpc);
 
   const data = useMemo(() => {
