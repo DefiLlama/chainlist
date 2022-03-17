@@ -47,7 +47,7 @@ export default function RPCList({ chain }) {
       let trust = 'transparent';
       let disableConnect = false;
 
-      if (!height || !latency || topRpc.height - height > 5 || topRpc.latency - latency > 5000) {
+      if (!height || !latency || topRpc.height - height > 3 || topRpc.latency - latency > 5000) {
         trust = 'red';
       } else if (topRpc.height - height < 2 && topRpc.latency - latency > -600) {
         trust = 'green';
