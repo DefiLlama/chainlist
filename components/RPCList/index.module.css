@@ -41,6 +41,11 @@
   animation: loading 2s infinite;
 }
 
+.trustScore {
+  text-align: center;
+  color: var(--trust-color);
+}
+
 @keyframes loading {
   0% {
     background-position: -100px;

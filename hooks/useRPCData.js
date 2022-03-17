@@ -33,7 +33,7 @@ const fetchChain = async (baseURL) => {
 
     API.interceptors.response.use(
       function (response) {
-        response.latency = ((Date.now() - response.config.requestStart) / 1000).toFixed(3) + 's';
+        response.latency = Date.now() - response.config.requestStart;
         return response;
       },
       function (error) {
@@ -69,7 +69,7 @@ const useHttpQuery = (url) => {
   return {
     queryKey: [url],
     queryFn: () => fetchChain(url),
-    refetchInterval: 10000,
+    refetchInterval: 5000,
     select: useCallback((data) => formatData(url, data), []),
   };
 };
@@ -108,7 +108,7 @@ const useSocketQuery = (url) => {
     socket.current.onmessage = function (event) {
       const { params = {} } = JSON.parse(event.data);
 
-      const latency = ((Date.now() - requestStart.current) / 1000).toFixed(3) + 's';
+      const latency = Date.now() - requestStart.current;
       requestStart.current = Date.now();
       queryClient.setQueryData(url, { ...params, latency });
       queryFn.resolve();

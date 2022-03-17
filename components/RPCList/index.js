@@ -4,12 +4,13 @@ import useRPCData from '../../hooks/useRPCData';
 import { useAccount, useRpcStore } from '../../stores';
 import { addToNetwork, renderProviderText } from '../../utils/utils';
 import classes from './index.module.css';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 export default function RPCList({ chain }) {
   const chains = useRPCData(chain.rpc);
 
   const data = useMemo(() => {
-    return chains?.sort((a, b) => {
+    const sortedData = chains?.sort((a, b) => {
       if (a.isLoading) {
         return 1;
       }
@@ -30,12 +31,35 @@ export default function RPCList({ chain }) {
         return -1;
       }
       if (h1 === h2) {
-        if (l1 < l2) {
+        if (l1 - l2 < 0) {
           return -1;
         } else {
           return 1;
         }
       }
+    });
+
+    const topRpc = sortedData[0]?.data ?? {};
+
+    return sortedData.map(({ data, ...rest }) => {
+      const { height = null, latency = null, url = '' } = data || {};
+
+      let trust = 'transparent';
+      let disableConnect = false;
+
+      if (!height || !latency || topRpc.height - height > 5 || topRpc.latency - latency > 5000) {
+        trust = 'red';
+      } else if (topRpc.height - height < 2 && topRpc.latency - latency > -600) {
+        trust = 'green';
+      } else {
+        trust = 'orange';
+      }
+
+      if (url.includes('wss://') || url.includes('API_KEY')) disableConnect = true;
+
+      const lat = latency ? (latency / 1000).toFixed(3) + 's' : null;
+
+      return { ...rest, data: { ...data, height, latency: lat, trust, disableConnect } };
     });
   }, [chains]);
 
@@ -53,6 +77,7 @@ export default function RPCList({ chain }) {
             <th>RPC Server Address</th>
             <th>Height</th>
             <th>Latency</th>
+            <th>Trust Score</th>
             <th></th>
           </tr>
         </thead>
@@ -94,13 +119,20 @@ const Row = ({ values, chain }) => {
       <td>{isLoading ? <Shimmer /> : data?.url}</td>
       <td>{isLoading ? <Shimmer /> : data?.height}</td>
       <td>{isLoading ? <Shimmer /> : data?.latency}</td>
+      <td className={classes.trustScore} style={{ '--trust-color': data?.trust ?? 'transparent' }}>
+        {isLoading ? <Shimmer /> : <FiberManualRecordIcon />}
+      </td>
       <td>
         {isLoading ? (
           <Shimmer />
         ) : (
-          <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
-            {renderProviderText(account)}
-          </Button>
+          <>
+            {!data.disableConnect && (
+              <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
+                {renderProviderText(account)}
+              </Button>
+            )}
+          </>
         )}
       </td>
     </tr>
