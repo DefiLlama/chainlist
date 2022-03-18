@@ -1,15 +1,51 @@
+.headerContainer,
+.headerContainerDark {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  padding: 24px 20px 48px;
+  z-index: 1;
+}
+
 .headerContainer {
+  background: linear-gradient(rgba(243, 243, 243, 1) 90%, rgba(243, 243, 243, 0) 100%);
+}
+
+.headerContainerDark {
+  background: linear-gradient(rgba(35, 37, 46, 1) 90%, rgba(35, 37, 46, 0) 100%);
+}
+
+.filterRow {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+}
+
+.filterRow,
+.accountButton {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  height: 40px;
 }
 
 .accountButton {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.switchContainer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  margin-left: 12px !important;
-  min-height: 40px;
-  width: 250px;
+  grid-column: 1 / -1;
+}
+
+.label {
+  white-space: nowrap;
 }
 
 .accountIcon {
@@ -20,26 +56,22 @@
 }
 
 .metamask {
-  background-image: url("/connectors/icn-metamask.svg");
+  background-image: url('/connectors/icn-metamask.svg');
 }
 .imtoken {
-  background-image: url("/connectors/icn-imtoken.svg");
+  background-image: url('/connectors/icn-imtoken.svg');
 }
 .ledger {
-  background-image: url("/connectors/icn-ledger.svg");
+  background-image: url('/connectors/icn-ledger.svg');
 }
 .coinbase {
-  background-image: url("/connectors/coinbaseWalletIcon.svg");
+  background-image: url('/connectors/coinbaseWalletIcon.svg');
 }
 .torus {
-  background-image: url("/connectors/torus.jpg");
+  background-image: url('/connectors/torus.jpg');
 }
 .trust {
-  background-image: url("/connectors/trustWallet.png");
-}
-
-.themeSelectContainer {
-  margin-left: 12px !important;
+  background-image: url('/connectors/trustWallet.png');
 }
 
 .switchIcon {
@@ -51,18 +83,108 @@
   flex: 1;
 }
 
-.label {
-  white-space: nowrap;
+.searchContainer {
+  margin-right: 24px !important;
 }
 
-@media screen and (max-width: 600px) {
-  .headerContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.searchPaper {
+  width: 100%;
+}
+
+.searchInputAdnornment {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+@media screen and (min-width: 600px) {
+  .headerContainer,
+  .headerContainerDark {
+    padding: 24px 48px 48px;
   }
+
+  .accountButton,
+  .switchContainer {
+    grid-row: 1 / 2;
+  }
+
+  .switchContainer {
+    grid-column: 1 / 3;
+  }
+
   .accountButton {
-    width: 100%;
+    grid-column: 3 / 5;
+  }
+}
+
+@media (min-width: 900px) {
+  .headerContainer,
+  .headerContainerDark {
+    padding: 24px 48px 48px;
+    gap: 4px;
+  }
+
+  .filterRow,
+  .switchContainer,
+  .accountButton {
+    grid-row: 1 / 2;
+  }
+
+  .filterRow {
+    grid-column: 1 / 3;
+  }
+
+  .switchContainer {
+    grid-column: 3 / 4;
+  }
+
+  .accountButton {
+    grid-column: 4 / 5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .headerContainer,
+  .headerContainerDark {
+    padding: 24px 48px 48px;
+    gap: 20px;
+  }
+
+  .filterRow {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .switchContainer {
+    grid-column: 1 / 3;
+  }
+
+  .accountButton {
+    grid-column: 3 / 5;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .headerContainer,
+  .headerContainerDark {
+    padding: 24px 20px 48px;
+    gap: 4px;
+  }
+
+  .filterRow,
+  .switchContainer,
+  .accountButton {
+    grid-row: 1 / 2;
+  }
+
+  .filterRow {
+    grid-column: 1 / 3;
+  }
+
+  .switchContainer {
+    grid-column: 3 / 4;
+  }
+
+  .accountButton {
+    grid-column: 4 / 5;
   }
 }
