@@ -114,6 +114,8 @@ const Row = ({ values, chain }) => {
     }
   }, [data, rpcs, addRpc, refetch]);
 
+  const isEthMainnet = chain?.name === 'Ethereum Mainnet';
+
   return (
     <tr>
       <td>{isLoading ? <Shimmer /> : data?.url}</td>
@@ -127,14 +129,26 @@ const Row = ({ values, chain }) => {
           <Shimmer />
         ) : (
           <>
-            {!data.disableConnect && (
-              <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
-                {renderProviderText(account)}
-              </Button>
+            {isEthMainnet ? (
+              <CopyUrl url={data?.url} />
+            ) : (
+              !data.disableConnect && (
+                <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
+                  {renderProviderText(account)}
+                </Button>
+              )
             )}
           </>
         )}
       </td>
     </tr>
+  );
+};
+
+const CopyUrl = ({ url = '' }) => {
+  return (
+    <Button style={{ padding: '0 8px' }} onClick={() => navigator.clipboard.writeText(url)}>
+      Copy URL
+    </Button>
   );
 };
