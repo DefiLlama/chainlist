@@ -9,13 +9,6 @@ export const rpcBody = JSON.stringify({
   id: 1,
 });
 
-export const socketBody = JSON.stringify({
-  jsonrpc: '2.0',
-  method: 'eth_subscribe',
-  params: ['newHeads'],
-  id: 1,
-});
-
 const fetchChain = async (baseURL) => {
   if (baseURL.includes('API_KEY')) return null;
   try {
@@ -87,48 +80,42 @@ function createPromise() {
   return promise;
 }
 
-const useSocketQuery = (url) => {
-  const queryClient = useQueryClient();
+const fetchWssChain = async (baseURL) => {
+  try {
+    // small hack to wait until socket connection opens to show loading indicator on table row
+    const queryFn = createPromise();
 
-  // small hack to wait until socket connection opens to show loading indicator on table row
-  const queryFn = createPromise();
+    const socket = new WebSocket(baseURL);
+    let requestStart;
 
-  const socket = useRef();
-
-  const requestStart = useRef(Date.now());
-
-  useEffect(() => {
-    socket.current = new WebSocket(url);
-
-    socket.current.onopen = function () {
-      socket.current.send(socketBody);
-      requestStart.current = Date.now();
+    socket.onopen = function () {
+      socket.send(rpcBody);
+      requestStart = Date.now();
     };
 
-    socket.current.onmessage = function (event) {
-      const { params = {} } = JSON.parse(event.data);
+    socket.onmessage = function (event) {
+      const data = JSON.parse(event.data);
 
-      const latency = Date.now() - requestStart.current;
-      requestStart.current = Date.now();
-      queryClient.setQueryData(url, { ...params, latency });
-      queryFn.resolve();
+      const latency = Date.now() - requestStart;
+      queryFn.resolve({ ...data, latency });
     };
 
-    socket.current.onerror = function (e) {
+    socket.onerror = function (e) {
       queryFn.reject(e);
     };
 
-    return () => {
-      socket.current?.close();
-      queryFn.resolve();
-    };
-  }, []);
+    return await queryFn
+  } catch (error) {
+    return null;
+  }
+};
 
+const useSocketQuery = (url) => {
   return {
     queryKey: [url],
-    queryFn: () => queryFn.then(() => queryClient.getQueryData(url)).catch((e) => ({})),
+    queryFn: () => fetchWssChain(url),
     select: useCallback((data) => formatData(url, data), []),
-    staleTime: Infinity,
+    refetchInterval: 5000,
   };
 };
 
