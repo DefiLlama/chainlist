@@ -77,7 +77,7 @@ export default function RPCList({ chain }) {
             <th>RPC Server Address</th>
             <th>Height</th>
             <th>Latency</th>
-            <th>Trust Score</th>
+            <th>Score</th>
             <th></th>
           </tr>
         </thead>

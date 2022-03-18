@@ -3279,7 +3279,7 @@ web3-utils@1.7.1:
     randombytes "^2.1.0"
     utf8 "3.0.0"
 
-web3@^1.3.4:
+web3@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/web3/-/web3-1.7.1.tgz#4d01371a2c0c07dba089f8009dabd2b11821c5e8"
   integrity sha512-RKVdyZ5FuVEykj62C1o2tc0teJciSOh61jpVB9yb344dBHO3ZV4XPPP24s/PPqIMXmVFN00g2GD9M/v1SoHO/A==
