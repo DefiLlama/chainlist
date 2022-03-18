@@ -90,13 +90,8 @@
         "rpcs":[
             "https://harmony-0-rpc.gateway.pokt.network",
             "https://api.harmony.one",
-            "https://api.harmony.one",
             "https://a.api.s0.t.hmny.io",
             "https://api.s0.t.hmny.io",
-            "https://rpc.s1.t.hmny.io",
-            "https://rpc.s2.t.hmny.io",
-            "https://rpc.s3.t.hmny.io",
-            "https://harmony-0-rpc.gateway.pokt.network/",
             "https://rpc.heavenswail.one/",
             "https://api.fuzz.fi/"
         ]
