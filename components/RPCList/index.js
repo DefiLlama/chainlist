@@ -89,6 +89,19 @@ export default function RPCList({ chain }) {
           ))}
         </tbody>
       </table>
+      {isEthMainnet && (
+        <p className={classes.helperText}>
+          Follow{' '}
+          <a
+            href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            this
+          </a>{' '}
+          guide to change RPC endpoint's of Ethereum Mainnet
+        </p>
+      )}
     </Paper>
   );
 }
