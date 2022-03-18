@@ -155,7 +155,15 @@
         "rpcs":[
             "https://mainnet.telos.net/evm",
             "https://rpc1.eu.telos.net/evm",
-            "https://rpc1.us.telos.net/evm"
+            "https://rpc1.us.telos.net/evm",
+            "https://rpc2.us.telos.net/evm",
+            "https://api.kainosbp.com/evm",
+            "https://rpc2.eu.telos.net/evm",
+            "https://evm.teloskorea.com/evm",
+            "https://rpc2.teloskorea.com/evm",
+            "https://rpc01.us.telosunlimited.io/evm",
+            "https://rpc02.us.telosunlimited.io/evm",
+            "https://rpc.telosarabia.net/evm"
         ]
     },
     "Fusion Mainnet":{
