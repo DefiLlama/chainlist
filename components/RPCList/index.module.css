@@ -46,6 +46,14 @@
   color: var(--trust-color);
 }
 
+.helperText {
+  text-align: center;
+}
+
+.helperText a {
+  text-decoration: underline;
+}
+
 @keyframes loading {
   0% {
     background-position: -100px;

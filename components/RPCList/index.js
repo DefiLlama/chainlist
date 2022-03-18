@@ -65,6 +65,8 @@ export default function RPCList({ chain }) {
 
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
 
+  const isEthMainnet = chain?.name === 'Ethereum Mainnet';
+
   return (
     <Paper elevation={1} className={classes.disclosure}>
       <table
@@ -83,10 +85,23 @@ export default function RPCList({ chain }) {
         </thead>
         <tbody>
           {data.map((item, index) => (
-            <Row values={item} chain={chain} key={index} />
+            <Row values={item} chain={chain} isEthMainnet={isEthMainnet} key={index} />
           ))}
         </tbody>
       </table>
+      {isEthMainnet && (
+        <p className={classes.helperText}>
+          Follow{' '}
+          <a
+            href="https://docs.flashbots.net/flashbots-protect/rpc/quick-start#how-to-use-flashbots-protect-rpc-in-metamask"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            this
+          </a>{' '}
+          guide on how to add RPC endpoint's manually for ETH Mainnet
+        </p>
+      )}
     </Paper>
   );
 }
@@ -99,7 +114,7 @@ const Shimmer = () => {
   return <div className={classes.shimmer} style={{ '--linear-gradient': linearGradient }}></div>;
 };
 
-const Row = ({ values, chain }) => {
+const Row = ({ values, chain, isEthMainnet }) => {
   const { data, isLoading, refetch } = values;
 
   const rpcs = useRpcStore((state) => state.rpcs);
@@ -113,8 +128,6 @@ const Row = ({ values, chain }) => {
       addRpc(data.url);
     }
   }, [data, rpcs, addRpc, refetch]);
-
-  const isEthMainnet = chain?.name === 'Ethereum Mainnet';
 
   return (
     <tr>
