@@ -89,19 +89,6 @@ export default function RPCList({ chain }) {
           ))}
         </tbody>
       </table>
-      {isEthMainnet && (
-        <p className={classes.helperText}>
-          Follow{' '}
-          <a
-            href="https://docs.flashbots.net/flashbots-protect/rpc/quick-start#how-to-use-flashbots-protect-rpc-in-metamask"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            this
-          </a>{' '}
-          guide on how to add RPC endpoint's manually for ETH Mainnet
-        </p>
-      )}
     </Paper>
   );
 }
