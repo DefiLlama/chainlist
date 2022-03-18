@@ -65,6 +65,8 @@ export default function RPCList({ chain }) {
 
   const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
 
+  const isEthMainnet = chain?.name === 'Ethereum Mainnet';
+
   return (
     <Paper elevation={1} className={classes.disclosure}>
       <table
@@ -83,7 +85,7 @@ export default function RPCList({ chain }) {
         </thead>
         <tbody>
           {data.map((item, index) => (
-            <Row values={item} chain={chain} key={index} />
+            <Row values={item} chain={chain} isEthMainnet={isEthMainnet} key={index} />
           ))}
         </tbody>
       </table>
@@ -99,7 +101,7 @@ const Shimmer = () => {
   return <div className={classes.shimmer} style={{ '--linear-gradient': linearGradient }}></div>;
 };
 
-const Row = ({ values, chain }) => {
+const Row = ({ values, chain, isEthMainnet }) => {
   const { data, isLoading, refetch } = values;
 
   const rpcs = useRpcStore((state) => state.rpcs);
@@ -127,14 +129,26 @@ const Row = ({ values, chain }) => {
           <Shimmer />
         ) : (
           <>
-            {!data.disableConnect && (
-              <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
-                {renderProviderText(account)}
-              </Button>
+            {isEthMainnet ? (
+              <CopyUrl url={data?.url} />
+            ) : (
+              !data.disableConnect && (
+                <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
+                  {renderProviderText(account)}
+                </Button>
+              )
             )}
           </>
         )}
       </td>
     </tr>
+  );
+};
+
+const CopyUrl = ({ url = '' }) => {
+  return (
+    <Button style={{ padding: '0 8px' }} onClick={() => navigator.clipboard.writeText(url)}>
+      Copy URL
+    </Button>
   );
 };

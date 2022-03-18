@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef } from 'react';
-import { useQueries, useQueryClient } from 'react-query';
+import { useCallback } from 'react';
+import { useQueries } from 'react-query';
 import axios from 'axios';
 
 export const rpcBody = JSON.stringify({
@@ -104,7 +104,7 @@ const fetchWssChain = async (baseURL) => {
       queryFn.reject(e);
     };
 
-    return await queryFn
+    return await queryFn;
   } catch (error) {
     return null;
   }
