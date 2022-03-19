@@ -71,8 +71,16 @@
   width: fit-content;
 }
 
+.addRpcButton {
+  margin-top: 12px !important;
+  width: fit-content;
+}
+
 .socials {
   margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .socialButton {
@@ -192,6 +200,9 @@
   }
   .subTitle {
     padding: 0 10px;
+  }
+  .socials {
+    justify-content: center;
   }
   .socialButton {
     text-align: center;
