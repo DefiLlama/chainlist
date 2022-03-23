@@ -66,7 +66,7 @@ function Home({ changeTheme, theme, sortedChains }) {
   };
 
   const addRpc = () => {
-    window.open('https://github.com/DefiLlama/chainlist/blob/main/utils/extraRpcs.json', '_blank');
+    window.open('https://github.com/People-DAO/chainlist/blob/main/utils/extraRpcs.json', '_blank');
   };
 
   const chains = useMemo(() => {
@@ -125,7 +125,7 @@ function Home({ changeTheme, theme, sortedChains }) {
               <div className={classes.socials}>
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://github.com/DefiLlama/chainlist"
+                  href="https://github.com/People-DAO/chainlist"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -142,7 +142,7 @@ function Home({ changeTheme, theme, sortedChains }) {
 
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://discord.com/invite/9VKWN9KGFu"
+                  href="https://discord.gg/peopledao"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
