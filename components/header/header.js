@@ -222,10 +222,11 @@ function Header(props) {
       </div>
 
       <div className={classes.switchContainer}>
-        <label className={classes.label}>
+        {/* Hide it temporarily */}
+        {/* <label className={classes.label}>
           <TestnetSwitch checked={testnets} onChange={toggleTestnets} />
           <span>Testnets</span>
-        </label>
+        </label> */}
         <div className={classes.themeSelectContainer}>
           <StyledSwitch
             icon={<Brightness2Icon className={classes.switchIcon} />}

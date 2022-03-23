@@ -142,7 +142,7 @@ function Home({ changeTheme, theme, sortedChains }) {
 
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://discord.com/invite/buPFYXzDDd"
+                  href="https://discord.com/invite/9VKWN9KGFu"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
