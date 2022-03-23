@@ -1276,6 +1276,9 @@
             "https://molereum.jdubedition.com"
         ],
         "websiteDead":true
+    },
+    "LoopNetwork Testnet": {
+        "rpcs":[
+            "https:api.testnetloop.com/",
+        ],
     }
-}
-
