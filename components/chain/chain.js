@@ -98,7 +98,7 @@ export default function Chain({ chain }) {
         </div>
         <div className={classes.addButton}>
           <Button variant="outlined" color="primary" onClick={() => addToNetwork(account, chain)}>
-            {renderProviderText(account)}
+            {t(renderProviderText(account))}
           </Button>
         </div>
         <ExpandButton onClick={handleClick}>

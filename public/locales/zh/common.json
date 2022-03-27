@@ -10,5 +10,8 @@
   "add-your-network": "添加你的网络",
   "add-your-rpc": "添加你的RPC",
   "language": "English",
-  "twitter": "关注我们"
+  "twitter": "关注我们",
+  "add-to-metamask": "添加到Metamask",
+  "add-to-imToken": "添加到imToken",
+  "add-to-wallet": "添加到Wallet"
 }
