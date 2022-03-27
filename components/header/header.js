@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import { Typography, Switch, Button, Paper, TextField, InputAdornment } from '@material-ui/core';
 import { withStyles, withTheme, createTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -11,6 +13,7 @@ import { CONNECT_WALLET, TRY_CONNECT_WALLET, ACCOUNT_CONFIGURED } from '../../st
 
 import stores, { useSearch, useTestnets } from '../../stores';
 import { formatAddress, getProvider, useDebounce } from '../../utils';
+import { useTranslation } from 'next-i18next';
 
 import classes from './header.module.css';
 
@@ -129,6 +132,8 @@ const TestnetSwitch = withStyles({
 })(Switch);
 
 function Header(props) {
+  const { t } = useTranslation('common');
+  const router = useRouter();
   const [account, setAccount] = useState(null);
   const [darkMode, setDarkMode] = useState(props.theme.palette.type === 'dark' ? true : false);
 
@@ -212,7 +217,7 @@ function Header(props) {
                 ),
                 startAdornment: (
                   <InputAdornment position="start">
-                    <Typography className={classes.searchInputAdnornment}>Search Networks</Typography>
+                    <Typography className={classes.searchInputAdnornment}>{t('search-networks')}</Typography>
                   </InputAdornment>
                 ),
               }}
@@ -227,6 +232,12 @@ function Header(props) {
           <TestnetSwitch checked={testnets} onChange={toggleTestnets} />
           <span>Testnets</span>
         </label> */}
+        <Link
+          href='/'
+          locale={router.locale === 'en' ? 'zh' : 'en'}
+        >
+          <Button variant="outlined">{t('language')}</Button>
+        </Link>
         <div className={classes.themeSelectContainer}>
           <StyledSwitch
             icon={<Brightness2Icon className={classes.switchIcon} />}
@@ -248,7 +259,7 @@ function Header(props) {
           <div className={`${classes.accountIcon} ${classes[renderProviderLogo()]}`}></div>
         )}
         <Typography variant="h5">
-          {account && account.address ? formatAddress(account.address) : 'Connect Wallet'}
+          {account && account.address ? formatAddress(account.address) : t('connect-wallet')}
         </Typography>
       </Button>
     </div>

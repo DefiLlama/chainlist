@@ -7,6 +7,7 @@ import Image from 'next/image';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RPCList from '../RPCList';
 import { addToNetwork, renderProviderText } from '../../utils';
+import { useTranslation } from 'next-i18next';
 
 const ExpandButton = withStyles((theme) => ({
   root: {
@@ -17,6 +18,7 @@ const ExpandButton = withStyles((theme) => ({
 }))(Button);
 
 export default function Chain({ chain }) {
+  const { t } = useTranslation('common');
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);
 
@@ -89,7 +91,7 @@ export default function Chain({ chain }) {
           </div>
           <div className={classes.dataPoint}>
             <Typography variant="subtitle1" color="textSecondary" className={classes.dataPointHeader}>
-              Currency
+              {t('currency')}
             </Typography>
             <Typography variant="h5">{chain.nativeCurrency ? chain.nativeCurrency.symbol : 'none'}</Typography>
           </div>

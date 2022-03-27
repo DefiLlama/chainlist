@@ -18,6 +18,8 @@ import * as Fathom from 'fathom-client';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
+import { appWithTranslation } from 'next-i18next';
+
 function MyApp({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
   const [themeConfig, setThemeConfig] = useState(lightTheme);
@@ -67,4 +69,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

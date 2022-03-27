@@ -2,6 +2,7 @@ import BigNumber from 'bignumber.js';
 import { useState, useEffect } from 'react';
 import stores from '../stores';
 import { ERROR, TRY_CONNECT_WALLET } from '../stores/constants';
+import { useTranslation } from 'next-i18next';
 
 // todo: get navigator declared somehow? probably an issue with using nextjs
 // function getLang() {
@@ -72,6 +73,7 @@ export function useDebounce(value, delay) {
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export const renderProviderText = (account) => {
+  const { t } = useTranslation('common');
   if (account && account.address) {
     const providerTextList = {
       Metamask: 'Add to Metamask',
@@ -80,7 +82,7 @@ export const renderProviderText = (account) => {
     };
     return providerTextList[getProvider()];
   } else {
-    return 'Connect wallet';
+    return t('connect-wallet');
   }
 };
 

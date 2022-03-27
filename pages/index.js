@@ -13,11 +13,14 @@ import { fetcher } from '../utils/utils';
 import { useSearch, useTestnets } from '../stores';
 import allExtraRpcs from '../utils/extraRpcs.json';
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 function removeEndingSlash(rpc) {
   return rpc.endsWith('/') ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const chains = await fetcher('https://chainid.network/chains.json');
   const chainTvls = await fetcher('https://api.llama.fi/chains');
 
@@ -52,12 +55,14 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       sortedChains,
+      ...(await serverSideTranslations(locale, ['common']))
     },
     revalidate: 3600,
   };
 }
 
 function Home({ changeTheme, theme, sortedChains }) {
+  const { t } = useTranslation('common');
   const testnets = useTestnets((state) => state.testnets);
   const search = useSearch((state) => state.search);
 
@@ -96,11 +101,10 @@ function Home({ changeTheme, theme, sortedChains }) {
                 <span className={classes.helpingUnderline}>Chainlist</span>
               </Typography>
               <Typography variant="h2" className={classes.helpingParagraph}>
-                Helping users connect to EVM powered networks
+                {t('help-info')}
               </Typography>
               <Typography className={classes.subTitle}>
-                Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3
-                middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.
+                {t('description')}
               </Typography>
               <Button
                 size="large"
@@ -110,7 +114,7 @@ function Home({ changeTheme, theme, sortedChains }) {
                 onClick={addNetwork}
                 endIcon={<AddIcon />}
               >
-                <Typography className={classes.buttonLabel}>Add Your Network</Typography>
+                <Typography className={classes.buttonLabel}>{t('add-your-network')}</Typography>
               </Button>
               <Button
                 size="large"
@@ -120,7 +124,7 @@ function Home({ changeTheme, theme, sortedChains }) {
                 onClick={addRpc}
                 endIcon={<AddIcon />}
               >
-                <Typography className={classes.buttonLabel}>Add Your RPC</Typography>
+                <Typography className={classes.buttonLabel}>{t('add-your-rpc')}</Typography>
               </Button>
               <div className={classes.socials}>
                 <a
@@ -136,7 +140,7 @@ function Home({ changeTheme, theme, sortedChains }) {
                     />
                   </svg>
                   <Typography variant="body1" className={classes.sourceCode}>
-                    View Source Code
+                    {t('view-source-code')}
                   </Typography>
                 </a>
 
@@ -153,7 +157,7 @@ function Home({ changeTheme, theme, sortedChains }) {
                     ></path>
                   </svg>
                   <Typography variant="body1" className={classes.sourceCode}>
-                    Join our Discord
+                    {t('join-our-discord')}
                   </Typography>
                 </a>
               </div>
