@@ -1,7 +1,7 @@
 {
   "connect-wallet": "Connect Wallet",
-  "view-source-code": "View Source Code",
-  "join-our-discord": "Join our Discord",
+  "view-source-code": "View Code",
+  "join-our-discord": "Join Discord",
   "currency": "Currency",
   "search-networks": "Search Networks",
   "people-dao": "PeopleDAO governed by $PEOPLE, Empowers Web3 People, governed by $PEOPLE",
@@ -9,5 +9,6 @@
   "help-info": "Helping users connect to EVM powered networks",
   "add-your-network": "Add Your Network",
   "add-your-rpc": "Add Your RPC",
-  "language": "中文"
+  "language": "中文",
+  "twitter": "Follow Us"
 }
