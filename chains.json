@@ -2778,7 +2778,7 @@
     "shortName": "kcc",
     "chain": "KCC",
     "network": "mainnet",
-    "networkId": 1,
+    "networkId": 321,
     "nativeCurrency": {
       "name": "KuCoin Token",
       "symbol": "KCS",
