@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
 
 import { Typography, Switch, Button, Paper, TextField, InputAdornment } from '@material-ui/core';
 import { withStyles, withTheme, createTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -191,6 +192,15 @@ function Header(props) {
       handleSearch('');
     }
   }, [debouncedSearchTerm]);
+  
+  const router = useRouter();
+  useEffect(()=>{
+    if (!router.isReady) return;
+    if (router.query.search) {
+      setSearchTerm(router.query.search);
+      delete router.query.search;
+    }
+  }, [router.isReady]);
 
   return (
     <div className={props.theme.palette.type === 'dark' ? classes.headerContainerDark : classes.headerContainer}>
