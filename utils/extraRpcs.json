@@ -971,6 +971,11 @@
             "rpcWorking:false"
         ]
     },
+    "45000": {
+        "rpcs":[
+        "https://rpc.autobahn.network"
+        ]
+    },
     "47805":{
         "rpcs":[
             "https://rpc.rei.network"
