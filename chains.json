@@ -7620,5 +7620,41 @@
     "shortName": "mole",
     "chainId": 6022140761023,
     "networkId": 6022140761023
+  }, {
+    "name": "Conflux eSpace Mainnet",
+    "chainId": 1030,
+    "shortName": "cfx",
+    "chain": "CFX",
+    "network": "mainnet",
+    "networkId": 1030,
+    "nativeCurrency": {
+      "name": "CFX",
+      "symbol": "CFX",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://evm.confluxrpc.com"
+    ],
+    "faucets": [],
+    "infoURL": "https://confluxnetwork.org/"
+  }, {
+    "name": "Conflux eSpace Testnet",
+    "chainId": 71,
+    "shortName": "cfx",
+    "chain": "CFX",
+    "network": "testnet",
+    "networkId": 71,
+    "nativeCurrency": {
+      "name": "CFX",
+      "symbol": "CFX",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://evmtestnet.confluxrpc.com"
+    ],
+    "faucets": [
+      "https://efaucet.confluxnetwork.org/"
+    ],
+    "infoURL": "https://confluxnetwork.org/"
   }
 ]
