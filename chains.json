@@ -7620,7 +7620,8 @@
     "shortName": "mole",
     "chainId": 6022140761023,
     "networkId": 6022140761023
-  }, {
+  },
+  {
     "name": "Conflux eSpace Mainnet",
     "chainId": 1030,
     "shortName": "cfx",
@@ -7637,7 +7638,8 @@
     ],
     "faucets": [],
     "infoURL": "https://confluxnetwork.org/"
-  }, {
+  },
+  {
     "name": "Conflux eSpace Testnet",
     "chainId": 71,
     "shortName": "cfx",
