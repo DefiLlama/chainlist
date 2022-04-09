@@ -889,6 +889,11 @@
             "https://core.bloxberg.org"
         ]
     },
+    "9000":{
+        "rpcs":[
+            "https://eth.bd.evmos.dev:8545/"
+        ]
+    },
     "9001":{
         "rpcs":[
             "https://eth.bd.evmos.org:8545/"
