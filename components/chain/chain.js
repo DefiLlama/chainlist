@@ -3,7 +3,6 @@ import { Typography, Paper, Button, Tooltip, withStyles } from '@material-ui/cor
 import classes from './chain.module.css';
 import stores, { useAccount, useChain } from '../../stores/index.js';
 import { ACCOUNT_CONFIGURED } from '../../stores/constants';
-import Image from 'next/image';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RPCList from '../RPCList';
 import { addToNetwork, renderProviderText } from '../../utils';
