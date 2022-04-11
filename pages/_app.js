@@ -14,7 +14,6 @@ import lightTheme from '../theme/light';
 import darkTheme from '../theme/dark';
 
 import { useRouter } from 'next/router';
-import * as Fathom from 'fathom-client';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
@@ -35,24 +34,6 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(function () {
     stores.dispatcher.dispatch({ type: CONFIGURE });
-  }, []);
-
-  useEffect(() => {
-    Fathom.load('TKCNGGEZ', {
-      includedDomains: ['chainlist.defillama.com', 'chainlist.org'],
-      url: 'https://surprising-powerful.llama.fi/script.js',
-    });
-
-    function onRouteChangeComplete() {
-      Fathom.trackPageview();
-    }
-    // Record a pageview when route changes
-    router.events.on('routeChangeComplete', onRouteChangeComplete);
-
-    // Unassign event listener
-    return () => {
-      router.events.off('routeChangeComplete', onRouteChangeComplete);
-    };
   }, []);
 
   return (
