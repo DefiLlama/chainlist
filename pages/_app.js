@@ -27,6 +27,12 @@ function MyApp({ Component, pageProps }) {
     localStorage.setItem('yearn.finance-dark-mode', dark ? 'dark' : 'light');
   };
 
+  const handleRouteChange = (url) => {
+    window.gtag('config', 'G-HJLF1RHLH2', {
+      page_path: url,
+    });
+  };
+
   useEffect(function () {
     const localStorageDarkMode = window.localStorage.getItem('yearn.finance-dark-mode');
     changeTheme(localStorageDarkMode ? localStorageDarkMode === 'dark' : false);
@@ -35,6 +41,13 @@ function MyApp({ Component, pageProps }) {
   useEffect(function () {
     stores.dispatcher.dispatch({ type: CONFIGURE });
   }, []);
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <QueryClientProvider client={queryClient}>
