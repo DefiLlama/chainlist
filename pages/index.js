@@ -7,6 +7,7 @@ import Chain from '../components/chain';
 import Header from '../components/header';
 
 import AddIcon from '@material-ui/icons/Add';
+import { useRouter } from 'next/router';
 import classes from './index.module.css';
 import { chainIds } from '../components/chains';
 // import { fetcher } from '../utils/utils';
@@ -57,6 +58,7 @@ export async function getStaticProps({ params }) {
 function Home({ changeTheme, theme, sortedChains }) {
   const testnets = useTestnets((state) => state.testnets);
   const search = useSearch((state) => state.search);
+  const router = useRouter();
 
   const addNetwork = () => {
     window.open('https://github.com/ethereum-lists/chains', '_blank');
@@ -82,7 +84,7 @@ function Home({ changeTheme, theme, sortedChains }) {
     <div className={styles.container}>
       <Head>
         <title>BNBChainlist - BNB Smart Chain and Application Sidechain List</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${router.basePath}/favicon.ico`} />
         <meta
           name="description"
           content="BNBChainlist is a list of BNB Smart Chain (BSC) and its Application Sidechains (BAS), including their Mainnets and Testnets. Users can use the information to connect to the appropriate Chain ID and Network ID."
