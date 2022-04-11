@@ -37,7 +37,7 @@ export default function Chain({ chain }) {
   }, []);
 
   const icon = useMemo(() => {
-    return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : '/unknown-logo.png';
+    return chain.chainSlug ? `/images/rsz_${chain.chainSlug}.svg` : '/unknown-logo.png';
   }, [chain]);
 
   const chainId = useChain((state) => state.id);
@@ -61,12 +61,8 @@ export default function Chain({ chain }) {
     <>
       <Paper elevation={1} className={classes.chainContainer} key={chain.chainId}>
         <div className={classes.chainNameContainer}>
-          <Image
+          <img
             src={icon}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = '/chains/unknown-logo.png';
-            }}
             width={28}
             height={28}
             className={classes.avatar}

@@ -1,12 +1,11 @@
 {
-  "name": "networklist",
+  "name": "BNBChainlist",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "build2": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
@@ -14,7 +13,6 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "axios": "^0.26.1",
-    "fathom-client": "^3.4.1",
     "flux": "^4.0.1",
     "next": "^12.1.0",
     "react": "^17.0.2",
