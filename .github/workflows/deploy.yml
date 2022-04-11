@@ -18,7 +18,7 @@ jobs:
       - name: create env file
         run: |
         touch .env
-        echo ENGINE_API_KEY=${{ secrets.ENGINE_API_KEY }} >> .env
+        echo ON_GITHUB_PAGES=${{ secrets.ON_GITHUB_PAGES }} >> .env
 
       - name: Installing my packages
         run: npm ci
