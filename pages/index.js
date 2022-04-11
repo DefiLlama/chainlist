@@ -65,7 +65,7 @@ function Home({ changeTheme, theme, sortedChains }) {
   };
 
   const addRpc = () => {
-    window.open('https://github.com/DefiLlama/chainlist/blob/main/utils/extraRpcs.json', '_blank');
+    window.open('https://github.com/bnb-chain/chainlist/blob/main/utils/extraRpcs.json', '_blank');
   };
 
   const chains = useMemo(() => {
@@ -127,7 +127,7 @@ function Home({ changeTheme, theme, sortedChains }) {
               <div className={classes.socials}>
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://github.com/bnb-chain/chainlist/blob/main/utils/extraRpcs.json"
+                  href="https://github.com/bnb-chain/chainlist"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
