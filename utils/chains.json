@@ -32,7 +32,7 @@
     ]
   },
   {
-    "name": "Binance Smart Chain Mainnet",
+    "name": "BNB Smart Chain Mainnet",
     "chain": "BSC",
     "rpc": [
       "https://bsc-dataseed1.binance.org",
@@ -51,11 +51,11 @@
     ],
     "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
     "nativeCurrency": {
-      "name": "Binance Chain Native Token",
+      "name": "BNB Smart Chain Native Token",
       "symbol": "BNB",
       "decimals": 18
     },
-    "infoURL": "https://www.binance.org",
+    "infoURL": "https://www.bnbchain.world",
     "shortName": "bnb",
     "chainId": 56,
     "networkId": 56,
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "name": "Binance Smart Chain Testnet",
+    "name": "BNB Smart Chain Testnet",
     "chain": "BSC",
     "rpc": [
       "https://data-seed-prebsc-1-s1.binance.org:8545",
@@ -81,12 +81,12 @@
     ],
     "faucets": ["https://testnet.binance.org/faucet-smart"],
     "nativeCurrency": {
-      "name": "Binance Chain Native Token",
-      "symbol": "tBNB",
+      "name": "BNB Smart Chain Native Token",
+      "symbol": "BNB",
       "decimals": 18
     },
     "infoURL": "https://testnet.binance.org/",
-    "shortName": "bnbt",
+    "shortName": "bnb",
     "chainId": 97,
     "networkId": 97,
     "explorers": [
@@ -98,16 +98,16 @@
     ]
   },
   {
-    "name": "Binance Application Sidechain Testnet",
+    "name": "BSC Application Sidechain Testnet",
     "chain": "BAS",
     "rpc": ["https://bas-testnet.nodereal.io/"],
     "faucets": ["https://bas-aries-faucet.nodereal.io/"],
     "nativeCurrency": {
-      "name": "Binance Application Sidechain Native Token",
+      "name": "BSC Application Sidechain Native Token",
       "symbol": "BAS",
       "decimals": "18"
     },
-    "infoURL": "https://testnet.bnbchain.world/",
+    "infoURL": "https://testnet.binance.org/",
     "shortName": "bas",
     "chainId": 117,
     "networkId": 117,

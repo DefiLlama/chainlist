@@ -61,7 +61,7 @@ function Home({ changeTheme, theme, sortedChains }) {
   const router = useRouter();
 
   const addNetwork = () => {
-    window.open('https://github.com/ethereum-lists/chains', '_blank');
+    window.open('https://github.com/bnb-chain/chainlist/blob/main/utils/chains.json', '_blank');
   };
 
   const addRpc = () => {
