@@ -14,7 +14,7 @@ const theme = createTheme({
       default: '#EFEFEF'
     },
     primary: {
-      main: '#2F80ED',
+      main: '#f0b90b',
     },
     secondary: {
       main: '#DEDEDE'
@@ -28,7 +28,7 @@ const theme = createTheme({
       outlinedPrimary: {
         border: '1px solid #EAEAEA',
         "&:hover": {
-          backgroundColor: '#2F80ED !important',
+          backgroundColor: '#f0b90b !important',
           color: '#fff'
         }
       }

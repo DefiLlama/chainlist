@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo } from 'react';
 import { Typography, Paper, Button, Tooltip, withStyles } from '@material-ui/core';
+import { useRouter } from 'next/router';
 import classes from './chain.module.css';
 import stores, { useAccount, useChain } from '../../stores/index.js';
 import { ACCOUNT_CONFIGURED } from '../../stores/constants';
-import Image from 'next/image';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RPCList from '../RPCList';
 import { addToNetwork, renderProviderText } from '../../utils';
@@ -17,6 +17,7 @@ const ExpandButton = withStyles((theme) => ({
 }))(Button);
 
 export default function Chain({ chain }) {
+  const router = useRouter();
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);
 
@@ -37,7 +38,7 @@ export default function Chain({ chain }) {
   }, []);
 
   const icon = useMemo(() => {
-    return chain.chainSlug ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg` : '/unknown-logo.png';
+    return chain.chainSlug ? `${router.basePath}/images/rsz_${chain.chainSlug}.svg` : '/unknown-logo.png';
   }, [chain]);
 
   const chainId = useChain((state) => state.id);
@@ -61,12 +62,8 @@ export default function Chain({ chain }) {
     <>
       <Paper elevation={1} className={classes.chainContainer} key={chain.chainId}>
         <div className={classes.chainNameContainer}>
-          <Image
+          <img
             src={icon}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = '/chains/unknown-logo.png';
-            }}
             width={28}
             height={28}
             className={classes.avatar}

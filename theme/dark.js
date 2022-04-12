@@ -11,7 +11,7 @@ const theme = createTheme({
       paper: '#2B2E3C'
     },
     primary: {
-      main: '#2F80ED',
+      main: '#f0b90b',
     },
     type: 'dark',
   },
@@ -22,7 +22,7 @@ const theme = createTheme({
       outlinedPrimary: {
         border: '1px solid #FFFFFF1A',
         "&:hover": {
-          backgroundColor: '#2F80ED !important',
+          backgroundColor: '#f0b90b !important',
           color: '#fff'
         }
       }
