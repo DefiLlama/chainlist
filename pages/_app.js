@@ -14,7 +14,6 @@ import lightTheme from '../theme/light';
 import darkTheme from '../theme/dark';
 
 import { useRouter } from 'next/router';
-import * as Fathom from 'fathom-client';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
@@ -28,6 +27,7 @@ function MyApp({ Component, pageProps }) {
     localStorage.setItem('yearn.finance-dark-mode', dark ? 'dark' : 'light');
   };
 
+
   useEffect(function () {
     const localStorageDarkMode = window.localStorage.getItem('yearn.finance-dark-mode');
     changeTheme(localStorageDarkMode ? localStorageDarkMode === 'dark' : false);
@@ -38,20 +38,17 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
-    Fathom.load('TKCNGGEZ', {
-      includedDomains: ['chainlist.defillama.com', 'chainlist.org'],
-      url: 'https://surprising-powerful.llama.fi/script.js',
-    });
-
-    function onRouteChangeComplete() {
-      Fathom.trackPageview();
-    }
+    const handleRouteChange = (url) => {
+      window.gtag('config', 'G-HJLF1RHLH2', {
+        page_path: url,
+      });
+    };
     // Record a pageview when route changes
-    router.events.on('routeChangeComplete', onRouteChangeComplete);
+    router.events.on('routeChangeComplete', handleRouteChange);
 
     // Unassign event listener
     return () => {
-      router.events.off('routeChangeComplete', onRouteChangeComplete);
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, []);
 

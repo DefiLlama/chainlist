@@ -71,7 +71,7 @@ const searchTheme = createTheme({
   palette: {
     type: 'light',
     primary: {
-      main: '#2F80ED',
+      main: '#f0b90b',
     },
   },
   shape: {
@@ -122,7 +122,7 @@ const searchTheme = createTheme({
 const TestnetSwitch = withStyles({
   switchBase: {
     '&$checked': {
-      color: '#2f80ed',
+      color: '#f0b90b',
     },
   },
   checked: {},
@@ -192,7 +192,7 @@ function Header(props) {
       handleSearch('');
     }
   }, [debouncedSearchTerm]);
-  
+
   const router = useRouter();
   useEffect(()=>{
     if (!router.isReady) return;
@@ -211,7 +211,7 @@ function Header(props) {
               fullWidth
               className={classes.searchContainer}
               variant="outlined"
-              placeholder="ETH, Fantom, ..."
+              placeholder=""
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               InputProps={{

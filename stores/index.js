@@ -16,7 +16,7 @@ export default {
 };
 
 export const useTestnets = create((set) => ({
-  testnets: false,
+  testnets: true,
   toggleTestnets: () => set((state) => ({ testnets: !state.testnets })),
 }));
 
