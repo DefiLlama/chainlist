@@ -208,38 +208,38 @@ function MyComponent(props) {
         let display = name;
         let descriptor = ''
         if (name === 'MetaMask') {
-          url = `${router.basePath}/connectors/icn-metamask.svg`;
+          url = `/connectors/icn-metamask.svg`;
           descriptor= 'Connect to your MetaMask wallet'
         } else if (name === 'WalletConnect') {
-          url = `${router.basePath}/connectors/walletConnectIcon.svg`
+          url = `/connectors/walletConnectIcon.svg`
           descriptor= 'Scan with WalletConnect to connect'
         } else if (name === 'TrustWallet') {
-          url = `${router.basePath}/connectors/trustWallet.png`
+          url = `/connectors/trustWallet.png`
           descriptor= 'Connect to your TrustWallet'
         } else if (name === 'Portis') {
-          url = `${router.basePath}/connectors/portisIcon.png`
+          url = `/connectors/portisIcon.png`
           descriptor= 'Connect with your Portis account'
         } else if (name === 'Fortmatic') {
-          url = `${router.basePath}/connectors/fortmaticIcon.png`
+          url = `/connectors/fortmaticIcon.png`
           descriptor= 'Connect with your Fortmatic account'
         } else if (name === 'Ledger') {
-          url = `${router.basePath}/connectors/icn-ledger.svg`
+          url = `/connectors/icn-ledger.svg`
           descriptor= 'Connect with your Ledger Device'
         } else if (name === 'Squarelink') {
-          url = `${router.basePath}/connectors/squarelink.png`
+          url = `/connectors/squarelink.png`
           descriptor= 'Connect with your Squarelink account'
         } else if (name === 'Trezor') {
-          url = `${router.basePath}/connectors/trezor.png`
+          url = `/connectors/trezor.png`
           descriptor= 'Connect with your Trezor Device'
         } else if (name === 'Torus') {
-          url = `${router.basePath}/connectors/torus.jpg`
+          url = `/connectors/torus.jpg`
           descriptor= 'Connect with your Torus account'
         } else if (name === 'Authereum') {
-          url = `${router.basePath}/connectors/icn-aethereum.svg`
+          url = `/connectors/icn-aethereum.svg`
           descriptor= 'Connect with your Authereum account'
         } else if (name === 'WalletLink') {
           display = 'Coinbase Wallet'
-          url = `${router.basePath}/connectors/coinbaseWalletIcon.svg`
+          url = `/connectors/coinbaseWalletIcon.svg`
           descriptor= 'Connect to your Coinbase wallet'
         } else if (name === 'Frame') {
           return ''
