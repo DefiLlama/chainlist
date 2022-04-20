@@ -57,21 +57,33 @@
 
 .metamask {
   background-image: url('/connectors/icn-metamask.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .imtoken {
   background-image: url('/connectors/icn-imtoken.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .ledger {
   background-image: url('/connectors/icn-ledger.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .coinbase {
   background-image: url('/connectors/coinbaseWalletIcon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .torus {
   background-image: url('/connectors/torus.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .trust {
   background-image: url('/connectors/trustWallet.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .switchIcon {
