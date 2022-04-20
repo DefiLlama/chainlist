@@ -1,5 +1,8 @@
 FROM node:14 as builder
 
+ARG COMMIT_SHA
+ENV COMMIT_SHA=$COMMIT_SHA
+
 WORKDIR /opt/app
 
 COPY . .
@@ -11,8 +14,8 @@ ARG STATIC_BUCKET
 
 RUN apt-get update && apt-get install -y awscli
 
-RUN aws s3 cp /opt/app/.next/static s3://${STATIC_BUCKET}/static/bnbchainlist/_next/static --recursive --cache-control "private, max-age=259200" \
-  &&  aws s3 cp /opt/app/public s3://${STATIC_BUCKET}/static/bnbchainlist --recursive --cache-control "private, max-age=259200"
+RUN aws s3 cp /opt/app/.next/static s3://${STATIC_BUCKET}/static/_next/static --recursive --cache-control "private, max-age=259200" \
+  &&  aws s3 cp /opt/app/public s3://${STATIC_BUCKET}/static --recursive --cache-control "private, max-age=259200"
 
 FROM node:14
 
