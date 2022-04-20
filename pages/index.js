@@ -14,6 +14,7 @@ import { chainIds } from '../components/chains';
 import { useSearch, useTestnets } from '../stores';
 import allExtraRpcs from '../utils/extraRpcs.json';
 import chains from '../utils/chains.json';
+import { assetPrefix } from '../base/env';
 
 function removeEndingSlash(rpc) {
   return rpc.endsWith('/') ? rpc.substr(0, rpc.length - 1) : rpc;
@@ -84,7 +85,7 @@ function Home({ changeTheme, theme, sortedChains }) {
     <div className={styles.container}>
       <Head>
         <title>BNBChainlist - BNB Smart Chain and Application Sidechain List</title>
-        <link rel="icon" href={`${router.assetPrefix}/favicon.ico`} />
+        <link rel="icon" href={`${assetPrefix}/favicon.ico`} />
         <meta
           name="description"
           content="BNBChainlist is a list of BNB Smart Chain (BSC) and its Application Sidechains (BAS), including their Mainnets and Testnets. Users can use the information to connect to the appropriate Chain ID and Network ID."

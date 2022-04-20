@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo } from 'react';
 import { Typography, Paper, Button, Tooltip, withStyles } from '@material-ui/core';
-import { useRouter } from 'next/router';
 import classes from './chain.module.css';
 import stores, { useAccount, useChain } from '../../stores/index.js';
 import { ACCOUNT_CONFIGURED } from '../../stores/constants';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RPCList from '../RPCList';
 import { addToNetwork, renderProviderText } from '../../utils';
+import { assetPrefix } from '../../base/env';
 
 const ExpandButton = withStyles((theme) => ({
   root: {
@@ -17,7 +17,6 @@ const ExpandButton = withStyles((theme) => ({
 }))(Button);
 
 export default function Chain({ chain }) {
-  const router = useRouter();
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);
 
@@ -38,7 +37,7 @@ export default function Chain({ chain }) {
   }, []);
 
   const icon = useMemo(() => {
-    return chain.chainSlug ? `${router.assetPrefix}/images/rsz_${chain.chainSlug}.svg` : '/unknown-logo.png';
+    return chain.chainSlug ? `${assetPrefix}/images/rsz_${chain.chainSlug}.svg` : `${assetPrefix}/unknown-logo.png`;
   }, [chain]);
 
   const chainId = useChain((state) => state.id);

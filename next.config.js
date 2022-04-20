@@ -13,4 +13,7 @@ module.exports = {
   generateBuildId: async () => {
     return commitHash;
   },
+  publicRuntimeConfig: {
+    assetPrefix: isProd ? 'https://www.bnbchainlist.org/static' : '',
+  }
 }
