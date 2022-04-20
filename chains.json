@@ -7681,5 +7681,30 @@
         "standard": "EIP3091"
       }
     ]
+  },
+  {
+    "name": "MetaChain",
+    "chainId": 20028,
+    "shortName": "MTC",
+    "chain": "MetaChain",
+    "network": "mainnet",
+    "networkId": 20028,
+    "nativeCurrency": {
+      "name": "MTC",
+      "symbol": "MTC",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://seed1.metachain1.com",
+      "https://seed2.metachain1.com",
+      "https://seed3.metachain1.com"
+    ],
+    "faucets": [],
+    "infoURL": "http://www.metachain1.com/",
+    "app_resource": {
+      "ic_chain_select": "https://block.metachain1.com/tokenmetas/meta1.png",
+      "ic_chain_unselect": "https://block.metachain1.com/tokenmetas/meta0.png",
+      "color_chain_bg": "0xf3d275"
+    }
   }
 ]
