@@ -70,6 +70,7 @@
     },
     "25":{
         "rpcs":[
+            "http://rpc-cronos.heavenswail.one/",
             "https://evm-cronos.crypto.org",
             "https://cronosrpc-1.xstaking.sg/",
             "https://cronos-rpc.elk.finance/"
