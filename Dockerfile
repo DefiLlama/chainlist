@@ -26,6 +26,7 @@ COPY --from=builder /opt/app/.next .next
 COPY --from=builder /opt/app/node_modules node_modules
 COPY --from=builder /opt/app/package.json package.json
 COPY --from=builder /opt/app/yarn.lock yarn.lock
+COPY --from=builder /opt/app/public/connectors public/connectors
 
 EXPOSE 3000
 
