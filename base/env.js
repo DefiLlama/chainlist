@@ -1,5 +1,5 @@
 import getConfig from "next/config";
 
-const { publicRuntimeConfig } = getConfig()
+const { publicRuntimeConfig = {} } = getConfig()
 
-export const assetPrefix = publicRuntimeConfig.assetPrefix;
+export const assetPrefix = publicRuntimeConfig.assetPrefix || 'https://www.bnbchainlist.org/static';
