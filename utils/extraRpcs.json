@@ -68,6 +68,12 @@
             "https://rpc-mainnet.maticvigil.com/"
         ]
     },
+       "534":{
+        "rpcs":[
+            "https://candle-rpc.com",
+            "https://explorer.pearblockchain.com",
+        ]
+    },
     "25":{
         "rpcs":[
             "https://cronos-rpc.heavenswail.one/",
