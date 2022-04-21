@@ -8,9 +8,18 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 export default function RPCList({ chain }) {
   const chains = useRPCData(chain.rpc);
+  const specialChain = [];
+  const normalChain = [];
+  chains.forEach(item => {
+    if (item.data && item.data.url.includes('nodereal.io')) {
+      specialChain.push(item);
+    } else {
+      normalChain.push(item);
+    }
+  });
 
   const data = useMemo(() => {
-    const sortedData = chains?.sort((a, b) => {
+    const sortedData = specialChain.concat(normalChain?.sort((a, b) => {
       if (a.isLoading) {
         return 1;
       }
@@ -37,7 +46,7 @@ export default function RPCList({ chain }) {
           return 1;
         }
       }
-    });
+    }));
 
     const topRpc = sortedData[0]?.data ?? {};
 
