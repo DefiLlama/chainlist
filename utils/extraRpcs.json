@@ -54,6 +54,12 @@
             "https://rpcapi.fantom.network"
         ]
     },
+    "3000":{
+        "rpcs":[
+            "https://rpc.ech.network",
+            "https://evm.ech.network"
+        ]
+    },
     "137":{
         "rpcs":[
             "https://polygon-rpc.com",
