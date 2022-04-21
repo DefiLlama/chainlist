@@ -32,6 +32,7 @@ export const chainIds = {
     '321': 'kucoin',
     '336': 'shiden',
     '361': 'theta',
+    '534': 'candle',
     '592': 'astar',
     '820': 'callisto',
     '888': 'wanchain',
