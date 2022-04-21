@@ -3,19 +3,10 @@
     "name": "BNB Smart Chain Mainnet",
     "chain": "BSC",
     "rpc": [
-      "https://bsc-dataseed1.binance.org",
-      "https://bsc-dataseed2.binance.org",
-      "https://bsc-dataseed3.binance.org",
-      "https://bsc-dataseed4.binance.org",
-      "https://bsc-dataseed1.defibit.io",
-      "https://bsc-dataseed2.defibit.io",
-      "https://bsc-dataseed3.defibit.io",
-      "https://bsc-dataseed4.defibit.io",
-      "https://bsc-dataseed1.ninicoin.io",
-      "https://bsc-dataseed2.ninicoin.io",
-      "https://bsc-dataseed3.ninicoin.io",
-      "https://bsc-dataseed4.ninicoin.io",
-      "wss://bsc-ws-node.nariox.org"
+      "https://bsc.nodereal.io",
+      "https://bsc-dataseed.binance.org/",
+      "https://bsc-dataseed1.defibit.io/",
+      "https://bsc-dataseed1.ninicoin.io/"
     ],
     "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
     "nativeCurrency": {
@@ -40,12 +31,12 @@
     "name": "BNB Smart Chain Testnet",
     "chain": "BSC",
     "rpc": [
-      "https://data-seed-prebsc-1-s1.binance.org:8545",
-      "https://data-seed-prebsc-2-s1.binance.org:8545",
-      "https://data-seed-prebsc-1-s2.binance.org:8545",
-      "https://data-seed-prebsc-2-s2.binance.org:8545",
-      "https://data-seed-prebsc-1-s3.binance.org:8545",
-      "https://data-seed-prebsc-2-s3.binance.org:8545"
+      "https://data-seed-prebsc-1-s1.binance.org:8545/",
+      "https://data-seed-prebsc-2-s1.binance.org:8545/",
+      "https://data-seed-prebsc-1-s2.binance.org:8545/",
+      "https://data-seed-prebsc-2-s2.binance.org:8545/",
+      "https://data-seed-prebsc-1-s3.binance.org:8545/",
+      "https://data-seed-prebsc-2-s3.binance.org:8545/"
     ],
     "faucets": ["https://testnet.binance.org/faucet-smart"],
     "nativeCurrency": {
@@ -66,24 +57,45 @@
     ]
   },
   {
-    "name": "BSC Application Sidechain Testnet",
-    "chain": "BAS",
+    "name": "NodeReal-BSC Application Sidechain Testnet",
+    "chain": "BAS-ARS",
     "rpc": ["https://bas-testnet.nodereal.io/"],
-    "faucets": ["https://bas-aries-faucet.nodereal.io/"],
+    "faucets": ["https://faucet.dev-01.bas.ankr.com/"],
     "nativeCurrency": {
-      "name": "BSC Application Sidechain Native Token",
-      "symbol": "BAS",
-      "decimals": "18"
+      "name": "Nodereal-BSC Application Sidechain Native Token",
+      "symbol": "ARS",
+      "decimals": 18
     },
     "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce ",
-    "shortName": "bas",
+    "shortName": "bas-ars",
     "chainId": 117,
     "networkId": 117,
-
     "explorers": [
       {
         "name": "bastrace",
         "url": "https://bas-aries-explorer.nodereal.io/",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Ankr-BSC Application Sidechain Testnet",
+    "chain": "BAS-ANKR",
+    "rpc": ["https://rpc.dev-01.bas.ankr.com/"],
+    "faucets": ["https://faucet.dev-01.bas.ankr.com/"],
+    "nativeCurrency": {
+      "name": "Ankr-BSC Application Sidechain Native Token",
+      "symbol": "BAS",
+      "decimals": 18
+    },
+    "infoURL": "https://docs.bnbchain.world/docs/learn/bas/",
+    "shortName": "bas-ankr",
+    "chainId": 14000,
+    "networkId": 117,
+    "explorers": [
+      {
+        "name": "bastrace",
+        "url": "https://explorer.dev-01.bas.ankr.com/",
         "standard": "EIP3091"
       }
     ]
