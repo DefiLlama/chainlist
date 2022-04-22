@@ -19,7 +19,7 @@
   position: sticky;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   height: fit-content;
   top: 0;
 }
@@ -29,7 +29,7 @@
 }
 
 .listContainer {
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   width: 100%;
   align-items: flex-start;
   background: #f3f3f3;
@@ -37,7 +37,7 @@
 }
 
 .listContainerDark {
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   width: 100%;
   align-items: flex-start;
   background: #23252e;
@@ -114,6 +114,13 @@
   margin-bottom: 20px;
 }
 
+.power {
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
 @media screen and (max-width: 1700px) {
   .cardsContainer {
     grid-template-columns: repeat(auto-fit, calc(50% - 15px));
@@ -153,7 +160,7 @@
   .copyContainer {
     position: relative;
     top: 0px;
-    min-height: 100vh;
+    min-height: calc(100vh - 20px);
   }
 
   .copyCentered {
@@ -225,3 +232,4 @@
     padding: 20px;
   }
 }
+
