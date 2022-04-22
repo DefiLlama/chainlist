@@ -167,6 +167,9 @@ function Home({ changeTheme, theme, sortedChains }) {
             </div>
           </div>
         </div>
+        <div className={classes.power}>
+          Powered by NodeReal
+        </div>
       </main>
     </div>
   );
