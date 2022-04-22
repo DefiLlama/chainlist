@@ -249,8 +249,11 @@
       "decimals": 18
     },
     "rpc": [
-      "https://cronos-rpc.elk.finance",
-      "https://cronosrpc-1.xstaking.sg"
+      "https://evm.cronos.org",
+      "https://cronosrpc-1.xstaking.sg",
+      "https://evm-cronos.crypto.org",
+      "https://cronos-rpc.heavenswail.one",
+      "https://cronos-rpc.elk.finance"
     ],
     "faucets": [],
     "infoURL": "https://cronos.crypto.org/explorer"
