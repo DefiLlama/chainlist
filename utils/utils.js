@@ -40,7 +40,7 @@ export function bnDec(decimals) {
 
 export function getProvider() {
   if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
-    if (window.ethereum.isDfox) return 'dfox'
+    if (window.ethereum.isDfox) return 'tokenpocket'
     if (window.ethereum.isTokenPocket) return 'tokenpocket'
     if (window.ethereum.isMetaMask) return 'Metamask'
     if (window.ethereum.isImToken) return 'imToken'
