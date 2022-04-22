@@ -76,6 +76,11 @@
             "https://cronos-rpc.elk.finance/"
         ]
     },
+    "2569": {
+        "rpcs":[
+            "https://api.techpay.io/"
+        ]
+    },
     "42161":{
         "rpcs":[
             "https://arb1.arbitrum.io/rpc",
