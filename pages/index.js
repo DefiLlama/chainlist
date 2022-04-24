@@ -167,7 +167,7 @@ function Home({ changeTheme, theme, sortedChains }) {
             </div>
           </div>
         </div>
-        <div className={classes.power}>
+        <div className={theme.palette.type === 'dark' ? `${classes.power} ${classes.darkPower}`: `${classes.power} ${classes.lightPower}`}>
           Powered by NodeReal
         </div>
       </main>
