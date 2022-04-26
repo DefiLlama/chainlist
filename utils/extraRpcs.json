@@ -844,6 +844,11 @@
         ],
         "rpcWorking":false
     },
+    "2612":{
+        "rpcs":[
+            "https://api.ezchain.com/ext/bc/C/rpc"
+        ]
+    },
     "3690":{
         "rpcs":[
             "https://rpc1.bittexscan.info"

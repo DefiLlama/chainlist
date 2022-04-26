@@ -39,6 +39,7 @@ export const chainIds = {
     '1284': 'moonbeam',
     '1285': 'moonriver',
     '2020': 'ronin',
+    '2612': 'ezchain',
     '4689': 'iotex',
     '5050': 'xlc',
     '5551': 'nahmii',
