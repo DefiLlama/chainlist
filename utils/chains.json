@@ -71,7 +71,7 @@
     "explorers": [
       {
         "name": "bastrace",
-        "url": "https://bas-aries-explorer.nodereal.io/",
+        "url": "https://bas-aries-testnet-explorer.nodereal.io/",
         "standard": "EIP3091"
       }
     ]
