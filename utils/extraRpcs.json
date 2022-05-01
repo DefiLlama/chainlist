@@ -44,6 +44,11 @@
             "https://rpc.ankr.com/avalanche"
         ]
     },
+    "201906": {
+        "rpcs":[
+            "https://node.classzz.com"
+        ]
+    },
     "250":{
         "rpcs":[
             "https://rpc.ftm.tools/",
