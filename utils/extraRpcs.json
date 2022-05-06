@@ -202,7 +202,7 @@
     },
     "288":{
         "rpcs":[
-            "https://mainnet.boba.network/", 
+            "https://mainnet.boba.network/",
             "https://boba-mainnet.gateway.pokt.network/v1/lb/623ad21b20354900396fed7f"
         ]
     },
@@ -366,7 +366,7 @@
     },
     "14":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -405,7 +405,7 @@
     },
     "33":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -416,14 +416,14 @@
     },
     "38":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
     },
     "44":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -458,14 +458,14 @@
     },
     "64":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
 },
     "68":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -476,7 +476,7 @@
     },
     "76":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false,
         "possibleRebrand":"It is now a Polkadot chain project renamed: Acuity being built on substrate"
@@ -539,7 +539,7 @@
     },
     "101":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -556,7 +556,7 @@
     },
     "124":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -568,7 +568,7 @@
     },
     "127":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -609,7 +609,7 @@
     },
     "211":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -621,7 +621,7 @@
     },
     "258":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -632,26 +632,26 @@
     },
     "333":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
     "369":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
     "385":{
         "rpcs":[
-        
-        ],    
+
+        ],
         "websiteDead":true,
         "rpcWorking":false
     },
     "499":{
         "rpcs":[
-    
+
         ],
         "rpcWorking":false,
         "website":"https://rupayacoin.org/"
@@ -673,13 +673,13 @@
     },
     "686":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
     "707":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -690,13 +690,13 @@
     },
     "787":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
     "803":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -708,7 +708,7 @@
     },
     "977":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -753,7 +753,7 @@
     },
     "1197":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -769,7 +769,7 @@
     },
     "1214":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false
     },
@@ -785,7 +785,7 @@
     },
     "1288":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -796,7 +796,7 @@
     },
     "1620":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -840,7 +840,7 @@
     },
     "2559":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -856,7 +856,7 @@
     },
     "5315":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -892,7 +892,8 @@
     },
     "9001":{
         "rpcs":[
-            "https://eth.bd.evmos.org:8545/"
+            "https://eth.bd.evmos.org:8545/",
+            "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205"
         ]
     },
     "836542336838601":{
@@ -927,7 +928,7 @@
     },
     "16000":{
         "rpcs":[
-        
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -944,7 +945,7 @@
     },
     "24484":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -996,7 +997,7 @@
     },
     "70000":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -1022,7 +1023,7 @@
     },
     "100000":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -1118,7 +1119,7 @@
     },
     "200625":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -1129,7 +1130,7 @@
     },
     "210425":{
         "rpcs":[
-        
+
         ],
         "rpcWorking":false
     },
@@ -1165,21 +1166,21 @@
     },
     "7762959":{
         "rpcs":[
-            
-        ],  
+
+        ],
         "websiteDead":true,
         "rpcWorking":false
     },
     "13371337":{
         "rpcs":[
-            
+
         ],
         "websiteDead":true,
         "rpcWorking":false
     },
     "18289463":{
         "rpcs":[
-            
+
         ],
         "websiteDead":true,
         "rpcWorking":false
@@ -1191,7 +1192,7 @@
     },
     "28945486":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false
     },
@@ -1237,7 +1238,7 @@
     },
     "1122334455":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false
     },
@@ -1263,20 +1264,20 @@
     },
     "1666600003":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false
     },
     "2021121117":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false,
         "websiteDead":true
     },
     "3125659152":{
         "rpcs":[
-            
+
         ],
         "rpcWorking":false
     },
@@ -1292,4 +1293,3 @@
         "websiteDead":true
     }
 }
-
