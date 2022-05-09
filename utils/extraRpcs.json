@@ -46,6 +46,7 @@
     },
     "250":{
         "rpcs":[
+            "https://fantom-mainnet.gateway.pokt.network/v1/lb/62759259ea1b320039c9e7ac",
             "https://rpc.ftm.tools/",
             "https://rpc.ankr.com/fantom",
             "https://rpc.fantom.network",
