@@ -1,7 +1,9 @@
-import BigNumber from 'bignumber.js';
-import { useState, useEffect } from 'react';
-import stores from '../stores';
-import { ERROR, TRY_CONNECT_WALLET } from '../stores/constants';
+import BigNumber from "bignumber.js";
+import { useState, useEffect } from "react";
+import stores from "../stores";
+import { ERROR, TRY_CONNECT_WALLET } from "../stores/constants/constants";
+import allExtraRpcs from "../constants/extraRpcs.json"
+import chainIds from "../constants/chainIds.js"
 
 // todo: get navigator declared somehow? probably an issue with using nextjs
 // function getLang() {
@@ -24,12 +26,18 @@ export function formatCurrency(amount, decimals = 2) {
   }
 }
 
-export function formatAddress(address, length = 'short') {
-  if (address && length === 'short') {
-    address = address.substring(0, 6) + '...' + address.substring(address.length - 4, address.length);
+export function formatAddress(address, length = "short") {
+  if (address && length === "short") {
+    address =
+      address.substring(0, 6) +
+      "..." +
+      address.substring(address.length - 4, address.length);
     return address;
-  } else if (address && length === 'long') {
-    address = address.substring(0, 12) + '...' + address.substring(address.length - 8, address.length);
+  } else if (address && length === "long") {
+    address =
+      address.substring(0, 12) +
+      "..." +
+      address.substring(address.length - 8, address.length);
     return address;
   } else {
     return null;
@@ -41,11 +49,11 @@ export function bnDec(decimals) {
 }
 
 export function getProvider() {
-  if (typeof window !== 'undefined' && typeof window.ethereum !== 'undefined') {
-    if (window.ethereum.isMetaMask) return 'Metamask';
-    if (window.ethereum.isImToken) return 'imToken';
+  if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
+    if (window.ethereum.isMetaMask) return "Metamask";
+    if (window.ethereum.isImToken) return "imToken";
   }
-  return 'Wallet';
+  return "Wallet";
 }
 
 export function useDebounce(value, delay) {
@@ -74,18 +82,18 @@ export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export const renderProviderText = (account) => {
   if (account && account.address) {
     const providerTextList = {
-      Metamask: 'Add to Metamask',
-      imToken: 'Add to imToken',
-      Wallet: 'Add to Wallet',
+      Metamask: "Add to Metamask",
+      imToken: "Add to imToken",
+      Wallet: "Add to Wallet",
     };
     return providerTextList[getProvider()];
   } else {
-    return 'Connect wallet';
+    return "Connect wallet";
   }
 };
 
 const toHex = (num) => {
-  return '0x' + num.toString(16);
+  return "0x" + num.toString(16);
 };
 
 export const addToNetwork = (account, chain, rpc) => {
@@ -104,14 +112,16 @@ export const addToNetwork = (account, chain, rpc) => {
     },
     rpcUrls: rpc ? [rpc] : chain.rpc,
     blockExplorerUrls: [
-      chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url ? chain.explorers[0].url : chain.infoURL,
+      chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
+        ? chain.explorers[0].url
+        : chain.infoURL,
     ],
   };
 
   window.web3.eth.getAccounts((error, accounts) => {
     window.ethereum
       .request({
-        method: 'wallet_addEthereumChain',
+        method: "wallet_addEthereumChain",
         params: [params, accounts[0]],
       })
       .then((result) => {
@@ -123,3 +133,38 @@ export const addToNetwork = (account, chain, rpc) => {
       });
   });
 };
+
+function removeEndingSlash(rpc) {
+  return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
+}
+
+export function populateChain(chain, chainTvls) {
+  const extraRpcs = allExtraRpcs[chain.chainId]?.rpcs;
+  
+  if (extraRpcs !== undefined) {
+    const rpcs = new Set(
+      chain.rpc
+        .map(removeEndingSlash)
+        .filter((rpc) => !rpc.includes("${INFURA_API_KEY}"))
+    );
+
+    extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlash(rpc)));
+
+    chain.rpc = Array.from(rpcs);
+  }
+
+  const chainSlug = chainIds[chain.chainId];
+
+  if (chainSlug !== undefined) {
+    const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
+
+    return defiChain === undefined
+      ? chain
+      : {
+          ...chain,
+          tvl: defiChain.tvl,
+          chainSlug,
+        };
+  }
+  return chain;
+}

@@ -1,0 +1,41 @@
+.chainDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.chainDetails > button {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.chainNameContainer {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.avatar {
+  margin-right: 24px;
+  border-radius: 50%;
+}
+
+.chainInfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 40px;
+}
+
+.dataPointHeader {
+  padding-bottom: 7px;
+}
+
+.dataPoint > h5 {
+  text-align: center;
+}

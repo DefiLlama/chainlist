@@ -1,10 +1,10 @@
-import { Button, Paper } from '@material-ui/core';
-import { useEffect, useMemo } from 'react';
-import useRPCData from '../../hooks/useRPCData';
-import { useAccount, useRpcStore } from '../../stores';
-import { addToNetwork, renderProviderText } from '../../utils/utils';
-import classes from './index.module.css';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import { Button, Paper } from "@material-ui/core";
+import { useEffect, useMemo } from "react";
+import useRPCData from "../../hooks/useRPCData";
+import { useAccount, useRpcStore } from "../../stores";
+import { addToNetwork, renderProviderText } from "../../utils";
+import classes from "./index.module.css";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 export default function RPCList({ chain }) {
   const chains = useRPCData(chain.rpc);
@@ -42,36 +42,54 @@ export default function RPCList({ chain }) {
     const topRpc = sortedData[0]?.data ?? {};
 
     return sortedData.map(({ data, ...rest }) => {
-      const { height = null, latency = null, url = '' } = data || {};
+      const { height = null, latency = null, url = "" } = data || {};
 
-      let trust = 'transparent';
+      let trust = "transparent";
       let disableConnect = false;
 
-      if (!height || !latency || topRpc.height - height > 3 || topRpc.latency - latency > 5000) {
-        trust = 'red';
-      } else if (topRpc.height - height < 2 && topRpc.latency - latency > -600) {
-        trust = 'green';
+      if (
+        !height ||
+        !latency ||
+        topRpc.height - height > 3 ||
+        topRpc.latency - latency > 5000
+      ) {
+        trust = "red";
+      } else if (
+        topRpc.height - height < 2 &&
+        topRpc.latency - latency > -600
+      ) {
+        trust = "green";
       } else {
-        trust = 'orange';
+        trust = "orange";
       }
 
-      if (url.includes('wss://') || url.includes('API_KEY')) disableConnect = true;
+      if (url.includes("wss://") || url.includes("API_KEY"))
+        disableConnect = true;
 
-      const lat = latency ? (latency / 1000).toFixed(3) + 's' : null;
+      const lat = latency ? (latency / 1000).toFixed(3) + "s" : null;
 
-      return { ...rest, data: { ...data, height, latency: lat, trust, disableConnect } };
+      return {
+        ...rest,
+        data: { ...data, height, latency: lat, trust, disableConnect },
+      };
     });
   }, [chains]);
 
-  const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
+  const darkMode =
+    typeof document !== "undefined" &&
+    window.localStorage.getItem("yearn.finance-dark-mode") === "dark";
 
-  const isEthMainnet = chain?.name === 'Ethereum Mainnet';
+  const isEthMainnet = chain?.name === "Ethereum Mainnet";
 
   return (
     <Paper elevation={1} className={classes.disclosure}>
       <table
         className={classes.table}
-        style={{ '--border-color': darkMode ? 'hsl(0deg 0% 39% / 33%)' : 'hsl(0deg 0% 17% / 4%)' }}
+        style={{
+          "--border-color": darkMode
+            ? "hsl(0deg 0% 39% / 33%)"
+            : "hsl(0deg 0% 17% / 4%)",
+        }}
       >
         <caption>{`${chain.name} RPC URL List`}</caption>
         <thead>
@@ -85,20 +103,25 @@ export default function RPCList({ chain }) {
         </thead>
         <tbody>
           {data.map((item, index) => (
-            <Row values={item} chain={chain} isEthMainnet={isEthMainnet} key={index} />
+            <Row
+              values={item}
+              chain={chain}
+              isEthMainnet={isEthMainnet}
+              key={index}
+            />
           ))}
         </tbody>
       </table>
       {isEthMainnet && (
         <p className={classes.helperText}>
-          Follow{' '}
+          Follow{" "}
           <a
             href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
             target="_blank"
             rel="noopener noreferrer"
           >
             this
-          </a>{' '}
+          </a>{" "}
           guide to change RPC endpoint's of Ethereum Mainnet
         </p>
       )}
@@ -107,11 +130,18 @@ export default function RPCList({ chain }) {
 }
 
 const Shimmer = () => {
-  const darkMode = window.localStorage.getItem('yearn.finance-dark-mode') === 'dark';
+  const darkMode =
+    typeof document !== "undefined" &&
+    window.localStorage.getItem("yearn.finance-dark-mode") === "dark";
   const linearGradient = darkMode
-    ? 'linear-gradient(90deg, rgb(255 247 247 / 7%) 0px, rgb(85 85 85 / 80%) 40px, rgb(255 247 247 / 7%) 80px)'
-    : 'linear-gradient(90deg, #f4f4f4 0px, rgba(229, 229, 229, 0.8) 40px, #f4f4f4 80px)';
-  return <div className={classes.shimmer} style={{ '--linear-gradient': linearGradient }}></div>;
+    ? "linear-gradient(90deg, rgb(255 247 247 / 7%) 0px, rgb(85 85 85 / 80%) 40px, rgb(255 247 247 / 7%) 80px)"
+    : "linear-gradient(90deg, #f4f4f4 0px, rgba(229, 229, 229, 0.8) 40px, #f4f4f4 80px)";
+  return (
+    <div
+      className={classes.shimmer}
+      style={{ "--linear-gradient": linearGradient }}
+    ></div>
+  );
 };
 
 const Row = ({ values, chain, isEthMainnet }) => {
@@ -134,7 +164,10 @@ const Row = ({ values, chain, isEthMainnet }) => {
       <td>{isLoading ? <Shimmer /> : data?.url}</td>
       <td>{isLoading ? <Shimmer /> : data?.height}</td>
       <td>{isLoading ? <Shimmer /> : data?.latency}</td>
-      <td className={classes.trustScore} style={{ '--trust-color': data?.trust ?? 'transparent' }}>
+      <td
+        className={classes.trustScore}
+        style={{ "--trust-color": data?.trust ?? "transparent" }}
+      >
         {isLoading ? <Shimmer /> : <FiberManualRecordIcon />}
       </td>
       <td>
@@ -146,7 +179,10 @@ const Row = ({ values, chain, isEthMainnet }) => {
               <CopyUrl url={data?.url} />
             ) : (
               !data.disableConnect && (
-                <Button style={{ padding: '0 8px' }} onClick={() => addToNetwork(account, chain, data?.url)}>
+                <Button
+                  style={{ padding: "0 8px" }}
+                  onClick={() => addToNetwork(account, chain, data?.url)}
+                >
                   {renderProviderText(account)}
                 </Button>
               )
@@ -158,9 +194,12 @@ const Row = ({ values, chain, isEthMainnet }) => {
   );
 };
 
-const CopyUrl = ({ url = '' }) => {
+const CopyUrl = ({ url = "" }) => {
   return (
-    <Button style={{ padding: '0 8px' }} onClick={() => navigator.clipboard.writeText(url)}>
+    <Button
+      style={{ padding: "0 8px" }}
+      onClick={() => navigator.clipboard.writeText(url)}
+    >
       Copy URL
     </Button>
   );
