@@ -13,7 +13,7 @@ export default function Layout({ changeTheme, theme, children }) {
 
   const addRpc = () => {
     window.open(
-      "https://github.com/DefiLlama/chainlist/blob/main/utils/extraRpcs.json",
+      "https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.json",
       "_blank"
     );
   };
