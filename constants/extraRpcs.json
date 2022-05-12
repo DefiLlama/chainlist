@@ -79,7 +79,8 @@
     },
     "338":{
         "rpcs":[
-            "https://evm-t3.cronos.org:8545/"
+            "https://evm-t3.cronos.org:8545/",
+            "https://evm-t3.cronos.org/"
         ]
     },
     "42161":{
