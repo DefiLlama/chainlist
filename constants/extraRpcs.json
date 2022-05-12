@@ -77,6 +77,11 @@
             "https://cronos-rpc.elk.finance/"
         ]
     },
+    "338":{
+        "rpcs":[
+            "https://evm-t3.cronos.org:8545/"
+        ]
+    },
     "42161":{
         "rpcs":[
             "https://arb1.arbitrum.io/rpc",
