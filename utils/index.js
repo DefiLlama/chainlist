@@ -168,3 +168,8 @@ export function populateChain(chain, chainTvls) {
   }
   return chain;
 }
+
+export async function getConnectedId(account) {
+  if (!account) return;
+  return await window.web3.eth.net.getId();
+}
