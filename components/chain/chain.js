@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import {
   Typography,
   Paper,
@@ -12,7 +12,7 @@ import { ACCOUNT_CONFIGURED } from "../../stores/constants";
 import Image from "next/image";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import RPCList from "../RPCList";
-import { addToNetwork, getConnectedId, renderProviderText } from "../../utils";
+import { addToNetwork, renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -27,7 +27,6 @@ const ExpandButton = withStyles((theme) => ({
 export default function Chain({ chain, buttonOnly }) {
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);
-  const [connectedId, setConnectedId] = useState(0);
 
   const router = useRouter();
 
@@ -42,11 +41,6 @@ export default function Chain({ chain, buttonOnly }) {
     const accountStore = stores.accountStore.getStore("account");
     setAccount(accountStore);
 
-    const fetchConnectedId = async () => {
-      const connectedId = await getConnectedId(account)
-      setConnectedId(connectedId);
-    }
-    fetchConnectedId();
     return () => {
       stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure);
     };
@@ -145,11 +139,9 @@ export default function Chain({ chain, buttonOnly }) {
           <Button
             variant="outlined"
             color="primary"
-            disabled={chain.chainId === connectedId}
             onClick={() => addToNetwork(account, chain)}
           >
-            {chain.chainId === connectedId ? "Current Network" : renderProviderText(account)}
-            
+            {renderProviderText(account)}
           </Button>
         </div>
         {router.pathname === "/" && (
