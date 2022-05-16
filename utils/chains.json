@@ -57,8 +57,8 @@
   {
     "name": "NodeReal-BSC Application Sidechain Testnet",
     "chain": "BAS-ARS",
-    "rpc": ["https://bas-testnet.nodereal.io/"],
-    "faucets": ["https://faucet.dev-01.bas.ankr.com/"],
+    "rpc": ["https://bas-aries-public.nodereal.io/"],
+    "faucets": ["https://bas-aries-faucet.nodereal.io/"],
     "nativeCurrency": {
       "name": "Nodereal-BSC Application Sidechain Native Token",
       "symbol": "ARS",
