@@ -13,7 +13,8 @@
             "https://ethereumnodelight.app.runonflux.io",
             "https://rpc.ankr.com/eth",
             "https://eth-rpc.gateway.pokt.network",
-            "https://main-light.eth.linkpool.io"
+            "https://main-light.eth.linkpool.io",
+            "https://eth-mainnet.public.blastapi.io"
         ]
     },
     "56": {
@@ -41,7 +42,8 @@
     "43114": {
         "rpcs":[
             "https://api.avax.network/ext/bc/C/rpc",
-            "https://rpc.ankr.com/avalanche"
+            "https://rpc.ankr.com/avalanche",
+            "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc"
         ]
     },
     "250":{
@@ -52,7 +54,8 @@
             "https://rpc.fantom.network",
             "https://rpc2.fantom.network",
             "https://rpc3.fantom.network",
-            "https://rpcapi.fantom.network"
+            "https://rpcapi.fantom.network",
+            "https://fantom-mainnet.public.blastapi.io"
         ]
     },
     "137":{
@@ -66,7 +69,8 @@
             "https://matic-mainnet-archive-rpc.bwarelabs.com",
             "https://poly-rpc.gateway.pokt.network/",
             "https://rpc.ankr.com/polygon",
-            "https://rpc-mainnet.maticvigil.com/"
+            "https://rpc-mainnet.maticvigil.com/",
+            "https://polygon-mainnet.public.blastapi.io"
         ]
     },
     "25":{
@@ -142,13 +146,15 @@
             "https://xdai-rpc.gateway.pokt.network",
             "https://dai.poa.network",
             "https://xdai-archive.blockscout.com",
-            "https://rpc-df.xdaichain.com/"
+            "https://rpc-df.xdaichain.com/",
+            "https://gnosis-mainnet.public.blastapi.io"
         ]
     },
     "1285": {
         "rpcs":[
             "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
-            "https://moonriver.api.onfinality.io/public"
+            "https://moonriver.api.onfinality.io/public",
+            "https://moonriver.public.blastapi.io"
         ]
     },
     "361":{
@@ -185,7 +191,8 @@
     },
     "1284":{
         "rpcs":[
-            "https://rpc.api.moonbeam.network"
+            "https://rpc.api.moonbeam.network",
+            "https://moonbeam.public.blastapi.io"
         ]
     },
     "30":{
@@ -249,12 +256,14 @@
     },
     "336":{
         "rpcs":[
-            "https://rpc.shiden.astar.network:8545/"
+            "https://rpc.shiden.astar.network:8545/",
+            "https://shiden.public.blastapi.io"
         ]
     },
     "592":{
         "rpcs":[
-            "https://rpc.astar.network:8545"
+            "https://rpc.astar.network:8545",
+            "https://astar.public.blastapi.io"
         ]
     },
     "71394":{
