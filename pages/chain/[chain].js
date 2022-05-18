@@ -8,8 +8,9 @@ import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import classes from "./index.module.css";
 import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
 
   const chainTvls = await fetcher("https://api.llama.fi/chains");
@@ -19,6 +20,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       chain: chain ? populateChain(chain, chainTvls) : null,
+      ...(await serverSideTranslations(locale, ["common"])),
     },
     revalidate: 3600,
   };
