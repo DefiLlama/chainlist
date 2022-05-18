@@ -2,7 +2,7 @@ import { Button, Paper } from "@material-ui/core";
 import { useEffect, useMemo } from "react";
 import useRPCData from "../../hooks/useRPCData";
 import { useAccount, useRpcStore } from "../../stores";
-import { addToNetwork, renderProviderText } from "../../utils/utils";
+import { addToNetwork, renderProviderText } from "../../utils";
 import classes from "./index.module.css";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { useTranslation } from "next-i18next";

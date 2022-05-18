@@ -5,8 +5,10 @@ import Header from "../header";
 import styles from "../../styles/Home.module.css";
 import classes from "./index.module.css";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 export default function Layout({ changeTheme, theme, children }) {
+  const { t } = useTranslation("common");
   const addNetwork = () => {
     window.open("https://github.com/ethereum-lists/chains", "_blank");
   };
@@ -36,13 +38,10 @@ export default function Layout({ changeTheme, theme, children }) {
                 </Link>
               </Typography>
               <Typography variant="h2" className={classes.helpingParagraph}>
-                Helping users connect to EVM powered networks
+                {t("help-info")}
               </Typography>
               <Typography className={classes.subTitle}>
-                Chainlist is a list of EVM networks. Users can use the
-                information to connect their wallets and Web3 middleware
-                providers to the appropriate Chain ID and Network ID to connect
-                to the correct chain.
+                {t("description")}
               </Typography>
               <Button
                 size="large"
@@ -53,7 +52,7 @@ export default function Layout({ changeTheme, theme, children }) {
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>
-                  Add Your Network
+                  {t("add-your-network")}
                 </Typography>
               </Button>
               <Button
@@ -65,7 +64,7 @@ export default function Layout({ changeTheme, theme, children }) {
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>
-                  Add Your RPC
+                  {t("add-your-rpc")}
                 </Typography>
               </Button>
               <div className={classes.socials}>
@@ -82,7 +81,7 @@ export default function Layout({ changeTheme, theme, children }) {
                     />
                   </svg>
                   <Typography variant="body1" className={classes.sourceCode}>
-                    View Source Code
+                    {t("view-source-code")}
                   </Typography>
                 </a>
 
@@ -104,7 +103,7 @@ export default function Layout({ changeTheme, theme, children }) {
                     ></path>
                   </svg>
                   <Typography variant="body1" className={classes.sourceCode}>
-                    Join our Discord
+                    {t("join-our-discord")}
                   </Typography>
                 </a>
               </div>

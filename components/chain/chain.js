@@ -13,6 +13,8 @@ import Image from "next/image";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import RPCList from "../RPCList";
 import { addToNetwork, renderProviderText } from "../../utils";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 const ExpandButton = withStyles((theme) => ({
@@ -23,7 +25,7 @@ const ExpandButton = withStyles((theme) => ({
   },
 }))(Button);
 
-export default function Chain({ chain }) {
+export default function Chain({ chain, buttonOnly }) {
   const { t } = useTranslation("common");
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);

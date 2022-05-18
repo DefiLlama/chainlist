@@ -28,9 +28,9 @@ import {
 
 import stores, { useSearch, useTestnets } from "../../stores";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
-import { useTranslation } from "next-i18next";
 
 import classes from "./header.module.css";
+import { useTranslation } from "next-i18next";
 
 const StyledSwitch = withStyles((theme) => ({
   root: {
@@ -148,7 +148,6 @@ const TestnetSwitch = withStyles({
 
 function Header(props) {
   const { t } = useTranslation("common");
-  const router = useRouter();
   const [account, setAccount] = useState(null);
   const [darkMode, setDarkMode] = useState(
     props.theme.palette.type === "dark" ? true : false
@@ -216,6 +215,8 @@ function Header(props) {
     }
   }, [debouncedSearchTerm]);
 
+  const router = useRouter();
+
   useEffect(() => {
     if (!router.isReady) return;
     if (router.query.search) {
@@ -262,14 +263,10 @@ function Header(props) {
       </div>
 
       <div className={classes.switchContainer}>
-        {/* Hide it temporarily */}
-        {/* <label className={classes.label}>
+        <label className={classes.label}>
           <TestnetSwitch checked={testnets} onChange={toggleTestnets} />
           <span>Testnets</span>
-        </label> */}
-        <Link href="/" locale={router.locale === "en" ? "zh" : "en"}>
-          <Button variant="outlined">{t("language")}</Button>
-        </Link>
+        </label>
         <div className={classes.themeSelectContainer}>
           <StyledSwitch
             icon={<Brightness2Icon className={classes.switchIcon} />}
@@ -295,9 +292,9 @@ function Header(props) {
           ></div>
         )}
         <Typography variant="h5">
-          {account && account.address
-            ? formatAddress(account.address)
-            : t("connect-wallet")}
+          <Typography className={classes.searchInputAdnornment}>
+            {t("search-networks")}
+          </Typography>
         </Typography>
       </Button>
     </div>
