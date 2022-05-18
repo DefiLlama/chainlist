@@ -2,8 +2,8 @@ import BigNumber from "bignumber.js";
 import { useState, useEffect } from "react";
 import stores from "../stores";
 import { ERROR, TRY_CONNECT_WALLET } from "../stores/constants/constants";
-import allExtraRpcs from "../constants/extraRpcs.json"
-import chainIds from "../constants/chainIds.js"
+import allExtraRpcs from "../constants/extraRpcs.json";
+import chainIds from "../constants/chainIds.js";
 
 // todo: get navigator declared somehow? probably an issue with using nextjs
 // function getLang() {
@@ -82,13 +82,13 @@ export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export const renderProviderText = (account) => {
   if (account && account.address) {
     const providerTextList = {
-      Metamask: "Add to Metamask",
-      imToken: "Add to imToken",
-      Wallet: "Add to Wallet",
+      Metamask: "add-to-metamask",
+      imToken: "add-to-imToken",
+      Wallet: "add-to-wallet",
     };
     return providerTextList[getProvider()];
   } else {
-    return "Connect wallet";
+    return "connect-wallet";
   }
 };
 
@@ -140,7 +140,7 @@ function removeEndingSlash(rpc) {
 
 export function populateChain(chain, chainTvls) {
   const extraRpcs = allExtraRpcs[chain.chainId]?.rpcs;
-  
+
   if (extraRpcs !== undefined) {
     const rpcs = new Set(
       chain.rpc

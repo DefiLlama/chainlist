@@ -6,8 +6,9 @@ import { fetcher, populateChain } from "../utils";
 import { useSearch, useTestnets } from "../stores";
 import Layout from "../components/Layout";
 import classes from "../components/Layout/index.module.css";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
@@ -21,6 +22,7 @@ export async function getStaticProps() {
   return {
     props: {
       sortedChains,
+      ...(await serverSideTranslations(locale, ["common"])),
     },
     revalidate: 3600,
   };

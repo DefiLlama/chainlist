@@ -30,6 +30,7 @@ import stores, { useSearch, useTestnets } from "../../stores";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
 
 import classes from "./header.module.css";
+import { useTranslation } from "next-i18next";
 
 const StyledSwitch = withStyles((theme) => ({
   root: {
@@ -146,6 +147,7 @@ const TestnetSwitch = withStyles({
 })(Switch);
 
 function Header(props) {
+  const { t } = useTranslation("common");
   const [account, setAccount] = useState(null);
   const [darkMode, setDarkMode] = useState(
     props.theme.palette.type === "dark" ? true : false
@@ -250,7 +252,7 @@ function Header(props) {
                 startAdornment: (
                   <InputAdornment position="start">
                     <Typography className={classes.searchInputAdnornment}>
-                      Search Networks
+                      {t("search-networks")}
                     </Typography>
                   </InputAdornment>
                 ),
@@ -290,9 +292,9 @@ function Header(props) {
           ></div>
         )}
         <Typography variant="h5">
-          {account && account.address
-            ? formatAddress(account.address)
-            : "Connect Wallet"}
+          <Typography className={classes.searchInputAdnornment}>
+            {t("search-networks")}
+          </Typography>
         </Typography>
       </Button>
     </div>

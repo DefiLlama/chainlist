@@ -15,6 +15,7 @@ import RPCList from "../RPCList";
 import { addToNetwork, renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const ExpandButton = withStyles((theme) => ({
   root: {
@@ -25,6 +26,7 @@ const ExpandButton = withStyles((theme) => ({
 }))(Button);
 
 export default function Chain({ chain, buttonOnly }) {
+  const { t } = useTranslation("common");
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);
 
@@ -128,7 +130,7 @@ export default function Chain({ chain, buttonOnly }) {
               color="textSecondary"
               className={classes.dataPointHeader}
             >
-              Currency
+              {t("currency")}
             </Typography>
             <Typography variant="h5">
               {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
@@ -141,7 +143,7 @@ export default function Chain({ chain, buttonOnly }) {
             color="primary"
             onClick={() => addToNetwork(account, chain)}
           >
-            {renderProviderText(account)}
+            {t(renderProviderText(account))}
           </Button>
         </div>
         {router.pathname === "/" && (
