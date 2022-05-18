@@ -1,61 +1,26 @@
-import React, { useMemo } from "react";
-import Head from "next/head";
-import { withTheme } from "@material-ui/core/styles";
-import Chain from "../components/chain";
-import { fetcher, populateChain } from "../utils";
-import { useSearch, useTestnets } from "../stores";
-import Layout from "../components/Layout";
-import classes from "../components/Layout/index.module.css";
+import React from "react";
+import { Typography, Button } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import Header from "../header";
+import styles from "../../styles/Home.module.css";
+import classes from "./index.module.css";
+import Link from "next/link";
 
-export async function getStaticProps() {
-  const chains = await fetcher("https://chainid.network/chains.json");
-  const chainTvls = await fetcher("https://api.llama.fi/chains");
-
-  const sortedChains = chains
-    .filter((c) => c.name !== "420coin") // same chainId as ronin
-    .map((chain) => populateChain(chain, chainTvls))
-    .sort((a, b) => {
-      return (b.tvl ?? 0) - (a.tvl ?? 0);
-    });
-
-  return {
-    props: {
-      sortedChains,
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-    revalidate: 3600,
+export default function Layout({ changeTheme, theme, children }) {
+  const addNetwork = () => {
+    window.open("https://github.com/ethereum-lists/chains", "_blank");
   };
-}
 
-function Home({ changeTheme, theme, sortedChains }) {
-  const { t } = useTranslation("common");
-  const testnets = useTestnets((state) => state.testnets);
-  const search = useSearch((state) => state.search);
-
-  const chains = useMemo(() => {
-    if (!testnets) {
-      return sortedChains.filter((item) => {
-        const testnet =
-          item.name?.toLowerCase().includes("test") ||
-          item.title?.toLowerCase().includes("test") ||
-          item.network?.toLowerCase().includes("test");
-        return !testnet;
-      });
-    } else return sortedChains;
-  }, [testnets, sortedChains]);
+  const addRpc = () => {
+    window.open(
+      "https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.json",
+      "_blank"
+    );
+  };
 
   return (
-    <>
-      <Head>
-        <title>Chainlist</title>
-        <meta
-          name="description"
-          content="Connect to Add a Network to you Wallet. Checkout Latency of multiple RPC Providers of a Network"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Layout>
+    <div className={styles.container}>
+      <main className={styles.main}>
         <div
           className={
             theme.palette.type === "dark"
@@ -66,19 +31,18 @@ function Home({ changeTheme, theme, sortedChains }) {
           <div className={classes.copyContainer}>
             <div className={classes.copyCentered}>
               <Typography variant="h1" className={classes.chainListSpacing}>
-                <span className={classes.helpingUnderline}>Chainlist</span>
+                <Link href="/">
+                  <span className={classes.helpingUnderline}>Chainlist</span>
+                </Link>
               </Typography>
               <Typography variant="h2" className={classes.helpingParagraph}>
-                {t("help-info")}
+                Helping users connect to EVM powered networks
               </Typography>
               <Typography className={classes.subTitle}>
-                {t("description")}
-              </Typography>
-              <Typography
-                className={classes.subTitle}
-                style={{ marginTop: "20px" }}
-              >
-                {t("people-dao")}
+                Chainlist is a list of EVM networks. Users can use the
+                information to connect their wallets and Web3 middleware
+                providers to the appropriate Chain ID and Network ID to connect
+                to the correct chain.
               </Typography>
               <Button
                 size="large"
@@ -89,7 +53,7 @@ function Home({ changeTheme, theme, sortedChains }) {
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>
-                  {t("add-your-network")}
+                  Add Your Network
                 </Typography>
               </Button>
               <Button
@@ -101,13 +65,13 @@ function Home({ changeTheme, theme, sortedChains }) {
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>
-                  {t("add-your-rpc")}
+                  Add Your RPC
                 </Typography>
               </Button>
               <div className={classes.socials}>
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://github.com/People-DAO/chainlist"
+                  href="https://github.com/DefiLlama/chainlist"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -118,13 +82,13 @@ function Home({ changeTheme, theme, sortedChains }) {
                     />
                   </svg>
                   <Typography variant="body1" className={classes.sourceCode}>
-                    {t("view-source-code")}
+                    View Source Code
                   </Typography>
                 </a>
 
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://discord.gg/peopledao"
+                  href="https://discord.com/invite/buPFYXzDDd"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -140,7 +104,7 @@ function Home({ changeTheme, theme, sortedChains }) {
                     ></path>
                   </svg>
                   <Typography variant="body1" className={classes.sourceCode}>
-                    {t("join-our-discord")}
+                    Join our Discord
                   </Typography>
                 </a>
               </div>
@@ -154,34 +118,10 @@ function Home({ changeTheme, theme, sortedChains }) {
             }
           >
             <Header changeTheme={changeTheme} />
-            <div className={classes.cardsContainer}>
-              {(search === ""
-                ? chains
-                : chains.filter((chain) => {
-                    //filter
-                    return (
-                      chain.chain
-                        .toLowerCase()
-                        .includes(search.toLowerCase()) ||
-                      chain.chainId
-                        .toString()
-                        .toLowerCase()
-                        .includes(search.toLowerCase()) ||
-                      chain.name.toLowerCase().includes(search.toLowerCase()) ||
-                      (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
-                        .toLowerCase()
-                        .includes(search.toLowerCase())
-                    );
-                  })
-              ).map((chain, idx) => {
-                return <Chain chain={chain} key={idx} />;
-              })}
-            </div>
+            {children}
           </div>
         </div>
-      </Layout>
-    </>
+      </main>
+    </div>
   );
 }
-
-export default withTheme(Home);
