@@ -17,6 +17,12 @@
             "https://eth-mainnet.public.blastapi.io"
         ]
     },
+    "4181": {
+        "rpcs":[
+            "https://rpc1.phi.network",
+            "https://rpc2.phi.network",
+        ]
+    },
     "56": {
         "rpcs":[
             "https://bsc-dataseed.binance.org/",
