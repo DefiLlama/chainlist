@@ -130,7 +130,8 @@
     },
     "10":{
         "rpcs":[
-            "https://mainnet.optimism.io/"
+            "https://mainnet.optimism.io/",
+            "https://optimism-mainnet.public.blastapi.io"
         ]
     },
     "1088":{
