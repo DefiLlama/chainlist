@@ -107,7 +107,8 @@
             "https://api.s0.t.hmny.io",
             "https://rpc.heavenswail.one/",
             "https://api.fuzz.fi/",
-            "https://rpc.hermesdefi.io/"
+            "https://rpc.hermesdefi.io/",
+            "https://rpc.ankr.com/harmony"
         ]
     },
     "1313161554":{
@@ -148,7 +149,8 @@
             "https://dai.poa.network",
             "https://xdai-archive.blockscout.com",
             "https://rpc-df.xdaichain.com/",
-            "https://gnosis-mainnet.public.blastapi.io"
+            "https://gnosis-mainnet.public.blastapi.io",
+            "https://rpc.ankr.com/gnosis"
         ]
     },
     "1285": {
@@ -193,7 +195,8 @@
     "1284":{
         "rpcs":[
             "https://rpc.api.moonbeam.network",
-            "https://moonbeam.public.blastapi.io"
+            "https://moonbeam.public.blastapi.io",
+            "https://rpc.ankr.com/moonbeam"
         ]
     },
     "30":{
@@ -325,7 +328,8 @@
     },
     "57":{
         "rpcs":[
-            "https://rpc.syscoin.org"
+            "https://rpc.syscoin.org",
+            "https://rpc.ankr.com/syscoin"
         ]
     },
     "8":{
