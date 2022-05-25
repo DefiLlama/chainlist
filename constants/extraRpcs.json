@@ -965,6 +965,14 @@
             "https://seed.btcix.org/rpc"
         ]
     },
+    "20212":{
+        "rpcs":[
+            "https://dapp.zsc.one/rpc",
+            "https://node.zsc.one/rpc",
+            "https://node1.zsc.one/rpc",
+            "https://node2.zsc.one/rpc"
+        ]
+    },
     "21816":{
         "rpcs":[
             "https://seed.omlira.com"
