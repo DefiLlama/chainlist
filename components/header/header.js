@@ -186,6 +186,7 @@ function Header(props) {
 
   const renderProviderLogo = () => {
     const providerLogoList = {
+      "Brave Wallet": "bravewallet",
       Metamask: "metamask",
       imToken: "imtoken",
       Wallet: "metamask",

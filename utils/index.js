@@ -50,6 +50,7 @@ export function bnDec(decimals) {
 
 export function getProvider() {
   if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
+    if (window.ethereum.isBraveWallet) return "Brave Wallet";
     if (window.ethereum.isMetaMask) return "Metamask";
     if (window.ethereum.isImToken) return "imToken";
   }
@@ -85,6 +86,7 @@ export const renderProviderText = (account) => {
       Metamask: "add-to-metamask",
       imToken: "add-to-imToken",
       Wallet: "add-to-wallet",
+      "Brave Wallet": "add-to-brave"
     };
     return providerTextList[getProvider()];
   } else {
