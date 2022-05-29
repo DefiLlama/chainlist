@@ -123,6 +123,11 @@
             "https://mainnet.aurora.dev"
         ]
     },
+    "4181":{
+        "rpcs":[
+            "https://rpc1.phi.network"
+        ]
+    },
     "128":{
         "rpcs":[
             "https://http-mainnet-node.huobichain.com",
