@@ -87,6 +87,13 @@
             "https://evm-t3.cronos.org/"
         ]
     },
+    },
+    "4181":{
+        "rpcs":[
+            "https://rpc1.phi.network",
+            "https://rpc2.phi.network"
+        ]
+    },
     "42161":{
         "rpcs":[
             "https://arb1.arbitrum.io/rpc",
