@@ -119,6 +119,7 @@
     "4181":{
         "rpcs":[
             "https://rpc1.phi.network"
+            "https://rpc2.phi.network"
         ]
     },
     "128":{
