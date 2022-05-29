@@ -81,6 +81,13 @@
             "https://cronos-rpc.elk.finance/"
         ]
     },
+    },
+    "4181":{
+        "rpcs":[
+            "https://rpc2.phi.network",
+            "https://rpc2.phi.network",
+        ]
+    },
     "338":{
         "rpcs":[
             "https://evm-t3.cronos.org:8545/",
