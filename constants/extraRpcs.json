@@ -73,6 +73,12 @@
             "https://polygon-mainnet.public.blastapi.io"
         ]
     },
+    "4181":{
+        "rpcs":[
+            "https://rpc1.phi.network",
+            "https://rpc2.phi.network",
+        ]
+    },
     "25":{
         "rpcs":[
             "https://cronos-rpc.heavenswail.one/",
