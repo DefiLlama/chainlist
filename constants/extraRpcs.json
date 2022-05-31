@@ -1146,9 +1146,8 @@
     },
     "200625":{
         "rpcs":[
-        
-        ],
-        "rpcWorking":false
+            "https://boot2.akroma.org/"
+        ]
     },
     "201018":{
         "rpcs":[
