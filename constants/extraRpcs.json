@@ -17,6 +17,12 @@
             "https://eth-mainnet.public.blastapi.io"
         ]
     },
+    "2":{
+        "rpcs":[
+            "https://node.eggs.cool",
+            "https://node.expanse.tech"
+        ]
+    },
     "56": {
         "rpcs":[
             "https://bsc-dataseed.binance.org/",
