@@ -1325,6 +1325,11 @@
           "https://dataserver-asia-4.zenithchain.co/",
           "https://dataserver-asia-2.zenithchain.co/"
         ]
+    },
+    "1506":{
+        "rpc": [
+            "https://mainnet.sherpax.io/rpc"
+        ]
     }
 }
 
