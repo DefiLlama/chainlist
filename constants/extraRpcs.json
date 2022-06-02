@@ -1341,6 +1341,12 @@
         "rpc": [
             "https://mainnet.sherpax.io/rpc"
         ]
+    },
+    "103090":{
+        "rpcs":[
+            "https://evm.cryptocurrencydevs.org",
+            "https://rpc.crystaleum.org"
+        ]
     }
 }
 
