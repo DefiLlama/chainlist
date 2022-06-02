@@ -15,9 +15,7 @@
       "decimals": 18
     },
     "infoURL": "https://www.bnbchain.world",
-    "shortName": "bnb",
     "chainId": 56,
-    "networkId": 56,
     "slip44": 714,
     "explorers": [
       {
@@ -43,9 +41,7 @@
       "decimals": 18
     },
     "infoURL": "https://testnet.binance.org/",
-    "shortName": "bnb",
     "chainId": 97,
-    "networkId": 97,
     "explorers": [
       {
         "name": "bscscan-testnet",
@@ -65,9 +61,7 @@
       "decimals": 18
     },
     "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce ",
-    "shortName": "bas-ars",
     "chainId": 117,
-    "networkId": 117,
     "explorers": [
       {
         "name": "bastrace",
@@ -87,13 +81,51 @@
       "decimals": 18
     },
     "infoURL": "https://docs.bnbchain.world/docs/learn/bas/",
-    "shortName": "bas-ankr",
     "chainId": 14000,
-    "networkId": 117,
     "explorers": [
       {
         "name": "bastrace",
         "url": "https://explorer.dev-01.bas.ankr.com/",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "GAL-BSC application Sidechain Testnet",
+    "chain": "BAS-GAL",
+    "rpc": ["https://bas-galaxy-testnet.nodereal.io/"],
+    "faucets": ["https://bas-galaxy-testnet-faucet.nodereal.io/"],
+    "nativeCurrency": {
+     "name": "Project Galaxy",
+     "symbol": "GAL",
+     "decimals": 18
+    },
+    "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
+    "chainId": 230,
+    "explorers": [
+     {
+      "name": "blockscout",
+      "url": "https://bas-galaxy-testnet-explorer.nodereal.io/",
+      "standard": "EIP-3091"
+     }
+    ]
+   },
+  {
+    "name": "CUBE-BSC application Sidechain Testnet",
+    "chain": "BAS-CUBE",
+    "rpc": ["https://bas-cube-testnet.nodereal.io/"],
+    "faucets": ["https://bas-cube-testnet-faucet.nodereal.io/"],
+    "nativeCurrency": {
+      "name": "CUBE",
+      "symbol": "ITAMCUBE",
+      "decimals": 18
+    },
+    "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
+    "chainId": 232,
+    "explorers": [
+      {
+        "name": "blockscout-testnet",
+        "url": "https://bas-cube-testnet-explorer.nodereal.io/",
         "standard": "EIP3091"
       }
     ]
