@@ -91,16 +91,16 @@
     ]
   },
   {
-    "name": "GAL-BSC application Sidechain testnet",
+    "name": "GAL-BSC application Sidechain Testnet",
     "chain": "BAS-GAL",
     "rpc": ["https://bas-galaxy-testnet.nodereal.io/"],
     "faucets": ["https://bas-galaxy-testnet-faucet.nodereal.io/"],
     "nativeCurrency": {
-     "name": "GAL-BSC application Sidechain native token",
+     "name": "Project Galaxy",
      "symbol": "GAL",
      "decimals": 18
     },
-    "infoURL": "https://galaxy.eco/",
+    "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
     "chainId": 230,
     "explorers": [
      {
@@ -111,16 +111,16 @@
     ]
    },
   {
-    "name": "CUBE-BSC application Sidechain testnet",
+    "name": "CUBE-BSC application Sidechain Testnet",
     "chain": "BAS-CUBE",
     "rpc": ["https://bas-cube-testnet.nodereal.io/"],
     "faucets": ["https://bas-cube-testnet-faucet.nodereal.io/"],
     "nativeCurrency": {
-      "name": "CUBE-BSC application Sidechain native token",
-      "symbol": "CUBE",
+      "name": "CUBE",
+      "symbol": "ITAMCUBE",
       "decimals": 18
     },
-    "infoURL": "https://cube.store",
+    "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
     "chainId": 232,
     "explorers": [
       {
