@@ -116,8 +116,8 @@
     "rpc": ["https://bas-cube-testnet.nodereal.io/"],
     "faucets": ["https://bas-cube-testnet-faucet.nodereal.io/"],
     "nativeCurrency": {
-      "name": "CUBE",
-      "symbol": "ITAMCUBE",
+      "name": "ITAMCUBE",
+      "symbol": "CUBE",
       "decimals": 18
     },
     "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
