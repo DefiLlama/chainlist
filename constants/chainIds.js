@@ -53,7 +53,7 @@ const chainIds = {
   42220: "celo",
   42262: "oasis",
   43114: "avalanche",
-  71394: "godwoken",
+  71402: "godwoken",
   200625: "akroma",
   333999: "polis",
   1313161554: "aurora",
