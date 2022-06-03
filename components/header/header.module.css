@@ -67,6 +67,9 @@
 .coinbase {
   background-image: url('/connectors/coinbaseWalletIcon.svg');
 }
+.bravewallet {
+  background-image: url('/connectors/icn-bravewallet.svg');
+}
 .torus {
   background-image: url('/connectors/torus.jpg');
 }

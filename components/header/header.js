@@ -186,6 +186,7 @@ function Header(props) {
 
   const renderProviderLogo = () => {
     const providerLogoList = {
+      "Brave Wallet": "bravewallet",
       Metamask: "metamask",
       imToken: "imtoken",
       Wallet: "metamask",
@@ -293,7 +294,9 @@ function Header(props) {
         )}
         <Typography variant="h5">
           <Typography className={classes.searchInputAdnornment}>
-            {t("search-networks")}
+            {account && account.address
+              ? formatAddress(account.address)
+              : t("connect-wallet")}
           </Typography>
         </Typography>
       </Button>
