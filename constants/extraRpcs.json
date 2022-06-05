@@ -1343,13 +1343,13 @@
         ]
     },
     "7777":{
-        "rpcs":[
+        "rpcs": [
             "https://testnet1.rotw.games",
             "https://testnet2.rotw.games",
             "https://testnet3.rotw.games",
             "https://testnet4.rotw.games",
             "https://testnet5.rotw.games"
         ]
-    },
+    }
 }
 
