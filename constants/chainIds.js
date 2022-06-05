@@ -46,6 +46,7 @@ const chainIds = {
   4689: "iotex",
   5050: "xlc",
   5551: "nahmii",
+  7777: "nmactest"
   8217: "klaytn",
   10000: "smartbch",
   32659: "fusion",
