@@ -96,7 +96,7 @@
     "rpc": ["https://bas.metaapesgame.com/bas_mainnet_full_rpc"],
     "faucets": [],
     "nativeCurrency": {
-      "name": "PEEL",
+      "name": "BAS Meta Apes Native Token",
       "symbol": "PEEL",
       "decimals": 18
     },
