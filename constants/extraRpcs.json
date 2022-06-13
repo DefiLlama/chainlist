@@ -1262,5 +1262,10 @@
         "rpc": [
             "https://mainnet.sherpax.io/rpc"
         ]
+    },
+    "3737": {
+        "rpc": [
+            "https://rpc.crossbell.io"
+        ]
     }
 }
