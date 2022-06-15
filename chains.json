@@ -135,12 +135,7 @@
     "faucets": [
       "https://etherlite.org/faucets"
     ],
-    "infoURL": "https://forum.etherlite.org/",
-    "app_resource": {
-      "ic_chain_select": "https://etherlite.org/assets/logo/88.png",
-      "ic_chain_unselect": "https://etherlite.org/assets/logo/88x.png",
-      "color_chain_bg": "0x58B2AF"
-    }
+    "infoURL": "https://forum.etherlite.org/"
   },
   {
     "name": "Polygon (Matic) Mainnet",
@@ -209,6 +204,7 @@
     "app_resource": {
       "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Fuse/1.png",
       "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Fuse/0.png",
+      "ic_chain_unselect_dark": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Fuse/2.png",
       "color_chain_bg": "0x62D970"
     }
   },
@@ -278,6 +274,7 @@
     "app_resource": {
       "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Fusion/1.png",
       "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Fusion/0.png",
+      "ic_chain_unselect_dark": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Fusion/2.png",
       "color_chain_bg": "0x2E3B4A"
     }
   },
@@ -303,6 +300,7 @@
     "app_resource": {
       "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/ThunderCore/1.png",
       "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/ThunderCore/0.png",
+      "ic_chain_unselect_dark": "https://tp-upload.cdn.bcebos.com/v1/blockChain/ThunderCore/2.png",
       "color_chain_bg": "0xEAC541"
     }
   },
@@ -328,6 +326,7 @@
     "app_resource": {
       "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/HooTest/1.png",
       "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/HooTest/0.png",
+      "ic_chain_unselect_dark": "https://tp-upload.cdn.bcebos.com/v1/blockChain/HooTest/2.png",
       "color_chain_bg": "0x00C0AB"
     }
   },
@@ -351,6 +350,7 @@
     "app_resource": {
       "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/EthereumClassic/1.png",
       "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/EthereumClassic/0.png",
+      "ic_chain_unselect_dark": "https://tp-upload.cdn.bcebos.com/v1/blockChain/EthereumClassic/2.png",
       "color_chain_bg": "0x3CBA3B"
     }
   },
