@@ -1263,4 +1263,9 @@
             "https://mainnet.sherpax.io/rpc"
         ]
     }
+    "27082022": {
+        "rpcs": [
+            "https://rpc.exlscan.com"
+        ]
+    }
 }
