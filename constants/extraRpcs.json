@@ -156,12 +156,8 @@
     "100": {
         "rpcs": [
             "https://rpc.gnosischain.com",
-            "https://rpc.xdaichain.com",
-            "https://xdai.poanetwork.dev",
             "https://xdai-rpc.gateway.pokt.network",
-            "https://dai.poa.network",
             "https://xdai-archive.blockscout.com",
-            "https://rpc-df.xdaichain.com/",
             "https://gnosis-mainnet.public.blastapi.io",
             "https://rpc.ankr.com/gnosis"
         ]
