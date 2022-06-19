@@ -47,6 +47,7 @@ const chainIds = {
   5050: "xlc",
   5551: "nahmii",
   8217: "klaytn",
+  21004: "c4ei",
   10000: "smartbch",
   32659: "fusion",
   42161: "arbitrum",
