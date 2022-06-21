@@ -145,7 +145,8 @@
     "10": {
         "rpcs": [
             "https://mainnet.optimism.io/",
-            "https://optimism-mainnet.public.blastapi.io"
+            "https://optimism-mainnet.public.blastapi.io",
+            "https://rpc.ankr.com/optimism"
         ]
     },
     "1088": {
