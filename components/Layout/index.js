@@ -20,6 +20,8 @@ export default function Layout({ changeTheme, theme, children }) {
     );
   };
 
+  const url = '/logo.svg'
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -32,11 +34,11 @@ export default function Layout({ changeTheme, theme, children }) {
         >
           <div className={classes.copyContainer}>
             <div className={classes.copyCentered}>
-              <Typography variant="h1" className={classes.chainListSpacing}>
-                <Link href="/">
-                  <span className={classes.helpingUnderline}>Chainlist</span>
-                </Link>
-              </Typography>
+            <img style={{
+                width: '360px',
+                "margin-left": '-15px',
+              }} src={url} alt=""/>
+
               <Typography variant="h2" className={classes.helpingParagraph}>
                 {t("help-info")}
               </Typography>
