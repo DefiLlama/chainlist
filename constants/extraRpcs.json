@@ -650,6 +650,11 @@
         "websiteDead": true,
         "rpcWorking": false
     },
+    "416": {
+      "rpcs": [
+        "https://rpc.sx.technology"
+      ]
+    },
     "499": {
         "rpcs": [],
         "rpcWorking": false,

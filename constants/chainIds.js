@@ -33,6 +33,7 @@ const chainIds = {
   321: "kucoin",
   336: "shiden",
   361: "theta",
+  416: "sx",
   534: "candle",
   592: "astar",
   820: "callisto",
