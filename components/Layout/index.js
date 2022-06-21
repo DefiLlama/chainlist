@@ -37,7 +37,7 @@ export default function Layout({ changeTheme, theme, children }) {
             <img style={{
                 width: '360px',
                 "margin-left": '-15px',
-              }} src={url} alt=""/>
+              }} src={url} alt="Chainlist logo" />
 
               <Typography variant="h2" className={classes.helpingParagraph}>
                 {t("help-info")}
