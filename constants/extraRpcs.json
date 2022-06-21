@@ -947,6 +947,11 @@
             "rpcWorking:false"
         ]
     },
+    "32520": {
+        "rpcs": [
+            "https://rpc.icecreamswap.com"
+        ]
+    },
     "39797": {
         "rpcs": [
             "https://nodeapi.energi.network",
