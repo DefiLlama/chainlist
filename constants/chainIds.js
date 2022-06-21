@@ -49,6 +49,7 @@ const chainIds = {
   7777: "nmactest",
   8217: "klaytn",
   10000: "smartbch",
+  103090: "crystaleum",
   32659: "fusion",
   42161: "arbitrum",
   42220: "celo",
