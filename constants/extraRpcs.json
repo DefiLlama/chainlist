@@ -102,8 +102,13 @@
     },
     "8217": {
         "rpcs": [
-            "http://175.209.78.135:8551",
-            "https://public-node-api.klaytnapi.com/v1/cypress"
+            "https://public-node-api.klaytnapi.com/v1/cypress",
+            "https://klaytn01.fandom.finance",
+            "https://klaytn02.fandom.finance",
+            "https://klaytn03.fandom.finance",
+            "https://klaytn04.fandom.finance",
+            "https://klaytn05.fandom.finance",
+            "https://cypress.fandom.finance/archive"
         ]
     },
     "1666600000": {
