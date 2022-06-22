@@ -317,8 +317,8 @@
     },
     "20": {
         "rpcs": [
-            "https://api.elastos.io/eth",
-            "https://api.trinity-tech.cn/eth"
+            "https://api.elastos.io/esc",
+            "https://api.trinity-tech.io/esc"
         ]
     },
     "82": {
@@ -417,7 +417,6 @@
     },
     "22": {
         "rpcs": [
-            "https://eid.elastos.io/api/eth-rpc",
             "https://api.trinity-tech.io/eid",
             "https://api.elastos.io/eid"
         ]
