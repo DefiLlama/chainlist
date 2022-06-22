@@ -91,6 +91,26 @@
     ]
   },
   {
+    "name": "Meta Apes BSC Application Sidechain Mainnet",
+    "chain": "BAS-MAPES",
+    "rpc": ["https://bas.metaapesgame.com/bas_mainnet_full_rpc"],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "BAS Meta Apes Native Token",
+      "symbol": "PEEL",
+      "decimals": 18
+    },
+    "infoURL": "https://docs.bnbchain.world/docs/learn/bas/",
+    "chainId": 16350,
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://explorer.bas.metaapesgame.com/",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
     "name": "GAL-BSC application Sidechain Testnet",
     "chain": "BAS-GAL",
     "rpc": ["https://bas-galaxy-testnet.nodereal.io/"],
