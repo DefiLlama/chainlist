@@ -19,7 +19,7 @@ const chainIds = {
   70: "hoo",
   82: "meter",
   88: "tomochain",
-  100: "gnosis",
+  100: "xdai",
   106: "velas",
   108: "thundercore",
   122: "fuse",
