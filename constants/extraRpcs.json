@@ -37,6 +37,8 @@
             "https://bsc-dataseed2.binance.org/",
             "https://bsc-dataseed3.binance.org/",
             "https://bsc-dataseed4.binance.org/",
+            "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
+            "wss://bsc-mainnet.nodereal.io/ws/v1/64a9df0874fb4a93b9d0a3849de012d3",
             "https://rpc.ankr.com/bsc",
             "https://bscrpc.com",
             "https://bsc.mytokenpocket.vip",
