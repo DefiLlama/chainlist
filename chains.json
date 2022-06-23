@@ -8372,40 +8372,6 @@
     "networkId": 1688
   },
   {
-    "name": "Cube Chain Testnet",
-    "chain": "Cube",
-    "rpc": [
-      "https://http-testnet.cube.network",
-      "wss://ws-testnet.cube.network",
-      "https://http-testnet-sg.cube.network",
-      "wss://ws-testnet-sg.cube.network",
-      "https://http-testnet-jp.cube.network",
-      "wss://ws-testnet-jp.cube.network",
-      "https://http-testnet-us.cube.network",
-      "wss://ws-testnet-us.cube.network"
-    ],
-    "faucets": [
-      "https://faucet.cube.network"
-    ],
-    "nativeCurrency": {
-      "name": "Cube Chain Test Native Token",
-      "symbol": "CUBET",
-      "decimals": 18
-    },
-    "infoURL": "https://www.cube.network",
-    "shortName": "cubet",
-    "chainId": 1819,
-    "networkId": 1819,
-    "slip44": 1819,
-    "explorers": [
-      {
-        "name": "cubetest-scan",
-        "url": "https://testnet.cubescan.network",
-        "standard": "EIP3091"
-      }
-    ]
-  },
-  {
     "name": "BON Network",
     "chain": "BON",
     "network": "testnet",
@@ -9799,6 +9765,46 @@
       {
         "name": "cube-scan",
         "url": "https://cubescan.network",
+        "standard": "EIP3091"
+      }
+    ],
+    "app_resource": {
+      "ic_chain_select": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Cube/1.png",
+      "ic_chain_unselect": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Cube/0.png",
+      "ic_chain_unselect_dark": "https://tp-upload.cdn.bcebos.com/v1/blockChain/Cube/2.png",
+      "color_chain_bg": "0x3FC3C3"
+    }
+  },
+  {
+    "name": "Cube Chain Testnet",
+    "chain": "Cube",
+    "rpc": [
+      "https://http-testnet.cube.network",
+      "wss://ws-testnet.cube.network",
+      "https://http-testnet-sg.cube.network",
+      "wss://ws-testnet-sg.cube.network",
+      "https://http-testnet-jp.cube.network",
+      "wss://ws-testnet-jp.cube.network",
+      "https://http-testnet-us.cube.network",
+      "wss://ws-testnet-us.cube.network"
+    ],
+    "faucets": [
+      "https://faucet.cube.network"
+    ],
+    "nativeCurrency": {
+      "name": "Cube Chain Test Native Token",
+      "symbol": "CUBET",
+      "decimals": 18
+    },
+    "infoURL": "https://www.cube.network",
+    "shortName": "cubet",
+    "chainId": 1819,
+    "networkId": 1819,
+    "slip44": 1819,
+    "explorers": [
+      {
+        "name": "cubetest-scan",
+        "url": "https://testnet.cubescan.network",
         "standard": "EIP3091"
       }
     ]
