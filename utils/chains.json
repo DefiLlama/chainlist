@@ -4,6 +4,8 @@
     "chain": "BSC",
     "rpc": [
       "https://bsc.nodereal.io",
+      "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
+      "wss://bsc-mainnet.nodereal.io/ws/v1/64a9df0874fb4a93b9d0a3849de012d3",
       "https://bsc-dataseed.binance.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/"
@@ -32,7 +34,9 @@
       "https://data-seed-prebsc-1-s1.binance.org:8545/",
       "https://data-seed-prebsc-1-s2.binance.org:8545/",
       "https://data-seed-prebsc-2-s2.binance.org:8545/",
-      "https://data-seed-prebsc-2-s3.binance.org:8545/"
+      "https://data-seed-prebsc-2-s3.binance.org:8545/",
+      "https://bsc-testnet.nodereal.io/v1/e9a36765eb8a40b9bd12e680a1fd2bc5",
+      "wss://bsc-testnet.nodereal.io/ws/v1/e9a36765eb8a40b9bd12e680a1fd2bc5"
     ],
     "faucets": ["https://testnet.binance.org/faucet-smart"],
     "nativeCurrency": {
