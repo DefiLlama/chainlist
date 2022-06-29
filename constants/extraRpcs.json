@@ -85,7 +85,7 @@
     "25": {
         "rpcs": [
             "https://cronos-rpc.heavenswail.one/",
-            "https://evm-cronos.crypto.org",
+            "https://evm.cronos.org",
             "https://cronosrpc-1.xstaking.sg/",
             "https://cronos-rpc.elk.finance/"
         ]
@@ -388,11 +388,6 @@
     "11297108109": {
         "rpcs": [
             "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
-        ]
-    },
-    "2": {
-        "rpcs": [
-            "https://node.expanse.tech"
         ]
     },
     "7": {
