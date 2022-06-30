@@ -827,6 +827,11 @@
             "https://seed4.evanesco.org:8546"
         ]
     },
+    "2222": {
+        "rpcs": [
+            "https://evm.kava.io"
+        ]
+    },
     "2559": {
         "rpcs": [],
         "rpcWorking": false
