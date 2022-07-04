@@ -24,6 +24,37 @@
             "https://node.expanse.tech"
         ]
     },
+    "80001": {
+        "rpcs": [
+            "https://rpc.ankr.com/polygon_mumbai"
+        ]
+    },
+    "4": {
+        "rpcs": [
+            "https://rpc.ankr.com/eth_rinkeby"
+        ]
+    },
+    "5": {
+        "rpcs": [
+            "https://rpc.ankr.com/eth_goerli"
+        ]
+    },
+    "3": {
+        "rpcs": [
+            "https://rpc.ankr.com/eth_ropsten"
+        ]
+    },
+    "4002": {
+        "rpcs": [
+            "https://rpc.ankr.com/fantom_testnet"
+        ]
+    },
+    "43113": {
+        "rpcs": [
+            "https://rpc.ankr.com/avalanche_fuji",
+            "https://rpc.ankr.com/avalanche_fuji-c"
+        ]
+    },
     "56": {
         "rpcs": [
             "https://bsc-dataseed.binance.org/",
