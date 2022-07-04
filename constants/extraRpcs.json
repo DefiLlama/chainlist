@@ -26,33 +26,39 @@
     },
     "80001": {
         "rpcs": [
-            "https://rpc.ankr.com/polygon_mumbai"
+            "https://rpc.ankr.com/polygon_mumbai",
+            "https://rpc-mumbai.maticvigil.com"
         ]
     },
     "4": {
         "rpcs": [
-            "https://rpc.ankr.com/eth_rinkeby"
+            "https://rpc.ankr.com/eth_rinkeby",
+            "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         ]
     },
     "5": {
         "rpcs": [
-            "https://rpc.ankr.com/eth_goerli"
+            "https://rpc.ankr.com/eth_goerli",
+            "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         ]
     },
     "3": {
         "rpcs": [
-            "https://rpc.ankr.com/eth_ropsten"
+            "https://rpc.ankr.com/eth_ropsten",
+            "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         ]
     },
     "4002": {
         "rpcs": [
-            "https://rpc.ankr.com/fantom_testnet"
+            "https://rpc.ankr.com/fantom_testnet",
+            "https://rpc.testnet.fantom.network/"
         ]
     },
     "43113": {
         "rpcs": [
             "https://rpc.ankr.com/avalanche_fuji",
-            "https://rpc.ankr.com/avalanche_fuji-c"
+            "https://rpc.ankr.com/avalanche_fuji-c",
+            "https://api.avax-test.network/ext/bc/C/rpc"
         ]
     },
     "56": {
