@@ -42,6 +42,7 @@ const chainIds = {
   1284: "moonbeam",
   1285: "moonriver",
   2020: "ronin",
+  2222: "kava",
   2612: "ezchain",
   4181: "phi",
   4689: "iotex",
