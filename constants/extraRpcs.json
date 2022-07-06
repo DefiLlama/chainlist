@@ -348,6 +348,7 @@
     },
     "820": {
         "rpcs": [
+            "https://rpc.callisto.network",
             "https://clo-geth.0xinfra.com/"
         ]
     },
