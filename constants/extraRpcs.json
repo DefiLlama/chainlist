@@ -348,6 +348,7 @@
     },
     "820": {
         "rpcs": [
+            "https://rpc.callisto.network",
             "https://clo-geth.0xinfra.com/"
         ]
     },
@@ -562,7 +563,14 @@
     },
     "87": {
         "rpcs": [
-            "https://rpc.novanetwork.io:9070"
+            "https://rpc.novanetwork.io:9070",
+            "http://dataseed-0.rpc.novanetwork.io:8545/",
+            "http://dataseed-1.rpc.novanetwork.io:8545/",
+            "http://dataseed-2.rpc.novanetwork.io:8545/",
+            "http://dataseed-3.rpc.novanetwork.io:8545/",
+            "http://dataseed-4.rpc.novanetwork.io:8545/",
+            "http://dataseed-5.rpc.novanetwork.io:8545/",
+            "http://dataseed-6.rpc.novanetwork.io:8545/"
         ]
     },
     "90": {
