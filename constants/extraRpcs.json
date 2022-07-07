@@ -162,7 +162,8 @@
             "https://api.fuzz.fi/",
             "https://rpc.hermesdefi.io/",
             "https://rpc.ankr.com/harmony",
-            "https://harmony-mainnet.chainstacklabs.com"
+            "https://harmony-mainnet.chainstacklabs.com",
+            "https://rpc.dkvalidator.one"
         ]
     },
     "1313161554": {
