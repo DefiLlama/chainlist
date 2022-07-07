@@ -27,7 +27,8 @@
     "80001": {
         "rpcs": [
             "https://rpc.ankr.com/polygon_mumbai",
-            "https://rpc-mumbai.maticvigil.com"
+            "https://rpc-mumbai.maticvigil.com",
+            "https://polygontestapi.terminet.io/rpc"
         ]
     },
     "4": {
@@ -58,7 +59,8 @@
         "rpcs": [
             "https://rpc.ankr.com/avalanche_fuji",
             "https://rpc.ankr.com/avalanche_fuji-c",
-            "https://api.avax-test.network/ext/bc/C/rpc"
+            "https://api.avax-test.network/ext/bc/C/rpc",
+            "https://avalanchetestapi.terminet.io/ext/bc/C/rpc"
         ]
     },
     "56": {
@@ -82,14 +84,21 @@
             "https://bscrpc.com",
             "https://bsc.mytokenpocket.vip",
             "https://binance.nodereal.io",
-            "https://rpc-bsc.bnb48.club"
+            "https://rpc-bsc.bnb48.club",
+            "https://bscapi.terminet.io/rpc"
+        ]
+    },
+    "97": {
+        "rpcs": [
+            "https://bsctestapi.terminet.io/rpc"
         ]
     },
     "43114": {
         "rpcs": [
             "https://api.avax.network/ext/bc/C/rpc",
             "https://rpc.ankr.com/avalanche",
-            "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc"
+            "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
+            "https://avalancheapi.terminet.io/ext/bc/C/rpc"
         ]
     },
     "250": {
@@ -116,7 +125,8 @@
             "https://poly-rpc.gateway.pokt.network/",
             "https://rpc.ankr.com/polygon",
             "https://rpc-mainnet.maticvigil.com/",
-            "https://polygon-mainnet.public.blastapi.io"
+            "https://polygon-mainnet.public.blastapi.io",
+            "https://polygonapi.terminet.io/rpc"
         ]
     },
     "25": {
@@ -179,7 +189,13 @@
         "rpcs": [
             "https://http-mainnet-node.huobichain.com",
             "https://http-mainnet.hecochain.com",
-            "https://pub001.hg.network/rpc"
+            "https://pub001.hg.network/rpc",
+            "https://hecoapi.terminet.io/rpc"
+        ]
+    },
+    "256": {
+        "rpcs": [
+            "https://hecotestapi.terminet.io/rpc"
         ]
     },
     "42220": {
