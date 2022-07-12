@@ -5,10 +5,10 @@ import Header from "../header";
 import styles from "../../styles/Home.module.css";
 import classes from "./index.module.css";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 export default function Layout({ changeTheme, theme, children }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("Common");
   const addNetwork = () => {
     window.open("https://github.com/ethereum-lists/chains", "_blank");
   };
@@ -36,7 +36,7 @@ export default function Layout({ changeTheme, theme, children }) {
             <div className={classes.copyCentered}>
             <img style={{
                 width: '360px',
-                "margin-left": '-15px',
+                marginLeft: '-15px',
               }} src={url} alt="Chainlist logo" />
 
               <Typography variant="h2" className={classes.helpingParagraph}>

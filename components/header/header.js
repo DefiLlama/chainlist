@@ -30,7 +30,7 @@ import stores, { useSearch, useTestnets } from "../../stores";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
 
 import classes from "./header.module.css";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 const StyledSwitch = withStyles((theme) => ({
   root: {
@@ -147,7 +147,7 @@ const TestnetSwitch = withStyles({
 })(Switch);
 
 function Header(props) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("Common");
   const [account, setAccount] = useState(null);
   const [darkMode, setDarkMode] = useState(
     props.theme.palette.type === "dark" ? true : false

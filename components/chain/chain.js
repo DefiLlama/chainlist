@@ -15,7 +15,7 @@ import RPCList from "../RPCList";
 import { addToNetwork, renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 const ExpandButton = withStyles((theme) => ({
   root: {
@@ -26,7 +26,7 @@ const ExpandButton = withStyles((theme) => ({
 }))(Button);
 
 export default function Chain({ chain, buttonOnly }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("Common");
   const account = useAccount((state) => state.account);
   const setAccount = useAccount((state) => state.setAccount);
 

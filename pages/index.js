@@ -6,7 +6,6 @@ import { fetcher, populateChain } from "../utils";
 import { useSearch, useTestnets } from "../stores";
 import Layout from "../components/Layout";
 import classes from "../components/Layout/index.module.css";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -22,7 +21,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       sortedChains,
-      ...(await serverSideTranslations(locale, ["common"])),
+      messages: (await import(`../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };

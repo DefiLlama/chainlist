@@ -8,7 +8,6 @@ import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import classes from "./index.module.css";
 import Image from "next/image";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ params, locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -20,7 +19,7 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       chain: chain ? populateChain(chain, chainTvls) : null,
-      ...(await serverSideTranslations(locale, ["common"])),
+      messages: (await import(`../../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };
