@@ -1367,5 +1367,10 @@
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
+    },
+    "90001":{
+        "rpcs":[
+            "https://testnet-fx-json-web3.functionx.io:8545"
+        ]
     }
 }
