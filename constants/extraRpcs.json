@@ -217,6 +217,11 @@
             "https://andromeda.metis.io/?owner=1088"
         ]
     },
+    "1246": {
+        "rpcs": [
+            "https://rpc-cnx.omplatform.com"
+        ]
+    },
     "100": {
         "rpcs": [
             "https://rpc.gnosischain.com",
