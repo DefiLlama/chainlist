@@ -5,7 +5,7 @@ import { useAccount, useRpcStore } from "../../stores";
 import { addToNetwork, renderProviderText } from "../../utils";
 import classes from "./index.module.css";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 export default function RPCList({ chain }) {
   const chains = useRPCData(chain.rpc);
@@ -146,7 +146,7 @@ const Shimmer = () => {
 };
 
 const Row = ({ values, chain, isEthMainnet }) => {
-  const { t } = useTranslation("common");
+  const t = useTranslations("Common");
   const { data, isLoading, refetch } = values;
 
   const rpcs = useRpcStore((state) => state.rpcs);

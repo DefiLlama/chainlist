@@ -17,9 +17,9 @@ import { useRouter } from "next/router";
 import * as Fathom from "fathom-client";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { appWithTranslation } from "next-i18next";
+import { NextIntlProvider } from "next-intl";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
   const [themeConfig, setThemeConfig] = useState(lightTheme);
   const router = useRouter();
@@ -61,13 +61,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={themeConfig}>
-        <CssBaseline />
-        <Component {...pageProps} changeTheme={changeTheme} />
-        <SnackbarController />
+        <NextIntlProvider messages={pageProps.messages}>
+          <CssBaseline />
+          <Component {...pageProps} changeTheme={changeTheme} />
+          <SnackbarController />
+        </NextIntlProvider>
       </ThemeProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
 
-export default appWithTranslation(MyApp);
+export default App;
