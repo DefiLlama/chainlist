@@ -9,6 +9,7 @@ const chainIds = {
   25: "cronos",
   30: "rsk",
   40: "telos",
+  50: "xdc",
   52: "csc",
   55: "zyx",
   56: "binance",

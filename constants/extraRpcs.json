@@ -521,7 +521,9 @@
     },
     "50": {
         "rpcs": [
-            "https://rpc.xinfin.network"
+            "https://erpc.xinfin.network",
+            "https://rpc.xinfin.network",
+            "https://rpc1.xinfin.network"
         ]
     },
     "58": {
