@@ -1020,6 +1020,11 @@
             "https://node1.mintme.com"
         ]
     },
+    "26600": {
+        "rpcs": [
+            "https://mainnet-rpc.hertzscan.com"
+        ]
+    },    
     "31102": {
         "rpcs": [
             "rpcWorking:false"
