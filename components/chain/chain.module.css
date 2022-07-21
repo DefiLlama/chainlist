@@ -25,15 +25,45 @@
   padding-bottom: 7px;
 }
 
-.avatar {
-  margin-right: 24px;
-  border-radius: 50%;
-}
-
 .chainNameContainer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 24px;
   width: 100%;
   margin-bottom: 12px !important;
+}
+
+.avatar {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 100%;
+  display: flex;
+}
+
+.name {
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  top: 1px;
+}
+
+.avatar img {
+  border-radius: 100%;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

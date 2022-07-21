@@ -24,7 +24,7 @@ import {
   CONNECT_WALLET,
   TRY_CONNECT_WALLET,
   ACCOUNT_CONFIGURED,
-} from "../../stores/constants";
+} from "../../stores/constants/constants";
 
 import stores, { useSearch, useTestnets } from "../../stores";
 import { formatAddress, getProvider, useDebounce } from "../../utils";

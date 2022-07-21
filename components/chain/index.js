@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import classes from "./chain.module.css";
 import stores, { useAccount, useChain } from "../../stores/index.js";
-import { ACCOUNT_CONFIGURED } from "../../stores/constants";
+import { ACCOUNT_CONFIGURED } from "../../stores/constants/constants";
 import Image from "next/image";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import RPCList from "../RPCList";
@@ -91,26 +91,21 @@ export default function Chain({ chain, buttonOnly }) {
         key={chain.chainId}
       >
         <div className={classes.chainNameContainer}>
-          <Image
-            src={icon}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "/chains/unknown-logo.png";
-            }}
-            width={28}
-            height={28}
-            className={classes.avatar}
-          />
+          <div className={classes.avatar}>
+            <Image
+              src={icon}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "/chains/unknown-logo.png";
+              }}
+              width={26}
+              height={26}
+              alt={chain.name + " logo"}
+            />
+          </div>
 
           <Tooltip title={chain.name}>
-            <Typography
-              variant="h3"
-              className={classes.name}
-              noWrap
-              style={{ marginLeft: "24px" }}
-            >
-              <Link href={`/chain/${chain.networkId}`}>{chain.name}</Link>
-            </Typography>
+            <span className={classes.name}><Link href={`/chain/${chain.networkId}`}>{chain.name}</Link></span>
           </Tooltip>
         </div>
         <div className={classes.chainInfoContainer}>
@@ -148,6 +143,9 @@ export default function Chain({ chain, buttonOnly }) {
         </div>
         {router.pathname === "/" && (
           <ExpandButton onClick={handleClick}>
+            <span className={classes.visuallyHidden}>
+              Show RPC List of {chain.name}
+            </span>
             <ExpandMoreIcon
               style={{
                 transform: showAddlInfo ? "rotate(180deg)" : "",
