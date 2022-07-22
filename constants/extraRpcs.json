@@ -755,8 +755,9 @@
         ]
     },
     "686": {
-        "rpcs": [],
-        "rpcWorking": false
+        "rpcs": [
+            "https://eth-rpc-karura.aca-api.network"
+        ]
     },
     "707": {
         "rpcs": [],
