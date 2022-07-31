@@ -54,6 +54,8 @@ const chainIds = {
   8217: "klaytn",
   9001: "evmos",
   10000: "smartbch",
+  900000: "posichain",
+  910000: "posichain-testnet",
   103090: "crystaleum",
   32659: "fusion",
   42161: "arbitrum",
