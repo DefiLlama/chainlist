@@ -1356,6 +1356,16 @@
             "https://mainnet.sherpax.io/rpc"
         ]
     },
+    "512512": {
+        "rpcs": [
+            "https://galaxy.block.caduceus.foundation"
+        ]
+    },
+    "256256": {
+        "rpcs": [
+            "https://mainnet.block.caduceus.foundation"
+        ]
+    },
     "7777":{
         "rpcs": [
             "https://testnet1.rotw.games",
