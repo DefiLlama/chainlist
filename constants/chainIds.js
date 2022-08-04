@@ -19,6 +19,7 @@ const chainIds = {
   66: "okexchain",
   70: "hoo",
   82: "meter",
+  87: "nova",
   88: "tomochain",
   100: "xdai",
   106: "velas",
