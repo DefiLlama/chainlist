@@ -704,11 +704,6 @@
         "websiteDead": true,
         "rpcWorking": false
     },
-    "222": {
-        "rpcs": [
-            "https://blockchain-api-mainnet.permission.io/rpc"
-        ]
-    },
     "258": {
         "rpcs": [],
         "rpcWorking": false
