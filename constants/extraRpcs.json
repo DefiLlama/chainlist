@@ -1372,5 +1372,15 @@
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
+    },
+	"15001":{
+        "rpcs":[
+            "https://meta-ape-bas-testnet-01.ankr.com"
+        ]
+    },
+	"16350":{
+        "rpcs":[
+            "https://bas.metaapesgame.com/bas_mainnet_full_rpc"
+        ]
     }
 }
