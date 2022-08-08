@@ -8,10 +8,10 @@ function generateSiteMap(chains) {
        <loc>https://chainlist.org/</loc>
      </url>
      ${chains
-       .map(({ networkId }) => {
+       .map(({ chainId }) => {
          return `
        <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${networkId}`}</loc>
+           <loc>${`${EXTERNAL_DATA_URL}/${chainId}`}</loc>
        </url>
      `;
        })
