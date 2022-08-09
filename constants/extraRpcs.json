@@ -156,6 +156,11 @@
             "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
         ]
     },
+    "42170": {
+        "rpcs": [
+            "https://nova.arbitrum.io/rpc"
+        ]
+    },
     "8217": {
         "rpcs": [
             "https://public-node-api.klaytnapi.com/v1/cypress",

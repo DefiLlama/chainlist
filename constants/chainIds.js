@@ -58,6 +58,7 @@ const chainIds = {
   103090: "crystaleum",
   32659: "fusion",
   42161: "arbitrum",
+  42170: "arb-nova",
   42220: "celo",
   42262: "oasis",
   43114: "avalanche",
