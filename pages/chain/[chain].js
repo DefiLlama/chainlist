@@ -14,7 +14,7 @@ export async function getStaticProps({ params, locale }) {
 
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
-  const chain = chains.find((c) => c.networkId?.toString() === params.chain);
+  const chain = chains.find((c) => c.chainId?.toString() === params.chain);
 
   return {
     props: {
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
   const res = await fetcher("https://chainid.network/chains.json");
 
   const paths = res.map((chain) => ({
-    params: { chain: chain?.networkId?.toString() ?? null },
+    params: { chain: chain?.chainId?.toString() ?? null },
   }));
 
   return { paths, fallback: "blocking" };
