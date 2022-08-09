@@ -143,7 +143,7 @@
       "decimals": 18
     },
     "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
-    "chainId": 232,
+    "chainId": 923018,
     "explorers": [
       {
         "name": "blockscout-testnet",
