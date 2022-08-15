@@ -239,7 +239,8 @@
             "https://xdai-rpc.gateway.pokt.network",
             "https://xdai-archive.blockscout.com",
             "https://gnosis-mainnet.public.blastapi.io",
-            "https://rpc.ankr.com/gnosis"
+            "https://rpc.ankr.com/gnosis",
+            "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet"
         ]
     },
     "1285": {
