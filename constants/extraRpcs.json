@@ -1378,5 +1378,10 @@
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
+    },
+    "7352":{
+        "rpc":[
+            "https://shibarium.devserver.co.in"
+        ]
     }
 }
