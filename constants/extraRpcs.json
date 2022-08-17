@@ -890,6 +890,13 @@
             "https://jsonrpc.egem.io/custom"
         ]
     },
+    "2000": {
+        "rpcs": [
+            "https://rpc01-sg.dogechain.dog",
+            "https://rpc02-sg.dogechain.dog",
+            "https://rpc03-sg.dogechain.dog"
+        ]
+    },
     "2021": {
         "rpcs": [
             "https://mainnet2.edgewa.re/evm",
