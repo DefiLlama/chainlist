@@ -1381,5 +1381,25 @@
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
+    },
+    "10067275":{
+        "rpcs":[
+            "https://testnet.plian.io/child_test"
+        ]
+    },
+    "16658437":{
+        "rpcs":[
+            "https://testnet.plian.io/testnet"
+        ]
+    },
+    "2099156":{
+        "rpcs":[
+            "https://mainnet.plian.io/pchain"
+        ]
+    },
+    "8007736":{
+        "rpcs":[
+            "https://mainnet.plian.io/child_0"
+        ]
     }
 }
