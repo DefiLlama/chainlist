@@ -10983,5 +10983,31 @@
         "standard": "none"
       }
     ]
+  },
+  {
+    "name": "CANTO",
+    "chain": "CANTO",
+    "rpc": [
+      "https://canto.evm.chandrastation.com",
+      "https://canto.slingshot.finance",
+      "https://jsonrpc.canto.nodestake.top"
+    ],
+    "nativeCurrency": {
+      "name": "CANTO",
+      "symbol": "CANTO",
+      "decimals": 18
+    },
+    "infoURL": "https://canto.io/",
+    "shortName": "CANTO",
+    "chainId": 7700,
+    "networkId": 7700,
+    "icon": "CANTO",
+    "explorers": [
+      {
+        "name": "CANTO explorer",
+        "url": "https://evm.explorer.canto.io",
+        "standard": "none"
+      }
+    ]
   }
 ]
