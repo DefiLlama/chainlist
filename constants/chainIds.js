@@ -40,6 +40,8 @@ const chainIds = {
   592: "astar",
   820: "callisto",
   888: "wanchain",
+  970: "ccn",
+  971: "ccnbeta",
   1088: "metis",
   1246: "omchain",
   1284: "moonbeam",

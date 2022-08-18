@@ -1381,5 +1381,15 @@
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
+    },
+    "970":{
+        "rpcs":[
+            "https://rpc.mainnet.computecoin.com"
+        ]
+    },
+    "971":{
+        "rpcs":[
+            "https://beta-rpc.mainnet.computecoin.com"
+        ]
     }
 }
