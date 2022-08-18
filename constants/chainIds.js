@@ -63,6 +63,7 @@ const chainIds = {
   42262: "oasis",
   43114: "avalanche",
   71402: "godwoken",
+  100100: "chiado",
   200625: "akroma",
   333999: "polis",
   1313161554: "aurora",
