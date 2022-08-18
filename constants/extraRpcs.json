@@ -101,12 +101,23 @@
     },
     "900000": {
         "rpcs": [
-            "https://api.posichain.org"
+            "https://api.posichain.org",
+            "https://api.s0.posichain.org"
         ]
     },
     "910000": {
         "rpcs": [
             "https://api.s0.t.posichain.org"
+        ]
+    },
+    "920000": {
+        "rpcs": [
+            "https://api.s0.d.posichain.org"
+        ]
+    },
+    "920001": {
+        "rpcs": [
+            "https://api.s1.d.posichain.org"
         ]
     },
     "43114": {
