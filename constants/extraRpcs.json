@@ -30,7 +30,8 @@
         "rpcs": [
             "https://rpc.ankr.com/polygon_mumbai",
             "https://rpc-mumbai.maticvigil.com",
-            "https://polygontestapi.terminet.io/rpc"
+            "https://polygontestapi.terminet.io/rpc",
+            "https://polygon-testnet.public.blastapi.io"
         ]
     },
     "4": {
@@ -42,7 +43,8 @@
     "5": {
         "rpcs": [
             "https://rpc.ankr.com/eth_goerli",
-            "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+            "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+            "https://eth-goerli.public.blastapi.io"
         ]
     },
     "3": {
@@ -54,7 +56,8 @@
     "4002": {
         "rpcs": [
             "https://rpc.ankr.com/fantom_testnet",
-            "https://rpc.testnet.fantom.network/"
+            "https://rpc.testnet.fantom.network/",
+            "https://fantom-testnet.public.blastapi.io"
         ]
     },
     "43113": {
@@ -62,7 +65,8 @@
             "https://rpc.ankr.com/avalanche_fuji",
             "https://rpc.ankr.com/avalanche_fuji-c",
             "https://api.avax-test.network/ext/bc/C/rpc",
-            "https://avalanchetestapi.terminet.io/ext/bc/C/rpc"
+            "https://avalanchetestapi.terminet.io/ext/bc/C/rpc",
+            "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc"
         ]
     },
     "11155111":{
@@ -98,6 +102,12 @@
     "97": {
         "rpcs": [
             "https://bsctestapi.terminet.io/rpc"
+        ]
+    },
+    "900000": {
+        "rpcs": [
+            "https://api.posichain.org",
+            "https://api.s0.posichain.org"
         ]
     },
     "43114": {
@@ -239,7 +249,13 @@
             "https://xdai-rpc.gateway.pokt.network",
             "https://xdai-archive.blockscout.com",
             "https://gnosis-mainnet.public.blastapi.io",
-            "https://rpc.ankr.com/gnosis"
+            "https://rpc.ankr.com/gnosis",
+            "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet"
+        ]
+    },
+    "100100": {
+        "rpcs": [
+            "https://rpc-chiado.gnosistestnet.com"
         ]
     },
     "1285": {
@@ -458,7 +474,8 @@
     },
     "11297108109": {
         "rpcs": [
-            "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
+            "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b",
+            "https://palm-mainnet.public.blastapi.io"
         ]
     },
     "7": {
@@ -527,6 +544,7 @@
     },
     "50": {
         "rpcs": [
+            "https://xdcrpc.com",
             "https://erpc.xinfin.network",
             "https://rpc.xinfin.network",
             "https://rpc1.xinfin.network"
@@ -548,7 +566,8 @@
     "61": {
         "rpcs": [
             "https://blockscout.com/etc/mainnet/api/eth-rpc",
-            "https://www.ethercluster.com/etc"
+            "https://www.ethercluster.com/etc",
+            "https://etc.etcdesktop.com"
         ]
     },
     "2020": {
@@ -857,7 +876,8 @@
     },
     "1287": {
         "rpcs": [
-            "https://rpc.testnet.moonbeam.network"
+            "https://rpc.testnet.moonbeam.network",
+            "https://moonbase-alpha.public.blastapi.io"
         ]
     },
     "1288": {
@@ -974,7 +994,8 @@
             "https://eth.bd.evmos.org:8545/",
             "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205",
             "https://evmos-json-rpc.stakely.io",
-            "https://jsonrpc-evmos-ia.notional.ventures"
+            "https://jsonrpc-evmos-ia.notional.ventures",
+            "https://json-rpc.evmos.blockhunters.org"
         ]
     },
     "836542336838601": {
@@ -1379,9 +1400,39 @@
             "https://rpc.crystaleum.org"
         ]
     },
-      "1515": {
+    "1515": {
         "rpcs": [
             "https://beagle.chat/eth"
         ]
+    },
+    "10067275":{
+        "rpcs":[
+            "https://testnet.plian.io/child_test"
+        ]
+    },
+    "16658437":{
+        "rpcs":[
+            "https://testnet.plian.io/testnet"
+        ]
+    },
+    "2099156":{
+        "rpcs":[
+            "https://mainnet.plian.io/pchain"
+        ]
+    },
+    "8007736":{
+        "rpcs":[
+            "https://mainnet.plian.io/child_0"
+        ]
+   },
+    "970":{
+        "rpcs":[
+            "https://rpc.mainnet.computecoin.com"
+       ]
+    },
+    "971":{
+        "rpcs":[
+            "https://beta-rpc.mainnet.computecoin.com"
+       ]
     }
 }
