@@ -1400,6 +1400,11 @@
             "https://rpc.crystaleum.org"
         ]
     },
+    "1515": {
+        "rpcs": [
+            "https://beagle.chat/eth"
+        ]
+    },
     "10067275":{
         "rpcs":[
             "https://testnet.plian.io/child_test"
