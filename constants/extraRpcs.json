@@ -30,7 +30,8 @@
         "rpcs": [
             "https://rpc.ankr.com/polygon_mumbai",
             "https://rpc-mumbai.maticvigil.com",
-            "https://polygontestapi.terminet.io/rpc"
+            "https://polygontestapi.terminet.io/rpc",
+            "https://polygon-testnet.public.blastapi.io"
         ]
     },
     "4": {
@@ -42,7 +43,8 @@
     "5": {
         "rpcs": [
             "https://rpc.ankr.com/eth_goerli",
-            "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+            "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+            "https://eth-goerli.public.blastapi.io"
         ]
     },
     "3": {
@@ -54,7 +56,8 @@
     "4002": {
         "rpcs": [
             "https://rpc.ankr.com/fantom_testnet",
-            "https://rpc.testnet.fantom.network/"
+            "https://rpc.testnet.fantom.network/",
+            "https://fantom-testnet.public.blastapi.io"
         ]
     },
     "43113": {
@@ -62,7 +65,8 @@
             "https://rpc.ankr.com/avalanche_fuji",
             "https://rpc.ankr.com/avalanche_fuji-c",
             "https://api.avax-test.network/ext/bc/C/rpc",
-            "https://avalanchetestapi.terminet.io/ext/bc/C/rpc"
+            "https://avalanchetestapi.terminet.io/ext/bc/C/rpc",
+            "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc"
         ]
     },
     "11155111":{
@@ -459,7 +463,8 @@
     },
     "11297108109": {
         "rpcs": [
-            "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
+            "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b",
+            "https://palm-mainnet.public.blastapi.io"
         ]
     },
     "7": {
@@ -860,7 +865,8 @@
     },
     "1287": {
         "rpcs": [
-            "https://rpc.testnet.moonbeam.network"
+            "https://rpc.testnet.moonbeam.network",
+            "https://moonbase-alpha.public.blastapi.io"
         ]
     },
     "1288": {
