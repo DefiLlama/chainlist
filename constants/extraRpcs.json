@@ -253,6 +253,11 @@
             "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet"
         ]
     },
+    "100100": {
+        "rpcs": [
+            "https://rpc-chiado.gnosistestnet.com"
+        ]
+    },
     "1285": {
         "rpcs": [
             "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
