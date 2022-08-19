@@ -104,6 +104,12 @@
             "https://bsctestapi.terminet.io/rpc"
         ]
     },
+    "900000": {
+        "rpcs": [
+            "https://api.posichain.org",
+            "https://api.s0.posichain.org"
+        ]
+    },
     "43114": {
         "rpcs": [
             "https://api.avax.network/ext/bc/C/rpc",
