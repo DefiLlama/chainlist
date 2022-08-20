@@ -373,7 +373,8 @@
     "592": {
         "rpcs": [
             "https://rpc.astar.network:8545",
-            "https://astar.public.blastapi.io"
+            "https://astar.public.blastapi.io",
+            "https://evm.astar.network/"
         ]
     },
     "71394": {
