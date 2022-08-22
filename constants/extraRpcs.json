@@ -568,7 +568,8 @@
         "rpcs": [
             "https://blockscout.com/etc/mainnet/api/eth-rpc",
             "https://www.ethercluster.com/etc",
-            "https://etc.etcdesktop.com"
+            "https://etc.etcdesktop.com",
+            "https://etc.mytokenpocket.vip"
         ]
     },
     "2020": {
