@@ -1412,6 +1412,11 @@
             "https://rpc.crystaleum.org"
         ]
     },
+    "420666":{
+        "rpcs":[
+            "https://testnet.kekchain.com"
+        ]
+    },
     "1515": {
         "rpcs": [
             "https://beagle.chat/eth"
