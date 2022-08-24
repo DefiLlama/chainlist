@@ -189,12 +189,8 @@
             "https://api.harmony.one",
             "https://a.api.s0.t.hmny.io",
             "https://api.s0.t.hmny.io",
-            "https://rpc.heavenswail.one/",
-            "https://api.fuzz.fi/",
-            "https://rpc.hermesdefi.io/",
             "https://rpc.ankr.com/harmony",
-            "https://harmony-mainnet.chainstacklabs.com",
-            "https://rpc.dkvalidator.one"
+            "https://harmony-mainnet.chainstacklabs.com"
         ]
     },
     "1313161554": {
