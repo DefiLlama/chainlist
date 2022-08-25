@@ -71,6 +71,8 @@
   100100: "chiado",
   200625: "akroma",
   333999: "polis",
+  512512: "galaxy",
+  256256: "caduceus",
   1313161554: "aurora",
   1666600000: "harmony",
   11297108109: "palm",
