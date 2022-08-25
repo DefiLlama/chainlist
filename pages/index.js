@@ -38,7 +38,11 @@ function Home({ changeTheme, theme, sortedChains }) {
           item.name?.toLowerCase().includes("test") ||
           item.title?.toLowerCase().includes("test") ||
           item.network?.toLowerCase().includes("test");
-        return !testnet;
+        const devnet =
+            item.name?.toLowerCase().includes("devnet") ||
+            item.title?.toLowerCase().includes("devnet") ||
+            item.network?.toLowerCase().includes("devnet");
+        return !testnet && !devnet;
       });
     } else return sortedChains;
   }, [testnets, sortedChains]);
