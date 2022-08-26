@@ -189,12 +189,8 @@
             "https://api.harmony.one",
             "https://a.api.s0.t.hmny.io",
             "https://api.s0.t.hmny.io",
-            "https://rpc.heavenswail.one/",
-            "https://api.fuzz.fi/",
-            "https://rpc.hermesdefi.io/",
             "https://rpc.ankr.com/harmony",
-            "https://harmony-mainnet.chainstacklabs.com",
-            "https://rpc.dkvalidator.one"
+            "https://harmony-mainnet.chainstacklabs.com"
         ]
     },
     "1313161554": {
@@ -1397,6 +1393,16 @@
             "https://mainnet.sherpax.io/rpc"
         ]
     },
+    "512512": {
+        "rpcs": [
+            "https://galaxy.block.caduceus.foundation"
+        ]
+    },
+    "256256": {
+        "rpcs": [
+            "https://mainnet.block.caduceus.foundation"
+        ]
+    },
     "7777":{
         "rpcs": [
             "https://testnet1.rotw.games",
@@ -1410,6 +1416,11 @@
         "rpcs":[
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
+        ]
+    },
+    "420666":{
+        "rpcs":[
+            "https://testnet.kekchain.com"
         ]
     },
     "1515": {

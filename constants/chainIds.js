@@ -1,4 +1,4 @@
-const chainIds = {
+  const chainIds = {
   0: "kardia",
   1: "ethereum",
   2: "expanse",
@@ -66,10 +66,13 @@ const chainIds = {
   42220: "celo",
   42262: "oasis",
   43114: "avalanche",
+  420666: "kekchain",
   71402: "godwoken",
   100100: "chiado",
   200625: "akroma",
   333999: "polis",
+  512512: "galaxy",
+  256256: "caduceus",
   1313161554: "aurora",
   1666600000: "harmony",
   11297108109: "palm",
