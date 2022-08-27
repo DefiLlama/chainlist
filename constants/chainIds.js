@@ -43,6 +43,7 @@
   970: "ccn",
   971: "ccnbeta",
   1088: "metis",
+  1231: "ultron",
   1246: "omchain",
   1284: "moonbeam",
   1285: "moonriver",

@@ -254,6 +254,11 @@
             "https://rpc-chiado.gnosistestnet.com"
         ]
     },
+    "1231": {
+        "rpcs":[
+            "https://ultron-rpc.net"
+        ]
+    },
     "1285": {
         "rpcs": [
             "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
