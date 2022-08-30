@@ -683,9 +683,9 @@
     },
     "126": {
         "rpcs": [
-            "https://rpc.mainnet.oychain.io"
-        ],
-        "rpcWorking": false
+            "https://rpc.mainnet.oychain.io",
+            "https://rpc.oychain.io"
+        ]
     },
     "127": {
         "rpcs": [],
