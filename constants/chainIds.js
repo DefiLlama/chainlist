@@ -80,6 +80,7 @@
   1666600000: "harmony",
   11297108109: "palm",
   836542336838601: "curio",
+  10086: "sjatsh",
 };
 
 export default chainIds;
