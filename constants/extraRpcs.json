@@ -935,6 +935,11 @@
             "https://mainnet.rangersprotocol.com/api/jsonrpc"
         ]
     },
+    "2077": {
+        "rpcs": [
+            "http://rpc.qkacoin.org:8548"
+        ]
+    },
     "2100": {
         "rpcs": [
             "https://api.ecoball.org/ecoball/"
