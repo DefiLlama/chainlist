@@ -1012,6 +1012,11 @@
             "https://json-rpc.evmos.blockhunters.org"
         ]
     },
+    "10687": {
+        "rpcs": [
+            "https://rpc-mainnet-1.point.space"
+        ]
+    },
     "836542336838601": {
         "rpcs": [
             "https://mainnet-api.skalenodes.com/v1/fit-betelgeuse"
