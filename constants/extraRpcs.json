@@ -1014,7 +1014,7 @@
     },
     "10687": {
         "rpcs": [
-            "https://rpc-mainnet-1.point.space:26657"
+            "https://rpc-mainnet-1.point.space"
         ]
     },
     "836542336838601": {
