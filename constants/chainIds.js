@@ -58,6 +58,7 @@
   7777: "nmactest",
   8217: "klaytn",
   9001: "evmos",
+  10687: "point",
   10000: "smartbch",
   900000: "posichain",
   103090: "crystaleum",
