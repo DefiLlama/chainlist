@@ -1073,7 +1073,8 @@
     },
     "32520": {
         "rpcs": [
-            "https://rpc.icecreamswap.com"
+            "https://rpc.icecreamswap.com",
+            "https://rpc-bitgert-vefi.com"
         ]
     },
     "39797": {
