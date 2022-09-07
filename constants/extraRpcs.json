@@ -1399,6 +1399,11 @@
             "https://mainnet.sherpax.io/rpc"
         ]
     },
+    "6066": {
+        "rpc": [
+            "https://rpc.tresleches.finance"
+        ]
+    },
     "512512": {
         "rpcs": [
             "https://galaxy.block.caduceus.foundation"
