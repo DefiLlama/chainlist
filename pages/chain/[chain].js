@@ -8,13 +8,28 @@ import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import classes from "./index.module.css";
 import Image from "next/image";
+import chainIds from "../../constants/chainIds";
 
 export async function getStaticProps({ params, locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
 
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
-  const chain = chains.find((c) => c.chainId?.toString() === params.chain);
+  const chain = chains.find(
+    (c) =>
+      c.chainId?.toString() === params.chain ||
+      c.chainId?.toString() ===
+        Object.entries(chainIds).find(
+          ([, name]) => params.chain === name
+        )?.[0] ||
+      c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" ")
+  );
+
+  if (!chain) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
@@ -28,8 +43,14 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths() {
   const res = await fetcher("https://chainid.network/chains.json");
 
-  const paths = res.map((chain) => ({
-    params: { chain: chain?.chainId?.toString() ?? null },
+  const chainNameAndIds = [
+    ...res.map((c) => c.chainId),
+    ...Object.values(chainIds),
+    ...res.map((c) => c.name.toLowerCase().split(" ").join("%20")),
+  ];
+
+  const paths = chainNameAndIds.map((chain) => ({
+    params: { chain: chain.toString() ?? null },
   }));
 
   return { paths, fallback: "blocking" };
@@ -37,7 +58,7 @@ export async function getStaticPaths() {
 
 function Chain({ changeTheme, theme, chain }) {
   const icon = useMemo(() => {
-    return chain.chainSlug
+    return chain?.chainSlug
       ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
       : "/unknown-logo.png";
   }, [chain]);
