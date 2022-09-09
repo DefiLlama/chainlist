@@ -1470,5 +1470,10 @@
         "rpcs":[
             "https://beta-rpc.mainnet.computecoin.com"
        ]
+    },
+    "10086": {
+        "rpcs": [
+            "http://geth.free.idcfengye.com"
+        ]
     }
 }

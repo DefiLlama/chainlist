@@ -80,7 +80,7 @@
   1313161554: "aurora",
   1666600000: "harmony",
   11297108109: "palm",
-  836542336838601: "curio",
+  836542336838601: "curio"
 };
 
 export default chainIds;
