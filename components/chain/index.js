@@ -105,7 +105,9 @@ export default function Chain({ chain, buttonOnly }) {
           </div>
 
           <Tooltip title={chain.name}>
-            <span className={classes.name}><Link href={`/chain/${chain.chainId}`}>{chain.name}</Link></span>
+            <span className={classes.name}>
+              <Link href={`/chain/${chain.name}`}>{chain.name}</Link>
+            </span>
           </Tooltip>
         </div>
         <div className={classes.chainInfoContainer}>
