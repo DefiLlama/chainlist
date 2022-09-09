@@ -69,7 +69,7 @@ function Chain({ changeTheme, theme, chain }) {
         <title>{`${chain.name} RPC and Chain settings | Chainlist`}</title>
         <meta
           name="description"
-          content={`Chainlist is a list of RPCs for EVM(Ethereum Virtual Machine) networks. Use the information to connect your wallets and Web3 middleware providers to ${chain.name}. Find the best RPC to connect to ${chain.name}`}
+          content={`Find the best ${chain.name} RPC to connect to your wallets and Web3 middleware providers.`}
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
