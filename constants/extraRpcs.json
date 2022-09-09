@@ -17,7 +17,8 @@
             "http://18.211.207.34:8545",
             "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
             "wss://eth-mainnet.nodereal.io/ws/v1/1659dfb40aa24bbb8153a677b98064d7",
-            "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet"
+            "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
+            "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e"
         ]
     },
     "2": {
