@@ -8,6 +8,7 @@ import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import classes from "./index.module.css";
 import Image from "next/image";
+import chainIds from "../../constants/chainIds";
 
 export async function getStaticProps({ params, locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -17,6 +18,8 @@ export async function getStaticProps({ params, locale }) {
   const chain = chains.find(
     (c) =>
       c.chainId?.toString() === params.chain ||
+      c.chainId?.toString() ===
+        Object.entries(chainIds).find(([, name]) => params.chain === name)[0] ||
       c.name === params.chain.split("%20").join(" ")
   );
 
@@ -40,6 +43,7 @@ export async function getStaticPaths() {
 
   const chainNameAndIds = [
     ...res.map((c) => c.chainId),
+    ...Object.values(chainIds),
     ...res.map((c) => c.name.toLowerCase().split(" ").join("%20")),
   ];
 
