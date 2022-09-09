@@ -22,7 +22,7 @@ export async function getStaticProps({ params, locale }) {
         Object.entries(chainIds).find(
           ([, name]) => params.chain === name
         )?.[0] ||
-      c.name === params.chain.split("%20").join(" ")
+      c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" ")
   );
 
   if (!chain) {
