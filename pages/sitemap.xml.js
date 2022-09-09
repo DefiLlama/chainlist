@@ -1,7 +1,5 @@
 import chainIds from "../constants/chainIds";
 
-const EXTERNAL_DATA_URL = "https://chainid.network/chains.json";
-
 function generateSiteMap(chains) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -13,7 +11,7 @@ function generateSiteMap(chains) {
        .map(({ chainId }) => {
          return `
        <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${chainId}`}</loc>
+           <loc>${`https://chainlist.org/chain/${chainId}`}</loc>
        </url>
      `;
        })
@@ -22,7 +20,7 @@ function generateSiteMap(chains) {
        .map(({ name }) => {
          return `
        <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${name.toLowerCase().split(" ").join("%20")}`}</loc>
+           <loc>${`https://chainlist.org/chain/${name.toLowerCase().split(" ").join("%20")}`}</loc>
        </url>
      `;
        })
@@ -31,7 +29,7 @@ function generateSiteMap(chains) {
        .map((name) => {
          return `
        <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${name}`}</loc>
+           <loc>${`https://chainlist.org/chain/${name}`}</loc>
        </url>
      `;
        })
@@ -46,7 +44,7 @@ function SiteMap() {
 
 export async function getServerSideProps({ res }) {
   // We make an API call to gather the URLs for our site
-  const request = await fetch(EXTERNAL_DATA_URL);
+  const request = await fetch('https://chainid.network/chains.json');
   const chains = await request.json();
 
   // We generate the XML sitemap with the chains data
