@@ -5,7 +5,7 @@
   8: "ubiq",
   10: "optimism",
   19: "songbird",
-  20: "elastos",
+  20: "elastos",  
   25: "cronos",
   30: "rsk",
   40: "telos",
@@ -76,10 +76,11 @@
   333999: "polis",
   512512: "galaxy",
   256256: "caduceus",
+  888888: "vision",
   1313161554: "aurora",
   1666600000: "harmony",
   11297108109: "palm",
-  836542336838601: "curio",
+  836542336838601: "curio"
 };
 
 export default chainIds;

@@ -17,7 +17,8 @@
             "http://18.211.207.34:8545",
             "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
             "wss://eth-mainnet.nodereal.io/ws/v1/1659dfb40aa24bbb8153a677b98064d7",
-            "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet"
+            "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
+            "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e"
         ]
     },
     "2": {
@@ -571,7 +572,7 @@
             "https://www.ethercluster.com/etc",
             "https://etc.etcdesktop.com",
             "https://etc.mytokenpocket.vip",
-            "https://etc-network.info"
+            "https://etc-network.info:8545"
         ]
     },
     "2020": {
@@ -935,6 +936,11 @@
             "https://mainnet.rangersprotocol.com/api/jsonrpc"
         ]
     },
+    "2077": {
+        "rpcs": [
+            "http://rpc.qkacoin.org:8548"
+        ]
+    },
     "2100": {
         "rpcs": [
             "https://api.ecoball.org/ecoball/"
@@ -1073,7 +1079,8 @@
     },
     "32520": {
         "rpcs": [
-            "https://rpc.icecreamswap.com"
+            "https://rpc.icecreamswap.com",
+            "https://rpc-bitgert-vefi.com"
         ]
     },
     "39797": {
@@ -1463,5 +1470,10 @@
         "rpcs":[
             "https://beta-rpc.mainnet.computecoin.com"
        ]
+    },
+    "10086": {
+        "rpcs": [
+            "http://geth.free.idcfengye.com"
+        ]
     }
 }
