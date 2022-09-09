@@ -34,6 +34,24 @@ function generateSiteMap(chains) {
      `;
        })
        .join("")}
+     ${Object.values(chainIds)
+       .map((name) => {
+         return `
+       <url>
+           <loc>${`https://chainlist.org/best-rpcs/${name}`}</loc>
+       </url>
+     `;
+       })
+       .join("")}
+     ${Object.values(chainIds)
+       .map((name) => {
+         return `
+       <url>
+           <loc>${`https://chainlist.org/top-rpcs/${name}`}</loc>
+       </url>
+     `;
+       })
+       .join("")}
    </urlset>
  `;
 }
