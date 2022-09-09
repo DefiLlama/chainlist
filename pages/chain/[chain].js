@@ -19,7 +19,9 @@ export async function getStaticProps({ params, locale }) {
     (c) =>
       c.chainId?.toString() === params.chain ||
       c.chainId?.toString() ===
-        Object.entries(chainIds).find(([, name]) => params.chain === name)[0] ||
+        Object.entries(chainIds).find(
+          ([, name]) => params.chain === name
+        )?.[0] ||
       c.name === params.chain.split("%20").join(" ")
   );
 
