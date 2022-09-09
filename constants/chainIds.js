@@ -6,6 +6,7 @@
   10: "optimism",
   19: "songbird",
   20: "elastos",
+  24: "kardiachain",  
   25: "cronos",
   30: "rsk",
   40: "telos",
