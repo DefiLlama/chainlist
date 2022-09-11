@@ -325,6 +325,11 @@
             "https://exchainrpc.okex.org"
         ]
     },
+    "7018": {
+        "rpcs": [
+            "https://rpc.motif.foundation"
+        ]
+    },
     "288": {
         "rpcs": [
             "https://mainnet.boba.network/",
