@@ -54,6 +54,7 @@
   4181: "phi",
   4689: "iotex",
   5050: "xlc",
+  5177: "tlchain",
   5551: "nahmii",
   7777: "nmactest",
   8217: "klaytn",
