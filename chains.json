@@ -470,6 +470,7 @@
       "decimals": 18
     },
     "rpc": [
+      "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
       "https://rpc.goerli.mudit.blog/",
       "https://rpc.slock.it/goerli ",
       "https://goerli.prylabs.net/"
@@ -11007,6 +11008,56 @@
         "name": "CANTO explorer",
         "url": "https://evm.explorer.canto.io",
         "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "EthereumFair ETF",
+    "chainId": 513100,
+    "shortName": "ETF",
+    "chain": "ETF",
+    "network": "mainnet",
+    "networkId": 513100,
+    "nativeCurrency": {
+      "name": "ETF",
+      "symbol": "ETF",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://rpc.etherfair.org"
+    ],
+    "faucets": [],
+    "infoURL": "",
+    "explorers": [
+      {
+        "name": "ETF scan",
+        "url": "https://explorer.etherfair.org",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "ETHW Mainnet",
+    "chainId": 10001,
+    "shortName": "ETHW",
+    "chain": "ETHW",
+    "network": "mainnet",
+    "networkId": 10001,
+    "nativeCurrency": {
+      "name": "ETHW",
+      "symbol": "ETHW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.ethereumpow.org"
+    ],
+    "faucets": [],
+    "infoURL": "https://ethereumpow.org/",
+    "explorers": [
+      {
+        "name": "ETHW Scan",
+        "url": "https://mainnet.ethwscan.com",
+        "standard": "EIP3091"
       }
     ]
   }
