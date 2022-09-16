@@ -1475,5 +1475,10 @@
         "rpcs": [
             "http://geth.free.idcfengye.com"
         ]
+    },
+    "1076": {
+        "rpcs": [
+            "https://api.sc.testnet.shimmer.network/chain/rms1pzc5j8hq7ahgw6h9mn3jaq9wuv3zp0e2lxydj9a5f6yuvqhsvleyyym9f4z/evm/jsonrpc"
+        ]
     }
 }
