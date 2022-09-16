@@ -1476,5 +1476,10 @@
         "rpcs": [
             "http://geth.free.idcfengye.com"
         ]
+    },
+    "5177": {
+        "rpcs": [
+            "https://mainnet-rpc.tlxscan.com"
+        ]
     }
 }
