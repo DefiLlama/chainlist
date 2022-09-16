@@ -42,6 +42,7 @@
   888: "wanchain",
   970: "ccn",
   971: "ccnbeta",
+  1076: "smr-test",
   1088: "metis",
   1231: "ultron",
   1246: "omchain",
