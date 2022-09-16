@@ -572,7 +572,8 @@
             "https://www.ethercluster.com/etc",
             "https://etc.etcdesktop.com",
             "https://etc.mytokenpocket.vip",
-            "https://etc-network.info:8545"
+            "https://besu.etc-network.info",
+            "https://geth.etc-network.info"
         ]
     },
     "2020": {
