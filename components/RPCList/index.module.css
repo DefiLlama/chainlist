@@ -54,6 +54,13 @@
   text-decoration: underline;
 }
 
+.rpcUrl {
+  max-width: 40ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 @keyframes loading {
   0% {
     background-position: -100px;

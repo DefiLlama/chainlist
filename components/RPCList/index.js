@@ -163,7 +163,7 @@ const Row = ({ values, chain, isEthMainnet }) => {
 
   return (
     <tr>
-      <td>{isLoading ? <Shimmer /> : data?.url}</td>
+      <td className={classes.rpcUrl}>{isLoading ? <Shimmer /> : data?.url}</td>
       <td>{isLoading ? <Shimmer /> : data?.height}</td>
       <td>{isLoading ? <Shimmer /> : data?.latency}</td>
       <td
