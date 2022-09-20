@@ -1433,6 +1433,11 @@
             "https://rpc.crystaleum.org"
         ]
     },
+    "420420":{
+        "rpcs":[
+            "https://mainnet.kekchain.com"
+        ]
+    },
     "420666":{
         "rpcs":[
             "https://testnet.kekchain.com"
