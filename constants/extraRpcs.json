@@ -767,6 +767,11 @@
         "https://rpc.sx.technology"
       ]
     },
+    "481": {
+      "rpcs": [
+        "https://chain.scimatic.net"
+      ]
+    },
     "499": {
         "rpcs": [],
         "rpcWorking": false,
