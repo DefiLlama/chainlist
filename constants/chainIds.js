@@ -36,6 +36,7 @@
   336: "shiden",
   361: "theta",
   416: "sx",
+  418: "scimatic",
   534: "candle",
   592: "astar",
   820: "callisto",
