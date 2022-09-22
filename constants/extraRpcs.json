@@ -358,8 +358,7 @@
     "106": {
         "rpcs": [
             "https://evmexplorer.velas.com/rpc",
-            "https://velas-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-            "wss://velas-mainnet.rpcfast.com/ws?api_key=tZZlNoEbvO1s9rBJGBwX3qsiHVoXeQHBzlbnELK3BQ4F7PvOAxuprhelz1AaaxYR"
+            "https://velas-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
         ]
     },
     "10000": {
