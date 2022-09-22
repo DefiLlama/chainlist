@@ -19,7 +19,9 @@
             "wss://eth-mainnet.nodereal.io/ws/v1/1659dfb40aa24bbb8153a677b98064d7",
             "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
             "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e",
-            "https://1rpc.io/eth"
+            "https://1rpc.io/eth",
+            "https://eth-mainnet.rpcfast.com",
+            "wss://eth-mainnet.rpcfast.com/ws"
         ]
     },
     "2": {
@@ -99,7 +101,9 @@
             "https://binance.nodereal.io",
             "https://rpc-bsc.bnb48.club",
             "https://bscapi.terminet.io/rpc",
-            "https://1rpc.io/bnb"
+            "https://1rpc.io/bnb",
+            "https://bsc-mainnet.rpcfast.com",
+            "wss://bsc-mainnet.rpcfast.com/ws"
         ]
     },
     "97": {
@@ -148,7 +152,9 @@
             "https://rpc-mainnet.maticvigil.com/",
             "https://polygon-mainnet.public.blastapi.io",
             "https://polygonapi.terminet.io/rpc",
-            "https://1rpc.io/matic"
+            "https://1rpc.io/matic",
+            "https://polygon-mainnet.rpcfast.com",
+            "wss://polygon-mainnet.rpcfast.com/ws"
         ]
     },
     "25": {
@@ -351,7 +357,9 @@
     },
     "106": {
         "rpcs": [
-            "https://evmexplorer.velas.com/rpc"
+            "https://evmexplorer.velas.com/rpc",
+            "https://velas-mainnet.rpcfast.com",
+            "wss://velas-mainnet.rpcfast.com/ws"
         ]
     },
     "10000": {
