@@ -133,13 +133,13 @@
     ]
    },
   {
-    "name": "CUBE-BSC application Sidechain Testnet",
+    "name": "FNCY Testnet",
     "chain": "BAS-CUBE",
     "rpc": ["https://bas-cube-devnet.nodereal.io/"],
     "faucets": ["https://bas-cube-devnet-faucet.nodereal.io/"],
     "nativeCurrency": {
       "name": "ITAMCUBE",
-      "symbol": "CUBE",
+      "symbol": "FNCY",
       "decimals": 18
     },
     "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
