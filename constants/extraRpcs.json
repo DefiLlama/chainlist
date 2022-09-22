@@ -19,8 +19,7 @@
             "wss://eth-mainnet.nodereal.io/ws/v1/1659dfb40aa24bbb8153a677b98064d7",
             "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
             "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e",
-            "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-            "wss://eth-mainnet.rpcfast.com/ws?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf"
+            "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf"
         ]
     },
     "2": {
@@ -100,8 +99,7 @@
             "https://binance.nodereal.io",
             "https://rpc-bsc.bnb48.club",
             "https://bscapi.terminet.io/rpc",
-            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-            "wss://bsc-mainnet.rpcfast.com/ws?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
+            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
         ]
     },
     "97": {
@@ -149,8 +147,7 @@
             "https://rpc-mainnet.maticvigil.com/",
             "https://polygon-mainnet.public.blastapi.io",
             "https://polygonapi.terminet.io/rpc",
-            "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
-            "wss://polygon-mainnet.rpcfast.com/ws?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT"
+            "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT"
         ]
     },
     "25": {
@@ -351,8 +348,7 @@
     "106": {
         "rpcs": [
             "https://evmexplorer.velas.com/rpc",
-            "https://velas-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-            "wss://velas-mainnet.rpcfast.com/ws?api_key=tZZlNoEbvO1s9rBJGBwX3qsiHVoXeQHBzlbnELK3BQ4F7PvOAxuprhelz1AaaxYR"
+            "https://velas-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
         ]
     },
     "10000": {
