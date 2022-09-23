@@ -11012,15 +11012,15 @@
     ]
   },
   {
-    "name": "EthereumFair ETF",
+    "name": "EthereumFair ETHF",
     "chainId": 513100,
-    "shortName": "ETF",
-    "chain": "ETF",
+    "shortName": "ETHF",
+    "chain": "ETHF",
     "network": "mainnet",
     "networkId": 513100,
     "nativeCurrency": {
-      "name": "ETF",
-      "symbol": "ETF",
+      "name": "ETHF",
+      "symbol": "ETHF",
       "decimals": 18
     },
     "rpc": [
@@ -11030,7 +11030,7 @@
     "infoURL": "",
     "explorers": [
       {
-        "name": "ETF scan",
+        "name": "ETHF scan",
         "url": "https://explorer.etherfair.org",
         "standard": "EIP3091"
       }
