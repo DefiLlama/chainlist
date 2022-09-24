@@ -1482,5 +1482,10 @@
         "rpcs": [
             "https://mainnet-rpc.tlxscan.com"
         ]
+    },
+     "10248": {
+        "rpcs": [
+            "https://node.0xtchain.com"
+        ]
     }
 }
