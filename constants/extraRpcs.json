@@ -563,7 +563,8 @@
     },
     "59": {
         "rpcs": [
-            "https://api.eosargentina.io"
+            "https://api.eosargentina.io",
+            "https://api.metahub.cash"
         ]
     },
     "61": {
