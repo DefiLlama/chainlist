@@ -18,7 +18,8 @@
             "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
             "wss://eth-mainnet.nodereal.io/ws/v1/1659dfb40aa24bbb8153a677b98064d7",
             "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
-            "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e"
+            "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e",
+            "https://1rpc.io/eth"
         ]
     },
     "2": {
@@ -97,7 +98,8 @@
             "https://bsc.mytokenpocket.vip",
             "https://binance.nodereal.io",
             "https://rpc-bsc.bnb48.club",
-            "https://bscapi.terminet.io/rpc"
+            "https://bscapi.terminet.io/rpc",
+            "https://1rpc.io/bnb"
         ]
     },
     "97": {
@@ -116,7 +118,8 @@
             "https://api.avax.network/ext/bc/C/rpc",
             "https://rpc.ankr.com/avalanche",
             "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
-            "https://avalancheapi.terminet.io/ext/bc/C/rpc"
+            "https://avalancheapi.terminet.io/ext/bc/C/rpc",
+            "https://1rpc.io/avax/c"
         ]
     },
     "250": {
@@ -144,7 +147,8 @@
             "https://rpc.ankr.com/polygon",
             "https://rpc-mainnet.maticvigil.com/",
             "https://polygon-mainnet.public.blastapi.io",
-            "https://polygonapi.terminet.io/rpc"
+            "https://polygonapi.terminet.io/rpc",
+            "https://1rpc.io/matic"
         ]
     },
     "25": {
@@ -164,6 +168,7 @@
         "rpcs": [
             "https://arb1.arbitrum.io/rpc",
             "https://rpc.ankr.com/arbitrum",
+            "https://1rpc.io/arb",
             "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
             "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
         ]
@@ -227,7 +232,8 @@
         "rpcs": [
             "https://mainnet.optimism.io/",
             "https://optimism-mainnet.public.blastapi.io",
-            "https://rpc.ankr.com/optimism"
+            "https://rpc.ankr.com/optimism",
+            "https://1rpc.io/op"
         ]
     },
     "1088": {
@@ -303,7 +309,8 @@
         "rpcs": [
             "https://rpc.api.moonbeam.network",
             "https://moonbeam.public.blastapi.io",
-            "https://rpc.ankr.com/moonbeam"
+            "https://rpc.ankr.com/moonbeam",
+            "https://1rpc.io/glmr"
         ]
     },
     "30": {
@@ -376,7 +383,8 @@
         "rpcs": [
             "https://rpc.astar.network:8545",
             "https://astar.public.blastapi.io",
-            "https://evm.astar.network/"
+            "https://evm.astar.network/",
+            "https://1rpc.io/astr"
         ]
     },
     "71394": {
