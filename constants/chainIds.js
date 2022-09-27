@@ -55,6 +55,7 @@
   4689: "iotex",
   5050: "xlc",
   5551: "nahmii",
+  6969: "tombchain",
   7777: "nmactest",
   8217: "klaytn",
   9001: "evmos",
