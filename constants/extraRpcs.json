@@ -932,7 +932,9 @@
             "https://rpc.dogechain.dog",
             "https://rpc01-sg.dogechain.dog",
             "https://rpc02-sg.dogechain.dog",
-            "https://rpc03-sg.dogechain.dog"
+            "https://rpc03-sg.dogechain.dog",
+            "https://dogechain.ankr.com",
+            "https://dogechain-sj.ankr.com"
         ]
     },
     "2021": {
