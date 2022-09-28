@@ -1502,5 +1502,10 @@
         "rpcs": [
             "https://mainnet-rpc.tlxscan.com"
         ]
+    },
+        "1501795822": {
+        "rpcs": [
+            "https://rpc.omniaverse.io"
+        ]
     }
 }
