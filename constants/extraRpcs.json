@@ -1504,4 +1504,15 @@
             "https://mainnet-rpc.tlxscan.com"
         ]
     }
+	    },
+    "13308": {
+        "rpcs": [
+            "https://mainnet-rpc.cscscan.io/"
+        ]
+    }
+	    },
+    "40627": {
+        "rpcs": [
+            "https://testnet-explorer.cscscan.io/
+    }
 }
