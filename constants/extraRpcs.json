@@ -21,7 +21,6 @@
             "https://1rpc.io/eth",
             "https://eth-mainnet.rpcfast.com",
             "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-            "https://1rpc.io/eth",
             "https://api.securerpc.com/v1"
         ]
     },
@@ -103,8 +102,7 @@
             "https://bscapi.terminet.io/rpc",
             "https://1rpc.io/bnb",
             "https://bsc-mainnet.rpcfast.com",
-            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-            "https://1rpc.io/bnb"
+            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
         ]
     },
     "97": {
@@ -155,8 +153,7 @@
             "https://polygonapi.terminet.io/rpc",
             "https://1rpc.io/matic",
             "https://polygon-mainnet.rpcfast.com",
-            "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
-            "https://1rpc.io/matic"
+            "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT"
         ]
     },
     "25": {
