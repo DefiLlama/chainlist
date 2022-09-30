@@ -153,7 +153,8 @@
             "https://polygonapi.terminet.io/rpc",
             "https://1rpc.io/matic",
             "https://polygon-mainnet.rpcfast.com",
-            "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT"
+            "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
+            "https://polygon-bor.publicnode.com",
         ]
     },
     "25": {
@@ -1036,7 +1037,8 @@
             "https://jsonrpc-evmos-ia.notional.ventures",
             "https://json-rpc.evmos.blockhunters.org",
             "https://evmos-json-rpc.agoranodes.com",
-            "https://evmos-mainnet.public.blastapi.io"
+            "https://evmos-mainnet.public.blastapi.io",
+            "https://evmos-evm.publicnode.com"
         ]
     },
     "836542336838601": {
