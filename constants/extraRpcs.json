@@ -1456,7 +1456,10 @@
     },
     "420420":{
         "rpcs":[
-            "https://mainnet.kekchain.com"
+            "https://mainnet.kekchain.com",
+            "https://rpc2.kekchain.com",
+            "https://kek.interchained.org",
+            "https://kekchain.interchained.org"
         ]
     },
     "420666":{
