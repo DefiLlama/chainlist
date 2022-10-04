@@ -1,6 +1,7 @@
   const chainIds = {
   0: "kardia",
   1: "ethereum",
+  5: "gorli",
   8: "ubiq",
   10: "optimism",
   19: "songbird",
