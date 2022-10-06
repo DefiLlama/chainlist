@@ -154,7 +154,8 @@
             "https://1rpc.io/matic",
             "https://polygon-mainnet.rpcfast.com",
             "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
-            "https://polygon-bor.publicnode.com"
+            "https://polygon-bor.publicnode.com",
+            "https://matic.slingshot.finance"
         ]
     },
     "25": {
