@@ -11060,5 +11060,30 @@
         "standard": "EIP3091"
       }
     ]
+  },
+  {
+    "name": "FON Smart Chain",
+    "chainId": 201022,
+    "shortName": "FON",
+    "chain": "FON",
+    "network": "mainnet",
+    "networkId": 201022,
+    "nativeCurrency": {
+      "name": "FON",
+      "symbol": "FON",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://fsc-dataseed1.fonscan.io",
+      "https://fsc-dataseed2.fonscan.io"
+    ],
+    "faucets": [],
+    "explorers": [
+      {
+        "name": "fon scan",
+        "url": "https://fonscan.io/",
+        "standard": "EIP3091"
+      }
+    ]
   }
 ]
