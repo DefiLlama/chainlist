@@ -378,7 +378,8 @@
     "122": {
         "rpcs": [
             "https://fuse-rpc.gateway.pokt.network/",
-            "https://rpc.fuse.io"
+            "https://rpc.fuse.io",
+            "https://fuse-mainnet.chainstacklabs.com"
         ]
     },
     "336": {
