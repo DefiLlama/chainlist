@@ -870,7 +870,8 @@
     },
     "1030": {
         "rpcs": [
-            "https://evm.confluxrpc.com"
+            "https://evm.confluxrpc.com",
+            "https://conflux-espace-public.unifra.io"
         ]
     },
     "1139": {
