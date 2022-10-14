@@ -17,7 +17,7 @@
             "http://18.211.207.34:8545",
             "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
             "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
-            "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e",
+            "https://eth-mainnet-public.unifra.io",
             "https://1rpc.io/eth",
             "https://eth-mainnet.rpcfast.com",
             "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
@@ -73,9 +73,9 @@
             "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc"
         ]
     },
-    "11155111":{
-        "rpcs":[
-            "https://nunki.htznr.fault.dev/rpc" 
+    "11155111": {
+        "rpcs": [
+            "https://nunki.htznr.fault.dev/rpc"
         ]
     },
     "56": {
@@ -155,7 +155,8 @@
             "https://polygon-mainnet.rpcfast.com",
             "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
             "https://polygon-bor.publicnode.com",
-            "https://matic.slingshot.finance"
+            "https://matic.slingshot.finance",
+            "https://polygon-mainnet-public.unifra.io"
         ]
     },
     "25": {
@@ -269,7 +270,7 @@
         ]
     },
     "1231": {
-        "rpcs":[
+        "rpcs": [
             "https://ultron-rpc.net"
         ]
     },
@@ -784,9 +785,9 @@
         "rpcWorking": false
     },
     "416": {
-      "rpcs": [
-        "https://rpc.sx.technology"
-      ]
+        "rpcs": [
+            "https://rpc.sx.technology"
+        ]
     },
     "499": {
         "rpcs": [],
@@ -1445,7 +1446,7 @@
             "https://mainnet.block.caduceus.foundation"
         ]
     },
-    "7777":{
+    "7777": {
         "rpcs": [
             "https://testnet1.rotw.games",
             "https://testnet2.rotw.games",
@@ -1454,14 +1455,14 @@
             "https://testnet5.rotw.games"
         ]
     },
-    "103090":{
-        "rpcs":[
+    "103090": {
+        "rpcs": [
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
     },
-    "420666":{
-        "rpcs":[
+    "420666": {
+        "rpcs": [
             "https://testnet.kekchain.com"
         ]
     },
@@ -1470,35 +1471,35 @@
             "https://beagle.chat/eth"
         ]
     },
-    "10067275":{
-        "rpcs":[
+    "10067275": {
+        "rpcs": [
             "https://testnet.plian.io/child_test"
         ]
     },
-    "16658437":{
-        "rpcs":[
+    "16658437": {
+        "rpcs": [
             "https://testnet.plian.io/testnet"
         ]
     },
-    "2099156":{
-        "rpcs":[
+    "2099156": {
+        "rpcs": [
             "https://mainnet.plian.io/pchain"
         ]
     },
-    "8007736":{
-        "rpcs":[
+    "8007736": {
+        "rpcs": [
             "https://mainnet.plian.io/child_0"
         ]
-   },
-    "970":{
-        "rpcs":[
-            "https://rpc.mainnet.computecoin.com"
-       ]
     },
-    "971":{
-        "rpcs":[
+    "970": {
+        "rpcs": [
+            "https://rpc.mainnet.computecoin.com"
+        ]
+    },
+    "971": {
+        "rpcs": [
             "https://beta-rpc.mainnet.computecoin.com"
-       ]
+        ]
     },
     "10086": {
         "rpcs": [
@@ -1510,7 +1511,7 @@
             "https://mainnet-rpc.tlxscan.com"
         ]
     },
-     "10248": {
+    "10248": {
         "rpcs": [
             "https://node.0xtchain.com"
         ]
