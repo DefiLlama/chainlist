@@ -1046,7 +1046,8 @@
             "https://json-rpc.evmos.blockhunters.org",
             "https://evmos-json-rpc.agoranodes.com",
             "https://evmos-mainnet.public.blastapi.io",
-            "https://evmos-evm.publicnode.com"
+            "https://evmos-evm.publicnode.com",
+            "https://jsonrpc-evmos.goldenratiostaking.net"
         ]
     },
     "836542336838601": {
