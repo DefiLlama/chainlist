@@ -21,8 +21,7 @@
             "https://1rpc.io/eth",
             "https://eth-mainnet.rpcfast.com",
             "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-            "https://api.securerpc.com/v1",
-            "https://rpc.slock.it/goerli"
+            "https://api.securerpc.com/v1"
         ]
     },
     "2": {
