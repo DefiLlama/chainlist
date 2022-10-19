@@ -1,6 +1,7 @@
 {
     "1": {
         "rpcs": [
+            "https://eth-mainnet.g.alchemy.com/v2/demo"
             "https://api.mycryptoapi.com/eth",
             "https://rpc.flashbots.net/",
             "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
@@ -32,6 +33,7 @@
     },
     "80001": {
         "rpcs": [
+            "https://polygon-mumbai.g.alchemy.com/v2/demo"
             "https://rpc.ankr.com/polygon_mumbai",
             "https://rpc-mumbai.maticvigil.com",
             "https://polygontestapi.terminet.io/rpc",
@@ -46,6 +48,7 @@
     },
     "5": {
         "rpcs": [
+            "https://eth-goerli.g.alchemy.com/v2/demo"
             "https://rpc.ankr.com/eth_goerli",
             "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
             "https://eth-goerli.public.blastapi.io"
@@ -139,6 +142,7 @@
     },
     "137": {
         "rpcs": [
+            "https://polygon-mainnet.g.alchemy.com/v2/demo"
             "https://polygon-rpc.com",
             "https://rpc-mainnet.matic.network",
             "https://rpc-mainnet.maticvigil.com",
@@ -174,11 +178,16 @@
     },
     "42161": {
         "rpcs": [
+            "https://arb-mainnet.g.alchemy.com/v2/demo"
             "https://arb1.arbitrum.io/rpc",
             "https://rpc.ankr.com/arbitrum",
             "https://1rpc.io/arb",
-            "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
-            "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+            "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}"
+        ]
+    },
+    "421613": {
+        "rpcs": [
+            "https://arb-goerli.g.alchemy.com/v2/demo"
         ]
     },
     "42170": {
@@ -238,10 +247,16 @@
     },
     "10": {
         "rpcs": [
+            "https://opt-mainnet.g.alchemy.com/v2/demo"
             "https://mainnet.optimism.io/",
             "https://optimism-mainnet.public.blastapi.io",
             "https://rpc.ankr.com/optimism",
             "https://1rpc.io/op"
+        ]
+    },
+     "420": {
+        "rpcs": [
+            "https://opt-goerli.g.alchemy.com/v2/demo"
         ]
     },
     "1088": {
@@ -391,6 +406,7 @@
     },
     "592": {
         "rpcs": [
+            "https://astar-mainnet.g.alchemy.com/v2/demo"
             "https://rpc.astar.network:8545",
             "https://astar.public.blastapi.io",
             "https://evm.astar.network/",
