@@ -1516,5 +1516,10 @@
         "rpcs": [
             "https://node.0xtchain.com"
         ]
+    },
+       "8736": {
+        "rpcs": [
+            "https://rpc.alph.network"
+        ]
     }
 }
