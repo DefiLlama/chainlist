@@ -1516,5 +1516,15 @@
         "rpcs": [
             "https://node.0xtchain.com"
         ]
+    },
+    "119": {
+        "rpcs": [
+            "https://evmapi.nuls.io"
+        ]
+    },
+    "120": {
+        "rpcs": [
+            "https://beta.evmapi.nuls.io"
+        ]
     }
 }
