@@ -255,6 +255,11 @@
             "https://1rpc.io/op"
         ]
     },
+    "420": {
+        "rpcs": [
+            "https://opt-goerli.g.alchemy.com/v2/demo"
+        ]
+    },
     "1088": {
         "rpcs": [
             "https://andromeda.metis.io/?owner=1088"
