@@ -21,7 +21,8 @@
             "https://1rpc.io/eth",
             "https://eth-mainnet.rpcfast.com",
             "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-            "https://api.securerpc.com/v1"
+            "https://api.securerpc.com/v1",
+            "https://ethereum.publicnode.com"
         ]
     },
     "2": {
@@ -122,7 +123,8 @@
             "https://rpc.ankr.com/avalanche",
             "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
             "https://avalancheapi.terminet.io/ext/bc/C/rpc",
-            "https://1rpc.io/avax/c"
+            "https://1rpc.io/avax/c",
+            "https://avalanche-evm.publicnode.com"
         ]
     },
     "250": {
