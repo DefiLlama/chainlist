@@ -1534,5 +1534,10 @@
         "rpcs": [
             "https://node.0xtchain.com"
         ]
+    },
+    "18159": {
+        "rpcs": [
+            "https://mainnet-rpc.memescan.io"
+        ]
     }
 }
