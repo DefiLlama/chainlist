@@ -50,6 +50,7 @@
   5050: "xlc",
   5551: "nahmii",
   6969: "tombchain",
+  7700: "canto",
   8217: "klaytn",
   9001: "evmos",
   10000: "smartbch",

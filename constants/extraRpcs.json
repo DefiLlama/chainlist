@@ -1,6 +1,7 @@
 {
     "1": {
         "rpcs": [
+            "https://eth-mainnet.g.alchemy.com/v2/demo",
             "https://api.mycryptoapi.com/eth",
             "https://rpc.flashbots.net/",
             "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
@@ -17,12 +18,12 @@
             "http://18.211.207.34:8545",
             "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
             "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
-            "https://eth-mainnet.unifra.io/v1/d157f0245608423091f5b4b9c8e2103e",
+            "https://eth-mainnet-public.unifra.io",
             "https://1rpc.io/eth",
             "https://eth-mainnet.rpcfast.com",
             "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-            "https://1rpc.io/eth",
-            "https://api.securerpc.com/v1"
+            "https://api.securerpc.com/v1",
+            "https://ethereum.publicnode.com"
         ]
     },
     "2": {
@@ -33,6 +34,7 @@
     },
     "80001": {
         "rpcs": [
+            "https://polygon-mumbai.g.alchemy.com/v2/demo",
             "https://rpc.ankr.com/polygon_mumbai",
             "https://rpc-mumbai.maticvigil.com",
             "https://polygontestapi.terminet.io/rpc",
@@ -47,6 +49,7 @@
     },
     "5": {
         "rpcs": [
+            "https://eth-goerli.g.alchemy.com/v2/demo",
             "https://rpc.ankr.com/eth_goerli",
             "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
             "https://eth-goerli.public.blastapi.io"
@@ -74,9 +77,9 @@
             "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc"
         ]
     },
-    "11155111":{
-        "rpcs":[
-            "https://nunki.htznr.fault.dev/rpc" 
+    "11155111": {
+        "rpcs": [
+            "https://nunki.htznr.fault.dev/rpc"
         ]
     },
     "56": {
@@ -103,8 +106,7 @@
             "https://bscapi.terminet.io/rpc",
             "https://1rpc.io/bnb",
             "https://bsc-mainnet.rpcfast.com",
-            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-            "https://1rpc.io/bnb"
+            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
         ]
     },
     "97": {
@@ -124,7 +126,8 @@
             "https://rpc.ankr.com/avalanche",
             "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
             "https://avalancheapi.terminet.io/ext/bc/C/rpc",
-            "https://1rpc.io/avax/c"
+            "https://1rpc.io/avax/c",
+            "https://avalanche-evm.publicnode.com"
         ]
     },
     "250": {
@@ -141,6 +144,7 @@
     },
     "137": {
         "rpcs": [
+            "https://polygon-mainnet.g.alchemy.com/v2/demo",
             "https://polygon-rpc.com",
             "https://rpc-mainnet.matic.network",
             "https://rpc-mainnet.maticvigil.com",
@@ -156,7 +160,9 @@
             "https://1rpc.io/matic",
             "https://polygon-mainnet.rpcfast.com",
             "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
-            "https://1rpc.io/matic"
+            "https://polygon-bor.publicnode.com",
+            "https://matic.slingshot.finance",
+            "https://polygon-mainnet-public.unifra.io"
         ]
     },
     "25": {
@@ -174,11 +180,16 @@
     },
     "42161": {
         "rpcs": [
+            "https://arb-mainnet.g.alchemy.com/v2/demo",
             "https://arb1.arbitrum.io/rpc",
             "https://rpc.ankr.com/arbitrum",
             "https://1rpc.io/arb",
-            "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
-            "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+            "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}"
+        ]
+    },
+    "421613": {
+        "rpcs": [
+            "https://arb-goerli.g.alchemy.com/v2/demo"
         ]
     },
     "42170": {
@@ -238,10 +249,16 @@
     },
     "10": {
         "rpcs": [
+            "https://opt-mainnet.g.alchemy.com/v2/demo",
             "https://mainnet.optimism.io/",
             "https://optimism-mainnet.public.blastapi.io",
             "https://rpc.ankr.com/optimism",
             "https://1rpc.io/op"
+        ]
+    },
+    "420": {
+        "rpcs": [
+            "https://opt-goerli.g.alchemy.com/v2/demo"
         ]
     },
     "1088": {
@@ -270,7 +287,7 @@
         ]
     },
     "1231": {
-        "rpcs":[
+        "rpcs": [
             "https://ultron-rpc.net"
         ]
     },
@@ -379,7 +396,8 @@
     "122": {
         "rpcs": [
             "https://fuse-rpc.gateway.pokt.network/",
-            "https://rpc.fuse.io"
+            "https://rpc.fuse.io",
+            "https://fuse-mainnet.chainstacklabs.com"
         ]
     },
     "336": {
@@ -390,6 +408,7 @@
     },
     "592": {
         "rpcs": [
+            "https://astar-mainnet.g.alchemy.com/v2/demo",
             "https://rpc.astar.network:8545",
             "https://astar.public.blastapi.io",
             "https://evm.astar.network/",
@@ -590,8 +609,11 @@
             "https://www.ethercluster.com/etc",
             "https://etc.etcdesktop.com",
             "https://etc.mytokenpocket.vip",
-            "https://besu.etc-network.info",
-            "https://geth.etc-network.info"
+            "https://besu-de.etc-network.info",
+            "https://geth-de.etc-network.info",
+            "https://besu-at.etc-network.info",
+            "https://geth-at.etc-network.info",
+            "https://rpc.etcplanets.com"
         ]
     },
     "2020": {
@@ -781,9 +803,9 @@
         "rpcWorking": false
     },
     "416": {
-      "rpcs": [
-        "https://rpc.sx.technology"
-      ]
+        "rpcs": [
+            "https://rpc.sx.technology"
+        ]
     },
     "499": {
         "rpcs": [],
@@ -867,7 +889,8 @@
     },
     "1030": {
         "rpcs": [
-            "https://evm.confluxrpc.com"
+            "https://evm.confluxrpc.com",
+            "https://conflux-espace-public.unifra.io"
         ]
     },
     "1139": {
@@ -1036,9 +1059,12 @@
             "https://eth.bd.evmos.org:8545/",
             "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205",
             "https://evmos-json-rpc.stakely.io",
-            "https://jsonrpc-evmos-ia.notional.ventures",
+            "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
             "https://json-rpc.evmos.blockhunters.org",
-            "https://evmos-json-rpc.agoranodes.com"
+            "https://evmos-json-rpc.agoranodes.com",
+            "https://evmos-mainnet.public.blastapi.io",
+            "https://evmos-evm.publicnode.com",
+            "https://jsonrpc-evmos.goldenratiostaking.net"
         ]
     },
     "836542336838601": {
@@ -1439,7 +1465,7 @@
             "https://mainnet.block.caduceus.foundation"
         ]
     },
-    "7777":{
+    "7777": {
         "rpcs": [
             "https://testnet1.rotw.games",
             "https://testnet2.rotw.games",
@@ -1448,8 +1474,8 @@
             "https://testnet5.rotw.games"
         ]
     },
-    "103090":{
-        "rpcs":[
+    "103090": {
+        "rpcs": [
             "https://evm.cryptocurrencydevs.org",
             "https://rpc.crystaleum.org"
         ]
@@ -1462,8 +1488,8 @@
             "https://kekchain.interchained.org"
         ]
     },
-    "420666":{
-        "rpcs":[
+    "420666": {
+        "rpcs": [
             "https://testnet.kekchain.com"
         ]
     },
@@ -1472,35 +1498,35 @@
             "https://beagle.chat/eth"
         ]
     },
-    "10067275":{
-        "rpcs":[
+    "10067275": {
+        "rpcs": [
             "https://testnet.plian.io/child_test"
         ]
     },
-    "16658437":{
-        "rpcs":[
+    "16658437": {
+        "rpcs": [
             "https://testnet.plian.io/testnet"
         ]
     },
-    "2099156":{
-        "rpcs":[
+    "2099156": {
+        "rpcs": [
             "https://mainnet.plian.io/pchain"
         ]
     },
-    "8007736":{
-        "rpcs":[
+    "8007736": {
+        "rpcs": [
             "https://mainnet.plian.io/child_0"
         ]
-   },
-    "970":{
-        "rpcs":[
-            "https://rpc.mainnet.computecoin.com"
-       ]
     },
-    "971":{
-        "rpcs":[
+    "970": {
+        "rpcs": [
+            "https://rpc.mainnet.computecoin.com"
+        ]
+    },
+    "971": {
+        "rpcs": [
             "https://beta-rpc.mainnet.computecoin.com"
-       ]
+        ]
     },
     "10086": {
         "rpcs": [
@@ -1510,6 +1536,11 @@
     "5177": {
         "rpcs": [
             "https://mainnet-rpc.tlxscan.com"
+        ]
+    },
+    "10248": {
+        "rpcs": [
+            "https://node.0xtchain.com"
         ]
     }
 }
