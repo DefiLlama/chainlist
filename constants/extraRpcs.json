@@ -107,12 +107,14 @@
             "https://bscapi.terminet.io/rpc",
             "https://1rpc.io/bnb",
             "https://bsc-mainnet.rpcfast.com",
-            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM"
+            "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
+            "https://bsc-mainnet.public.blastapi.io"
         ]
     },
     "97": {
         "rpcs": [
-            "https://bsctestapi.terminet.io/rpc"
+            "https://bsctestapi.terminet.io/rpc",
+            "https://bsc-testnet.public.blastapi.io"
         ]
     },
     "900000": {
