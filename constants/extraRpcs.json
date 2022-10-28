@@ -283,9 +283,10 @@
             "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet"
         ]
     },
-    "100100": {
+    "10200": {
         "rpcs": [
-            "https://rpc-chiado.gnosistestnet.com"
+            "https://rpc.chiadochain.net",
+            "https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado"
         ]
     },
     "1231": {
