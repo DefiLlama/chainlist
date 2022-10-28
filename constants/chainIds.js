@@ -52,6 +52,7 @@
   6969: "tombchain",
   7700: "canto",
   8217: "klaytn",
+  8738: "alph",
   9001: "evmos",
   10000: "smartbch",
   32659: "fusion",
