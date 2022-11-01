@@ -917,6 +917,11 @@
         "rpcs": [],
         "rpcWorking": false
     },
+    "1234": {
+        "rpcs": [
+            "https://rpc.step.network"
+        ]
+    },
     "1280": {
         "rpcs": [
             "https://nodes.halo.land"
@@ -1091,6 +1096,11 @@
     "12052": {
         "rpcs": [
             "https://zerorpc.singularity.gold"
+        ]
+    },
+    "12345": {
+        "rpcs": [
+            "https://rpc.testnet.step.network"
         ]
     },
     "13381": {
