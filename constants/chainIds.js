@@ -62,6 +62,7 @@
   43114: "avalanche",
   47805: "rei",
   55555: "reichain",
+  67390: "siriusnet",
   71402: "godwoken",
   333999: "polis",
   888888: "vision",
