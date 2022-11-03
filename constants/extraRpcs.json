@@ -1538,5 +1538,15 @@
         "rpcs": [
             "https://node.0xtchain.com"
         ]
+    },
+    "420":{
+        "rpcs":[
+            "https://rpc-01.frenchain.app"
+        ]
+    },
+    "69420":{
+        "rpcs":[
+            "https://rpc-01tn.frenchain.app"
+        ]
     }
 }
