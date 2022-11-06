@@ -811,6 +811,11 @@
             "https://rpc.sx.technology"
         ]
     },
+    "493": {
+        "rpcs": [
+            "https://rpc.proofofapes.com"
+        ]  
+    },
     "499": {
         "rpcs": [],
         "rpcWorking": false,
