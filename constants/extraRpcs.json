@@ -369,7 +369,10 @@
     },
     "321": {
         "rpcs": [
-            "https://rpc-mainnet.kcc.network/"
+            "https://rpc-mainnet.kcc.network",
+            "https://kcc.mytokenpocket.vip",
+            "https://public-rpc.blockpi.io/http/kcc",
+            "https://kcc.getblock.io/mainnet/?api_key=cd77b9bd-ce1c-4a91-89bb-ff2e2c1206c5"
         ]
     },
     "888": {
