@@ -330,7 +330,8 @@
         "rpcs": [
             "https://mainnet.anyswap.exchange",
             "https://mainway.freemoon.xyz/gate",
-            "https://fsn.dev/api"
+            "https://fsn.dev/api",
+            "https://mainnet.fusionnetwork.io"
         ]
     },
     "1284": {
