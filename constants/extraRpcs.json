@@ -837,7 +837,8 @@
     },
     "686": {
         "rpcs": [
-            "https://eth-rpc-karura.aca-api.network"
+            "https://eth-rpc-karura.aca-api.network",
+            "https://rpc.evm.karura.network"
         ]
     },
     "707": {
