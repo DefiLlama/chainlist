@@ -846,8 +846,10 @@
         ]
     },
     "787": {
-        "rpcs": [],
-        "rpcWorking": false
+        "rpcs": [
+            "https://eth-rpc-acala.aca-api.network",
+            "https://rpc.evm.acala.network"
+        ]
     },
     "803": {
         "rpcs": [],
