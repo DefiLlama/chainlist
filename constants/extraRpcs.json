@@ -958,7 +958,7 @@
     },
     "1987": {
         "rpcs": [
-            "https://jsonrpc.egem.io/custom"
+            "https://lb.rpc.egem.io"
         ]
     },
     "2000": {
