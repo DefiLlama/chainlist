@@ -63,7 +63,6 @@
   47805: "rei",
   55555: "reichain",
   71402: "godwoken",
-  102000: "chiado",
   333999: "polis",
   888888: "vision",
   1313161554: "aurora",
