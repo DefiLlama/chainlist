@@ -1545,5 +1545,9 @@
         "rpcs": [
             "https://node.0xtchain.com"
         ]
-    }
+    },
+    "22776": {
+        "rpcs": [
+            "https://rpc.maplabs.io/
+        ]
 }
