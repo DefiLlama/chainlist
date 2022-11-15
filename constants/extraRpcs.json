@@ -33,6 +33,11 @@
             "https://node.expanse.tech"
         ]
     },
+    "1975": {
+        "rpcs": [
+            "https://rpc.onuschain.io"
+        ]
+    },
     "80001": {
         "rpcs": [
             "https://polygon-mumbai.g.alchemy.com/v2/demo",
