@@ -9,7 +9,9 @@
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/"
     ],
-    "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/"
+    ],
     "nativeCurrency": {
       "name": "BNB Smart Chain Native Token",
       "symbol": "BNB",
@@ -36,7 +38,9 @@
       "https://data-seed-prebsc-2-s3.binance.org:8545/",
       "https://bsc-testnet.nodereal.io/v1/e9a36765eb8a40b9bd12e680a1fd2bc5"
     ],
-    "faucets": ["https://testnet.binance.org/faucet-smart"],
+    "faucets": [
+      "https://testnet.binance.org/faucet-smart"
+    ],
     "nativeCurrency": {
       "name": "BNB Smart Chain Native Token",
       "symbol": "BNB",
@@ -55,8 +59,12 @@
   {
     "name": "NodeReal-BSC Application Sidechain Testnet",
     "chain": "BAS-ARS",
-    "rpc": ["https://bas-aries-public.nodereal.io/"],
-    "faucets": ["https://bas-aries-faucet.nodereal.io/"],
+    "rpc": [
+      "https://bas-aries-public.nodereal.io/"
+    ],
+    "faucets": [
+      "https://bas-aries-faucet.nodereal.io/"
+    ],
     "nativeCurrency": {
       "name": "Nodereal-BSC Application Sidechain Native Token",
       "symbol": "ARS",
@@ -75,8 +83,12 @@
   {
     "name": "Ankr-BSC Application Sidechain Testnet",
     "chain": "BAS-ANKR",
-    "rpc": ["https://rpc.dev-01.bas.ankr.com/"],
-    "faucets": ["https://faucet.dev-01.bas.ankr.com/"],
+    "rpc": [
+      "https://rpc.dev-01.bas.ankr.com/"
+    ],
+    "faucets": [
+      "https://faucet.dev-01.bas.ankr.com/"
+    ],
     "nativeCurrency": {
       "name": "Ankr-BSC Application Sidechain Native Token",
       "symbol": "BAS",
@@ -95,7 +107,9 @@
   {
     "name": "Meta Apes BSC Application Sidechain Mainnet",
     "chain": "BAS-MAPES",
-    "rpc": ["https://bas.metaapesgame.com/bas_mainnet_full_rpc"],
+    "rpc": [
+      "https://bas.metaapesgame.com/bas_mainnet_full_rpc"
+    ],
     "faucets": [],
     "nativeCurrency": {
       "name": "BAS Meta Apes Native Token",
@@ -115,39 +129,71 @@
   {
     "name": "GAL-BSC application Sidechain Testnet",
     "chain": "BAS-GAL",
-    "rpc": ["https://bas-galaxy-testnet.nodereal.io/"],
-    "faucets": ["https://bas-galaxy-testnet-faucet.nodereal.io/"],
+    "rpc": [
+      "https://bas-galaxy-testnet.nodereal.io/"
+    ],
+    "faucets": [
+      "https://bas-galaxy-testnet-faucet.nodereal.io/"
+    ],
     "nativeCurrency": {
-     "name": "Project Galaxy",
-     "symbol": "GAL",
-     "decimals": 18
+      "name": "Project Galaxy",
+      "symbol": "GAL",
+      "decimals": 18
     },
     "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
     "chainId": 230,
     "explorers": [
-     {
-      "name": "blockscout",
-      "url": "https://bas-galaxy-testnet-explorer.nodereal.io/",
-      "standard": "EIP-3091"
-     }
+      {
+        "name": "blockscout",
+        "url": "https://bas-galaxy-testnet-explorer.nodereal.io/",
+        "standard": "EIP-3091"
+      }
     ]
-   },
+  },
   {
     "name": "FNCY Testnet",
-    "chain": "BAS-CUBE",
-    "rpc": ["https://bas-cube-devnet.nodereal.io/"],
-    "faucets": ["https://bas-cube-devnet-faucet.nodereal.io/"],
+    "chain": "FNCY Testnet",
+    "rpc": [
+      "https://fncy-testnet-seed.fncy.world"
+    ],
+    "faucets": [
+      "https://faucet-testnet.fncy.world/"
+    ],
     "nativeCurrency": {
-      "name": "ITAMCUBE",
+      "name": "FNCY",
       "symbol": "FNCY",
       "decimals": 18
     },
-    "infoURL": "https://docs.nodereal.io/nodereal/bas/introduce",
+    "infoURL": "https://fncy.world/",
     "chainId": 923018,
     "explorers": [
       {
-        "name": "blockscout-testnet",
-        "url": "https://bas-cube-devnet-faucet.nodereal.io/",
+        "name": "FNCY testnet explorer",
+        "url": "https://fncyscan-testnet.fncy.world/",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "FNCY mainnet",
+    "chain": "FNCY",
+    "rpc": [
+      "https://fncy-seed1.fncy.world"
+    ],
+    "faucets": [
+      ""
+    ],
+    "nativeCurrency": {
+      "name": "FNCY",
+      "symbol": "FNCY",
+      "decimals": 18
+    },
+    "infoURL": "https://fncy.world/",
+    "chainId": 73,
+    "explorers": [
+      {
+        "name": "FNCY Blockchain Explorer",
+        "url": "https://fncyscan.fncy.world",
         "standard": "EIP3091"
       }
     ]
