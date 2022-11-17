@@ -64,6 +64,7 @@
   55555: "reichain",
   71402: "godwoken",
   333999: "polis",
+  420420: "kekchain",
   888888: "vision",
   1313161554: "aurora",
   1666600000: "harmony",
