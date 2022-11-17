@@ -43,7 +43,6 @@
   1231: "ultron",
   1284: "moonbeam",
   1285: "moonriver",
-  1975: "onus",
   2000: "dogechain",
   2020: "ronin",
   2222: "kava",
