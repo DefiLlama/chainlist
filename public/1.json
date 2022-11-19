@@ -1,0 +1,12 @@
+{
+    "name": "Songpa #1",
+    "description": "Welcome to KlaySongpa",
+    "image": "https://klayrabbit.s3.ap-northeast-2.amazonaws.com/images/1.png",
+  
+    "attributes": [
+      {
+        "trait_type": "Age",
+        "value": "52"
+      }
+    ]
+  }
