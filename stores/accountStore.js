@@ -9,6 +9,7 @@ import {
 
 import stores from './'
 
+
 import Web3 from 'web3';
 
 class Store {
