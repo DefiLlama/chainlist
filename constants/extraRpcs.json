@@ -114,7 +114,8 @@
             "https://1rpc.io/bnb",
             "https://bsc-mainnet.rpcfast.com",
             "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-            "https://bsc-mainnet.public.blastapi.io"
+            "https://bsc-mainnet.public.blastapi.io",
+            "https://nodes.vefinetwork.org/smartchain"
         ]
     },
     "97": {
@@ -1146,7 +1147,7 @@
     "32520": {
         "rpcs": [
             "https://rpc.icecreamswap.com",
-            "https://rpc-bitgert-vefi.com"
+            "https://nodes.vefinetwork.org/bitgert"
         ]
     },
     "39797": {
