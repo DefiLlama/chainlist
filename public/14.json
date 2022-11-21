@@ -1,0 +1,12 @@
+{
+    "name": "Songpa #14",
+    "description": "Welcome to KlaySongpa",
+    "image": "https://chainlist-teal.vercel.app/14.jpg",
+  
+    "attributes": [
+      {
+        "trait_type": "Age",
+        "value": "52"
+      }
+    ]
+  }
