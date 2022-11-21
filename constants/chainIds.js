@@ -54,6 +54,7 @@
   8217: "klaytn",
   9001: "evmos",
   10000: "smartbch",
+  32520: "bitgert",
   32659: "fusion",
   42161: "arbitrum",
   42170: "arb-nova",
