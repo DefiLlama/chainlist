@@ -1,0 +1,12 @@
+{
+    "name": "Jasonny seoul #0",
+    "description": "Welcome to Jasonny seoul",
+    "image": "https://chainlist-teal.vercel.app/jason0.jpg",
+  
+    "attributes": [
+      {
+        "trait_type": "Age",
+        "value": "52"
+      }
+    ]
+  }

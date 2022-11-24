@@ -1,0 +1,12 @@
+{
+    "name": "Klay Yangjae #0",
+    "description": "Welcome to Klay Yangjae",
+    "image": "https://chainlist-teal.vercel.app/frank0.jpg",
+  
+    "attributes": [
+      {
+        "trait_type": "Age",
+        "value": "52"
+      }
+    ]
+  }

@@ -1,0 +1,12 @@
+{
+    "name": "SBNOMA #0",
+    "description": "Welcome to SBNOMA",
+    "image": "https://chainlist-teal.vercel.app/josh0.jpg",
+  
+    "attributes": [
+      {
+        "trait_type": "Age",
+        "value": "52"
+      }
+    ]
+  }
