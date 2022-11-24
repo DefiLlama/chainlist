@@ -65,8 +65,11 @@ export async function getServerSideProps({ res }) {
   const request = await fetch('https://chainid.network/chains.json');
   const chains = await request.json();
 
+  var filteredChains = chains
+                    .filter((c) => c.status !== "deprecated") // remove deprecated
+
   // We generate the XML sitemap with the chains data
-  const sitemap = generateSiteMap(chains);
+  const sitemap = generateSiteMap(filteredChains);
 
   res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser

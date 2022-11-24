@@ -12,6 +12,7 @@ export async function getStaticProps({ locale }) {
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
   const sortedChains = chains
+    .filter((c) => c.status !== "deprecated") // remove deprecated
     .filter((c) => c.name !== "420coin") // same chainId as ronin
     .map((chain) => populateChain(chain, chainTvls))
     .sort((a, b) => {
@@ -63,6 +64,7 @@ function Home({ changeTheme, theme, sortedChains }) {
             ? chains
             : chains.filter((chain) => {
                 //filter
+                console.log(search)
                 return (
                   chain.chain.toLowerCase().includes(search.toLowerCase()) ||
                   chain.chainId

@@ -17,12 +17,14 @@ export async function getStaticProps({ params, locale }) {
 
   const chain = chains.find(
     (c) =>
+      (
       c.chainId?.toString() === params.chain ||
       c.chainId?.toString() ===
         Object.entries(chainIds).find(
           ([, name]) => params.chain === name
         )?.[0] ||
       c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" ")
+      ) && c.status?.toString() !== "deprecated" // remove deprecated
   );
 
   if (!chain) {
