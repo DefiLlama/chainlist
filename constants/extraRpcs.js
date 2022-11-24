@@ -501,11 +501,6 @@ export default {
             "https://mainnet.godwoken.io/rpc/eth-wallet"
         ]
     },
-    "0": {
-        "rpcs": [
-            "https://rpc.kardiachain.io/"
-        ]
-    },
     "52": {
         "rpcs": [
             "https://rpc.coinex.net/",
@@ -630,7 +625,7 @@ export default {
     },
     "24": {
         "rpcs": [
-            "https://node-mainnet.dithereum.io  "
+            "https://rpc.kardiachain.io"
         ]
     },
     "27": {
