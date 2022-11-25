@@ -41,6 +41,7 @@
   888: "wanchain",
   1088: "metis",
   1231: "ultron",
+  1234: "step",
   1284: "moonbeam",
   1285: "moonriver",
   2000: "dogechain",
