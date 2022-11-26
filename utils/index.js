@@ -159,15 +159,19 @@ export function populateChain(chain, chainTvls) {
   const extraRpcs = allExtraRpcs[chain.chainId]?.rpcs;
 
   if (extraRpcs !== undefined) {
-    const rpcs = new Set(
+    const rpcs = 
       chain.rpc
         .map(removeEndingSlashObject)
-        .filter((rpc) => !rpc.url.includes("${INFURA_API_KEY}"))
-    );
+        .filter((rpc) => !rpc.url.includes("${INFURA_API_KEY}"));
 
-    extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlashObject(rpc)));
+    extraRpcs.forEach((rpc) => {
+      const rpcObj = removeEndingSlashObject(rpc)
+      if(rpcs.find(r=>r.url === rpcObj.url) === undefined){
+        rpcs.push(rpcObj)
+      }
+    });
 
-    chain.rpc = Array.from(rpcs);
+    chain.rpc = rpcs;
   } else {
     chain.rpc = chain.rpc.map(removeEndingSlashObject);
   }
