@@ -114,7 +114,7 @@ export const addToNetwork = (account, chain, rpc) => {
       symbol: chain.nativeCurrency.symbol, // 2-6 characters long
       decimals: chain.nativeCurrency.decimals,
     },
-    rpcUrls: rpc ? [rpc] : chain.rpc,
+    rpcUrls: rpc ? [rpc] : chain.rpc.map(r=>r.url),
     blockExplorerUrls: [
       chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
         ? chain.explorers[0].url
