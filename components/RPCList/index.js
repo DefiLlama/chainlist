@@ -85,6 +85,19 @@ export default function RPCList({ chain }) {
 
   return (
     <Paper elevation={1} className={classes.disclosure}>
+      {isEthMainnet && (
+        <p className={classes.helperText}>
+          Follow{" "}
+          <a
+            href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            this guide
+          </a>{" "}
+          to change RPC endpoint's of Ethereum Mainnet
+        </p>
+      )}
       <table
         className={classes.table}
         style={{
@@ -116,19 +129,6 @@ export default function RPCList({ chain }) {
           ))}
         </tbody>
       </table>
-      {isEthMainnet && (
-        <p className={classes.helperText}>
-          Follow{" "}
-          <a
-            href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            this
-          </a>{" "}
-          guide to change RPC endpoint's of Ethereum Mainnet
-        </p>
-      )}
     </Paper>
   );
 }
