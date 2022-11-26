@@ -168,6 +168,8 @@ export function populateChain(chain, chainTvls) {
     extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlashObject(rpc)));
 
     chain.rpc = Array.from(rpcs);
+  } else {
+    chain.rpc = chain.rpc.map(removeEndingSlashObject);
   }
 
   const chainSlug = chainIds[chain.chainId];
