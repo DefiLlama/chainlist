@@ -2,7 +2,7 @@ import BigNumber from "bignumber.js";
 import { useState, useEffect } from "react";
 import stores from "../stores";
 import { ERROR, TRY_CONNECT_WALLET } from "../stores/constants/constants";
-import allExtraRpcs from "../constants/extraRpcs.json";
+import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.js";
 
 // todo: get navigator declared somehow? probably an issue with using nextjs
@@ -138,6 +138,19 @@ export const addToNetwork = (account, chain, rpc) => {
   });
 };
 
+function removeEndingSlashObject(rpc) {
+  if(typeof rpc === "string"){
+    return {
+      url: removeEndingSlash(rpc)
+    }
+  } else {
+    return {
+      ...rpc,
+      url: removeEndingSlash(rpc.url)
+    }
+  }
+}
+
 function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
@@ -148,11 +161,11 @@ export function populateChain(chain, chainTvls) {
   if (extraRpcs !== undefined) {
     const rpcs = new Set(
       chain.rpc
-        .map(removeEndingSlash)
-        .filter((rpc) => !rpc.includes("${INFURA_API_KEY}"))
+        .map(removeEndingSlashObject)
+        .filter((rpc) => !rpc.url.includes("${INFURA_API_KEY}"))
     );
 
-    extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlash(rpc)));
+    extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlashObject(rpc)));
 
     chain.rpc = Array.from(rpcs);
   }
