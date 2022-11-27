@@ -4,7 +4,6 @@ import AddIcon from "@material-ui/icons/Add";
 import Header from "../header";
 import styles from "../../styles/Home.module.css";
 import classes from "./index.module.css";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function Layout({ changeTheme, theme, children }) {
@@ -26,7 +25,8 @@ export default function Layout({ changeTheme, theme, children }) {
             <div className={classes.copyCentered}>
               <img
                 style={{
-                  width: "360px",
+                  width: "100%",
+                  maxWidth: "360px",
                   marginLeft: "-15px",
                 }}
                 src={url}
