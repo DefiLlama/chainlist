@@ -175,7 +175,7 @@
     ]
   },
   {
-    "name": "FNCY mainnet",
+    "name": "FNCY Mainnet",
     "chain": "FNCY",
     "rpc": [
       "https://fncy-seed1.fncy.world"
