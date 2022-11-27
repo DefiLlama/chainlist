@@ -80,7 +80,7 @@ export default {
                 trackingDetails: `We may also collect information on how the Service is accessed and used (“Usage Data”). This Usage Data may include information such as your computer’s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.`
             },
             "http://127.0.0.1:8545",
-            
+
             //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
             //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
             //"https://api.mycryptoapi.com/eth",
@@ -1635,7 +1635,15 @@ export default {
             "https://mainnet-rpc3.memescan.io/",
             "https://mainnet-rpc4.memescan.io/"
         ]
+    },
+    "13000": {
+        "rpcs": [
+            "https://marketplace.ssquad.games",
+        ]
+    },
+    "14000": {
+        "rpcs": [
+            "https://www.3sps.net",
+        ]
     }
-    
-    
 }
