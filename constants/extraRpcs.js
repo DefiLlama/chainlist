@@ -47,9 +47,17 @@ export default {
                 url: "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
                 tracking: "yes",
             },
-            "https://eth-rpc.gateway.pokt.network",
+            {
+                url: "https://eth-rpc.gateway.pokt.network",
+                tracking: "limited",
+                trackingDetails: "Information Automatically Collected. We automatically log information about you and your computer. For example, when visiting our Site, we log your computer operating system type, browser type, browser language, the website you visited before browsing to our Site, pages you viewed, how long you spent on a page, access times and information about your use of and actions on our Site"
+            },
+            {
+                url: "https://eth-mainnet-public.unifra.io",
+                tracking: "unspecified"
+            },
             "http://127.0.0.1:8545",
-            "https://eth-mainnet-public.unifra.io",
+            
             //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
             //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
             //"https://api.mycryptoapi.com/eth",
