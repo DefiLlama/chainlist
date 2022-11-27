@@ -56,10 +56,10 @@ export default {
                 url: "https://eth-mainnet-public.unifra.io",
                 tracking: "unspecified"
             },
+            // Distributed cluster of Ethereum nodes designed for speed and anonymity!
             {
                 url: "https://api.zmok.io/mainnet/oaen6dy8ff6hju9k",
-                tracking: "no",
-                trackingDetails: "Distributed cluster of Ethereum nodes designed for speed, peak performance, high availability and anonymity!"
+                tracking: "none",
             },
             "http://127.0.0.1:8545",
             
