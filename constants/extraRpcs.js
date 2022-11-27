@@ -57,7 +57,7 @@ export default {
                 tracking: "unspecified"
             },
             "http://127.0.0.1:8545",
-            
+
             //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
             //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
             //"https://api.mycryptoapi.com/eth",
@@ -1612,7 +1612,15 @@ export default {
             "https://mainnet-rpc3.memescan.io/",
             "https://mainnet-rpc4.memescan.io/"
         ]
+    },
+    "13000": {
+        "rpcs": [
+            "https://marketplace.ssquad.games",
+        ]
+    },
+    "14000": {
+        "rpcs": [
+            "https://www.3sps.net",
+        ]
     }
-    
-    
 }
