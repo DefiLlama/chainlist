@@ -27,8 +27,7 @@ export default {
             },
             {
                 url: "https://rpc.flashbots.net/",
-                tracking: "yes",
-                trackingDetails: "Tracks IP address, device information, geolocation, signature, nationality and details relating to your Relay activity."
+                tracking: "none",
             },
             {
                 url: "https://cloudflare-eth.com/",
