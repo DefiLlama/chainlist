@@ -17,7 +17,7 @@
       <button id="logout">Logout</button>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@toruslabs/torus-embed"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js"></script>
@@ -29,7 +29,7 @@
         const torus = new Torus();
         window.torus = torus;
 
-        await torus.init(/*
+        await torus.init(
         // (Optional) Initialization options
         {
           // Customize login providers
@@ -52,7 +52,7 @@
             logoLight: "https://tkey.surge.sh/images/Device.svg", // Light logo for dark background
           }
         }
-        */);
+        );
 
         try {
           const user = await torus.getUserInfo();
