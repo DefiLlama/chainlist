@@ -1,4 +1,5 @@
-.container {
+.container,
+.containerDark {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -8,10 +9,6 @@
 }
 
 .containerDark {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  box-sizing: border-box;
   background: #2b2e3c;
 }
 
@@ -37,7 +34,8 @@
   max-width: 425px;
 }
 
-.listContainer {
+.listContainer,
+.listContainerDark {
   flex: 1;
   align-items: flex-start;
   background: #f3f3f3;
@@ -45,10 +43,7 @@
 }
 
 .listContainerDark {
-  flex: 1;
-  align-items: flex-start;
   background: #23252e;
-  padding: 0px 24px 24px;
 }
 
 .cardsContainer {
@@ -127,10 +122,7 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .container {
-    grid-template-columns: 500px calc(100vw - 517px);
-  }
-
+  .container,
   .containerDark {
     grid-template-columns: 500px calc(100vw - 517px);
   }
@@ -149,11 +141,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
+  .container,
   .containerDark {
     display: flex;
     flex-direction: column;
