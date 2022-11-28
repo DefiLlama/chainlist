@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torus Wallet Integration</title>
+  </head>
+  <body>
+    <h1>Torus Wallet Integration</h1>
+    <div>
+      <p id="text">Loading...</p>
+      <p id="error"></p>
+      <p id="address"></p>
+      <p id="balance"></p>
+      <button id="login">Login</button>
+      <button id="logout">Logout</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@toruslabs/torus-embed"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js"></script>
+    <script>
+      (async function init() {
+        $("#login").hide();
+        $("#logout").hide();
+
+        const torus = new Torus();
+        window.torus = torus;
+
+        await torus.init(/*
+        // (Optional) Initialization options
+        {
+          // Customize login providers
+          loginConfig: {
+            google: {
+              clientId: "<YOUR GOOGLE CLIENT ID>",
+              ...
+            }
+          },
+          // Customize brand logo, colors, and translations
+          whitelabel: {
+            theme: {
+              isDark: false,
+              colors: {
+                torusBrand1: "#282c34",
+              },
+            },
+            defaultLanguage: "en",
+            logoDark: "https://tkey.surge.sh/images/Device.svg", // Dark logo for light background
+            logoLight: "https://tkey.surge.sh/images/Device.svg", // Light logo for dark background
+          }
+        }
+        */);
+
+        try {
+          const user = await torus.getUserInfo();
+          $("#text").text("Logged in as " + user.name + ".");
+          $("#logout").show();
+          await initWeb3();
+        } catch (error) {
+          $("#text").text("Didn't log in.");
+          $("#login").show();
+        }
+      })();
+
+      async function initWeb3() {
+        const web3 = new Web3(window.torus.provider);
+        const address = (await web3.eth.getAccounts())[0];
+        const balance = await web3.eth.getBalance(address);
+        $("#address").text("Address: " + address + ".");
+        $("#balance").text("Balance: " + balance + ".");
+      }
+
+      $("#login").click(function (event) {
+        window.torus
+          .login()
+          .then(function () {
+            return initWeb3();
+          })
+          .then(function () {
+            return window.torus.getUserInfo();
+          })
+          .then(function (user) {
+            $("#text").text("Logged in as " + user.name + ".");
+            $("#error").hide();
+            $("#logout").show();
+            $("#login").hide();
+          })
+          .catch(function (err) {
+            $("#error").text(err.message);
+          });
+      });
+
+      $("#logout").click(function (event) {
+        window.torus
+          .logout()
+          .then(function (res) {
+            $("#text").text("Logged out.");
+            $("#address").text("");
+            $("#balance").text("");
+            $("#login").show();
+            $("#logout").hide();
+          })
+          .catch(function (err) {
+            $("#error").text(err.message);
+          });
+      });
+    </script>
+  </body>
+</html>
