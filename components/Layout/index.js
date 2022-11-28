@@ -5,11 +5,10 @@ import Header from "../header";
 import styles from "../../styles/Home.module.css";
 import classes from "./index.module.css";
 import { useTranslations } from "next-intl";
+import Logo from "./Logo";
 
 export default function Layout({ changeTheme, theme, children }) {
   const t = useTranslations("Common");
-
-  const url = "/logo.svg";
 
   return (
     <div className={styles.container}>
@@ -23,15 +22,7 @@ export default function Layout({ changeTheme, theme, children }) {
         >
           <div className={classes.copyContainer}>
             <div className={classes.copyCentered}>
-              <img
-                style={{
-                  width: "100%",
-                  maxWidth: "360px",
-                  marginLeft: "-15px",
-                }}
-                src={url}
-                alt="Chainlist logo"
-              />
+              <Logo />
 
               <Typography variant="h2" className={classes.helpingParagraph}>
                 {t("help-info")}

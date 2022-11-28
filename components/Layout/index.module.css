@@ -195,8 +195,10 @@
     max-width: 100vw;
   }
   .copyCentered {
+    align-items: center;
     max-width: 100vw;
   }
+
   .subTitle {
     padding: 0 10px;
   }
