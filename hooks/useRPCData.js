@@ -2,6 +2,8 @@ import { useCallback } from 'react';
 import { useQueries } from 'react-query';
 import axios from 'axios';
 
+const refetchInterval = 60000
+
 export const rpcBody = JSON.stringify({
   jsonrpc: '2.0',
   method: 'eth_getBlockByNumber',
@@ -62,7 +64,7 @@ const useHttpQuery = (url) => {
   return {
     queryKey: [url],
     queryFn: () => fetchChain(url),
-    refetchInterval: 5000,
+    refetchInterval,
     select: useCallback((data) => formatData(url, data), []),
   };
 };
@@ -115,12 +117,12 @@ const useSocketQuery = (url) => {
     queryKey: [url],
     queryFn: () => fetchWssChain(url),
     select: useCallback((data) => formatData(url, data), []),
-    refetchInterval: 5000,
+    refetchInterval,
   };
 };
 
 const useRPCData = (urls) => {
-  const queries = urls.map((url) => (url.includes('wss://') ? useSocketQuery(url) : useHttpQuery(url)));
+  const queries = urls.map((url) => (url.url.includes('wss://') ? useSocketQuery(url.url) : useHttpQuery(url.url)));
   return useQueries(queries);
 };
 

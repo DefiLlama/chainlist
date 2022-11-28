@@ -8,6 +8,7 @@ import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { useTranslations } from "next-intl";
 
 export default function RPCList({ chain }) {
+  const urlToData = chain.rpc.reduce((all, c)=>({...all, [c.url]: c}), {})
   const chains = useRPCData(chain.rpc);
 
   const data = useMemo(() => {
@@ -84,6 +85,19 @@ export default function RPCList({ chain }) {
 
   return (
     <Paper elevation={1} className={classes.disclosure}>
+      {isEthMainnet && (
+        <p className={classes.helperText}>
+          Follow{" "}
+          <a
+            href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            this guide
+          </a>{" "}
+          to change RPC endpoint's of Ethereum Mainnet
+        </p>
+      )}
       <table
         className={classes.table}
         style={{
@@ -99,6 +113,7 @@ export default function RPCList({ chain }) {
             <th>Height</th>
             <th>Latency</th>
             <th>Score</th>
+            <th>Privacy</th>
             <th></th>
           </tr>
         </thead>
@@ -109,23 +124,11 @@ export default function RPCList({ chain }) {
               chain={chain}
               isEthMainnet={isEthMainnet}
               key={index}
+              privacy={urlToData[item.data.url]}
             />
           ))}
         </tbody>
       </table>
-      {isEthMainnet && (
-        <p className={classes.helperText}>
-          Follow{" "}
-          <a
-            href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            this
-          </a>{" "}
-          guide to change RPC endpoint's of Ethereum Mainnet
-        </p>
-      )}
     </Paper>
   );
 }
@@ -145,7 +148,19 @@ const Shimmer = () => {
   );
 };
 
-const Row = ({ values, chain, isEthMainnet }) => {
+function privacyColor(privacy){
+  switch(privacy?.tracking){
+    case "yes":
+      return "red";
+    case "limited":
+      return "orange";
+    case "none":
+      return "green";
+  }
+  return "transparent";
+}
+
+const Row = ({ values, chain, isEthMainnet, privacy }) => {
   const t = useTranslations("Common");
   const { data, isLoading, refetch } = values;
 
@@ -171,6 +186,13 @@ const Row = ({ values, chain, isEthMainnet }) => {
         style={{ "--trust-color": data?.trust ?? "transparent" }}
       >
         {isLoading ? <Shimmer /> : <FiberManualRecordIcon />}
+      </td>
+      <td
+        className={classes.trustScore}
+        style={{ "--trust-color": privacyColor(privacy) }}
+        title={privacy?.trackingDetails}
+      >
+        <FiberManualRecordIcon />
       </td>
       <td>
         {isLoading ? (

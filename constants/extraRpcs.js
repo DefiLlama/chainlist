@@ -1,31 +1,75 @@
-{
+export default {
     "1": {
         "rpcs": [
-            "https://eth-mainnet.g.alchemy.com/v2/demo",
-            "https://api.mycryptoapi.com/eth",
-            "https://rpc.flashbots.net/",
-            "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
-            "https://cloudflare-eth.com/",
-            "https://mainnet-nethermind.blockscout.com/",
-            "https://nodes.mewapi.io/rpc/eth",
-            "https://main-rpc.linkpool.io/",
-            "https://mainnet.eth.cloud.ava.do/",
-            "https://ethereumnodelight.app.runonflux.io",
-            "https://rpc.ankr.com/eth",
-            "https://eth-rpc.gateway.pokt.network",
-            "https://main-light.eth.linkpool.io",
-            "https://eth-mainnet.public.blastapi.io",
-            "http://18.211.207.34:8545",
+            {
+                url: "https://eth-mainnet.g.alchemy.com/v2/demo",
+                tracking: "yes",
+                trackingDetails: "Tracks IP, cookies, mobile carrier, browser & device info, location and ISP"
+            },
+            // Moralis -> tracks IP
+            // Quicknode -> tracks IP
+            {
+                url: "https://rpc.ankr.com/eth",
+                tracking: "unspecified",
+            },
+            {
+                url: "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
+                tracking: "none",
+            },
+            {
+                url: "https://ethereum.publicnode.com",
+                tracking: "limited",
+                trackingDetails: "From their policy: We try limit the amount of personal information we collect and store.  We may use various tracking and monitoring software that help us better understand how people are using our website. This tracking and monitoring is done without mapping that information to a particular person. Our website also uses cookies with the intent to provide a better user experience",
+            },
+            {
+                url: "https://1rpc.io/eth",
+                tracking: "none",
+            },
+            {
+                url: "https://rpc.flashbots.net/",
+                tracking: "yes",
+                trackingDetails: "Tracks IP address, device information, geolocation, signature, nationality and details relating to your Relay activity."
+            },
+            {
+                url: "https://cloudflare-eth.com/",
+                tracking: "yes",
+            },
+            // RPC Fast -> Tracks IP
+            {
+                url: "https://eth-mainnet.public.blastapi.io",
+                tracking: "yes",
+            },
+            {
+                url: "https://api.securerpc.com/v1",
+                tracking: "unspecified",
+            },
+            {
+                url: "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
+                tracking: "yes",
+            },
+            {
+                url: "https://eth-rpc.gateway.pokt.network",
+                tracking: "limited",
+                trackingDetails: "Information Automatically Collected. We automatically log information about you and your computer. For example, when visiting our Site, we log your computer operating system type, browser type, browser language, the website you visited before browsing to our Site, pages you viewed, how long you spent on a page, access times and information about your use of and actions on our Site"
+            },
+            {
+                url: "https://eth-mainnet-public.unifra.io",
+                tracking: "unspecified"
+            },
             "http://127.0.0.1:8545",
-            "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
-            "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
-            "https://eth-mainnet-public.unifra.io",
-            "https://1rpc.io/eth",
-            "https://eth-mainnet.rpcfast.com",
-            "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-            "https://api.securerpc.com/v1",
-            "https://ethereum.publicnode.com",
-            "https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/"
+            
+            //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
+            //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
+            //"https://api.mycryptoapi.com/eth",
+            //"https://mainnet-nethermind.blockscout.com/",
+            //"https://nodes.mewapi.io/rpc/eth",
+            //"https://main-rpc.linkpool.io/",
+            //"https://mainnet.eth.cloud.ava.do/",
+            //"https://ethereumnodelight.app.runonflux.io",
+            //"https://eth-mainnet.rpcfast.com",
+            //"https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+            //"http://18.211.207.34:8545",
+            //"https://main-light.eth.linkpool.io",
         ]
     },
     "2": {

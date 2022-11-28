@@ -4,23 +4,12 @@ import AddIcon from "@material-ui/icons/Add";
 import Header from "../header";
 import styles from "../../styles/Home.module.css";
 import classes from "./index.module.css";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function Layout({ changeTheme, theme, children }) {
   const t = useTranslations("Common");
-  const addNetwork = () => {
-    window.open("https://github.com/ethereum-lists/chains", "_blank");
-  };
 
-  const addRpc = () => {
-    window.open(
-      "https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.json",
-      "_blank"
-    );
-  };
-
-  const url = '/logo.svg'
+  const url = "/logo.svg";
 
   return (
     <div className={styles.container}>
@@ -34,10 +23,15 @@ export default function Layout({ changeTheme, theme, children }) {
         >
           <div className={classes.copyContainer}>
             <div className={classes.copyCentered}>
-            <img style={{
-                width: '360px',
-                marginLeft: '-15px',
-              }} src={url} alt="Chainlist logo" />
+              <img
+                style={{
+                  width: "100%",
+                  maxWidth: "360px",
+                  marginLeft: "-15px",
+                }}
+                src={url}
+                alt="Chainlist logo"
+              />
 
               <Typography variant="h2" className={classes.helpingParagraph}>
                 {t("help-info")}
@@ -46,11 +40,14 @@ export default function Layout({ changeTheme, theme, children }) {
                 {t("description")}
               </Typography>
               <Button
+                as="a"
                 size="large"
                 color="primary"
                 variant="contained"
                 className={classes.addNetworkButton}
-                onClick={addNetwork}
+                href="https://github.com/ethereum-lists/chains"
+                target="_blank"
+                rel="noopener noreferrer"
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>
@@ -58,11 +55,14 @@ export default function Layout({ changeTheme, theme, children }) {
                 </Typography>
               </Button>
               <Button
+                as="a"
                 size="large"
                 color="primary"
                 variant="outlined"
                 className={classes.addRpcButton}
-                onClick={addRpc}
+                href="https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js"
+                target="_blank"
+                rel="noopener noreferrer"
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>

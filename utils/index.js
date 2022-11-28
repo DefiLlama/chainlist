@@ -2,7 +2,7 @@ import BigNumber from "bignumber.js";
 import { useState, useEffect } from "react";
 import stores from "../stores";
 import { ERROR, TRY_CONNECT_WALLET } from "../stores/constants/constants";
-import allExtraRpcs from "../constants/extraRpcs.json";
+import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.js";
 
 // todo: get navigator declared somehow? probably an issue with using nextjs
@@ -114,7 +114,7 @@ export const addToNetwork = (account, chain, rpc) => {
       symbol: chain.nativeCurrency.symbol, // 2-6 characters long
       decimals: chain.nativeCurrency.decimals,
     },
-    rpcUrls: rpc ? [rpc] : chain.rpc,
+    rpcUrls: rpc ? [rpc] : chain.rpc.map(r=>r.url),
     blockExplorerUrls: [
       chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
         ? chain.explorers[0].url
@@ -138,6 +138,19 @@ export const addToNetwork = (account, chain, rpc) => {
   });
 };
 
+function removeEndingSlashObject(rpc) {
+  if(typeof rpc === "string"){
+    return {
+      url: removeEndingSlash(rpc)
+    }
+  } else {
+    return {
+      ...rpc,
+      url: removeEndingSlash(rpc.url)
+    }
+  }
+}
+
 function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
@@ -146,15 +159,20 @@ export function populateChain(chain, chainTvls) {
   const extraRpcs = allExtraRpcs[chain.chainId]?.rpcs;
 
   if (extraRpcs !== undefined) {
-    const rpcs = new Set(
-      chain.rpc
-        .map(removeEndingSlash)
-        .filter((rpc) => !rpc.includes("${INFURA_API_KEY}"))
-    );
+    const rpcs = extraRpcs.map(removeEndingSlashObject)
+    
+    chain.rpc
+      .filter((rpc) => !rpc.includes("${INFURA_API_KEY}"))
+      .forEach((rpc) => {
+        const rpcObj = removeEndingSlashObject(rpc)
+        if(rpcs.find(r=>r.url === rpcObj.url) === undefined){
+          rpcs.push(rpcObj)
+        }
+      });
 
-    extraRpcs.forEach((rpc) => rpcs.add(removeEndingSlash(rpc)));
-
-    chain.rpc = Array.from(rpcs);
+    chain.rpc = rpcs;
+  } else {
+    chain.rpc = chain.rpc.map(removeEndingSlashObject);
   }
 
   const chainSlug = chainIds[chain.chainId];
