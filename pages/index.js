@@ -64,7 +64,6 @@ function Home({ changeTheme, theme, sortedChains }) {
             ? chains
             : chains.filter((chain) => {
                 //filter
-                console.log(search)
                 return (
                   chain.chain.toLowerCase().includes(search.toLowerCase()) ||
                   chain.chainId
