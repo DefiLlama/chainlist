@@ -316,7 +316,7 @@ export default {
         "rpcs": [
             "https://forno.celo.org",
             "https://rpc.ankr.com/celo",
-           {
+            {
                 url: "https://1rpc.io/celo",
                 tracking: "none",
             },
