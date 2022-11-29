@@ -159,7 +159,11 @@ export default {
             "https://bsc-mainnet.rpcfast.com",
             "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
             "https://bsc-mainnet.public.blastapi.io",
-            "https://nodes.vefinetwork.org/smartchain"
+            "https://nodes.vefinetwork.org/smartchain",
+            {
+                url: "https://1rpc.io/bnb",
+                tracking: "none",
+            }
         ]
     },
     "97": {
@@ -180,8 +184,11 @@ export default {
             "https://rpc.ankr.com/avalanche",
             "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
             "https://avalancheapi.terminet.io/ext/bc/C/rpc",
-            "https://1rpc.io/avax/c",
-            "https://avalanche-evm.publicnode.com"
+            "https://avalanche-evm.publicnode.com",
+            {
+                url: "https://1rpc.io/eth",
+                tracking: "none",
+            },
         ]
     },
     "250": {
@@ -193,7 +200,11 @@ export default {
             "https://rpc2.fantom.network",
             "https://rpc3.fantom.network",
             "https://rpcapi.fantom.network",
-            "https://fantom-mainnet.public.blastapi.io"
+            "https://fantom-mainnet.public.blastapi.io",
+            {
+                url: "https://1rpc.io/ftm",
+                tracking: "none",
+            },
         ]
     },
     "137": {
@@ -215,7 +226,11 @@ export default {
             "https://polygon-mainnet.rpcfast.com",
             "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
             "https://polygon-bor.publicnode.com",
-            "https://polygon-mainnet-public.unifra.io"
+            "https://polygon-mainnet-public.unifra.io",
+            {
+                url: "https://1rpc.io/matic",
+                tracking: "none",
+            },
         ]
     },
     "25": {
@@ -236,7 +251,10 @@ export default {
             "https://arb-mainnet.g.alchemy.com/v2/demo",
             "https://arb1.arbitrum.io/rpc",
             "https://rpc.ankr.com/arbitrum",
-            "https://1rpc.io/arb",
+            {
+                url: "https://1rpc.io/arb",
+                tracking: "none",
+            },
             "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}"
         ]
     },
@@ -297,7 +315,11 @@ export default {
     "42220": {
         "rpcs": [
             "https://forno.celo.org",
-            "https://rpc.ankr.com/celo"
+            "https://rpc.ankr.com/celo",
+           {
+                url: "https://1rpc.io/celo",
+                tracking: "none",
+            },
         ]
     },
     "10": {
@@ -306,7 +328,10 @@ export default {
             "https://mainnet.optimism.io/",
             "https://optimism-mainnet.public.blastapi.io",
             "https://rpc.ankr.com/optimism",
-            "https://1rpc.io/op"
+            {
+                url: "https://1rpc.io/op",
+                tracking: "none",
+            },
         ]
     },
     "420": {
@@ -390,7 +415,10 @@ export default {
             "https://rpc.api.moonbeam.network",
             "https://moonbeam.public.blastapi.io",
             "https://rpc.ankr.com/moonbeam",
-            "https://1rpc.io/glmr"
+            {
+                url: "https://1rpc.io/glmr",
+                tracking: "none",
+            },
         ]
     },
     "30": {
@@ -470,7 +498,10 @@ export default {
             "https://rpc.astar.network:8545",
             "https://astar.public.blastapi.io",
             "https://evm.astar.network/",
-            "https://1rpc.io/astr"
+            {
+                url: "https://1rpc.io/astr",
+                tracking: "none",
+            },
         ]
     },
     "71394": {
