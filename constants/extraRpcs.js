@@ -155,7 +155,6 @@ export default {
             "https://binance.nodereal.io",
             "https://rpc-bsc.bnb48.club",
             "https://bscapi.terminet.io/rpc",
-            "https://1rpc.io/bnb",
             "https://bsc-mainnet.rpcfast.com",
             "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
             "https://bsc-mainnet.public.blastapi.io",
@@ -186,7 +185,7 @@ export default {
             "https://avalancheapi.terminet.io/ext/bc/C/rpc",
             "https://avalanche-evm.publicnode.com",
             {
-                url: "https://1rpc.io/eth",
+                url: "https://1rpc.io/avax/c",
                 tracking: "none",
             },
         ]
@@ -222,7 +221,6 @@ export default {
             "https://rpc-mainnet.maticvigil.com/",
             "https://polygon-mainnet.public.blastapi.io",
             "https://polygonapi.terminet.io/rpc",
-            "https://1rpc.io/matic",
             "https://polygon-mainnet.rpcfast.com",
             "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
             "https://polygon-bor.publicnode.com",
