@@ -13,6 +13,7 @@
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
+    "@web3auth/modal": "^3.1.0",
     "axios": "^0.26.1",
     "fathom-client": "^3.4.1",
     "flux": "^4.0.1",
