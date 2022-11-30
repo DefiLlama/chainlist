@@ -32,6 +32,18 @@ export default {
                 trackingDetails: "Tracks IP address, device information, geolocation, signature, nationality and details relating to your Relay activity."
             },
             {
+                url: "https://virginia.rpc.blxrbdn.com/",
+                tracking: "unspecified"
+            },
+            {
+                url: "https://uk.rpc.blxrbdn.com/",
+                tracking: "unspecified"
+            },
+            {
+                url: "https://singapore.rpc.blxrbdn.com/",
+                tracking: "unspecified"
+            },
+            {
                 url: "https://cloudflare-eth.com/",
                 tracking: "yes",
             },
