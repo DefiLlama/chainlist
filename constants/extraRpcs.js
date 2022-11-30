@@ -163,7 +163,7 @@ export default {
             {
                 url: "https://1rpc.io/bnb",
                 tracking: "none",
-            },
+            }
         ]
     },
     "97": {
@@ -188,7 +188,7 @@ export default {
             {
                 url: "https://1rpc.io/avax/c",
                 tracking: "none",
-            },
+            }
         ]
     },
     "250": {
@@ -204,7 +204,7 @@ export default {
             {
                 url: "https://1rpc.io/ftm",
                 tracking: "none",
-            },
+            }
         ]
     },
     "137": {
@@ -318,7 +318,7 @@ export default {
             {
                 url: "https://1rpc.io/celo",
                 tracking: "none",
-            },
+            }
         ]
     },
     "10": {
@@ -330,7 +330,7 @@ export default {
             {
                 url: "https://1rpc.io/op",
                 tracking: "none",
-            },
+            }
         ]
     },
     "420": {
@@ -417,7 +417,7 @@ export default {
             {
                 url: "https://1rpc.io/glmr",
                 tracking: "none",
-            },
+            }
         ]
     },
     "30": {
@@ -500,7 +500,7 @@ export default {
             {
                 url: "https://1rpc.io/astr",
                 tracking: "none",
-            },
+            }
         ]
     },
     "71394": {
