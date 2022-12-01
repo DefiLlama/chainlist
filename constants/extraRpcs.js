@@ -33,19 +33,23 @@ export default {
             },
             {
                 url: "https://virginia.rpc.blxrbdn.com/",
-                tracking: "unspecified"
+                tracking: "yes",
+                trackingDetails: "We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error)"
             },
             {
                 url: "https://uk.rpc.blxrbdn.com/",
-                tracking: "unspecified"
+                tracking: "yes",
+                trackingDetails: "We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error)"
             },
             {
                 url: "https://singapore.rpc.blxrbdn.com/",
-                tracking: "unspecified"
+                tracking: "yes",
+                trackingDetails: "We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error)"
             },
             {
                 url: "https://cloudflare-eth.com/",
                 tracking: "yes",
+                trackingDetails: " Just as when you visit and interact with most websites and services delivered via the Internet, when you visit our Websites, including the Cloudflare Community Forum, we gather certain information and store it in log files. This information may include but is not limited to Internet Protocol (IP) addresses, system configuration information, URLs of referring pages, and locale and language preferences"
             },
             // RPC Fast -> Tracks IP
             {
