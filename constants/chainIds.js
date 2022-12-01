@@ -44,6 +44,7 @@
   1234: "step",
   1284: "moonbeam",
   1285: "moonriver",
+  1717: "doric",
   2000: "dogechain",
   2020: "ronin",
   2222: "kava",
