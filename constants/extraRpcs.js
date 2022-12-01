@@ -76,7 +76,8 @@ export default {
             // Distributed cluster of Ethereum nodes designed for speed and anonymity!
             {
                 url: "https://api.zmok.io/mainnet/oaen6dy8ff6hju9k",
-                tracking: "none",
+                tracking: "yes",
+                trackingDetails: `We may also collect information on how the Service is accessed and used (“Usage Data”). This Usage Data may include information such as your computer’s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.`
             },
             "http://127.0.0.1:8545",
             
