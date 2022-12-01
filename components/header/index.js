@@ -191,6 +191,7 @@ function Header(props) {
       Metamask: "metamask",
       imToken: "imtoken",
       Wallet: "metamask",
+      "Trust Wallet": "trust"
     };
     return providerLogoList[getProvider()];
   };

@@ -213,7 +213,7 @@ function MyComponent(props) {
           url = '/connectors/walletConnectIcon.svg'
           descriptor= 'Scan with WalletConnect to connect'
         } else if (name === 'TrustWallet') {
-          url = '/connectors/trustWallet.png'
+          url = '/connectors/icn-trust.svg'
           descriptor= 'Connect to your TrustWallet'
         } else if (name === 'Portis') {
           url = '/connectors/portisIcon.png'

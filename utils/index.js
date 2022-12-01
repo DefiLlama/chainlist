@@ -54,6 +54,7 @@ export function getProvider() {
     if (window.ethereum.isBraveWallet) return "Brave Wallet";
     if (window.ethereum.isMetaMask) return "Metamask";
     if (window.ethereum.isImToken) return "imToken";
+    if (window.ethereum.isTrust) return "Trust Wallet";
   }
   return "Wallet";
 }
@@ -88,7 +89,8 @@ export const renderProviderText = (account) => {
       imToken: "add-to-imToken",
       Wallet: "add-to-wallet",
       "Brave Wallet": "add-to-brave",
-      "Coinbase Wallet": "add-to-coinbase"
+      "Coinbase Wallet": "add-to-coinbase",
+      "Trust Wallet": "add-to-trust"
     };
     return providerTextList[getProvider()];
   } else {
