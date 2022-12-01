@@ -1009,6 +1009,11 @@ export default {
             "https://dataseed1.btachain.com/"
         ]
     },
+    "1717": {
+        "rpcs": [
+            "https://mainnet.doric.network"
+        ]
+    },
     "1856": {
         "rpcs": [
             "rpcWorking:false"
