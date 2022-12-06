@@ -27,6 +27,10 @@ export default {
                 tracking: "none",
             },
             {
+                url: "https://rpc.builder0x69.io/",
+                tracking: "none",
+            },
+            {
                 url: "https://rpc.flashbots.net/",
                 tracking: "none",
             },
@@ -65,8 +69,7 @@ export default {
             },
             {
                 url: "https://eth-rpc.gateway.pokt.network",
-                tracking: "limited",
-                trackingDetails: "Information Automatically Collected. We automatically log information about you and your computer. For example, when visiting our Site, we log your computer operating system type, browser type, browser language, the website you visited before browsing to our Site, pages you viewed, how long you spent on a page, access times and information about your use of and actions on our Site"
+                tracking: "none",
             },
             {
                 url: "https://eth-mainnet-public.unifra.io",
