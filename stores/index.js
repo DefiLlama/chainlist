@@ -1,8 +1,8 @@
-import AccountStore from './accountStore';
-import create from 'zustand';
+import AccountStore from "./accountStore";
+import create from "zustand";
 
-const Dispatcher = require('flux').Dispatcher;
-const Emitter = require('events').EventEmitter;
+const Dispatcher = require("flux").Dispatcher;
+const Emitter = require("events").EventEmitter;
 
 const dispatcher = new Dispatcher();
 const emitter = new Emitter();
@@ -15,13 +15,8 @@ export default {
   emitter: emitter,
 };
 
-export const useTestnets = create((set) => ({
-  testnets: false,
-  toggleTestnets: () => set((state) => ({ testnets: !state.testnets })),
-}));
-
 export const useSearch = create((set) => ({
-  search: '',
+  search: "",
   handleSearch: (text) => set(() => ({ search: text })),
 }));
 
