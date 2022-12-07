@@ -5,14 +5,6 @@ import { ERROR, TRY_CONNECT_WALLET } from "../stores/constants/constants";
 import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.js";
 
-// todo: get navigator declared somehow? probably an issue with using nextjs
-// function getLang() {
-//  if (window.navigator.languages != undefined)
-//   return window.navigator.languages[0];
-//  else
-//   return window.navigator.language;
-// }
-
 export function formatCurrency(amount, decimals = 2) {
   if (!isNaN(amount)) {
     const formatter = new Intl.NumberFormat(undefined, {
@@ -50,7 +42,11 @@ export function bnDec(decimals) {
 
 export function getProvider() {
   if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
-    if (window.ethereum.isCoinbaseWallet || window.ethereum.selectedProvider?.isCoinbaseWallet) return "Coinbase Wallet";
+    if (
+      window.ethereum.isCoinbaseWallet ||
+      window.ethereum.selectedProvider?.isCoinbaseWallet
+    )
+      return "Coinbase Wallet";
     if (window.ethereum.isBraveWallet) return "Brave Wallet";
     if (window.ethereum.isMetaMask) return "Metamask";
     if (window.ethereum.isImToken) return "imToken";
@@ -90,7 +86,7 @@ export const renderProviderText = (account) => {
       Wallet: "add-to-wallet",
       "Brave Wallet": "add-to-brave",
       "Coinbase Wallet": "add-to-coinbase",
-      "Trust Wallet": "add-to-trust"
+      "Trust Wallet": "add-to-trust",
     };
     return providerTextList[getProvider()];
   } else {
@@ -116,7 +112,7 @@ export const addToNetwork = (account, chain, rpc) => {
       symbol: chain.nativeCurrency.symbol, // 2-6 characters long
       decimals: chain.nativeCurrency.decimals,
     },
-    rpcUrls: rpc ? [rpc] : chain.rpc.map(r=>r.url),
+    rpcUrls: rpc ? [rpc] : chain.rpc.map((r) => r.url),
     blockExplorerUrls: [
       chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
         ? chain.explorers[0].url
@@ -141,15 +137,15 @@ export const addToNetwork = (account, chain, rpc) => {
 };
 
 function removeEndingSlashObject(rpc) {
-  if(typeof rpc === "string"){
+  if (typeof rpc === "string") {
     return {
-      url: removeEndingSlash(rpc)
-    }
+      url: removeEndingSlash(rpc),
+    };
   } else {
     return {
       ...rpc,
-      url: removeEndingSlash(rpc.url)
-    }
+      url: removeEndingSlash(rpc.url),
+    };
   }
 }
 
@@ -161,14 +157,14 @@ export function populateChain(chain, chainTvls) {
   const extraRpcs = allExtraRpcs[chain.chainId]?.rpcs;
 
   if (extraRpcs !== undefined) {
-    const rpcs = extraRpcs.map(removeEndingSlashObject)
-    
+    const rpcs = extraRpcs.map(removeEndingSlashObject);
+
     chain.rpc
       .filter((rpc) => !rpc.includes("${INFURA_API_KEY}"))
       .forEach((rpc) => {
-        const rpcObj = removeEndingSlashObject(rpc)
-        if(rpcs.find(r=>r.url === rpcObj.url) === undefined){
-          rpcs.push(rpcObj)
+        const rpcObj = removeEndingSlashObject(rpc);
+        if (rpcs.find((r) => r.url === rpcObj.url) === undefined) {
+          rpcs.push(rpcObj);
         }
       });
 

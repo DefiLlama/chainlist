@@ -22,8 +22,8 @@ function Header() {
       const accountStore = stores.accountStore.getStore("account");
       setAccount(accountStore);
     };
+
     const connectWallet = () => {
-      onAddressClicked();
       stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET });
     };
 
@@ -43,7 +43,7 @@ function Header() {
     stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET });
   };
 
-  const { testnets, testnet } = router.query;
+  const { testnets, testnet, search } = router.query;
 
   const includeTestnets =
     (typeof testnets === "string" && testnets === "true") ||
@@ -65,6 +65,13 @@ function Header() {
 
   useEffect(() => {
     const handler = setTimeout(() => {
+      if (
+        (!debouncedSearchTerm || debouncedSearchTerm === "") &&
+        (!search || search === "")
+      ) {
+        return;
+      }
+
       router.push(
         {
           pathname: router.pathname,
@@ -73,7 +80,7 @@ function Header() {
         undefined,
         { shallow: true }
       );
-    }, 300);
+    }, 200);
 
     return () => {
       clearTimeout(handler);
