@@ -207,10 +207,10 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
       <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
         {isLoading ? <Shimmer /> : data?.url}
       </td>
-      <td className="border px-3 text-sm py-1">
+      <td className="border text-center px-3 text-sm py-1">
         {isLoading ? <Shimmer /> : data?.height}
       </td>
-      <td className="border px-3 text-sm py-1">
+      <td className="border text-center px-3 text-sm py-1">
         {isLoading ? <Shimmer /> : data?.latency}
       </td>
       <td className="border px-3 text-sm py-1">
@@ -231,7 +231,7 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
       <td className="border px-3 text-sm py-1" title={privacy?.trackingDetails}>
         {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
       </td>
-      <td className="border px-3 text-sm py-1">
+      <td className="border px-3 text-sm py-1 text-center">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -241,7 +241,7 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
             ) : (
               !data.disableConnect && (
                 <button
-                  className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px]"
+                  className="px-2 py-[2px] -my-[2px] text-center text-sm hover:bg-[#EAEAEA] rounded-[50px]"
                   onClick={() =>
                     addToNetwork({ address, chain, rpc: data?.url })
                   }
@@ -260,7 +260,7 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
 const CopyUrl = ({ url = "" }) => {
   return (
     <button
-      className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px]"
+      className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px] mx-auto"
       onClick={() => navigator.clipboard.writeText(url)}
     >
       Copy URL
