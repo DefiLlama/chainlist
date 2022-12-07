@@ -1,23 +1,23 @@
-import { useCallback } from 'react';
-import { useQueries } from 'react-query';
-import axios from 'axios';
+import { useCallback } from "react";
+import { useQueries } from "@tanstack/react-query";
+import axios from "axios";
 
-const refetchInterval = 60000
+const refetchInterval = 60000;
 
 export const rpcBody = JSON.stringify({
-  jsonrpc: '2.0',
-  method: 'eth_getBlockByNumber',
-  params: ['latest', false],
+  jsonrpc: "2.0",
+  method: "eth_getBlockByNumber",
+  params: ["latest", false],
   id: 1,
 });
 
 const fetchChain = async (baseURL) => {
-  if (baseURL.includes('API_KEY')) return null;
+  if (baseURL.includes("API_KEY")) return null;
   try {
     let API = axios.create({
       baseURL,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
 
@@ -40,7 +40,7 @@ const fetchChain = async (baseURL) => {
       }
     );
 
-    let { data, latency } = await API.post('', rpcBody);
+    let { data, latency } = await API.post("", rpcBody);
 
     return { ...data, latency };
   } catch (error) {
@@ -122,8 +122,14 @@ const useSocketQuery = (url) => {
 };
 
 const useRPCData = (urls) => {
-  const queries = urls.map((url) => (url.url.includes('wss://') ? useSocketQuery(url.url) : useHttpQuery(url.url)));
-  return useQueries(queries);
+  const queries =
+    urls?.map((url) =>
+      url.url.includes("wss://")
+        ? useSocketQuery(url.url)
+        : useHttpQuery(url.url)
+    ) ?? [];
+
+  return useQueries({ queries });
 };
 
 export default useRPCData;

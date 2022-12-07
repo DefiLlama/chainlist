@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import { useRouter } from "next/router";
 import * as Fathom from "fathom-client";
-import { QueryClientProvider, QueryClient } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { NextIntlProvider } from "next-intl";
-import stores from "../stores/index.js";
-import { CONFIGURE } from "../stores/constants";
 import "../styles/globals.css";
 
 function App({ Component, pageProps }) {
-  const [queryClient] = useState(() => new QueryClient());
+  const [queryClient] = React.useState(() => new QueryClient());
 
   const router = useRouter();
 
-  useEffect(function () {
-    stores.dispatcher.dispatch({ type: CONFIGURE });
-  }, []);
-
-  useEffect(() => {
+  React.useEffect(() => {
     Fathom.load("TKCNGGEZ", {
       includedDomains: ["chainlist.defillama.com", "chainlist.org"],
       url: "https://surprising-powerful.llama.fi/script.js",
@@ -41,8 +34,6 @@ function App({ Component, pageProps }) {
         <Component {...pageProps} />
         {/* <SnackbarController /> */}
       </NextIntlProvider>
-
-      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }

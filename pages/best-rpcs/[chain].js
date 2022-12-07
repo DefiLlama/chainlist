@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Head from "next/head";
 import { populateChain, fetcher } from "../../utils";
 import chainIds from "../../constants/chainIds";

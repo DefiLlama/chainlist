@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import * as React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,7 +58,7 @@ export async function getStaticPaths() {
 function Chain({ chain }) {
   const t = useTranslations("Common");
 
-  const icon = useMemo(() => {
+  const icon = React.useMemo(() => {
     return chain?.chainSlug
       ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
       : "/unknown-logo.png";
@@ -104,10 +104,12 @@ function Chain({ chain }) {
               </tr>
             </thead>
             <tbody>
-              <td className="text-center font-bold px-4">{chain.chainId}</td>
-              <td className="text-center font-bold px-4">
-                {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
-              </td>
+              <tr>
+                <td className="text-center font-bold px-4">{chain.chainId}</td>
+                <td className="text-center font-bold px-4">
+                  {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
+                </td>
+              </tr>
             </tbody>
           </table>
 

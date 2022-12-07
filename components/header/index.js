@@ -1,47 +1,16 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import {
-  CONNECT_WALLET,
-  TRY_CONNECT_WALLET,
-  ACCOUNT_CONFIGURED,
-} from "../../stores/constants/constants";
-import stores from "../../stores";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
+import useConnect from "../../hooks/useConnect";
+import useAccount from "../../hooks/useAccount";
 
 function Header() {
   const t = useTranslations("Common");
-  const [account, setAccount] = useState(null);
 
   const router = useRouter();
-
-  useEffect(() => {
-    const accountConfigure = () => {
-      const accountStore = stores.accountStore.getStore("account");
-      setAccount(accountStore);
-    };
-
-    const connectWallet = () => {
-      stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET });
-    };
-
-    stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure);
-    stores.emitter.on(CONNECT_WALLET, connectWallet);
-
-    const accountStore = stores.accountStore.getStore("account");
-    setAccount(accountStore);
-
-    return () => {
-      stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure);
-      stores.emitter.removeListener(CONNECT_WALLET, connectWallet);
-    };
-  }, []);
-
-  const onAddressClicked = () => {
-    stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET });
-  };
 
   const { testnets, testnet, search } = router.query;
 
@@ -59,11 +28,11 @@ function Header() {
       { shallow: true }
     );
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handler = setTimeout(() => {
       if (
         (!debouncedSearchTerm || debouncedSearchTerm === "") &&
@@ -86,6 +55,12 @@ function Header() {
       clearTimeout(handler);
     };
   }, [debouncedSearchTerm]);
+
+  const { mutate: connectWallet } = useConnect();
+
+  const { data: accountData } = useAccount();
+
+  const address = accountData?.address ?? null;
 
   return (
     <div className="sticky top-0 z-50 rounded-[10px] bg-[#f3f3f3] p-5 -m-5">
@@ -131,16 +106,16 @@ function Header() {
 
             <button
               className="flex gap-2 items-center bg-[#DEDEDE] rounded-[10px] py-[8px] px-8 font-medium text-black"
-              onClick={onAddressClicked}
+              onClick={connectWallet}
             >
-              {account && account.address ? (
+              {address ? (
                 <>
                   <Image
                     src={walletIcons[getProvider()]}
                     width={20}
                     height={20}
                   />
-                  <span>{formatAddress(account.address)}</span>
+                  <span>{formatAddress(address)}</span>
                 </>
               ) : (
                 t("connect-wallet")

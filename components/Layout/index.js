@@ -1,10 +1,13 @@
-import React from "react";
+import * as React from "react";
 import Header from "../header";
 import { useTranslations } from "next-intl";
 import Logo from "./Logo";
+import useConnect from "../../hooks/useConnect";
 
 export default function Layout({ children }) {
   const t = useTranslations("Common");
+
+  const { mutate } = useConnect();
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[40vw,_auto]">

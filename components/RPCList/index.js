@@ -1,8 +1,9 @@
 import { useEffect, useMemo } from "react";
-import useRPCData from "../../hooks/useRPCData";
-import { useAccount, useRpcStore } from "../../stores";
-import { addToNetwork, renderProviderText } from "../../utils";
 import { useTranslations } from "next-intl";
+import useRPCData from "../../hooks/useRPCData";
+import useAddToNetwork from "../../hooks/useAddToNetwork";
+import { useAccount, useRpcStore } from "../../stores";
+import { renderProviderText } from "../../utils";
 
 export default function RPCList({ chain }) {
   const urlToData = chain.rpc.reduce((all, c) => ({ ...all, [c.url]: c }), {});
@@ -157,18 +158,24 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
     }
   }, [data, rpcs, addRpc, refetch]);
 
+  const { data: accountData } = useAccount();
+
+  const address = accountData?.address ?? null;
+
+  const { mutate: addToNetwork } = useAddToNetwork();
+
   return (
     <tr>
-      <td className="border px-3 py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
+      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
         {isLoading ? <Shimmer /> : data?.url}
       </td>
-      <td className="border px-3 py-1">
+      <td className="border px-3 text-sm py-1">
         {isLoading ? <Shimmer /> : data?.height}
       </td>
-      <td className="border px-3 py-1">
+      <td className="border px-3 text-sm py-1">
         {isLoading ? <Shimmer /> : data?.latency}
       </td>
-      <td className="border px-3 py-1">
+      <td className="border px-3 text-sm py-1">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -183,10 +190,10 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
           </>
         )}
       </td>
-      <td className="border px-3 py-1" title={privacy?.trackingDetails}>
+      <td className="border px-3 text-sm py-1" title={privacy?.trackingDetails}>
         {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
       </td>
-      <td className="border px-3 py-1">
+      <td className="border px-3 text-sm py-1">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -196,8 +203,10 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
             ) : (
               !data.disableConnect && (
                 <button
-                  className="border border-[#EAEAEA] px-4 py-2 rounded-[50px] text-[#2F80ED] hover:text-white hover:bg-[#2F80ED] w-fit mx-auto"
-                  onClick={() => addToNetwork(account, chain, data?.url)}
+                  className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px]"
+                  onClick={() =>
+                    addToNetwork({ address, chain, rpc: data?.url })
+                  }
                 >
                   {t(renderProviderText(account))}
                 </button>
@@ -213,7 +222,7 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
 const CopyUrl = ({ url = "" }) => {
   return (
     <button
-      className="px-2 py-[2px] -my-[2px] hover:bg-[#EAEAEA] rounded-[50px]"
+      className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px]"
       onClick={() => navigator.clipboard.writeText(url)}
     >
       Copy URL

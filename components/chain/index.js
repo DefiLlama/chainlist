@@ -1,37 +1,20 @@
-import React, { useEffect, useMemo } from "react";
-import stores, { useAccount, useChain } from "../../stores/index.js";
-import { ACCOUNT_CONFIGURED } from "../../stores/constants/constants";
+import * as React from "react";
 import Image from "next/image";
 import RPCList from "../RPCList";
-import { addToNetwork, renderProviderText } from "../../utils";
+import { renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useChain } from "../../stores";
+import useAccount from "../../hooks/useAccount";
+import useAddToNetwork from "../../hooks/useAddToNetwork";
 
 export default function Chain({ chain, buttonOnly }) {
   const t = useTranslations("Common");
-  const account = useAccount((state) => state.account);
-  const setAccount = useAccount((state) => state.setAccount);
 
   const router = useRouter();
 
-  useEffect(() => {
-    const accountConfigure = () => {
-      const accountStore = stores.accountStore.getStore("account");
-      setAccount(accountStore);
-    };
-
-    stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure);
-
-    const accountStore = stores.accountStore.getStore("account");
-    setAccount(accountStore);
-
-    return () => {
-      stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure);
-    };
-  }, []);
-
-  const icon = useMemo(() => {
+  const icon = React.useMemo(() => {
     return chain.chainSlug
       ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
       : "/unknown-logo.png";
@@ -50,6 +33,12 @@ export default function Chain({ chain, buttonOnly }) {
 
   const showAddlInfo = chain.chainId === chainId;
 
+  const { data: accountData } = useAccount();
+
+  const address = accountData?.address ?? null;
+
+  const { mutate: addToNetwork } = useAddToNetwork();
+
   if (!chain) {
     return <></>;
   }
@@ -58,9 +47,9 @@ export default function Chain({ chain, buttonOnly }) {
     return (
       <button
         className="border border-[#EAEAEA] px-4 py-2 rounded-[50px] text-[#2F80ED] hover:text-white hover:bg-[#2F80ED] w-fit mx-auto"
-        onClick={() => addToNetwork(account, chain)}
+        onClick={() => addToNetwork({ address, chain })}
       >
-        {t(renderProviderText(account))}
+        {t(renderProviderText(address))}
       </button>
     );
   }
@@ -109,9 +98,9 @@ export default function Chain({ chain, buttonOnly }) {
 
         <button
           className="border border-[#EAEAEA] px-4 py-2 rounded-[50px] text-[#2F80ED] hover:text-white hover:bg-[#2F80ED] w-fit mx-auto"
-          onClick={() => addToNetwork(account, chain)}
+          onClick={() => addToNetwork({ address, chain })}
         >
-          {t(renderProviderText(account))}
+          {t(renderProviderText(address))}
         </button>
 
         {router.pathname === "/" && (
