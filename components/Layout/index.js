@@ -90,7 +90,7 @@ export default function Layout({ children }) {
           </a>
         </div>
       </div>
-      <div className="bg-[#f3f3f3] p-5 relative flex flex-col gap-12">
+      <div className="bg-[#f3f3f3] p-5 relative flex flex-col gap-5">
         <Header />
 
         {children}
