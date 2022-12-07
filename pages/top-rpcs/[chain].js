@@ -34,13 +34,13 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export async function getStaticPaths() {
-  const chainNameAndIds = [...Object.values(chainIds)];
+  // const chainNameAndIds = [...Object.values(chainIds)];
 
-  const paths = chainNameAndIds.map((chain) => ({
-    params: { chain: chain.toString() ?? null },
-  }));
+  // const paths = chainNameAndIds.map((chain) => ({
+  //   params: { chain: chain.toString() ?? null },
+  // }));
 
-  return { paths, fallback: "blocking" };
+  return { paths: [], fallback: "blocking" };
 }
 
 export default function Chain({ chain }) {

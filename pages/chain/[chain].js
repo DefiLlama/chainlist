@@ -52,7 +52,7 @@ export async function getStaticPaths() {
   //   params: { chain: chain.toString() ?? null },
   // }));
 
-  return { paths: [], fallback: "blocking", revalidate: 60 };
+  return { paths: [], fallback: "blocking" };
 }
 
 function Chain({ chain }) {
