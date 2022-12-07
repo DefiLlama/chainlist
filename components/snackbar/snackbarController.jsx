@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withStyles } from '@material-ui/core/styles';
 
 import Snackbar from './snackbar.jsx'
 
@@ -11,11 +10,7 @@ import {
 import stores from "../../stores";
 const emitter = stores.emitter
 
-const styles = theme => ({
-  root: {
 
-  },
-});
 
 class SnackbarController extends Component {
 
@@ -77,4 +72,4 @@ class SnackbarController extends Component {
   };
 }
 
-export default withStyles(styles)(SnackbarController);
+export default SnackbarController;

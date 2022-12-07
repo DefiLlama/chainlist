@@ -1,4 +1,3 @@
-import { Button } from "@material-ui/core";
 import { useEffect, useMemo } from "react";
 import useRPCData from "../../hooks/useRPCData";
 import { useAccount, useRpcStore } from "../../stores";
@@ -196,12 +195,12 @@ const Row = ({ values, chain, isEthMainnet, privacy }) => {
               <CopyUrl url={data?.url} />
             ) : (
               !data.disableConnect && (
-                <Button
-                  style={{ padding: "0 8px" }}
+                <button
+                  className="border border-[#EAEAEA] px-4 py-2 rounded-[50px] text-[#2F80ED] hover:text-white hover:bg-[#2F80ED] w-fit mx-auto"
                   onClick={() => addToNetwork(account, chain, data?.url)}
                 >
                   {t(renderProviderText(account))}
-                </Button>
+                </button>
               )
             )}
           </>
