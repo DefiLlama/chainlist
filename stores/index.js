@@ -15,11 +15,6 @@ export default {
   emitter: emitter,
 };
 
-export const useSearch = create((set) => ({
-  search: "",
-  handleSearch: (text) => set(() => ({ search: text })),
-}));
-
 export const useChain = create((set) => ({
   id: null,
   updateChain: (id) => set(() => ({ id })),

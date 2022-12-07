@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Chain from "../components/chain";
 import { fetcher, populateChain } from "../utils";
-import { useSearch } from "../stores";
 
 export async function getStaticProps({ locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -19,41 +18,39 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
-      sortedChains,
+      chains: sortedChains,
       messages: (await import(`../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };
 }
 
-function Home({ sortedChains }) {
+function Home({ chains }) {
   const router = useRouter();
-  const { testnets, testnet } = router.query;
+  const { testnets, testnet, search } = router.query;
 
   const includeTestnets =
     (typeof testnets === "string" && testnets === "true") ||
     (typeof testnet === "string" && testnet === "true");
 
-  const search = useSearch((state) => state.search);
+  const sortedChains = !includeTestnets
+    ? chains.filter((item) => {
+        const testnet =
+          item.name?.toLowerCase().includes("test") ||
+          item.title?.toLowerCase().includes("test") ||
+          item.network?.toLowerCase().includes("test");
+        const devnet =
+          item.name?.toLowerCase().includes("devnet") ||
+          item.title?.toLowerCase().includes("devnet") ||
+          item.network?.toLowerCase().includes("devnet");
+        return !testnet && !devnet;
+      })
+    : chains;
 
-  const chains = useMemo(() => {
-    const filteredChains = !includeTestnets
-      ? sortedChains.filter((item) => {
-          const testnet =
-            item.name?.toLowerCase().includes("test") ||
-            item.title?.toLowerCase().includes("test") ||
-            item.network?.toLowerCase().includes("test");
-          const devnet =
-            item.name?.toLowerCase().includes("devnet") ||
-            item.title?.toLowerCase().includes("devnet") ||
-            item.network?.toLowerCase().includes("devnet");
-          return !testnet && !devnet;
-        })
-      : sortedChains;
-
-    return search === ""
-      ? filteredChains
-      : filteredChains.filter((chain) => {
+  const filteredChains =
+    !search || typeof search !== "string" || search === ""
+      ? sortedChains
+      : sortedChains.filter((chain) => {
           //filter
           return (
             chain.chain.toLowerCase().includes(search.toLowerCase()) ||
@@ -67,7 +64,6 @@ function Home({ sortedChains }) {
               .includes(search.toLowerCase())
           );
         });
-  }, [includeTestnets, sortedChains]);
 
   return (
     <>
@@ -82,7 +78,7 @@ function Home({ sortedChains }) {
 
       <Layout>
         <div className="grid gap-[30px] grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-          {chains.map((chain, idx) => (
+          {filteredChains.map((chain, idx) => (
             <Chain chain={chain} key={idx} />
           ))}
         </div>

@@ -7,7 +7,7 @@ import {
   TRY_CONNECT_WALLET,
   ACCOUNT_CONFIGURED,
 } from "../../stores/constants/constants";
-import stores, { useSearch } from "../../stores";
+import stores from "../../stores";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
 
@@ -49,8 +49,6 @@ function Header() {
     (typeof testnets === "string" && testnets === "true") ||
     (typeof testnet === "string" && testnet === "true");
 
-  const handleSearch = useSearch((state) => state.handleSearch);
-
   const toggleTestnets = () =>
     router.push(
       {
@@ -62,23 +60,25 @@ function Header() {
     );
 
   const [searchTerm, setSearchTerm] = useState("");
+
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
   useEffect(() => {
-    if (debouncedSearchTerm) {
-      handleSearch(debouncedSearchTerm);
-    } else {
-      handleSearch("");
-    }
-  }, [debouncedSearchTerm]);
+    const handler = setTimeout(() => {
+      router.push(
+        {
+          pathname: router.pathname,
+          query: { ...router.query, search: debouncedSearchTerm },
+        },
+        undefined,
+        { shallow: true }
+      );
+    }, 300);
 
-  useEffect(() => {
-    if (!router.isReady) return;
-    if (router.query.search) {
-      setSearchTerm(router.query.search);
-      delete router.query.search;
-    }
-  }, [router.isReady]);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [debouncedSearchTerm]);
 
   return (
     <div className="sticky top-0 z-50 rounded-[10px] bg-[#f3f3f3] p-5 -m-5">
@@ -92,7 +92,7 @@ function Header() {
               <input
                 placeholder="ETH, Fantom, ..."
                 value={searchTerm}
-                onClick={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="flex-1 px-2 py-4 outline-none"
               />
               <svg
