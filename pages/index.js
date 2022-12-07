@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
-import { withTheme } from "@material-ui/core/styles";
 import Chain from "../components/chain";
 import { fetcher, populateChain } from "../utils";
 import { useSearch } from "../stores";
@@ -92,4 +91,4 @@ function Home({ sortedChains }) {
   );
 }
 
-export default withTheme(Home);
+export default Home;

@@ -89,6 +89,7 @@ export default function Layout({ children }) {
       </div>
       <div className="bg-[#f3f3f3] p-5 relative flex flex-col gap-12">
         <Header />
+
         {children}
       </div>
     </div>
