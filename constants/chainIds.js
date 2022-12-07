@@ -57,6 +57,7 @@
   10000: "smartbch",
   32520: "bitgert",
   32659: "fusion",
+  39815: "oho",    
   42161: "arbitrum",
   42170: "arb-nova",
   42220: "celo",
