@@ -1,11 +1,9 @@
-import React, { useMemo } from "react";
+import * as React from "react";
 import Head from "next/head";
-import { withTheme } from "@material-ui/core/styles";
+import { useRouter } from "next/router";
+import Layout from "../components/Layout";
 import Chain from "../components/chain";
 import { fetcher, populateChain } from "../utils";
-import { useSearch, useTestnets } from "../stores";
-import Layout from "../components/Layout";
-import classes from "../components/Layout/index.module.css";
 
 export async function getStaticProps({ locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -20,32 +18,52 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
-      sortedChains,
+      chains: sortedChains,
       messages: (await import(`../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };
 }
 
-function Home({ changeTheme, theme, sortedChains }) {
-  const testnets = useTestnets((state) => state.testnets);
-  const search = useSearch((state) => state.search);
+function Home({ chains }) {
+  const router = useRouter();
+  const { testnets, testnet, search } = router.query;
 
-  const chains = useMemo(() => {
-    if (!testnets) {
-      return sortedChains.filter((item) => {
+  const includeTestnets =
+    (typeof testnets === "string" && testnets === "true") ||
+    (typeof testnet === "string" && testnet === "true");
+
+  const sortedChains = !includeTestnets
+    ? chains.filter((item) => {
         const testnet =
           item.name?.toLowerCase().includes("test") ||
           item.title?.toLowerCase().includes("test") ||
           item.network?.toLowerCase().includes("test");
         const devnet =
-            item.name?.toLowerCase().includes("devnet") ||
-            item.title?.toLowerCase().includes("devnet") ||
-            item.network?.toLowerCase().includes("devnet");
+          item.name?.toLowerCase().includes("devnet") ||
+          item.title?.toLowerCase().includes("devnet") ||
+          item.network?.toLowerCase().includes("devnet");
         return !testnet && !devnet;
-      });
-    } else return sortedChains;
-  }, [testnets, sortedChains]);
+      })
+    : chains;
+
+  const filteredChains =
+    !search || typeof search !== "string" || search === ""
+      ? sortedChains
+      : sortedChains.filter((chain) => {
+          //filter
+          return (
+            chain.chain.toLowerCase().includes(search.toLowerCase()) ||
+            chain.chainId
+              .toString()
+              .toLowerCase()
+              .includes(search.toLowerCase()) ||
+            chain.name.toLowerCase().includes(search.toLowerCase()) ||
+            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
+              .toLowerCase()
+              .includes(search.toLowerCase())
+          );
+        });
 
   return (
     <>
@@ -57,31 +75,18 @@ function Home({ changeTheme, theme, sortedChains }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout changeTheme={changeTheme} theme={theme}>
-        <div className={classes.cardsContainer}>
-          {(search === ""
-            ? chains
-            : chains.filter((chain) => {
-                //filter
-                return (
-                  chain.chain.toLowerCase().includes(search.toLowerCase()) ||
-                  chain.chainId
-                    .toString()
-                    .toLowerCase()
-                    .includes(search.toLowerCase()) ||
-                  chain.name.toLowerCase().includes(search.toLowerCase()) ||
-                  (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
-                    .toLowerCase()
-                    .includes(search.toLowerCase())
-                );
-              })
-          ).map((chain, idx) => {
-            return <Chain chain={chain} key={idx} />;
-          })}
-        </div>
+
+      <Layout>
+        <React.Suspense fallback={<div className="h-screen"></div>}>
+          <div className="grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
+            {filteredChains.map((chain, idx) => (
+              <Chain chain={chain} key={idx} />
+            ))}
+          </div>
+        </React.Suspense>
       </Layout>
     </>
   );
 }
 
-export default withTheme(Home);
+export default Home;

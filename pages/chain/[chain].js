@@ -1,13 +1,12 @@
-import React, { useMemo } from "react";
+import * as React from "react";
 import Head from "next/head";
-import { Typography, Paper, Tooltip } from "@material-ui/core";
-import { withTheme } from "@material-ui/core/styles";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { populateChain, fetcher } from "../../utils";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
-import classes from "./index.module.css";
-import Image from "next/image";
 import chainIds from "../../constants/chainIds";
 
 export async function getStaticProps({ params, locale }) {
@@ -41,23 +40,25 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetcher("https://chainid.network/chains.json");
+  // const res = await fetcher("https://chainid.network/chains.json");
 
-  const chainNameAndIds = [
-    ...res.map((c) => c.chainId),
-    ...Object.values(chainIds),
-    ...res.map((c) => c.name.toLowerCase().split(" ").join("%20")),
-  ];
+  // const chainNameAndIds = [
+  //   ...res.map((c) => c.chainId),
+  //   ...Object.values(chainIds),
+  //   ...res.map((c) => c.name.toLowerCase().split(" ").join("%20")),
+  // ];
 
-  const paths = chainNameAndIds.map((chain) => ({
-    params: { chain: chain.toString() ?? null },
-  }));
+  // const paths = chainNameAndIds.map((chain) => ({
+  //   params: { chain: chain.toString() ?? null },
+  // }));
 
-  return { paths, fallback: "blocking" };
+  return { paths: [], fallback: "blocking" };
 }
 
-function Chain({ changeTheme, theme, chain }) {
-  const icon = useMemo(() => {
+function Chain({ chain }) {
+  const t = useTranslations("Common");
+
+  const icon = React.useMemo(() => {
     return chain?.chainSlug
       ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
       : "/unknown-logo.png";
@@ -73,65 +74,54 @@ function Chain({ changeTheme, theme, chain }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout theme={theme} changeTheme={changeTheme}>
-        <Paper elevation={1} className={classes.chainDetails}>
-          <div className={classes.chainNameContainer}>
+
+      <Layout>
+        <div className="shadow bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden">
+          <Link
+            href={`/chain/${chain.chainId}`}
+            prefetch={false}
+            className="flex items-center mx-auto gap-2"
+          >
             <Image
               src={icon}
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "/chains/unknown-logo.png";
               }}
-              width={28}
-              height={28}
-              className={classes.avatar}
+              width={26}
+              height={26}
+              className="rounded-full flex-shrink-0 flex relative"
+              alt={chain.name + " logo"}
             />
+            <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">
+              {chain.name}
+            </span>
+          </Link>
 
-            <Tooltip title={chain.name}>
-              <Typography
-                variant="h3"
-                className={classes.name}
-                noWrap
-                style={{ marginLeft: "24px" }}
-              >
-                <a href={chain.infoURL} target="_blank" rel="noreferrer">
-                  {chain.name}
-                </a>
-              </Typography>
-            </Tooltip>
-          </div>
-
-          <div className={classes.chainInfoContainer}>
-            <div className={classes.dataPoint}>
-              <Typography
-                variant="subtitle1"
-                color="textSecondary"
-                className={classes.dataPointHeader}
-              >
-                ChainID
-              </Typography>
-              <Typography variant="h5">{chain.chainId}</Typography>
-            </div>
-            <div className={classes.dataPoint}>
-              <Typography
-                variant="subtitle1"
-                color="textSecondary"
-                className={classes.dataPointHeader}
-              >
-                Currency
-              </Typography>
-              <Typography variant="h5">
-                {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
-              </Typography>
-            </div>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <th className="font-normal text-gray-500">ChainID</th>
+                <th className="font-normal text-gray-500">{t("currency")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="text-center font-bold px-4">{chain.chainId}</td>
+                <td className="text-center font-bold px-4">
+                  {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <AddNetwork chain={chain} buttonOnly />
-        </Paper>
+        </div>
+
         <RPCList chain={chain} />
       </Layout>
     </>
   );
 }
 
-export default withTheme(Chain);
+export default Chain;
