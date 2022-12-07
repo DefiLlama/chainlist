@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useQueries } from "@tanstack/react-query";
 import axios from "axios";
 
-const refetchInterval = 60000;
+const refetchInterval = 60_000;
 
 export const rpcBody = JSON.stringify({
   jsonrpc: "2.0",

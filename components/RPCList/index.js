@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
@@ -6,38 +6,43 @@ import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 
 export default function RPCList({ chain }) {
+  const [sortChains, setSorting] = useState(true);
+
   const urlToData = chain.rpc.reduce((all, c) => ({ ...all, [c.url]: c }), {});
+
   const chains = useRPCData(chain.rpc);
 
   const data = useMemo(() => {
-    const sortedData = chains?.sort((a, b) => {
-      if (a.isLoading) {
-        return 1;
-      }
+    const sortedData = sortChains
+      ? chains?.sort((a, b) => {
+          if (a.isLoading) {
+            return 1;
+          }
 
-      const h1 = a?.data?.height;
-      const h2 = b?.data?.height;
-      const l1 = a?.data?.latency;
-      const l2 = b?.data?.latency;
+          const h1 = a?.data?.height;
+          const h2 = b?.data?.height;
+          const l1 = a?.data?.latency;
+          const l2 = b?.data?.latency;
 
-      if (!h2) {
-        return -1;
-      }
+          if (!h2) {
+            return -1;
+          }
 
-      if (h2 - h1 > 0) {
-        return 1;
-      }
-      if (h2 - h1 < 0) {
-        return -1;
-      }
-      if (h1 === h2) {
-        if (l1 - l2 < 0) {
-          return -1;
-        } else {
-          return 1;
-        }
-      }
-    });
+          if (h2 - h1 > 0) {
+            return 1;
+          }
+          if (h2 - h1 < 0) {
+            return -1;
+          }
+          if (h1 === h2) {
+            if (l1 - l2 < 0) {
+              return -1;
+            } else {
+              return 1;
+            }
+          }
+        })
+      : chains;
 
     const topRpc = sortedData[0]?.data ?? {};
 
@@ -95,7 +100,40 @@ export default function RPCList({ chain }) {
       )}
 
       <table className="whitespace-nowrap border-collapse m-0">
-        <caption className="px-3 py-1 border text-base font-medium border-b-0">{`${chain.name} RPC URL List`}</caption>
+        <caption className="px-3 py-1 border text-base font-medium border-b-0 w-full relative">
+          <span className="mr-4">{`${chain.name} RPC URL List`}</span>
+          <button
+            className="text-sm font-normal flex items-center gap-1 absolute right-4 top-[2px] bottom-[2px] hover:bg-[#EAEAEA] px-2 rounded-[10px]"
+            onClick={() => setSorting(!sortChains)}
+          >
+            {sortChains ? (
+              <span>
+                <span className="sr-only">Pause</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path d="M5.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75A.75.75 0 007.25 3h-1.5zM12.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75a.75.75 0 00-.75-.75h-1.5z" />
+                </svg>
+              </span>
+            ) : (
+              <span>
+                <span className="sr-only">Resume</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+              </span>
+            )}
+            <span>Sorting</span>
+          </button>
+        </caption>
         <thead>
           <tr>
             <th className="border font-medium px-3 py-1">RPC Server Address</th>
