@@ -114,6 +114,7 @@ function Header() {
                     src={walletIcons[getProvider()]}
                     width={20}
                     height={20}
+                    alt=""
                   />
                   <span>{formatAddress(address)}</span>
                 </>

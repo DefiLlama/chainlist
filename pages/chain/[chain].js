@@ -40,19 +40,19 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetcher("https://chainid.network/chains.json");
+  // const res = await fetcher("https://chainid.network/chains.json");
 
-  const chainNameAndIds = [
-    ...res.map((c) => c.chainId),
-    ...Object.values(chainIds),
-    ...res.map((c) => c.name.toLowerCase().split(" ").join("%20")),
-  ];
+  // const chainNameAndIds = [
+  //   ...res.map((c) => c.chainId),
+  //   ...Object.values(chainIds),
+  //   ...res.map((c) => c.name.toLowerCase().split(" ").join("%20")),
+  // ];
 
-  const paths = chainNameAndIds.map((chain) => ({
-    params: { chain: chain.toString() ?? null },
-  }));
+  // const paths = chainNameAndIds.map((chain) => ({
+  //   params: { chain: chain.toString() ?? null },
+  // }));
 
-  return { paths, fallback: "blocking" };
+  return { paths: [], fallback: "blocking", revalidate: 60 };
 }
 
 function Chain({ chain }) {
@@ -77,23 +77,25 @@ function Chain({ chain }) {
 
       <Layout>
         <div className="shadow bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden">
-          <Link href={`/chain/${chain.chainId}`} prefetch={false} passHref>
-            <a className="flex items-center mx-auto gap-2">
-              <Image
-                src={icon}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "/chains/unknown-logo.png";
-                }}
-                width={26}
-                height={26}
-                className="rounded-full flex-shrink-0 flex relative"
-                alt={chain.name + " logo"}
-              />
-              <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">
-                {chain.name}
-              </span>
-            </a>
+          <Link
+            href={`/chain/${chain.chainId}`}
+            prefetch={false}
+            className="flex items-center mx-auto gap-2"
+          >
+            <Image
+              src={icon}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "/chains/unknown-logo.png";
+              }}
+              width={26}
+              height={26}
+              className="rounded-full flex-shrink-0 flex relative"
+              alt={chain.name + " logo"}
+            />
+            <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">
+              {chain.name}
+            </span>
           </Link>
 
           <table>

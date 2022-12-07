@@ -60,23 +60,25 @@ export default function Chain({ chain, buttonOnly }) {
         className="shadow bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden"
         key={chain.chainId}
       >
-        <Link href={`/chain/${chain.chainId}`} prefetch={false} passHref>
-          <a className="flex items-center mx-auto gap-2">
-            <Image
-              src={icon}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "/chains/unknown-logo.png";
-              }}
-              width={26}
-              height={26}
-              className="rounded-full flex-shrink-0 flex relative"
-              alt={chain.name + " logo"}
-            />
-            <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">
-              {chain.name}
-            </span>
-          </a>
+        <Link
+          href={`/chain/${chain.chainId}`}
+          prefetch={false}
+          className="flex items-center mx-auto gap-2"
+        >
+          <Image
+            src={icon}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "/chains/unknown-logo.png";
+            }}
+            width={26}
+            height={26}
+            className="rounded-full flex-shrink-0 flex relative"
+            alt={chain.name + " logo"}
+          />
+          <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">
+            {chain.name}
+          </span>
         </Link>
 
         <table>
