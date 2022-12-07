@@ -57,7 +57,7 @@ export default function Chain({ chain, buttonOnly }) {
   return (
     <>
       <div
-        className="shadow bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden"
+        className="shadow bg-white p-8 pb-0 rounded-[10px] flex flex-col gap-3 overflow-hidden"
         key={chain.chainId}
       >
         <Link
@@ -76,7 +76,7 @@ export default function Chain({ chain, buttonOnly }) {
             className="rounded-full flex-shrink-0 flex relative"
             alt={chain.name + " logo"}
           />
-          <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">
+          <span className="text-xl font-semibold whitespace-nowrap overflow-hidden text-ellipsis relative top-[1px]">
             {chain.name}
           </span>
         </Link>
@@ -99,7 +99,7 @@ export default function Chain({ chain, buttonOnly }) {
         </table>
 
         <button
-          className="border border-[#EAEAEA] px-4 py-2 rounded-[50px] text-[#2F80ED] hover:text-white hover:bg-[#2F80ED] w-fit mx-auto"
+          className="border border-[#EAEAEA] px-4 py-2 rounded-[50px] mb-auto text-[#2F80ED] hover:text-white hover:bg-[#2F80ED] w-fit mx-auto"
           onClick={() => addToNetwork({ address, chain })}
         >
           {t(renderProviderText(address))}
@@ -107,7 +107,7 @@ export default function Chain({ chain, buttonOnly }) {
 
         {router.pathname === "/" && (
           <button
-            className="w-full rounded-[50px] p-2 flex items-center justify-center -mb-6 hover:bg-[#f6f6f6]"
+            className="w-full rounded-[50px] p-2 flex items-center mb-2 justify-center hover:bg-[#f6f6f6]"
             onClick={handleClick}
           >
             <span className="sr-only">Show RPC List of {chain.name}</span>
