@@ -1925,6 +1925,14 @@ export default {
         "rpcs": [
             "https://www.3sps.net",
         ]
+    },
+    "9999": {
+        "rpcs": [],
+        "rpcWorking": false
+    },
+    "424242": {
+        "rpcs": [],
+        "rpcWorking": false
     }
 }
 
