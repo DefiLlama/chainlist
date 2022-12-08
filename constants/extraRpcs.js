@@ -1365,6 +1365,11 @@ export default {
             "https://rpc1.bittexscan.info"
         ]
     },
+    "4444": {
+        "rpcs": [
+            "https://janus.htmlcoin.com/api"
+        ]
+    },
     "5197": {
         "rpcs": [
             "https://mainnet.eraswap.network"
