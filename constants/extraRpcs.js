@@ -1742,6 +1742,7 @@ export default {
     },
     "245022934": {
         "rpcs": [
+            "https://neon-proxy-mainnet.solana.p2p.org",
             "rpcWorking:false"
         ]
     },
@@ -1846,8 +1847,8 @@ export default {
             "https://rpc.crystaleum.org"
         ]
     },
-    "420420":{
-        "rpcs":[
+    "420420": {
+        "rpcs": [
             "https://mainnet.kekchain.com",
             "https://rpc2.kekchain.com",
             "https://kek.interchained.org",
