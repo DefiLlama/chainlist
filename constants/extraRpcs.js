@@ -154,7 +154,7 @@ export default {
         ]
     },
     //Rinkeby testnet deprecated
-    "4": { 
+    "4": {
         "rpcs": [
             "https://rpc.ankr.com/eth_rinkeby",
             "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161"
@@ -1502,7 +1502,7 @@ export default {
             "https://mainnet-rpc.ohoscan.com",
             "https://mainnet-rpc2.ohoscan.com"
         ]
-    },    
+    },
     "42069": {
         "rpcs": [
             "rpcWorking:false"
@@ -1741,6 +1741,7 @@ export default {
     },
     "245022934": {
         "rpcs": [
+            "https://neon-proxy-mainnet.solana.p2p.org",
             "rpcWorking:false"
         ]
     },
@@ -1845,8 +1846,8 @@ export default {
             "https://rpc.crystaleum.org"
         ]
     },
-    "420420":{
-        "rpcs":[
+    "420420": {
+        "rpcs": [
             "https://mainnet.kekchain.com",
             "https://rpc2.kekchain.com",
             "https://kek.interchained.org",
