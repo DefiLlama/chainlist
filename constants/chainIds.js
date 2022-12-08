@@ -47,6 +47,7 @@
   2000: "dogechain",
   2020: "ronin",
   2222: "kava",
+  4444: "htmlcoin",
   4689: "iotex",
   5050: "xlc",
   5551: "nahmii",
