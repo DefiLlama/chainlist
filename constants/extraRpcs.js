@@ -99,6 +99,11 @@ export default {
                 url: "https://eth-mainnet-public.unifra.io",
                 tracking: "unspecified"
             },
+            {
+                url: "https://eth.node.ibbt.io/265011c66203eb5375fe0c96d72281a4822b05a2/",
+                tracking: "none",
+                trackingDetails: privacyStatement.ibbt,
+            },
             // Distributed cluster of Ethereum nodes designed for speed and anonymity!
             {
                 url: "https://api.zmok.io/mainnet/oaen6dy8ff6hju9k",
