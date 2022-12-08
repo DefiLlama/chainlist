@@ -1925,6 +1925,12 @@ export default {
         "rpcs": [
             "https://www.3sps.net",
         ]
+    },
+    "660868": {
+        "rpcs": [
+            "https://ocashrpc.extremehash.net",
+            "https://testnet.ocashchain.com"
+        ]
     }
 }
 
