@@ -154,7 +154,7 @@ export default {
         ]
     },
     //Rinkeby testnet deprecated
-    "4": { 
+    "4": {
         "rpcs": [
             "https://rpc.ankr.com/eth_rinkeby",
             "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161"
@@ -1503,7 +1503,7 @@ export default {
             "https://mainnet-rpc.ohoscan.com",
             "https://mainnet-rpc2.ohoscan.com"
         ]
-    },    
+    },
     "42069": {
         "rpcs": [
             "rpcWorking:false"
@@ -1919,7 +1919,7 @@ export default {
     },
     "13000": {
         "rpcs": [
-            "https://marketplace.ssquad.games",
+            "https://rpc.ssquad.games",
         ]
     },
     "14000": {
