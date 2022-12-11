@@ -67,15 +67,15 @@ function Header() {
       <header className="flex items-end gap-2 w-full sticky top-4 shadow rounded-[10px] z-50">
         <div className="flex flex-col bg-white rounded-[10px] flex-1">
           <div className="rounded-t-[10px] shadow-sm">
-            <label className="flex items-center focus-within:ring-2 ring-[#2F80ED] rounded-t-[10px]">
-              <span className="font-bold text-sm whitespace-nowrap px-3">
+            <label className="flex sm:items-center flex-col sm:flex-row focus-within:ring-2 ring-[#2F80ED] rounded-t-[10px]">
+              <span className="font-bold text-sm whitespace-nowrap px-3 pt-4 sm:pt-0">
                 {t("search-networks")}
               </span>
               <input
                 placeholder="ETH, Fantom, ..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="flex-1 px-2 py-4 outline-none"
+                className="flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-4 h-4 mr-3"
+                className="w-4 h-4 mr-3 hidden sm:block"
               >
                 <path
                   strokeLinecap="round"
@@ -93,7 +93,7 @@ function Header() {
               </svg>
             </label>
           </div>
-          <div className="py-2 px-3 flex items-center justify-between gap-4">
+          <div className="py-2 px-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
@@ -105,7 +105,7 @@ function Header() {
             </label>
 
             <button
-              className="flex gap-2 items-center bg-[#DEDEDE] rounded-[10px] py-[8px] px-8 font-medium text-black"
+              className="flex gap-2 items-center bg-[#DEDEDE] justify-center rounded-[10px] py-[8px] px-8 font-medium text-black"
               onClick={connectWallet}
             >
               {address ? (

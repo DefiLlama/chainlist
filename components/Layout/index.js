@@ -13,7 +13,7 @@ export default function Layout({ children }) {
     <div className="grid grid-cols-1 lg:grid-cols-[40vw,_auto]">
       <div className="relative h-full">
         <div className="p-5 sticky top-0 bottom-0 m-auto flex flex-col items-center gap-8 justify-center h-screen max-w-[480px] mx-auto">
-          <figure>
+          <figure className="lg:mr-auto">
             <Logo />
             <figcaption className="font-bold text-2xl">
               {t("help-info")}
