@@ -1,4 +1,5 @@
 const privacyStatement = {
+    llamanodes: "Llamanodes does not collect, log, or share user data that transits through our RPCs, ever. LlamaNodes does not collect the IP addresses of your users. LlamaNodes does not collect the wallet addresses of your users. https://llamanodes.notion.site/Privacy-Practices-f20fd8fdd02a469d9d4f42a5989bb936",
     ankr: "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
     alchemy: "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, location information (including approximate location derived from IP address), and Internet service provider. https://www.alchemy.com/policies/privacy-policy",
     nodereal: `We may automatically record certain information about how you use our Sites (we refer to this information as "Log Data"). Log Data may include information such as a user's Internet Protocol (IP) address, device and browser type, operating system, the pages or features of our Sites to which a user browsed and the time spent on those pages or features, the frequency with which the Sites are used by a user, search terms, the links on our Sites that a user clicked on or used, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users' needs and preferences. https://nodereal.io/terms`,
@@ -18,6 +19,11 @@ const privacyStatement = {
 export default {
     "1": {
         "rpcs": [
+            {
+                url: "https://eth.llamarpc.com",
+                tracking: "none",
+                trackingDetails: privacyStatement.llamanodes,
+            },
             {
                 url: "https://eth-mainnet.g.alchemy.com/v2/demo",
                 tracking: "yes",
@@ -350,6 +356,11 @@ export default {
     },
     "137": {
         "rpcs": [
+            {
+                url: "https://polygon.llamarpc.com",
+                tracking: "none",
+                trackingDetails: privacyStatement.llamanodes,
+            },
             {
                 url: "https://polygon-mainnet.g.alchemy.com/v2/demo",
                 tracking: "yes",
