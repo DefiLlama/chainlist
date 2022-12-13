@@ -1925,6 +1925,11 @@ export default {
         "rpcs": [
             "https://www.3sps.net",
         ]
+    },
+    "22776": {
+        "rpcs": [
+            "rpc.maplabs.io"
+        ]
     }
 }
 
