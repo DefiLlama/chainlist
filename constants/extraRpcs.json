@@ -931,6 +931,12 @@
         "rpcs": [],
         "rpcWorking": false
     },
+    "1289": {
+        "rpcs": [
+            "https://neon-mainnet.everstake.one"
+        ]
+    },
+
     "1618": {
         "rpcs": [
             "https://send.catechain.com"
