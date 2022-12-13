@@ -395,7 +395,8 @@ export default {
             "https://cronos-rpc.heavenswail.one/",
             "https://evm.cronos.org",
             "https://cronosrpc-1.xstaking.sg/",
-            "https://cronos-rpc.elk.finance/"
+            "https://cronos-rpc.elk.finance/",
+            "https://node.croswap.com/rpc"
         ]
     },
     "338": {
