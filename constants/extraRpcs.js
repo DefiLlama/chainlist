@@ -1928,7 +1928,7 @@ export default {
     },
     "22776": {
         "rpcs": [
-            "rpc.maplabs.io"
+            "https://rpc.maplabs.io"
         ]
     }
 }
