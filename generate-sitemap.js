@@ -1,6 +1,6 @@
-import chainIds from "./constants/chainIds.js";
-import fetch from "node-fetch";
-import fs from "fs";
+const chainIds = require("./constants/chainIds.json");
+const fetch = require("node-fetch");
+const fs = require("fs");
 
 function generateSiteMap(chains) {
   return `<?xml version="1.0" encoding="UTF-8"?>

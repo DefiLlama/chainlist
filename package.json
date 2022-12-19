@@ -9,7 +9,6 @@
     "build2": "next build && next export",
     "start": "next start"
   },
-  "type": "module",
   "dependencies": {
     "@tanstack/react-query": "^4.19.1",
     "axios": "^1.2.1",
@@ -19,7 +18,7 @@
     "next-i18next": "^13.0.2",
     "next-intl": "^2.10.2",
     "next-language-detector": "^1.0.2",
-    "node-fetch": "^3.3.0",
+    "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zustand": "^4.1.5"
