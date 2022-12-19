@@ -1,4 +1,6 @@
-import chainIds from "../constants/chainIds";
+import chainIds from "./constants/chainIds.js";
+import fetch from "node-fetch";
+import fs from "fs";
 
 function generateSiteMap(chains) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -56,26 +58,15 @@ function generateSiteMap(chains) {
  `;
 }
 
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting
-}
-
-export async function getServerSideProps({ res }) {
-  // We make an API call to gather the URLs for our site
-  const request = await fetch('https://chainid.network/chains.json');
-  const chains = await request.json();
+async function writeSiteMap() {
+  const res = await fetch("https://chainid.network/chains.json");
+  const chains = await res.json();
 
   // We generate the XML sitemap with the chains data
   const sitemap = generateSiteMap(chains);
 
-  res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
-  res.write(sitemap);
-  res.end();
-
-  return {
-    props: {},
-  };
+  // We write the sitemap to the next export out folder
+  fs.writeFileSync("out/sitemap.xml", sitemap);
 }
 
-export default SiteMap;
+writeSiteMap();
