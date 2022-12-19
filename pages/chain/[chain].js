@@ -60,7 +60,7 @@ function Chain({ chain }) {
 
   const icon = React.useMemo(() => {
     return chain?.chainSlug
-      ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
+      ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg`
       : "/unknown-logo.png";
   }, [chain]);
 

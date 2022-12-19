@@ -5,7 +5,7 @@ module.exports = {
   },
   reactStrictMode: true,
   images: {
-    domains: ["defillama.com"],
+    domains: ["defillama.com", "icons.llamao.fi"],
   },
   async redirects() {
     return [
