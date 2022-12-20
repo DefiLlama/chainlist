@@ -1367,7 +1367,7 @@ export default {
     },
     "4444": {
         "rpcs": [
-            "https://janus.htmlcoin.com/api/"
+            "https://janus.htmlcoin.dev/janus/"
         ]
     },
     "5197": {
