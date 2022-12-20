@@ -1,9 +1,9 @@
 import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Layout from "../components/Layout";
-import Chain from "../components/chain";
-import { fetcher, populateChain } from "../utils";
+import Layout from "../../components/Layout";
+import Chain from "../../components/chain";
+import { fetcher, populateChain } from "../../utils";
 
 export async function getStaticProps({ locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -19,7 +19,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       chains: sortedChains,
-      messages: (await import(`../translations/${locale}.json`)).default,
+      messages: (await import(`../../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };
@@ -29,7 +29,9 @@ function Home({ chains }) {
   const router = useRouter();
   const { testnets, testnet, search } = router.query;
 
-  const includeTestnets = (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
+  const includeTestnets =
+    (typeof testnets === "string" && testnets === "true") ||
+    (typeof testnet === "string" && testnet === "true");
 
   const sortedChains = !includeTestnets
     ? chains.filter((item) => {
@@ -52,9 +54,14 @@ function Home({ chains }) {
           //filter
           return (
             chain.chain.toLowerCase().includes(search.toLowerCase()) ||
-            chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
+            chain.chainId
+              .toString()
+              .toLowerCase()
+              .includes(search.toLowerCase()) ||
             chain.name.toLowerCase().includes(search.toLowerCase()) ||
-            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(search.toLowerCase())
+            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
+              .toLowerCase()
+              .includes(search.toLowerCase())
           );
         });
 
