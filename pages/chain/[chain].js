@@ -42,7 +42,6 @@ export async function getStaticPaths() {
 }
 
 function Chain({ chain }) {
-  useRedirect();
   const t = useTranslations("Common");
 
   const icon = React.useMemo(() => {

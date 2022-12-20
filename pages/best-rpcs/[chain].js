@@ -36,7 +36,6 @@ export async function getStaticPaths() {
 }
 
 export default function Chain({ chain }) {
-  useRedirect();
   return (
     <>
       <Head>
