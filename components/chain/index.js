@@ -5,13 +5,13 @@ import { renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
-import { notTranslation as t } from "../../utils";
+import { notTranslation as useTranslations } from "../../utils";
 import { useChain } from "../../stores";
 import useAccount from "../../hooks/useAccount";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 
 export default function Chain({ chain, buttonOnly }) {
-  // const t = useTranslations("Common");
+  const t = useTranslations("Common");
 
   const router = useRouter();
 

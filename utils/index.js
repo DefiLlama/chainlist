@@ -132,6 +132,6 @@ export function populateChain(chain, chainTvls) {
   return chain;
 }
 
-export const notTranslation = (key) => {
-  return en[key];
+export const notTranslation = (ns) => (key) => {
+  return en[ns][key];
 };

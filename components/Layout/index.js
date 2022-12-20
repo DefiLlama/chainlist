@@ -1,12 +1,12 @@
 import * as React from "react";
 import Header from "../header";
 // import { useTranslations } from "next-intl";
-import { notTranslation as t } from "../../utils";
+import { notTranslation as useTranslations } from "../../utils";
 import Logo from "./Logo";
 import useConnect from "../../hooks/useConnect";
 
 export default function Layout({ children }) {
-  // const t = useTranslations("Common");
+  const t = useTranslations("Common");
 
   const { mutate } = useConnect();
 

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
-import { notTranslation as t } from "../../utils";
+import { notTranslation as useTranslations } from "../../utils";
 import { populateChain, fetcher } from "../../utils";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 }
 
 function Chain({ chain }) {
-  // const t = useTranslations("Common");
+  const t = useTranslations("Common");
 
   const icon = React.useMemo(() => {
     return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";

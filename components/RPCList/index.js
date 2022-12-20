@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 // import { useTranslations } from "next-intl";
-import { notTranslation as t } from "../../utils";
+import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useAccount, useRpcStore } from "../../stores";
@@ -182,7 +182,7 @@ function PrivacyIcon({ tracking }) {
 }
 
 const Row = ({ values, chain, isEthMainnet, privacy }) => {
-  // const t = useTranslations("Common");
+  const t = useTranslations("Common");
   const { data, isLoading, refetch } = values;
 
   const rpcs = useRpcStore((state) => state.rpcs);
