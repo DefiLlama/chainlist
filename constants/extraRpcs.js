@@ -1932,6 +1932,11 @@ export default {
         "rpcs": [
             "https://rpc.maplabs.io"
         ]
+    },
+    "5234": {
+        "rpcs": [
+            "https://explorer-rpc-http.mainnet.stages.humanode.io"
+        ]
     }
 }
 
