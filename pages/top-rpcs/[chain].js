@@ -30,7 +30,15 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  return { paths: [], fallback: "blocking" };
+  const chains = await fetcher("https://chainid.network/chains.json");
+
+  const paths = chains.map((chain) => ({
+    params: {
+      chain: chain.chainId.toString(),
+    },
+  }));
+
+  return { paths, fallback: false };
 }
 
 export default function Chain({ chain }) {
