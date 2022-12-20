@@ -1,6 +1,7 @@
 import * as React from "react";
 import Header from "../header";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
+import { notTranslation as useTranslations } from "../../utils";
 import Logo from "./Logo";
 import useConnect from "../../hooks/useConnect";
 

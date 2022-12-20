@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import allExtraRpcs from "../constants/extraRpcs.js";
-import chainIds from "../constants/chainIds.js";
+import chainIds from "../constants/chainIds.json";
+import en from "../translations/en.json";
 
 export function formatCurrency(amount, decimals = 2) {
   if (!isNaN(amount)) {
@@ -17,16 +18,10 @@ export function formatCurrency(amount, decimals = 2) {
 
 export function formatAddress(address, length = "short") {
   if (address && length === "short") {
-    address =
-      address.substring(0, 6) +
-      "..." +
-      address.substring(address.length - 4, address.length);
+    address = address.substring(0, 6) + "..." + address.substring(address.length - 4, address.length);
     return address;
   } else if (address && length === "long") {
-    address =
-      address.substring(0, 12) +
-      "..." +
-      address.substring(address.length - 8, address.length);
+    address = address.substring(0, 12) + "..." + address.substring(address.length - 8, address.length);
     return address;
   } else {
     return null;
@@ -35,10 +30,7 @@ export function formatAddress(address, length = "short") {
 
 export function getProvider() {
   if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
-    if (
-      window.ethereum.isCoinbaseWallet ||
-      window.ethereum.selectedProvider?.isCoinbaseWallet
-    )
+    if (window.ethereum.isCoinbaseWallet || window.ethereum.selectedProvider?.isCoinbaseWallet)
       return "Coinbase Wallet";
     if (window.ethereum.isBraveWallet) return "Brave Wallet";
     if (window.ethereum.isMetaMask) return "Metamask";
@@ -64,7 +56,7 @@ export function useDebounce(value, delay) {
         clearTimeout(handler);
       };
     },
-    [value, delay] // Only re-call effect if value or delay changes
+    [value, delay], // Only re-call effect if value or delay changes
   );
   return debouncedValue;
 }
@@ -139,3 +131,7 @@ export function populateChain(chain, chainTvls) {
   }
   return chain;
 }
+
+export const notTranslation = (ns) => (key) => {
+  return en[ns][key];
+};

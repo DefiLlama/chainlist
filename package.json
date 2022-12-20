@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
+    "export": "next export && node generate-sitemap.js",
     "build2": "next build && next export",
     "start": "next start"
   },
@@ -15,7 +15,10 @@
     "ethers": "^5.7.2",
     "fathom-client": "^3.5.0",
     "next": "^13.0.6",
+    "next-i18next": "^13.0.2",
     "next-intl": "^2.10.2",
+    "next-language-detector": "^1.0.2",
+    "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zustand": "^4.1.5"

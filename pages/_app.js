@@ -2,7 +2,7 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import * as Fathom from "fathom-client";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { NextIntlProvider } from "next-intl";
+// import { NextIntlProvider } from "next-intl";
 import "../styles/globals.css";
 
 function App({ Component, pageProps }) {
@@ -30,10 +30,10 @@ function App({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <NextIntlProvider messages={pageProps.messages}>
+      {/* <NextIntlProvider messages={pageProps.messages}> */}
         <Component {...pageProps} />
         {/* <SnackbarController /> */}
-      </NextIntlProvider>
+      {/* </NextIntlProvider> */}
     </QueryClientProvider>
   );
 }

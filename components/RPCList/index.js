@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
+import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useAccount, useRpcStore } from "../../stores";
