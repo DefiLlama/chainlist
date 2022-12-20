@@ -37,7 +37,7 @@ export default {
             },
             {
                 url: "https://ethereum.publicnode.com",
-                tracking: "yes",
+                tracking: "none",
                 trackingDetails: privacyStatement.publicnode,
             },
             {
@@ -313,7 +313,7 @@ export default {
             "https://avalancheapi.terminet.io/ext/bc/C/rpc",
             {
                 url: "https://avalanche-evm.publicnode.com",
-                tracking: "yes",
+                tracking: "none",
                 trackingDetails: privacyStatement.publicnode,
             },
             {
@@ -384,7 +384,7 @@ export default {
             "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
             {
                 url: "https://polygon-bor.publicnode.com",
-                tracking: "yes",
+                tracking: "none",
                 trackingDetails: privacyStatement.publicnode,
             },
             "https://polygon-mainnet-public.unifra.io"
@@ -1420,7 +1420,7 @@ export default {
             },
             {
                 url: "https://evmos-evm.publicnode.com",
-                tracking: "yes",
+                tracking: "none",
                 trackingDetails: privacyStatement.publicnode,
             },
             "https://jsonrpc-evmos.goldenratiostaking.net"
