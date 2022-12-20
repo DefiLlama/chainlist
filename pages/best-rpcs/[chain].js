@@ -12,7 +12,7 @@ export async function getStaticProps({ params }) {
     (c) =>
       c.chainId?.toString() === params.chain ||
       c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
-      c.name === params.chain.split("%20").join(" ")
+      c.name === params.chain.split("%20").join(" "),
   );
 
   if (!chain) {
@@ -31,7 +31,15 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  return { paths: [], fallback: "blocking" };
+  const chains = await fetcher("https://chainid.network/chains.json");
+
+  const paths = chains.map((chain) => ({
+    params: {
+      chain: chain.chainId.toString(),
+    },
+  }));
+
+  return { paths, fallback: false };
 }
 
 export default function Chain({ chain }) {
