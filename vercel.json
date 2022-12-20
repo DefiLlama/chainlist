@@ -26,6 +26,5 @@
       "destination": "/chain/:path*",
       "permanent": true
     }
-  ],
-  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "status": 404, "dest": "/error.html" }]
+  ]
 }
