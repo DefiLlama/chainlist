@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Chain from "../components/chain";
 import { fetcher, populateChain } from "../utils";
+import { useRedirect } from "../utils/redirect";
 
 export async function getStaticProps({ locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
@@ -27,9 +28,11 @@ export async function getStaticProps({ locale }) {
 
 function Home({ chains }) {
   const router = useRouter();
+  useRedirect();
   const { testnets, testnet, search } = router.query;
 
-  const includeTestnets = (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
+  const includeTestnets =
+    (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
 
   const sortedChains = !includeTestnets
     ? chains.filter((item) => {
