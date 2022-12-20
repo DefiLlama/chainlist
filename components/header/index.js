@@ -1,14 +1,15 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
+import { notTranslation as t } from "../../utils";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
 
 function Header() {
-  const t = useTranslations("Common");
+  // const t = useTranslations("Common");
 
   const router = useRouter();
 

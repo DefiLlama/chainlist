@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Chain from "../components/chain";
 import { fetcher, populateChain } from "../utils";
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps() {
   const chains = await fetcher("https://chainid.network/chains.json");
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
@@ -19,7 +19,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       chains: sortedChains,
-      messages: (await import(`../translations/${locale}.json`)).default,
+      // messages: (await import(`../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };

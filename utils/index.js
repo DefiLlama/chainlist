@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.json";
+import en from "../translations/en.json";
 
 export function formatCurrency(amount, decimals = 2) {
   if (!isNaN(amount)) {
@@ -130,3 +131,7 @@ export function populateChain(chain, chainTvls) {
   }
   return chain;
 }
+
+export const notTranslation = (key) => {
+  return en[key];
+};

@@ -2,14 +2,15 @@ import * as React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
+import { notTranslation as t } from "../../utils";
 import { populateChain, fetcher } from "../../utils";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import chainIds from "../../constants/chainIds.json";
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps({ params }) {
   const chains = await fetcher("https://chainid.network/chains.json");
 
   const chainTvls = await fetcher("https://api.llama.fi/chains");
@@ -30,7 +31,7 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       chain: chain ? populateChain(chain, chainTvls) : null,
-      messages: (await import(`../../translations/${locale}.json`)).default,
+      // messages: (await import(`../../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
   };
@@ -41,7 +42,7 @@ export async function getStaticPaths() {
 }
 
 function Chain({ chain }) {
-  const t = useTranslations("Common");
+  // const t = useTranslations("Common");
 
   const icon = React.useMemo(() => {
     return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
