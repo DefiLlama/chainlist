@@ -2,7 +2,6 @@ import * as React from "react";
 import Head from "next/head";
 import { populateChain, fetcher } from "../../utils";
 import chainIds from "../../constants/chainIds.json";
-import { useRedirect } from "../../utils/redirect";
 
 export async function getStaticProps({ params, locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");

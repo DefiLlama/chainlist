@@ -8,7 +8,6 @@ import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import chainIds from "../../constants/chainIds.json";
-import { useRedirect } from "../../utils/redirect";
 
 export async function getStaticProps({ params, locale }) {
   const chains = await fetcher("https://chainid.network/chains.json");
