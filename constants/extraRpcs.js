@@ -1810,7 +1810,7 @@ export default {
         "websiteDead": true
     },
     "79": {
-        "rpc": [
+        "rpcs": [
             "https://dataserver-us-1.zenithchain.co/",
             "https://dataserver-asia-3.zenithchain.co/",
             "https://dataserver-asia-4.zenithchain.co/",
@@ -1818,7 +1818,7 @@ export default {
         ]
     },
     "1506": {
-        "rpc": [
+        "rpcs": [
             "https://mainnet.sherpax.io/rpc"
         ]
     },
