@@ -68,7 +68,6 @@ function Home({ chains }) {
           content="Chainlist is a list of RPCs for EVM(Ethereum Virtual Machine) networks. Use the information to connect your wallets and Web3 middleware providers to the appropriate Chain ID and Network ID. Find the best RPC for both Mainnet and Testnet to connect to the correct chain"
         />
         <link rel="icon" href="/favicon.ico" />
-        <html lang="zh" />
       </Head>
 
       <Layout lang="zh">

@@ -64,7 +64,6 @@ function Chain({ chain }) {
           content={`Find the best ${chain.name} RPC to connect to your wallets and Web3 middleware providers.`}
         />
         <link rel="icon" href="/favicon.ico" />
-        <html lang="en" />
       </Head>
 
       <Layout lang="en">
