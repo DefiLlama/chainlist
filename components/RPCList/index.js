@@ -6,7 +6,7 @@ import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 
-export default function RPCList({ chain }) {
+export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
 
   const urlToData = chain.rpc.reduce((all, c) => ({ ...all, [c.url]: c }), {});
@@ -135,6 +135,7 @@ export default function RPCList({ chain }) {
               isEthMainnet={isEthMainnet}
               key={index}
               privacy={urlToData[item.data.url]}
+              lang={lang}
             />
           ))}
         </tbody>
@@ -160,8 +161,8 @@ function PrivacyIcon({ tracking }) {
   return null;
 }
 
-const Row = ({ values, chain, isEthMainnet, privacy }) => {
-  const t = useTranslations("Common");
+const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
+  const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
 
   const rpcs = useRpcStore((state) => state.rpcs);

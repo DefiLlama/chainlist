@@ -7,8 +7,8 @@ import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
 
-function Header() {
-  const t = useTranslations("Common");
+function Header({ lang }) {
+  const t = useTranslations("Common", lang);
 
   const router = useRouter();
 
