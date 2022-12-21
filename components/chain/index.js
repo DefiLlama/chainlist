@@ -1,5 +1,4 @@
 import * as React from "react";
-import Image from "next/image";
 import RPCList from "../RPCList";
 import { renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
@@ -16,9 +15,7 @@ export default function Chain({ chain, buttonOnly }) {
   const router = useRouter();
 
   const icon = React.useMemo(() => {
-    return chain.chainSlug
-      ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg`
-      : "/unknown-logo.png";
+    return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
 
   const chainId = useChain((state) => state.id);
@@ -57,21 +54,10 @@ export default function Chain({ chain, buttonOnly }) {
 
   return (
     <>
-      <div
-        className="shadow bg-white p-8 pb-0 rounded-[10px] flex flex-col gap-3 overflow-hidden"
-        key={chain.chainId}
-      >
-        <Link
-          href={`/chain/${chain.chainId}`}
-          prefetch={false}
-          className="flex items-center mx-auto gap-2"
-        >
-          <Image
+      <div className="shadow bg-white p-8 pb-0 rounded-[10px] flex flex-col gap-3 overflow-hidden" key={chain.chainId}>
+        <Link href={`/chain/${chain.chainId}`} prefetch={false} className="flex items-center mx-auto gap-2">
+          <img
             src={icon}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "/chains/unknown-logo.png";
-            }}
             width={26}
             height={26}
             className="rounded-full flex-shrink-0 flex relative"
@@ -124,11 +110,7 @@ export default function Chain({ chain, buttonOnly }) {
                 transition: "all 0.2s ease",
               }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
             </svg>
           </button>
         )}

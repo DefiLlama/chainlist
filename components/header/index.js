@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
 import { formatAddress, getProvider, useDebounce } from "../../utils";
@@ -16,8 +15,7 @@ function Header() {
   const { testnets, testnet, search } = router.query;
 
   const includeTestnets =
-    (typeof testnets === "string" && testnets === "true") ||
-    (typeof testnet === "string" && testnet === "true");
+    (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
 
   const toggleTestnets = () =>
     router.push(
@@ -26,7 +24,7 @@ function Header() {
         query: { ...router.query, testnets: !includeTestnets },
       },
       undefined,
-      { shallow: true }
+      { shallow: true },
     );
 
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -35,10 +33,7 @@ function Header() {
 
   React.useEffect(() => {
     const handler = setTimeout(() => {
-      if (
-        (!debouncedSearchTerm || debouncedSearchTerm === "") &&
-        (!search || search === "")
-      ) {
+      if ((!debouncedSearchTerm || debouncedSearchTerm === "") && (!search || search === "")) {
         return;
       }
 
@@ -48,7 +43,7 @@ function Header() {
           query: { ...router.query, search: debouncedSearchTerm },
         },
         undefined,
-        { shallow: true }
+        { shallow: true },
       );
     }, 200);
 
@@ -69,9 +64,7 @@ function Header() {
         <div className="flex flex-col bg-white rounded-[10px] flex-1">
           <div className="rounded-t-[10px] shadow-sm">
             <label className="flex sm:items-center flex-col sm:flex-row focus-within:ring-2 ring-[#2F80ED] rounded-t-[10px]">
-              <span className="font-bold text-sm whitespace-nowrap px-3 pt-4 sm:pt-0">
-                {t("search-networks")}
-              </span>
+              <span className="font-bold text-sm whitespace-nowrap px-3 pt-4 sm:pt-0">{t("search-networks")}</span>
               <input
                 placeholder="ETH, Fantom, ..."
                 value={searchTerm}
@@ -96,12 +89,7 @@ function Header() {
           </div>
           <div className="py-2 px-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <label className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                name="testnets"
-                checked={includeTestnets}
-                onChange={toggleTestnets}
-              />
+              <input type="checkbox" name="testnets" checked={includeTestnets} onChange={toggleTestnets} />
               <span>Include Testnets</span>
             </label>
 
@@ -111,12 +99,7 @@ function Header() {
             >
               {address ? (
                 <>
-                  <Image
-                    src={walletIcons[getProvider()]}
-                    width={20}
-                    height={20}
-                    alt=""
-                  />
+                  <img src={walletIcons[getProvider()]} width={20} height={20} alt="" />
                   <span>{formatAddress(address)}</span>
                 </>
               ) : (

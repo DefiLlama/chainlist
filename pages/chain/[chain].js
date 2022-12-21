@@ -1,6 +1,5 @@
 import * as React from "react";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
@@ -70,12 +69,8 @@ function Chain({ chain }) {
       <Layout>
         <div className="shadow bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden">
           <Link href={`/chain/${chain.chainId}`} prefetch={false} className="flex items-center mx-auto gap-2">
-            <Image
+            <img
               src={icon}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "/chains/unknown-logo.png";
-              }}
               width={26}
               height={26}
               className="rounded-full flex-shrink-0 flex relative"
