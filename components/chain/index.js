@@ -92,7 +92,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
           {t(renderProviderText(address))}
         </button>
 
-        {router.pathname === "/" && (
+        {(lang === "en" ? router.pathname === "/" : router.pathname === "/zh") && (
           <button
             className="w-full rounded-[50px] p-2 flex items-center mb-2 justify-center hover:bg-[#f6f6f6]"
             onClick={handleClick}
