@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript, Html } from "next/document";
 import React from "react";
 
 const LANGUAGES = ["en", "zh"];
@@ -9,13 +9,13 @@ class MyDocument extends Document {
     const lang = LANGUAGES.indexOf(pathPrefix) !== -1 ? pathPrefix : LANGUAGES[0];
 
     return (
-      <html lang={lang}>
+      <Html lang={lang}>
         <Head />
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
