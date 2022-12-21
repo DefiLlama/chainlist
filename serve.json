@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/top-rpcs/:path*",
+      "destination": "/chain/:path*",
+      "type": 308
+    },
+    {
+      "source": "/best-rpcs/:path*",
+      "destination": "/chain/:path*",
+      "type": 308
+    }
+  ],
+  "directoryListing": false
+}
