@@ -22,9 +22,7 @@ export async function addToNetwork({ address, chain, rpc }) {
         },
         rpcUrls: rpc ? [rpc] : chain.rpc.map((r) => r.url),
         blockExplorerUrls: [
-          chain.explorers &&
-          chain.explorers.length > 0 &&
-          chain.explorers[0].url
+          chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
             ? chain.explorers[0].url
             : chain.infoURL,
         ],

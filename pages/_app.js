@@ -31,8 +31,8 @@ function App({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       {/* <NextIntlProvider messages={pageProps.messages}> */}
-        <Component {...pageProps} />
-        {/* <SnackbarController /> */}
+      <Component {...pageProps} />
+      {/* <SnackbarController /> */}
       {/* </NextIntlProvider> */}
     </QueryClientProvider>
   );

@@ -37,7 +37,7 @@ const fetchChain = async (baseURL) => {
         }
 
         return Promise.reject(error);
-      }
+      },
     );
 
     let { data, latency } = await API.post("", rpcBody);
@@ -123,11 +123,7 @@ const useSocketQuery = (url) => {
 
 const useRPCData = (urls) => {
   const queries =
-    urls?.map((url) =>
-      url.url.includes("wss://")
-        ? useSocketQuery(url.url)
-        : useHttpQuery(url.url)
-    ) ?? [];
+    urls?.map((url) => (url.url.includes("wss://") ? useSocketQuery(url.url) : useHttpQuery(url.url))) ?? [];
 
   return useQueries({ queries });
 };
