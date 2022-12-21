@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export && node generate-sitemap.js",
+    "export": "next export && ./post-export.sh",
     "build2": "next build && next export",
     "start": "next start"
   },
