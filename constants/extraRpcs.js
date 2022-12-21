@@ -203,6 +203,11 @@ export default {
       },
     ],
   },
+  "4444": {
+    "rpcs": [
+        "https://janus.htmlcoin.dev/janus/"
+    ]
+  },
   43113: {
     rpcs: [
       {
