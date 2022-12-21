@@ -7,7 +7,8 @@
     "build": "next build",
     "export": "next export && ./post-export.sh",
     "build2": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "serve": "serve out"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.19.1",
@@ -15,12 +16,11 @@
     "ethers": "^5.7.2",
     "fathom-client": "^3.5.0",
     "next": "^13.0.6",
-    "next-i18next": "^13.0.2",
     "next-intl": "^2.10.2",
-    "next-language-detector": "^1.0.2",
     "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.1.2",
     "zustand": "^4.1.5"
   },
   "devDependencies": {
