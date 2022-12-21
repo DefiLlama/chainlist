@@ -9,8 +9,8 @@ import { useChain } from "../../stores";
 import useAccount from "../../hooks/useAccount";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 
-export default function Chain({ chain, buttonOnly }) {
-  const t = useTranslations("Common");
+export default function Chain({ chain, buttonOnly, lang }) {
+  const t = useTranslations("Common", lang);
 
   const router = useRouter();
 
@@ -116,7 +116,7 @@ export default function Chain({ chain, buttonOnly }) {
         )}
       </div>
 
-      {showAddlInfo && <RPCList chain={chain} />}
+      {showAddlInfo && <RPCList chain={chain} lang={lang} />}
     </>
   );
 }

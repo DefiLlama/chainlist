@@ -5,8 +5,8 @@ import { notTranslation as useTranslations } from "../../utils";
 import Logo from "./Logo";
 import useConnect from "../../hooks/useConnect";
 
-export default function Layout({ children }) {
-  const t = useTranslations("Common");
+export default function Layout({ children, lang }) {
+  const t = useTranslations("Common", lang);
 
   const { mutate } = useConnect();
 
@@ -78,7 +78,7 @@ export default function Layout({ children }) {
         </div>
       </div>
       <div className="bg-[#f3f3f3] p-5 relative flex flex-col gap-5">
-        <Header />
+        <Header lang={lang} />
 
         {children}
       </div>
