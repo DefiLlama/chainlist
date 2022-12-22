@@ -133,6 +133,30 @@ export function populateChain(chain, chainTvls) {
   return chain;
 }
 
+export function mergeDeep(target, source) {
+  const newTarget = { ...target }
+  const isObject = (obj) => obj && typeof obj === 'object';
+
+  if (!isObject(newTarget) || !isObject(source)) {
+    return source;
+  }
+
+  Object.keys(source).forEach(key => {
+    const targetValue = newTarget[key];
+    const sourceValue = source[key];
+
+    if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
+      newTarget[key] = targetValue.concat(sourceValue);
+    } else if (isObject(targetValue) && isObject(sourceValue)) {
+      newTarget[key] = mergeDeep(Object.assign({}, targetValue), sourceValue);
+    } else {
+      newTarget[key] = sourceValue;
+    }
+  });
+
+  return newTarget;
+}
+
 export const notTranslation =
   (ns, lang = "en") =>
   (key) => {
