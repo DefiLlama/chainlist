@@ -26,11 +26,6 @@ const privacyStatement = {
 export default {
   1: {
     rpcs: [
-      {
-        url: "https://eth-mainnet.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
       // Moralis -> tracks IP
       // Quicknode -> tracks IP
       {
@@ -113,6 +108,11 @@ export default {
         tracking: "none",
         trackingDetails: privacyStatement.zmok,
       },
+      {
+        url: "https://eth-mainnet.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
       // "http://127.0.0.1:8545",
 
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
@@ -138,11 +138,6 @@ export default {
   80001: {
     rpcs: [
       {
-        url: "https://polygon-mumbai.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
-      {
         url: "https://rpc.ankr.com/polygon_mumbai",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -154,6 +149,11 @@ export default {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://polygon-mumbai.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
     ],
   },
   //Rinkeby testnet deprecated
@@ -162,11 +162,6 @@ export default {
   },
   5: {
     rpcs: [
-      {
-        url: "https://eth-goerli.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
       {
         url: "https://rpc.ankr.com/eth_goerli",
         tracking: "limited",
@@ -181,6 +176,11 @@ export default {
         url: "https://eth-goerli.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://eth-goerli.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
       },
     ],
   },
@@ -342,11 +342,6 @@ export default {
   },
   137: {
     rpcs: [
-      {
-        url: "https://polygon-mainnet.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
       "https://polygon-rpc.com",
       "https://rpc-mainnet.matic.network",
       "https://rpc-mainnet.maticvigil.com",
@@ -380,6 +375,11 @@ export default {
         trackingDetails: privacyStatement.publicnode,
       },
       "https://polygon-mainnet-public.unifra.io",
+      {
+        url: "https://polygon-mainnet.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
     ],
   },
   25: {
@@ -396,11 +396,6 @@ export default {
   },
   42161: {
     rpcs: [
-      {
-        url: "https://arb-mainnet.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
       "https://arb1.arbitrum.io/rpc",
       {
         url: "https://rpc.ankr.com/arbitrum",
@@ -416,6 +411,11 @@ export default {
         url: "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
+      },
+      {
+        url: "https://arb-mainnet.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
       },
     ],
   },
@@ -490,11 +490,6 @@ export default {
   },
   10: {
     rpcs: [
-      {
-        url: "https://opt-mainnet.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
       "https://mainnet.optimism.io/",
       {
         url: "https://optimism-mainnet.public.blastapi.io",
@@ -510,6 +505,11 @@ export default {
         url: "https://1rpc.io/op",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://opt-mainnet.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
       },
     ],
   },
@@ -681,11 +681,6 @@ export default {
   },
   592: {
     rpcs: [
-      {
-        url: "https://astar-mainnet.g.alchemy.com/v2/demo",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
       "https://rpc.astar.network:8545",
       {
         url: "https://astar.public.blastapi.io",
@@ -697,6 +692,11 @@ export default {
         url: "https://1rpc.io/astr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://astar-mainnet.g.alchemy.com/v2/demo",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
       },
     ],
   },

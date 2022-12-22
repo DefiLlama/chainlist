@@ -20,7 +20,7 @@ export async function addToNetwork({ address, chain, rpc }) {
           symbol: chain.nativeCurrency.symbol, // 2-6 characters long
           decimals: chain.nativeCurrency.decimals,
         },
-        rpcUrls: rpc ? [rpc] : chain.rpc.map((r) => r.url),
+        rpcUrls: rpc ? [rpc] : chain.rpc.map((r) => r?.url ?? r),
         blockExplorerUrls: [
           chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
             ? chain.explorers[0].url
