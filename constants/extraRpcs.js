@@ -313,6 +313,11 @@ export default {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://avax-rpc-us.kordyle.dev/ext/bc/C/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.kordyle,
+      },
     ],
   },
   250: {
