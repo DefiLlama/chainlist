@@ -205,7 +205,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
           </>
         )}
       </td>
-      <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails || 'No privacy info'}>
+      <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails || t('no-privacy-info')}>
         {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
       </td>
       <td className="px-3 py-1 text-sm text-center border">
@@ -245,7 +245,7 @@ const CopyUrl = ({ url = "" }) => {
 
 const EmptyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none" className="w-4 h-4 mx-auto">
-    <circle cx="12.2844" cy="12.6242" r="11.0662" stroke="black" stroke-width="1.47549" stroke-dasharray="2.95 2.95"/>
+    <circle cx="12.2844" cy="12.6242" r="11.0662" stroke="black" strokeWidth="1.47549" strokeDasharray="2.95 2.95"/>
   </svg>
 )
 
