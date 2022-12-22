@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { arrayMoveImmutable } from 'array-move';
 
 import { llamaNodesRpcs } from "../constants/llamaNodesRpcs";
+import { arrayMove } from "../utils";
 
 export const useLlamaNodesRpcData = (chainId, data) => {
   const [rpcData, hasLlamaNodesRpc] = useMemo(() => {
@@ -11,7 +11,7 @@ export const useLlamaNodesRpcData = (chainId, data) => {
       const llamaNodesRpcIndex = data.findIndex(rpc => rpc?.data.url === llamaNodesRpc.rpcs[0].url);
 
       if (llamaNodesRpcIndex) {
-        return [arrayMoveImmutable(data, llamaNodesRpcIndex, 0), true];
+        return [arrayMove(data, llamaNodesRpcIndex, 0), true];
       }
 
       return [data, false];
