@@ -205,7 +205,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
           </>
         )}
       </td>
-      <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails}>
+      <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails || 'No privacy info'}>
         {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
       </td>
       <td className="px-3 py-1 text-sm text-center border">
