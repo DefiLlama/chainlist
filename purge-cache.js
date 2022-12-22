@@ -1,6 +1,8 @@
-const chainIds = require("./constants/chainIds.json");
+require("dotenv").config();
+
 const fetch = require("node-fetch");
 const fs = require("fs");
+const path = require("path");
 
 const CF_PURGE_CACHE_AUTH = process.env.CF_PURGE_CACHE_AUTH;
 const CF_ZONE = process.env.CF_ZONE;
@@ -13,42 +15,33 @@ async function purgeCacheByUrls(urls) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ files: urls }),
-  }).then((res) => res.json());
+  }).then((r) => r.json());
 
   console.log({ res });
 }
 
-async function getAllUrls() {
-  const res = await fetch("https://chainid.network/chains.json");
-  const chains = await res.json();
-
-  // list of files in public folder, recursively
-  const publicFiles = fs.readdirSync("public", { withFileTypes: true }).reduce((files, file) => {
-    if (file.isDirectory()) {
-      return files.concat(
-        fs
-          .readdirSync(`public/${file.name}`, {
-            withFileTypes: true,
-          })
-          .map((f) => `${file.name}/${f.name}`),
-      );
+function listFiles(dir, files = []) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const res = path.resolve(dir, entry.name);
+    if (entry.isDirectory()) {
+      listFiles(res, files);
+    } else {
+      files.push(res);
     }
+  }
 
-    return files.concat(file.name);
-  }, []);
+  return files
+    .map((file) => file.replace(process.cwd() + "/out", ""))
+    .filter((file) => !file.startsWith("/_next"))
+    .map((file) => file.replace(" ", "%20"))
+    .map((file) => file.replace(".html", ""));
+}
 
-  const urls = [
-    "https://chainlist.org/",
-    ...chains.map(({ chainId }) => `https://chainlist.org/chain/${chainId}`),
-    ...chains.map(({ name }) => `https://chainlist.org/chain/${name.toLowerCase().split(" ").join("%20")}`),
+async function getAllUrls() {
+  const paths = listFiles("out").map((file) => `https://chainlist.org${file}`);
 
-    "https://chainlist.org/zh",
-    ...chains.map(({ chainId }) => `https://chainlist.org/zh/chain/${chainId}`),
-    ...chains.map(({ name }) => `https://chainlist.org/zh/chain/${name.toLowerCase().split(" ").join("%20")}`),
-
-    ...publicFiles.map((file) => `https://chainlist.org/${file}`),
-    "https://chainlist.org/sitemap.xml",
-  ];
+  const urls = ["https://chainlist.org/", ...paths];
 
   return urls;
 }
