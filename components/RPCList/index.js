@@ -91,8 +91,8 @@ export default function RPCList({ chain, lang }) {
         </p>
       )}
 
-      <table className="whitespace-nowrap border-collapse m-0">
-        <caption className="px-3 py-1 border text-base font-medium border-b-0 w-full relative">
+      <table className="m-0 border-collapse whitespace-nowrap">
+        <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
           <span className="mr-4">{`${chain.name} RPC URL List`}</span>
           <button
             className="text-sm font-normal flex items-center gap-1 absolute right-4 top-[2px] bottom-[2px] hover:bg-[#EAEAEA] px-2 rounded-[10px]"
@@ -118,12 +118,12 @@ export default function RPCList({ chain, lang }) {
         </caption>
         <thead>
           <tr>
-            <th className="border font-medium px-3 py-1">RPC Server Address</th>
-            <th className="border font-medium px-3 py-1">Height</th>
-            <th className="border font-medium px-3 py-1">Latency</th>
-            <th className="border font-medium px-3 py-1">Score</th>
-            <th className="border font-medium px-3 py-1">Privacy</th>
-            <th className="border font-medium px-3 py-1"></th>
+            <th className="px-3 py-1 font-medium border">RPC Server Address</th>
+            <th className="px-3 py-1 font-medium border">Height</th>
+            <th className="px-3 py-1 font-medium border">Latency</th>
+            <th className="px-3 py-1 font-medium border">Score</th>
+            <th className="px-3 py-1 font-medium border">Privacy</th>
+            <th className="px-3 py-1 font-medium border"></th>
           </tr>
         </thead>
 
@@ -158,7 +158,7 @@ function PrivacyIcon({ tracking }) {
       return <GreenIcon />;
   }
 
-  return null;
+  return <EmptyIcon />;
 }
 
 const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
@@ -188,9 +188,9 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
       <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
         {isLoading ? <Shimmer /> : data?.url}
       </td>
-      <td className="border text-center px-3 text-sm py-1">{isLoading ? <Shimmer /> : data?.height}</td>
-      <td className="border text-center px-3 text-sm py-1">{isLoading ? <Shimmer /> : data?.latency}</td>
-      <td className="border px-3 text-sm py-1">
+      <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
+      <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
+      <td className="px-3 py-1 text-sm border">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -205,10 +205,10 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
           </>
         )}
       </td>
-      <td className="border px-3 text-sm py-1" title={privacy?.trackingDetails}>
+      <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails}>
         {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
       </td>
-      <td className="border px-3 text-sm py-1 text-center">
+      <td className="px-3 py-1 text-sm text-center border">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -242,6 +242,12 @@ const CopyUrl = ({ url = "" }) => {
     </button>
   );
 };
+
+const EmptyIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none" className="w-4 h-4 mx-auto">
+    <circle cx="12.2844" cy="12.6242" r="11.0662" stroke="black" stroke-width="1.47549" stroke-dasharray="2.95 2.95"/>
+  </svg>
+)
 
 const RedIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red" className="w-5 h-5 mx-auto">
