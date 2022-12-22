@@ -39,11 +39,20 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const chains = await fetcher("https://chainid.network/chains.json");
 
-  const paths = chains.map((chain) => ({
-    params: {
-      chain: chain.chainId.toString(),
-    },
-  }));
+  const paths = chains
+    .map((chain) => [
+      {
+        params: {
+          chain: chain.chainId.toString(),
+        },
+      },
+      {
+        params: {
+          chain: chain.name.toLowerCase(),
+        },
+      },
+    ])
+    .flat();
 
   return { paths, fallback: false };
 }
