@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
+import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 
@@ -72,6 +73,8 @@ export default function RPCList({ chain, lang }) {
     });
   }, [chains]);
 
+  const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
+
   const isEthMainnet = chain?.name === "Ethereum Mainnet";
 
   return (
@@ -128,16 +131,25 @@ export default function RPCList({ chain, lang }) {
         </thead>
 
         <tbody>
-          {data.map((item, index) => (
-            <Row
-              values={item}
-              chain={chain}
-              isEthMainnet={isEthMainnet}
-              key={index}
-              privacy={urlToData[item.data.url]}
-              lang={lang}
-            />
-          ))}
+          {rpcData.map((item, index) => {
+            let className = 'bg-inherit';
+
+            if (hasLlamaNodesRpc && index === 0) {
+              className = 'bg-[#F9F9F9]';
+            }
+
+            return (
+              <Row
+                values={item}
+                chain={chain}
+                isEthMainnet={isEthMainnet}
+                key={index}
+                privacy={urlToData[item.data.url]}
+                lang={lang}
+                className={className}
+              />
+            )
+          })}
         </tbody>
       </table>
     </div>
@@ -161,7 +173,7 @@ function PrivacyIcon({ tracking }) {
   return <EmptyIcon />;
 }
 
-const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
+const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
   const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
 
@@ -184,7 +196,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
   const { mutate: addToNetwork } = useAddToNetwork();
 
   return (
-    <tr>
+    <tr className={className}>
       <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
         {isLoading ? <Shimmer /> : data?.url}
       </td>
