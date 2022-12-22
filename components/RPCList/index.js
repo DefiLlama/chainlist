@@ -160,13 +160,17 @@ const Shimmer = () => {
   return <div className="rounded h-5 w-full min-w-[40px] animate-pulse bg-[#EAEAEA]"></div>;
 };
 
-function PrivacyIcon({ tracking }) {
+function PrivacyIcon({ tracking, isOpenSource = false }) {
   switch (tracking) {
     case "yes":
       return <RedIcon />;
     case "limited":
       return <OrangeIcon />;
     case "none":
+      if (isOpenSource) {
+        return <LightGreenIcon />;
+      }
+
       return <GreenIcon />;
   }
 
@@ -218,7 +222,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
         )}
       </td>
       <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails || t('no-privacy-info')}>
-        {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
+        {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
       </td>
       <td className="px-3 py-1 text-sm text-center border">
         {isLoading ? (
@@ -283,6 +287,16 @@ const OrangeIcon = () => (
 
 const GreenIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="green" className="w-5 h-5 mx-auto">
+    <path
+      fillRule="evenodd"
+      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+const LightGreenIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#43DB14" className="w-5 h-5 mx-auto">
     <path
       fillRule="evenodd"
       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"

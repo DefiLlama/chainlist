@@ -7,6 +7,7 @@ export const llamaNodesRpcs = {
         url: 'https://eth.llamarpc.com',
         tracking: 'none',
         trackingDetails: privacyStatement,
+        isOpenSource: true,
       },
     ]
   },
@@ -16,6 +17,7 @@ export const llamaNodesRpcs = {
         url: 'https://polygon.llamarpc.com',
         tracking: 'none',
         trackingDetails: privacyStatement,
+        isOpenSource: true,
       },
     ]
   },
