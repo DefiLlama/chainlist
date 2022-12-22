@@ -12,7 +12,7 @@
       "permanent": true
     },
     {
-      "source": "/_next/image**",
+      "source": "/_next/image\\?(.*)",
       "destination": "https://icons.llamao.fi/icons/misc/sus-chainlist"
     }
   ]
