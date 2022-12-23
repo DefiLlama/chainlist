@@ -6,6 +6,7 @@ import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
+import { Tooltip } from "../../components/Tooltip";
 
 export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
@@ -221,9 +222,11 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
           </>
         )}
       </td>
-      <td className="px-3 py-1 text-sm border" title={privacy?.trackingDetails || t('no-privacy-info')}>
-        {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
-      </td>
+        <td className="px-3 py-1 text-sm border">
+          <Tooltip content={privacy?.trackingDetails || t('no-privacy-info')}>
+            {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
+          </Tooltip>
+        </td>
       <td className="px-3 py-1 text-sm text-center border">
         {isLoading ? (
           <Shimmer />
