@@ -855,8 +855,7 @@ export const extraRpcs = {
   },
   61: {
     rpcs: [
-      "https://blockscout.com/etc/mainnet/api/eth-rpc",
-      "https://www.ethercluster.com/etc",
+      "https://etc.rivet.link",
       "https://etc.etcdesktop.com",
       "https://etc.mytokenpocket.vip",
       "https://besu-de.etc-network.info",
