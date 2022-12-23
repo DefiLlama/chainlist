@@ -17,7 +17,8 @@ async function purgeCacheByUrls(urls) {
     body: JSON.stringify({ files: urls }),
   }).then((r) => r.json());
 
-  console.log({ res });
+  console.log(JSON.stringify(res, null, 2));
+  return res;
 }
 
 function listFiles(dir, files = []) {
@@ -48,7 +49,18 @@ async function getAllUrls() {
 
 async function main() {
   const urls = await getAllUrls();
-  await purgeCacheByUrls(urls);
+
+  for (let i = 0; i < urls.length; i += 30) {
+    const chunk = urls.slice(i, i + 30);
+    const res = await purgeCacheByUrls(chunk);
+    if (!res.success) {
+      console.error("failed to purge cache");
+      console.error(JSON.stringify(res, null, 2));
+      return;
+    }
+  }
+
+  console.log("done purging cache");
 }
 
 main();
