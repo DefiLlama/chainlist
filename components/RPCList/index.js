@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
+import { useClipboard } from "../../hooks/useClipboard";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
@@ -252,12 +253,14 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
 };
 
 const CopyUrl = ({ url = "" }) => {
+  const { hasCopied, onCopy } = useClipboard()
+
   return (
     <button
       className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px] mx-auto"
-      onClick={() => navigator.clipboard.writeText(url)}
+      onClick={() => onCopy(url)}
     >
-      Copy URL
+      {!hasCopied ? 'Copy URL' : 'Copied!'}
     </button>
   );
 };
