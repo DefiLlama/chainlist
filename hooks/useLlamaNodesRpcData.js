@@ -10,7 +10,7 @@ export const useLlamaNodesRpcData = (chainId, data) => {
     if (llamaNodesRpc) {
       const llamaNodesRpcIndex = data.findIndex(rpc => rpc?.data.url === llamaNodesRpc.rpcs[0].url);
 
-      if (llamaNodesRpcIndex) {
+      if (llamaNodesRpcIndex || llamaNodesRpcIndex === 0) {
         return [arrayMove(data, llamaNodesRpcIndex, 0), true];
       }
 
