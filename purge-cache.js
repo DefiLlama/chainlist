@@ -17,7 +17,7 @@ async function purgeCacheByUrls(urls) {
     body: JSON.stringify({ files: urls }),
   }).then((r) => r.json());
 
-  console.log(JSON.stringify(res, null, 2));
+  // console.log(JSON.stringify(res, null, 2));
   return res;
 }
 
