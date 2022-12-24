@@ -457,7 +457,10 @@ export default {
     ],
   },
   1313161554: {
-    rpcs: ["https://mainnet.aurora.dev"],
+    rpcs: [
+      "https://mainnet.aurora.dev",
+      "https://rpc.polarisfinance.io"
+    ],
   },
   4181: {
     rpcs: ["https://rpc1.phi.network"],
