@@ -3,8 +3,11 @@ import { useEffect, useMemo, useState } from "react";
 import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
+import { useClipboard } from "../../hooks/useClipboard";
+import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
+import { Tooltip } from "../../components/Tooltip";
 
 export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
@@ -72,6 +75,8 @@ export default function RPCList({ chain, lang }) {
     });
   }, [chains]);
 
+  const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
+
   const isEthMainnet = chain?.name === "Ethereum Mainnet";
 
   return (
@@ -91,8 +96,8 @@ export default function RPCList({ chain, lang }) {
         </p>
       )}
 
-      <table className="whitespace-nowrap border-collapse m-0">
-        <caption className="px-3 py-1 border text-base font-medium border-b-0 w-full relative">
+      <table className="m-0 border-collapse whitespace-nowrap">
+        <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
           <span className="mr-4">{`${chain.name} RPC URL List`}</span>
           <button
             className="text-sm font-normal flex items-center gap-1 absolute right-4 top-[2px] bottom-[2px] hover:bg-[#EAEAEA] px-2 rounded-[10px]"
@@ -118,26 +123,35 @@ export default function RPCList({ chain, lang }) {
         </caption>
         <thead>
           <tr>
-            <th className="border font-medium px-3 py-1">RPC Server Address</th>
-            <th className="border font-medium px-3 py-1">Height</th>
-            <th className="border font-medium px-3 py-1">Latency</th>
-            <th className="border font-medium px-3 py-1">Score</th>
-            <th className="border font-medium px-3 py-1">Privacy</th>
-            <th className="border font-medium px-3 py-1"></th>
+            <th className="px-3 py-1 font-medium border">RPC Server Address</th>
+            <th className="px-3 py-1 font-medium border">Height</th>
+            <th className="px-3 py-1 font-medium border">Latency</th>
+            <th className="px-3 py-1 font-medium border">Score</th>
+            <th className="px-3 py-1 font-medium border">Privacy</th>
+            <th className="px-3 py-1 font-medium border"></th>
           </tr>
         </thead>
 
         <tbody>
-          {data.map((item, index) => (
-            <Row
-              values={item}
-              chain={chain}
-              isEthMainnet={isEthMainnet}
-              key={index}
-              privacy={urlToData[item.data.url]}
-              lang={lang}
-            />
-          ))}
+          {rpcData.map((item, index) => {
+            let className = 'bg-inherit';
+
+            if (hasLlamaNodesRpc && index === 0) {
+              className = 'bg-[#F9F9F9]';
+            }
+
+            return (
+              <Row
+                values={item}
+                chain={chain}
+                isEthMainnet={isEthMainnet}
+                key={index}
+                privacy={urlToData[item.data.url]}
+                lang={lang}
+                className={className}
+              />
+            )
+          })}
         </tbody>
       </table>
     </div>
@@ -148,20 +162,24 @@ const Shimmer = () => {
   return <div className="rounded h-5 w-full min-w-[40px] animate-pulse bg-[#EAEAEA]"></div>;
 };
 
-function PrivacyIcon({ tracking }) {
+function PrivacyIcon({ tracking, isOpenSource = false }) {
   switch (tracking) {
     case "yes":
       return <RedIcon />;
     case "limited":
       return <OrangeIcon />;
     case "none":
+      if (isOpenSource) {
+        return <LightGreenIcon />;
+      }
+
       return <GreenIcon />;
   }
 
-  return null;
+  return <EmptyIcon />;
 }
 
-const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
+const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
   const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
 
@@ -184,13 +202,13 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
   const { mutate: addToNetwork } = useAddToNetwork();
 
   return (
-    <tr>
+    <tr className={className}>
       <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
         {isLoading ? <Shimmer /> : data?.url}
       </td>
-      <td className="border text-center px-3 text-sm py-1">{isLoading ? <Shimmer /> : data?.height}</td>
-      <td className="border text-center px-3 text-sm py-1">{isLoading ? <Shimmer /> : data?.latency}</td>
-      <td className="border px-3 text-sm py-1">
+      <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
+      <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
+      <td className="px-3 py-1 text-sm border">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -205,10 +223,12 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
           </>
         )}
       </td>
-      <td className="border px-3 text-sm py-1" title={privacy?.trackingDetails}>
-        {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} />}
-      </td>
-      <td className="border px-3 text-sm py-1 text-center">
+        <td className="px-3 py-1 text-sm border">
+          <Tooltip content={privacy?.trackingDetails || t('no-privacy-info')}>
+            {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
+          </Tooltip>
+        </td>
+      <td className="px-3 py-1 text-sm text-center border">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -233,15 +253,23 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang }) => {
 };
 
 const CopyUrl = ({ url = "" }) => {
+  const { hasCopied, onCopy } = useClipboard()
+
   return (
     <button
       className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px] mx-auto"
-      onClick={() => navigator.clipboard.writeText(url)}
+      onClick={() => onCopy(url)}
     >
-      Copy URL
+      {!hasCopied ? 'Copy URL' : 'Copied!'}
     </button>
   );
 };
+
+const EmptyIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none" className="w-4 h-4 mx-auto">
+    <circle cx="12.2844" cy="12.6242" r="11.0662" stroke="black" strokeWidth="1.47549" strokeDasharray="2.95 2.95"/>
+  </svg>
+)
 
 const RedIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red" className="w-5 h-5 mx-auto">
@@ -265,6 +293,16 @@ const OrangeIcon = () => (
 
 const GreenIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="green" className="w-5 h-5 mx-auto">
+    <path
+      fillRule="evenodd"
+      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+const LightGreenIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#43DB14" className="w-5 h-5 mx-auto">
     <path
       fillRule="evenodd"
       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"

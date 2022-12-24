@@ -133,6 +133,44 @@ export function populateChain(chain, chainTvls) {
   return chain;
 }
 
+export function mergeDeep(target, source) {
+  const newTarget = { ...target }
+  const isObject = (obj) => obj && typeof obj === 'object';
+
+  if (!isObject(newTarget) || !isObject(source)) {
+    return source;
+  }
+
+  Object.keys(source).forEach(key => {
+    const targetValue = newTarget[key];
+    const sourceValue = source[key];
+
+    if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
+      newTarget[key] = targetValue.concat(sourceValue);
+    } else if (isObject(targetValue) && isObject(sourceValue)) {
+      newTarget[key] = mergeDeep(Object.assign({}, targetValue), sourceValue);
+    } else {
+      newTarget[key] = sourceValue;
+    }
+  });
+
+  return newTarget;
+}
+
+export function arrayMove(array, fromIndex, toIndex) {
+  const newArray = [...array];
+  const startIndex = fromIndex < 0 ? newArray.length + fromIndex : fromIndex;
+
+  if (startIndex >= 0 && startIndex < newArray.length) {
+    const endIndex = toIndex < 0 ? newArray.length + toIndex : toIndex;
+    const [item] = newArray.splice(fromIndex, 1);
+
+    newArray.splice(endIndex, 0, item);
+  }
+
+  return newArray;
+}
+
 export const notTranslation =
   (ns, lang = "en") =>
   (key) => {

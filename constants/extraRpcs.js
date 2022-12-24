@@ -1,3 +1,7 @@
+import { mergeDeep } from '../utils';
+
+import { llamaNodesRpcs } from './llamaNodesRpcs';
+
 const privacyStatement = {
   ankr: "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
@@ -23,7 +27,7 @@ const privacyStatement = {
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
 };
 
-export default {
+export const extraRpcs = {
   1: {
     rpcs: [
       // Moralis -> tracks IP
@@ -1543,3 +1547,7 @@ export default {
     rpcs: ["https://rpc.maplabs.io"],
   },
 };
+
+const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
+
+export default allExtraRpcs;
