@@ -1270,7 +1270,7 @@ export const extraRpcs = {
   534354: {
     rpcs: [
     {
-      url: "scroll-prealpha-public.unifra.io",
+      url: "https://scroll-prealpha-public.unifra.io",
       tracking: "none"
     }
   },
