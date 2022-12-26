@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
+import * as Fathom from "fathom-client";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useClipboard } from "../../hooks/useClipboard";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
+import { FATHOM_EVENTS_ID } from "../../hooks/useAnalytics";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
@@ -254,6 +256,10 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
 
 const CopyUrl = ({ url = "" }) => {
   const { hasCopied, onCopy } = useClipboard()
+
+  if (url.includes("llamarpc")) {
+    Fathom.trackGoal(FATHOM_EVENTS_ID[1], 0);
+  }
 
   return (
     <button
