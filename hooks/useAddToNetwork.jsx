@@ -1,3 +1,4 @@
+import * as Fathom from "fathom-client";
 import { useMutation, QueryClient } from "@tanstack/react-query";
 import { connectWallet } from "./useConnect";
 
@@ -28,10 +29,21 @@ export async function addToNetwork({ address, chain, rpc }) {
         ],
       };
 
-      const result = window.ethereum.request({
+      const result = await window.ethereum.request({
         method: "wallet_addEthereumChain",
         params: [params, address],
       });
+
+      // the 'wallet_addEthereumChain' method returns null if the request was successful
+      if (result === null) {
+        if (rpc && rpc.includes("llamarpc")) {
+          Fathom.trackGoal("KZQZWMIP", rpc);
+        } else {
+          if (!rpc && chain.rpc?.length > 0 && chain.rpc[0].url.includes("llamarpc")) {
+            Fathom.trackGoal("KZQZWMIP", chain.rpc[0].url);
+          }
+        }
+      }
 
       return result;
     } else {
