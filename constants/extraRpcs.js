@@ -1267,6 +1267,13 @@ export const extraRpcs = {
   47805: {
     rpcs: ["https://rpc.rei.network"],
   },
+  534354: {
+    rpcs: [
+    {
+      url: "scroll-prealpha-public.unifra.io",
+      tracking: "none"
+    }
+  },
   55555: {
     rpcs: ["https://rei-rpc.moonrhythm.io"],
   },
