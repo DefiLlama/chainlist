@@ -296,6 +296,7 @@ export const extraRpcs = {
   43114: {
     rpcs: [
       "https://api.avax.network/ext/bc/C/rpc",
+      "https://avax-rpc-us.kordyle.dev/ext/bc/C/rpc",
       {
         url: "https://rpc.ankr.com/avalanche",
         tracking: "limited",
