@@ -11,12 +11,10 @@ export const useAnalytics = () => {
 	const router = useRouter()
 
 	useEffect(() => {
-		if (process.env.NODE_ENV === 'production') {
-      Fathom.load('TKCNGGEZ', {
-        includedDomains: ['chainlist.defillama.com', 'chainlist.org'],
-        url: 'https://surprising-powerful.llama.fi/script.js',
-      })
-		}
+		Fathom.load('TKCNGGEZ', {
+			includedDomains: ['chainlist.defillama.com', 'chainlist.org'],
+			url: 'https://surprising-powerful.llama.fi/script.js',
+		})
 
 		const onRouteChangeComplete = () => {
 			Fathom.trackPageview()
