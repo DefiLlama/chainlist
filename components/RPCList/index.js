@@ -257,14 +257,18 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
 const CopyUrl = ({ url = "" }) => {
   const { hasCopied, onCopy } = useClipboard()
 
-  if (url.includes("llamarpc")) {
-    Fathom.trackGoal(FATHOM_EVENTS_ID[1], 0);
+  const handleCopy = () => {
+    if (url.includes("llamarpc")) {
+      Fathom.trackGoal(FATHOM_EVENTS_ID[1], 0);
+    }
+
+    return onCopy(url)
   }
 
   return (
     <button
       className="px-2 py-[2px] -my-[2px] text-sm hover:bg-[#EAEAEA] rounded-[50px] mx-auto"
-      onClick={() => onCopy(url)}
+      onClick={handleCopy}
     >
       {!hasCopied ? 'Copy URL' : 'Copied!'}
     </button>
