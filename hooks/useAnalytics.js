@@ -10,6 +10,14 @@ export const FATHOM_DROPDOWN_EVENTS_ID = {
   1: 'XIFGUQQY',
   137: 'C6AYES3T',
 }
+export const FATHOM_NO_EVENTS_ID = {
+  1: '7X05SCBE',
+  137: 'BEKTDT7F',
+  250: 'KPCKMPYG',
+  42161: '9DNMZNFD'
+}
+
+export const CHAINS_MONITOR = [1,137,250, 42161]
 
 export const useAnalytics = () => {
 	const router = useRouter()
