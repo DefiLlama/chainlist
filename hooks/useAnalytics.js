@@ -3,8 +3,12 @@ import { useRouter } from 'next/router'
 import * as Fathom from 'fathom-client'
 
 export const FATHOM_EVENTS_ID = {
-  1: 'XIFGUQQY',
   137: 'KZQZWMIP',
+}
+
+export const FATHOM_DROPDOWN_EVENTS_ID = {
+  1: 'XIFGUQQY',
+  137: 'C6AYES3T',
 }
 
 export const useAnalytics = () => {

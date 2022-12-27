@@ -6,7 +6,7 @@ import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useClipboard } from "../../hooks/useClipboard";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
-import { FATHOM_EVENTS_ID } from "../../hooks/useAnalytics";
+import { FATHOM_DROPDOWN_EVENTS_ID } from "../../hooks/useAnalytics";
 import { useAccount, useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
@@ -258,8 +258,8 @@ const CopyUrl = ({ url = "" }) => {
   const { hasCopied, onCopy } = useClipboard()
 
   const handleCopy = () => {
-    if (url.includes("llamarpc")) {
-      Fathom.trackGoal(FATHOM_EVENTS_ID[1], 0);
+    if (url.includes("eth.llamarpc")) {
+      Fathom.trackGoal(FATHOM_DROPDOWN_EVENTS_ID[1], 0);
     }
 
     return onCopy(url)
