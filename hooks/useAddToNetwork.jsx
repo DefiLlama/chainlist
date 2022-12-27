@@ -1,6 +1,6 @@
 import * as Fathom from "fathom-client";
 import { useMutation, QueryClient } from "@tanstack/react-query";
-import { FATHOM_EVENTS_ID, FATHOM_DROPDOWN_EVENTS_ID } from "./useAnalytics";
+import { FATHOM_EVENTS_ID, FATHOM_DROPDOWN_EVENTS_ID, FATHOM_NO_EVENTS_ID, CHAINS_MONITOR } from "./useAnalytics";
 import { connectWallet } from "./useConnect";
 
 const toHex = (num) => {
@@ -37,13 +37,13 @@ export async function addToNetwork({ address, chain, rpc }) {
       });
 
       // the 'wallet_addEthereumChain' method returns null if the request was successful
-      if (result === null) {
+      if (result === null && CHAINS_MONITOR.includes(chain.chainId)) {
         if (rpc && rpc.includes("llamarpc")) {
           Fathom.trackGoal(FATHOM_DROPDOWN_EVENTS_ID[chain.chainId], 0);
-        } else {
-          if (!rpc && chain.rpc?.length > 0 && chain.rpc[0].url.includes("llamarpc")) {
+        } else if (!rpc && chain.rpc?.length > 0 && chain.rpc[0].url.includes("llamarpc")) {
             Fathom.trackGoal(FATHOM_EVENTS_ID[chain.chainId], 0);
-          }
+        } else {
+          Fathom.trackGoal(FATHOM_NO_EVENTS_ID[chain.chainId], 0);
         }
       }
 
