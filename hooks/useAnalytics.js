@@ -12,12 +12,27 @@ export const FATHOM_DROPDOWN_EVENTS_ID = {
 }
 export const FATHOM_NO_EVENTS_ID = {
   1: '7X05SCBE',
+  10: 'UJHQR5AT',
+  25: 'VEQDBWGQ',
+  56: 'NMO1JLYL',
   137: 'BEKTDT7F',
   250: 'KPCKMPYG',
-  42161: '9DNMZNFD'
+  8217: '9369UJ80',
+  42161: '9DNMZNFD',
+  43114: 'FRM17FBN'
 }
 
-export const CHAINS_MONITOR = [1,137,250, 42161]
+export const CHAINS_MONITOR = [
+  1,
+  10,
+  25,
+  56,
+  137,
+  250,
+  8217,
+  42161,
+  43114
+]
 
 export const useAnalytics = () => {
 	const router = useRouter()
