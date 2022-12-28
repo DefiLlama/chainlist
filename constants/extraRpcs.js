@@ -233,9 +233,6 @@ export const extraRpcs = {
       },
     ],
   },
-  11155111: {
-    rpcs: ["https://nunki.htznr.fault.dev/rpc"],
-  },
   56: {
     rpcs: [
       "https://bsc-dataseed.binance.org/",
