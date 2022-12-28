@@ -43,6 +43,7 @@ export async function addToNetwork({ address, chain, rpc }) {
         } else if (!rpc && chain.rpc?.length > 0 && chain.rpc[0].url.includes("llamarpc")) {
             Fathom.trackGoal(FATHOM_EVENTS_ID[chain.chainId], 0);
         } else {
+          console.log('competitor addded', FATHOM_NO_EVENTS_ID[chain.chainId])
           Fathom.trackGoal(FATHOM_NO_EVENTS_ID[chain.chainId], 0);
         }
       }
