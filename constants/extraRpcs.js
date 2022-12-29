@@ -945,8 +945,11 @@ export const extraRpcs = {
     rpcs: [],
     rpcWorking: false,
   },
+    125: {
+    rpcs: ["https://rpc.testnet.oychain.net"],
+  },
   126: {
-    rpcs: ["https://rpc.mainnet.oychain.io", "https://rpc.oychain.io"],
+    rpcs: ["https://rpc.mainnet.oychain.net"],
   },
   127: {
     rpcs: [],
