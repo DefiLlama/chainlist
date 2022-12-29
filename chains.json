@@ -5081,21 +5081,33 @@
     ]
   },
   {
-    "name": "Kortho Mainnet",
-    "chain": "Kortho Chain",
+    "name": "Kortho Chain",
+    "chainId": 2559,
+    "shortName": "KTO",
+    "chain": "KTO",
+    "network": "mainnet",
+    "networkId": 2559,
+    "nativeCurrency": {
+        "name": "KORTHO",
+        "symbol": "KTO",
+        "decimals": 18
+    },
     "rpc": [
-      "https://www.kortho-chain.com"
+        "https://www.kortho-chain.com",
+        "https://www.kortho-chain.co",
+        "https://www.kortho-chain.org",
+        "https://www.kortho-chain.xyz",
+      
     ],
     "faucets": [],
-    "nativeCurrency": {
-      "name": "KorthoChain",
-      "symbol": "KTO",
-      "decimals": 11
-    },
-    "infoURL": "https://www.kortho.io/",
-    "shortName": "ktoc",
-    "chainId": 2559,
-    "networkId": 2559
+    "infoURL": "https://www.kortho.io",
+     "app_resource": {
+        "ic_chain_select": "https://www.kortho.io/static/image/1.png",
+        "ic_chain_unselect": "https://www.kortho.io/static/image/0.png",
+        "color_chain_bg": "0x748ee3"
+        "txUrl":" https://www.kortho.io/", 
+    }
+
   },
   {
     "name": "ZCore Testnet",
