@@ -1550,6 +1550,9 @@ export const extraRpcs = {
   22776: {
     rpcs: ["https://rpc.maplabs.io"],
   },
+  641230: {
+    rpcs: ["https://brnkc-mainnet.bearnetwork.net"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
