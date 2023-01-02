@@ -288,6 +288,7 @@ export const extraRpcs = {
   97: {
     rpcs: [
       "https://bsctestapi.terminet.io/rpc",
+      "https://prettiest-maximum-sea.bsc-testnet.quiknode.pro/c4bc890879938756cf2a4220392cb8f69fadea30/",
       {
         url: "https://bsc-testnet.public.blastapi.io",
         tracking: "limited",
