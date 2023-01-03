@@ -5088,26 +5088,24 @@
     "network": "mainnet",
     "networkId": 2559,
     "nativeCurrency": {
-        "name": "KORTHO",
-        "symbol": "KTO",
-        "decimals": 18
+      "name": "KORTHO",
+      "symbol": "KTO",
+      "decimals": 18
     },
     "rpc": [
-        "https://www.kortho-chain.com",
-        "https://www.kortho-chain.co",
-        "https://www.kortho-chain.org",
-        "https://www.kortho-chain.xyz",
-      
+      "https://www.kortho-chain.com",
+      "https://www.kortho-chain.co",
+      "https://www.kortho-chain.org",
+      "https://www.kortho-chain.xyz"
     ],
     "faucets": [],
     "infoURL": "https://www.kortho.io",
-     "app_resource": {
-        "ic_chain_select": "https://www.kortho.io/static/image/1.png",
-        "ic_chain_unselect": "https://www.kortho.io/static/image/0.png",
-        "color_chain_bg": "0x748ee3"
-        "txUrl":" https://www.kortho.io/", 
+    "app_resource": {
+      "ic_chain_select": "https://www.kortho.io/static/image/1.png",
+      "ic_chain_unselect": "https://www.kortho.io/static/image/0.png",
+      "color_chain_bg": "0x748ee3",
+      "txUrl": " https://www.kortho.io/"
     }
-
   },
   {
     "name": "ZCore Testnet",
@@ -11098,12 +11096,12 @@
       }
     ],
     "app_resource": {
-        "ic_chain_select": "https://i.postimg.cc/W4t3nLc7/fsc.png",
-        "ic_chain_unselect": "https://i.postimg.cc/cHs3Zkpg/fsc.png",
-        "color_chain_bg": "0x343434",
-        "color_chain_text": "0xFFFFFF",
-        "ic_chain_unselect_dark": "https://i.postimg.cc/13n2cJYq/fsc.png",
-        "ic_home_logo": "https://i.postimg.cc/ncbYXTfz/image.png"
+      "ic_chain_select": "https://i.postimg.cc/W4t3nLc7/fsc.png",
+      "ic_chain_unselect": "https://i.postimg.cc/cHs3Zkpg/fsc.png",
+      "color_chain_bg": "0x343434",
+      "color_chain_text": "0xFFFFFF",
+      "ic_chain_unselect_dark": "https://i.postimg.cc/13n2cJYq/fsc.png",
+      "ic_home_logo": "https://i.postimg.cc/ncbYXTfz/image.png"
     }
   }
 ]
