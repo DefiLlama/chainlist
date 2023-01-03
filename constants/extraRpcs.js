@@ -1211,9 +1211,6 @@ export const extraRpcs = {
   8000: {
     rpcs: ["https://dataseed.testnet.teleport.network"],
   },
-  8723: {
-    rpcs: ["https://mainnet-web3.wolot.io"],
-  },
   8995: {
     rpcs: ["https://core.bloxberg.org"],
   },
@@ -1239,7 +1236,9 @@ export const extraRpcs = {
     ],
   },
   836542336838601: {
-    rpcs: ["https://mainnet-api.skalenodes.com/v1/fit-betelgeuse"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   9100: {
     rpcs: ["rpcWorking:false"],
@@ -1262,7 +1261,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   19845: {
-    rpcs: ["https://seed.btcix.org/rpc"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   21816: {
     rpcs: ["https://seed.omlira.com"],
