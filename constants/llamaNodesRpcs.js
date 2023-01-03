@@ -10,15 +10,5 @@ export const llamaNodesRpcs = {
         isOpenSource: true,
       },
     ]
-  },
-  137: {
-    rpcs: [
-      {
-        url: 'https://polygon.llamarpc.com',
-        tracking: 'none',
-        trackingDetails: privacyStatement,
-        isOpenSource: true,
-      },
-    ]
-  },
+  }
 }
