@@ -1,9 +1,10 @@
-import { mergeDeep } from '../utils';
+import { mergeDeep } from "../utils";
 
-import { llamaNodesRpcs } from './llamaNodesRpcs';
+import { llamaNodesRpcs } from "./llamaNodesRpcs";
 
 const privacyStatement = {
-  ankr: "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
+  ankr:
+    "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
     "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, location information (including approximate location derived from IP address), and Internet service provider. https://www.alchemy.com/policies/privacy-policy",
   nodereal: `We may automatically record certain information about how you use our Sites (we refer to this information as "Log Data"). Log Data may include information such as a user's Internet Protocol (IP) address, device and browser type, operating system, the pages or features of our Sites to which a user browsed and the time spent on those pages or features, the frequency with which the Sites are used by a user, search terms, the links on our Sites that a user clicked on or used, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users' needs and preferences. https://nodereal.io/terms`,
@@ -21,7 +22,8 @@ const privacyStatement = {
     "All the information in our logs (log data) can only be accessed for the last 7 days at any certain time, and it is completely purged after 14 days. We do not store any user information for longer periods of time or with any other purposes than investigating potential errors and service failures. https://blastapi.io/privacy-policy",
   bitstack:
     "Information about your computer hardware and software may be automatically collected by BitStack. This information can include: your IP address, browser type, domain names, access times and referring website addresses. https://bitstack.com/#/privacy",
-  pokt: "What We Do Not Collect: User's IP address, request origin, request data. https://www.blog.pokt.network/rpc-logging-practices/",
+  pokt:
+    "What We Do Not Collect: User's IP address, request origin, request data. https://www.blog.pokt.network/rpc-logging-practices/",
   zmok: `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
@@ -38,7 +40,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
+        url:
+          "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
@@ -93,7 +96,8 @@ export const extraRpcs = {
         tracking: "unspecified",
       },
       {
-        url: "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
+        url:
+          "https://api.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.bitstack,
       },
@@ -162,7 +166,10 @@ export const extraRpcs = {
   },
   //Rinkeby testnet deprecated
   4: {
-    rpcs: ["https://rpc.ankr.com/eth_rinkeby", "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161"],
+    rpcs: [
+      "https://rpc.ankr.com/eth_rinkeby",
+      "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161",
+    ],
   },
   5: {
     rpcs: [
@@ -190,7 +197,10 @@ export const extraRpcs = {
   },
   //Ropsten testnet deprecated
   3: {
-    rpcs: ["https://rpc.ankr.com/eth_ropsten", "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
+    rpcs: [
+      "https://rpc.ankr.com/eth_ropsten",
+      "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+    ],
   },
   4002: {
     rpcs: [
@@ -208,9 +218,7 @@ export const extraRpcs = {
     ],
   },
   "4444": {
-    "rpcs": [
-        "https://janus.htmlcoin.dev/janus/"
-    ]
+    rpcs: ["https://janus.htmlcoin.dev/janus/"],
   },
   43113: {
     rpcs: [
@@ -249,7 +257,8 @@ export const extraRpcs = {
       "https://bsc-dataseed3.binance.org/",
       "https://bsc-dataseed4.binance.org/",
       {
-        url: "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
+        url:
+          "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
@@ -259,14 +268,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       "https://bscrpc.com",
-      "https://bsc.mytokenpocket.vip",
       {
         url: "https://binance.nodereal.io",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
       "https://rpc-bsc.bnb48.club",
-      "https://bscapi.terminet.io/rpc",
       "https://bsc-mainnet.rpcfast.com",
       "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
       {
@@ -390,9 +397,7 @@ export const extraRpcs = {
   },
   25: {
     rpcs: [
-      "https://cronos-rpc.heavenswail.one/",
       "https://evm.cronos.org",
-      "https://cronosrpc-1.xstaking.sg/",
       "https://cronos-rpc.elk.finance/",
       "https://node.croswap.com/rpc",
     ],
@@ -472,7 +477,6 @@ export const extraRpcs = {
     rpcs: [
       "https://http-mainnet-node.huobichain.com",
       "https://http-mainnet.hecochain.com",
-      "https://pub001.hg.network/rpc",
       "https://hecoapi.terminet.io/rpc",
     ],
   },
@@ -553,7 +557,10 @@ export const extraRpcs = {
     ],
   },
   10200: {
-    rpcs: ["https://rpc.chiadochain.net", "https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado"],
+    rpcs: [
+      "https://rpc.chiadochain.net",
+      "https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado",
+    ],
   },
   1231: {
     rpcs: ["https://ultron-rpc.net"],
@@ -587,7 +594,6 @@ export const extraRpcs = {
       "https://rpc2.teloskorea.com/evm",
       "https://rpc01.us.telosunlimited.io/evm",
       "https://rpc02.us.telosunlimited.io/evm",
-      "https://rpc.telosarabia.net/evm",
     ],
   },
   32659: {
@@ -673,7 +679,11 @@ export const extraRpcs = {
     rpcs: ["https://songbird.towolabs.com/rpc"],
   },
   122: {
-    rpcs: ["https://fuse-rpc.gateway.pokt.network/", "https://rpc.fuse.io", "https://fuse-mainnet.chainstacklabs.com"],
+    rpcs: [
+      "https://fuse-rpc.gateway.pokt.network/",
+      "https://rpc.fuse.io",
+      "https://fuse-mainnet.chainstacklabs.com",
+    ],
   },
   336: {
     rpcs: [
@@ -775,7 +785,8 @@ export const extraRpcs = {
   11297108109: {
     rpcs: [
       {
-        url: "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b",
+        url:
+          "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
       },
@@ -880,7 +891,8 @@ export const extraRpcs = {
   76: {
     rpcs: [],
     rpcWorking: false,
-    possibleRebrand: "It is now a Polkadot chain project renamed: Acuity being built on substrate",
+    possibleRebrand:
+      "It is now a Polkadot chain project renamed: Acuity being built on substrate",
   },
   77: {
     rpcs: ["https://sokol.poa.network"],
@@ -956,7 +968,11 @@ export const extraRpcs = {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
   186: {
-    rpcs: ["https://rpc.seelen.pro/", "https://rpc.seele-n.com/", "https://rpc.dsnleel.link/"],
+    rpcs: [
+      "https://rpc.seelen.pro/",
+      "https://rpc.seele-n.com/",
+      "https://rpc.dsnleel.link/",
+    ],
   },
   188: {
     rpcs: ["https://mainnet.bmcchain.com/"],
@@ -1016,7 +1032,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc.tao.network"],
   },
   686: {
-    rpcs: ["https://eth-rpc-karura.aca-api.network", "https://rpc.evm.karura.network"],
+    rpcs: [
+      "https://eth-rpc-karura.aca-api.network",
+      "https://rpc.evm.karura.network",
+    ],
   },
   707: {
     rpcs: [],
@@ -1026,7 +1045,10 @@ export const extraRpcs = {
     rpcs: ["https://node.cheapeth.org/rpc"],
   },
   787: {
-    rpcs: ["https://eth-rpc-acala.aca-api.network", "https://rpc.evm.acala.network"],
+    rpcs: [
+      "https://eth-rpc-acala.aca-api.network",
+      "https://rpc.evm.acala.network",
+    ],
   },
   803: {
     rpcs: [],
@@ -1056,10 +1078,17 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   1024: {
-    rpcs: ["https://rpc-ivy.clover.finance", "https://rpc-ivy-2.clover.finance", "https://rpc-ivy-3.clover.finance"],
+    rpcs: [
+      "https://rpc-ivy.clover.finance",
+      "https://rpc-ivy-2.clover.finance",
+      "https://rpc-ivy-3.clover.finance",
+    ],
   },
   1030: {
-    rpcs: ["https://evm.confluxrpc.com", "https://conflux-espace-public.unifra.io"],
+    rpcs: [
+      "https://evm.confluxrpc.com",
+      "https://conflux-espace-public.unifra.io",
+    ],
   },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
@@ -1248,13 +1277,23 @@ export const extraRpcs = {
     rpcs: ["rpcWorking:false"],
   },
   32520: {
-    rpcs: ["https://rpc.icecreamswap.com", "https://nodes.vefinetwork.org/bitgert"],
+    rpcs: [
+      "https://rpc.icecreamswap.com",
+      "https://nodes.vefinetwork.org/bitgert",
+    ],
   },
   39797: {
-    rpcs: ["https://nodeapi.energi.network", "https://explorer.energi.network/api/eth-rpc"],
+    rpcs: [
+      "https://nodeapi.energi.network",
+      "https://explorer.energi.network/api/eth-rpc",
+    ],
   },
   39815: {
-    rpcs: ["https://mainnet.oho.ai", "https://mainnet-rpc.ohoscan.com", "https://mainnet-rpc2.ohoscan.com"],
+    rpcs: [
+      "https://mainnet.oho.ai",
+      "https://mainnet-rpc.ohoscan.com",
+      "https://mainnet-rpc2.ohoscan.com",
+    ],
   },
   42069: {
     rpcs: ["rpcWorking:false"],
