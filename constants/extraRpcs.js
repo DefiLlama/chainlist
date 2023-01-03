@@ -1047,7 +1047,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   880: {
-    rpcs: ["https://mainnet.ambroschain.com"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   977: {
     rpcs: [],
@@ -1055,7 +1057,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: ["https://rpc.luckynetwork.org"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   1010: {
     rpcs: ["https://meta.evrice.com"],
@@ -1089,7 +1093,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   1202: {
-    rpcs: ["https://rpc.cadaut.com"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   1213: {
     rpcs: ["https://dataseed.popcateum.org"],
@@ -1131,7 +1137,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   1987: {
-    rpcs: ["https://lb.rpc.egem.io"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   2000: {
     rpcs: [
@@ -1180,7 +1188,9 @@ export const extraRpcs = {
     rpcs: ["https://api.ezchain.com/ext/bc/C/rpc"],
   },
   3690: {
-    rpcs: ["https://rpc1.bittexscan.info"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   5197: {
     rpcs: ["https://mainnet.eraswap.network"],
