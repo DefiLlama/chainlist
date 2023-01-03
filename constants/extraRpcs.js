@@ -670,7 +670,6 @@ export const extraRpcs = {
   10000: {
     rpcs: [
       "https://smartbch.fountainhead.cash/mainnet",
-      "https://smartbch.greyh.at",
       "https://global.uat.cash",
       "https://rpc.uatvo.com",
     ],
@@ -776,9 +775,6 @@ export const extraRpcs = {
       "https://rpc-5.zyx.network/",
     ],
   },
-  269: {
-    rpcs: ["https://hpbnode.com"],
-  },
   60: {
     rpcs: ["https://rpc.gochain.io"],
   },
@@ -844,7 +840,6 @@ export const extraRpcs = {
   },
   50: {
     rpcs: [
-      "https://xdcrpc.com",
       "https://erpc.xinfin.network",
       "https://rpc.xinfin.network",
       "https://rpc1.xinfin.network",
@@ -968,11 +963,7 @@ export const extraRpcs = {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
   186: {
-    rpcs: [
-      "https://rpc.seelen.pro/",
-      "https://rpc.seele-n.com/",
-      "https://rpc.dsnleel.link/",
-    ],
+    rpcs: ["https://rpc.seelen.pro/"],
   },
   188: {
     rpcs: ["https://mainnet.bmcchain.com/"],
