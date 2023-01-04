@@ -868,9 +868,6 @@ export const extraRpcs = {
       "https://rpc.etcplanets.com",
     ],
   },
-  2020: {
-    rpcs: ["https://api.roninchain.com/rpc"],
-  },
   64: {
     rpcs: [],
     websiteDead: true,
