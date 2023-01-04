@@ -467,6 +467,15 @@ export const extraRpcs = {
       "https://harmony-mainnet.chainstacklabs.com",
     ],
   },
+  295: {
+    rpcs: ["https://mainnet.hashio.io/api"],
+  },
+  296: {
+    rpcs: ["https://testnet.hashio.io/api"],
+  },
+  297: {
+    rpcs: ["https://previewnet.hashio.io/api"],
+  },
   1313161554: {
     rpcs: ["https://mainnet.aurora.dev"],
   },
