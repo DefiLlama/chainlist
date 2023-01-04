@@ -1400,7 +1400,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   246529: {
-    rpcs: ["https://rpc.sigma1.artis.network"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   281121: {
     rpcs: ["rpcWorking:false"],
@@ -1468,7 +1470,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   1313161556: {
-    rpcs: ["http://localhost:8545"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   53935: {
     rpcs: [
@@ -1563,13 +1567,19 @@ export const extraRpcs = {
     rpcs: ["https://beta-rpc.mainnet.computecoin.com"],
   },
   10086: {
-    rpcs: ["http://geth.free.idcfengye.com"],
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
   },
   5177: {
-    rpcs: ["https://mainnet-rpc.tlxscan.com"],
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
   },
   10248: {
-    rpcs: ["https://node.0xtchain.com"],
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
   },
   18159: {
     rpcs: [
@@ -1583,10 +1593,14 @@ export const extraRpcs = {
     rpcs: ["https://rpc.ssquad.games"],
   },
   14000: {
-    rpcs: ["https://www.3sps.net"],
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
   },
   22776: {
-    rpcs: ["https://rpc.maplabs.io"],
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
   },
 };
 
