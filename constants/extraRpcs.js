@@ -1602,6 +1602,9 @@ export const extraRpcs = {
     rpcWorking: false,
     websiteDead: true,
   },
+  14093: {
+    rpcs: ["https://rpc.eightbox.org"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
