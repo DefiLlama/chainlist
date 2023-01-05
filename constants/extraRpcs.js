@@ -840,6 +840,7 @@ export const extraRpcs = {
   },
   50: {
     rpcs: [
+      "https://rpc.xdcrpc.com",
       "https://erpc.xinfin.network",
       "https://rpc.xinfin.network",
       "https://rpc1.xinfin.network",
