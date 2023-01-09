@@ -27,6 +27,8 @@ const privacyStatement = {
   zmok: `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
+  omnia: 
+    "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
     "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
 };
@@ -36,6 +38,11 @@ export const extraRpcs = {
     rpcs: [
       // Moralis -> tracks IP
       // Quicknode -> tracks IP
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       {
         url: "https://rpc.ankr.com/eth",
         tracking: "limited",
@@ -153,6 +160,11 @@ export const extraRpcs = {
   80001: {
     rpcs: [
       {
+        url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
         url: "https://rpc.ankr.com/polygon_mumbai",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -180,6 +192,11 @@ export const extraRpcs = {
   },
   5: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       {
         url: "https://rpc.ankr.com/eth_goerli",
         tracking: "limited",
@@ -230,6 +247,11 @@ export const extraRpcs = {
   43113: {
     rpcs: [
       {
+        url: "https://endpoints.omniatech.io/v1/avax/fuji/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
         url: "https://rpc.ankr.com/avalanche_fuji",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -250,6 +272,11 @@ export const extraRpcs = {
   },
   56: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://bsc-dataseed.binance.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
@@ -298,6 +325,11 @@ export const extraRpcs = {
   },
   97: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/bsc/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://bsctestapi.terminet.io/rpc",
       {
         url: "https://bsc-testnet.public.blastapi.io",
@@ -311,6 +343,11 @@ export const extraRpcs = {
   },
   43114: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/avax/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://api.avax.network/ext/bc/C/rpc",
       {
         url: "https://rpc.ankr.com/avalanche",
@@ -362,6 +399,11 @@ export const extraRpcs = {
   },
   137: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://polygon-rpc.com",
       "https://rpc-mainnet.matic.network",
       "https://rpc-mainnet.maticvigil.com",
@@ -414,6 +456,11 @@ export const extraRpcs = {
   },
   42161: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://arb1.arbitrum.io/rpc",
       {
         url: "https://rpc.ankr.com/arbitrum",
@@ -439,6 +486,11 @@ export const extraRpcs = {
   },
   421613: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/arbitrum/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       {
         url: "https://arb-goerli.g.alchemy.com/v2/demo",
         tracking: "yes",
@@ -507,6 +559,11 @@ export const extraRpcs = {
   },
   10: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/op/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://mainnet.optimism.io/",
       {
         url: "https://optimism-mainnet.public.blastapi.io",
@@ -532,6 +589,11 @@ export const extraRpcs = {
   },
   420: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/op/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       {
         url: "https://opt-goerli.g.alchemy.com/v2/demo",
         tracking: "yes",
