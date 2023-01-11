@@ -36,7 +36,6 @@ const privacyStatement = {
 export const extraRpcs = {
   1: {
     rpcs: [
-      // Moralis -> tracks IP
       // Quicknode -> tracks IP
       {
         url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
