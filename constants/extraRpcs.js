@@ -1668,6 +1668,9 @@ export const extraRpcs = {
     rpcWorking: false,
     websiteDead: true,
   },
+  50001: {
+    rpcs: ["http://129.146.47.214:5000"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
