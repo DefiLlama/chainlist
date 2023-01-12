@@ -90,6 +90,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bloxroute,
       },
       {
+        url: "https://eth.rpc.blxrbdn.com/",
+        tracking: "unspecified",
+      },
+      {
         url: "https://cloudflare-eth.com/",
         tracking: "yes",
         trackingDetails: privacyStatement.cloudflare,
@@ -320,6 +324,10 @@ export const extraRpcs = {
         url: "https://1rpc.io/bnb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://bsc.rpc.blxrbdn.com/",
+        tracking: "unspecified",
       },
     ],
   },
