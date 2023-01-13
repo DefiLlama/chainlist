@@ -1679,7 +1679,7 @@ export const extraRpcs = {
       "https://brnkc-mainnet1.bearnetwork.net",
       tracking: "yes",
       trackingDetails: privacyStatement.nodereal,
-      },
+      }
     ],
   },
 };
