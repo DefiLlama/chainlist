@@ -1670,14 +1670,12 @@ export const extraRpcs = {
   },
   641230: {
     rpcs: [
-      {
       "https://brnkc-mainnet.bearnetwork.net",
       "https://brnkc-mainnet1.bearnetwork.net",
-      },
       {
-      tracking: "yes",
-      trackingDetails: privacyStatement.nodereal,
-      }
+        url: "https://bearnetwork.net",
+        tracking: "yes",
+        trackingDetails: privacyStatement.nodereal,
       },
     ],
   },
