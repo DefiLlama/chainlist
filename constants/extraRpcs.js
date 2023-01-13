@@ -1668,6 +1668,17 @@ export const extraRpcs = {
     rpcWorking: false,
     websiteDead: true,
   },
+  641230: {
+    rpcs: [
+      "https://brnkc-mainnet.bearnetwork.net",
+      "https://brnkc-mainnet1.bearnetwork.net",
+      {
+        url: "https://bearnetwork.net",
+        tracking: "yes",
+        trackingDetails: privacyStatement.nodereal,
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
