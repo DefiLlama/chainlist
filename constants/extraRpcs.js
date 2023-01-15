@@ -1668,6 +1668,11 @@ export const extraRpcs = {
     rpcWorking: false,
     websiteDead: true,
   },
+  1996: {
+    rpcs: ["https://rpc.blocksc.ir"],
+    rpcWorking: true,
+    websiteDead: false,
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
