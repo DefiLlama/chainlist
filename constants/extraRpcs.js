@@ -91,7 +91,8 @@ export const extraRpcs = {
       },
       {
         url: "https://eth.rpc.blxrbdn.com/",
-        tracking: "unspecified",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
       },
       {
         url: "https://cloudflare-eth.com/",
@@ -327,7 +328,8 @@ export const extraRpcs = {
       },
       {
         url: "https://bsc.rpc.blxrbdn.com/",
-        tracking: "unspecified",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
       },
     ],
   },
