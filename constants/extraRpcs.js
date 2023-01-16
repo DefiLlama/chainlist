@@ -612,6 +612,7 @@ export const extraRpcs = {
       "https://rpc.gnosischain.com",
       "https://xdai-rpc.gateway.pokt.network",
       "https://xdai-archive.blockscout.com",
+      "https://rpc.gnosis.gateway.fm",
       {
         url: "https://gnosis-mainnet.public.blastapi.io",
         tracking: "limited",
