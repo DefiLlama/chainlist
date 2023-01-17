@@ -31,12 +31,13 @@ const privacyStatement = {
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
     "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
+  payload:
+    "Sent transactions are private: https://payload.de/docs. By default, no data is collected when using the RPC endpoint. If provided by the user, the public address for authentication is captured when using the RPC endpoint in order to prioritize requests under high load. This information is optional and solely provided at the user's discretion. https://payload.de/privacy/",
 };
 
 export const extraRpcs = {
   1: {
     rpcs: [
-      // Moralis -> tracks IP
       // Quicknode -> tracks IP
       {
         url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
@@ -129,6 +130,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://rpc.payload.de",
+        tracking: "none",
+        trackingDetails: privacyStatement.payload,
+      },
       // Distributed cluster of Ethereum nodes designed for speed and anonymity!
       {
         url: "https://api.zmok.io/mainnet/oaen6dy8ff6hju9k",
@@ -185,6 +191,11 @@ export const extraRpcs = {
         url: "https://polygon-mumbai.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://polygon-mumbai.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       },
     ],
   },
@@ -331,6 +342,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
+      {
+        url: "https://bsc.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   97: {
@@ -452,6 +468,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://polygon.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   25: {
@@ -492,6 +513,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://arbitrum.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   421613: {
@@ -505,6 +531,11 @@ export const extraRpcs = {
         url: "https://arb-goerli.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://goerli.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       },
     ],
   },
@@ -520,6 +551,11 @@ export const extraRpcs = {
       "https://klaytn04.fandom.finance",
       "https://klaytn05.fandom.finance",
       "https://cypress.fandom.finance/archive",
+      {
+        url: "https://klaytn.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   1666600000: {
@@ -595,6 +631,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://optimism.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   420: {
@@ -622,6 +663,7 @@ export const extraRpcs = {
       "https://rpc.gnosischain.com",
       "https://xdai-rpc.gateway.pokt.network",
       "https://xdai-archive.blockscout.com",
+      "https://rpc.gnosis.gateway.fm",
       {
         url: "https://gnosis-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -919,6 +961,7 @@ export const extraRpcs = {
   },
   50: {
     rpcs: [
+      "https://rpc.xdcrpc.com",
       "https://erpc.xinfin.network",
       "https://rpc.xinfin.network",
       "https://rpc1.xinfin.network",
