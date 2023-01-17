@@ -644,6 +644,15 @@ export const extraRpcs = {
       },
     ],
   },
+  1881: {
+    rpcs: [
+      {
+        url: "https://rpc.cartenz.works",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      }
+    ]
+  },
   420: {
     rpcs: [
       {
