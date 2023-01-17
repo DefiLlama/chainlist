@@ -681,6 +681,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet",
+      {
+        url: "https://gnosis.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   10200: {
