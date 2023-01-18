@@ -7,7 +7,7 @@ import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
 
-function Header({ lang }) {
+function Header({ lang, chainName }) {
   const t = useTranslations("Common", lang);
 
   const router = useRouter();
@@ -27,7 +27,7 @@ function Header({ lang }) {
       { shallow: true },
     );
 
-  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchTerm, setSearchTerm] = React.useState(chainName);
 
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 

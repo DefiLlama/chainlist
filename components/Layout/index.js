@@ -3,12 +3,16 @@ import Header from "../header";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
 import Logo from "./Logo";
-import useConnect from "../../hooks/useConnect";
+import { useRouter } from "next/router";
 
 export default function Layout({ children, lang }) {
   const t = useTranslations("Common", lang);
 
-  const { mutate } = useConnect();
+  const router = useRouter();
+
+  const { search } = router.query;
+
+  const chainName = typeof search === "string" ? search : "";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[40vw,_auto]">
@@ -78,7 +82,7 @@ export default function Layout({ children, lang }) {
         </div>
       </div>
       <div className="bg-[#f3f3f3] p-5 relative flex flex-col gap-5">
-        <Header lang={lang} />
+        <Header lang={lang} chainName={chainName} key={chainName} />
 
         {children}
       </div>
