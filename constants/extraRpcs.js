@@ -241,6 +241,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://goerli.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   //Ropsten testnet deprecated
@@ -404,6 +409,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://avalanche.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   250: {
@@ -428,6 +438,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/ftm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://fantom.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       },
     ],
   },
@@ -539,11 +554,6 @@ export const extraRpcs = {
         url: "https://arb-goerli.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
-      },
-      {
-        url: "https://goerli.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
     ],
   },
@@ -692,6 +702,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet",
+      {
+        url: "https://gnosis.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   10200: {
