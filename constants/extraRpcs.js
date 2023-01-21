@@ -897,7 +897,7 @@ export const extraRpcs = {
     rpcs: ["https://api.elastos.io/esc", "https://api.trinity-tech.io/esc"],
   },
   82: {
-    rpcs: ["https://rpc.meter.io"],
+    rpcs: ["https://rpc.meter.io", "https://rpc-meter.jellypool.xyz/"],
   },
   5551: {
     rpcs: ["https://l2.nahmii.io/"],
