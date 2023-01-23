@@ -3,6 +3,8 @@ import { mergeDeep } from "../utils";
 import { llamaNodesRpcs } from "./llamaNodesRpcs";
 
 const privacyStatement = {
+  unitedbloc:
+    "UnitedBloc does not collect or store any PII information. UnitedBloc does use IP addresses and transaction requests solely for service management purposes. Performance measurements such as rate limiting and routing rules require the analysis of IP addresses and response time measurements require the analysis of transaction requests. UnitedBloc does not and will never use RPC requests to front run transactions.",
   ankr:
     "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
@@ -757,6 +759,16 @@ export const extraRpcs = {
       "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
       "https://moonriver.api.onfinality.io/public",
       {
+      url: "https://moonriver.unitedbloc.com:2000",
+      tracking: "none",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+      url:"wss://moonriver.unitedbloc.com:2001",
+      tracking: "none",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
         url: "https://moonriver.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -794,6 +806,16 @@ export const extraRpcs = {
   1284: {
     rpcs: [
       "https://rpc.api.moonbeam.network",
+      {
+      url: "https://moonbeam.unitedbloc.com:3000",
+      tracking: "none",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+      url:"wss://moonbeam.unitedbloc.com:3001",
+      tracking: "none",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
       {
         url: "https://moonbeam.public.blastapi.io",
         tracking: "limited",
@@ -1320,6 +1342,16 @@ export const extraRpcs = {
   1287: {
     rpcs: [
       "https://rpc.testnet.moonbeam.network",
+      {
+      url: "https://moonbase.unitedbloc.com:1000",
+      tracking: "none",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+      url:"wss://moonbase.unitedbloc.com:1001",
+      tracking: "none",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
       {
         url: "https://moonbase-alpha.public.blastapi.io",
         tracking: "limited",
