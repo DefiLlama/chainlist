@@ -31,6 +31,8 @@ const privacyStatement = {
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
     "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
+  LiveplexOracleEVM:
+    "This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. https://www.liveplex.io/privacypolicy.html",
 };
 
 export const extraRpcs = {
@@ -1669,7 +1671,14 @@ export const extraRpcs = {
     websiteDead: true,
   },
   50001: {
-    rpcs: ["http://129.146.47.214:5000"],
+    rpcs: [
+      "http://129.153.75.68:5000",
+      {
+        url: "https://liveplex.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.LiveplexOracleEVM,
+      },
+    ],
   },
 };
 
