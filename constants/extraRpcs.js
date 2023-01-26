@@ -265,6 +265,11 @@ export const extraRpcs = {
   4002: {
     rpcs: [
       {
+        url: "https://endpoints.omniatech.io/v1/fantom/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
         url: "https://rpc.ankr.com/fantom_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -425,6 +430,11 @@ export const extraRpcs = {
   },
   250: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/fantom/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://fantom-mainnet.gateway.pokt.network/v1/lb/62759259ea1b320039c9e7ac",
       "https://rpc.ftm.tools/",
       {
@@ -598,7 +608,22 @@ export const extraRpcs = {
     ],
   },
   1313161554: {
-    rpcs: ["https://mainnet.aurora.dev"],
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/aurora/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      "https://mainnet.aurora.dev"],
+  },
+  1313161555:{
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/aurora/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
   },
   4181: {
     rpcs: ["https://rpc1.phi.network"],
@@ -1601,6 +1626,15 @@ export const extraRpcs = {
   },
   1313500: {
     rpcs: ["https://rpc.xerom.org"],
+  },
+  11155111:{
+    rpcs:[
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
   },
   7762959: {
     rpcs: [],
