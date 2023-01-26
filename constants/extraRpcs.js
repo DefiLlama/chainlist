@@ -1776,6 +1776,16 @@ export const extraRpcs = {
     rpcWorking: false,
     websiteDead: true,
   },
+  444: {
+    rpcs: ["rpc-01tn.frenchain.app"],
+    rpcWorking: true,
+    websiteDead: false,
+  },
+  44444: {
+    rpcs: ["rpc-02.frenscan.io"],
+    rpcWorking: true,
+    websiteDead: false,
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
