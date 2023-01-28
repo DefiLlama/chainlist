@@ -685,7 +685,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
     ],
-  },
+  }, 
   1088: {
     rpcs: ["https://andromeda.metis.io/?owner=1088"],
   },
@@ -1234,6 +1234,15 @@ export const extraRpcs = {
     rpcs: [],
     websiteDead: true,
     rpcWorking: false,
+  },
+  1001: {
+    rpcs: [
+      {
+        url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
   },
   1010: {
     rpcs: ["https://meta.evrice.com"],
