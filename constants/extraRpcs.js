@@ -685,7 +685,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
     ],
-  }, 
+  },
   1088: {
     rpcs: ["https://andromeda.metis.io/?owner=1088"],
   },
