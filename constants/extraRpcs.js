@@ -1235,6 +1235,15 @@ export const extraRpcs = {
     websiteDead: true,
     rpcWorking: false,
   },
+  1001: {
+    rpcs: [
+      {
+        url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   1010: {
     rpcs: ["https://meta.evrice.com"],
   },
