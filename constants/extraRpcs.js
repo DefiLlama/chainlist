@@ -760,12 +760,12 @@ export const extraRpcs = {
       "https://moonriver.api.onfinality.io/public",
       {
       url: "https://moonriver.unitedbloc.com:2000",
-      tracking: "none",
+      tracking: "yes",
       trackingDetails: privacyStatement.unitedbloc,
       },
       {
       url:"wss://moonriver.unitedbloc.com:2001",
-      tracking: "none",
+      tracking: "yes",
       trackingDetails: privacyStatement.unitedbloc,
       },
       {
@@ -808,12 +808,12 @@ export const extraRpcs = {
       "https://rpc.api.moonbeam.network",
       {
       url: "https://moonbeam.unitedbloc.com:3000",
-      tracking: "none",
+      tracking: "yes",
       trackingDetails: privacyStatement.unitedbloc,
       },
       {
       url:"wss://moonbeam.unitedbloc.com:3001",
-      tracking: "none",
+      tracking: "yes",
       trackingDetails: privacyStatement.unitedbloc,
       },
       {
@@ -1344,12 +1344,12 @@ export const extraRpcs = {
       "https://rpc.testnet.moonbeam.network",
       {
       url: "https://moonbase.unitedbloc.com:1000",
-      tracking: "none",
+      tracking: "yes",
       trackingDetails: privacyStatement.unitedbloc,
       },
       {
       url:"wss://moonbase.unitedbloc.com:1001",
-      tracking: "none",
+      tracking: "yes",
       trackingDetails: privacyStatement.unitedbloc,
       },
       {
