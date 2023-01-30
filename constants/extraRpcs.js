@@ -1823,7 +1823,7 @@ export const extraRpcs = {
   },
   50001: {
     rpcs: [
-      "http://129.153.75.68:5000",
+      "https://oracle.liveplex.io",
       {
         url: "https://liveplex.io",
         tracking: "none",
