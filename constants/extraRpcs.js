@@ -3,6 +3,8 @@ import { mergeDeep } from "../utils";
 import { llamaNodesRpcs } from "./llamaNodesRpcs";
 
 const privacyStatement = {
+  unitedbloc:
+    "UnitedBloc does not collect or store any PII information. UnitedBloc does use IP addresses and transaction requests solely for service management purposes. Performance measurements such as rate limiting and routing rules require the analysis of IP addresses and response time measurements require the analysis of transaction requests. UnitedBloc does not and will never use RPC requests to front run transactions.",
   ankr:
     "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
@@ -43,6 +45,10 @@ const privacyStatement = {
     "We do not collect any personal data from our users. Our platform is built on blockchain technology, which ensures that all transactions are recorded on a public ledger that is accessible to all users. However, this information is anonymous and cannot be linked to any specific individual. https://docs.gitshock.com/users-guide/privacy-policy",
   gashawk:
     "Sign-in with Ethereum on https://www.gashawk.io required prior to use. We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error), read the terms of service https://www.gashawk.io/#/terms and the privacy policy https://www.gashawk.io/#/privacy.",
+  LiveplexOracleEVM:
+    "Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data. When You access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data. We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device. https://www.liveplex.io/privacypolicy.html",
+  jellypool:
+    "The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. https://www.jellypool.xyz/privacy/",
 };
 
 export const extraRpcs = {
@@ -265,6 +271,11 @@ export const extraRpcs = {
   4002: {
     rpcs: [
       {
+        url: "https://endpoints.omniatech.io/v1/fantom/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
         url: "https://rpc.ankr.com/fantom_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -425,6 +436,11 @@ export const extraRpcs = {
   },
   250: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/fantom/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://fantom-mainnet.gateway.pokt.network/v1/lb/62759259ea1b320039c9e7ac",
       "https://rpc.ftm.tools/",
       {
@@ -598,7 +614,22 @@ export const extraRpcs = {
     ],
   },
   1313161554: {
-    rpcs: ["https://mainnet.aurora.dev"],
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/aurora/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      "https://mainnet.aurora.dev"],
+  },
+  1313161555:{
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/aurora/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
   },
   4181: {
     rpcs: ["https://rpc1.phi.network"],
@@ -730,6 +761,16 @@ export const extraRpcs = {
       "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
       "https://moonriver.api.onfinality.io/public",
       {
+      url: "https://moonriver.unitedbloc.com:2000",
+      tracking: "yes",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+      url:"wss://moonriver.unitedbloc.com:2001",
+      tracking: "yes",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
         url: "https://moonriver.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -767,6 +808,16 @@ export const extraRpcs = {
   1284: {
     rpcs: [
       "https://rpc.api.moonbeam.network",
+      {
+      url: "https://moonbeam.unitedbloc.com:3000",
+      tracking: "yes",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+      url:"wss://moonbeam.unitedbloc.com:3001",
+      tracking: "yes",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
       {
         url: "https://moonbeam.public.blastapi.io",
         tracking: "limited",
@@ -897,7 +948,13 @@ export const extraRpcs = {
     rpcs: ["https://api.elastos.io/esc", "https://api.trinity-tech.io/esc"],
   },
   82: {
-    rpcs: ["https://rpc.meter.io"],
+    rpcs: ["https://rpc.meter.io",
+    {
+      url: "https://rpc-meter.jellypool.xyz/",
+      tracking: "yes",
+      trackingDetails: privacyStatement.jellypool,
+    },
+  ],
   },
   5551: {
     rpcs: ["https://l2.nahmii.io/"],
@@ -1294,6 +1351,16 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.testnet.moonbeam.network",
       {
+      url: "https://moonbase.unitedbloc.com:1000",
+      tracking: "yes",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+      url:"wss://moonbase.unitedbloc.com:1001",
+      tracking: "yes",
+      trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
         url: "https://moonbase-alpha.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -1602,6 +1669,15 @@ export const extraRpcs = {
   1313500: {
     rpcs: ["https://rpc.xerom.org"],
   },
+  11155111:{
+    rpcs:[
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  },
   7762959: {
     rpcs: [],
     websiteDead: true,
@@ -1784,6 +1860,16 @@ export const extraRpcs = {
     rpcs: [],
     rpcWorking: false,
     websiteDead: true,
+  },
+  50001: {
+    rpcs: [
+      "https://oracle.liveplex.io",
+      {
+        url: "https://liveplex.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.LiveplexOracleEVM,
+      },
+    ],
   },
 };
 
