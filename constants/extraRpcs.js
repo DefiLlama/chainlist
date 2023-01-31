@@ -1657,6 +1657,15 @@ export const extraRpcs = {
   281121: {
     rpcs: ["rpcWorking:false"],
   },
+  534354:{
+    rpcs:[
+      {
+        url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ]
+  },
   888888: {
     rpcs: ["https://infragrid.v.network/ethereum/compatible"],
   },
@@ -1675,6 +1684,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       },
     ]
   },
