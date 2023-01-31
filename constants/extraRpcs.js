@@ -1866,7 +1866,7 @@ export const extraRpcs = {
       "https://oracle.liveplex.io",
       {
         url: "https://oracle.liveplex.io",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.LiveplexOracleEVM,
       },
     ],
