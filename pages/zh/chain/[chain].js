@@ -76,7 +76,7 @@ function Chain({ chain }) {
       </Head>
 
       <Layout lang="zh">
-        <div className="shadow bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden">
+        <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden">
           <Link href={`/chain/${chain.chainId}`} prefetch={false} className="flex items-center mx-auto gap-2">
             <img
               src={icon}
@@ -85,20 +85,20 @@ function Chain({ chain }) {
               className="rounded-full flex-shrink-0 flex relative"
               alt={chain.name + " logo"}
             />
-            <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px]">{chain.name}</span>
+            <span className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px] dark:text-[#B3B3B3]">{chain.name}</span>
           </Link>
 
           <table>
             <thead>
               <tr>
-                <th className="font-normal text-gray-500">ChainID</th>
-                <th className="font-normal text-gray-500">{t("currency")}</th>
+                <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">ChainID</th>
+                <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">{t("currency")}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="text-center font-bold px-4">{chain.chainId}</td>
-                <td className="text-center font-bold px-4">
+                <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{chain.chainId}</td>
+                <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                   {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
                 </td>
               </tr>
