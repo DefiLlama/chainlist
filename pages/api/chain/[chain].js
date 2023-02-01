@@ -2,6 +2,8 @@ import { fetcher, populateChain, arrayMove } from "../../../utils";
 import { llamaNodesRpcs } from "../../../constants/llamaNodesRpcs";
 
 export default async function handler(req, res) {
+  res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
+
   const { chain: chainIdOrName } = req.query;
 
   if (req.method === "GET") {
