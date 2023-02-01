@@ -1865,6 +1865,11 @@ export const extraRpcs = {
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
   },
+  641230: {
+    rpcs: [
+      "https://brnkc-mainnet.bearnetwork.net",
+      "https://brnkc-mainnet1.bearnetwork.net",
+  ],
   14000: {
     rpcs: [],
     rpcWorking: false,
