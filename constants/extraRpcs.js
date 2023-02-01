@@ -1890,7 +1890,7 @@ export const extraRpcs = {
       },
     ],
   },
-};
+},
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
