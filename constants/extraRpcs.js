@@ -1889,8 +1889,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.LiveplexOracleEVM,
       },
     ],
-  },
-},
+  }
+};
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
