@@ -1861,6 +1861,14 @@ export const extraRpcs = {
       "https://mainnet-rpc3.memescan.io/",
       "https://mainnet-rpc4.memescan.io/",
     ],
+     4099: {
+    rpcs: [
+      "https://rpc-mainnet.bitindi.org",
+    ],
+      4096: {
+    rpcs: [
+      "https://rpc-testnet.bitindi.org",
+    ],
   },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
