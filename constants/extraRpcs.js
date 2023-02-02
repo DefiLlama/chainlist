@@ -1807,6 +1807,13 @@ export const extraRpcs = {
   256256: {
     rpcs: ["https://mainnet.block.caduceus.foundation"],
   },
+  167: {
+    rpcs: [
+      "https://node.atoshi.io",
+      "https://node2.atoshi.io",
+      "https://node3.atoshi.io",
+    ],
+  },
   7777: {
     rpcs: [
       "https://testnet1.rotw.games",
