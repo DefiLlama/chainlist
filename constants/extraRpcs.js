@@ -1325,6 +1325,12 @@ export const extraRpcs = {
       "https://conflux-espace-public.unifra.io",
     ],
   },
+  1115: {
+    rpcs: ["https://rpc.test.btcs.network"],
+  },
+  1116: {
+    rpcs: ["https://rpc.coredao.org"],
+  },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
   },
