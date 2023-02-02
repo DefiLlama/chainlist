@@ -1253,6 +1253,9 @@ export const extraRpcs = {
   558: {
     rpcs: ["https://rpc.tao.network"],
   },
+  648: {
+    rpcs: ["https://rpc-endurance.fusionist.io"],
+  },
   686: {
     rpcs: [
       "https://eth-rpc-karura.aca-api.network",
