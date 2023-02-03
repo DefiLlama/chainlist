@@ -1532,6 +1532,10 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.icecreamswap.com",
       "https://nodes.vefinetwork.org/bitgert",
+      "https://rpc-1.chainrpc.com",
+      "https://rpc-2.chainrpc.com",
+      "https://node1.serverrpc.com",
+      "https://node2.serverrpc.com"
     ],
   },
   39797: {
