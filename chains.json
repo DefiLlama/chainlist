@@ -11073,18 +11073,18 @@
     "faucets": [],
     "explorers": [
       {
-        "name": "fon scan",
+        "name": "FONScan",
         "url": "https://fonscan.io/",
         "standard": "EIP3091"
       }
     ],
     "app_resource": {
-      "ic_chain_select": "https://i.postimg.cc/W4t3nLc7/fsc.png",
-      "ic_chain_unselect": "https://i.postimg.cc/cHs3Zkpg/fsc.png",
+      "ic_chain_select": "https://hk.tpstatic.net/dapp/tokenpocket-1675422033057.png",
+      "ic_chain_unselect": "https://hk.tpstatic.net/dapp/tokenpocket-1675422047095.png",
       "color_chain_bg": "0x343434",
       "color_chain_text": "0xFFFFFF",
-      "ic_chain_unselect_dark": "https://i.postimg.cc/13n2cJYq/fsc.png",
-      "ic_home_logo": "https://i.postimg.cc/ncbYXTfz/image.png"
+      "ic_chain_unselect_dark": "https://hk.tpstatic.net/dapp/tokenpocket-1675422074776.png",
+      "ic_home_logo": "https://hk.tpstatic.net/dapp/tokenpocket-1675422139280.png"
     }
   }
 ]
