@@ -870,7 +870,7 @@ export const extraRpcs = {
     ],
   },
   888: {
-    rpcs: ["https://gwan-ssl.wandevs.org:56891"],
+    rpcs: ["https://gwan-ssl.wandevs.org:56891","https://gwan2-ssl.wandevs.org"],
   },
   106: {
     rpcs: [
