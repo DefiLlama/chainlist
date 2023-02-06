@@ -118,6 +118,39 @@
     "infoURL": "https://arbitrum.io/"
   },
   {
+    "name": "FON Smart Chain",
+    "chainId": 201022,
+    "shortName": "FON",
+    "chain": "FON",
+    "network": "mainnet",
+    "networkId": 201022,
+    "nativeCurrency": {
+      "name": "FON",
+      "symbol": "FON",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://fsc-dataseed1.fonscan.io",
+      "https://fsc-dataseed2.fonscan.io"
+    ],
+    "faucets": [],
+    "explorers": [
+      {
+        "name": "FONScan",
+        "url": "https://fonscan.io/",
+        "standard": "EIP3091"
+      }
+    ],
+    "app_resource": {
+      "ic_chain_select": "https://hk.tpstatic.net/dapp/tokenpocket-1675422033057.png",
+      "ic_chain_unselect": "https://hk.tpstatic.net/dapp/tokenpocket-1675422047095.png",
+      "color_chain_bg": "0x343434",
+      "color_chain_text": "0xFFFFFF",
+      "ic_chain_unselect_dark": "https://hk.tpstatic.net/dapp/tokenpocket-1675422074776.png",
+      "ic_home_logo": "https://hk.tpstatic.net/dapp/tokenpocket-1675422139280.png"
+    }
+  },
+  {
     "name": "EtherLite Chain",
     "chainId": 111,
     "shortName": "ETL",
@@ -11053,38 +11086,5 @@
         "standard": "EIP3091"
       }
     ]
-  },
-  {
-    "name": "FON Smart Chain",
-    "chainId": 201022,
-    "shortName": "FON",
-    "chain": "FON",
-    "network": "mainnet",
-    "networkId": 201022,
-    "nativeCurrency": {
-      "name": "FON",
-      "symbol": "FON",
-      "decimals": 18
-    },
-    "rpc": [
-      "https://fsc-dataseed1.fonscan.io",
-      "https://fsc-dataseed2.fonscan.io"
-    ],
-    "faucets": [],
-    "explorers": [
-      {
-        "name": "FONScan",
-        "url": "https://fonscan.io/",
-        "standard": "EIP3091"
-      }
-    ],
-    "app_resource": {
-      "ic_chain_select": "https://hk.tpstatic.net/dapp/tokenpocket-1675422033057.png",
-      "ic_chain_unselect": "https://hk.tpstatic.net/dapp/tokenpocket-1675422047095.png",
-      "color_chain_bg": "0x343434",
-      "color_chain_text": "0xFFFFFF",
-      "ic_chain_unselect_dark": "https://hk.tpstatic.net/dapp/tokenpocket-1675422074776.png",
-      "ic_home_logo": "https://hk.tpstatic.net/dapp/tokenpocket-1675422139280.png"
-    }
   }
 ]
