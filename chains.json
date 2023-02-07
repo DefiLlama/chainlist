@@ -11086,5 +11086,29 @@
         "standard": "EIP3091"
       }
     ]
+  },
+  {
+    "name": "Core Blockchain",
+    "chainId": 1116,
+    "shortName": "CORE",
+    "chain": "CORE",
+    "network": "mainnet",
+    "networkId": 1116,
+    "nativeCurrency": {
+      "name": "CORE",
+      "symbol": "CORE",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://rpc.coredao.org/"
+    ],
+    "faucets": [],
+    "explorers": [
+      {
+        "name": "Core Scan",
+        "url": "https://scan.coredao.org",
+        "standard": "EIP3091"
+      }
+    ]
   }
 ]
