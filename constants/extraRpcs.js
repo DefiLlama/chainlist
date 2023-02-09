@@ -758,7 +758,7 @@ export const extraRpcs = {
   },
   1285: {
     rpcs: [
-      "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
+      "wss://moonriver.api.onfinality.io/public-ws",
       "https://moonriver.api.onfinality.io/public",
       {
       url: "https://moonriver.unitedbloc.com:2000",
@@ -808,6 +808,8 @@ export const extraRpcs = {
   1284: {
     rpcs: [
       "https://rpc.api.moonbeam.network",
+      "https://moonbeam.api.onfinality.io/public",
+      "wss://moonbeam.api.onfinality.io/public-ws",
       {
       url: "https://moonbeam.unitedbloc.com:3000",
       tracking: "yes",
