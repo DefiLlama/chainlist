@@ -1885,6 +1885,9 @@ export const extraRpcs = {
       },
     ],
   },
+  1339: {
+    rpcs: ["https://elysium-rpc.vulcanforged.com"]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
