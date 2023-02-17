@@ -49,6 +49,8 @@ const privacyStatement = {
     "Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data. When You access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data. We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device. https://www.liveplex.io/privacypolicy.html",
   jellypool:
     "The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. https://www.jellypool.xyz/privacy/",
+  rpcfast:
+    "RPC Fast API is designed to prioritize user privacy, and therefore, we do not collect any personal information when clients interact with the blockchain through our provider. We do not track IP addresses, wallet addresses, executed transactions, or any other identifying data during interactions with our provider. For more info: https://rpcfast.com/privacy"
 };
 
 export const extraRpcs = {
@@ -167,6 +169,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gashawk,
       },
+      {
+        url: "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+        tracking: "none",
+        trackingDetails: privacyStatement.rpcfast,
+      }
       // "http://127.0.0.1:8545",
 
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
@@ -177,8 +184,6 @@ export const extraRpcs = {
       //"https://main-rpc.linkpool.io/",
       //"https://mainnet.eth.cloud.ava.do/",
       //"https://ethereumnodelight.app.runonflux.io",
-      //"https://eth-mainnet.rpcfast.com",
-      //"https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
       //"https://main-light.eth.linkpool.io",
     ],
@@ -355,12 +360,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodereal,
       },
       "https://rpc-bsc.bnb48.club",
-      "https://bsc-mainnet.rpcfast.com",
-      "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
       {
         url: "https://bsc-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+        tracking: "none",
+        trackingDetails: privacyStatement.rpcfast,
       },
       "https://nodes.vefinetwork.org/smartchain",
       {
@@ -501,8 +509,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
-      "https://polygon-mainnet.rpcfast.com",
-      "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
+      {
+        url: "https://polygon-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+        tracking: "none",
+        trackingDetails: privacyStatement.rpcfast,
+      },
       {
         url: "https://polygon-bor.publicnode.com",
         tracking: "none",
@@ -877,7 +888,11 @@ export const extraRpcs = {
   106: {
     rpcs: [
       "https://evmexplorer.velas.com/rpc",
-      "https://velas-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
+      {
+        url: "https://velas-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+        tracking: "none",
+        trackingDetails: privacyStatement.rpcfast,
+      }
     ],
   },
   10000: {
