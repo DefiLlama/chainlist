@@ -357,11 +357,6 @@ export const extraRpcs = {
       "https://rpc-bsc.bnb48.club",
       "https://bsc-mainnet.rpcfast.com",
       "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-      {
-        url: "https://bsc-mainnet.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
-      },
       "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://1rpc.io/bnb",
