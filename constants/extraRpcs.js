@@ -361,11 +361,6 @@ export const extraRpcs = {
       },
       "https://rpc-bsc.bnb48.club",
       {
-        url: "https://bsc-mainnet.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
-      },
-      {
         url: "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
         tracking: "none",
         trackingDetails: privacyStatement.rpcfast,
