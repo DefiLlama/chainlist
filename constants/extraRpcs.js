@@ -1886,6 +1886,12 @@ export const extraRpcs = {
       },
     ],
   },
+  119: {
+    rpcs: [
+      "https://evmapi.nuls.io",
+      "https://evmapi2.nuls.io",
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
