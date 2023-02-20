@@ -168,7 +168,6 @@ export const extraRpcs = {
       },
       {
         url: "https://eth.api.onfinality.io/public",
-        tracking: "unspecified",
       },
       {
         url: "https://beta-be.gashawk.io:3001/proxy/rpc",
@@ -383,7 +382,6 @@ export const extraRpcs = {
       },
       {
         url: "https://bnb.api.onfinality.io/public",
-        tracking: "unspecified",
       },
     ],
   },
@@ -950,11 +948,9 @@ export const extraRpcs = {
       },
       {
         url: "https://astar.api.onfinality.io/public",
-        tracking: "unspecified",
       },
       {
         url: "wss://astar.api.onfinality.io/public-ws",
-        tracking: "unspecified",
       },
     ],
   },
@@ -1407,11 +1403,9 @@ export const extraRpcs = {
       },
       {
         url: "https://moonbeam-alpha.api.onfinality.io/public",
-        tracking: "unspecified",
       },
       {
         url: "wss://moonbeam-alpha.api.onfinality.io/public-ws",
-        tracking: "unspecified",
       },
     ],
   },
