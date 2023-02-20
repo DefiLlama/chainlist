@@ -581,12 +581,12 @@ export const extraRpcs = {
   8217: {
     rpcs: [
       "https://public-node-api.klaytnapi.com/v1/cypress",
-      "https://klaytn01.fandom.finance",
-      "https://klaytn02.fandom.finance",
-      "https://klaytn03.fandom.finance",
-      "https://klaytn04.fandom.finance",
-      "https://klaytn05.fandom.finance",
-      "https://cypress.fandom.finance/archive",
+      "https://klaytn01.fautor.app/",
+      "https://klaytn02.fautor.app/",
+      "https://klaytn03.fautor.app/",
+      "https://klaytn04.fautor.app/",
+      "https://klaytn05.fautor.app/",
+      "https://cypress.fautor.app/archive",
       {
         url: "https://klaytn.blockpi.network/v1/rpc/public",
         tracking: "limited",
