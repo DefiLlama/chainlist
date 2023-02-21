@@ -581,12 +581,7 @@ export const extraRpcs = {
   8217: {
     rpcs: [
       "https://public-node-api.klaytnapi.com/v1/cypress",
-      "https://klaytn01.fandom.finance",
-      "https://klaytn02.fandom.finance",
-      "https://klaytn03.fandom.finance",
-      "https://klaytn04.fandom.finance",
-      "https://klaytn05.fandom.finance",
-      "https://cypress.fandom.finance/archive",
+      "https://cypress.fautor.app/archive",
       {
         url: "https://klaytn.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -1291,6 +1286,8 @@ export const extraRpcs = {
   },
   1001: {
     rpcs: [
+      "https://public-node-api.klaytnapi.com/v1/baobab",
+      "https://baobab.fautor.app/archive",
       {
         url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
         tracking: "limited",
