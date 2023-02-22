@@ -1134,14 +1134,6 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.novanetwork.io:9070",
       "https://dev.rpc.novanetwork.io/",
-      "http://dataseed-0.rpc.novanetwork.io:8545/",
-      "http://dataseed-1.rpc.novanetwork.io:8545/",
-      "http://dataseed-2.rpc.novanetwork.io:8545/",
-      "http://dataseed-3.rpc.novanetwork.io:8545/",
-      "http://dataseed-4.rpc.novanetwork.io:8545/",
-      "http://dataseed-5.rpc.novanetwork.io:8545/",
-      "http://dataseed-6.rpc.novanetwork.io:8545/",
-      "http://dataseed-f.rpc.novanetwork.io:8545/",
     ],
   },
   90: {
