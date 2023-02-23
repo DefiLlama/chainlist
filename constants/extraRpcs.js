@@ -49,6 +49,8 @@ const privacyStatement = {
     "Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data. When You access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data. We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device. https://www.liveplex.io/privacypolicy.html",
   jellypool:
     "The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. https://www.jellypool.xyz/privacy/",
+  restratagem:
+    "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
 };
 
 export const extraRpcs = {
@@ -1132,16 +1134,15 @@ export const extraRpcs = {
   },
   87: {
     rpcs: [
-      "https://rpc.novanetwork.io:9070",
-      "https://dev.rpc.novanetwork.io/",
-      "http://dataseed-0.rpc.novanetwork.io:8545/",
-      "http://dataseed-1.rpc.novanetwork.io:8545/",
-      "http://dataseed-2.rpc.novanetwork.io:8545/",
-      "http://dataseed-3.rpc.novanetwork.io:8545/",
-      "http://dataseed-4.rpc.novanetwork.io:8545/",
-      "http://dataseed-5.rpc.novanetwork.io:8545/",
-      "http://dataseed-6.rpc.novanetwork.io:8545/",
-      "http://dataseed-f.rpc.novanetwork.io:8545/",
+      {
+        url: "https://rpc.novanetwork.io:9070",
+        tracking: "none",
+        trackingDetails: privacyStatement.restratagem,
+      },
+      {
+        url: "https://dev.rpc.novanetwork.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.restratagem,
     ],
   },
   90: {
