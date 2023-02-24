@@ -357,11 +357,6 @@ export const extraRpcs = {
       "https://rpc-bsc.bnb48.club",
       "https://bsc-mainnet.rpcfast.com",
       "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
-      {
-        url: "https://bsc-mainnet.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
-      },
       "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://1rpc.io/bnb",
@@ -758,7 +753,7 @@ export const extraRpcs = {
   },
   1285: {
     rpcs: [
-      "https://moonriver.api.onfinality.io/rpc?apikey=673e1fae-c9c9-4c7f-a3d5-2121e8274366",
+      "wss://moonriver.api.onfinality.io/public-ws",
       "https://moonriver.api.onfinality.io/public",
       {
       url: "https://moonriver.unitedbloc.com:2000",
@@ -808,6 +803,8 @@ export const extraRpcs = {
   1284: {
     rpcs: [
       "https://rpc.api.moonbeam.network",
+      "https://moonbeam.api.onfinality.io/public",
+      "wss://moonbeam.api.onfinality.io/public-ws",
       {
       url: "https://moonbeam.unitedbloc.com:3000",
       tracking: "yes",
@@ -870,7 +867,7 @@ export const extraRpcs = {
     ],
   },
   888: {
-    rpcs: ["https://gwan-ssl.wandevs.org:56891"],
+    rpcs: ["https://gwan-ssl.wandevs.org:56891","https://gwan2-ssl.wandevs.org"],
   },
   106: {
     rpcs: [
@@ -1532,6 +1529,10 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.icecreamswap.com",
       "https://nodes.vefinetwork.org/bitgert",
+      "https://rpc-1.chainrpc.com",
+      "https://rpc-2.chainrpc.com",
+      "https://node1.serverrpc.com",
+      "https://node2.serverrpc.com"
     ],
   },
   39797: {
@@ -1877,9 +1878,9 @@ export const extraRpcs = {
   },
   50001: {
     rpcs: [
-      "https://oracle.liveplex.io",
+      "https://rpc.oracle.liveplex.io",
       {
-        url: "https://liveplex.io",
+        url: "https://rpc.oracle.liveplex.io",
         tracking: "yes",
         trackingDetails: privacyStatement.LiveplexOracleEVM,
       },
