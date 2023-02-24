@@ -51,6 +51,8 @@ const privacyStatement = {
     "The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. https://www.jellypool.xyz/privacy/",
   restratagem:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
+  onfinality:
+    "When you access and use our website or related services we may automatically collect information about your device and usage of our website, products and services, including your operating system, browser type, time spent on certain pages of the website/pages visited/links clicked/language preferences. https://onfinality.io/privacy"
 };
 
 export const extraRpcs = {
@@ -755,8 +757,16 @@ export const extraRpcs = {
   },
   1285: {
     rpcs: [
-      "wss://moonriver.api.onfinality.io/public-ws",
-      "https://moonriver.api.onfinality.io/public",
+      {
+        url:"wss://moonriver.api.onfinality.io/public-ws",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url:"https://moonriver.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality   
+      },
       {
       url: "https://moonriver.unitedbloc.com:2000",
       tracking: "yes",
@@ -805,8 +815,16 @@ export const extraRpcs = {
   1284: {
     rpcs: [
       "https://rpc.api.moonbeam.network",
-      "https://moonbeam.api.onfinality.io/public",
-      "wss://moonbeam.api.onfinality.io/public-ws",
+      {
+        url:"https://moonbeam.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality
+      },
+      {
+        url:"wss://moonbeam.api.onfinality.io/public-ws",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality
+      },
       {
       url: "https://moonbeam.unitedbloc.com:3000",
       tracking: "yes",
@@ -1142,6 +1160,7 @@ export const extraRpcs = {
         url: "https://dev.rpc.novanetwork.io/",
         tracking: "none",
         trackingDetails: privacyStatement.restratagem,
+      }
     ],
   },
   90: {
