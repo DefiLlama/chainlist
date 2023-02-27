@@ -180,16 +180,16 @@ export const extraRpcs = {
 
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
       //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
-      //"https://api.mycryptoapi.com/eth",
+      "https://api.mycryptoapi.com/eth",
       //"https://mainnet-nethermind.blockscout.com/",
       //"https://nodes.mewapi.io/rpc/eth",
       //"https://main-rpc.linkpool.io/",
-      //"https://mainnet.eth.cloud.ava.do/",
-      //"https://ethereumnodelight.app.runonflux.io",
-      //"https://eth-mainnet.rpcfast.com",
+      "https://mainnet.eth.cloud.ava.do/",
+      "https://ethereumnodelight.app.runonflux.io",
+      "https://eth-mainnet.rpcfast.com",
       //"https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
-      //"https://main-light.eth.linkpool.io",
+      "https://main-light.eth.linkpool.io",
     ],
   },
   2: {
@@ -333,6 +333,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
       "https://bsc-dataseed.binance.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
@@ -358,6 +363,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       "https://bscrpc.com",
+      "https://bsc.rpcgator.com/",
       {
         url: "https://binance.nodereal.io",
         tracking: "yes",
@@ -415,10 +421,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       "https://api.avax.network/ext/bc/C/rpc",
+      "https://avax.rpcgator.com/",
+      "https://avalanche.public-rpc.com",
       {
         url: "https://rpc.ankr.com/avalanche",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://blastapi.io/public-api/avalanche",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
@@ -426,6 +439,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       "https://avalancheapi.terminet.io/ext/bc/C/rpc",
+      {
+        url: "https://avalanche.publicnode.com/",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
       {
         url: "https://avalanche-evm.publicnode.com",
         tracking: "none",
@@ -440,6 +458,16 @@ export const extraRpcs = {
         url: "https://avalanche.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://avax-mainnet.gateway.pokt.network/v1/lb/605238bf6b986eea7cf36d5e/ext/bc/C/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://avalanche.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
