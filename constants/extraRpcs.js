@@ -180,7 +180,7 @@ export const extraRpcs = {
 
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
       //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
-      "https://api.mycryptoapi.com/eth",
+      //"https://api.mycryptoapi.com/eth",
       //"https://mainnet-nethermind.blockscout.com/",
       //"https://nodes.mewapi.io/rpc/eth",
       //"https://main-rpc.linkpool.io/",
