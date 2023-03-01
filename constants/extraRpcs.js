@@ -1627,6 +1627,9 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.icecreamswap.com",
       "https://nodes.vefinetwork.org/bitgert",
+      "https://flux-rpc.brisescan.com",
+      "https://flux-rpc1.brisescan.com",
+      "https://flux-rpc2.brisescan.com",
       "https://rpc-1.chainrpc.com",
       "https://rpc-2.chainrpc.com",
       "https://node1.serverrpc.com",
