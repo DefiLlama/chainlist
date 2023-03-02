@@ -465,7 +465,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://avalanche.api.onfinality.io/public",
+        url: "https://avalanche.api.onfinality.io/public/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
