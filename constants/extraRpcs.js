@@ -2000,6 +2000,9 @@ export const extraRpcs = {
       "https://evmapi2.nuls.io",
     ],
   },
+  388: {
+    rpcs: ["https://rpc-arinachain.com"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
