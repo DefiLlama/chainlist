@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../../utils";
-import { populateChain, fetcher } from "../../../utils";
+import { populateChain, fetcher } from "../../../utils/fetch";
 import AddNetwork from "../../../components/chain";
 import Layout from "../../../components/Layout";
 import RPCList from "../../../components/RPCList";

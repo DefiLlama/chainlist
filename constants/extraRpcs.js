@@ -1,6 +1,6 @@
-import { mergeDeep } from "../utils";
+import { mergeDeep } from "../utils/fetch.js";
 
-import { llamaNodesRpcs } from "./llamaNodesRpcs";
+import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
 const privacyStatement = {
   unitedbloc:
