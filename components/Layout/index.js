@@ -47,7 +47,7 @@ export default function Layout({ children, lang }) {
 
             <a
               className="flex items-center justify-center mx-auto lg:ml-0 gap-2 rounded-[50px] max-w-[16.25rem] font-medium py-[17px] px-6 w-full bg-white text-[#2F80ED] border border-[#EAEAEA]"
-              href="https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js"
+              href="https://github.com/DefiLlama/chainlist/blob/main/constants/rpcs.js"
               target="_blank"
               rel="noopener noreferrer"
             >

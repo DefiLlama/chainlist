@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import allExtraRpcs from "../constants/extraRpcs.js";
+import allRpcs from "../constants/rpcs.js";
 import chainIds from "../constants/chainIds.json";
 import en from "../translations/en.json";
 import zh from "../translations/zh.json";
@@ -98,7 +98,7 @@ function removeEndingSlash(rpc) {
 }
 
 export function populateChain(chain, chainTvls) {
-  const extraRpcs = allExtraRpcs[chain.chainId]?.rpcs;
+  const extraRpcs = allRpcs[chain.chainId]?.rpcs;
 
   if (extraRpcs !== undefined) {
     const rpcs = extraRpcs.map(removeEndingSlashObject);
@@ -125,10 +125,10 @@ export function populateChain(chain, chainTvls) {
     return defiChain === undefined
       ? chain
       : {
-          ...chain,
-          tvl: defiChain.tvl,
-          chainSlug,
-        };
+        ...chain,
+        tvl: defiChain.tvl,
+        chainSlug,
+      };
   }
   return chain;
 }
@@ -173,13 +173,13 @@ export function arrayMove(array, fromIndex, toIndex) {
 
 export const notTranslation =
   (ns, lang = "en") =>
-  (key) => {
-    switch (lang) {
-      case "en":
-        return en[ns][key];
-      case "zh":
-        return zh[ns][key];
-      default:
-        return en[ns][key];
-    }
-  };
+    (key) => {
+      switch (lang) {
+        case "en":
+          return en[ns][key];
+        case "zh":
+          return zh[ns][key];
+        default:
+          return en[ns][key];
+      }
+    };
