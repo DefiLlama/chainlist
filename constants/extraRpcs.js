@@ -1783,6 +1783,11 @@ export const extraRpcs = {
   11155111:{
     rpcs:[
       {
+        url:"https://eth-sepolia.g.alchemy.com/v2/demo",
+        tracking:"yes",
+        trackingDetails: privacyStatment.alchemy
+      },
+      {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
