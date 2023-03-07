@@ -386,7 +386,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
-      "https://rpc-bsc.bnb48.club",
       "https://bsc-mainnet.rpcfast.com",
       "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
       "https://nodes.vefinetwork.org/smartchain",
