@@ -616,6 +616,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://arbitrum-one.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   421613: {
@@ -630,10 +635,22 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://arbitrum-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   42170: {
-    rpcs: ["https://nova.arbitrum.io/rpc"],
+    rpcs: [
+       "https://nova.arbitrum.io/rpc",
+      {
+        url: "https://arbitrum-nova.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+     ],
   },
   8217: {
     rpcs: [
