@@ -2003,6 +2003,9 @@ export const extraRpcs = {
       "https://mainnet-rpc4.memescan.io/",
     ],
   },
+  311: {
+    rpcs: ['https://mainapi.omaxray.com/'],
+  },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
   },
