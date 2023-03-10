@@ -1812,7 +1812,7 @@ export const extraRpcs = {
       {
         url:"https://eth-sepolia.g.alchemy.com/v2/demo",
         tracking:"yes",
-        trackingDetails: privacyStatment.alchemy
+        trackingDetails: privacyStatement.alchemy
       },
       {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
