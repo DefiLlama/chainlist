@@ -1,4 +1,4 @@
-import { fetcher, populateChain, arrayMove } from "../../../utils";
+import { fetcher, populateChain, arrayMove } from "../../../utils/fetch";
 import { llamaNodesRpcs } from "../../../constants/llamaNodesRpcs";
 
 export default async function handler(req, res) {
