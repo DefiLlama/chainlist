@@ -445,12 +445,7 @@ export const extraRpcs = {
       },
       "https://avalancheapi.terminet.io/ext/bc/C/rpc",
       {
-        url: "https://avalanche.publicnode.com/",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://avalanche-evm.publicnode.com",
+        url: "https://avalanche-c-chain.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
