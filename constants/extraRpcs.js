@@ -1432,7 +1432,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc.test.btcs.network"],
   },
   1116: {
-    rpcs: ["https://rpc.coredao.org"],
+    rpcs: [
+      "https://rpc.coredao.org",
+      "https://core.public.infstones.com",
+    ],
   },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
