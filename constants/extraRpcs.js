@@ -188,8 +188,7 @@ export const extraRpcs = {
       //"https://main-rpc.linkpool.io/",
       "https://mainnet.eth.cloud.ava.do/",
       "https://ethereumnodelight.app.runonflux.io",
-      "https://eth-mainnet.rpcfast.com",
-      //"https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+      "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
       "https://main-light.eth.linkpool.io",
     ],
@@ -387,7 +386,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodereal,
       },
       "https://bsc-mainnet.rpcfast.com",
-      "https://bsc-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
       "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://1rpc.io/bnb",
@@ -408,6 +406,11 @@ export const extraRpcs = {
         url: "https://bnb.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality
+      },
+      {
+        url: "https://bsc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -456,12 +459,7 @@ export const extraRpcs = {
       },
       "https://avalancheapi.terminet.io/ext/bc/C/rpc",
       {
-        url: "https://avalanche.publicnode.com/",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://avalanche-evm.publicnode.com",
+        url: "https://avalanche-c-chain.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
@@ -520,6 +518,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://fantom.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   137: {
@@ -554,8 +557,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
-      "https://polygon-mainnet.rpcfast.com",
-      "https://polygon-mainnet.rpcfast.com?api_key=eQhI7SkwYXeQJyOLWrKNvpRnW9fTNoqkX0CErPfEsZjBBtYmn2e2uLKZtQkHkZdT",
+      "https://polygon-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       {
         url: "https://polygon-bor.publicnode.com",
         tracking: "none",
@@ -577,6 +579,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://polygon.rpc.blxrbdn.com/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
     ],
   },
   25: {
@@ -588,6 +595,11 @@ export const extraRpcs = {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://cronos-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -627,6 +639,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://arbitrum-one.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   421613: {
@@ -641,10 +658,22 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://arbitrum-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   42170: {
-    rpcs: ["https://nova.arbitrum.io/rpc"],
+    rpcs: [
+       "https://nova.arbitrum.io/rpc",
+      {
+        url: "https://arbitrum-nova.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+     ],
   },
   8217: {
     rpcs: [
@@ -950,7 +979,7 @@ export const extraRpcs = {
   106: {
     rpcs: [
       "https://evmexplorer.velas.com/rpc",
-      "https://velas-mainnet.rpcfast.com?api_key=S3X5aFCCW9MobqVatVZX93fMtWCzff0MfRj9pvjGKSiX5Nas7hz33HwwlrT5tXRM",
+      "https://velas-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
     ],
   },
   10000: {
@@ -1416,7 +1445,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc.test.btcs.network"],
   },
   1116: {
-    rpcs: ["https://rpc.coredao.org"],
+    rpcs: [
+      "https://rpc.coredao.org",
+      "https://core.public.infstones.com",
+    ],
   },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
@@ -1796,7 +1828,7 @@ export const extraRpcs = {
       {
         url:"https://eth-sepolia.g.alchemy.com/v2/demo",
         tracking:"yes",
-        trackingDetails: privacyStatment.alchemy
+        trackingDetails: privacyStatement.alchemy
       },
       {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
@@ -1986,6 +2018,9 @@ export const extraRpcs = {
       "https://mainnet-rpc3.memescan.io/",
       "https://mainnet-rpc4.memescan.io/",
     ],
+  },
+  311: {
+    rpcs: ['https://mainapi.omaxray.com/'],
   },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
