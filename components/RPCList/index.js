@@ -98,7 +98,7 @@ export default function RPCList({ chain, lang }) {
         </p>
       )}
 
-      <table className="m-0 border-collapse space-nowrap dark:text-[#B3B3B3] text-black">
+      <table className="m-0 border-collapse whitespace-nowrap dark:text-[#B3B3B3] text-black">
         <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
           <span className="mr-4">{`${chain.name} RPC URL List`}</span>
           <button
@@ -205,7 +205,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
 
   return (
     <tr className={className}>
-      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden space-nowrap text-ellipsis">
+      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
         {isLoading ? <Shimmer /> : data?.url}
       </td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>

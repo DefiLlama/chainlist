@@ -63,7 +63,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
             className="rounded-full flex-shrink-0 flex relative"
             alt={chain.name + " logo"}
           />
-          <span className="text-xl font-semibold space-nowrap overflow-hidden text-ellipsis relative top-[1px] dark:text-[#B3B3B3]">
+          <span className="text-xl font-semibold whitespace-nowrap overflow-hidden text-ellipsis relative top-[1px] dark:text-[#B3B3B3]">
             {chain.name}
           </span>
         </Link>
