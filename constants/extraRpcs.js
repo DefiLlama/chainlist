@@ -597,11 +597,6 @@ export const extraRpcs = {
   },
   42161: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://arb1.arbitrum.io/rpc",
       {
         url: "https://rpc.ankr.com/arbitrum",
