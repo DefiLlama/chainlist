@@ -2034,6 +2034,9 @@ export const extraRpcs = {
       },
     ],
   },
+  168: {
+    rpcs: ["https://testnet.sandora.io"],
+  },
   119: {
     rpcs: [
       "https://evmapi.nuls.io",
