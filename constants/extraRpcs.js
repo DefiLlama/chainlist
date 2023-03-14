@@ -1011,13 +1011,13 @@ export const extraRpcs = {
   },
   592: {
     rpcs: [
+      "https://evm.astar.network/",
       "https://rpc.astar.network:8545",
       {
         url: "https://astar.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      "https://evm.astar.network/",
       {
         url: "https://1rpc.io/astr",
         tracking: "none",
