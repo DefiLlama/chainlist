@@ -723,8 +723,8 @@ export const extraRpcs = {
   },
   128: {
     rpcs: [
-      "https://http-mainnet-node.huobichain.com",
       "https://http-mainnet.hecochain.com",
+      "https://http-mainnet-node.huobichain.com",
       "https://hecoapi.terminet.io/rpc",
     ],
   },
