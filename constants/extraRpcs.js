@@ -701,7 +701,7 @@ export const extraRpcs = {
   },
   1313161554: {
     rpcs: [
-      "https://mainnet.aurora.dev"
+      "https://mainnet.aurora.dev",
       {
         url: "https://endpoints.omniatech.io/v1/aurora/mainnet/public",
         tracking: "none",
