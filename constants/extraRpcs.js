@@ -385,7 +385,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
-      "https://bsc-mainnet.rpcfast.com",
+      "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://1rpc.io/bnb",
@@ -638,6 +638,11 @@ export const extraRpcs = {
         url: "https://arbitrum-one.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
