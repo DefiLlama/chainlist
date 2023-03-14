@@ -3,6 +3,8 @@ import { mergeDeep } from "../utils/fetch.js";
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
 const privacyStatement = {
+  48Club:
+    "IP addresses will be read for rate-limit purpose without being actively stored at application layer. Also notice that we don't actively purge user footprint in lower-level protocol.",
   unitedbloc:
     "UnitedBloc does not collect or store any PII information. UnitedBloc does use IP addresses and transaction requests solely for service management purposes. Performance measurements such as rate limiting and routing rules require the analysis of IP addresses and response time measurements require the analysis of transaction requests. UnitedBloc does not and will never use RPC requests to front run transactions.",
   ankr:
@@ -333,6 +335,16 @@ export const extraRpcs = {
   56: {
     rpcs: [
       {
+        url: "https://rpc-bsc.48.club",
+        tracking: "limited",
+        trackingDetails: privacyStatement.48Club,
+      },
+      {
+        url: "https://koge-rpc-bsc.48.club",
+        tracking: "limited",
+        trackingDetails: privacyStatement.48Club,
+      },
+      {
         url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -373,8 +385,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
-      "https://rpc-bsc.bnb48.club",
-      "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
+      "https://bsc-mainnet.rpcfast.com",
       "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://1rpc.io/bnb",
