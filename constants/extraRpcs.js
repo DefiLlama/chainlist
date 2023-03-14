@@ -240,14 +240,14 @@ export const extraRpcs = {
   5: {
     rpcs: [
       {
-        url: "https://endpoints.omniatech.io/v1/eth/goerli/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://rpc.ankr.com/eth_goerli",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
@@ -285,6 +285,7 @@ export const extraRpcs = {
   },
   4002: {
     rpcs: [
+      "https://rpc.testnet.fantom.network/",
       {
         url: "https://endpoints.omniatech.io/v1/fantom/testnet/public",
         tracking: "none",
@@ -295,7 +296,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc.testnet.fantom.network/",
       {
         url: "https://fantom-testnet.public.blastapi.io",
         tracking: "limited",
@@ -308,6 +308,7 @@ export const extraRpcs = {
   },
   43113: {
     rpcs: [
+      "https://api.avax-test.network/ext/bc/C/rpc",
       {
         url: "https://endpoints.omniatech.io/v1/avax/fuji/public",
         tracking: "none",
@@ -323,7 +324,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://api.avax-test.network/ext/bc/C/rpc",
       "https://avalanchetestapi.terminet.io/ext/bc/C/rpc",
       {
         url: "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc",
@@ -334,6 +334,19 @@ export const extraRpcs = {
   },
   56: {
     rpcs: [
+      "https://bsc-dataseed.binance.org/",
+      "https://bsc-dataseed1.defibit.io/",
+      "https://bsc-dataseed1.ninicoin.io/",
+      "https://bsc-dataseed2.defibit.io/",
+      "https://bsc-dataseed3.defibit.io/",
+      "https://bsc-dataseed4.defibit.io/",
+      "https://bsc-dataseed2.ninicoin.io/",
+      "https://bsc-dataseed3.ninicoin.io/",
+      "https://bsc-dataseed4.ninicoin.io/",
+      "https://bsc-dataseed1.binance.org/",
+      "https://bsc-dataseed2.binance.org/",
+      "https://bsc-dataseed3.binance.org/",
+      "https://bsc-dataseed4.binance.org/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -354,19 +367,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-      "https://bsc-dataseed.binance.org/",
-      "https://bsc-dataseed1.defibit.io/",
-      "https://bsc-dataseed1.ninicoin.io/",
-      "https://bsc-dataseed2.defibit.io/",
-      "https://bsc-dataseed3.defibit.io/",
-      "https://bsc-dataseed4.defibit.io/",
-      "https://bsc-dataseed2.ninicoin.io/",
-      "https://bsc-dataseed3.ninicoin.io/",
-      "https://bsc-dataseed4.ninicoin.io/",
-      "https://bsc-dataseed1.binance.org/",
-      "https://bsc-dataseed2.binance.org/",
-      "https://bsc-dataseed3.binance.org/",
-      "https://bsc-dataseed4.binance.org/",
       {
         url:
           "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
