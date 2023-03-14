@@ -201,6 +201,7 @@ export const extraRpcs = {
   },
   80001: {
     rpcs: [
+      "https://rpc-mumbai.maticvigil.com",
       {
         url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
         tracking: "none",
@@ -211,7 +212,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc-mumbai.maticvigil.com",
       "https://polygontestapi.terminet.io/rpc",
       {
         url: "https://polygon-testnet.public.blastapi.io",
@@ -434,11 +434,6 @@ export const extraRpcs = {
   },
   43114: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/avax/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://api.avax.network/ext/bc/C/rpc",
       "https://avax.rpcgator.com/",
       "https://avalanche.public-rpc.com",
@@ -483,10 +478,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/avax/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   250: {
     rpcs: [
+      "https://rpcapi.fantom.network",
       {
         url: "https://endpoints.omniatech.io/v1/fantom/mainnet/public",
         tracking: "none",
@@ -502,7 +503,6 @@ export const extraRpcs = {
       "https://rpc.fantom.network",
       "https://rpc2.fantom.network",
       "https://rpc3.fantom.network",
-      "https://rpcapi.fantom.network",
       {
         url: "https://fantom-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -527,6 +527,7 @@ export const extraRpcs = {
   },
   137: {
     rpcs: [
+      "https://rpc-mainnet.maticvigil.com",
       {
         url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
         tracking: "none",
@@ -534,7 +535,6 @@ export const extraRpcs = {
       },
       "https://polygon-rpc.com",
       "https://rpc-mainnet.matic.network",
-      "https://rpc-mainnet.maticvigil.com",
       "https://rpc-mainnet.matic.quiknode.pro",
       "https://matic-mainnet.chainstacklabs.com",
       "https://matic-mainnet-full-rpc.bwarelabs.com",
@@ -545,7 +545,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc-mainnet.maticvigil.com/",
       {
         url: "https://polygon-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -702,12 +701,13 @@ export const extraRpcs = {
   },
   1313161554: {
     rpcs: [
+      "https://mainnet.aurora.dev"
       {
         url: "https://endpoints.omniatech.io/v1/aurora/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      "https://mainnet.aurora.dev"],
+    ],
   },
   1313161555:{
     rpcs: [
@@ -748,11 +748,6 @@ export const extraRpcs = {
   },
   10: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/op/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://mainnet.optimism.io/",
       {
         url: "https://optimism-mainnet.public.blastapi.io",
@@ -778,6 +773,11 @@ export const extraRpcs = {
         url: "https://optimism.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/op/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
