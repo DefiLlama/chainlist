@@ -3,6 +3,16 @@ import React from "react";
 
 const LANGUAGES = ["en", "zh"];
 
+function presetTheme() {
+  const dark = localStorage.getItem("theme") === "dark";
+
+  if (dark) {
+    document.body.classList.add("dark");
+  }
+}
+
+const themeScript = `(() => { ${presetTheme.toString()}; presetTheme() })()`;
+
 class MyDocument extends Document {
   render() {
     const pathPrefix = this.props.__NEXT_DATA__.page.split("/")[1];
@@ -12,6 +22,7 @@ class MyDocument extends Document {
       <Html lang={lang}>
         <Head />
         <body>
+          <script dangerouslySetInnerHTML={{ __html: themeScript, }} />
           <Main />
           <NextScript />
         </body>
