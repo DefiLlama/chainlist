@@ -2056,6 +2056,9 @@ export const extraRpcs = {
       "https://evmapi2.nuls.io",
     ],
   },
+  15551: {
+    rpcs: ["https://api.mainnetloop.com"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
