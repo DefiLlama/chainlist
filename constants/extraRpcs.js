@@ -2057,6 +2057,7 @@ export const extraRpcs = {
     ],
   },
    9000: {
+     
     rpcs: [
       "https://rpcmainnet.ic-plaza.org",
     ],
