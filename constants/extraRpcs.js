@@ -2001,6 +2001,9 @@ export const extraRpcs = {
   971: {
     rpcs: ["https://beta-rpc.mainnet.computecoin.com"],
   },
+  9000: {
+    rpcs: ["https://rpcmainnet.ic-plaza.org"],
+  },
   10086: {
     rpcs: [],
     rpcWorking: false,
