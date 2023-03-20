@@ -2027,6 +2027,9 @@ export const extraRpcs = {
   311: {
     rpcs: ['https://mainapi.omaxray.com/'],
   },
+  314: {
+    rpcs: ['https://infura.sftproject.io/filecoin/rpc/v1'],
+  },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
   },
