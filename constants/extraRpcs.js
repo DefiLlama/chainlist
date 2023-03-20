@@ -1728,6 +1728,9 @@ export const extraRpcs = {
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
+  9000: {
+    rpcs: ["https://rpcmainnet.ic-plaza.org"],
+  },
   99999: {
     rpcs: ["https://rpc.uschain.network"],
   },
