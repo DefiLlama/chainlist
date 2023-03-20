@@ -2056,6 +2056,9 @@ export const extraRpcs = {
       "https://evmapi2.nuls.io",
     ],
   },
+  9000: {
+    rpcs: ["https://rpcmainnet.ic-plaza.org"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
