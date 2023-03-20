@@ -1148,6 +1148,9 @@ export const extraRpcs = {
   22: {
     rpcs: ["https://api.trinity-tech.io/eid", "https://api.elastos.io/eid"],
   },
+  9000: {
+    rpcs: ["https://rpcmainnet.ic-plaza.org"],
+  },
   24: {
     rpcs: ["https://rpc.kardiachain.io"],
   },
