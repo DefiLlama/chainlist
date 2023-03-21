@@ -73,6 +73,78 @@
     }
   },
   {
+    "name": "zkSync Era Testnet",
+    "chain": "ETH",
+    "rpc": [
+      "https://zksync2-testnet.zksync.dev"
+    ],
+    "faucets": [
+      "https://goerli.portal.zksync.io/faucet"
+    ],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://era.zksync.io/docs/",
+    "shortName": "zksync-goerli",
+    "chainId": 280,
+    "networkId": 280,
+    "icon": "zksync-era",
+    "explorers": [
+      {
+        "name": "zkSync Era Block Explorer",
+        "url": "https://goerli.explorer.zksync.io",
+        "icon": "zksync-era",
+        "standard": "EIP3091"
+      }
+    ],
+    "parent": {
+      "type": "L2",
+      "chain": "eip155-1",
+      "bridges": [
+        {
+          "url": "https://goerli.portal.zksync.io/bridge"
+        }
+      ]
+    }
+  },
+  {
+    "name": "zkSync Era Mainnet",
+    "chain": "ETH",
+    "rpc": [
+      "https://zksync2-mainnet.zksync.io"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://zksync.io/",
+    "shortName": "zksync",
+    "chainId": 324,
+    "networkId": 324,
+    "icon": "zksync-era",
+    "explorers": [
+      {
+        "name": "zkSync Era Block Explorer",
+        "url": "https://explorer.zksync.io",
+        "icon": "zksync-era",
+        "standard": "EIP3091"
+      }
+    ],
+    "parent": {
+      "type": "L2",
+      "chain": "eip155-1",
+      "bridges": [
+        {
+          "url": "https://portal.zksync.io/bridge"
+        }
+      ]
+    }
+  },
+  {
     "name": "BTA Chain",
     "chainId": 1657,
     "shortName": "btachain",
@@ -9982,34 +10054,6 @@
     ]
   },
   {
-    "name": "zkSync alpha testnet",
-    "chain": "ETH",
-    "rpc": [
-      "https://zksync2-testnet.zksync.dev"
-    ],
-    "faucets": [
-      "https://portal.zksync.io/faucet"
-    ],
-    "nativeCurrency": {
-      "name": "Ether",
-      "symbol": "ETH",
-      "decimals": 18
-    },
-    "infoURL": "https://v2-docs.zksync.io/",
-    "shortName": "zksync-goerli",
-    "chainId": 280,
-    "networkId": 280,
-    "icon": "ethereum",
-    "explorers": [
-      {
-        "name": "blockscout",
-        "url": "https://zksync2-testnet.zkscan.io",
-        "icon": "blockscout",
-        "standard": "EIP3091"
-      }
-    ]
-  },
-  {
     "name": "SX Network Mainnet",
     "chain": "SX",
     "icon": "SX",
@@ -11943,41 +11987,6 @@
         "standard": "none"
       }
     ]
-  },
-  {
-    "name": "zkSync Era Mainnet",
-    "chain": "ETH",
-    "rpc": [
-      "https://zksync2-mainnet.zksync.io"
-    ],
-    "faucets": [],
-    "nativeCurrency": {
-      "name": "Ether",
-      "symbol": "ETH",
-      "decimals": 18
-    },
-    "infoURL": "https://zksync.io/",
-    "shortName": "zksync",
-    "chainId": 324,
-    "networkId": 324,
-    "icon": "zksync-era",
-    "explorers": [
-      {
-        "name": "zkSync Era Block Explorer",
-        "url": "https://explorer.zksync.io",
-        "icon": "zksync-era",
-        "standard": "EIP3091"
-      }
-    ],
-    "parent": {
-      "type": "L2",
-      "chain": "eip155-1",
-      "bridges": [
-        {
-          "url": "https://portal.zksync.io/bridge"
-        }
-      ]
-    }
   },
   {
     "name": "Consta Testnet",
