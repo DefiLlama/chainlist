@@ -54,7 +54,9 @@ const privacyStatement = {
   restratagem:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
   onfinality:
-    "When you access and use our website or related services we may automatically collect information about your device and usage of our website, products and services, including your operating system, browser type, time spent on certain pages of the website/pages visited/links clicked/language preferences. https://onfinality.io/privacy"
+    "When you access and use our website or related services we may automatically collect information about your device and usage of our website, products and services, including your operating system, browser type, time spent on certain pages of the website/pages visited/links clicked/language preferences. https://onfinality.io/privacy",
+  JelliedOwl:
+    "Our webserver and RPC node logs may collect certain information automatically when serving requests, such as your IP address, browser or device information, and time of request. Cloudflare also logs information such as location (country) for statistical purposes. We do not intentional collect personal identifying information and do not use cookies. The information we collect is used for assessing server load and debugging any issues that might occur, and may be used to provide general RPC usage statistics back to the Edgeware community. We do not use it for any other commercial or marketing activities."
 };
 
 export const extraRpcs = {
