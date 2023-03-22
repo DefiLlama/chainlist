@@ -624,6 +624,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
+        url: "https://arbitrum.getblock.io/api_key/mainnet/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
+      {
         url: "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
