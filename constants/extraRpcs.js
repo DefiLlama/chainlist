@@ -412,6 +412,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://bsc-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   97: {
@@ -806,6 +811,11 @@ export const extraRpcs = {
         url: "https://opt-goerli.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://optimism-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
     ],
   },
@@ -1752,6 +1762,15 @@ export const extraRpcs = {
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
+  84531: {
+    rpcs: [
+      {
+        url: "https://base-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
+  },
   99999: {
     rpcs: ["https://rpc.uschain.network"],
   },
@@ -1838,6 +1857,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://scroll-alphanet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ]
   },
   888888: {
@@ -1868,6 +1892,11 @@ export const extraRpcs = {
         url: "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://eth-sepolia.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
     ]
   },
@@ -1920,6 +1949,15 @@ export const extraRpcs = {
   1122334455: {
     rpcs: [],
     rpcWorking: false,
+  },
+  11297108099: {
+    rpcs: [
+      {
+        url: "https://palm-testnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
   },
   1313161556: {
     rpcs: [],
