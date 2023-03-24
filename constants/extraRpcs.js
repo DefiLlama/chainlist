@@ -416,6 +416,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://bsc-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   97: {
@@ -628,6 +633,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
+        url: "https://arbitrum.getblock.io/api_key/mainnet/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
+      {
         url: "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
@@ -811,6 +821,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://optimism-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   1088: {
@@ -840,6 +855,11 @@ export const extraRpcs = {
         url: "https://gnosis.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://gnosis.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
@@ -1175,8 +1195,13 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   44: {
-    rpcs: [],
-    rpcWorking: false,
+    rpcs: [
+      {
+        url: "https://crab.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
   },
   50: {
     rpcs: [
@@ -1380,6 +1405,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-karura.aca-api.network",
       "https://rpc.evm.karura.network",
+      {
+        url: "https://karura.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      }
     ],
   },
   707: {
@@ -1393,6 +1423,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-acala.aca-api.network",
       "https://rpc.evm.acala.network",
+      {
+        url: "https://acala-polkadot.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality
+      },
     ],
   },
   803: {
@@ -1557,7 +1592,16 @@ export const extraRpcs = {
     ],
   },
   2021: {
-    rpcs: ["https://mainnet2.edgewa.re/evm", "https://mainnet3.edgewa.re/evm", "https://edgeware-evm.jelliedowl.net/"],
+    rpcs: [
+      "https://mainnet2.edgewa.re/evm", 
+      "https://mainnet3.edgewa.re/evm", 
+      "https://edgeware-evm.jelliedowl.net/",
+      {
+        url: "https://edgeware.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
   },
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
@@ -1732,6 +1776,15 @@ export const extraRpcs = {
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
+  84531: {
+    rpcs: [
+      {
+        url: "https://base-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
+  },
   99999: {
     rpcs: ["https://rpc.uschain.network"],
   },
@@ -1818,6 +1871,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://scroll-alphanet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ]
   },
   888888: {
@@ -1848,6 +1906,11 @@ export const extraRpcs = {
         url: "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://eth-sepolia.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
     ]
   },
@@ -1900,6 +1963,15 @@ export const extraRpcs = {
   1122334455: {
     rpcs: [],
     rpcWorking: false,
+  },
+  11297108099: {
+    rpcs: [
+      {
+        url: "https://palm-testnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
   },
   1313161556: {
     rpcs: [],
