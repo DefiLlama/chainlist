@@ -2135,6 +2135,9 @@ export const extraRpcs = {
       "https://evmapi2.nuls.io",
     ],
   },
+  15551: {
+    rpcs: ["https://api.mainnetloop.com"],
+  },
   88888888: {
     rpcs: [
       {
