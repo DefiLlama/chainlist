@@ -1553,7 +1553,16 @@ export const extraRpcs = {
     ],
   },
   2021: {
-    rpcs: ["https://mainnet2.edgewa.re/evm", "https://mainnet3.edgewa.re/evm", "https://edgeware-evm.jelliedowl.net/"],
+    rpcs: [
+      "https://mainnet2.edgewa.re/evm", 
+      "https://mainnet3.edgewa.re/evm", 
+      "https://edgeware-evm.jelliedowl.net/",
+      {
+        url: "https://edgeware.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
   },
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
