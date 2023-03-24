@@ -1178,7 +1178,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
     ],
-    rpcWorking: false,
   },
   50: {
     rpcs: [
