@@ -1171,7 +1171,13 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   44: {
-    rpcs: [],
+    rpcs: [
+      {
+        url: "https://crab.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
     rpcWorking: false,
   },
   50: {
