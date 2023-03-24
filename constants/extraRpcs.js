@@ -1376,6 +1376,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-karura.aca-api.network",
       "https://rpc.evm.karura.network",
+      {
+        url: "https://karura.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      }
     ],
   },
   707: {
