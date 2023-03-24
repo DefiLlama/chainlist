@@ -11,13 +11,13 @@ const privacyStatement = {
     "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
     "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, location information (including approximate location derived from IP address), and Internet service provider. https://www.alchemy.com/policies/privacy-policy",
-  nodereal: 
+  nodereal:
     `We may automatically record certain information about how you use our Sites (we refer to this information as "Log Data"). Log Data may include information such as a user's Internet Protocol (IP) address, device and browser type, operating system, the pages or features of our Sites to which a user browsed and the time spent on those pages or features, the frequency with which the Sites are used by a user, search terms, the links on our Sites that a user clicked on or used, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users' needs and preferences. https://nodereal.io/terms`,
-  publicnode: 
+  publicnode:
     `We do not store or track any user data with the exception of data that will be public on chain. We do not correlate wallets address's with IP's,  any data which is needed to transact is deleted after 24 hours. We also do no use any Analytics or 3rd party website tracking. https://www.publicnode.com/privacy`,
   onerpc:
     "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.ata.network/1rpc/design/#tracking-prevention",
-  builder0x69: 
+  builder0x69:
     "Private transactions / MM RPC: https://twitter.com/builder0x69",
   flashbots:
     "Privacy notice: Flashbots Protect RPC does not track any kind of user information (i.e. IP, location, etc.). No user information is ever stored or even logged. https://docs.flashbots.net/flashbots-protect/rpc/quick-start",
@@ -31,13 +31,13 @@ const privacyStatement = {
     "Information about your computer hardware and software may be automatically collected by BitStack. This information can include: your IP address, browser type, domain names, access times and referring website addresses. https://bitstack.com/#/privacy",
   pokt:
     "What We Do Not Collect: User's IP address, request origin, request data. https://www.blog.pokt.network/rpc-logging-practices/",
-  zmok: 
+  zmok:
     `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following intercations with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address, browser, device information, location information (including approximate location derived from IP address), and Internet Service Provider (ISP) aswell as accessed servcies and pages",
-  omnia: 
+  omnia:
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
     "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
@@ -54,7 +54,11 @@ const privacyStatement = {
   restratagem:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
   onfinality:
-    "When you access and use our website or related services we may automatically collect information about your device and usage of our website, products and services, including your operating system, browser type, time spent on certain pages of the website/pages visited/links clicked/language preferences. https://onfinality.io/privacy"
+    "When you access and use our website or related services we may automatically collect information about your device and usage of our website, products and services, including your operating system, browser type, time spent on certain pages of the website/pages visited/links clicked/language preferences. https://onfinality.io/privacy",
+  getblock:
+    "We automatically collect certain information through cookies and similar technologies when you visit, use or navigate Website. This information does not reveal your specific identity (like your name or contact information) and does not allow to identify you. However, it may include device and usage information, such as your IP address, browser and device characteristics, its type and version, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Website, information about your interaction in our emails, and other technical and statistical information. This information is primarily needed to maintain the security and operation of our Website, and for our internal analytics and reporting purposes.Specifically, as the RPC provider, we do not log and store your IP address, country, location and similar data. https://getblock.io/privacy-policy/",
+  teamblockchain:
+    "We may collect non-personal information such as your browser type, type of computer, operating system, IP address, or other minor details. https://policy.teamblockchain.team/"
 };
 
 export const extraRpcs = {
@@ -412,6 +416,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://bsc-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   97: {
@@ -624,6 +633,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
+        url: "https://arbitrum.getblock.io/api_key/mainnet/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
+      {
         url: "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
@@ -671,13 +685,13 @@ export const extraRpcs = {
   },
   42170: {
     rpcs: [
-       "https://nova.arbitrum.io/rpc",
+      "https://nova.arbitrum.io/rpc",
       {
         url: "https://arbitrum-nova.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-     ],
+    ],
   },
   8217: {
     rpcs: [
@@ -714,7 +728,7 @@ export const extraRpcs = {
       },
     ],
   },
-  1313161555:{
+  1313161555: {
     rpcs: [
       {
         url: "https://endpoints.omniatech.io/v1/aurora/testnet/public",
@@ -807,6 +821,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
+      {
+        url: "https://optimism-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   1088: {
@@ -837,6 +856,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://gnosis.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   10200: {
@@ -851,24 +875,24 @@ export const extraRpcs = {
   1285: {
     rpcs: [
       {
-        url:"wss://moonriver.api.onfinality.io/public-ws",
+        url: "wss://moonriver.api.onfinality.io/public-ws",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url:"https://moonriver.api.onfinality.io/public",
+        url: "https://moonriver.api.onfinality.io/public",
         tracking: "limited",
-        trackingDetails: privacyStatement.onfinality   
+        trackingDetails: privacyStatement.onfinality
       },
       {
-      url: "https://moonriver.unitedbloc.com:2000",
-      tracking: "yes",
-      trackingDetails: privacyStatement.unitedbloc,
+        url: "https://moonriver.unitedbloc.com:2000",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
-      url:"wss://moonriver.unitedbloc.com:2001",
-      tracking: "yes",
-      trackingDetails: privacyStatement.unitedbloc,
+        url: "wss://moonriver.unitedbloc.com:2001",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
         url: "https://moonriver.public.blastapi.io",
@@ -909,24 +933,24 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.api.moonbeam.network",
       {
-        url:"https://moonbeam.api.onfinality.io/public",
+        url: "https://moonbeam.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality
       },
       {
-        url:"wss://moonbeam.api.onfinality.io/public-ws",
+        url: "wss://moonbeam.api.onfinality.io/public-ws",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality
       },
       {
-      url: "https://moonbeam.unitedbloc.com:3000",
-      tracking: "yes",
-      trackingDetails: privacyStatement.unitedbloc,
+        url: "https://moonbeam.unitedbloc.com:3000",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
-      url:"wss://moonbeam.unitedbloc.com:3001",
-      tracking: "yes",
-      trackingDetails: privacyStatement.unitedbloc,
+        url: "wss://moonbeam.unitedbloc.com:3001",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
         url: "https://moonbeam.public.blastapi.io",
@@ -979,7 +1003,7 @@ export const extraRpcs = {
     ],
   },
   888: {
-    rpcs: ["https://gwan-ssl.wandevs.org:56891","https://gwan2-ssl.wandevs.org"],
+    rpcs: ["https://gwan-ssl.wandevs.org:56891", "https://gwan2-ssl.wandevs.org"],
   },
   106: {
     rpcs: [
@@ -1068,12 +1092,12 @@ export const extraRpcs = {
   },
   82: {
     rpcs: ["https://rpc.meter.io",
-    {
-      url: "https://rpc-meter.jellypool.xyz/",
-      tracking: "yes",
-      trackingDetails: privacyStatement.jellypool,
-    },
-  ],
+      {
+        url: "https://rpc-meter.jellypool.xyz/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.jellypool,
+      },
+    ],
   },
   5551: {
     rpcs: ["https://l2.nahmii.io/"],
@@ -1171,8 +1195,13 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   44: {
-    rpcs: [],
-    rpcWorking: false,
+    rpcs: [
+      {
+        url: "https://crab.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
   },
   50: {
     rpcs: [
@@ -1376,6 +1405,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-karura.aca-api.network",
       "https://rpc.evm.karura.network",
+      {
+        url: "https://karura.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      }
     ],
   },
   707: {
@@ -1389,6 +1423,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-acala.aca-api.network",
       "https://rpc.evm.acala.network",
+      {
+        url: "https://acala-polkadot.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality
+      },
     ],
   },
   803: {
@@ -1481,14 +1520,14 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.testnet.moonbeam.network",
       {
-      url: "https://moonbase.unitedbloc.com:1000",
-      tracking: "yes",
-      trackingDetails: privacyStatement.unitedbloc,
+        url: "https://moonbase.unitedbloc.com:1000",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
-      url:"wss://moonbase.unitedbloc.com:1001",
-      tracking: "yes",
-      trackingDetails: privacyStatement.unitedbloc,
+        url: "wss://moonbase.unitedbloc.com:1001",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
         url: "https://moonbase-alpha.public.blastapi.io",
@@ -1553,7 +1592,16 @@ export const extraRpcs = {
     ],
   },
   2021: {
-    rpcs: ["https://mainnet2.edgewa.re/evm", "https://mainnet3.edgewa.re/evm"],
+    rpcs: [
+      "https://mainnet2.edgewa.re/evm", 
+      "https://mainnet3.edgewa.re/evm", 
+      "https://edgeware-evm.jelliedowl.net/",
+      {
+        url: "https://edgeware.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
   },
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
@@ -1728,6 +1776,15 @@ export const extraRpcs = {
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
+  84531: {
+    rpcs: [
+      {
+        url: "https://base-goerli.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
+  },
   99999: {
     rpcs: ["https://rpc.uschain.network"],
   },
@@ -1807,12 +1864,17 @@ export const extraRpcs = {
   281121: {
     rpcs: ["rpcWorking:false"],
   },
-  534354:{
-    rpcs:[
+  534354: {
+    rpcs: [
       {
         url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://scroll-alphanet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
     ]
   },
@@ -1828,11 +1890,11 @@ export const extraRpcs = {
   1313500: {
     rpcs: ["https://rpc.xerom.org"],
   },
-  11155111:{
-    rpcs:[
+  11155111: {
+    rpcs: [
       {
-        url:"https://eth-sepolia.g.alchemy.com/v2/demo",
-        tracking:"yes",
+        url: "https://eth-sepolia.g.alchemy.com/v2/demo",
+        tracking: "yes",
         trackingDetails: privacyStatement.alchemy
       },
       {
@@ -1844,6 +1906,11 @@ export const extraRpcs = {
         url: "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://eth-sepolia.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
     ]
   },
@@ -1896,6 +1963,15 @@ export const extraRpcs = {
   1122334455: {
     rpcs: [],
     rpcWorking: false,
+  },
+  11297108099: {
+    rpcs: [
+      {
+        url: "https://palm-testnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
   },
   1313161556: {
     rpcs: [],
@@ -2027,6 +2103,9 @@ export const extraRpcs = {
   311: {
     rpcs: ['https://mainapi.omaxray.com/'],
   },
+  314: {
+    rpcs: ['https://infura.sftproject.io/filecoin/rpc/v1'],
+  },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
   },
@@ -2059,6 +2138,15 @@ export const extraRpcs = {
   15551: {
     rpcs: ["https://api.mainnetloop.com"],
   },
+  88888888: {
+    rpcs: [
+      {
+        url: "https://rpc.teamblockchain.team",
+        tracking: "yes",
+        trackingDetails: privacyStatement.teamblockchain,
+      }
+    ],
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
