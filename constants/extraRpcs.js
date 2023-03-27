@@ -1676,6 +1676,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       "https://jsonrpc-evmos.goldenratiostaking.net",
+      {
+        url: "https://evmos.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   836542336838601: {
