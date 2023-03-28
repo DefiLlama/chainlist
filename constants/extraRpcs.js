@@ -180,7 +180,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality
       },
       {
-        url: "https://beta-be.gashawk.io:3001/proxy/rpc",
+        url: "https://core.gashawk.io/rpc",
         tracking: "yes",
         trackingDetails: privacyStatement.gashawk,
       },
