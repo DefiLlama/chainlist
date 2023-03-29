@@ -2163,6 +2163,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.teamblockchain,
       }
     ],
+  },
+  224168: {
+    rpcs: [
+      {
+        url: "https://mainnet.tafchain.com/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement["48Club"]
+      }
+    ],
   }
 };
 
