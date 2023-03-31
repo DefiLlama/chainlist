@@ -2175,6 +2175,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.teamblockchain,
       }
     ],
+  },
+  1071: {
+    rpcs: [
+      {
+        url: "https://json-rpc.evm.testnet.shimmer.network/",
+        tracking: "none"
+      }
+    ],
   }
 };
 
