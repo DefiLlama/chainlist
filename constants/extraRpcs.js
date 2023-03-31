@@ -718,6 +718,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       "https://harmony-mainnet.chainstacklabs.com",
+      {
+        url: "https://harmony.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   1313161554: {
