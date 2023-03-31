@@ -2120,7 +2120,14 @@ export const extraRpcs = {
     rpcs: ['https://mainapi.omaxray.com/'],
   },
   314: {
-    rpcs: ['https://infura.sftproject.io/filecoin/rpc/v1'],
+    rpcs: [
+      "https://api.node.glif.io",
+      {
+        url: "https://rpc.ankr.com/filecoin",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
   },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
