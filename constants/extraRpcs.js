@@ -2175,6 +2175,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.teamblockchain,
       }
     ],
+  },
+  1101: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/polygon_zkevm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      }
+    ],
   }
 };
 
