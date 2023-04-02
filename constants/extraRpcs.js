@@ -1229,6 +1229,16 @@ export const extraRpcs = {
   59: {
     rpcs: ["https://api.eosargentina.io", "https://api.metahub.cash"],
   },
+  6: {
+    rpcs: [
+      "https://www.ethercluster.com/kotti",
+      {
+        url: "https://geth-kotti.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+    ],
+  },
   61: {
     rpcs: [
       "https://etc.rivet.link",
@@ -1255,6 +1265,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       "https://rpc.etcplanets.com",
+    ],
+  },
+  63: {
+    rpcs: [
+      "https://www.ethercluster.com/mordor",
+      {
+        url: "https://geth-mordor.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
     ],
   },
   64: {
