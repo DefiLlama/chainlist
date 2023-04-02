@@ -1229,13 +1229,34 @@ export const extraRpcs = {
   59: {
     rpcs: ["https://api.eosargentina.io", "https://api.metahub.cash"],
   },
+  6: {
+    rpcs: [
+      {
+        url: "https://geth-kotti.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      "https://www.ethercluster.com/kotti",
+    ],
+  },
   61: {
     rpcs: [
       "https://etc.rivet.link",
       "https://etc.etcdesktop.com",
       "https://etc.mytokenpocket.vip",
+      "https://rpc.etcplanets.com",
+      {
+        url: "https://besu-at.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
       {
         url: "https://besu-de.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      {
+        url: "https://geth-at.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
@@ -1245,16 +1266,25 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
-        url: "https://besu-at.etc-network.info",
+        url: "https://erigon-at.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
-        url: "https://geth-at.etc-network.info",
+        url: "https://erigon-de.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
-      "https://rpc.etcplanets.com",
+    ],
+  },
+  63: {
+    rpcs: [
+      {
+        url: "https://geth-mordor.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      "https://www.ethercluster.com/mordor",
     ],
   },
   64: {
