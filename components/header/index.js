@@ -37,10 +37,9 @@ function Header({ lang, chainName }) {
         return;
       }
 
-      let path = router.pathname.includes("/chain/") ? "/" : router.pathname
       router.push(
         {
-          pathname: path,
+          pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
           query: { search: debouncedSearchTerm },
         },
         undefined,
