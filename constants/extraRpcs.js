@@ -60,7 +60,9 @@ const privacyStatement = {
   teamblockchain:
   "We only store and track data that will be publicly available on the blockchain, and do not collect or retain any other user data. https://policy.teamblockchain.team/",
   getloop:
-    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy"
+    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy",
+  iota:
+    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -1229,6 +1231,16 @@ export const extraRpcs = {
   59: {
     rpcs: ["https://api.eosargentina.io", "https://api.metahub.cash"],
   },
+  6: {
+    rpcs: [
+      "https://www.ethercluster.com/kotti",
+      {
+        url: "https://geth-kotti.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+    ],
+  },
   61: {
     rpcs: [
       "https://etc.rivet.link",
@@ -1255,6 +1267,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       "https://rpc.etcplanets.com",
+    ],
+  },
+  63: {
+    rpcs: [
+      "https://www.ethercluster.com/mordor",
+      {
+        url: "https://geth-mordor.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
     ],
   },
   64: {
@@ -2182,6 +2204,15 @@ export const extraRpcs = {
         url: "https://json-rpc.evm.testnet.shimmer.network/",
         tracking: "none",
         trackingDetails: privacyStatement.iota,
+      }
+    ],
+  },
+  1101: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/polygon_zkevm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       }
     ],
   }
