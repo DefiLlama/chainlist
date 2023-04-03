@@ -2198,6 +2198,15 @@ export const extraRpcs = {
       }
     ],
   },
+  1071: {
+    rpcs: [
+      {
+        url: "https://json-rpc.evm.testnet.shimmer.network/",
+        tracking: "none",
+        trackingDetails: privacyStatement.iota,
+      }
+    ],
+  },
   1101: {
     rpcs: [
       {
