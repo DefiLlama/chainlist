@@ -2180,7 +2180,8 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://json-rpc.evm.testnet.shimmer.network/",
-        tracking: "none"
+        tracking: "none",
+        trackingDetails: privacyStatement.iota,
       }
     ],
   }
