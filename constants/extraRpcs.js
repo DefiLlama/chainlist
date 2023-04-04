@@ -66,7 +66,9 @@ const privacyStatement = {
   ChainUpCloud:
     "We only collect user IP addresses for the purpose of rate limiting. For more information, please visit https://docs.chainupcloud.com/introduction/products/blockchain-api.",
   iota:
-    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy"
+    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
+  croswap:
+    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics."
 };
 
 export const extraRpcs = {
@@ -616,7 +618,11 @@ export const extraRpcs = {
     rpcs: [
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
-      "https://node.croswap.com/rpc",
+      {
+        url: "https://node.croswap.com/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.croswap,
+      },
       {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -635,6 +641,11 @@ export const extraRpcs = {
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
+      {
+        url: "https://arb1.croswap.com/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.croswap,
+      },
       {
         url: "https://rpc.ankr.com/arbitrum",
         tracking: "limited",
