@@ -2149,6 +2149,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      "https://infura.sftproject.io/filecoin/rpc/v1",
     ],
   },
   13000: {
