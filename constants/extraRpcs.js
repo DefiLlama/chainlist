@@ -19,6 +19,8 @@ const privacyStatement = {
     "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.ata.network/1rpc/design/#tracking-prevention",
   builder0x69:
     "Private transactions / MM RPC: https://twitter.com/builder0x69",
+  MEVBlockerRPC:
+    "Privacy notice: MEV Blocker RPC does not store any kind of user information (i.e. IP, location, user agent, etc.) in any data bases. Only transactions are preserved to be displayed via status endpoint like https://rpc.mevblocker.io/tx/0x627b09d5a9954a810cd3c34b23694439da40558a41b0d87970f2c3420634a229. Connect to MEV Blocker via https://rpc.mevblocker.io",
   flashbots:
     "Privacy notice: Flashbots Protect RPC does not track any kind of user information (i.e. IP, location, etc.). No user information is ever stored or even logged. https://docs.flashbots.net/flashbots-protect/rpc/quick-start",
   bloxroute:
@@ -99,6 +101,11 @@ export const extraRpcs = {
         url: "https://rpc.builder0x69.io/",
         tracking: "none",
         trackingDetails: privacyStatement.builder0x69,
+      },
+      {
+        url: "https://rpc.mevblocker.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.MEVBlockerRPC,
       },
       {
         url: "https://rpc.flashbots.net/",
