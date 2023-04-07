@@ -68,7 +68,9 @@ const privacyStatement = {
   iota:
     "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
   croswap:
-    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics."
+    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
+  unifra:
+    "Regarding the RPC(remote procedure call) data, we do not collect request data or request origin. We temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days. Only the amounts of RPC requests of users are recorded for accounting and billing purposes within longer time. https://unifra.io/"
 };
 
 export const extraRpcs = {
@@ -164,7 +166,8 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-mainnet-public.unifra.io",
-        tracking: "unspecified",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
       },
       {
         url: "https://ethereum.blockpi.network/v1/rpc/public",
@@ -686,6 +689,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url:"https://arb-mainnet-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
+      }
     ],
   },
   421613: {
@@ -1924,6 +1932,11 @@ export const extraRpcs = {
         url: "https://scroll-alphanet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url:"https://scroll-alpha-public.unifra.io",
+        tracking:"limited",
+        trackingDetails: privacyStatement.unifra,
       },
       {
         url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
