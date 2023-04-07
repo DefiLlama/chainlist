@@ -64,7 +64,10 @@ const privacyStatement = {
   getloop:
     "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy",
   iota:
-    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy"
+    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
+  unifra:
+    "Regarding the RPC(remote procedure call) data, we do not collect request data or request origin. We temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days. Only the amounts of RPC requests of users are recorded for accounting and billing purposes within longer time. https://unifra.io/"
+
 };
 
 export const extraRpcs = {
@@ -160,7 +163,8 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-mainnet-public.unifra.io",
-        tracking: "unspecified",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
       },
       {
         url: "https://ethereum.blockpi.network/v1/rpc/public",
@@ -673,6 +677,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url:"https://arb-mainnet-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
+      }
     ],
   },
   421613: {
@@ -1912,6 +1921,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url:"https://scroll-alpha-public.unifra.io",
+        tracking:"limited",
+        trackingDetails: privacyStatement.unifra,
+      }
     ]
   },
   534354:{
