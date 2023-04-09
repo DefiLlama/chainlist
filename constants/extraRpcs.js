@@ -1912,15 +1912,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-    ]
-  },
-  534354:{
-    rpcs:[
       {
         url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
-      },
+      }
+    ]
+  },
+  534354:{
+    rpcs:[
     ]
   },
   888888: {
