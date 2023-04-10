@@ -60,7 +60,9 @@ const privacyStatement = {
   teamblockchain:
   "We only store and track data that will be publicly available on the blockchain, and do not collect or retain any other user data. https://policy.teamblockchain.team/",
   getloop:
-    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy"
+    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy",
+  ChainUpCloud:
+    "We only collect user IP addresses for the purpose of rate limiting. For more information, please visit https://docs.chainupcloud.com/introduction/products/blockchain-api."
 };
 
 export const extraRpcs = {
@@ -2127,6 +2129,29 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://filecoin.chainup.net/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ChainUpCloud,
+      }
+    ],
+  },
+  314159: {
+    rpcs: [
+      {
+        url: "https://filecoin-calibration.chainup.net/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ChainUpCloud,
+      }
+    ],
+  },
+  3141: {
+    rpcs: [
+      {
+        url: "https://filecoin-hyperspace.chainup.net/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ChainUpCloud,
+      }
     ],
   },
   13000: {
