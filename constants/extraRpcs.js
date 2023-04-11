@@ -67,6 +67,8 @@ const privacyStatement = {
     "We only collect user IP addresses for the purpose of rate limiting. For more information, please visit https://docs.chainupcloud.com/introduction/products/blockchain-api.",
   iota:
     "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
+  markrgo: 
+    "We only collect the minimum necessary information to provide our blockchain RPC service (caching). We do not use your data for commercial purposes. Any collected data is short-term and will be automatically deleted within 24 hours if not actively used. https://www.markr.io/privacy-policy",
   croswap:
     "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
   unifra:
@@ -2271,6 +2273,15 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/polygon_zkevm",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      }
+    ],
+  },
+  431140: {
+    rpcs: [
+      {
+        url: "https://rpc.markr.io/ext/",
+        tracking: "none",
+        trackingDetails: privacyStatement.markrgo,
       }
     ],
   }
