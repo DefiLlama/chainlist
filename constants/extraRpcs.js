@@ -2188,6 +2188,11 @@ export const extraRpcs = {
         url: "https://filecoin.chainup.net/rpc/v1",
         tracking: "limited",
         trackingDetails: privacyStatement.ChainUpCloud,
+      },
+      {
+        url: "https://infura.sftproject.io/filecoin/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.SFTProtocol,
       }
     ],
   },
