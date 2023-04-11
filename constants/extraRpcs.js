@@ -19,8 +19,6 @@ const privacyStatement = {
     "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.ata.network/1rpc/design/#tracking-prevention",
   builder0x69:
     "Private transactions / MM RPC: https://twitter.com/builder0x69",
-  MEVBlockerRPC:
-    "Privacy notice: MEV Blocker RPC does not store any kind of user information (i.e. IP, location, user agent, etc.) in any data bases. Only transactions are preserved to be displayed via status endpoint like https://rpc.mevblocker.io/tx/0x627b09d5a9954a810cd3c34b23694439da40558a41b0d87970f2c3420634a229. Connect to MEV Blocker via https://rpc.mevblocker.io",
   flashbots:
     "Privacy notice: Flashbots Protect RPC does not track any kind of user information (i.e. IP, location, etc.). No user information is ever stored or even logged. https://docs.flashbots.net/flashbots-protect/rpc/quick-start",
   bloxroute:
@@ -62,17 +60,7 @@ const privacyStatement = {
   teamblockchain:
   "We only store and track data that will be publicly available on the blockchain, and do not collect or retain any other user data. https://policy.teamblockchain.team/",
   getloop:
-    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy",
-  ChainUpCloud:
-    "We only collect user IP addresses for the purpose of rate limiting. For more information, please visit https://docs.chainupcloud.com/introduction/products/blockchain-api.",
-  iota:
-    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
-  croswap:
-    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
-  unifra:
-    "Regarding the RPC(remote procedure call) data, we do not collect request data or request origin. We temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days. Only the amounts of RPC requests of users are recorded for accounting and billing purposes within longer time. https://unifra.io/",
-  croswap:
-    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics."
+    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy"
 };
 
 export const extraRpcs = {
@@ -109,11 +97,6 @@ export const extraRpcs = {
         url: "https://rpc.builder0x69.io/",
         tracking: "none",
         trackingDetails: privacyStatement.builder0x69,
-      },
-      {
-        url: "https://rpc.mevblocker.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.MEVBlockerRPC,
       },
       {
         url: "https://rpc.flashbots.net/",
@@ -168,8 +151,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra
+        tracking: "unspecified",
       },
       {
         url: "https://ethereum.blockpi.network/v1/rpc/public",
@@ -623,11 +605,7 @@ export const extraRpcs = {
     rpcs: [
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
-      {
-        url: "https://node.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
+      "https://node.croswap.com/rpc",
       {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -646,11 +624,6 @@ export const extraRpcs = {
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
-      {
-        url: "https://arb1.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
       {
         url: "https://rpc.ankr.com/arbitrum",
         tracking: "limited",
@@ -691,11 +664,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      {
-        url:"https://arb-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra
-      }
     ],
   },
   421613: {
@@ -1261,16 +1229,6 @@ export const extraRpcs = {
   59: {
     rpcs: ["https://api.eosargentina.io", "https://api.metahub.cash"],
   },
-  6: {
-    rpcs: [
-      "https://www.ethercluster.com/kotti",
-      {
-        url: "https://geth-kotti.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-    ],
-  },
   61: {
     rpcs: [
       "https://etc.rivet.link",
@@ -1297,16 +1255,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       "https://rpc.etcplanets.com",
-    ],
-  },
-  63: {
-    rpcs: [
-      "https://www.ethercluster.com/mordor",
-      {
-        url: "https://geth-mordor.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
     ],
   },
   64: {
@@ -1935,20 +1883,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      {
-        url:"https://scroll-alpha-public.unifra.io",
-        tracking:"limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
-        url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      }
     ]
   },
   534354:{
     rpcs:[
+      {
+        url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ]
   },
   888888: {
@@ -2184,29 +2127,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      {
-        url: "https://filecoin.chainup.net/rpc/v1",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ChainUpCloud,
-      }
-    ],
-  },
-  314159: {
-    rpcs: [
-      {
-        url: "https://filecoin-calibration.chainup.net/rpc/v1",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ChainUpCloud,
-      }
-    ],
-  },
-  3141: {
-    rpcs: [
-      {
-        url: "https://filecoin-hyperspace.chainup.net/rpc/v1",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ChainUpCloud,
-      }
     ],
   },
   13000: {
@@ -2253,24 +2173,6 @@ export const extraRpcs = {
         url: "https://rpc.teamblockchain.team",
         tracking: "none",
         trackingDetails: privacyStatement.teamblockchain,
-      }
-    ],
-  },
-  1071: {
-    rpcs: [
-      {
-        url: "https://json-rpc.evm.testnet.shimmer.network/",
-        tracking: "none",
-        trackingDetails: privacyStatement.iota,
-      }
-    ],
-  },
-  1101: {
-    rpcs: [
-      {
-        url: "https://rpc.ankr.com/polygon_zkevm",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
       }
     ],
   }

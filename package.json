@@ -16,12 +16,14 @@
     "axios": "^1.2.1",
     "ethers": "^5.7.2",
     "fathom-client": "^3.5.0",
+    "jsx": "^0.9.89",
     "next": "^13.0.6",
     "next-intl": "^2.10.2",
     "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "serve": "^14.1.2",
+    "styled-jsx": "^5.1.2",
     "zustand": "^4.1.5"
   },
   "devDependencies": {

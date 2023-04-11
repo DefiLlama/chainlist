@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* All your tailwind definitions with @apply rules are here */
+
+
+/* If the user prefers dark mode, 
+we of course apply color-scheme: dark, as usual */
+
+  /* If the user prefers light mode, 
+  we still enforce color-scheme: dark, despite the user preference */
