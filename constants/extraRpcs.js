@@ -1299,17 +1299,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
+        url: "https://erigon-de.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      {
         url: "https://besu-at.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
         url: "https://geth-at.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://erigon-at.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
