@@ -891,7 +891,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet",
+      "https://rpc.ap-southeast-1.gateway.fm/v4/gnosis/non-archival/mainnet",
       {
         url: "https://gnosis.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -907,7 +907,7 @@ export const extraRpcs = {
   10200: {
     rpcs: [
       "https://rpc.chiadochain.net",
-      "https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado",
+      "https://rpc.chiado.gnosis.gateway.fm",
     ],
   },
   1231: {
