@@ -699,7 +699,12 @@ export const extraRpcs = {
         url:"https://arb-mainnet-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra
-      }
+      },
+      {
+        url: "https://arbitrum.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   421613: {
