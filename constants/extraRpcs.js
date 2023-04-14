@@ -219,6 +219,7 @@ export const extraRpcs = {
       "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
       "https://main-light.eth.linkpool.io",
+      "https://rpc.eth.gateway.fm",
     ],
   },
   2: {
@@ -302,6 +303,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality
       },
+      "https://rpc.goerli.eth.gateway.fm",
     ],
   },
   //Ropsten testnet deprecated
@@ -561,6 +563,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://rpc.fantom.gateway.fm",
     ],
   },
   137: {
@@ -2295,7 +2298,8 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/polygon_zkevm",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      }
+      },
+      "https://rpc.polygon-zkevm.gateway.fm",
     ],
   },
   431140: {
