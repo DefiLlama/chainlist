@@ -56,7 +56,7 @@ const privacyStatement = {
   restratagem:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
   OnFinality:
-    "For the sole purpose of providing our service, we temporarily record IP addresses and origins to check against free limits, provide load balancing, prevent DOS attacks, and to determine where best to locate our nodes. We do not, and will never, correlate or link specific wallet addresses or transactions made over our infrastructure to the IP address or origin making the RPC request. After processing IP addresses, we discard the IP address value within 24 hours. Read more here: https://blog.onfinality.io/how-does-onfinality-deal-with-personal-information/"
+    "For the sole purpose of providing our service, we temporarily record IP addresses and origins to check against free limits, provide load balancing, prevent DOS attacks, and to determine where best to locate our nodes. We do not, and will never, correlate or link specific wallet addresses or transactions made over our infrastructure to the IP address or origin making the RPC request. After processing IP addresses, we discard the IP address value within 24 hours. Read more here: https://blog.onfinality.io/how-does-onfinality-deal-with-personal-information/",
   getblock:
     "We automatically collect certain information through cookies and similar technologies when you visit, use or navigate Website. This information does not reveal your specific identity (like your name or contact information) and does not allow to identify you. However, it may include device and usage information, such as your IP address, browser and device characteristics, its type and version, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Website, information about your interaction in our emails, and other technical and statistical information. This information is primarily needed to maintain the security and operation of our Website, and for our internal analytics and reporting purposes.Specifically, as the RPC provider, we do not log and store your IP address, country, location and similar data. https://getblock.io/privacy-policy/",
   teamblockchain:
@@ -76,7 +76,9 @@ const privacyStatement = {
   croswap:
     "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
   SFTProtocol:
-    "Information collected automatically may include usage details, IP addresses, and information collected through cookies and other tracking technologies"
+    "Information collected automatically may include usage details, IP addresses, and information collected through cookies and other tracking technologies",
+  gateway:
+    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months"
 };
 
 export const extraRpcs = {
@@ -219,7 +221,12 @@ export const extraRpcs = {
       "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
       "https://main-light.eth.linkpool.io",
-      "https://rpc.eth.gateway.fm",
+      {
+        url: "https://rpc.eth.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+      
     ],
   },
   2: {
@@ -303,7 +310,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality
       },
-      "https://rpc.goerli.eth.gateway.fm",
+      {
+        url: "https://rpc.goerli.eth.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+      
     ],
   },
   //Ropsten testnet deprecated
@@ -563,7 +575,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      "https://rpc.fantom.gateway.fm",
+      {
+        url: "https://rpc.fantom.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+      
     ],
   },
   137: {
@@ -890,7 +907,11 @@ export const extraRpcs = {
       "https://rpc.gnosischain.com",
       "https://xdai-rpc.gateway.pokt.network",
       "https://xdai-archive.blockscout.com",
-      "https://rpc.gnosis.gateway.fm",
+      {
+        url: "https://rpc.gnosis.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
       {
         url: "https://gnosis-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -901,7 +922,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc.ap-southeast-1.gateway.fm/v4/gnosis/non-archival/mainnet",
+      {
+        url: "https://rpc.ap-southeast-1.gateway.fm/v4/gnosis/non-archival/mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
       {
         url: "https://gnosis.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -917,7 +942,11 @@ export const extraRpcs = {
   10200: {
     rpcs: [
       "https://rpc.chiadochain.net",
-      "https://rpc.chiado.gnosis.gateway.fm",
+      {
+        url: "https://rpc.chiado.gnosis.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
     ],
   },
   1231: {
@@ -2299,7 +2328,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc.polygon-zkevm.gateway.fm",
+      {
+        url: "https://rpc.polygon-zkevm.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
     ],
   },
   431140: {
