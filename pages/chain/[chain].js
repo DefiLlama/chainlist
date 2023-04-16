@@ -97,7 +97,7 @@ function Chain({ chain }) {
             </thead>
             <tbody>
               <tr>
-                <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{chain.chainId}</td>
+                <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{`${chain.chainId}(0x${Number(chain.chainId).toString(16)})`}</td>
                 <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                   {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
                 </td>

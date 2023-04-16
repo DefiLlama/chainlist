@@ -36,7 +36,7 @@ const privacyStatement = {
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
   etcnetworkinfo:
-    "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following intercations with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address, browser, device information, location information (including approximate location derived from IP address), and Internet Service Provider (ISP) aswell as accessed servcies and pages",
+    "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days.",
   omnia:
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
@@ -53,14 +53,30 @@ const privacyStatement = {
     "The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. https://www.jellypool.xyz/privacy/",
   restratagem:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
-  onfinality:
-    "When you access and use our website or related services we may automatically collect information about your device and usage of our website, products and services, including your operating system, browser type, time spent on certain pages of the website/pages visited/links clicked/language preferences. https://onfinality.io/privacy",
+  OnFinality:
+    "For the sole purpose of providing our service, we temporarily record IP addresses and origins to check against free limits, provide load balancing, prevent DOS attacks, and to determine where best to locate our nodes. We do not, and will never, correlate or link specific wallet addresses or transactions made over our infrastructure to the IP address or origin making the RPC request. After processing IP addresses, we discard the IP address value within 24 hours. Read more here: https://blog.onfinality.io/how-does-onfinality-deal-with-personal-information/",
   getblock:
     "We automatically collect certain information through cookies and similar technologies when you visit, use or navigate Website. This information does not reveal your specific identity (like your name or contact information) and does not allow to identify you. However, it may include device and usage information, such as your IP address, browser and device characteristics, its type and version, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Website, information about your interaction in our emails, and other technical and statistical information. This information is primarily needed to maintain the security and operation of our Website, and for our internal analytics and reporting purposes.Specifically, as the RPC provider, we do not log and store your IP address, country, location and similar data. https://getblock.io/privacy-policy/",
   teamblockchain:
   "We only store and track data that will be publicly available on the blockchain, and do not collect or retain any other user data. https://policy.teamblockchain.team/",
   getloop:
-    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy"
+    "Loop Network follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. https://www.getloop.network/privacypolicy",
+  ChainUpCloud:
+    "We only collect user IP addresses for the purpose of rate limiting. For more information, please visit https://docs.chainupcloud.com/introduction/products/blockchain-api.",
+  iota:
+    "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
+  markrgo: 
+    "We only collect the minimum necessary information to provide our blockchain RPC service (caching). We do not use your data for commercial purposes. Any collected data is short-term and will be automatically deleted within 24 hours if not actively used. https://www.markr.io/privacy-policy",
+  croswap:
+    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
+  unifra:
+    "Regarding the RPC(remote procedure call) data, we do not collect request data or request origin. We temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days. Only the amounts of RPC requests of users are recorded for accounting and billing purposes within longer time. https://unifra.io/",
+  croswap:
+    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
+  SFTProtocol:
+    "Information collected automatically may include usage details, IP addresses, and information collected through cookies and other tracking technologies",
+  gateway:
+    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months"
 };
 
 export const extraRpcs = {
@@ -197,6 +213,12 @@ export const extraRpcs = {
       "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
       "https://main-light.eth.linkpool.io",
+      {
+        url: "https://rpc.eth.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+      
     ],
   },
   2: {
@@ -280,6 +302,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality
       },
+      {
+        url: "https://rpc.goerli.eth.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+      
     ],
   },
   //Ropsten testnet deprecated
@@ -539,6 +567,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://rpc.fantom.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+      
     ],
   },
   137: {
@@ -663,6 +697,16 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url:"https://arb-mainnet-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
+      },
+      {
+        url: "https://arbitrum.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
@@ -846,7 +890,11 @@ export const extraRpcs = {
       "https://rpc.gnosischain.com",
       "https://xdai-rpc.gateway.pokt.network",
       "https://xdai-archive.blockscout.com",
-      "https://rpc.gnosis.gateway.fm",
+      {
+        url: "https://rpc.gnosis.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
       {
         url: "https://gnosis-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -857,7 +905,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet",
+      {
+        url: "https://rpc.ap-southeast-1.gateway.fm/v4/gnosis/non-archival/mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
       {
         url: "https://gnosis.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -873,7 +925,11 @@ export const extraRpcs = {
   10200: {
     rpcs: [
       "https://rpc.chiadochain.net",
-      "https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado",
+      {
+        url: "https://rpc.chiado.gnosis.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
     ],
   },
   1231: {
@@ -1245,12 +1301,22 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
+        url: "https://erigon-de.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      {
         url: "https://besu-at.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
         url: "https://geth-at.etc-network.info",
+        tracking: "yes",
+        trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      {
+        url: "https://erigon-at.etc-network.info",
         tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
@@ -2127,6 +2193,34 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://filecoin.chainup.net/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ChainUpCloud,
+      },
+      {
+        url: "https://infura.sftproject.io/filecoin/rpc/v1",
+        tracking: "yes",
+        trackingDetails: privacyStatement.SFTProtocol,
+      }
+    ],
+  },
+  314159: {
+    rpcs: [
+      {
+        url: "https://filecoin-calibration.chainup.net/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ChainUpCloud,
+      }
+    ],
+  },
+  3141: {
+    rpcs: [
+      {
+        url: "https://filecoin-hyperspace.chainup.net/rpc/v1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ChainUpCloud,
+      }
     ],
   },
   13000: {
@@ -2173,6 +2267,38 @@ export const extraRpcs = {
         url: "https://rpc.teamblockchain.team",
         tracking: "none",
         trackingDetails: privacyStatement.teamblockchain,
+      }
+    ],
+  },
+  1071: {
+    rpcs: [
+      {
+        url: "https://json-rpc.evm.testnet.shimmer.network/",
+        tracking: "none",
+        trackingDetails: privacyStatement.iota,
+      }
+    ],
+  },
+  1101: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/polygon_zkevm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://rpc.polygon-zkevm.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
+    ],
+  },
+  431140: {
+    rpcs: [
+      {
+        url: "https://rpc.markr.io/ext/",
+        tracking: "none",
+        trackingDetails: privacyStatement.markrgo,
       }
     ],
   }
