@@ -19,8 +19,6 @@ const privacyStatement = {
     "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.ata.network/1rpc/design/#tracking-prevention",
   builder0x69:
     "Private transactions / MM RPC: https://twitter.com/builder0x69",
-  MEVBlockerRPC:
-    "Privacy notice: MEV Blocker RPC does not store any kind of user information (i.e. IP, location, user agent, etc.) in any data bases. Only transactions are preserved to be displayed via status endpoint like https://rpc.mevblocker.io/tx/0x627b09d5a9954a810cd3c34b23694439da40558a41b0d87970f2c3420634a229. Connect to MEV Blocker via https://rpc.mevblocker.io",
   flashbots:
     "Privacy notice: Flashbots Protect RPC does not track any kind of user information (i.e. IP, location, etc.). No user information is ever stored or even logged. https://docs.flashbots.net/flashbots-protect/rpc/quick-start",
   bloxroute:
@@ -117,11 +115,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.builder0x69,
       },
       {
-        url: "https://rpc.mevblocker.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.MEVBlockerRPC,
-      },
-      {
         url: "https://rpc.flashbots.net/",
         tracking: "none",
         trackingDetails: privacyStatement.flashbots,
@@ -174,8 +167,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra
+        tracking: "unspecified",
       },
       {
         url: "https://ethereum.blockpi.network/v1/rpc/public",
@@ -647,11 +639,7 @@ export const extraRpcs = {
     rpcs: [
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
-      {
-        url: "https://node.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
+      "https://node.croswap.com/rpc",
       {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -670,11 +658,6 @@ export const extraRpcs = {
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
-      {
-        url: "https://arb1.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
       {
         url: "https://rpc.ankr.com/arbitrum",
         tracking: "limited",
@@ -1307,16 +1290,6 @@ export const extraRpcs = {
   59: {
     rpcs: ["https://api.eosargentina.io", "https://api.metahub.cash"],
   },
-  6: {
-    rpcs: [
-      "https://www.ethercluster.com/kotti",
-      {
-        url: "https://geth-kotti.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-    ],
-  },
   61: {
     rpcs: [
       "https://etc.rivet.link",
@@ -1353,16 +1326,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       "https://rpc.etcplanets.com",
-    ],
-  },
-  63: {
-    rpcs: [
-      "https://www.ethercluster.com/mordor",
-      {
-        url: "https://geth-mordor.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
     ],
   },
   64: {
@@ -1991,20 +1954,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      {
-        url:"https://scroll-alpha-public.unifra.io",
-        tracking:"limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
-        url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      }
     ]
   },
   534354:{
     rpcs:[
+      {
+        url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ]
   },
   888888: {

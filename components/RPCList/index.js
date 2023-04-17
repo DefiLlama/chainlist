@@ -82,7 +82,7 @@ export default function RPCList({ chain, lang }) {
   const isEthMainnet = chain?.name === "Ethereum Mainnet";
 
   return (
-    <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden col-span-full relative overflow-x-auto">
+    <div className="shadow dark:bg-[#0D0D0D] bg-white md:p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden col-span-full relative overflow-x-auto">
       {isEthMainnet && (
         <p className="text-center">
           Follow{" "}
@@ -99,7 +99,7 @@ export default function RPCList({ chain, lang }) {
       )}
 
       <table className="m-0 border-collapse whitespace-nowrap dark:text-[#B3B3B3] text-black">
-        <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
+        <caption className="relative w-full px-3 py-1 text-left sm:text-center text-base font-medium border border-b-0">
           <span className="mr-4">{`${chain.name} RPC URL List`}</span>
           <button
             className="text-sm font-normal flex items-center gap-1 absolute right-4 top-[2px] bottom-[2px] dark:hover:bg-[#171717] hover:bg-[#EAEAEA] px-2 rounded-[10px]"
@@ -124,13 +124,18 @@ export default function RPCList({ chain, lang }) {
           </button>
         </caption>
         <thead>
-          <tr>
+          <tr className="">
             <th className="px-3 py-1 font-medium border">RPC Server Address</th>
-            <th className="px-3 py-1 font-medium border">Height</th>
-            <th className="px-3 py-1 font-medium border">Latency</th>
-            <th className="px-3 py-1 font-medium border">Score</th>
-            <th className="px-3 py-1 font-medium border">Privacy</th>
-            <th className="px-3 py-1 font-medium border"></th>
+            <th className="px-3 py-1 font-medium border
+            hidden sm:table-cell">Height</th>
+            <th className="px-3 py-1 font-medium border
+            hidden sm:table-cell">Latency</th>
+            <th className="px-3 py-1 font-medium border
+            hidden sm:table-cell">Score</th>
+            <th className="px-3 py-1 font-medium border
+            hidden sm:table-cell">Privacy</th>
+            <th className="px-3 py-1 font-medium border
+            hidden sm:table-cell"></th>
           </tr>
         </thead>
 
@@ -150,7 +155,7 @@ export default function RPCList({ chain, lang }) {
                 key={index}
                 privacy={urlToData[item.data.url]}
                 lang={lang}
-                className={className}
+                className={`flex flex-col wrap sm:table-row odd:bg-gray-100 even:bg-white dark:odd:bg-neutral-900 dark:even:bg-black ${className}`}
               />
             )
           })}
@@ -182,6 +187,8 @@ function PrivacyIcon({ tracking, isOpenSource = false }) {
 }
 
 const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
+  const [effect, setEffect] = useState(false);
+
   const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
 
@@ -203,14 +210,39 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
+  const handleCopyText = (event) => {
+    const textToCopy = event.target.innerText;
+    console.log(textToCopy)
+    navigator.clipboard.writeText(textToCopy);
+    console.log('Text copied to clipboard!');
+    setEffect(true);
+  };
+  // display: inline;
+  // position: absolute;
+  // left: 3px;
+  // content: "copied!";
+  // animation: 1s ease-in-out 0s 1 normal forwards running copyit;
+  // font-size: .8em;
   return (
-    <tr className={className}>
-      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
+    <tr className={`${className} [&>*]:h-8`}>
+      <td before={data?.url} className={`border px-3 text-sm py-1 w-full md:max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis
+      relative cursor-pointer 
+      
+      dark:hover:bg-gray-800 hover:bg-gray-100 
+      dark:hover:after:content-copyIconLight hover:after:content-copyIconDark after:w-6 after:h-6 after:absolute after:right-[-8px] 
+      before:content-[attr(before)] before:inline before:absolute before:text-ellipsis
+      ${effect ? "before:animate-copied" : "before:content-['']"}`} onClick={handleCopyText} onAnimationEnd={() => setEffect(false)}>
         {isLoading ? <Shimmer /> : data?.url}
       </td>
-      <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
-      <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
-      <td className="px-3 py-1 text-sm border">
+      <td className="px-3 py-1 text-sm text-center border
+        relative align-middle sm:text-right
+        before:content-['Height'] before:absolute before:left-2  before:font-bold sm:before:hidden">{isLoading ? <Shimmer /> : data?.height}</td>
+      <td className="px-3 py-1 text-sm text-center border
+        relative align-middle sm:text-right
+        before:content-['Latency'] before:absolute before:left-2  before:font-bold sm:before:hidden">{isLoading ? <Shimmer /> : data?.latency}</td>
+      <td className="px-3 py-1 text-sm border
+        relative align-middle sm:text-right
+        before:content-['Score'] before:absolute before:left-2  before:font-bold sm:before:hidden">
         {isLoading ? (
           <Shimmer />
         ) : (
@@ -225,12 +257,16 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
           </>
         )}
       </td>
-        <td className="px-3 py-1 text-sm border">
+        <td className="px-3 py-1 text-sm text-center border 
+        relative align-middle sm:text-right
+        before:content-['Privacy'] before:absolute before:left-2  before:font-bold sm:before:hidden">
           <Tooltip content={privacy?.trackingDetails || t('no-privacy-info')}>
             {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
           </Tooltip>
         </td>
-      <td className="px-3 py-1 text-sm text-center border">
+      <td className="px-3 py-1 text-sm text-center border
+      relative align-middle sm:text-center
+      before:content-[''] before:absolute before:left-2 before:font-bold sm:before:hidden">
         {isLoading ? (
           <Shimmer />
         ) : (
