@@ -1588,11 +1588,7 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   1024: {
-    rpcs: [
-      "https://rpc-ivy.clover.finance",
-      "https://rpc-ivy-2.clover.finance",
-      "https://rpc-ivy-3.clover.finance",
-    ],
+    rpcs: ["https://api-para.clover.finance"],
   },
   1030: {
     rpcs: [
