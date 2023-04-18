@@ -1304,6 +1304,9 @@ export const extraRpcs = {
       "https://dappnode4.ont.io:10339",
     ],
   },
+  59: {
+    rpcs: ["https://api.eosargentina.io", "https://api.metahub.cash"],
+  },
   15557: {
     rpcs: ["https://api.testnet.evm.eosnetwork.com"],
   },
