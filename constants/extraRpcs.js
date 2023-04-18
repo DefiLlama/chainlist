@@ -1997,7 +1997,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.unifra,
       },
       {
-        url: "https://scroll-prealpha.blockpi.network/v1/rpc/public",
+        url: "https://scroll-testnet.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       }
@@ -2346,6 +2346,15 @@ export const extraRpcs = {
         url: "https://rpc.markr.io/ext/",
         tracking: "none",
         trackingDetails: privacyStatement.markrgo,
+      }
+    ],
+  },
+  248: {
+    rpcs: [
+      {
+        url: "https://oasys.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       }
     ],
   }
