@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Chain from "../components/chain";
+import { AdBanner } from "../components/adbanner";
 import { generateChainData } from "../utils/fetch";
 
 export async function getStaticProps() {
@@ -65,9 +66,18 @@ function Home({ chains }) {
       <Layout>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {filteredChains.map((chain, idx) => (
-              <Chain chain={chain} key={idx} lang="en" />
-            ))}
+            {filteredChains.map((chain, idx) => {
+              if (idx === 2) {
+                return (
+                  <>
+                    <AdBanner />
+                    <Chain chain={chain} key={idx} lang="en" />
+                  </>
+                )
+              }
+
+              return <Chain chain={chain} key={idx} lang="en" />
+            })}
           </div>
         </React.Suspense>
       </Layout>
