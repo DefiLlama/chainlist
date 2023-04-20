@@ -22,6 +22,9 @@ export const FATHOM_NO_EVENTS_ID = {
   43114: 'FRM17FBN'
 }
 
+export const FATHOM_ADS_ID = 'W2MYIHNA'
+
+
 export const CHAINS_MONITOR = [
   1,
   10,
