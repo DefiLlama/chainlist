@@ -4,10 +4,12 @@ import { notTranslation as useTranslations } from '../../utils'
 
 const BANNERS = [
   {
-    image: './ads/llamanodes-banner.png'
+    image: './ads/llamanodes-banner.png',
+    url: 'https://llamanodes.com',
   },
   {
-    image: './ads/gmx-banner.png'
+    image: './ads/gmx-banner.png',
+    url: 'https://gmx.io',
   }
 ]
 
@@ -38,10 +40,16 @@ export const AdBanner = ({ timer = 5000, showControls = false }) => {
 
   return (
     <div className="shadow w-full h-full m-auto relative group rounded-[10px]">
-      <div
-        style={{ backgroundImage: `url(${BANNERS[currentIndex].image})` }}
-        className="w-full h-full rounded-[10px] bg-center bg-cover duration-500"
-      />
+      <a
+        href={BANNERS[currentIndex].url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          style={{ backgroundImage: `url(${BANNERS[currentIndex].image})` }}
+          className="w-full h-full rounded-[10px] bg-center bg-cover duration-500"
+        />
+      </a>
 
       {/* left arrow */}
       {showControls && (
@@ -59,7 +67,7 @@ export const AdBanner = ({ timer = 5000, showControls = false }) => {
 
       <div className="w-full absolute bottom-0 text-center dark:bg-[#0D0D0D] bg-white rounded-b-[8px] text-xs text-gray-500 dark:text-[#B3B3B3] py-0.5">
         <a
-          href="https://github.com/DefiLlama/chainlist"
+          href="mailto:contact@llama-corp.com"
           target="_blank"
           rel="noopener noreferrer"
         >
