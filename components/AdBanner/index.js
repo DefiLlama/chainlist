@@ -1,13 +1,17 @@
+import * as Fathom from 'fathom-client'
 import { useEffect, useState } from 'react'
 
+import { FATHOM_ADS_ID } from '../../hooks/useAnalytics'
 import { notTranslation as useTranslations } from '../../utils'
 
 const BANNERS = [
   {
+    name: 'LlamaNodes',
     image: './ads/llamanodes-banner.png',
     url: 'https://llamanodes.com',
   },
   {
+    name: 'GMX',
     image: './ads/gmx-banner.png',
     url: 'https://app.gmx.io/#/trade/?ref=chainlist',
   }
@@ -44,8 +48,9 @@ export const AdBanner = ({ timer = 15000, showControls = false }) => {
         href={BANNERS[currentIndex].url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => Fathom.trackGoal(FATHOM_ADS_ID[BANNERS[currentIndex].name.toLowerCase()], 0)}
       >
-        <img src={BANNERS[currentIndex].image} className="rounded-[10px] duration-500 w-full h-full" />
+        <img src={BANNERS[currentIndex].image} className="rounded-[10px] duration-500 w-full h-full" alt={`${BANNERS[currentIndex].name} banner`} />
       </a>
 
       {/* left arrow */}
