@@ -70,7 +70,7 @@ function Home({ chains }) {
               if (idx === 2) {
                 return (
                   <>
-                    <AdBanner timer={10000} showControls={false} />
+                    <AdBanner timer={20000} showControls={false} />
                     <Chain chain={chain} key={idx} lang="en" />
                   </>
                 )
