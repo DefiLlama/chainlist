@@ -113,7 +113,7 @@ export default function Layout({ children, lang }) {
           >
             <svg
               id="theme-toggle-dark-icon"
-              class="w-5 h-5 hidden"
+              className="w-5 h-5 hidden"
               fill="#2F80ED"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ export default function Layout({ children, lang }) {
             </svg>
             <svg
               id="theme-toggle-light-icon"
-              class="w-5 h-5 hidden"
+              className="w-5 h-5 hidden"
               fill="#2F80ED"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
