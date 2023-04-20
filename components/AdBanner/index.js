@@ -6,12 +6,12 @@ import { notTranslation as useTranslations, shuffleArray } from '../../utils'
 
 const BANNERS = [
   {
-    image: './ads/llamanodes-banner.png',
+    image: './banners/llamanodes-banner.png',
     name: 'LlamaNodes',
     url: 'https://llamanodes.com',
   },
   {
-    image: './ads/gmx-banner.png',
+    image: './banners/gmx-banner.png',
     name: 'GMX',
     url: 'https://app.gmx.io/#/trade/?ref=chainlist',
   },
