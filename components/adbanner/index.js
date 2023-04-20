@@ -45,10 +45,7 @@ export const AdBanner = ({ timer = 5000, showControls = false }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div
-          style={{ backgroundImage: `url(${BANNERS[currentIndex].image})` }}
-          className="w-full h-full rounded-[10px] bg-center bg-cover duration-500"
-        />
+        <img src={BANNERS[currentIndex].image} className="rounded-[10px] duration-500 w-full h-full" />
       </a>
 
       {/* left arrow */}
