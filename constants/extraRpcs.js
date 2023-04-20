@@ -2375,7 +2375,7 @@ export const extraRpcs = {
         url: "https://oasys-rpc.gateway.pokt.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
-      }
+      },
       {
         url: "https://oasys.blockpi.network/v1/rpc/public",
         tracking: "limited",
