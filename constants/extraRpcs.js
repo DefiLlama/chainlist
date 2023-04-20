@@ -80,7 +80,11 @@ const privacyStatement = {
   gateway:
     "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
   eosnetwork:
-    "We collect information about your device and internet connection, including the device’s unique device identifier, IP address, operating system, and browser type, mobile network information"
+    "We collect information about your device and internet connection, including the device’s unique device identifier, IP address, operating system, and browser type, mobile network information",
+  jfc:
+    "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
+  j2o:
+    "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -987,12 +991,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
     ],
-  },
-  3501: {
-    rpcs: ["https://rpc.jfinchain.com"],
-  },
-  35011: {
-    rpcs: ["https://rpc.j2o.io"],
   },
   361: {
     rpcs: ["https://eth-rpc-api.thetatoken.org/rpc"],
@@ -2378,6 +2376,26 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       }
+    ],
+  },
+    3501: {
+    rpcs: [
+      "https://rpc.jfinchain.com",
+      {
+        url: "https://rpc.jfinchain.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.jfc,
+      },
+    ],
+  },
+  35011: {
+    rpcs: [
+      "https://rpc.j2o.io",
+      {
+        url: "https://rpc.j2o.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.j2o,
+      },
     ],
   }
 };
