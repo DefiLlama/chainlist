@@ -80,7 +80,9 @@ const privacyStatement = {
   gateway:
     "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
   eosnetwork:
-    "We collect information about your device and internet connection, including the device’s unique device identifier, IP address, operating system, and browser type, mobile network information"
+    "We collect information about your device and internet connection, including the device’s unique device identifier, IP address, operating system, and browser type, mobile network information",
+  chainlove:
+    "We do not collect or retain any identifiable information including wallet, actor, and deal information from normal traffic. We do collect metrics and logs to help us operate the service, and this can include erroneously entered (non existing) wallet addresses, actor addresses, and deal ids. This data is only used for debugging and is not analysed in any way.",
 };
 
 export const extraRpcs = {
@@ -2265,6 +2267,11 @@ export const extraRpcs = {
         url: "https://infura.sftproject.io/filecoin/rpc/v1",
         tracking: "yes",
         trackingDetails: privacyStatement.SFTProtocol,
+      },
+      {
+        url: "https://api.chain.love/rpc/v1",
+        tracking: "none",
+        trackingDetails: privacyStatement.chainlove,
       }
     ],
   },
