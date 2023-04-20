@@ -11,7 +11,7 @@ const BANNERS = [
     url: 'https://llamanodes.com',
   },
   {
-    image: './banners/gmx-banner.png',
+    image: './banners/llamanodes-banner.png',
     name: 'GMX',
     url: 'https://app.gmx.io/#/trade/?ref=chainlist',
   },
@@ -51,7 +51,7 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
   }
 
   return (
-    <div className="shadow w-full h-full m-auto relative group rounded-[10px]">
+    <div className="shadow w-full h-auto m-auto relative group rounded-[10px]">
       <a
         href={randomBanners[currentIndex].url}
         rel="noopener noreferrer"
@@ -60,7 +60,7 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
       >
         <img
           alt={`${randomBanners[currentIndex].name} banner`}
-          className="rounded-[10px] duration-500 w-full h-full"
+          className="rounded-[10px] duration-500 w-full h-auto"
           src={randomBanners[currentIndex].image}
         />
       </a>
@@ -85,7 +85,7 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
         </div>
       )}
 
-      <div className="w-full absolute bottom-0 text-center dark:bg-[#0D0D0D] bg-white rounded-b-[8px] text-xs text-gray-500 dark:text-[#B3B3B3] py-0.5">
+      <div className="w-full absolute bottom-0 text-center dark:bg-[#0D0D0D] bg-white rounded-b-[8px] text-[11px] text-gray-500 dark:text-[#B3B3B3] italic">
         <a href="mailto:contact@llama-corp.com" rel="noopener noreferrer" target="_blank">
           {t('your-ad-here')}, {t('contact-us').toLowerCase()}
         </a>
