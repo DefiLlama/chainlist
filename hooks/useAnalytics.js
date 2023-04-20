@@ -8,7 +8,7 @@ export const FATHOM_EVENTS_ID = {
 
 export const FATHOM_DROPDOWN_EVENTS_ID = {
   1: 'XIFGUQQY',
-  137: 'C6AYES3T',
+  137: 'C6AYES3T'
 }
 export const FATHOM_NO_EVENTS_ID = {
   1: '7X05SCBE',
