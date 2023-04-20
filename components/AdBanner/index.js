@@ -9,11 +9,11 @@ const BANNERS = [
   },
   {
     image: './ads/gmx-banner.png',
-    url: 'https://gmx.io',
+    url: 'https://app.gmx.io/#/trade/?ref=chainlist',
   }
 ]
 
-export const AdBanner = ({ timer = 5000, showControls = false }) => {
+export const AdBanner = ({ timer = 15000, showControls = false }) => {
   const t = useTranslations('Common')
 
   const [currentIndex, setCurrentIndex] = useState(0)
