@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Chain from "../components/chain";
-import { AdBanner } from "../components/adbanner";
+import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
 
 export async function getStaticProps() {
