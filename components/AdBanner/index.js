@@ -8,7 +8,7 @@ const BANNERS = [
   {
     image: './banners/llamanodes-banner.png',
     name: 'LlamaNodes',
-    url: 'https://llamanodes.com',
+    url: 'https://llamanodes.com'
   },
   {
     image: './banners/gmx-banner.png',
