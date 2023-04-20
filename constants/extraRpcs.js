@@ -988,6 +988,12 @@ export const extraRpcs = {
       },
     ],
   },
+  3501: {
+    rpcs: ["https://rpc.jfinchain.com"],
+  },
+  35011: {
+    rpcs: ["https://rpc.j2o.io"],
+  },
   361: {
     rpcs: ["https://eth-rpc-api.thetatoken.org/rpc"],
   },
