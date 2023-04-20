@@ -1,5 +1,5 @@
 import * as Fathom from 'fathom-client'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { FATHOM_ADS_ID } from '../../hooks/useAnalytics'
 import { notTranslation as useTranslations, shuffleArray } from '../../utils'
@@ -17,7 +17,7 @@ const BANNERS = [
   },
 ]
 
-export const AdBanner = ({ timer = 15000, showControls = false }) => {
+export const AdBanner = ({ timer = 15000, startTransition = true, showControls = false }) => {
   const t = useTranslations('Common')
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -25,24 +25,30 @@ export const AdBanner = ({ timer = 15000, showControls = false }) => {
   const randomBanners = useMemo(() => shuffleArray(BANNERS), [])
 
   useEffect(() => {
-    const intervalId = setInterval(() => handleNextBanner(), timer)
+    const intervalId = setInterval(() => {
+      if (startTransition) {
+        return handleNextBanner()
+      }
+
+      return
+    }, timer)
 
     return () => clearInterval(intervalId)
   }, [currentIndex])
 
-  const handlePrevBanner = useCallback(() => {
+  const handlePrevBanner = () => {
     const isFirstBanner = currentIndex === 0
     const newIndex = isFirstBanner ? randomBanners.length - 1 : currentIndex - 1
 
     setCurrentIndex(newIndex)
-  }, [currentIndex, randomBanners.length])
+  }
 
-  const handleNextBanner = useCallback(() => {
+  const handleNextBanner = () => {
     const isLastBanner = currentIndex === randomBanners.length - 1
     const newIndex = isLastBanner ? 0 : currentIndex + 1
 
     setCurrentIndex(newIndex)
-  }, [currentIndex, randomBanners.length])
+  }
 
   return (
     <div className="shadow w-full h-full m-auto relative group rounded-[10px]">
