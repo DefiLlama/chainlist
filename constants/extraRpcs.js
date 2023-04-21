@@ -2269,7 +2269,8 @@ export const extraRpcs = {
         url: "https://infura.sftproject.io/filecoin/rpc/v1",
         tracking: "yes",
         trackingDetails: privacyStatement.SFTProtocol,
-      }
+      },
+     "https://api.chain.love/rpc/v1",
     ],
   },
   314159: {
