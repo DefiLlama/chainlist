@@ -2266,10 +2266,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.SFTProtocol,
       },
-      {
-        url: "https://api.chain.love/rpc/v1",
-        tracking: "none",
-      }
+     "https://api.chain.love/rpc/v1",
     ],
   },
   314159: {
