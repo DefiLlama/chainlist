@@ -1,54 +1,58 @@
-import * as Fathom from 'fathom-client'
-import { useEffect, useMemo, useState } from 'react'
+import * as Fathom from "fathom-client";
+import { useEffect, useMemo, useState } from "react";
 
-import { FATHOM_ADS_ID } from '../../hooks/useAnalytics'
-import { notTranslation as useTranslations, shuffleArray } from '../../utils'
+import { FATHOM_ADS_ID } from "../../hooks/useAnalytics";
+import { notTranslation as useTranslations, shuffleArray } from "../../utils";
 
 const BANNERS = [
   {
-    image: './banners/llamanodes-banner.png',
-    name: 'LlamaNodes',
-    url: 'https://llamanodes.com'
+    image: "llamanodes.png",
+    name: "LlamaNodes",
+    url: "https://llamanodes.com",
   },
   {
-    image: './banners/gmx-banner.png',
-    name: 'GMX',
-    url: 'https://app.gmx.io/#/trade/?ref=chainlist',
+    image: "gmx.png",
+    name: "GMX",
+    url: "https://app.gmx.io/#/trade/?ref=chainlist",
   },
-]
+];
 
 export const AdBanner = ({ timer = 15000, startTransition = true, showControls = false }) => {
-  const t = useTranslations('Common')
+  const t = useTranslations("Common");
 
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const randomBanners = useMemo(() => shuffleArray(BANNERS), [])
+  const randomBanners = useMemo(() => shuffleArray(BANNERS), []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (startTransition) {
-        return handleNextBanner()
+        return handleNextBanner();
       }
 
-      return
-    }, timer)
+      return;
+    }, timer);
 
-    return () => clearInterval(intervalId)
-  }, [currentIndex])
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
 
   const handlePrevBanner = () => {
-    const isFirstBanner = currentIndex === 0
-    const newIndex = isFirstBanner ? randomBanners.length - 1 : currentIndex - 1
+    const isFirstBanner = currentIndex === 0;
+    const newIndex = isFirstBanner ? randomBanners.length - 1 : currentIndex - 1;
 
-    setCurrentIndex(newIndex)
-  }
+    setCurrentIndex(newIndex);
+  };
 
   const handleNextBanner = () => {
-    const isLastBanner = currentIndex === randomBanners.length - 1
-    const newIndex = isLastBanner ? 0 : currentIndex + 1
+    const isLastBanner = currentIndex === randomBanners.length - 1;
+    const newIndex = isLastBanner ? 0 : currentIndex + 1;
 
-    setCurrentIndex(newIndex)
-  }
+    setCurrentIndex(newIndex);
+  };
+
+  const srcLarge = `./banners/large/${randomBanners[currentIndex].image}`;
+  const srcSmall = `./banners/small/${randomBanners[currentIndex].image}`;
+  const srcName = randomBanners[currentIndex].name;
 
   return (
     <div className="flex flex-col w-full h-full justify-center gap-2">
@@ -59,11 +63,30 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
           target="_blank"
           onClick={() => Fathom.trackGoal(FATHOM_ADS_ID[randomBanners[currentIndex].name.toLowerCase()], 0)}
         >
-          <img
+          <picture className="rounded-[10px] duration-500 w-full h-full">
+            <source
+              srcset={srcSmall}
+              media="(max-width: 420px)"
+              className="rounded-[10px] duration-500 w-full h-full"
+            />
+            <source
+              srcset={srcLarge}
+              media="(max-width: 639px)"
+              className="rounded-[10px] duration-500 w-full h-full"
+            />
+            <source
+              srcset={srcSmall}
+              media="(max-width: 1399px)"
+              className="rounded-[10px] duration-500 w-full h-full"
+            />
+            <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />
+          </picture>
+
+          {/* <img
             alt={`${randomBanners[currentIndex].name} banner`}
             className="rounded-[10px] duration-500 w-full h-full"
             src={randomBanners[currentIndex].image}
-          />
+          /> */}
         </a>
 
         {/* left arrow */}
@@ -89,9 +112,9 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
 
       <div className="w-full text-center text-xs text-gray-500 dark:text-[#B3B3B3] italic">
         <a href="mailto:contact@llama-corp.com" rel="noopener noreferrer" target="_blank">
-          {`${t('your-ad-here')}, ${t('contact-us').toLowerCase()}`}
+          {`${t("your-ad-here")}, ${t("contact-us").toLowerCase()}`}
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
