@@ -79,7 +79,12 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
               media="(max-width: 1399px)"
               className="rounded-[10px] duration-500 w-full h-full"
             />
-            <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />
+            <source
+              srcset={srcLarge}
+              media="(max-width: 1679px)"
+              className="rounded-[10px] duration-500 w-full h-full"
+            />
+            <img src={srcSmall} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />
           </picture>
 
           {/* <img
