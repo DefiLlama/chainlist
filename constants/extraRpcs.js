@@ -2061,6 +2061,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://eth-sepolia-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
+      },
     ]
   },
   7762959: {
