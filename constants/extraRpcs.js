@@ -1085,7 +1085,6 @@ export const extraRpcs = {
       "http://gateway.tenderly.co/public/boba-ethereum",
       "https://mainnet.boba.network/",
       "https://boba-mainnet.gateway.pokt.network/v1/lb/623ad21b20354900396fed7f",
-      "https://lightning-replica.boba.network/",
     ],
   },
   321: {
