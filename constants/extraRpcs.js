@@ -673,6 +673,11 @@ export const extraRpcs = {
   338: {
     rpcs: ["https://evm-t3.cronos.org/"],
   },
+  
+  142857: {
+    rpcs: ["https://rpcmainnet.ic-plaza.org/"],
+  },
+  
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
