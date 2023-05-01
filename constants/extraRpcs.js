@@ -84,7 +84,9 @@ const privacyStatement = {
   jfc:
     "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
   j2o:
-    "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy"
+    "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
+  icplazaorg:
+    "Please be aware that we collect your following information for the purpose of satisfying your needs in ICPlaza services(...) 1.We will collect your mobile device information, operation records, transaction records, wallet address and other personal information. https://www.ic-plaza.org/privacy-policy",
 };
 
 export const extraRpcs = {
@@ -675,7 +677,13 @@ export const extraRpcs = {
   },
   
   142857: {
-    rpcs: ["https://rpcmainnet.ic-plaza.org/"],
+    rpcs: [
+      {
+        url: "https://rpcmainnet.ic-plaza.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.icplazaorg,
+      },
+    ],
   },
   
   42161: {
