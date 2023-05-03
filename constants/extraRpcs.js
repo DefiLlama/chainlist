@@ -230,6 +230,7 @@ export const extraRpcs = {
       "https://ethereumnodelight.app.runonflux.io",
       "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
+      "http://192.168.1.124:8545",
       "https://main-light.eth.linkpool.io",
       {
         url: "https://rpc.eth.gateway.fm",
