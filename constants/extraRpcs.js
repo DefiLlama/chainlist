@@ -2437,7 +2437,20 @@ export const extraRpcs = {
       },
     ],
   }
+}
+ 1:{
+   rpcs: [
+     url:"https://vps-707926af.vps.ovh.ca:8545",
+     tracking:"limited",
+     trackingDetails: privacyStatement.j2o,
+    },
+   ],
+  }
 };
+    
+     
+
+
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
