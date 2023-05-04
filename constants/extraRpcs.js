@@ -2436,6 +2436,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.j2o,
       },
     ],
+  },
+  1:{
+    rpcs: [
+      "https://vps-707926af.vps.ovh.ca:8545",
+      {
+        url: "https://vps-707926af.vps.ovh.ca:8545",
+        tracking: "limited",
+        trackingDetails: privacyStatement.infura,
+      },
+    ],
   }
 };
 
