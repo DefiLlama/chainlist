@@ -101,7 +101,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://rpc.ankr.com/eth",
+        url: "https://vps-707926af.vps.ovh.ca:8545",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
