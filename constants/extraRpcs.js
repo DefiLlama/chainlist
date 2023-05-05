@@ -676,8 +676,8 @@ export const extraRpcs = {
   },
   338: {
     rpcs: [
-      "https://evm-t3.cronos.org/",
-      "https://explorer.cronos.org/testnet"
+      "https://explorer.cronos.org/testnet",
+      "https://evm-t3.cronos.org/",      
     ],
   },
   
