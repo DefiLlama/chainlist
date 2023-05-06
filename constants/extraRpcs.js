@@ -1147,6 +1147,11 @@ export const extraRpcs = {
       "https://fuse-rpc.gateway.pokt.network/",
       "https://rpc.fuse.io",
       "https://fuse-mainnet.chainstacklabs.com",
+      {
+        url: "https://fuse.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   336: {
