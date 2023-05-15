@@ -2457,7 +2457,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.j2o,
       },
     ],
-  }
+  },
+  100892: {
+    rpcs: ["https://rpc.bcflex.com/rpc"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
