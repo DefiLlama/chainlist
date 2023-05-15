@@ -362,6 +362,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://fantom-testnet.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   "4444": {
@@ -390,6 +395,11 @@ export const extraRpcs = {
         url: "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://avalanche-fuji-c-chain.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -492,6 +502,11 @@ export const extraRpcs = {
         url: "https://bsc-testnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://bsc-testnet.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
