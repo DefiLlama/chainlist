@@ -4460,14 +4460,21 @@
     "networkId": 369,
     "infoURL": "https://pulsechain.com/",
     "rpc": [
-      "https://rpc.mainnet.pulsechain.com/v1/${PULSECHAIN_API_KEY}",
-      "wss://rpc.mainnet.pulsechain.com/ws/v1/${PULSECHAIN_API_KEY}"
+      "https://rpc.pulsechain.com"
     ],
     "faucets": [],
     "nativeCurrency": {
       "name": "Pulse",
       "symbol": "PLS",
       "decimals": 18
+    },
+    "app_resource": {
+      "ic_chain_select": "https://hk.tpstatic.net/dapp/tokenpocket-1684207110566.png",
+      "ic_chain_unselect": "https://hk.tpstatic.net/dapp/tokenpocket-1684207099184.png",
+      "color_chain_bg": "0x1A1A1A",
+      "color_chain_text": "0xFFFFFF",
+      "ic_chain_unselect_dark": "https://hk.tpstatic.net/dapp/tokenpocket-1684207056831.png",
+      "ic_home_logo": "https://hk.tpstatic.net/dapp/tokenpocket-1684207085917.png"
     }
   },
   {
