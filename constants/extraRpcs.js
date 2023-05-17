@@ -816,7 +816,6 @@ export const extraRpcs = {
   },
   1666600000: {
     rpcs: [
-      "https://harmony-0-rpc.gateway.pokt.network",
       "https://api.harmony.one",
       "https://a.api.s0.t.hmny.io",
       "https://api.s0.t.hmny.io",
@@ -825,7 +824,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://harmony-mainnet.chainstacklabs.com",
       {
         url: "https://harmony.api.onfinality.io/public",
         tracking: "limited",
