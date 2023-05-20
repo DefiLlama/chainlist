@@ -724,8 +724,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.croswap,
       },
       {
-        url: "https://rpc.ankr.com/arbitrum",
-        tracking: "limited",
+        url: "http://51.79.161.187:8545",
+
+       tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
       {
