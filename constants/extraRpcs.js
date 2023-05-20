@@ -235,7 +235,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.gateway,
       },
       
-    ],
+
   },
   2: {
     rpcs: ["https://node.eggs.cool", "https://node.expanse.tech"],
