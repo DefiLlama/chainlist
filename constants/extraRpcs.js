@@ -2134,11 +2134,12 @@ export const extraRpcs = {
     websiteDead: true,
     rpcWorking: false,
   },
-  13371337: {
-    rpcs: [],
-    websiteDead: true,
-    rpcWorking: false,
-  },
+  
+ 1337:  {
+        url: "http://51.79.161.187:8545",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra
+      },
   18289463: {
     rpcs: [],
     websiteDead: true,
