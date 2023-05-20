@@ -887,7 +887,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://rpc.ankr.com/optimism",
+        url: "http://51.79.161.187:8545",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
