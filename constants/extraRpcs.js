@@ -96,7 +96,7 @@ export const extraRpcs = {
     rpcs: [
       // Quicknode -> tracks IP
       {
-        url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+        url: "http://51.79.161.187:443/",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
