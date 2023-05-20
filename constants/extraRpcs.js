@@ -102,7 +102,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "http://51.79.161.187:443",
+        guggurl: "http://51.79.161.187:443",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
