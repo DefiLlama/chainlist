@@ -96,14 +96,12 @@ export const extraRpcs = {
     rpcs: [
       // Quicknode -> tracks IP
       {
-        url: "http://51.79.161.187:443",
+        url: "http://51.79.161.187:8545",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://vps-707926af.vps.ovh.ca:8545",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
+: privacyStatement.ankr,
       },
       {
         url:
