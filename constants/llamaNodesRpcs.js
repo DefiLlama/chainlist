@@ -2,6 +2,7 @@ const privacyStatement = 'LlamaNodes is open-source and does not track or store 
 
 export const llamaNodesRpcs = {
   1: {
+    name: 'Ethereum LlamaNodes',
     rpcs: [
       {
         url: 'https://eth.llamarpc.com',
@@ -12,6 +13,7 @@ export const llamaNodesRpcs = {
     ]
   },
   137: {
+    name: 'Polygon LlamaNodes',
     rpcs: [
       {
         url: 'https://polygon.llamarpc.com',
@@ -21,4 +23,11 @@ export const llamaNodesRpcs = {
       },
     ]
   },
+}
+
+export const llamaNodesRpcByUrl = {};
+
+for (const chainId in llamaNodesRpcs) {
+  const rpcs = llamaNodesRpcs[chainId].rpcs;
+  llamaNodesRpcByUrl[rpcs[0].url] = llamaNodesRpcs[chainId];
 }
