@@ -275,6 +275,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://polygon-mumbai-bor.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   //Rinkeby testnet deprecated
@@ -326,7 +331,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
-      
+      {
+        url: "https://ethereum-goerli.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   //Ropsten testnet deprecated
@@ -353,6 +362,11 @@ export const extraRpcs = {
         url: "https://fantom-testnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://fantom-testnet.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -382,6 +396,11 @@ export const extraRpcs = {
         url: "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://avalanche-fuji-c-chain.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -484,6 +503,11 @@ export const extraRpcs = {
         url: "https://bsc-testnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://bsc-testnet.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -676,7 +700,9 @@ export const extraRpcs = {
     ],
   },
   338: {
-    rpcs: ["https://evm-t3.cronos.org/"],
+    rpcs: [
+      "https://evm-t3.cronos.org/",      
+    ],
   },
   
   142857: {
@@ -1146,6 +1172,11 @@ export const extraRpcs = {
       "https://fuse-rpc.gateway.pokt.network/",
       "https://rpc.fuse.io",
       "https://fuse-mainnet.chainstacklabs.com",
+      {
+        url: "https://fuse.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   336: {
@@ -2164,6 +2195,11 @@ export const extraRpcs = {
   53935: {
     rpcs: [
       "https://avax-dfk.gateway.pokt.network/v1/lb/6244818c00b9f0003ad1b619/ext/bc/q2aTwKuyzgs8pynF7UXBZCU7DejbZbZ6EUyHr3JQzYgwNPUPi/rpc",
+      {
+        url: "https://dfkchain.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   1666600001: {
