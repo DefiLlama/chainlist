@@ -517,8 +517,9 @@ export const extraRpcs = {
       "https://avax.rpcgator.com/",
       "https://avalanche.public-rpc.com",
       {
-        url: "https://rpc.ankr.com/avalanche",
-        tracking: "limited",
+        url: "http://51.79.161.187:443",
+
+   tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
       {
@@ -553,7 +554,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://avalanche.api.onfinality.io/public/ext/bc/C/rpc",
+        url: "https://avalanche.api.onfinality.io/public/ext/b/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
