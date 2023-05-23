@@ -1132,6 +1132,7 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.io",
       "https://babel-api.mainnet.iotex.one",
       "https://pokt-api.iotex.io",
+      "https://babel-api.fastblocks.io",
     ],
   },
   66: {
