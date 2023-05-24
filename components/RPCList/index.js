@@ -79,24 +79,8 @@ export default function RPCList({ chain, lang }) {
 
   const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
 
-  const isEthMainnet = chain?.name === "Ethereum Mainnet";
-
   return (
     <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden col-span-full relative overflow-x-auto">
-      {isEthMainnet && (
-        <p className="text-center">
-          Follow{" "}
-          <a
-            href="https://docs.llama.fi/chainlist/how-to-change-ethereums-rpc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            this guide
-          </a>{" "}
-          to change RPC endpoint's of Ethereum Mainnet
-        </p>
-      )}
 
       <table className="m-0 border-collapse whitespace-nowrap dark:text-[#B3B3B3] text-black">
         <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
@@ -146,7 +130,6 @@ export default function RPCList({ chain, lang }) {
               <Row
                 values={item}
                 chain={chain}
-                isEthMainnet={isEthMainnet}
                 key={index}
                 privacy={urlToData[item.data.url]}
                 lang={lang}
@@ -181,7 +164,7 @@ function PrivacyIcon({ tracking, isOpenSource = false }) {
   return <EmptyIcon />;
 }
 
-const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
+const Row = ({ values, chain, privacy, lang, className }) => {
   const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
 
@@ -235,9 +218,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
           <Shimmer />
         ) : (
           <>
-            {isEthMainnet ? (
-              <CopyUrl url={data?.url} />
-            ) : (
+            {
               !data.disableConnect && (
                 <button
                   className="px-2 py-[2px] -my-[2px] text-center text-sm dark:hover:bg-[#171717] hover:bg-[#EAEAEA] rounded-[50px]"
@@ -246,7 +227,7 @@ const Row = ({ values, chain, isEthMainnet, privacy, lang, className }) => {
                   {t(renderProviderText(account))}
                 </button>
               )
-            )}
+            }
           </>
         )}
       </td>
