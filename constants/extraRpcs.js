@@ -2489,13 +2489,14 @@ export const extraRpcs = {
   },
   35011: {
     rpcs: [
-      "https://rpc.j2o.io",
       {
         url: "https://rpc.j2o.io",
         tracking: "limited",
         trackingDetails: privacyStatement.j2o,
-      }],
-       827431: {
+      },
+    ],
+  },
+ 827431: {
     rpcs: [
       "https://mainnet-rpc.curvescan.io",
       {
