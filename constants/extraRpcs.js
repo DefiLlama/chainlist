@@ -2494,7 +2494,7 @@ export const extraRpcs = {
         url: "https://rpc.j2o.io",
         tracking: "limited",
         trackingDetails: privacyStatement.j2o,
-      },
+      }],
        827431: {
     rpcs: [
       "https://mainnet-rpc.curvescan.io",
@@ -2533,7 +2533,7 @@ export const extraRpcs = {
       },
     ],
   },
-};
+}};
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
