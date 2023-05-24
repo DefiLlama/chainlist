@@ -2496,7 +2496,7 @@ export const extraRpcs = {
       },
     ],
   },
-  827431: {
+ 827431: {
     rpcs: [
       "https://mainnet-rpc.curvescan.io",
       {
@@ -2534,7 +2534,7 @@ export const extraRpcs = {
       },
     ],
   },
-};
+}};
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
