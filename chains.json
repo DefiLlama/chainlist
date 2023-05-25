@@ -19099,6 +19099,12 @@
         "url": "https://alveyscan.com",
         "standard": "EIP3091"
       }
-    ]
+    ],
+    "app_resource": {
+      "ic_chain_select": "https://hk.tpstatic.net/token/tokenpocket-1685016287246.png",
+      "ic_chain_unselect": "https://hk.tpstatic.net/token/tokenpocket-1685016249560.png",
+      "ic_chain_unselect_dark": "https://hk.tpstatic.net/token/tokenpocket-1685016218214.png",
+      "ic_home_logo": "https://hk.tpstatic.net/token/tokenpocket-1685016276305.png"
+    }
   }
 ]
