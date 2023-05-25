@@ -797,6 +797,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://rpc.arb1.arbitrum.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
     ],
   },
   421613: {
@@ -815,6 +820,11 @@ export const extraRpcs = {
         url: "https://arbitrum-goerli.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://rpc.goerli.arbitrum.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
       },
     ],
   },
@@ -951,6 +961,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://rpc.optimism.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
+      },
     ],
   },
   1881: {
@@ -978,6 +993,11 @@ export const extraRpcs = {
         url: "https://optimism-goerli.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://rpc.goerli.optimism.gateway.fm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.gateway,
       },
     ],
   },
