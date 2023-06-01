@@ -2287,8 +2287,11 @@ export const extraRpcs = {
       "https://dataserver-asia-2.zenithchain.co/",
     ],
   },
-  1506: {
-    rpcs: ["https://mainnet.sherpax.io/rpc"],
+  1501: {
+    rpcs: [
+      "https://mainnet.chainx.org/rpc",
+      "https://mainnet2.chainx.org/rpc"
+    ]
   },
   512512: {
     rpcs: ["https://galaxy.block.caduceus.foundation"],
