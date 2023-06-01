@@ -93,6 +93,9 @@ const privacyStatement = {
     "We collect device information and request metadata like IP address and User Agent for the purpose of load balancing and rate limiting. More info: https://chain49.com/privacy-policy",
   meowrpc: 
     "With the exclusion of data that will be openly visible and available on the blockchain, MEOWRPC does not track or store any kind of user information (such as location, IP address, etc.) that passes through our RPC. For further details regarding our privacy practices, we encourage you to refer to our Privacy Policy. https://privacy.meowrpc.com",
+  drpc: 
+    "We do not ask or store personal information about DRPC users. All information stored in the system doesn't have personal info about the owner of the personal account. We use IP on our public nodes to rate-limiting for service protection against attacks. We do not correlate wallets address's with these IP's, and delete this record 24 hours after last interaction with the system.",
+
 };
 
 export const extraRpcs = {
@@ -249,6 +252,11 @@ export const extraRpcs = {
         url: "https://eth.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
+      },
+      {
+        url: "http://eth.drpc.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -697,6 +705,11 @@ export const extraRpcs = {
         url: "https://polygon.rpc.blxrbdn.com/",
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
+      },
+      {
+        url: "http://polygon.drpc.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
