@@ -1435,11 +1435,19 @@ export const extraRpcs = {
   },
   50: {
     rpcs: [
-      "https://rpc.xdcrpc.com",
       "https://erpc.xinfin.network",
       "https://rpc.xinfin.network",
-      "https://rpc1.xinfin.network",
+      "https://rpc-xdc.icecreamswap.com",
+      "https://rpc.xdcrpc.com",
+      "https://erpc.xdcrpc.com"
     ],
+  },
+  51: {
+    rpcs: [
+       "https://rpc.apothem.network",
+       "https://erpc.apothem.network",
+       "https://apothem.xdcrpc.com"
+      ],
   },
   58: {
     rpcs: [
