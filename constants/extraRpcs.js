@@ -2540,11 +2540,6 @@ export const extraRpcs = {
  827431: {
     rpcs: [
       "https://mainnet-rpc.curvescan.io",
-      {
-        url: "https://curvescan.io/",
-        tracking: "limited",
-        trackingDetails: privacyStatement["curve"],
-      },
     ],
   },
   2323: {
