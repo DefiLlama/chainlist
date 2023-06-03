@@ -6,15 +6,20 @@ import { notTranslation as useTranslations, shuffleArray } from "../../utils";
 
 const BANNERS = [
   {
+    image: "brave.png",
+    name: "Brave",
+    url: "https://brave.com/wallet/?mtm_campaign=q2&mtm_kwd=chainlist",
+  },
+  {
     image: "llamanodes.png",
     name: "LlamaNodes",
     url: "https://llamanodes.com",
   },
-  {
-    image: "gmx.png",
-    name: "GMX",
-    url: "https://app.gmx.io/#/trade/?ref=chainlist",
-  },
+  // {
+  //   image: "gmx.png",
+  //   name: "GMX",
+  //   url: "https://app.gmx.io/#/trade/?ref=chainlist",
+  // },
 ];
 
 export const AdBanner = ({ timer = 15000, startTransition = true, showControls = false }) => {
