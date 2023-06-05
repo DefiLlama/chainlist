@@ -813,6 +813,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
+      {
+        url: "https://arbitrum-one.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   421613: {
@@ -837,6 +842,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
+      {
+        url: "https://arbitrum-goerli.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   42170: {
@@ -846,6 +856,11 @@ export const extraRpcs = {
         url: "https://arbitrum-nova.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://arbitrum-nova.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
