@@ -67,7 +67,7 @@ const privacyStatement = {
     "We only collect user IP addresses for the purpose of rate limiting. For more information, please visit https://docs.chainupcloud.com/introduction/products/blockchain-api.",
   iota:
     "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
-  markrgo: 
+  markrgo:
     "We only collect the minimum necessary information to provide our blockchain RPC service (caching). We do not use your data for commercial purposes. Any collected data is short-term and will be automatically deleted within 24 hours if not actively used. https://www.markr.io/privacy-policy",
   croswap:
     "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
@@ -91,9 +91,9 @@ const privacyStatement = {
     "At SomaNetwork Mainnet Or Testnet, we are committed to protecting your privacy and ensuring the security of your data. This privacy policy summary outlines how we handle and protect your personal information when using our SomaNetwork Mainnet and Testnet services. Please note that this is a summary, and the full privacy policy should be reviewed for complete details soma. 1.We will collect your mobile device information, operation records, transaction records, wallet address and other personal information. https://soma-network.gitbook.io/soma-network/privacy-policy",
   chain49:
     "We collect device information and request metadata like IP address and User Agent for the purpose of load balancing and rate limiting. More info: https://chain49.com/privacy-policy",
-  meowrpc: 
+  meowrpc:
     "With the exclusion of data that will be openly visible and available on the blockchain, MEOWRPC does not track or store any kind of user information (such as location, IP address, etc.) that passes through our RPC. For further details regarding our privacy practices, we encourage you to refer to our Privacy Policy. https://privacy.meowrpc.com",
-  drpc: 
+  drpc:
     "We do not ask or store personal information about DRPC users. All information stored in the system doesn't have personal info about the owner of the personal account. We use IP on our public nodes to rate-limiting for service protection against attacks. We do not correlate wallets address's with these IP's, and delete this record 24 hours after last interaction with the system.",
 
 };
@@ -258,6 +258,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://mainnet.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   2: {
@@ -299,6 +309,16 @@ export const extraRpcs = {
         url: "https://polygon-mumbai-bor.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://polygon-mumbai.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/polygon-mumbai",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
       },
     ],
   },
@@ -355,6 +375,16 @@ export const extraRpcs = {
         url: "https://ethereum-goerli.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://goerli.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/goerli",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
       },
     ],
   },
@@ -645,7 +675,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
-      
+
     ],
   },
   137: {
@@ -711,6 +741,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://polygon.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/polygon",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   25: {
@@ -736,10 +776,10 @@ export const extraRpcs = {
   },
   338: {
     rpcs: [
-      "https://evm-t3.cronos.org/",      
+      "https://evm-t3.cronos.org/",
     ],
   },
-  
+
   142857: {
     rpcs: [
       {
@@ -749,7 +789,7 @@ export const extraRpcs = {
       },
     ],
   },
-  
+
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
@@ -877,7 +917,7 @@ export const extraRpcs = {
         url: "https://klaytn.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },    
+      },
     ],
   },
   1666600000: {
@@ -946,7 +986,7 @@ export const extraRpcs = {
         url: "https://celo.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },      
+      },
     ],
   },
   10: {
@@ -1209,12 +1249,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "http://boba-ethereum.gateway.tenderly.co",
+        url: "https://boba-ethereum.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "http://gateway.tenderly.co/public/boba-ethereum",
+        url: "https://gateway.tenderly.co/public/boba-ethereum",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -1327,11 +1367,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.jellypool,
       },
-      { 
-        url: "https://meter.blockpi.network/v1/rpc/public", 
-        tracking: "limited", 
-        trackingDetails: privacyStatement.blockpi, 
-      }, 
+      {
+        url: "https://meter.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   5551: {
@@ -1881,8 +1921,8 @@ export const extraRpcs = {
   },
   2021: {
     rpcs: [
-      "https://mainnet2.edgewa.re/evm", 
-      "https://mainnet3.edgewa.re/evm", 
+      "https://mainnet2.edgewa.re/evm",
+      "https://mainnet3.edgewa.re/evm",
       "https://edgeware-evm.jelliedowl.net/",
       {
         url: "https://edgeware.api.onfinality.io/public",
@@ -1891,15 +1931,15 @@ export const extraRpcs = {
       },
     ],
   },
-  7001: { 
-    rpcs: [ 
-      { 
-        url: "https://zetachain-athens-evm.blockpi.network/v1/rpc/public", 
-        tracking: "limited", 
-        trackingDetails: privacyStatement.blockpi, 
-      }, 
-    ], 
-  }, 
+  7001: {
+    rpcs: [
+      {
+        url: "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
   },
@@ -2227,6 +2267,16 @@ export const extraRpcs = {
         url: "https://eth-sepolia-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra
+      },
+      {
+        url: "https://sepolia.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/sepolia",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
       },
     ]
   },
