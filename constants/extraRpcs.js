@@ -992,6 +992,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
+      {
+        url: "https://optimism.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   1881: {
@@ -1024,6 +1029,11 @@ export const extraRpcs = {
         url: "https://rpc.goerli.optimism.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
+      },
+      {
+        url: "https://optimism-goerli.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
