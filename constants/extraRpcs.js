@@ -225,8 +225,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gashawk,
       },
-      // "http://127.0.0.1:8545",
-
+      //"http://127.0.0.1:8545",
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
       //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
       //"https://api.mycryptoapi.com/eth",
@@ -675,7 +674,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
-
     ],
   },
   137: {
@@ -779,7 +777,6 @@ export const extraRpcs = {
       "https://evm-t3.cronos.org/",
     ],
   },
-
   142857: {
     rpcs: [
       {
@@ -789,7 +786,6 @@ export const extraRpcs = {
       },
     ],
   },
-
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
@@ -2294,14 +2290,27 @@ export const extraRpcs = {
       },
     ]
   },
+  7762959: {
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
+  },
   13371337: {
-    rpcs: ["https://mewapi.musicoin.tw"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   18289463: {
-    rpcs: ["https://net.iolite.io"],
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   20181205: {
     rpcs: ["https://hz.rpc.qkiscan.cn"],
+  },
+  28945486: {
+    rpcs: [],
+    rpcWorking: false,
   },
   35855456: {
     rpcs: ["https://node.joys.digital"],
@@ -2316,10 +2325,7 @@ export const extraRpcs = {
     rpcs: ["https://proxy.devnet.neonlabs.org/solana"],
   },
   245022934: {
-    rpcs: [
-      "https://neon-proxy-mainnet.solana.p2p.org", 
-      "https://neon-mainnet.everstake.one"
-    ],
+    rpcs: ["https://neon-proxy-mainnet.solana.p2p.org", "rpcWorking:false", "https://neon-mainnet.everstake.one"],
   },
   311752642: {
     rpcs: ["https://mainnet-rpc.oneledger.network"],
@@ -2330,6 +2336,10 @@ export const extraRpcs = {
   486217935: {
     rpcs: ["https://devnet.gather.network"],
   },
+  1122334455: {
+    rpcs: [],
+    rpcWorking: false,
+  },
   11297108099: {
     rpcs: [
       {
@@ -2338,6 +2348,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
     ],
+  },
+  1313161556: {
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
   },
   53935: {
     rpcs: [
@@ -2354,6 +2369,19 @@ export const extraRpcs = {
   },
   1666600002: {
     rpcs: ["https://s2.api.harmony.one"],
+  },
+  1666600003: {
+    rpcs: [],
+    rpcWorking: false,
+  },
+  2021121117: {
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
+  },
+  3125659152: {
+    rpcs: [],
+    rpcWorking: false,
   },
   197710212030: {
     rpcs: ["https://rpc.ntity.io"],
@@ -2396,10 +2424,7 @@ export const extraRpcs = {
     ],
   },
   103090: {
-    rpcs: [
-      "https://evm.cryptocurrencydevs.org", 
-      "https://rpc.crystaleum.org"
-    ],
+    rpcs: ["https://evm.cryptocurrencydevs.org", "https://rpc.crystaleum.org"],
   },
   420420: {
     rpcs: [
@@ -2432,6 +2457,21 @@ export const extraRpcs = {
   },
   971: {
     rpcs: ["https://beta-rpc.mainnet.computecoin.com"],
+  },
+  10086: {
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
+  },
+  5177: {
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
+  },
+  10248: {
+    rpcs: [],
+    rpcWorking: false,
+    websiteDead: true,
   },
   18159: {
     rpcs: [
