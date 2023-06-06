@@ -24,7 +24,8 @@ export const FATHOM_NO_EVENTS_ID = {
 
 export const FATHOM_ADS_ID = {
   llamanodes: 'W2MYIHNA',
-  gmx: 'G6ZGMIAM'
+  gmx: 'G6ZGMIAM',
+  brave: 'X4GQLE2I'
 }
 
 

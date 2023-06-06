@@ -1,28 +1,39 @@
 import * as Fathom from "fathom-client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FATHOM_ADS_ID } from "../../hooks/useAnalytics";
 import { notTranslation as useTranslations, shuffleArray } from "../../utils";
 
 const BANNERS = [
   {
+    image: "brave.png",
+    name: "Brave",
+    url: "https://brave.com/wallet/?mtm_campaign=q2&mtm_kwd=chainlist",
+  },
+  {
     image: "llamanodes.png",
     name: "LlamaNodes",
     url: "https://llamanodes.com",
   },
-  {
-    image: "gmx.png",
-    name: "GMX",
-    url: "https://app.gmx.io/#/trade/?ref=chainlist",
-  },
+  // {
+  //   image: "gmx.png",
+  //   name: "GMX",
+  //   url: "https://app.gmx.io/#/trade/?ref=chainlist",
+  // },
 ];
+
+const randomBanners = shuffleArray(BANNERS);
 
 export const AdBanner = ({ timer = 15000, startTransition = true, showControls = false }) => {
   const t = useTranslations("Common");
+  const [isMounted, setIsMounted] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const randomBanners = useMemo(() => shuffleArray(BANNERS), []);
+  // only render the image client-side to prevent hydration errors due to the random banners
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -90,7 +101,7 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
               className="rounded-[10px] duration-500 w-full h-full"
             />
 
-            <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />
+            {isMounted && <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />}
           </picture>
         </a>
 

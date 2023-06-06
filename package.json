@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export && ./post-export.sh",
-    "build2": "next build && next export",
+    "build": "./scripts/build.sh",
+    "export": "next export && ./scripts/post-export.sh",
+    "build2": "./scripts/build.sh && next export",
     "start": "next start",
     "serve": "serve out"
   },

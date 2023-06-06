@@ -93,6 +93,9 @@ const privacyStatement = {
     "We collect device information and request metadata like IP address and User Agent for the purpose of load balancing and rate limiting. More info: https://chain49.com/privacy-policy",
   meowrpc: 
     "With the exclusion of data that will be openly visible and available on the blockchain, MEOWRPC does not track or store any kind of user information (such as location, IP address, etc.) that passes through our RPC. For further details regarding our privacy practices, we encourage you to refer to our Privacy Policy. https://privacy.meowrpc.com",
+  drpc: 
+    "We do not ask or store personal information about DRPC users. All information stored in the system doesn't have personal info about the owner of the personal account. We use IP on our public nodes to rate-limiting for service protection against attacks. We do not correlate wallets address's with these IP's, and delete this record 24 hours after last interaction with the system.",
+
 };
 
 export const extraRpcs = {
@@ -249,6 +252,11 @@ export const extraRpcs = {
         url: "https://eth.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
+      },
+      {
+        url: "https://eth.drpc.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -698,6 +706,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
+      {
+        url: "https://polygon.drpc.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   25: {
@@ -800,6 +813,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
+      {
+        url: "https://arbitrum-one.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   421613: {
@@ -824,6 +842,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
+      {
+        url: "https://arbitrum-goerli.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   42170: {
@@ -838,6 +861,11 @@ export const extraRpcs = {
         url: "https://arbitrum-nova.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://arbitrum-nova.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -969,6 +997,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
+      {
+        url: "https://optimism.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   1881: {
@@ -1001,6 +1034,11 @@ export const extraRpcs = {
         url: "https://rpc.goerli.optimism.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
+      },
+      {
+        url: "https://optimism-goerli.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -1418,10 +1456,19 @@ export const extraRpcs = {
   50: {
     rpcs: [
       "https://rpc.xdcrpc.com",
+      "https://rpc1.xinfin.network",
       "https://erpc.xinfin.network",
       "https://rpc.xinfin.network",
-      "https://rpc1.xinfin.network",
+      "https://rpc-xdc.icecreamswap.com",
+      "https://erpc.xdcrpc.com"
     ],
+  },
+  51: {
+    rpcs: [
+       "https://rpc.apothem.network",
+       "https://erpc.apothem.network",
+       "https://apothem.xdcrpc.com"
+      ],
   },
   58: {
     rpcs: [
@@ -2546,11 +2593,6 @@ export const extraRpcs = {
  827431: {
     rpcs: [
       "https://mainnet-rpc.curvescan.io",
-      {
-        url: "https://curvescan.io/",
-        tracking: "limited",
-        trackingDetails: privacyStatement["curve"],
-      },
     ],
   },
   2323: {
