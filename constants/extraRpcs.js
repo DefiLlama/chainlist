@@ -858,6 +858,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
+        url: "https://arbitrum-nova.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
         url: "https://arbitrum-nova.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
