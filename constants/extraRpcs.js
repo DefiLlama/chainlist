@@ -254,7 +254,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.meowrpc,
       },
       {
-        url: "http://eth.drpc.org",
+        url: "https://eth.drpc.org",
         tracking: "limited",
         trackingDetails: privacyStatement.drpc,
       },
@@ -707,7 +707,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bloxroute,
       },
       {
-        url: "http://polygon.drpc.org",
+        url: "https://polygon.drpc.org",
         tracking: "limited",
         trackingDetails: privacyStatement.drpc,
       },
