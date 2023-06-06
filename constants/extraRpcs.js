@@ -2241,8 +2241,7 @@ export const extraRpcs = {
     ]
   },
   534354:{
-    rpcs:[
-    ]
+    rpcs:["https://prealpha-rpc.scroll.io/l2"]
   },
   888888: {
     rpcs: ["https://infragrid.v.network/ethereum/compatible"],
