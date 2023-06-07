@@ -2293,6 +2293,9 @@ export const extraRpcs = {
       "https://mainnet2.chainx.org/rpc"
     ]
   },
+  1506: {
+    rpcs: ["https://mainnet.sherpax.io/rpc"]
+  },
   512512: {
     rpcs: ["https://galaxy.block.caduceus.foundation"],
   },
