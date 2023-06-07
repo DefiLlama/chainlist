@@ -854,6 +854,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://arbitrum.meowrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.meowrpc,
+      }
     ],
   },
   421613: {
@@ -1038,6 +1043,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://optimism.meowrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.meowrpc,
+      }
     ],
   },
   1881: {
