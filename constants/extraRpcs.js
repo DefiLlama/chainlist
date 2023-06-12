@@ -2230,14 +2230,14 @@ export const extraRpcs = {
   534353:{
     rpcs:[
       {
-        url: "https://scroll-alphanet.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
-      },
-      {
         url:"https://scroll-alpha-public.unifra.io",
         tracking:"limited",
         trackingDetails: privacyStatement.unifra,
+      },
+      {
+        url: "https://scroll-alphanet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://scroll-testnet.blockpi.network/v1/rpc/public",
