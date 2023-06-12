@@ -69,10 +69,10 @@ function Home({ chains }) {
             {filteredChains.map((chain, idx) => {
               if (idx === 2) {
                 return (
-                  <>
-                    <AdBanner timer={20000} startTransition={false} showControls={false} />
-                    <Chain chain={chain} key={idx} lang="en" />
-                  </>
+                  <React.Fragment key={idx}>
+                    <AdBanner />
+                    <Chain chain={chain} lang="en" />
+                  </React.Fragment>
                 )
               }
 

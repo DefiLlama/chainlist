@@ -9,57 +9,33 @@ const BANNERS = [
     image: "brave.png",
     name: "Brave",
     url: "https://brave.com/wallet/?mtm_campaign=q2&mtm_kwd=chainlist",
+    isActive: true,
   },
   {
     image: "llamanodes.png",
     name: "LlamaNodes",
     url: "https://llamanodes.com",
+    isActive: true,
   },
-  // {
-  //   image: "gmx.png",
-  //   name: "GMX",
-  //   url: "https://app.gmx.io/#/trade/?ref=chainlist",
-  // },
+  {
+    image: "gmx.png",
+    name: "GMX",
+    url: "https://app.gmx.io/#/trade/?ref=chainlist",
+    isActive: false,
+  },
 ];
 
-const randomBanners = shuffleArray(BANNERS);
+const randomBanners = shuffleArray(BANNERS.filter((banner) => banner.isActive));
+const currentIndex = 0
 
-export const AdBanner = ({ timer = 15000, startTransition = true, showControls = false }) => {
+export const AdBanner = () => {
   const t = useTranslations("Common");
   const [isMounted, setIsMounted] = useState(false);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   // only render the image client-side to prevent hydration errors due to the random banners
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (startTransition) {
-        return handleNextBanner();
-      }
-
-      return;
-    }, timer);
-
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
-
-  const handlePrevBanner = () => {
-    const isFirstBanner = currentIndex === 0;
-    const newIndex = isFirstBanner ? randomBanners.length - 1 : currentIndex - 1;
-
-    setCurrentIndex(newIndex);
-  };
-
-  const handleNextBanner = () => {
-    const isLastBanner = currentIndex === randomBanners.length - 1;
-    const newIndex = isLastBanner ? 0 : currentIndex + 1;
-
-    setCurrentIndex(newIndex);
-  };
 
   const srcLarge = `./banners/large/${randomBanners[currentIndex].image}`;
   const srcSmall = `./banners/small/${randomBanners[currentIndex].image}`;
@@ -67,7 +43,7 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
 
   return (
     <div className="flex flex-col w-full h-full justify-center gap-2">
-      <div className="w-full h-full relative group rounded-[10px]">
+      <div className="w-full h-full rounded-[10px]">
         <a
           href={randomBanners[currentIndex].url}
           rel="noopener noreferrer"
@@ -76,27 +52,27 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
         >
           <picture className="rounded-[10px] duration-500 w-full h-full">
             <source
-              srcset={srcSmall}
+              srcSet={srcSmall}
               media="(max-width: 420px)"
               className="rounded-[10px] duration-500 w-full h-full"
             />
             <source
-              srcset={srcLarge}
+              srcSet={srcLarge}
               media="(max-width: 639px)"
               className="rounded-[10px] duration-500 w-full h-full"
             />
             <source
-              srcset={srcSmall}
+              srcSet={srcSmall}
               media="(max-width: 1399px)"
               className="rounded-[10px] duration-500 w-full h-full"
             />
             <source
-              srcset={srcLarge}
+              srcSet={srcLarge}
               media="(max-width: 1679px)"
               className="rounded-[10px] duration-500 w-full h-full"
             />
             <source
-              srcset={srcSmall}
+              srcSet={srcSmall}
               media="(max-width: 2000px)"
               className="rounded-[10px] duration-500 w-full h-full"
             />
@@ -104,26 +80,6 @@ export const AdBanner = ({ timer = 15000, startTransition = true, showControls =
             {isMounted && <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />}
           </picture>
         </a>
-
-        {/* left arrow */}
-        {showControls && (
-          <div
-            className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 text-xl rounded-full px-2 bg-black/20 text-white cursor-pointer"
-            onClick={handlePrevBanner}
-          >
-            &lsaquo;
-          </div>
-        )}
-
-        {/* right arrow */}
-        {showControls && (
-          <div
-            className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 text-xl rounded-full px-2 bg-black/20 text-white cursor-pointer"
-            onClick={handleNextBanner}
-          >
-            &rsaquo;
-          </div>
-        )}
       </div>
 
       <div className="w-full text-center text-xs text-gray-500 dark:text-[#B3B3B3] italic">
