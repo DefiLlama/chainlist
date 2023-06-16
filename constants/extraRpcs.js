@@ -254,7 +254,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth.drpc.org",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
@@ -736,7 +736,7 @@ export const extraRpcs = {
       },
       {
         url: "https://polygon.drpc.org",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
