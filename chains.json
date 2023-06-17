@@ -16508,8 +16508,8 @@
     ],
     "faucets": [],
     "nativeCurrency": {
-      "name": "MAP",
-      "symbol": "MAP",
+      "name": "MAPO",
+      "symbol": "MAPO",
       "decimals": 18
     },
     "infoURL": "https://maplabs.io",
@@ -19107,7 +19107,6 @@
       "ic_home_logo": "https://hk.tpstatic.net/token/tokenpocket-1685016276305.png"
     }
   },
-  
   {
     "name": "PEGO Mainnet",
     "chainId": 20201022,
@@ -19116,21 +19115,21 @@
     "network": "mainnet",
     "networkId": 20201022,
     "nativeCurrency": {
-        "name": "PEGO",
-        "symbol": "PG",
-        "decimals": 18
+      "name": "PEGO",
+      "symbol": "PG",
+      "decimals": 18
     },
     "rpc": [
-        "https://pegorpc.com",
-        "https://node1.pegorpc.com",
-        " https://node2.pegorpc.com"
+      "https://pegorpc.com",
+      "https://node1.pegorpc.com",
+      " https://node2.pegorpc.com"
     ],
     "faucets": [],
     "infoURL": "https://pego.network",
     "app_resource": {
-        "ic_chain_select": "https://drive.google.com/file/d/1eoxLbi4CIXW_St3fkoctRwPrdD4-Nyb8/view?usp=drive_link",
-        "ic_chain_unselect": "https://drive.google.com/file/d/1_UgiAXINqJhMWloRz2W5dkBxmTtmugvM/view?usp=drive_link",
-        "color_chain_bg": "0xFF9D00"
+      "ic_chain_select": "https://drive.google.com/file/d/1eoxLbi4CIXW_St3fkoctRwPrdD4-Nyb8/view?usp=drive_link",
+      "ic_chain_unselect": "https://drive.google.com/file/d/1_UgiAXINqJhMWloRz2W5dkBxmTtmugvM/view?usp=drive_link",
+      "color_chain_bg": "0xFF9D00"
     }
-}
+  }
 ]
