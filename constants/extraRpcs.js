@@ -2700,6 +2700,12 @@ export const extraRpcs = {
       },
     ],
   },
+    9809809: {
+    rpcs: [
+      "https://libeliun.com",
+      "https://transactionscan.cn/eth-rpc",
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
