@@ -926,6 +926,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://1rpc.io/klay",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   1666600000: {
@@ -943,6 +948,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://1rpc.io/one",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   1313161554: {
@@ -952,6 +962,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/aurora/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://1rpc.io/aurora",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ],
   },
@@ -2162,6 +2177,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://1rpc.io/base-goerli",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   99999: {
@@ -2622,6 +2642,11 @@ export const extraRpcs = {
         url: "https://rpc.polygon-zkevm.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
+      },
+      {
+        url: "https://1rpc.io/zkevm",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ],
   },
