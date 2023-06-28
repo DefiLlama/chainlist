@@ -100,7 +100,7 @@ const privacyStatement = {
   dwellir:
     "Except for the data that is publicly accessible on the blockchain, Dwellir does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our privacy methods, we suggest checking out our Privacy Policy at https://www.dwellir.com/privacy-policy",
   zan:
-    "ZAN Node Service does not track or store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf"
+    "ZAN Node Service does not track or store any kind of user information (such as IP addresses, location, request location, request data, etc.) that passes through our RPCs."
 
 };
 
