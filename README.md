@@ -1,5 +1,5 @@
 # Description
-This is the repo for TokenPocket to add public chains according to the community requirements. Once the PR is merged, the chain will be included on TokenPocket's Easy Add feature. You can also view the entrance of the custom network in **https://chainlist.tokenpocket.pro/**. Please read the following tutorials.
+This is the repo for TokenPocket to add public chains according to the community requirements. Once the PR is merged, the chain will be included on TokenPocket's Easy Add feature. You can also visit the entrance of the custom network in **https://chainlist.tokenpocket.pro/**. For adding more network data, please read the following tutorials.
 
 ## Listing and donation standard
 https://help.tokenpocket.pro/developer-en/network/add-chain
@@ -8,7 +8,7 @@ A donation is needed for your PR to be merged. If your PR is not compatible with
 
 
 # 简介
-本仓库为TokenPocket根据社区需求进行自定义网络（公链）更新，只要PR被合并就可以在自定义网络--快捷加链的列表中收录，同时，你也将会在**https://chainlist.tokenpocket.pro/** 中查看自定义网络的添加入口。请根据以下指引进行提交。
+本仓库为TokenPocket根据社区需求进行自定义网络（公链）更新，只要PR被合并就可以在自定义网络--快捷加链的列表中收录，同时，你也可在 **https://chainlist.tokenpocket.pro/** 中查看自定义网络的添加入口。添加更多网络信息，请根据以下指引进行提交。
 
 ## 公链收录审核及捐赠标准
 https://help.tokenpocket.pro/developer-cn/public-chain/add-chain
