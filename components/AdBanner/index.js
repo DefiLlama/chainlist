@@ -9,7 +9,7 @@ const BANNERS = [
     image: "brave.png",
     name: "Brave",
     url: "https://brave.com/wallet/?mtm_campaign=q2&mtm_kwd=chainlist",
-    isActive: true,
+    isActive: false,
   },
   {
     image: "llamanodes.png",
