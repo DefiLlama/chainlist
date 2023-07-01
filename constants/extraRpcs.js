@@ -1,3 +1,6 @@
+import {networks available} from network provider (any)
+allow to be added by users:true
+update networks 
 import { mergeDeep } from "../utils/fetch.js";
 
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
