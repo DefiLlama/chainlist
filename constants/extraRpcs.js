@@ -1664,7 +1664,7 @@ export const extraRpcs = {
   },
   63: {
     rpcs: [
-      "https://www.ethercluster.com/mordor",
+      "https://rpc.mordor.etccooperative.org",
       {
         url: "https://geth-mordor.etc-network.info",
         tracking: "yes",
