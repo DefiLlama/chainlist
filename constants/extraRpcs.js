@@ -2157,6 +2157,9 @@ export const extraRpcs = {
     websiteDead: true,
     rpcWorking: false,
   },
+  21004: {
+    rpcs: ["https://rpc.c4ei.net/"],
+  },
   21816: {
     rpcs: ["https://seed.omlira.com"],
   },
