@@ -818,7 +818,7 @@ export const extraRpcs = {
       "https://evm-t3.cronos.org/",
     ],
   },
-  13141619: {
+  142857: {
     rpcs: [
       {
         url: "https://rpc1.icplaza.pro/",
