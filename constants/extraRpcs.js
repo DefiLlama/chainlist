@@ -275,7 +275,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/eth/mainnet/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
     ],
@@ -332,7 +332,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/polygon/mumbai/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
     ],
@@ -403,7 +403,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/eth/goerli/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
     ],
@@ -566,7 +566,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/bsc/mainnet/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
     ],
@@ -591,7 +591,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/bsc/testnet/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
     ],
@@ -782,7 +782,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/polygon/mainnet/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
       {
@@ -2430,7 +2430,7 @@ export const extraRpcs = {
       },
       {
       	url: "https://api.zan.top/node/v1/eth/sepolia/public",
-      	tracking: "none",
+      	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
     ]
