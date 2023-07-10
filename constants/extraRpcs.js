@@ -896,6 +896,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
+        url: "https://arbitrum-goerli.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
         url: "https://arbitrum.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
