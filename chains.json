@@ -15,7 +15,8 @@
       "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
       "wss://mainnet.infura.io/ws/v3/9aa3d95b3bc440fa88ea12eaa4456161",
       "https://api.mycryptoapi.com/eth",
-      "https://cloudflare-eth.com"
+      "https://cloudflare-eth.com",
+      "https://rpc.tenderly.co/fork/c63af728-a183-4cfb-b24e-a92801463484"
     ],
     "faucets": [],
     "infoURL": "https://ethereum.org"
