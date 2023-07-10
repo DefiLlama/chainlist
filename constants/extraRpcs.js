@@ -2638,6 +2638,7 @@ export const extraRpcs = {
   314: {
     rpcs: [
       "https://api.node.glif.io",
+      "https://node.filutils.com/rpc/v1",
       {
         url: "https://rpc.ankr.com/filecoin",
         tracking: "limited",
