@@ -1767,7 +1767,7 @@ export const extraRpcs = {
     rpcs: ["https://s3.garizon.net/rpc"],
   },
   96: {
-    rpcs: ["https://rpc.nextsmartchain.com"],
+    rpcs: ["https://rpc.bitkubchain.io","wss://wss.bitkubchain.io"],
   },
   99: {
     rpcs: ["https://core.poanetwork.dev"],
