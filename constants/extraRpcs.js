@@ -2665,15 +2665,6 @@ export const extraRpcs = {
       }
     ],
   },
-  3141: {
-    rpcs: [
-      {
-        url: "https://filecoin-hyperspace.chainup.net/rpc/v1",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ChainUpCloud,
-      }
-    ],
-  },
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
   },
