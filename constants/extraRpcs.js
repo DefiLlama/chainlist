@@ -118,6 +118,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+       {
+        url: "https://eth.getblock.io/&lt;api_key&gt;/mainnet/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
       {
         url:
           "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
