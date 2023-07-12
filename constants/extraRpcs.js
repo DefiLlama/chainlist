@@ -1440,6 +1440,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
+        url: "https://getblock.io/nodes/bsc/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
+      {
         url: "https://1rpc.io/astr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
