@@ -2099,7 +2099,14 @@ export const extraRpcs = {
     rpcs: ["https://seed4.evanesco.org:8546"],
   },
   2222: {
-    rpcs: ["https://evm.kava.io"],
+    rpcs: [
+      "https://evm.kava.io",
+      {
+        url: "https://kava.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      }, 
+    ],
   },
   2559: {
     rpcs: [],
