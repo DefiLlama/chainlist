@@ -2475,7 +2475,7 @@ export const extraRpcs = {
     rpcs: ["https://proxy.devnet.neonlabs.org/solana"],
   },
   245022934: {
-    rpcs: ["https://neon-proxy-mainnet.solana.p2p.org", "rpcWorking:false", "https://neon-mainnet.everstake.one"],
+    rpcs: ["https://neon-proxy-mainnet.solana.p2p.org", "https://neon-mainnet.everstake.one"],
   },
   311752642: {
     rpcs: ["https://mainnet-rpc.oneledger.network"],
