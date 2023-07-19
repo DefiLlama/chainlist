@@ -2562,8 +2562,8 @@ export const extraRpcs = {
   },
   1501: {
     rpcs: [
-      "https://rpc-1.bevm.io",
-      "https://rpc-2.bevm.io"
+      "https://rpc-1.bevm.io/",
+      "https://rpc-2.bevm.io/"
     ]
   },
   1506: {
