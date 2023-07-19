@@ -283,6 +283,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+        url: "https://rpc.tenderly.co/fork/c63af728-a183-4cfb-b24e-a92801463484",
+        tracking: "yes",
+        trackingDetails:privacystatement.tenderly,
+      },
     ],
   },
   2: {
