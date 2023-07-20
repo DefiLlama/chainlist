@@ -904,6 +904,11 @@ export const extraRpcs = {
         url: "https://arbitrum.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
+      },
+      {
+      	url: "https://api.zan.top/node/v1/arb/one/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
       }
     ],
   },
@@ -939,6 +944,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+      	url: "https://api.zan.top/node/v1/arb/goerli/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
     ],
   },
   42170: {
@@ -1113,6 +1123,11 @@ export const extraRpcs = {
         url: "https://optimism.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
+      },
+      {
+        url: "https://api.zan.top/node/v1/opt/mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.zan,
       }
     ],
   },
@@ -1157,6 +1172,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+      	url: "https://api.zan.top/node/v1/opt/goerli/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
     ],
   },
   1088: {
