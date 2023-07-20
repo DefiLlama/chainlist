@@ -2750,7 +2750,7 @@ export const extraRpcs = {
       }
     ],
   },
-  1071: {
+  1072: {
     rpcs: [
       {
         url: "https://json-rpc.evm.testnet.shimmer.network/",
