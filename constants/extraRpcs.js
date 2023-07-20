@@ -2865,6 +2865,12 @@ export const extraRpcs = {
       "https://rpc.rollux.com"      
     ],
   },
+  1707: {
+    rpcs: ["https://rpc.blockchain.or.th"],
+  },
+  1708: {
+    rpcs: ["https://rpc.testnet.blockchain.or.th"]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
