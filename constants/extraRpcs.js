@@ -906,6 +906,11 @@ export const extraRpcs = {
         url: "https://arbitrum.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
+      },
+      {
+      	url: "https://api.zan.top/node/v1/arb/one/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
       }
     ],
   },
@@ -941,6 +946,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+      	url: "https://api.zan.top/node/v1/arb/goerli/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
     ],
   },
   42170: {
@@ -1115,6 +1125,11 @@ export const extraRpcs = {
         url: "https://optimism.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
+      },
+      {
+        url: "https://api.zan.top/node/v1/opt/mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.zan,
       }
     ],
   },
@@ -1159,6 +1174,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+      	url: "https://api.zan.top/node/v1/opt/goerli/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
     ],
   },
   1088: {
@@ -1983,6 +2003,15 @@ export const extraRpcs = {
   1280: {
     rpcs: ["https://nodes.halo.land"],
   },
+  280: {
+    rpcs: [
+      {
+        url: "https://zksync-era-testnet.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ]
+  },
   1287: {
     rpcs: [
       "https://rpc.testnet.moonbeam.network",
@@ -2564,8 +2593,8 @@ export const extraRpcs = {
   },
   1501: {
     rpcs: [
-      "https://mainnet.chainx.org/rpc",
-      "https://mainnet2.chainx.org/rpc"
+      "https://rpc-1.bevm.io/",
+      "https://rpc-2.bevm.io/"
     ]
   },
   1506: {
@@ -2732,7 +2761,7 @@ export const extraRpcs = {
       }
     ],
   },
-  1071: {
+  1072: {
     rpcs: [
       {
         url: "https://json-rpc.evm.testnet.shimmer.network/",
@@ -2855,6 +2884,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ard,
       },
     ],
+  },
+  1707: {
+    rpcs: ["https://rpc.blockchain.or.th"],
+  },
+  1708: {
+    rpcs: ["https://rpc.testnet.blockchain.or.th"]
   },
 };
 
