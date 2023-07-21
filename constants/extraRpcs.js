@@ -2896,6 +2896,14 @@ export const extraRpcs = {
   1708: {
     rpcs: ["https://rpc.testnet.blockchain.or.th"]
   },
+  411: {
+    rpcs: [
+      {
+        url: "https://rpc.pepe-chain.vip/",
+        tracking: "unspecified"
+      },
+    ]
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
