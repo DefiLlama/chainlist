@@ -2331,6 +2331,15 @@ export const extraRpcs = {
       },
     ],
   },
+  8453: {
+    rpcs: [
+      {
+        url: "https://base.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   99999: {
     rpcs: ["https://rpc.uschain.network"],
   },
