@@ -2333,6 +2333,7 @@ export const extraRpcs = {
   },
   8453: {
     rpcs: [
+      "https://developer-access-mainnet.base.org",
       {
         url: "https://base.blockpi.network/v1/rpc/public",
         tracking: "limited",
