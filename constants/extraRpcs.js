@@ -418,6 +418,10 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+      	url: "https://rpc.notadegen.com/goerli",
+      	tracking: "none"
+      },
     ],
   },
   //Ropsten testnet deprecated
@@ -2495,6 +2499,10 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/eth/sepolia/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
+      },
+      {
+      	url: "https://rpc.notadegen.com/sepolia",
+      	tracking: "none"
       },
     ]
   },
