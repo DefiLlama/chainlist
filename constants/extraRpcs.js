@@ -419,8 +419,7 @@ export const extraRpcs = {
       	trackingDetails: privacyStatement.zan,
       },
       {
-      	url: "https://rpc.notadegen.com/goerli",
-      	tracking: "none"
+      	url: "https://rpc.notadegen.com/goerli"
       },
     ],
   },
@@ -2501,8 +2500,7 @@ export const extraRpcs = {
       	trackingDetails: privacyStatement.zan,
       },
       {
-      	url: "https://rpc.notadegen.com/sepolia",
-      	tracking: "none"
+      	url: "https://rpc.notadegen.com/sepolia"
       },
     ]
   },
