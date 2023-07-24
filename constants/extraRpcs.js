@@ -730,7 +730,6 @@ export const extraRpcs = {
       "https://polygon-rpc.com",
       "https://rpc-mainnet.matic.network",
       "https://rpc-mainnet.matic.quiknode.pro",
-      "https://matic-mainnet.chainstacklabs.com",
       "https://matic-mainnet-full-rpc.bwarelabs.com",
       "https://matic-mainnet-archive-rpc.bwarelabs.com",
       "https://poly-rpc.gateway.pokt.network/",
