@@ -23,7 +23,7 @@ const BANNERS = [
     url: "https://app.gmx.io/#/trade/?ref=chainlist",
     isActive: false,
   },
-];
+].filter((banner) => banner.isActive);
 
 export const AdBanner = () => {
   const t = useTranslations("Common");
