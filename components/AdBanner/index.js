@@ -25,30 +25,31 @@ const BANNERS = [
   },
 ];
 
-const randomBanners = shuffleArray(BANNERS.filter((banner) => banner.isActive));
-const currentIndex = 0
-
 export const AdBanner = () => {
   const t = useTranslations("Common");
-  const [isMounted, setIsMounted] = useState(false);
+  const [banner, setBanner] = useState();
 
-  // only render the image client-side to prevent hydration errors due to the random banners
+  // only render banner client-side to prevent hydration errors due to the random banners
   useEffect(() => {
-    setIsMounted(true);
+    setBanner(BANNERS[Math.floor(Math.random() * BANNERS.length)]);
   }, []);
 
-  const srcLarge = `./banners/large/${randomBanners[currentIndex].image}`;
-  const srcSmall = `./banners/small/${randomBanners[currentIndex].image}`;
-  const srcName = randomBanners[currentIndex].name;
+  if (!banner) {
+    return null;
+  }
+
+  const srcLarge = `./banners/large/${banner.image}`;
+  const srcSmall = `./banners/small/${banner.image}`;
+  const srcName = banner.name;
 
   return (
     <div className="flex flex-col w-full h-full justify-center gap-2">
       <div className="w-full h-full rounded-[10px]">
         <a
-          href={randomBanners[currentIndex].url}
+          href={banner.url}
           rel="noopener noreferrer"
           target="_blank"
-          onClick={() => Fathom.trackGoal(FATHOM_ADS_ID[randomBanners[currentIndex].name.toLowerCase()], 0)}
+          onClick={() => Fathom.trackGoal(FATHOM_ADS_ID[banner.name.toLowerCase()], 0)}
         >
           <picture className="rounded-[10px] duration-500 w-full h-full">
             <source
@@ -77,7 +78,7 @@ export const AdBanner = () => {
               className="rounded-[10px] duration-500 w-full h-full"
             />
 
-            {isMounted && <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />}
+            <img src={srcLarge} alt={srcName} className="rounded-[10px] duration-500 w-full h-full" />
           </picture>
         </a>
       </div>
