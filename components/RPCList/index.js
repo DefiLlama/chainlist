@@ -129,7 +129,7 @@ export default function RPCList({ chain, lang }) {
               <Row
                 values={item}
                 chain={chain}
-                key={item.data.url + chain + lang}
+                key={"rpc" + index}
                 privacy={urlToData[item.data.url]}
                 lang={lang}
                 className={className}
