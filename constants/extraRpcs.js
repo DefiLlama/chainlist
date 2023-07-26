@@ -1872,8 +1872,13 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   369: {
-    rpcs: [],
-    rpcWorking: false,
+    rpcs: [
+      {
+        url: "https://pulsechain.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
   },
   385: {
     rpcs: [],
