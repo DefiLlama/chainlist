@@ -2672,6 +2672,15 @@ export const extraRpcs = {
   8007736: {
     rpcs: ["https://mainnet.plian.io/child_0"],
   },
+  943: {
+    rpcs: [
+      {
+        url: "https://pulsechain-testnet.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
+  },
   970: {
     rpcs: ["https://rpc.mainnet.computecoin.com"],
   },
