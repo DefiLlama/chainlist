@@ -8,7 +8,7 @@ const BANNERS = [
   {
     image: "brave.png",
     name: "Brave",
-    url: "https://brave.com/wallet/?mtm_campaign=q2&mtm_kwd=chainlist",
+    url: "https://brave.com/wallet/?mtm_source=chainlist&mtm_medium=paid&mtm_campaign=q3wallet",
     isActive: true,
   },
   {
