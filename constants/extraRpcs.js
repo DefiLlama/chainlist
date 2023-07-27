@@ -2022,6 +2022,15 @@ export const extraRpcs = {
       },
     ]
   },
+  324: {
+    rpcs: [
+      {
+        url: "https://zksync-era.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ]
+  },
   1287: {
     rpcs: [
       "https://rpc.testnet.moonbeam.network",
