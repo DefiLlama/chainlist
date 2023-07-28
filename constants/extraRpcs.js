@@ -2364,6 +2364,15 @@ export const extraRpcs = {
       },
     ],
   },
+  11235: {
+    rpcs: [
+      {
+        url: "https://haqq-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
+  },
   99999: {
     rpcs: ["https://rpc.uschain.network"],
   },
