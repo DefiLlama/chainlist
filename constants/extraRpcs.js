@@ -2160,6 +2160,11 @@ export const extraRpcs = {
         url: "https://kava.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://kava-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       }, 
     ],
   },
