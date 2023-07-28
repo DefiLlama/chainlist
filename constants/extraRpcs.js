@@ -2205,6 +2205,15 @@ export const extraRpcs = {
   6626: {
     rpcs: ["https://http-mainnet.chain.pixie.xyz"],
   },
+  6688: {
+    rpcs: [
+      {
+        url: "https://iris-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
+  },
   7341: {
     rpcs: ["https://rpc.shyft.network/"],
   },
