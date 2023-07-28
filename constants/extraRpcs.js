@@ -2175,6 +2175,15 @@ export const extraRpcs = {
     websiteDead: true,
     rpcWorking: false,
   },
+  5000: {
+    rpcs: [
+      {
+        url: "https://mantle.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
+  },
   5197: {
     rpcs: ["https://mainnet.eraswap.network"],
   },
