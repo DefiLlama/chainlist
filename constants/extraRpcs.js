@@ -2160,6 +2160,11 @@ export const extraRpcs = {
         url: "https://kava.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://kava-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       }, 
     ],
   },
@@ -2174,6 +2179,15 @@ export const extraRpcs = {
     rpcs: [],
     websiteDead: true,
     rpcWorking: false,
+  },
+  5000: {
+    rpcs: [
+      {
+        url: "https://mantle.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
   },
   5197: {
     rpcs: ["https://mainnet.eraswap.network"],
@@ -2190,6 +2204,15 @@ export const extraRpcs = {
   },
   6626: {
     rpcs: ["https://http-mainnet.chain.pixie.xyz"],
+  },
+  6688: {
+    rpcs: [
+      {
+        url: "https://iris-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
   },
   7341: {
     rpcs: ["https://rpc.shyft.network/"],
@@ -2356,6 +2379,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+    ],
+  },
+  11235: {
+    rpcs: [
+      {
+        url: "https://haqq-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
     ],
   },
   99999: {
