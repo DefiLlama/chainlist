@@ -1903,13 +1903,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc.tao.network"],
   },
   595: {
-    rpcs: [
-      "https://eth-rpc-tc9.aca-staging.network",
-    ],
+    rpcs: [],
   },
   686: {
     rpcs: [
-      "https://eth-rpc-karura.aca-api.network",
       "https://eth-rpc-karura.aca-staging.network",
       "https://rpc.evm.karura.network",
     ],
@@ -1923,7 +1920,6 @@ export const extraRpcs = {
   },
   787: {
     rpcs: [
-      "https://eth-rpc-acala.aca-api.network",
       "https://eth-rpc-acala.aca-staging.network",
       "https://rpc.evm.acala.network",
     ],
