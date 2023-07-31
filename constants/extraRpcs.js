@@ -1902,15 +1902,16 @@ export const extraRpcs = {
   558: {
     rpcs: ["https://rpc.tao.network"],
   },
+  595: {
+    rpcs: [
+      "https://eth-rpc-tc9.aca-staging.network",
+    ],
+  },
   686: {
     rpcs: [
       "https://eth-rpc-karura.aca-api.network",
+      "https://eth-rpc-karura.aca-staging.network",
       "https://rpc.evm.karura.network",
-      {
-        url: "https://karura.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      }
     ],
   },
   707: {
@@ -1923,12 +1924,8 @@ export const extraRpcs = {
   787: {
     rpcs: [
       "https://eth-rpc-acala.aca-api.network",
+      "https://eth-rpc-acala.aca-staging.network",
       "https://rpc.evm.acala.network",
-      {
-        url: "https://acala-polkadot.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality
-      },
     ],
   },
   803: {
