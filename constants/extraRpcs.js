@@ -2847,7 +2847,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.gateway,
       },
       {
-        url: "https://1rpc.io/zkevm",
+        url: "https://1rpc.io/polygon/zkevm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
