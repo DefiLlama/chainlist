@@ -1555,6 +1555,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://syscoin-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
     ],
   },
   8: {
@@ -2943,6 +2948,15 @@ export const extraRpcs = {
       "https://rollux.public-rpc.com",
       "wss://rpc.rollux.com/wss",			
       "https://rpc.rollux.com"      
+    ],
+  },
+  5700: {
+    rpcs: [
+      {
+        url: "https://syscoin-tanenbaum-evm.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
     ],
   },
   7895: {
