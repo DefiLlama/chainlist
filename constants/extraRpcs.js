@@ -1187,7 +1187,14 @@ export const extraRpcs = {
     ],
   },
   1088: {
-    rpcs: ["https://andromeda.metis.io/?owner=1088"],
+    rpcs: [
+      "https://andromeda.metis.io/?owner=1088",
+     {
+        url: "https://metis-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
   },
   1246: {
     rpcs: ["https://rpc-cnx.omplatform.com"],
@@ -1377,7 +1384,15 @@ export const extraRpcs = {
     ],
   },
   66: {
-    rpcs: ["https://exchainrpc.okex.org"],
+    rpcs: [
+      "https://exchainrpc.okex.org",
+     {
+        url: "https://oktc-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
+   
   },
   288: {
     rpcs: [
@@ -2179,7 +2194,12 @@ export const extraRpcs = {
         url: "https://mantle.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
+      {
+        url: "https://mantle-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   5197: {
@@ -2374,6 +2394,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
       },
+      {
+        url: "https://base-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   11235: {
@@ -2481,6 +2506,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       }
+      {
+        url: "https://scroll-alphanet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ]
   },
   534354: {
@@ -2860,6 +2890,11 @@ export const extraRpcs = {
         url: "https://polygon-zkevm.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://polygon-zkevm-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
       },
     ],
   },
