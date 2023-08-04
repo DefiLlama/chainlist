@@ -518,7 +518,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d",
+        url: "https://bsc-rpc.gateway.pokt.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
