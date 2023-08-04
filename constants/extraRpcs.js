@@ -2515,7 +2515,7 @@ export const extraRpcs = {
         url: "https://scroll-testnet.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
-      }
+      },
       {
         url: "https://scroll-alphanet.public.blastapi.io",
         tracking: "limited",
