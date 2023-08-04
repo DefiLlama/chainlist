@@ -2395,6 +2395,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
+        url: "https://1rpc.io/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
+      {
         url: "https://base.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
