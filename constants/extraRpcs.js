@@ -3014,6 +3014,13 @@ export const extraRpcs = {
   1708: {
     rpcs: ["https://rpc.testnet.blockchain.or.th"]
   },
+  813: {
+    rpcs: ["http://34.245.236.193:18545"]
+  },
+  8131: {
+    rpcs: ["http://34.246.222.232:18545"]
+  },
+
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
