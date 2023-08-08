@@ -272,17 +272,17 @@ export const extraRpcs = {
       },
       {
         url: "https://mainnet.gateway.tenderly.co",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
        {
         url: "https://rpc.tenderly.co/fork/c63af728-a183-4cfb-b24e-a92801463484",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
         url: "https://gateway.tenderly.co/public/mainnet",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
@@ -334,12 +334,12 @@ export const extraRpcs = {
       },
       {
         url: "https://polygon-mumbai.gateway.tenderly.co",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
         url: "https://gateway.tenderly.co/public/polygon-mumbai",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
@@ -405,12 +405,12 @@ export const extraRpcs = {
       },
       {
         url: "https://goerli.gateway.tenderly.co",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
         url: "https://gateway.tenderly.co/public/goerli",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
@@ -784,12 +784,12 @@ export const extraRpcs = {
       },
       {
         url: "https://polygon.gateway.tenderly.co",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
         url: "https://gateway.tenderly.co/public/polygon",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
@@ -1135,7 +1135,17 @@ export const extraRpcs = {
         url: "https://api.zan.top/node/v1/opt/mainnet/public",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
-      }
+      },
+      {
+        url: "https://optimism.gateway.tenderly.co",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/optimism",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   1881: {
@@ -1183,7 +1193,17 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/opt/goerli/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
+      {
+        url: "https://optimism-goerli.gateway.tenderly.co",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/optimism-goerli",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   1088: {
@@ -1404,12 +1424,12 @@ export const extraRpcs = {
       },
       {
         url: "https://boba-ethereum.gateway.tenderly.co",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
         url: "https://gateway.tenderly.co/public/boba-ethereum",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
     ],
@@ -2384,6 +2404,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://base-goerli.gateway.tenderly.co",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/base-goerli",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   8453: {
@@ -2408,6 +2438,16 @@ export const extraRpcs = {
         url: "https://base-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://base.gateway.tenderly.co",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
       },
     ],
   },
@@ -2567,12 +2607,12 @@ export const extraRpcs = {
       },
       {
         url: "https://sepolia.gateway.tenderly.co",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
         url: "https://gateway.tenderly.co/public/sepolia",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.tenderly,
       },
       {
