@@ -2908,6 +2908,24 @@ export const extraRpcs = {
       },
     ],
   },
+  59144: {
+    rpcs: [
+      {
+        url: "https://linea.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      }
+    ],
+  },
+  534351: {
+    rpcs: [
+      {
+        url: "https://scroll-sepolia.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      }
+    ],
+  },
   431140: {
     rpcs: [
       {
