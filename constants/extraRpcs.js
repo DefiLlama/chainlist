@@ -418,7 +418,7 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
-      	"https://rpc.notadegen.com/goerli",
+      "https://rpc.notadegen.com/eth/goerli",
     ],
   },
   //Ropsten testnet deprecated
@@ -2384,6 +2384,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      "https://rpc.notadegen.com/base/goerli",
     ],
   },
   8453: {
@@ -2409,6 +2410,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      "https://rpc.notadegen.com/base",
     ],
   },
   11235: {
@@ -2580,7 +2582,7 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
-      	"https://rpc.notadegen.com/sepolia",
+      "https://rpc.notadegen.com/eth/sepolia",
     ]
   },
   7762959: {
