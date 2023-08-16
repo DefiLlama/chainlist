@@ -2062,6 +2062,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://zksync.meowrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.meowrpc,
+      }
     ]
   },
   1287: {
