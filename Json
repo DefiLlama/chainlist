@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "networkId": {
+      "type": "string"
+    },
+    "interface": {
+      "type": "string",
+      "enum": [
+        "cosmos",
+        "evm"
+      ]
+    },
+    "coins": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "symbol": {
+              "type": "string"
+            },
+            "denom": {
+              "type": "string"
+            },
+            "exponent": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "symbol",
+            "denom",
+            "exponent"
+          ]
+        }
+      ]
+    },
+    "rpc": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "custom": {
+      "type": "object",
+      "properties": {
+        "chainId": {
+          "type": "integer"
+        },
+        "networkId": {
+          "type": "integer"
+        },
+        "lcd": {
+          "type": "string"
+        },
+        "moniker": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "networkId",
+    "interface",
+    "coins",
+    "rpc",
+    "custom"
+  ]
+}
