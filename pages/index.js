@@ -7,7 +7,7 @@ import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
 
 export async function getStaticProps() {
-  const sortedChains = await generateChainData()
+  const sortedChains = await generateChainData();
 
   return {
     props: {
@@ -69,14 +69,14 @@ function Home({ chains }) {
             {filteredChains.map((chain, idx) => {
               if (idx === 2) {
                 return (
-                  <React.Fragment key={idx}>
+                  <React.Fragment key={JSON.stringify(chain) + "en" + "with-banner"}>
                     <AdBanner />
                     <Chain chain={chain} lang="en" />
                   </React.Fragment>
-                )
+                );
               }
 
-              return <Chain chain={chain} key={idx} lang="en" />
+              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
             })}
           </div>
         </React.Suspense>

@@ -11,8 +11,8 @@
     "serve": "serve out"
   },
   "dependencies": {
+    "@ariakit/react": "^0.2.12",
     "@tanstack/react-query": "^4.19.1",
-    "ariakit": "^2.0.0-next.42",
     "axios": "^1.2.1",
     "ethers": "^5.7.2",
     "fathom-client": "^3.5.0",
@@ -21,6 +21,7 @@
     "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-linkify": "^1.0.0-alpha",
     "serve": "^14.1.2",
     "zustand": "^4.1.5"
   },
