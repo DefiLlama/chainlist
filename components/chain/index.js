@@ -54,7 +54,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
 
   return (
     <>
-      <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 pb-0 rounded-[10px] flex flex-col gap-3 overflow-hidden" key={chain.chainId}>
+      <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 pb-0 rounded-[10px] flex flex-col gap-3 overflow-hidden">
         <Link href={`/chain/${chain.chainId}`} prefetch={false} className="flex items-center mx-auto gap-2">
           <img
             src={icon}
@@ -77,7 +77,9 @@ export default function Chain({ chain, buttonOnly, lang }) {
           </thead>
           <tbody>
             <tr>
-              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{`${chain.chainId} (0x${Number(chain.chainId).toString(16)})`}</td>
+              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{`${chain.chainId} (0x${Number(
+                chain.chainId,
+              ).toString(16)})`}</td>
               <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                 {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
               </td>

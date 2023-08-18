@@ -12,19 +12,17 @@ const toggleTheme = (e) => {
   document.getElementById("theme-toggle-dark-icon").classList.toggle("hidden");
   document.getElementById("theme-toggle-light-icon").classList.toggle("hidden");
   const result = element.classList.toggle("dark");
-  localStorage.setItem('theme', result ? 'dark' : 'light');
-}
+  localStorage.setItem("theme", result ? "dark" : "light");
+};
 
 const initTheme = () => {
   const element = document.body;
-  if(element.classList.contains('dark')) {
+  if (element.classList.contains("dark")) {
     document.getElementById("theme-toggle-light-icon").classList.remove("hidden");
-  }
-  else {
+  } else {
     document.getElementById("theme-toggle-dark-icon").classList.remove("hidden");
   }
-}
-
+};
 
 export default function Layout({ children, lang }) {
   useEffect(() => {
@@ -105,12 +103,7 @@ export default function Layout({ children, lang }) {
             <span className="text-base font-medium">{t("view-source-code")}</span>
           </a>
 
-          <a
-            className="flex items-center gap-2 mx-auto lg:ml-0"
-            href="#"
-            onClick={toggleTheme}
-            id="theme-toggle"
-          >
+          <a className="flex items-center gap-2 mx-auto lg:ml-0" href="#" onClick={toggleTheme} id="theme-toggle">
             <svg
               id="theme-toggle-dark-icon"
               className="w-5 h-5 hidden"
@@ -118,9 +111,7 @@ export default function Layout({ children, lang }) {
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              ></path>
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
             </svg>
             <svg
               id="theme-toggle-light-icon"
@@ -140,7 +131,7 @@ export default function Layout({ children, lang }) {
         </div>
       </div>
       <div className="dark:bg-[#181818] bg-[#f3f3f3] p-5 relative flex flex-col gap-5">
-        <Header lang={lang} chainName={chainName} key={chainName} />
+        <Header lang={lang} chainName={chainName} key={chainName + "header"} />
 
         {children}
       </div>
