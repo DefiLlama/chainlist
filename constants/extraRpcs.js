@@ -486,10 +486,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
+        url: "https://avalanche-fuji.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
       	url: "https://api.zan.top/node/v1/avax/fuji/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
     ],
   },
   56: {
