@@ -490,6 +490,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+      	url: "https://api.zan.top/node/v1/avax/fuji/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      },
     ],
   },
   56: {
@@ -678,6 +683,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
       },
+      {
+      	url: "https://api.zan.top/node/v1/avax/mainnet/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
     ],
   },
   250: {
@@ -2137,6 +2147,15 @@ export const extraRpcs = {
       },
     ],
   },
+  1442: {
+    rpcs: [
+        {
+      	url: "https://api.zan.top/node/v1/polygonzkevm/testnet/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
+    ],
+  },
   1618: {
     rpcs: ["https://send.catechain.com"],
   },
@@ -2973,6 +2992,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+      	url: "https://api.zan.top/node/v1/polygonzkevm/mainnet/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      }
     ],
   },
   59144: {
