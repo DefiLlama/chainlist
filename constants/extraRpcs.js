@@ -1607,7 +1607,13 @@ export const extraRpcs = {
     rpcs: ["https://l2.nahmii.io/"],
   },
   88: {
-    rpcs: ["https://rpc.tomochain.com"],
+    rpcs: ["https://rpc.tomochain.com",
+      {
+        url: "https://tomo.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],    
   },
   246: {
     rpcs: ["https://rpc.energyweb.org"],
