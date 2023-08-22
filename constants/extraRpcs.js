@@ -2424,6 +2424,11 @@ export const extraRpcs = {
   84531: {
     rpcs: [
       {
+        url: "https://base-goerli.diamondswap.org/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.diamondswap,
+      },
+      {
         url: "https://base-goerli.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -2454,6 +2459,11 @@ export const extraRpcs = {
   8453: {
     rpcs: [
       "https://developer-access-mainnet.base.org",
+      {
+        url: "https://base-mainnet.diamondswap.org/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.diamondswap,
+      },
       {
         url: "https://base.blockpi.network/v1/rpc/public",
         tracking: "limited",
