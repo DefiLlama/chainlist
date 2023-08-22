@@ -491,7 +491,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-      	url: "https://api.zan.top/node/v1/avax/fuji/public",
+      	url: "https://api.zan.top/node/v1/avax/fuji/public/ext/bc/C/rpc",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
@@ -684,7 +684,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.meowrpc,
       },
       {
-      	url: "https://api.zan.top/node/v1/avax/mainnet/public",
+      	url: "https://api.zan.top/node/v1/avax/mainnet/public/ext/bc/C/rpc",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       }
