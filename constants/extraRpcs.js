@@ -829,11 +829,6 @@ export const extraRpcs = {
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
       {
-        url: "https://node.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
-      {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
@@ -862,11 +857,6 @@ export const extraRpcs = {
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
-      {
-        url: "https://arb1.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
       {
         url: "https://rpc.ankr.com/arbitrum",
         tracking: "limited",
