@@ -3,7 +3,7 @@ import { mergeDeep } from "../utils/fetch.js";
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
 const privacyStatement = {
-"blockswap": "Blockswap RPC does not track any kind of user information (i.e. IP, location, etc.) nor is any information logged.",  
+"blockswap": "Blockswap RPC does not track any kind of user information (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer.",  
 "48Club":
     "IP addresses will be read for rate-limit purpose without being actively stored at application layer. Also notice that we don't actively purge user footprint in lower-level protocol.",
   unitedbloc:
