@@ -69,8 +69,8 @@ const privacyStatement = {
     "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
   markrgo:
     "We only collect the minimum necessary information to provide our blockchain RPC service (caching). We do not use your data for commercial purposes. Any collected data is short-term and will be automatically deleted within 24 hours if not actively used. https://www.markr.io/privacy-policy",
-  croswap:
-    "CroSwap records limited metadata from requests, including the number of requests, User-Agent, IP, and ASN. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
+  diamondswap:
+    "We record limited metadata from requests. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
   unifra:
     "Regarding the RPC(remote procedure call) data, we do not collect request data or request origin. We temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days. Only the amounts of RPC requests of users are recorded for accounting and billing purposes within longer time. https://unifra.io/",
   SFTProtocol:
@@ -829,11 +829,6 @@ export const extraRpcs = {
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
       {
-        url: "https://node.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
-      {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
@@ -862,11 +857,6 @@ export const extraRpcs = {
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
-      {
-        url: "https://arb1.croswap.com/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.croswap,
-      },
       {
         url: "https://rpc.ankr.com/arbitrum",
         tracking: "limited",
@@ -2440,6 +2430,11 @@ export const extraRpcs = {
   84531: {
     rpcs: [
       {
+        url: "https://base-goerli.diamondswap.org/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.diamondswap,
+      },
+      {
         url: "https://base-goerli.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -2470,6 +2465,11 @@ export const extraRpcs = {
   8453: {
     rpcs: [
       "https://developer-access-mainnet.base.org",
+      {
+        url: "https://base-mainnet.diamondswap.org/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.diamondswap,
+      },
       {
         url: "https://base.blockpi.network/v1/rpc/public",
         tracking: "limited",
