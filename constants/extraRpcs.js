@@ -360,16 +360,6 @@ export const extraRpcs = {
   5: {
     rpcs: [
       {
-        url: "https://builder-rpc1.0xblockswap.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.blockswap
-      },
-      {
-        url: "https://builder-rpc2.0xblockswap.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.blockswap
-      },
-      {
         url: "https://rpc.ankr.com/eth_goerli",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -430,6 +420,16 @@ export const extraRpcs = {
       	trackingDetails: privacyStatement.zan,
       },
       "https://rpc.notadegen.com/eth/goerli",
+      {
+        url: "https://builder-rpc1.0xblockswap.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockswap
+      },
+      {
+        url: "https://builder-rpc2.0xblockswap.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockswap
+      },
     ],
   },
   //Ropsten testnet deprecated
