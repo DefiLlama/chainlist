@@ -630,7 +630,7 @@ export const extraRpcs = {
   43114: {
     rpcs: [
       "https://api.avax.network/ext/bc/C/rpc",
-      "https://avax.rpcgator.com/",
+      //"https://avax.rpcgator.com/",
       "https://avalanche.public-rpc.com",
       {
         url: "https://rpc.ankr.com/avalanche",
