@@ -9,15 +9,17 @@ export const AdBanner = () => {
       {function (ad) {
         if (ad.icon !== "") {
           return (
-            <div className="flex flex-col h-full shadow dark:bg-[#0D0D0D] bg-white rounded-[10px] flex flex-col overflow-hidden h-full">
-              <div className="flex">
-                <NativeLink>
-                  <div data-cy="mediaContent" className="mediaContent">
-                    <NativeMediaContent />
-                  </div>
-                </NativeLink>
+            <div className="flex flex-col h-full w-full items-center">
+              <div className="flex flex-col w-fit bg-white dark:bg-[#0D0D0D] rounded-[10px] shadow overflow-hidden">
+                <div className="flex">
+                  <NativeLink>
+                    <div data-cy="mediaContent" className="mediaContent">
+                      <NativeMediaContent />
+                    </div>
+                  </NativeLink>
+                </div>
+                <NativeTextContent ad={ad} />
               </div>
-              <NativeTextContent ad={ad} />
             </div>
           );
         }
@@ -31,17 +33,22 @@ const NativeTextContent = ({ ad }) => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    const updateWidth = () => {
-      if (containerRef.current) {
-        setWidth(containerRef.current.clientWidth);
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setWidth(entry.contentRect.width)
       }
-    };
+    });
 
-    updateWidth(); // Initial width
-    window.addEventListener("resize", updateWidth);
+    const container = containerRef.current;
+
+    if (container) {
+      resizeObserver.observe(container);
+    }
 
     return () => {
-      window.removeEventListener("resize", updateWidth);
+      if (container) {
+        resizeObserver.unobserve(container);
+      }
     };
   }, []);
 
