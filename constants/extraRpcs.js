@@ -3020,7 +3020,12 @@ export const extraRpcs = {
         url: "https://scroll-sepolia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
-      }
+      },
+      {
+        url: "http://scroll-testnet-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra,
+      },
     ],
   },
   431140: {
