@@ -290,6 +290,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+      	url: "https://eth-mainnet.diamondswap.org/rpc",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.diamondswap,
+      },
     ],
   },
   2: {
