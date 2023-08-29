@@ -2465,6 +2465,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       "https://rpc.notadegen.com/base/goerli",
+      {
+        url: "https://base-goerli.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
     ],
   },
   8453: {
@@ -2506,6 +2511,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       "https://rpc.notadegen.com/base",
+      {
+        url: "https://base.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
     ],
   },
   11235: {
