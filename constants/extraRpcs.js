@@ -3,7 +3,8 @@ import { mergeDeep } from "../utils/fetch.js";
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
 const privacyStatement = {
-  "48Club":
+"blockswap": "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. For more information please visit: https://docs.pon.network/pon/privacy",  
+"48Club":
     "IP addresses will be read for rate-limit purpose without being actively stored at application layer. Also notice that we don't actively purge user footprint in lower-level protocol.",
   unitedbloc:
     "UnitedBloc does not collect or store any PII information. UnitedBloc does use IP addresses and transaction requests solely for service management purposes. Performance measurements such as rate limiting and routing rules require the analysis of IP addresses and response time measurements require the analysis of transaction requests. UnitedBloc does not and will never use RPC requests to front run transactions.",
@@ -424,6 +425,16 @@ export const extraRpcs = {
       	trackingDetails: privacyStatement.zan,
       },
       "https://rpc.notadegen.com/eth/goerli",
+      {
+        url: "https://builder-rpc1.0xblockswap.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.blockswap
+      },
+      {
+        url: "https://builder-rpc2.0xblockswap.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.blockswap
+      },
     ],
   },
   //Ropsten testnet deprecated
