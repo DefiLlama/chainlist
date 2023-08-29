@@ -3052,6 +3052,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.unifra,
       },
+      
+      {
+        url: "https://rpc.ankr.com/scroll_sepolia_testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+      "https://scroll-public.scroll-testnet.quiknode.pro/",
+      "http://scroll-sepolia-rpc.01no.de:8545/",
+      "https://scroll-sepolia.chainstacklabs.com",
     ],
   },
   431140: {
