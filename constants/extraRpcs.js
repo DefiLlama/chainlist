@@ -103,7 +103,11 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   ard:
     " (ARD) Ardenium Athena, we prioritize the protection of your privacy and the security of your data. This privacy policy summary provides an overview of how we handle and safeguard your personal information when you use our Ardenium Athena Explorer Blockchain services. However, please note that this is only a summary, and for complete details, we encourage you to review the full privacy policy available at soma, Information Collection: When you use our services, we may collect personal information, such as mobile device details, operation records, transaction records, wallet addresses, and other relevant data. For a more comprehensive understanding, please refer to our full privacy policy at https://docs.ardenium.wiki/ardenium-network/disclaimer.",
   zan:
-    "ZAN Node Service generally does not store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs except for one senario ——we may track your IP address when you are using our RPCs and will delete it immediately when you stoping using our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf"
+    "ZAN Node Service generally does not store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs except for one senario ——we may track your IP address when you are using our RPCs and will delete it immediately when you stoping using our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf",
+  quicknode:
+    "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
+  chainstack:
+    "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/"
 
 };
 
@@ -3073,9 +3077,17 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
-      "https://scroll-public.scroll-testnet.quiknode.pro/",
+      {
+        url: "https://scroll-public.scroll-testnet.quiknode.pro/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode
+      },
+      {
+        url: "https://scroll-sepolia.chainstacklabs.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack
+      },
       "http://scroll-sepolia-rpc.01no.de:8545/",
-      "https://scroll-sepolia.chainstacklabs.com",
     ],
   },
   431140: {
