@@ -1348,7 +1348,13 @@ export const extraRpcs = {
     rpcs: ["https://eth-rpc-api.thetatoken.org/rpc"],
   },
   42262: {
-    rpcs: ["https://emerald.oasis.dev/"],
+    rpcs: ["https://emerald.oasis.dev/",
+      {
+        url: "https://1rpc.io/oasis/emerald",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
+    ],
   },
   40: {
     rpcs: [
@@ -3037,6 +3043,11 @@ export const extraRpcs = {
         url: "https://linea.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://1rpc.io/linea",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       }
     ],
   },
@@ -3051,12 +3062,16 @@ export const extraRpcs = {
         url: "http://scroll-testnet-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra,
-      },
-      
+      },      
       {
         url: "https://rpc.ankr.com/scroll_sepolia_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://1rpc.io/scroll/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
       "https://scroll-public.scroll-testnet.quiknode.pro/",
       "http://scroll-sepolia-rpc.01no.de:8545/",
