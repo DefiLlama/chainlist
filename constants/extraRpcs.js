@@ -612,6 +612,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+        url: "https://bsc.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   97: {
@@ -707,7 +712,12 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/avax/mainnet/public/ext/bc/C/rpc",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
+      {
+        url: "https://avalanche.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   250: {
@@ -757,6 +767,11 @@ export const extraRpcs = {
         url: "https://rpc.fantom.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
+      },
+      {
+        url: "https://fantom.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -1011,6 +1026,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://arbitrum-nova.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },  
     ],
   },
   8217: {
@@ -1031,6 +1051,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/klay",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://klaytn.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -1068,6 +1093,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/aurora",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://aurora.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -1293,6 +1323,11 @@ export const extraRpcs = {
         url: "https://gnosis.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://gnosis.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -2118,7 +2153,12 @@ export const extraRpcs = {
         url: "https://zksync.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
-      }
+      },
+      {
+        url: "https://zksync.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ]
   },
   1287: {
@@ -2290,6 +2330,11 @@ export const extraRpcs = {
         url: "https://mantle-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://mantle.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -2536,7 +2581,12 @@ export const extraRpcs = {
         url: "https://base.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
+      {
+        url: "https://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   11235: {
@@ -3038,7 +3088,12 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/polygonzkevm/mainnet/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
+      {
+        url: "https://polygon-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   59144: {
@@ -3052,7 +3107,12 @@ export const extraRpcs = {
         url: "https://1rpc.io/linea",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      }
+      },
+      {
+        url: "https://linea.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   534351: {
