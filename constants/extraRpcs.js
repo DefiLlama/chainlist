@@ -105,7 +105,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   zan:
     "ZAN Node Service generally does not store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs except for one senario ——we may track your IP address when you are using our RPCs and will delete it immediately when you stoping using our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf",
   quicknode:
-    "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
+  "QuickNode does not sell your personal information. Your privacy is important to us, and we are committed to protecting your data. We use your information only for the purposes stated in our Privacy Policy (https://www.quicknode.com/privacy) and do not engage in selling or trading your personal data to third parties.",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/"
 
@@ -114,7 +114,6 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
 export const extraRpcs = {
   1: {
     rpcs: [
-      // Quicknode -> tracks IP
       {
         url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
         tracking: "none",
@@ -244,7 +243,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.gashawk,
       },
       //"http://127.0.0.1:8545",
-      //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
       //"https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
       //"https://api.mycryptoapi.com/eth",
       //"https://mainnet-nethermind.blockscout.com/",
@@ -785,7 +783,11 @@ export const extraRpcs = {
       },
       "https://polygon-rpc.com",
       "https://rpc-mainnet.matic.network",
-      "https://rpc-mainnet.matic.quiknode.pro",
+      {
+        url: "https://rpc-mainnet.matic.quiknode.pro",
+        tracking: "limited",
+        trackingDetails: privacyStatement.quicknode,
+      },
       "https://matic-mainnet-full-rpc.bwarelabs.com",
       "https://matic-mainnet-archive-rpc.bwarelabs.com",
       "https://poly-rpc.gateway.pokt.network/",
@@ -3139,7 +3141,7 @@ export const extraRpcs = {
       },
       {
         url: "https://scroll-public.scroll-testnet.quiknode.pro/",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.quicknode
       },
       {
