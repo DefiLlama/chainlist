@@ -105,7 +105,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   zan:
     "ZAN Node Service generally does not store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs except for one senario ——we may track your IP address when you are using our RPCs and will delete it immediately when you stoping using our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf",
   quicknode:
-  "QuickNode does not sell your personal information. Your privacy is important to us, and we are committed to protecting your data. We use your information only for the purposes stated in our Privacy Policy (https://www.quicknode.com/privacy) and do not engage in selling or trading your personal data to third parties.",
+    "QuickNode does not sell your personal information. Your privacy is important to us, and we are committed to protecting your data. We use your information only for the purposes stated in our Privacy Policy (https://www.quicknode.com/privacy) and do not engage in selling or trading your personal data to third parties.",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/"
 
