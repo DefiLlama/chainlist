@@ -3123,7 +3123,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "http://scroll-testnet-public.unifra.io",
+        url: "https://scroll-testnet-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra,
       },      
