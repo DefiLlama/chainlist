@@ -1061,6 +1061,11 @@ export const extraRpcs = {
   },
   1666600000: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://api.harmony.one",
       "https://a.api.s0.t.hmny.io",
       "https://api.s0.t.hmny.io",
@@ -1080,6 +1085,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
     ],
+  },
+  1666700000: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/harmony/testnet-0/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
   },
   1313161554: {
     rpcs: [
@@ -1291,6 +1305,11 @@ export const extraRpcs = {
   },
   100: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/gnosis/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://rpc.gnosischain.com",
       "https://xdai-rpc.gateway.pokt.network",
       "https://xdai-archive.blockscout.com",
@@ -1333,6 +1352,11 @@ export const extraRpcs = {
   },
   10200: {
     rpcs: [
+      {
+        url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://rpc.chiadochain.net",
       {
         url: "https://rpc.chiado.gnosis.gateway.fm",
@@ -1419,6 +1443,11 @@ export const extraRpcs = {
   },
   1284: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://rpc.api.moonbeam.network",
       {
         url: "https://moonbeam.api.onfinality.io/public",
@@ -2501,6 +2530,11 @@ export const extraRpcs = {
   84531: {
     rpcs: [
       {
+        url: "https://endpoints.omniatech.io/v1/base/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
         url: "https://base-goerli.diamondswap.org/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.diamondswap,
@@ -2540,6 +2574,11 @@ export const extraRpcs = {
   },
   8453: {
     rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
       "https://developer-access-mainnet.base.org",
       {
         url: "https://base-mainnet.diamondswap.org/rpc",
