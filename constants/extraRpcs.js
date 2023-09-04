@@ -1061,11 +1061,6 @@ export const extraRpcs = {
   },
   1666600000: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://api.harmony.one",
       "https://a.api.s0.t.hmny.io",
       "https://api.s0.t.hmny.io",
@@ -1083,6 +1078,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/one",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -1305,11 +1305,6 @@ export const extraRpcs = {
   },
   100: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/gnosis/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://rpc.gnosischain.com",
       "https://xdai-rpc.gateway.pokt.network",
       "https://xdai-archive.blockscout.com",
@@ -1348,20 +1343,25 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/gnosis/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   10200: {
     rpcs: [
-      {
-        url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://rpc.chiadochain.net",
       {
         url: "https://rpc.chiado.gnosis.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
+      },
+      {
+        url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -1443,11 +1443,6 @@ export const extraRpcs = {
   },
   1284: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://rpc.api.moonbeam.network",
       {
         url: "https://moonbeam.api.onfinality.io/public",
@@ -1493,6 +1488,11 @@ export const extraRpcs = {
         url: "wss://moonbeam-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -2530,11 +2530,6 @@ export const extraRpcs = {
   84531: {
     rpcs: [
       {
-        url: "https://endpoints.omniatech.io/v1/base/goerli/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://base-goerli.diamondswap.org/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.diamondswap,
@@ -2569,16 +2564,16 @@ export const extraRpcs = {
         url: "https://base-goerli.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/base/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   8453: {
     rpcs: [
-      {
-        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://developer-access-mainnet.base.org",
       {
         url: "https://base-mainnet.diamondswap.org/rpc",
@@ -2625,6 +2620,11 @@ export const extraRpcs = {
         url: "https://base.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
