@@ -107,8 +107,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   quicknode:
     "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
   chainstack:
-    "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/"
-
+    "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
+  portfoliox:
+    "At Portfolio-X.xyz, your privacy is our top priority. We want to reassure you that we do not collect or track any user information at the RPC level, including IP addresses or location data, and we do not maintain any logs of such information. Your personal data is treated with the utmost care. All data transfers within Portfolio-X.xyz are safeguarded through robust encryption protocols, ensuring the security and confidentiality of your information. We do not transmit any transactions to external relayers, ensuring the privacy of your transactions. To enhance your experience on our website, we use analytical cookies that help us understand which content is most popular and enable us to continuously improve and update our platform. These cookies process and store data such as your browser type, referrer URLs, operating system, date/time stamp, page views, clicks on our website, and a truncated version of your IP address. For more detailed information regarding our privacy practices, please refer to our https://portfolio-x.xyz/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -3261,6 +3262,15 @@ export const extraRpcs = {
   },
   8131: {
     rpcs: ["https://testnet.meerlabs.com"]
+  },
+  530: {
+    rpcs: [
+      {
+        url: "https://fx-json-web3.portfolio-x.xyz:8545/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.portfoliox,
+      },
+    ],
   },
 
 };
