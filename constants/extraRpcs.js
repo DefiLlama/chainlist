@@ -1079,7 +1079,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
+  },
+  1666700000: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/harmony/testnet-0/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
   },
   1313161554: {
     rpcs: [
@@ -1329,6 +1343,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/gnosis/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   10200: {
@@ -1338,6 +1357,11 @@ export const extraRpcs = {
         url: "https://rpc.chiado.gnosis.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
+      },
+      {
+        url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -1464,6 +1488,11 @@ export const extraRpcs = {
         url: "wss://moonbeam-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -2535,7 +2564,12 @@ export const extraRpcs = {
         url: "https://base-goerli.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/base/goerli/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   8453: {
@@ -2586,6 +2620,11 @@ export const extraRpcs = {
         url: "https://base.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
