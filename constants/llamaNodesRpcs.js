@@ -12,6 +12,17 @@ export const llamaNodesRpcs = {
       },
     ]
   },
+  56: {
+    name: 'BNB Chain LlamaNodes',
+    rpcs: [
+      {
+        url: 'https://binance.llamarpc.com',
+        tracking: 'none',
+        trackingDetails: privacyStatement,
+        isOpenSource: true,
+      },
+    ]
+  },
   137: {
     name: 'Polygon LlamaNodes',
     rpcs: [
