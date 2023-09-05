@@ -785,7 +785,11 @@ export const extraRpcs = {
       },
       "https://polygon-rpc.com",
       "https://rpc-mainnet.matic.network",
-      "https://rpc-mainnet.matic.quiknode.pro",
+      {
+        url: "https://rpc-mainnet.matic.quiknode.pro",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
       "https://matic-mainnet-full-rpc.bwarelabs.com",
       "https://matic-mainnet-archive-rpc.bwarelabs.com",
       "https://poly-rpc.gateway.pokt.network/",
