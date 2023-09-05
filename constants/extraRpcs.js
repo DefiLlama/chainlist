@@ -2754,6 +2754,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
+        url: "https://sphinx.shardeum.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.shardeum,
+      },
+      {
+        url: "https://dapps.shardeum.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.shardeum,
+      },
+      {
       	url: "https://api.zan.top/node/v1/eth/sepolia/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
@@ -3238,6 +3248,24 @@ export const extraRpcs = {
         url: "https://syscoin-tanenbaum-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      }
+    ],
+  },
+  8081: {
+    rpcs: [
+      {
+        url: "https://dapps.shardeum.org/",
+        tracking: "none",
+        trackingDetails: privacyStatement.shardeum,
+      }
+    ],
+  },
+  8082: {
+    rpcs: [
+      {
+        url: "https://sphinx.shardeum.org/",
+        tracking: "none",
+        trackingDetails: privacyStatement.shardeum,
       }
     ],
   },
