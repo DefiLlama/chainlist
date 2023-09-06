@@ -3255,7 +3255,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://dapps.shardeum.org/",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.shardeum,
       }
     ],
@@ -3264,7 +3264,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://sphinx.shardeum.org/",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.shardeum,
       }
     ],
