@@ -1301,6 +1301,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://metis.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   1246: {
@@ -1514,6 +1519,11 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.one",
       "https://pokt-api.iotex.io",
       "https://babel-api.fastblocks.io",
+      {
+        url: "https://iotex.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },    
     ],
   },
   66: {
