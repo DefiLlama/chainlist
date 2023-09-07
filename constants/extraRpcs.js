@@ -2755,12 +2755,12 @@ export const extraRpcs = {
       },
       {
         url: "https://sphinx.shardeum.org/",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.shardeum,
       },
       {
         url: "https://dapps.shardeum.org/",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.shardeum,
       },
       {
@@ -3255,7 +3255,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://dapps.shardeum.org/",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.shardeum,
       }
     ],
@@ -3264,7 +3264,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://sphinx.shardeum.org/",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.shardeum,
       }
     ],
