@@ -108,7 +108,6 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/"
-
 };
 
 export const extraRpcs = {
@@ -3305,7 +3304,9 @@ export const extraRpcs = {
   8131: {
     rpcs: ["https://testnet.meerlabs.com"]
   },
-
+  530: {
+    rpcs: ["https://fx-json-web3.portfolio-x.xyz:8545/"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
