@@ -1524,6 +1524,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://okt-chain.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
    
   },
