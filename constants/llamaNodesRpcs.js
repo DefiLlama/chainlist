@@ -34,6 +34,17 @@ export const llamaNodesRpcs = {
       },
     ]
   },
+  42161: {
+    name: 'Arbitrum LlamaNodes',
+    rpcs: [
+      {
+        url: 'https://arbitrum.llamarpc.com',
+        tracking: 'none',
+        trackingDetails: privacyStatement,
+        isOpenSource: true,
+      },
+    ]
+  },
 }
 
 export const llamaNodesRpcByUrl = {};
