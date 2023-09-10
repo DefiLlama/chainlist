@@ -2846,7 +2846,7 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   20181205: {
-    rpcs: ["https://hz.rpc.qkiscan.cn"],
+    rpcs: ["https://hz.rpc.qkiscan.cn","https://rpc1.qkiscan.io","https://rpc2.qkiscan.io","https://rpc3.qkiscan.io"],
   },
   28945486: {
     rpcs: [],
