@@ -2434,8 +2434,6 @@ export const extraRpcs = {
   2222: {
     rpcs: [
       "https://evm.kava.io",
-      "https://evm.kava.chainstacklabs.com",
-      "wss://wevm.kava.chainstacklabs.com",
       {
         url: "https://kava.api.onfinality.io/public",
         tracking: "limited",
@@ -2451,6 +2449,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       }, 
+      "https://evm.kava.chainstacklabs.com",
+      "wss://wevm.kava.chainstacklabs.com",
     ],
   },
   2559: {
