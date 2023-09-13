@@ -3487,6 +3487,9 @@ export const extraRpcs = {
   530: {
     rpcs: ["https://fx-json-web3.portfolio-x.xyz:8545/"],
   },
+  1003: {
+    rpcs: ["https://rpc.softnote.com/"]
+  },    
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
