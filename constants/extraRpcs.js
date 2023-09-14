@@ -109,7 +109,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
-    "Shardeum follows a standard procedure of using log files. These files log visitors when they visit websites... The information collected by log files includes IP addresses, browser type, ISP, date and time stamp, referring/exit pages, and potentially the number of clicks.https://shardeum.org/privacy-policy/"
+    "Shardeum follows a standard procedure of using log files. These files log visitors when they visit websites... The information collected by log files includes IP addresses, browser type, ISP, date and time stamp, referring/exit pages, and potentially the number of clicks.https://shardeum.org/privacy-policy/",
+  softnote:
+    "Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on CrispMind, which are sent directly to users’ browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising.https://tectum.io/privacy/"
 };
 
 export const extraRpcs = {
@@ -1674,7 +1676,11 @@ export const extraRpcs = {
     rpcs: [
       "https://fuse-rpc.gateway.pokt.network/",
       "https://rpc.fuse.io",
-      "https://fuse-mainnet.chainstacklabs.com",
+      {
+        url: "https://fuse-mainnet.chainstacklabs.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack
+      },
       {
         url: "https://fuse.api.onfinality.io/public",
         tracking: "limited",
@@ -2449,8 +2455,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       }, 
-      "https://evm.kava.chainstacklabs.com",
-      "wss://wevm.kava.chainstacklabs.com",
+      {
+        url: "https://evm.kava.chainstacklabs.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack
+      },
+      {
+        url: "wss://wevm.kava.chainstacklabs.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack
+      }
     ],
   },
   2559: {
@@ -3490,7 +3504,13 @@ export const extraRpcs = {
     rpcs: ["https://fx-json-web3.portfolio-x.xyz:8545/"],
   },
   1003: {
-    rpcs: ["https://rpc.softnote.com/"]
+    rpcs: [
+      {
+        url: "https://rpc.softnote.com/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.softnote
+      },
+    ]
   },    
 };
 
