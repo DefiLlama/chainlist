@@ -23,6 +23,17 @@ export const llamaNodesRpcs = {
       },
     ]
   },
+  10: {
+    name: 'Optimism LlamaNodes',
+    rpcs: [
+      {
+        url: 'https://optimism.llamarpc.com',
+        tracking: 'none',
+        trackingDetails: privacyStatement,
+        isOpenSource: true,
+      },
+    ]
+  },
   137: {
     name: 'Polygon LlamaNodes',
     rpcs: [
