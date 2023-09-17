@@ -2104,6 +2104,9 @@ export const extraRpcs = {
   163: {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
+  169: {
+    rpcs: ["https://pacific-rpc.manta.network/http"],
+  },
   186: {
     rpcs: ["https://rpc.seelen.pro/"],
   },
