@@ -2501,6 +2501,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpc.ankr.com/mantle",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
     ],
   },
   5197: {
