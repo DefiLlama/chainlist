@@ -2105,13 +2105,7 @@ export const extraRpcs = {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
   169: {
-    rpcs: [
-      {
-        url : "https://pacific-rpc.manta.network/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      }
-    ],
+    rpcs: ["https://pacific-rpc.manta.network/http"],
   },
   186: {
     rpcs: ["https://rpc.seelen.pro/"],
