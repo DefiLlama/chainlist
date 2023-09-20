@@ -93,10 +93,10 @@ const NativeTextContent = ({ ad }) => {
     <div className="flex items-center justify-center px-3 py-3 w-full h-full" id="ctaContainer" ref={containerRef}>
       <AdvertiserIcon ad={ad} small={width < 300} />
       <div className="grow flex items-center justify-between overflow-hidden">
-        <div class="grow truncate">
+        <div className="grow truncate">
           <AdvertiserName ad={ad} small={width < 300} />
         </div>
-        <div class="flex-none ml-4">
+        <div className="flex-none ml-4">
           <AdvertiserCta ad={ad} small={width < 300} />
         </div>
       </div>
@@ -106,7 +106,7 @@ const NativeTextContent = ({ ad }) => {
 
 const AdvertiserIcon = ({ ad, small = false }) => {
   return (
-    <div class="flex-none mr-2">
+    <div className="flex-none mr-2">
       <NativeLink>
         <img className={`${small ? "w-8" : "w-10"} rounded-full`} alt={ad.icon} src={ad.icon} />
       </NativeLink>
