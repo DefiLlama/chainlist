@@ -494,6 +494,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://fantom.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   "4444": {
@@ -1706,6 +1711,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://shiden.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   592: {
@@ -2184,6 +2194,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-karura.aca-staging.network",
       "https://rpc.evm.karura.network",
+      {
+        url: "https://karura.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   707: {
@@ -2197,6 +2212,11 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-acala.aca-staging.network",
       "https://rpc.evm.acala.network",
+      {
+        url: "https://karura.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   803: {
@@ -2227,6 +2247,11 @@ export const extraRpcs = {
         url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://klaytn.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
@@ -2789,6 +2814,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://base.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
