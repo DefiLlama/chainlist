@@ -2212,11 +2212,6 @@ export const extraRpcs = {
     rpcs: [
       "https://eth-rpc-acala.aca-staging.network",
       "https://rpc.evm.acala.network",
-      {
-        url: "https://karura.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
     ],
   },
   803: {
