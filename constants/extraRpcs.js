@@ -3544,7 +3544,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.softnote
       },
     ]
-  },    
+  },
+    3639: {
+     rpcs: ["https://rpc.ichainscan.com"]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
