@@ -1120,7 +1120,7 @@ export const extraRpcs = {
       {
         url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/public ",
         tracking: "limited",
-        trackingDetails: privacyStatement.Blockpi,
+        trackingDetails: privacyStatement.blockpi,
       },
     ],
   },
