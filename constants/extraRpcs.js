@@ -1115,6 +1115,15 @@ export const extraRpcs = {
       },  
     ],
   },
+  421614: {
+    rpcs: [
+      {
+        url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/public ",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   8217: {
     rpcs: [
       "https://public-node-api.klaytnapi.com/v1/cypress",
