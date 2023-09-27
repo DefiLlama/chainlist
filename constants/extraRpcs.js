@@ -1115,7 +1115,7 @@ export const extraRpcs = {
       },  
     ],
   },
-  421613: {
+  421614: {
     rpcs: [
       {
         url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/public ",
