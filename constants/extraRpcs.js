@@ -2573,6 +2573,19 @@ export const extraRpcs = {
   7341: {
     rpcs: ["https://rpc.shyft.network/"],
   },
+  7700: {
+    rpcs: [
+    "https://canto.slingshot.finance",
+    "https://canto.neobase.one",
+    "https://mainnode.plexnode.org:8545",
+    "https://canto.gravitychain.io/",
+    "https://canto.evm.chandrastation.com/",
+    "https://jsonrpc.canto.nodestake.top/",
+    "https://canto.dexvaults.com/",
+    "wss://canto.gravitychain.io:8546",
+    "wss://canto.dexvaults.com/ws"
+    ]
+  },
   8000: {
     rpcs: ["https://dataseed.testnet.teleport.network"],
   },
