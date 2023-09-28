@@ -2575,9 +2575,6 @@ export const extraRpcs = {
   },
   7700: {
     rpcs: [
-    "https://canto.slingshot.finance",
-    "https://canto.neobase.one",
-    "https://mainnode.plexnode.org:8545",
     "https://canto.gravitychain.io/",
     "https://canto.evm.chandrastation.com/",
     "https://jsonrpc.canto.nodestake.top/",
