@@ -1934,6 +1934,20 @@ export const extraRpcs = {
   17: {
     rpcs: ["https://rpc.thaifi.com"],
   },
+  17000: {
+    rpcs: [
+      {
+        url: "https://ethereum-holesky.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://etherem-holesky.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   22: {
     rpcs: ["https://api.trinity-tech.io/eid", "https://api.elastos.io/eid"],
   },
