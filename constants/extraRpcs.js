@@ -1177,6 +1177,20 @@ export const extraRpcs = {
       },
     ],
   },
+  204: {
+    rpcs: [
+      {
+        url: "https://opbnb.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://opbnb.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   1666700000: {
     rpcs: [
       {
