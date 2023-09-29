@@ -3061,6 +3061,16 @@ export const extraRpcs = {
       	trackingDetails: privacyStatement.zan,
       },
       "https://rpc.notadegen.com/eth/sepolia",
+      {
+        url: "https://ethereum-sepolia.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://ethereum-sepolia.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ]
   },
   7762959: {
