@@ -1177,6 +1177,20 @@ export const extraRpcs = {
       },
     ],
   },
+  204: {
+    rpcs: [
+      {
+        url: "https://opbnb.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://opbnb.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   1666700000: {
     rpcs: [
       {
@@ -1454,6 +1468,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://gnosis.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://gnosis.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   10200: {
@@ -1468,6 +1492,16 @@ export const extraRpcs = {
         url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://gnosis-chiado.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://gnosis-chiado.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -1510,6 +1544,16 @@ export const extraRpcs = {
         url: "wss://moonriver-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://moonriver.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://moonriver.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -1599,6 +1643,16 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://moonbeam.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://moonbeam.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
@@ -1893,6 +1947,20 @@ export const extraRpcs = {
   },
   17: {
     rpcs: ["https://rpc.thaifi.com"],
+  },
+  17000: {
+    rpcs: [
+      {
+        url: "https://ethereum-holesky.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://etherem-holesky.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
   },
   22: {
     rpcs: ["https://api.trinity-tech.io/eid", "https://api.elastos.io/eid"],
@@ -3021,6 +3089,16 @@ export const extraRpcs = {
       	trackingDetails: privacyStatement.zan,
       },
       "https://rpc.notadegen.com/eth/sepolia",
+      {
+        url: "https://ethereum-sepolia.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://ethereum-sepolia.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ]
   },
   7762959: {
