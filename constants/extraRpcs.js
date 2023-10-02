@@ -3643,7 +3643,7 @@ export const extraRpcs = {
     ]
   },
   2049: {
-    rpcs: ["https://msc-rpc.movoscan.com/"]
+    rpcs: ["https://msc-rpc.movoscan.com/"],
   },
 };
 
