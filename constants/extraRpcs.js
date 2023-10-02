@@ -3641,7 +3641,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.softnote
       },
     ]
-  },    
+  },
+  2049: {
+    rpcs: ["https://msc-rpc.movoscan.com/"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
