@@ -3574,7 +3574,9 @@ export const extraRpcs = {
     rpcs: [
       "https://rollux.public-rpc.com",
       "wss://rpc.rollux.com/wss",			
-      "https://rpc.rollux.com"      
+      "https://rpc.rollux.com",
+      "https://rollux.rpc.syscoin.org",
+      "wss://rollux.rpc.syscoin.org/wss"
     ],
   },
   5700: {
@@ -3589,7 +3591,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-    ],
+      {
+        url: "https://rollux.rpc.tanenbaum.io",
+        tracking: "none",
+      },
+      {
+        url: "wss://rollux.rpc.tanenbaum.io/wss",
+        tracking: "none",
+      },
+   ],
   },
   8081: {
     rpcs: [
