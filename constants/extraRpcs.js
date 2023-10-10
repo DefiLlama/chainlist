@@ -940,6 +940,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/cro",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   338: {
@@ -1188,6 +1193,11 @@ export const extraRpcs = {
         url: "wss://opbnb.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://1rpc.io/opbnb",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ],
   },
@@ -1503,6 +1513,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/gnosis",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   1231: {
@@ -1690,6 +1705,11 @@ export const extraRpcs = {
         url: "https://okt-chain.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://1rpc.io/oktc",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ],
    
@@ -2606,6 +2626,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://1rpc.io/mantle",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      }      
     ],
   },
   5197: {
@@ -3644,6 +3669,15 @@ export const extraRpcs = {
   },
   2049: {
     rpcs: ["https://msc-rpc.movoscan.com/"],
+  },
+  23294: {
+    rpcs: [
+      {
+        url: "https://1rpc.io/oasis/sapphire",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc
+      },
+    ]
   },
 };
 
