@@ -2997,6 +2997,13 @@ export const extraRpcs = {
   281121: {
     rpcs: ["rpcWorking:false"],
   },
+  534352: {
+    rpcs: [
+      {
+        url: "https://scroll.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
   534353: {
     rpcs: [
       {
