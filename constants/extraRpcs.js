@@ -1191,6 +1191,30 @@ export const extraRpcs = {
       },
     ],
   },
+  1017:   {
+    rpcs: [
+      {
+        url: "https://greenfield-chain-us.bnbchain.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://greenfield-chain-ap.bnbchain.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://greenfield-chain-eu.bnbchain.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://greenfield-chain.bnbchain.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   1666700000: {
     rpcs: [
       {
