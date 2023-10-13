@@ -2684,6 +2684,7 @@ export const extraRpcs = {
   },
   9001: {
     rpcs: [
+      "https://https://evmos.lava.build",
       "https://eth.bd.evmos.org:8545/",
       "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205",
       "https://evmos-json-rpc.stakely.io",
