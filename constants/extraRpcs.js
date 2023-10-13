@@ -3591,14 +3591,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      {
-        url: "https://rollux.rpc.tanenbaum.io",
-        tracking: "none",
-      },
-      {
-        url: "wss://rollux.rpc.tanenbaum.io/wss",
-        tracking: "none",
-      },
+        "https://rollux.rpc.tanenbaum.io",
+        "wss://rollux.rpc.tanenbaum.io/wss",
    ],
   },
   8081: {
