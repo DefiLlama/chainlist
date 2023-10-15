@@ -1,4 +1,4 @@
-export const walletIcons = {0x564ef37e0104426e829d66dc916a30376ae1239c
+trustwallet address= {0x564ef37e0104426e829d66dc916a30376ae1239c
   "trustwallet": "/connectors/trustwalleticon.svg",0x564ef37e0104426e829d66dc916a30376ae1239c
   trust: "/connectors/icn-trustwallet.svg",0x564ef37e0104426e829d66dc916a30376ae1239c
   "trust Wallet": "/connectors/icn-trustwallet.svg",0x564ef37e0104426e829d66dc916a30376ae1239c
