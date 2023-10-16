@@ -3692,7 +3692,7 @@ export const extraRpcs = {
   },
   3068: {
     rpcs: [
-      "https://public-01.mainnet.thebifrost.io/rpc”,
+      "https://public-01.mainnet.thebifrost.io/rpc",
       "https://public-02.mainnet.thebifrost.io/rpc"
     ]
   }
