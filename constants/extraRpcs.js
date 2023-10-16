@@ -3031,11 +3031,14 @@ export const extraRpcs = {
   },
   534352: {
     rpcs: [
+      "https://rpc.scroll.io",
       {
         url: "https://scroll.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+    ],
+  },
   534353: {
     rpcs: [
       {
