@@ -3690,6 +3690,19 @@ export const extraRpcs = {
       },
     ]
   },
+    1339: {
+    rpcs: [
+     "https://rpc.elysiumchain.tech/,
+      "https://rpc.elysiumchain.us/",
+   ]
+
+  },
+  1338: {
+    rpcs: [
+     "https://rpc.atlantischain.network/",
+    ]
+
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
