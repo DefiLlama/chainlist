@@ -128,11 +128,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://eth.merkle.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.merkle,
-      },
-      {
         url: "https://rpc.ankr.com/eth",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -316,6 +311,11 @@ export const extraRpcs = {
       	url: "https://eth-mainnet.diamondswap.org/rpc",
       	tracking: "limited",
       	trackingDetails: privacyStatement.diamondswap,
+      },
+      {
+        url: "https://eth.merkle.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.merkle,
       },
     ],
   },
