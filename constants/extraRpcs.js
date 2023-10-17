@@ -113,7 +113,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   softnote:
     "CrispMind collects personal information and uses cookies for site operation, analysis, and enhancement, with no control over third-party cookies.https://softnote.com/privacy/",
   lava:
-    "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy"
+    "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy",
+  bahamas:
+    "We do not collect any information from your request into our RPC. This means that every interaction you have with our RPC system is treated with the utmost confidentiality and respect for your privacy. We do not store or retain any data transmitted through RPC requests, ensuring that your sensitive information remains secure and your trust in our services intact. Your privacy is paramount, and our RPC policy reflects our dedication to preserving it."
 };
 
 export const extraRpcs = {
@@ -3699,6 +3701,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc
       },
     ]
+  },
+  237: {
+    rpcs: ["https://rpc.bahamaschain.io"]
   },
 };
 
