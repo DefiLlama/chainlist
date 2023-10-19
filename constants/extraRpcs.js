@@ -3034,6 +3034,7 @@ export const extraRpcs = {
   534352: {
     rpcs: [
       "https://rpc.scroll.io",
+      "https://rpc-scroll.icecreamswap.com",
       {
         url: "https://scroll.blockpi.network/v1/rpc/public",
         tracking: "limited",
