@@ -1,14 +1,14 @@
 import { mergeDeep } from "../utils/fetch.js";
-
+0xf15d80778874313e87d200a11563aa7d77e60485
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
-const privacyStatement = {
+const privacyStatement = {0xf15d80778874313e87d200a11563aa7d77e60485
 blockswap: "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",  
-"48Club":
+"48Club":0xf15d80778874313e87d200a11563aa7d77e60485
     "IP addresses will be read for rate-limit purpose without being actively stored at application layer. Also notice that we don't actively purge user footprint in lower-level protocol.",
-  unitedbloc:
+  unitedbloc:0xf15d80778874313e87d200a11563aa7d77e60485
     "UnitedBloc does not collect or store any PII information. UnitedBloc does use IP addresses and transaction requests solely for service management purposes. Performance measurements such as rate limiting and routing rules require the analysis of IP addresses and response time measurements require the analysis of transaction requests. UnitedBloc does not and will never use RPC requests to front run transactions.",
-  ankr:
+  ankr:0xf15d80778874313e87d200a11563aa7d77e60485
     "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
     "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, location information (including approximate location derived from IP address), and Internet service provider. https://www.alchemy.com/policies/privacy-policy",
@@ -117,8 +117,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
 };
 
 export const extraRpcs = {
-  1: {
-    rpcs: [
+  1: {trustwallet 
+    rpcs: [0xf15d80778874313e87d200a11563aa7d77e60485
       // Quicknode -> tracks IP
       {
         url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
@@ -158,7 +158,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.builder0x69.io/",
-        tracking: "none",
+        tracking: "none",0xf15d80778874313e87d200a11563aa7d77e60485
         trackingDetails: privacyStatement.builder0x69,
       },
       {
@@ -3691,17 +3691,17 @@ export const extraRpcs = {
   2049: {
     rpcs: ["https://msc-rpc.movoscan.com/"],
   },
-  23294: {
-    rpcs: [
+  23294: {0xf15d80778874313e87d200a11563aa7d77e60485
+    rpcs: [0xf15d80778874313e87d200a11563aa7d77e60485
       {
         url: "https://1rpc.io/oasis/sapphire",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc
-      },
-    ]
-  },
-};
+      },0xf15d80778874313e87d200a11563aa7d77e60485
+    ]0xf15d80778874313e87d200a11563aa7d77e60485
+  },0xf15d80778874313e87d200a11563aa7d77e60485
+};0xf15d80778874313e87d200a11563aa7d77e60485
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
-export default allExtraRpcs;
+export default allExtraRpcs;0xf15d80778874313e87d200a11563aa7d77e60485
