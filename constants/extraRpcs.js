@@ -3040,6 +3040,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://1rpc.io/scroll",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   534353: {
