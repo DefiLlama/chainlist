@@ -2026,7 +2026,7 @@ export const extraRpcs = {
       "https://rpc.xinfin.network",
       "https://rpc-xdc.icecreamswap.com",
       "https://erpc.xdcrpc.com",
-      "http://rpc.xdc.org",
+      "https://rpc.xdc.org",
       "https://rpc.ankr.com/xdc"
     ],
   },
