@@ -12,6 +12,17 @@ export const llamaNodesRpcs = {
       },
     ]
   },
+  8453: {
+    name: 'Base LlamaNodes',
+    rpcs: [
+      {
+        url: 'https://base.llamarpc.com',
+        tracking: 'none',
+        trackingDetails: privacyStatement,
+        isOpenSource: true,
+      },
+    ]
+  },
   56: {
     name: 'BNB Chain LlamaNodes',
     rpcs: [
