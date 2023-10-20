@@ -2720,6 +2720,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://evmos-json-rpc.0base.dev/",
     ],
   },
   836542336838601: {
