@@ -554,7 +554,7 @@ export const extraRpcs = {
   },
   56: {
     rpcs: [
-      "https://bsc-dataseed.binance.org/",
+      "https://bsc-dataseed.bnbchain.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
       "https://bsc-dataseed2.defibit.io/",
@@ -563,10 +563,10 @@ export const extraRpcs = {
       "https://bsc-dataseed2.ninicoin.io/",
       "https://bsc-dataseed3.ninicoin.io/",
       "https://bsc-dataseed4.ninicoin.io/",
-      "https://bsc-dataseed1.binance.org/",
-      "https://bsc-dataseed2.binance.org/",
-      "https://bsc-dataseed3.binance.org/",
-      "https://bsc-dataseed4.binance.org/",
+      "https://bsc-dataseed1.bnbchain.org/",
+      "https://bsc-dataseed2.bnbchain.org/",
+      "https://bsc-dataseed3.bnbchain.org/",
+      "https://bsc-dataseed4.bnbchain.org/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
