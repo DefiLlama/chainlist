@@ -2005,14 +2005,14 @@ export const extraRpcs = {
     rpcs: ["https://rpc.genesisl1.org"],
   },
   33: {
-    rpcs: [],
+    rpcs: ["https://rpc.goodata.io"],
     rpcWorking: false,
   },
   35: {
     rpcs: ["https://rpc.tbwg.io"],
   },
   38: {
-    rpcs: [],
+    rpcs: ["https://rpc.valorbit.com/v2"],
     websiteDead: true,
     rpcWorking: false,
   },
@@ -2710,7 +2710,6 @@ export const extraRpcs = {
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
-      "https://jsonrpc.evmos.nodestake.top",
       {
         url: "https://evmos-mainnet.public.blastapi.io",
         tracking: "limited",
