@@ -71,6 +71,7 @@ function Header({ lang, chainName }) {
                 placeholder="ETH, Fantom, ..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                ref={(input) => input && input.focus()}
                 className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
               />
               <svg
