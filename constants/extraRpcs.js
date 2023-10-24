@@ -1497,6 +1497,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/gnosis",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   10200: {
@@ -1989,6 +1994,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/holesky",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   22: {
@@ -2227,7 +2237,14 @@ export const extraRpcs = {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
   169: {
-    rpcs: ["https://pacific-rpc.manta.network/http"],
+    rpcs: [
+      "https://pacific-rpc.manta.network/http",
+      {
+        url: "https://1rpc.io/manta",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
+    ],
   },
   186: {
     rpcs: ["https://rpc.seelen.pro/"],
@@ -2438,6 +2455,11 @@ export const extraRpcs = {
         url: "https://zksync.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://1rpc.io/zksync2-era",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ]
   },
@@ -3162,6 +3184,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ]
   },
   7762959: {
@@ -3539,11 +3566,6 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/scroll_sepolia_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://1rpc.io/scroll/sepolia",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
       },
       {
         url: "https://scroll-public.scroll-testnet.quiknode.pro/",
