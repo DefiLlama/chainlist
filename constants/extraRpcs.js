@@ -113,7 +113,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   softnote:
     "CrispMind collects personal information and uses cookies for site operation, analysis, and enhancement, with no control over third-party cookies.https://softnote.com/privacy/",
   lava:
-    "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy"
+    "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy",
+  merkle: 
+    "merkle does not track or store user information that transits through our RPCs (location, IP, wallet, etc). "
 };
 
 export const extraRpcs = {
@@ -309,6 +311,11 @@ export const extraRpcs = {
       	url: "https://eth-mainnet.diamondswap.org/rpc",
       	tracking: "limited",
       	trackingDetails: privacyStatement.diamondswap,
+      },
+      {
+        url: "https://eth.merkle.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.merkle,
       },
     ],
   },
@@ -554,7 +561,7 @@ export const extraRpcs = {
   },
   56: {
     rpcs: [
-      "https://bsc-dataseed.binance.org/",
+      "https://bsc-dataseed.bnbchain.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
       "https://bsc-dataseed2.defibit.io/",
@@ -563,10 +570,10 @@ export const extraRpcs = {
       "https://bsc-dataseed2.ninicoin.io/",
       "https://bsc-dataseed3.ninicoin.io/",
       "https://bsc-dataseed4.ninicoin.io/",
-      "https://bsc-dataseed1.binance.org/",
-      "https://bsc-dataseed2.binance.org/",
-      "https://bsc-dataseed3.binance.org/",
-      "https://bsc-dataseed4.binance.org/",
+      "https://bsc-dataseed1.bnbchain.org/",
+      "https://bsc-dataseed2.bnbchain.org/",
+      "https://bsc-dataseed3.bnbchain.org/",
+      "https://bsc-dataseed4.bnbchain.org/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -1998,14 +2005,14 @@ export const extraRpcs = {
     rpcs: ["https://rpc.genesisl1.org"],
   },
   33: {
-    rpcs: [],
+    rpcs: ["https://rpc.goodata.io"],
     rpcWorking: false,
   },
   35: {
     rpcs: ["https://rpc.tbwg.io"],
   },
   38: {
-    rpcs: [],
+    rpcs: ["https://rpc.valorbit.com/v2"],
     websiteDead: true,
     rpcWorking: false,
   },
@@ -2026,8 +2033,12 @@ export const extraRpcs = {
       "https://rpc.xinfin.network",
       "https://rpc-xdc.icecreamswap.com",
       "https://erpc.xdcrpc.com",
-      "http://rpc.xdc.org",
-      "https://rpc.ankr.com/xdc"
+      "https://rpc.xdc.org",
+      {
+        url: "https://rpc.ankr.com/xdc",
+        tracking:"limited",
+        trackingDetails: privacyStatement.ankr
+      },      
     ],
   },
   51: {
@@ -2721,6 +2732,8 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://evmos-json-rpc.0base.dev",
+      "https://json-rpc.evmos.tcnetwork.io"
     ],
   },
   836542336838601: {
