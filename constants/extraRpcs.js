@@ -2697,6 +2697,9 @@ export const extraRpcs = {
   8995: {
     rpcs: ["https://core.bloxberg.org"],
   },
+  9000: {
+    rpcs: ["https://evmos-testnet-json.qubelabs.io"],
+  },
   9001: {
     rpcs: [
       {
