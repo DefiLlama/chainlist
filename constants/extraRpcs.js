@@ -3732,6 +3732,9 @@ export const extraRpcs = {
      "https://rpc.atlantischain.network/",
     ]
   },
+  2611555: {
+    rpcs: ["https://sc-rpc.dpu.ac.th/"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
