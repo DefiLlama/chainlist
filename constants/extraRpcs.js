@@ -2710,6 +2710,7 @@ export const extraRpcs = {
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
+      "https://jsonrpc.evmos.nodestake.top",
       {
         url: "https://evmos-mainnet.public.blastapi.io",
         tracking: "limited",
