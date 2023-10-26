@@ -2733,13 +2733,13 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://evmos-json-rpc.0base.dev",
+      "https://json-rpc.evmos.tcnetwork.io",
       {
         url: "https://evmosevm.rpc.stakin-nodes.com",
         tracking: "limited",
         trackingDetails: privacyStatement.Stakin,
-      },
-      "https://evmos-json-rpc.0base.dev",
-      "https://json-rpc.evmos.tcnetwork.io"
+      }
     ],
   },
   836542336838601: {
