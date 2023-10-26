@@ -3716,6 +3716,9 @@ export const extraRpcs = {
       },
     ]
   },
+ 3639: {
+   rpcs: ["https://rpc.ichainscan.com"]
+ },
   2049: {
     rpcs: ["https://msc-rpc.movoscan.com/"],
   },
@@ -3731,13 +3734,11 @@ export const extraRpcs = {
   1339: {
     rpcs: [
      "https://rpc.elysiumchain.tech/",
-      "https://rpc.elysiumchain.us/",
+     "https://rpc.elysiumchain.us/",
    ]
   },
   1338: {
-    rpcs: [
-     "https://rpc.atlantischain.network/",
-    ]
+    rpcs: ["https://rpc.atlantischain.network/"]
   },
 };
 
