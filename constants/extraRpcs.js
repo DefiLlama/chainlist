@@ -2700,7 +2700,10 @@ export const extraRpcs = {
     rpcs: ["https://core.bloxberg.org"],
   },
   9000: {
-    rpcs: ["https://evmos-testnet-json.qubelabs.io"],
+    rpcs: [
+        "https://evmos-testnet-json.qubelabs.io",
+        "https://evmos-tjson.antrixy.org"  
+    ],
   },
   9001: {
     rpcs: [
