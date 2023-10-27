@@ -112,8 +112,6 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Shardeum follows a standard procedure of using log files. These files log visitors when they visit websites... The information collected by log files includes IP addresses, browser type, ISP, date and time stamp, referring/exit pages, and potentially the number of clicks.https://shardeum.org/privacy-policy/",
   softnote:
     "CrispMind collects personal information and uses cookies for site operation, analysis, and enhancement, with no control over third-party cookies.https://softnote.com/privacy/",
-  Stakin:
-    "We temporarily store IP access logs for a period of 7 days, after which these are purged. We do not record rpc calls. https://stakin.com/privacy-policy",
   lava:
     "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy",
   merkle: 
@@ -2735,11 +2733,7 @@ export const extraRpcs = {
       },
       "https://evmos-json-rpc.0base.dev",
       "https://json-rpc.evmos.tcnetwork.io",
-      {
-        url: "https://evmosevm.rpc.stakin-nodes.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.Stakin,
-      }
+      "https://evmosevm.rpc.stakin-nodes.com"
     ],
   },
   836542336838601: {
