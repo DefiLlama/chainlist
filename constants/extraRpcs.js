@@ -312,6 +312,7 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.diamondswap,
       },
+      "https://rpc.notadegen.com/eth",
       {
         url: "https://eth.merkle.io",
         tracking: "none",
@@ -455,7 +456,6 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
-      "https://rpc.notadegen.com/eth/goerli",
       {
         url: "https://builder-rpc1.0xblockswap.com",
         tracking: "yes",
@@ -2845,6 +2845,11 @@ export const extraRpcs = {
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
+  84532: {
+    rpcs: [
+      "https://rpc.notadegen.com/base/sepolia",
+    ],
+  },
   84531: {
     rpcs: [
       {
@@ -2877,7 +2882,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://rpc.notadegen.com/base/goerli",
       {
         url: "https://base-goerli.publicnode.com",
         tracking: "none",
