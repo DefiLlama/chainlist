@@ -2746,7 +2746,7 @@ export const extraRpcs = {
       "https://jsonrpc.evmos.nodestake.top",
       "https://evmos-rpc.theamsolutions.info",
       "https://evmos-api.theamsolutions.info",
-      "https://evmos-jsonrpc.theamsolutions.info"
+      "https://evmos-jsonrpc.theamsolutions.info",
       {
         url: "https://evmos-mainnet.public.blastapi.io",
         tracking: "limited",
