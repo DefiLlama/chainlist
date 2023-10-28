@@ -2702,7 +2702,9 @@ export const extraRpcs = {
   9000: {
     rpcs: [
         "https://evmos-testnet-json.qubelabs.io",
-        "https://evmos-tjson.antrixy.org"  
+        "https://evmos-tjson.antrixy.org",
+        "https://rpc.evmos.test.theamsolutions.info",
+        "https://api.evmos-test.theamsolutions.info"
     ],
   },
   9001: {
@@ -2720,6 +2722,9 @@ export const extraRpcs = {
       "https://evmos-json-rpc.agoranodes.com",
       "https://evmos-json.antrixy.org",
       "https://jsonrpc.evmos.nodestake.top",
+      "https://evmos-rpc.theamsolutions.info",
+      "https://evmos-api.theamsolutions.info",
+      "https://evmos-jsonrpc.theamsolutions.info"
       {
         url: "https://evmos-mainnet.public.blastapi.io",
         tracking: "limited",
