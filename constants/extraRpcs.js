@@ -574,6 +574,8 @@ export const extraRpcs = {
       "https://bsc-dataseed2.bnbchain.org/",
       "https://bsc-dataseed3.bnbchain.org/",
       "https://bsc-dataseed4.bnbchain.org/",
+       "https://bsc-dataseed5.digart.store/",
+        "https://bsc-dataseed6.dict.life/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -2697,6 +2699,12 @@ export const extraRpcs = {
   8995: {
     rpcs: ["https://core.bloxberg.org"],
   },
+  9000: {
+    rpcs: [
+        "https://evmos-testnet-json.qubelabs.io",
+        "https://evmos-tjson.antrixy.org"  
+    ],
+  },
   9001: {
     rpcs: [
       {
@@ -2710,6 +2718,8 @@ export const extraRpcs = {
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
+      "https://evmos-json.antrixy.org",
+      "https://jsonrpc.evmos.nodestake.top",
       {
         url: "https://evmos-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -3709,6 +3719,9 @@ export const extraRpcs = {
       },
     ]
   },
+ 3639: {
+   rpcs: ["https://rpc.ichainscan.com"]
+ },
   2049: {
     rpcs: ["https://msc-rpc.movoscan.com/"],
   },
@@ -3724,13 +3737,11 @@ export const extraRpcs = {
   1339: {
     rpcs: [
      "https://rpc.elysiumchain.tech/",
-      "https://rpc.elysiumchain.us/",
+     "https://rpc.elysiumchain.us/",
    ]
   },
   1338: {
-    rpcs: [
-     "https://rpc.atlantischain.network/",
-    ]
+    rpcs: ["https://rpc.atlantischain.network/"]
   },
 };
 
