@@ -2769,7 +2769,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       "https://evmos-json-rpc.0base.dev",
-      "https://json-rpc.evmos.tcnetwork.io"
+      "https://json-rpc.evmos.tcnetwork.io",
+      "https://evmos-tjson.antrixy.org/"
     ],
   },
   836542336838601: {
