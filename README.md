@@ -1,4 +1,4 @@
-## Getting Started
+Metamask## Getting Started
 
 First, run the development server:
 
