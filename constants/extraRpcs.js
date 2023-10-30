@@ -3655,7 +3655,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       }
     ]
-  }
+  },
   2323: {
     rpcs: [
       {
