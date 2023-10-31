@@ -365,6 +365,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
+        url: "https://polygon-mumbai-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
         url: "https://polygon-mumbai.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -993,6 +998,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
+        url: "https://arb-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
         url: "https://arbitrum.getblock.io/api_key/mainnet/",
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
@@ -1167,6 +1177,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
+        url: "https://klaytn-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
         url: "https://klaytn.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -1192,6 +1207,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/one",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://hmyone-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
@@ -1307,6 +1327,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/op",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://op-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://opt-mainnet.g.alchemy.com/v2/demo",
@@ -1445,6 +1470,11 @@ export const extraRpcs = {
         url: "https://metis.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://metis-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -2618,6 +2648,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
+        url: "https://kava-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
         url: "wss://kava-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -2956,6 +2991,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/base",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://base-pokt.nodies.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://base.meowrpc.com",
