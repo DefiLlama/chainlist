@@ -312,6 +312,7 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.diamondswap,
       },
+      "https://rpc.notadegen.com/eth",
       {
         url: "https://eth.merkle.io",
         tracking: "none",
@@ -455,7 +456,6 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
-      "https://rpc.notadegen.com/eth/goerli",
       {
         url: "https://builder-rpc1.0xblockswap.com",
         tracking: "yes",
@@ -1499,6 +1499,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/gnosis",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   10200: {
@@ -1991,6 +1996,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://1rpc.io/holesky",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   22: {
@@ -2229,7 +2239,14 @@ export const extraRpcs = {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
   169: {
-    rpcs: ["https://pacific-rpc.manta.network/http"],
+    rpcs: [
+      "https://pacific-rpc.manta.network/http",
+      {
+        url: "https://1rpc.io/manta",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
+    ],
   },
   186: {
     rpcs: ["https://rpc.seelen.pro/"],
@@ -2440,6 +2457,11 @@ export const extraRpcs = {
         url: "https://zksync.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://1rpc.io/zksync2-era",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ]
   },
@@ -2702,7 +2724,9 @@ export const extraRpcs = {
   9000: {
     rpcs: [
         "https://evmos-testnet-json.qubelabs.io",
-        "https://evmos-tjson.antrixy.org"  
+        "https://evmos-tjson.antrixy.org",
+        "https://rpc.evmos.test.theamsolutions.info",
+        "https://api.evmos-test.theamsolutions.info"
     ],
   },
   9001: {
@@ -2720,6 +2744,9 @@ export const extraRpcs = {
       "https://evmos-json-rpc.agoranodes.com",
       "https://evmos-json.antrixy.org",
       "https://jsonrpc.evmos.nodestake.top",
+      "https://evmos-rpc.theamsolutions.info",
+      "https://evmos-api.theamsolutions.info",
+      "https://evmos-jsonrpc.theamsolutions.info",
       {
         url: "https://evmos-mainnet.public.blastapi.io",
         tracking: "limited",
@@ -2742,7 +2769,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       "https://evmos-json-rpc.0base.dev",
-      "https://json-rpc.evmos.tcnetwork.io"
+      "https://json-rpc.evmos.tcnetwork.io",
+      "https://evmos-tjson.antrixy.org/"
     ],
   },
   836542336838601: {
@@ -2845,6 +2873,11 @@ export const extraRpcs = {
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
+  84532: {
+    rpcs: [
+      "https://rpc.notadegen.com/base/sepolia",
+    ],
+  },
   84531: {
     rpcs: [
       {
@@ -2877,7 +2910,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://rpc.notadegen.com/base/goerli",
       {
         url: "https://base-goerli.publicnode.com",
         tracking: "none",
@@ -3171,6 +3203,11 @@ export const extraRpcs = {
         url: "wss://ethereum-sepolia.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://1rpc.io/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
     ]
   },
@@ -3551,11 +3588,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://1rpc.io/scroll/sepolia",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
-      },
-      {
         url: "https://scroll-public.scroll-testnet.quiknode.pro/",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode
@@ -3614,6 +3646,16 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet-rpc.curvescan.io",
     ],
+  },
+
+  167007: {
+    rpcs: [
+      {
+        url: "https://taiko-jolnir.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      }
+    ]
   },
   2323: {
     rpcs: [
