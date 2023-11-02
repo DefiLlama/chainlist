@@ -2726,7 +2726,8 @@ export const extraRpcs = {
         "https://evmos-testnet-json.qubelabs.io",
         "https://evmos-tjson.antrixy.org",
         "https://rpc.evmos.test.theamsolutions.info",
-        "https://api.evmos-test.theamsolutions.info"
+        "https://api.evmos-test.theamsolutions.info",
+        "https://rpc.evmos.testnet.node75.org"
     ],
   },
   9001: {
