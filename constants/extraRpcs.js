@@ -1790,6 +1790,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://fuse.liquify.com",
     ],
   },
   336: {
