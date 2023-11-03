@@ -2777,6 +2777,7 @@ export const extraRpcs = {
         "https://evmos-tjson.antrixy.org",
         "https://rpc.evmos.test.theamsolutions.info",
         "https://api.evmos-test.theamsolutions.info",
+	      "https://rpc-evm.testnet.evmos.dragonstake.io"
         "https://evmos-testnet-rpc.stake-town.com",
         "https://evmos-testnet-jsonrpc.stake-town.com",
         "https://api.evmos-test.theamsolutions.info",
@@ -2827,6 +2828,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       "https://evmos-json-rpc.0base.dev",
+      "https://json-rpc.evmos.tcnetwork.io",
+      "https://evmos-tjson.antrixy.org/",
+      "https://rpc-evm.evmos.dragonstake.io"
       "https://json-rpc.evmos.tcnetwork.io"
     ],
   },
