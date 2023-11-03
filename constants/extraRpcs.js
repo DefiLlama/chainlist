@@ -115,7 +115,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   lava:
     "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy",
   merkle: 
-    "merkle does not track or store user information that transits through our RPCs (location, IP, wallet, etc). "
+    "merkle does not track or store user information that transits through our RPCs (location, IP, wallet, etc).",
+  liquify:
+    "What data do we collect? Information collected automatically from your device, including IP address, device type,operating system, browser-type, broad geographic location and other technical information.https://www.liquify.io/privacy_policy.pdf"
 };
 
 export const extraRpcs = {
@@ -1790,7 +1792,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      "https://fuse.liquify.com",
+      {
+        url: "https://fuse.liquify.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.liquify,
+      }
     ],
   },
   336: {
