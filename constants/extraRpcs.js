@@ -2777,6 +2777,7 @@ export const extraRpcs = {
         "https://evmos-tjson.antrixy.org",
         "https://rpc.evmos.test.theamsolutions.info",
         "https://api.evmos-test.theamsolutions.info",
+        "https://rpc.evmos.testnet.node75.org"
 	      "https://rpc-evm.testnet.evmos.dragonstake.io"
         "https://evmos-testnet-rpc.stake-town.com",
         "https://evmos-testnet-jsonrpc.stake-town.com",
