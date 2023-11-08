@@ -1162,8 +1162,13 @@ export const extraRpcs = {
   },
   8217: {
     rpcs: [
-      "https://public-node-api.klaytnapi.com/v1/cypress",
-      "https://cypress.fautor.app/archive",
+      "https://public-en-cypress.klaytn.net",
+      " https://klaytn-mainnet-rpc.allthatnode.com:8551",
+      {
+        url: "https://rpc.ankr.com/klaytn ",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://klaytn.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -2418,8 +2423,13 @@ export const extraRpcs = {
   },
   1001: {
     rpcs: [
-      "https://public-node-api.klaytnapi.com/v1/baobab",
-      "https://baobab.fautor.app/archive",
+      "https://public-en-baobab.klaytn.net",
+      "https://klaytn-baobab-rpc.allthatnode.com:8551",
+      {
+        url: "https://rpc.ankr.com/klaytn_testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
         tracking: "limited",
