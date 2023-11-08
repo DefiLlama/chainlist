@@ -117,7 +117,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   merkle: 
     "merkle does not track or store user information that transits through our RPCs (location, IP, wallet, etc).",
   liquify:
-    "What data do we collect? Information collected automatically from your device, including IP address, device type,operating system, browser-type, broad geographic location and other technical information.https://www.liquify.io/privacy_policy.pdf"
+    "What data do we collect? Information collected automatically from your device, including IP address, device type,operating system, browser-type, broad geographic location and other technical information.https://www.liquify.io/privacy_policy.pdf",
+  autostake:
+    "When you browse our marketing pages, we’ll track that for statistical purposes (like conversion rates and to test new designs). We also store any information you volunteer, like surveys, for as long as it makes sense.https://autostake.com/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -2805,7 +2807,11 @@ export const extraRpcs = {
       "https://evmos-json-rpc.agoranodes.com",
       "https://evmos-json.antrixy.org",
       "https://jsonrpc.evmos.nodestake.top",
-      "https://evmos-mainnet-jsonrpc.autostake.com",
+      {
+        url: "https://evmos-mainnet-jsonrpc.autostake.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.autostake
+      },      
       "https://evmos-rpc.theamsolutions.info",
       "https://evmos-api.theamsolutions.info",
       "https://evmos-jsonrpc.theamsolutions.info",
