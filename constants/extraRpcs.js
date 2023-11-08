@@ -582,8 +582,7 @@ export const extraRpcs = {
       "https://bsc-dataseed2.bnbchain.org/",
       "https://bsc-dataseed3.bnbchain.org/",
       "https://bsc-dataseed4.bnbchain.org/",
-       "https://bsc-dataseed5.digart.store/",
-        "https://bsc-dataseed6.dict.life/",
+      "https://bsc-dataseed6.dict.life/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
