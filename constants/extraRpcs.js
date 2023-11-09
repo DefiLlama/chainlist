@@ -451,6 +451,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+	 {
+        url: "https://getblock.io/nodes/matic/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
       {
         url: "https://goerli.gateway.tenderly.co",
         tracking: "yes",
