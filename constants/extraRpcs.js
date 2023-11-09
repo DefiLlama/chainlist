@@ -1165,7 +1165,11 @@ export const extraRpcs = {
   8217: {
     rpcs: [
       "https://public-en-cypress.klaytn.net",
-      " https://klaytn-mainnet-rpc.allthatnode.com:8551",
+      {
+        url: "https://klaytn-mainnet-rpc.allthatnode.com:8551",
+        tracking: "yes",
+        trackingDetails: privacyStatement.allthatnode
+      },
       {
         url: "https://rpc.ankr.com/klaytn ",
         tracking: "limited",
