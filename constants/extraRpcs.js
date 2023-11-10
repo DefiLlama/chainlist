@@ -117,7 +117,11 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   merkle: 
     "merkle does not track or store user information that transits through our RPCs (location, IP, wallet, etc).",
   liquify:
-    "What data do we collect? Information collected automatically from your device, including IP address, device type,operating system, browser-type, broad geographic location and other technical information.https://www.liquify.io/privacy_policy.pdf"
+    "What data do we collect? Information collected automatically from your device, including IP address, device type,operating system, browser-type, broad geographic location and other technical information.https://www.liquify.io/privacy_policy.pdf",
+  autostake:
+    "When you browse our marketing pages, we’ll track that for statistical purposes (like conversion rates and to test new designs). We also store any information you volunteer, like surveys, for as long as it makes sense.https://autostake.com/privacy-policy",
+  allthatnode:
+    `In addition to the Personal Information, the Billing Information, and the Geolocational Information..., we automatically collect certain information when you use the Platform or Website: IP addresses, browser type and language...; information about a mobile device, including universally unique ID (“UUID”), platform type and version (e.g., iOS or Android), carrier and country location, hardware and processor information, and network type; and activity and usage information occurring via the Platform or Website.https://www.allthatnode.com/privacypolicy.dsrv`
 };
 
 export const extraRpcs = {
@@ -580,8 +584,7 @@ export const extraRpcs = {
       "https://bsc-dataseed2.bnbchain.org/",
       "https://bsc-dataseed3.bnbchain.org/",
       "https://bsc-dataseed4.bnbchain.org/",
-       "https://bsc-dataseed5.digart.store/",
-        "https://bsc-dataseed6.dict.life/",
+      "https://bsc-dataseed6.dict.life/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -1161,8 +1164,17 @@ export const extraRpcs = {
   },
   8217: {
     rpcs: [
-      "https://public-node-api.klaytnapi.com/v1/cypress",
-      "https://cypress.fautor.app/archive",
+      "https://public-en-cypress.klaytn.net",
+      {
+        url: "https://klaytn-mainnet-rpc.allthatnode.com:8551",
+        tracking: "yes",
+        trackingDetails: privacyStatement.allthatnode
+      },
+      {
+        url: "https://rpc.ankr.com/klaytn ",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://klaytn.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -2417,8 +2429,13 @@ export const extraRpcs = {
   },
   1001: {
     rpcs: [
-      "https://public-node-api.klaytnapi.com/v1/baobab",
-      "https://baobab.fautor.app/archive",
+      "https://public-en-baobab.klaytn.net",
+      "https://klaytn-baobab-rpc.allthatnode.com:8551",
+      {
+        url: "https://rpc.ankr.com/klaytn_testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -2787,7 +2804,8 @@ export const extraRpcs = {
         "https://evmos-testnet-rpc.stake-town.com",
         "https://evmos-testnet-jsonrpc.stake-town.com",
         "https://api.evmos-test.theamsolutions.info",
-        "https://jsonrpc-t.evmos.nodestake.top"
+        "https://jsonrpc-t.evmos.nodestake.top",
+        "https://evmos-testnet-jsonrpc.autostake.com"
     ],
   },
   9001: {
@@ -2804,6 +2822,11 @@ export const extraRpcs = {
       "https://evmos-json-rpc.agoranodes.com",
       "https://evmos-json.antrixy.org",
       "https://jsonrpc.evmos.nodestake.top",
+      {
+        url: "https://evmos-mainnet-jsonrpc.autostake.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.autostake
+      },      
       "https://evmos-rpc.theamsolutions.info",
       "https://evmos-api.theamsolutions.info",
       "https://evmos-jsonrpc.theamsolutions.info",
@@ -2835,10 +2858,11 @@ export const extraRpcs = {
       },
       "https://evmos-json-rpc.0base.dev",
       "https://json-rpc.evmos.tcnetwork.io",
-      "https://evmos-tjson.antrixy.org/",
       "https://rpc-evm.evmos.dragonstake.io",
       "https://json-rpc.evmos.tcnetwork.io",
-      "https://evmos-jsonrpc.stake-town.com"
+      "https://evmosevm.rpc.stakin-nodes.com",
+      "https://evmos-jsonrpc.stake-town.com",
+      "https://json-rpc-evmos.mainnet.validatrium.club"
     ],
   },
   836542336838601: {
