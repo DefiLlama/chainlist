@@ -202,11 +202,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bloxroute,
       },
       {
-        url: "https://rpc.lokibuilder.xyz/wallet",
-        tracking: "none",
-        trackingDetails: privacyStatement.lokibuilder,
-      },
-      {
         url: "https://cloudflare-eth.com/",
         tracking: "yes",
         trackingDetails: privacyStatement.cloudflare,
@@ -329,6 +324,11 @@ export const extraRpcs = {
         url: "https://eth.merkle.io",
         tracking: "none",
         trackingDetails: privacyStatement.merkle,
+      },
+      {
+        url: "https://rpc.lokibuilder.xyz/wallet",
+        tracking: "none",
+        trackingDetails: privacyStatement.lokibuilder,
       },
     ],
   },
