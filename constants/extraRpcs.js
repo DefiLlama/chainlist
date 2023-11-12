@@ -2865,6 +2865,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url:"https://evmos-jsonrpc.cyphercore.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.cyphercore
+      },
       "https://evmos-json-rpc.0base.dev",
       "https://json-rpc.evmos.tcnetwork.io",
       "https://rpc-evm.evmos.dragonstake.io",
@@ -2872,7 +2877,6 @@ export const extraRpcs = {
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
-      "https://evmos-jsonrpc.cyphercore.io"
     ],
   },
   836542336838601: {
