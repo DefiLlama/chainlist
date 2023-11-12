@@ -123,7 +123,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   allthatnode:
     `In addition to the Personal Information, the Billing Information, and the Geolocational Information..., we automatically collect certain information when you use the Platform or Website: IP addresses, browser type and language...; information about a mobile device, including universally unique ID (“UUID”), platform type and version (e.g., iOS or Android), carrier and country location, hardware and processor information, and network type; and activity and usage information occurring via the Platform or Website.https://www.allthatnode.com/privacypolicy.dsrv`,
   lokibuilder:
-    "Private transactions. No tracking of any kind (no IPs, location, wallet etc.): https://lokibuilder.xyz/privacy"
+    "Private transactions. No tracking of any kind (no IPs, location, wallet etc.): https://lokibuilder.xyz/privacy",
+  cyphercore:
+    "We collect information about you in various ways when you use our website. This includes information you provide directly to us, information we collect automatically, and information we obtain from third-party sources.https://cyphercore.io/privacy-policy/"
 };
 
 export const extraRpcs = {
