@@ -956,6 +956,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
       },
+      {
+        url: "https://getblock.io/nodes/matic/",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
     ],
   },
   25: {
