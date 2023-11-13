@@ -143,7 +143,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
        {
-        url: "https://eth.getblock.io/&lt;api_key&gt;/mainnet/",
+        url: "https://go.getblock.io/d7dab8149ec04390aaa923ff2768f914",
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
       },
