@@ -1418,6 +1418,15 @@ export const extraRpcs = {
       },
     ],
   },
+  11155420: {
+    rpcs: [
+      {
+        url: "https://optimism-sepolia.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+   ],
+},
   1881: {
     rpcs: [
       {
