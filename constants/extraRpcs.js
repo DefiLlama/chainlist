@@ -2814,12 +2814,13 @@ export const extraRpcs = {
         "https://rpc.evmos.test.theamsolutions.info",
         "https://api.evmos-test.theamsolutions.info",
         "https://rpc.evmos.testnet.node75.org",
-	      "https://rpc-evm.testnet.evmos.dragonstake.io",
+	"https://rpc-evm.testnet.evmos.dragonstake.io",
         "https://evmos-testnet-rpc.stake-town.com",
         "https://evmos-testnet-jsonrpc.stake-town.com",
         "https://api.evmos-test.theamsolutions.info",
         "https://jsonrpc-t.evmos.nodestake.top",
-        "https://evmos-testnet-jsonrpc.autostake.com"
+        "https://evmos-testnet-jsonrpc.autostake.com",
+	"https://evmos-jsonrpc.alkadeta.com"
     ],
   },
   9001: {
