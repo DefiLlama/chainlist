@@ -3900,6 +3900,9 @@ export const extraRpcs = {
   1338: {
     rpcs: ["https://rpc.atlantischain.network/"]
   },
+  6363: {
+    rpcs: ["http://dsc-rpc.digitsoul.co.th"]
+  },	
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
