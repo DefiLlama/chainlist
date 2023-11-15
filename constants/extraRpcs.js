@@ -2837,6 +2837,7 @@ export const extraRpcs = {
       "https://evmos-json.antrixy.org",
       "https://jsonrpc.evmos.nodestake.top",
       "https://evmos-jsonrpc.alkadeta.com",
+      "https://evmos-json.qubelabs.io",    
       {
         url: "https://evmos-mainnet-jsonrpc.autostake.com",
         tracking: "limited",
