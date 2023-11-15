@@ -2819,7 +2819,8 @@ export const extraRpcs = {
         "https://evmos-testnet-jsonrpc.stake-town.com",
         "https://api.evmos-test.theamsolutions.info",
         "https://jsonrpc-t.evmos.nodestake.top",
-        "https://evmos-testnet-jsonrpc.autostake.com"
+        "https://evmos-testnet-jsonrpc.autostake.com",
+        "https://evmos-testnet-jsonrpc.alkadeta.com"
     ],
   },
   9001: {
