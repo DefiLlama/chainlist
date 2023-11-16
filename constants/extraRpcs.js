@@ -2820,7 +2820,8 @@ export const extraRpcs = {
         "https://api.evmos-test.theamsolutions.info",
         "https://jsonrpc-t.evmos.nodestake.top",
         "https://evmos-testnet-jsonrpc.autostake.com",
-        "https://evmos-testnet-jsonrpc.alkadeta.com"
+        "https://evmos-testnet-jsonrpc.alkadeta.com",
+	"https://testnet-evm-rpc-evmos.hoodrun.io"
     ],
   },
   9001: {
@@ -2838,6 +2839,7 @@ export const extraRpcs = {
       "https://evmos-json.antrixy.org",
       "https://jsonrpc.evmos.nodestake.top",
       "https://evmos-jsonrpc.alkadeta.com",
+      "https://evm-rpc-evmos.hoodrun.io",    
       {
         url: "https://evmos-mainnet-jsonrpc.autostake.com",
         tracking: "limited",
