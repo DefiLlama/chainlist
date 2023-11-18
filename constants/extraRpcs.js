@@ -2884,7 +2884,6 @@ export const extraRpcs = {
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://rpc-evmos.imperator.co",
-      "",
     ],
   },
   836542336838601: {
