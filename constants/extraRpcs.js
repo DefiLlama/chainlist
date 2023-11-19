@@ -1318,6 +1318,20 @@ export const extraRpcs = {
   256: {
     rpcs: ["https://hecotestapi.terminet.io/rpc"],
   },
+  5165: {
+    rpcs: [
+      {
+        url: "https://bahamut.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://bahamut.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   42220: {
     rpcs: [
       "https://forno.celo.org",
