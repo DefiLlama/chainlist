@@ -2821,7 +2821,8 @@ export const extraRpcs = {
         "https://jsonrpc-t.evmos.nodestake.top",
         "https://evmos-testnet-jsonrpc.autostake.com",
         "https://evmos-testnet-jsonrpc.alkadeta.com",
-        "https://t-evmos-jsonrpc.kalia.network"
+        "https://t-evmos-jsonrpc.kalia.network",
+	      "https://jsonrpc-evmos-testnet.mzonder.com" 
     ],
   },
   9001: {
@@ -2885,7 +2886,8 @@ export const extraRpcs = {
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
-      "https://evmos-jsonrpc.kalia.network"
+      "https://evmos-jsonrpc.kalia.network",
+      "https://jsonrpc-evmos.mzonder.com"	    
     ],
   },
   836542336838601: {
@@ -3904,6 +3906,12 @@ export const extraRpcs = {
   1338: {
     rpcs: ["https://rpc.atlantischain.network/"]
   },
+  6363: {
+    rpcs: ["http://dsc-rpc.digitsoul.co.th"],
+  },
+  363636: (
+    rpcs: ["http://dgs-rpc.digitsoul.co.th"],
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
