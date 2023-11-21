@@ -2918,10 +2918,11 @@ export const extraRpcs = {
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
+      "https://rpc-evmos.imperator.co",
       "https://evm-rpc.evmos.silentvalidator.com",
       "https://alphab.ai/rpc/eth/evmos",
       "https://evmos-jsonrpc.kalia.network",
-      "https://jsonrpc-evmos.mzonder.com"	    
+      "https://jsonrpc-evmos.mzonder.com",
     ],
   },
   836542336838601: {
