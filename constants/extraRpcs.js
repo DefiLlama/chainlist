@@ -2835,6 +2835,7 @@ export const extraRpcs = {
         "https://jsonrpc-t.evmos.nodestake.top",
         "https://evmos-testnet-jsonrpc.autostake.com",
         "https://evmos-testnet-jsonrpc.alkadeta.com",
+        "https://alphab.ai/rpc/eth/evmos_testnet",
         "https://t-evmos-jsonrpc.kalia.network",
 	      "https://jsonrpc-evmos-testnet.mzonder.com" 
     ],
@@ -2900,6 +2901,7 @@ export const extraRpcs = {
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
+      "https://alphab.ai/rpc/eth/evmos",
       "https://evmos-jsonrpc.kalia.network",
       "https://jsonrpc-evmos.mzonder.com"	    
     ],
