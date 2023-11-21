@@ -3943,7 +3943,7 @@ export const extraRpcs = {
   6363: {
     rpcs: ["http://dsc-rpc.digitsoul.co.th"],
   },
-  363636: (
+  363636: {
     rpcs: ["http://dgs-rpc.digitsoul.co.th"],
   }
 };
