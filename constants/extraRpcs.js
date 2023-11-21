@@ -1318,6 +1318,20 @@ export const extraRpcs = {
   256: {
     rpcs: ["https://hecotestapi.terminet.io/rpc"],
   },
+  5165: {
+    rpcs: [
+      {
+        url: "https://bahamut.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://bahamut.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   42220: {
     rpcs: [
       "https://forno.celo.org",
@@ -2822,6 +2836,8 @@ export const extraRpcs = {
         "https://evmos-testnet-jsonrpc.autostake.com",
         "https://evmos-testnet-jsonrpc.alkadeta.com",
         "https://alphab.ai/rpc/eth/evmos_testnet",
+        "https://t-evmos-jsonrpc.kalia.network",
+	      "https://jsonrpc-evmos-testnet.mzonder.com" 
     ],
   },
   9001: {
@@ -2886,6 +2902,8 @@ export const extraRpcs = {
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
       "https://alphab.ai/rpc/eth/evmos",
+      "https://evmos-jsonrpc.kalia.network",
+      "https://jsonrpc-evmos.mzonder.com"	    
     ],
   },
   836542336838601: {
@@ -3904,6 +3922,12 @@ export const extraRpcs = {
   1338: {
     rpcs: ["https://rpc.atlantischain.network/"]
   },
+  6363: {
+    rpcs: ["http://dsc-rpc.digitsoul.co.th"],
+  },
+  363636: (
+    rpcs: ["http://dgs-rpc.digitsoul.co.th"],
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
