@@ -1318,6 +1318,20 @@ export const extraRpcs = {
   256: {
     rpcs: ["https://hecotestapi.terminet.io/rpc"],
   },
+  5165: {
+    rpcs: [
+      {
+        url: "https://bahamut.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://bahamut.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   42220: {
     rpcs: [
       "https://forno.celo.org",
@@ -2821,7 +2835,10 @@ export const extraRpcs = {
         "https://jsonrpc-t.evmos.nodestake.top",
         "https://evmos-testnet-jsonrpc.autostake.com",
         "https://evmos-testnet-jsonrpc.alkadeta.com",
-	"https://testnet-evm-rpc-evmos.hoodrun.io"
+	      "https://testnet-evm-rpc-evmos.hoodrun.io",
+        "https://alphab.ai/rpc/eth/evmos_testnet",
+        "https://t-evmos-jsonrpc.kalia.network",
+	      "https://jsonrpc-evmos-testnet.mzonder.com" 
     ],
   },
   9001: {
@@ -2830,24 +2847,12 @@ export const extraRpcs = {
         url: "https://evmos.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      },
-      "https://eth.bd.evmos.org:8545/",
-      "https://evmos-json-rpc.stakely.io",
-      "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
-      "https://json-rpc.evmos.blockhunters.org",
-      "https://evmos-json-rpc.agoranodes.com",
-      "https://evmos-json.antrixy.org",
-      "https://jsonrpc.evmos.nodestake.top",
-      "https://evmos-jsonrpc.alkadeta.com",
-      "https://evm-rpc-evmos.hoodrun.io",    
+      },   
       {
         url: "https://evmos-mainnet-jsonrpc.autostake.com",
         tracking: "limited",
         trackingDetails: privacyStatement.autostake
       },      
-      "https://evmos-rpc.theamsolutions.info",
-      "https://evmos-api.theamsolutions.info",
-      "https://evmos-jsonrpc.theamsolutions.info",
       {
         url: "https://evmos-pokt.nodies.app",
         tracking: "none",
@@ -2879,6 +2884,18 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.cyphercore
       },
+      "https://evmos-rpc.theamsolutions.info",
+      "https://evmos-api.theamsolutions.info",
+      "https://evmos-jsonrpc.theamsolutions.info",
+      "https://eth.bd.evmos.org:8545/",
+      "https://evmos-json-rpc.stakely.io",
+      "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
+      "https://json-rpc.evmos.blockhunters.org",
+      "https://evmos-json-rpc.agoranodes.com",
+      "https://evmos-json.antrixy.org",
+      "https://jsonrpc.evmos.nodestake.top",
+      "https://evmos-jsonrpc.alkadeta.com",
+      "https://evm-rpc-evmos.hoodrun.io", 
       "https://evmos-json-rpc.0base.dev",
       "https://json-rpc.evmos.tcnetwork.io",
       "https://rpc-evm.evmos.dragonstake.io",
@@ -2886,6 +2903,9 @@ export const extraRpcs = {
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
+      "https://alphab.ai/rpc/eth/evmos",
+      "https://evmos-jsonrpc.kalia.network",
+      "https://jsonrpc-evmos.mzonder.com"	    
     ],
   },
   836542336838601: {
@@ -3904,6 +3924,12 @@ export const extraRpcs = {
   1338: {
     rpcs: ["https://rpc.atlantischain.network/"]
   },
+  6363: {
+    rpcs: ["http://dsc-rpc.digitsoul.co.th"],
+  },
+  363636: (
+    rpcs: ["http://dgs-rpc.digitsoul.co.th"],
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
