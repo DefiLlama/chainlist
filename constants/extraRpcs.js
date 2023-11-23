@@ -494,6 +494,15 @@ export const extraRpcs = {
       "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
     ],
   },
+  195: {
+      rpcs [
+	  {
+        url: "https://x1-testnet.blockpi.network/v1/rpc/public ",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi
+      },
+    ]
+  }
   4002: {
     rpcs: [
       "https://rpc.testnet.fantom.network/",
