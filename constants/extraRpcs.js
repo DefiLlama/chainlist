@@ -3028,6 +3028,11 @@ export const extraRpcs = {
   84532: {
     rpcs: [
       "https://rpc.notadegen.com/base/sepolia",
+	 {
+        url: "https://base-sepolia.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   84531: {
