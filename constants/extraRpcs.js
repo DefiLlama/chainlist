@@ -2374,6 +2374,11 @@ export const extraRpcs = {
   },
   369: {
     rpcs: [
+	      {
+        url: "https://pulse-s.projectpi.xyz",
+        tracking: "none",
+        trackingDetails: privacyStatement.projectpi,
+      },
       {
         url: "https://pulsechain.publicnode.com",
         tracking: "none",
@@ -3542,6 +3547,11 @@ export const extraRpcs = {
   },
   943: {
     rpcs: [
+	     {
+        url: "https://pulse-test.projectpi.xyz",
+        tracking: "none",
+        trackingDetails: privacyStatement.projectpi,
+      },
       {
         url: "https://pulsechain-testnet.publicnode.com",
         tracking: "none",
