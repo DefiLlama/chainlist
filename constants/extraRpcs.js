@@ -125,7 +125,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   lokibuilder:
     "Private transactions. No tracking of any kind (no IPs, location, wallet etc.): https://lokibuilder.xyz/privacy",
   cyphercore:
-    "We collect information about you in various ways when you use our website. This includes information you provide directly to us, information we collect automatically, and information we obtain from third-party sources.https://cyphercore.io/privacy-policy/"
+    "We collect information about you in various ways when you use our website. This includes information you provide directly to us, information we collect automatically, and information we obtain from third-party sources.https://cyphercore.io/privacy-policy/",
+  projectpi:
+    "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses"
 };
 
 export const extraRpcs = {
@@ -2374,7 +2376,8 @@ export const extraRpcs = {
   },
   369: {
     rpcs: [
-	      {
+      "https://rpc.pulsechain.com",
+	    {
         url: "https://pulse-s.projectpi.xyz",
         tracking: "none",
         trackingDetails: privacyStatement.projectpi,
@@ -2389,6 +2392,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      "https://rpc-pulsechain.g4mm4.io"
     ],
   },
   385: {
