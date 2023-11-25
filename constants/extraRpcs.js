@@ -3566,7 +3566,7 @@ export const extraRpcs = {
   943: {
     rpcs: [
 	     {
-        url: "https://pulse-test.projectpi.xyz",
+        url: "https://pulsetest-s.projectpi.xyz",
         tracking: "none",
         trackingDetails: privacyStatement.projectpi,
       },
