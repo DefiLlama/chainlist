@@ -3965,10 +3965,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc.atlantischain.network/"]
   },
   6363: {
-    rpcs: ["http://dsc-rpc.digitsoul.co.th"],
+    rpcs: ["https://dsc-rpc.digitsoul.co.th"],
   },
   363636: {
-    rpcs: ["http://dgs-rpc.digitsoul.co.th"],
+    rpcs: ["https://dgs-rpc.digitsoul.co.th"],
   }
 };
 
