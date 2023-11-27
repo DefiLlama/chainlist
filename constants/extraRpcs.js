@@ -2195,7 +2195,7 @@ export const extraRpcs = {
       "https://www.ethercluster.com/kotti",
       {
         url: "https://geth-kotti.etc-network.info",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
     ],
