@@ -3974,6 +3974,9 @@ export const extraRpcs = {
   },
   363636: {
     rpcs: ["https://dgs-rpc.digitsoul.co.th"],
+  },
+  2016: {
+    rpcs: ["https://eu-rpc.mainnetz.io"],
   }
 };
 
