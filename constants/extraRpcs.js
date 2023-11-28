@@ -3873,7 +3873,6 @@ export const extraRpcs = {
   },
   570: {
     rpcs: [
-      "https://rollux.public-rpc.com",
       "wss://rpc.rollux.com/wss",			
       "https://rpc.rollux.com",
       "https://rollux.rpc.syscoin.org",
