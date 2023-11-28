@@ -2190,14 +2190,10 @@ export const extraRpcs = {
       },
     ],
   },
+  //Kotti testnet deprecated
   6: {
     rpcs: [
       "https://www.ethercluster.com/kotti",
-      {
-        url: "https://geth-kotti.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
     ],
   },
   61: {
@@ -2236,6 +2232,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       "https://rpc.etcplanets.com",
+    ],
+  },
+  //Morden testnet deprecated
+  62: {
+    rpcs: [
+      "https://www.ethercluster.com/morden",
     ],
   },
   63: {
