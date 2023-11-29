@@ -2850,6 +2850,7 @@ export const extraRpcs = {
     rpcs: [
         "https://evmos-testnet-json.qubelabs.io",
         "https://evmos-tjson.antrixy.org",
+	"https://evmos-testnet-rpc.kingsuper.services",
         "https://rpc.evmos.test.theamsolutions.info",
         "https://api.evmos-test.theamsolutions.info",
         "https://rpc.evmos.testnet.node75.org",
