@@ -2531,10 +2531,17 @@ export const extraRpcs = {
     ],
   },
   1130: {
-    rpcs: ["https://dmc.mydefichain.com/mainnet"],
+    rpcs: [
+      "https://dmc.mydefichain.com/mainnet",
+      "https://dmc01.mydefichain.com/mainnet"
+    ],
   },
   1131: {
-    rpcs: ["https://dmc.mydefichain.com/testnet"]
+    rpcs: [
+      "https://dmc.mydefichain.com/testnet",
+      "https://dmc01.mydefichain.com/testnet",
+      "https://eth.testnet.ocean.jellyfishsdk.com/"
+    ]
   },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
