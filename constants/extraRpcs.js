@@ -3273,6 +3273,16 @@ export const extraRpcs = {
       "https://rpc.scroll.io",
       "https://rpc-scroll.icecreamswap.com",
       {
+        url: "https://scroll-mainnet.public.blastapi.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://scroll-mainnet-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra,
+      },
+      {
         url: "https://scroll.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
