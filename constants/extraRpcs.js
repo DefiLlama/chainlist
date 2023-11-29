@@ -2530,6 +2530,12 @@ export const extraRpcs = {
       },
     ],
   },
+  1130: {
+    rpcs: ["https://dmc.mydefichain.com/mainnet"],
+  },
+  1131: {
+    rpcs: ["https://dmc.mydefichain.com/testnet"]
+  },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
   },
