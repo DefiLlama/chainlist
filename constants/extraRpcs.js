@@ -2539,6 +2539,19 @@ export const extraRpcs = {
       },
     ],
   },
+  1130: {
+    rpcs: [
+      "https://dmc.mydefichain.com/mainnet",
+      "https://dmc01.mydefichain.com/mainnet"
+    ],
+  },
+  1131: {
+    rpcs: [
+      "https://dmc.mydefichain.com/testnet",
+      "https://dmc01.mydefichain.com/testnet",
+      "https://eth.testnet.ocean.jellyfishsdk.com/"
+    ]
+  },
   1139: {
     rpcs: ["https://mathchain.maiziqianbao.net/rpc"],
   },
@@ -2859,6 +2872,7 @@ export const extraRpcs = {
     rpcs: [
         "https://evmos-testnet-json.qubelabs.io",
         "https://evmos-tjson.antrixy.org",
+	"https://evmos-testnet-rpc.kingsuper.services",
         "https://rpc.evmos.test.theamsolutions.info",
         "https://api.evmos-test.theamsolutions.info",
         "https://rpc.evmos.testnet.node75.org",
@@ -3281,6 +3295,16 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.scroll.io",
       "https://rpc-scroll.icecreamswap.com",
+      {
+        url: "https://scroll-mainnet.public.blastapi.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://scroll-mainnet-public.unifra.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra,
+      },
       {
         url: "https://scroll.blockpi.network/v1/rpc/public",
         tracking: "limited",
