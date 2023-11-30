@@ -2199,8 +2199,9 @@ export const extraRpcs = {
   61: {
     rpcs: [
       "https://etc.rivet.link",
-      "https://etc.etcdesktop.com",
       "https://etc.mytokenpocket.vip",
+      "https://rpc.etcinscribe.com",
+      "https://etc.etcdesktop.com",
       {
         url: "https://besu-de.etc-network.info",
         tracking: "yes",
