@@ -2200,16 +2200,8 @@ export const extraRpcs = {
     rpcs: [
       "https://etc.rivet.link",
       "https://etc.mytokenpocket.vip",
-      {
-        url: "https://rpc.etcinscribe.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://etc.etcdesktop.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },    
+      "https://rpc.etcinscribe.com",
+      "https://etc.etcdesktop.com",
       {
         url: "https://besu-de.etc-network.info",
         tracking: "yes",
