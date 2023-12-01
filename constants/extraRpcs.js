@@ -2204,35 +2204,24 @@ export const extraRpcs = {
       "https://etc.etcdesktop.com",
       {
         url: "https://besu-de.etc-network.info",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
         url: "https://geth-de.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://erigon-de.etc-network.info",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
         url: "https://besu-at.etc-network.info",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
       {
         url: "https://geth-at.etc-network.info",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
-      {
-        url: "https://erigon-at.etc-network.info",
-        tracking: "yes",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      "https://rpc.etcplanets.com",
     ],
   },
   //Morden testnet deprecated
@@ -2246,7 +2235,7 @@ export const extraRpcs = {
       "https://rpc.mordor.etccooperative.org",
       {
         url: "https://geth-mordor.etc-network.info",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
     ],
