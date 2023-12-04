@@ -3992,7 +3992,10 @@ export const extraRpcs = {
   },
   2016: {
     rpcs: ["https://eu-rpc.mainnetz.io"],
-  }
+  },
+  231281: {
+    rpcs: ["https://rpcqa.tocantest.io/"]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
