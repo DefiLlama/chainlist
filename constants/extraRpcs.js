@@ -129,7 +129,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   projectpi:
     "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses",
   apxchain:
-    "apxchain does not track or store any user information that transits through our RPC (location, IP, wallet, etc)."
+    "APX Chain prioritize the protection of your privacy and the security of your data. This privacy policy summary provides an overview of how we handle and safeguard your personal information.For a more comprehensive understanding, please refer to our full privacy policy at https://rpcqa.tocantest.io/privacy-policy""
 };
 
 export const extraRpcs = {
