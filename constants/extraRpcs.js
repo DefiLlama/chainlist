@@ -3775,6 +3775,15 @@ export const extraRpcs = {
       },
     ],
   },
+  59140: {
+    rpcs: [
+      {
+        url: "https://linea-goerli.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+       },
+     ],
+   },
   534351: {
     rpcs: [
       {
