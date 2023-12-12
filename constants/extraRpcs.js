@@ -3680,16 +3680,6 @@ export const extraRpcs = {
   13000: {
     rpcs: ["https://rpc.ssquad.games"],
   },
-  14000: {
-    rpcs: [],
-    rpcWorking: false,
-    websiteDead: true,
-  },
-  22776: {
-    rpcs: [],
-    rpcWorking: false,
-    websiteDead: true,
-  },
   50001: {
     rpcs: [
       "https://rpc.oracle.liveplex.io",
