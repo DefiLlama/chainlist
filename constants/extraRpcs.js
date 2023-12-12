@@ -2529,6 +2529,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://rpc.ankr.com/core",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
     ],
   },
   1130: {
