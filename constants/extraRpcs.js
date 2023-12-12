@@ -2653,7 +2653,12 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/polygonzkevm/testnet/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
+	{
+      	url: "https://polygon-zkevm-testnet.blockpi.network/v1/rpc/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   1618: {
