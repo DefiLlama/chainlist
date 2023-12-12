@@ -127,8 +127,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   cyphercore:
     "We collect information about you in various ways when you use our website. This includes information you provide directly to us, information we collect automatically, and information we obtain from third-party sources.https://cyphercore.io/privacy-policy/",
   projectpi:
-    "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses"
-};
+    "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses",
+  hybrid:
+  "HybridChain may automatically collect information regarding your computer hardware and software. This data can encompass details like your IP address, browser type, domain names, access times, and referring website addresses. This collection is in line with HybridChain's privacy policy and aims to optimize service provision and enhance user experience."
+  };
 
 export const extraRpcs = {
   1: {
@@ -4001,6 +4003,29 @@ export const extraRpcs = {
   },
   2016: {
     rpcs: ["https://eu-rpc.mainnetz.io"],
+  },
+  2458: {
+    rpcs: [
+      {
+        url: "https://rpc-testnet.hybridchain.ai/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.hybrid,
+      }
+    ],
+  },
+  2468: {
+    rpcs: [
+      {
+        url: "https://coredata-mainnet.hybridchain.ai/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.hybrid,
+      },
+      {
+        url: "https://rpc-mainnet.hybridchain.ai/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.hybrid,
+      },
+    ],
   }
 };
 
