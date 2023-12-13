@@ -2514,7 +2514,6 @@ export const extraRpcs = {
   1030: {
     rpcs: [
       "https://evm.confluxrpc.com",
-      "https://conflux-espace-public.unifra.io",
     ],
   },
   1115: {
