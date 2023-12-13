@@ -129,8 +129,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   projectpi:
     "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses",
   hybrid:
-  "HybridChain may automatically collect information regarding your computer hardware and software. This data can encompass details like your IP address, browser type, domain names, access times, and referring website addresses. This collection is in line with HybridChain's privacy policy and aims to optimize service provision and enhance user experience."
-  };
+  "HybridChain may automatically collect information regarding your computer hardware and software. This data can encompass details like your IP address, browser type, domain names, access times, and referring website addresses. This collection is in line with HybridChain's privacy policy and aims to optimize service provision and enhance user experience.",
+  rivet:
+    "Rivet's unyielding privacy policy ensures no data sharing or selling to third parties—guaranteed",
+};
 
 export const extraRpcs = {
   1: {
@@ -2209,10 +2211,14 @@ export const extraRpcs = {
   },
   61: {
     rpcs: [
-      "https://etc.rivet.link",
       "https://etc.mytokenpocket.vip",
       "https://rpc.etcinscribe.com",
       "https://etc.etcdesktop.com",
+      {
+        url: "https://etc.rivet.link",
+        tracking: "none",
+        trackingDetails: privacyStatement.rivet
+      },
       {
         url: "https://besu-de.etc-network.info",
         tracking: "limited",
