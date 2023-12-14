@@ -129,10 +129,12 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   projectpi:
     "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses",
   hybrid:
-  "HybridChain may automatically collect information regarding your computer hardware and software. This data can encompass details like your IP address, browser type, domain names, access times, and referring website addresses. This collection is in line with HybridChain's privacy policy and aims to optimize service provision and enhance user experience.",
+  "HybridChain may automatically collect information regarding your computer hardware and software. This data can encompass details like your IP address, browser type, domain names, access times, and referring website addresses. This collection is in line with HybridChain's privacy policy and aims to optimize service provision and enhance user experience.https://docs.hybridchain.ai/privacy-policy",
   rivet:
-    "Rivet's unyielding privacy policy ensures no data sharing or selling to third parties—guaranteed",
-};
+    "We collect End Users’ information when they use our Customers’ web3-enabled websites, web applications, and APIs. This information may include but is not limited to IP addresses, system configuration information, and other information about traffic to and from Customers’ websites (collectively, “Log Data”). We collect and use Log Data to operate, maintain, and improve our Services in performance of our obligations under our Customer agreements.https://rivet.cloud/privacy-policy",
+  tokenview:
+    "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
+  };
 
 export const extraRpcs = {
   1: {
@@ -337,6 +339,11 @@ export const extraRpcs = {
         url: "https://rpc.lokibuilder.xyz/wallet",
         tracking: "none",
         trackingDetails: privacyStatement.lokibuilder,
+      },
+      {
+        url: "https://services.tokenview.io/vipapi/nodeservice/eth?apikey=qVHq2o6jpaakcw3lRstl",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tokenview,
       },
     ],
   },
@@ -698,6 +705,11 @@ export const extraRpcs = {
         url: "https://bsc.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://services.tokenview.io/vipapi/nodeservice/bsc?apikey=qVHq2o6jpaakcw3lRstl",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tokenview,
       },
     ],
   },
@@ -1855,6 +1867,11 @@ export const extraRpcs = {
       "https://rpc-mainnet.kcc.network",
       "https://kcc.mytokenpocket.vip",
       "https://kcc-rpc.com",
+      {
+        url: "https://services.tokenview.io/vipapi/nodeservice/kcs?apikey=qVHq2o6jpaakcw3lRstl",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tokenview,
+      },
     ],
   },
   888: {
@@ -2238,6 +2255,11 @@ export const extraRpcs = {
         url: "https://geth-at.etc-network.info",
         tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      {
+        url: "https://services.tokenview.io/vipapi/nodeservice/etc?apikey=qVHq2o6jpaakcw3lRstl",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tokenview,
       },
     ],
   },
