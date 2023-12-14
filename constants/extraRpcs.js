@@ -2232,11 +2232,6 @@ export const extraRpcs = {
       "https://rpc.etcinscribe.com",
       "https://etc.etcdesktop.com",
       {
-        url: "https://etc.rivet.link",
-        tracking: "none",
-        trackingDetails: privacyStatement.rivet
-      },
-      {
         url: "https://besu-de.etc-network.info",
         tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
@@ -2260,6 +2255,11 @@ export const extraRpcs = {
         url: "https://services.tokenview.io/vipapi/nodeservice/etc?apikey=qVHq2o6jpaakcw3lRstl",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
+      },
+      {
+        url: "https://etc.rivet.link",
+        tracking: "none",
+        trackingDetails: privacyStatement.rivet
       },
     ],
   },
