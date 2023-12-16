@@ -3868,7 +3868,12 @@ export const extraRpcs = {
         url: "https://oasys.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
-      }
+      },
+      {
+	 url: "https://oasys-mainnet.gateway.pokt.network/v1/lb/c967bd31",
+	 url: "https://oasys-mainnet-archival.gateway.pokt.network/v1/lb/c967bd31",
+	
+      },
     ],
   },
   3501: {
