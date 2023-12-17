@@ -58,7 +58,11 @@
   "1285": "moonriver",
   "1440": "living assets mainnet",
   "1559": "tenet",
+<<<<<<< HEAD
   "1972": "redecoin",
+=======
+  "1972": "RedeCoin",
+>>>>>>> origin/main
   "1975": "onus",
   "2000": "dogechain",
   "2222": "kava",
