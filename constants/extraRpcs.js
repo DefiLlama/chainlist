@@ -2004,6 +2004,9 @@ export const extraRpcs = {
   820: {
     rpcs: ["https://rpc.callisto.network", "https://clo-geth.0xinfra.com/"],
   },
+  1972: {
+    rpcs: ["https://rpc2.redecoin.eu"],
+  },  
   108: {
     rpcs: ["https://mainnet-rpc.thundercore.com"],
   },
