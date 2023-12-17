@@ -92,8 +92,6 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "At SomaNetwork Mainnet Or Testnet, we are committed to protecting your privacy and ensuring the security of your data. This privacy policy summary outlines how we handle and protect your personal information when using our SomaNetwork Mainnet and Testnet services. Please note that this is a summary, and the full privacy policy should be reviewed for complete details soma. 1.We will collect your mobile device information, operation records, transaction records, wallet address and other personal information. https://soma-network.gitbook.io/soma-network/privacy-policy",
   chain49:
     "We collect device information and request metadata like IP address and User Agent for the purpose of load balancing and rate limiting. More info: https://chain49.com/privacy-policy",
-  jibchain:
-    "JIBCHAIN does not track or store user information that transits through our RPCs (location, IP, wallet, etc)",
   meowrpc:
     "With the exclusion of data that will be openly visible and available on the blockchain, MEOWRPC does not track or store any kind of user information (such as location, IP address, etc.) that passes through our RPC. For further details regarding our privacy practices, we encourage you to refer to our Privacy Policy. https://privacy.meowrpc.com",
   drpc:
@@ -136,6 +134,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We collect End Users’ information when they use our Customers’ web3-enabled websites, web applications, and APIs. This information may include but is not limited to IP addresses, system configuration information, and other information about traffic to and from Customers’ websites (collectively, “Log Data”). We collect and use Log Data to operate, maintain, and improve our Services in performance of our obligations under our Customer agreements.https://rivet.cloud/privacy-policy",
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
+  jibchain:
+    "JIBCHAIN does not track or store user information that transits through our RPCs (location, IP, wallet, etc)",
   };
 
 export const extraRpcs = {
@@ -1810,16 +1810,6 @@ export const extraRpcs = {
   },
   30: {
     rpcs: ["https://public-node.rsk.co"],
-  },
-  8899: {
-    rpcs: [
-      "https://rpc-l1.jibchain.net",
-      {
-        url: "https://jib-rpc.inan.in.th",
-        tracking: "none",
-        trackingDetails: privacyStatement.jibchain,
-      }
-    ]
   },
   4689: {
     rpcs: [
@@ -4075,7 +4065,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.hybrid,
       },
     ],
-  }
+  },
+  8899: {
+    rpcs: [
+      "https://rpc-l1.jibchain.net",
+      {
+        url: "https://jib-rpc.inan.in.th",
+        tracking: "none",
+        trackingDetails: privacyStatement.jibchain,
+      }
+    ]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
