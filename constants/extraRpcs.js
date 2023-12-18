@@ -4051,10 +4051,7 @@ export const extraRpcs = {
     ],
   },
   1972: {
-    rpcs: [
-      "https://rpc2.redecoin.eu",
-      "https://explorer3.redecoin.eu",
-    ],
+    rpcs: ["https://rpc2.redecoin.eu"],
   },
   2468: {
     rpcs: [
