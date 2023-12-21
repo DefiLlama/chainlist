@@ -134,6 +134,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We collect End Users’ information when they use our Customers’ web3-enabled websites, web applications, and APIs. This information may include but is not limited to IP addresses, system configuration information, and other information about traffic to and from Customers’ websites (collectively, “Log Data”). We collect and use Log Data to operate, maintain, and improve our Services in performance of our obligations under our Customer agreements.https://rivet.cloud/privacy-policy",
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
+  nodeconnect:
+    "We do not collect anything as RPC provider: https://nodeconnect.org/privacy.txt",
   };
 
 export const extraRpcs = {
@@ -344,6 +346,11 @@ export const extraRpcs = {
         url: "https://services.tokenview.io/vipapi/nodeservice/eth?apikey=qVHq2o6jpaakcw3lRstl",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
+      },
+      {
+        url: "https://eth.nodeconnect.org/",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeconnect,
       },
     ],
   },
