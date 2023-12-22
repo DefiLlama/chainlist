@@ -4065,6 +4065,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.hybrid,
       },
     ],
+  },
+  224422: {
+    rpcs: [
+      {
+        url: "https://rpc1.conet.network",
+        tracking: "no"
+      }
+    ],
   }
 };
 
