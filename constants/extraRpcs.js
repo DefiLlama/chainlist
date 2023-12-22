@@ -134,6 +134,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We collect End Users’ information when they use our Customers’ web3-enabled websites, web applications, and APIs. This information may include but is not limited to IP addresses, system configuration information, and other information about traffic to and from Customers’ websites (collectively, “Log Data”). We collect and use Log Data to operate, maintain, and improve our Services in performance of our obligations under our Customer agreements.https://rivet.cloud/privacy-policy",
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
+  engram:
+    "Engram Network prioritizes the utmost privacy of user data and metadata. We are committed to ensuring that all information remains confidential and inaccessible to any third party. Employing advanced technologies and multifaceted strategies, Engram Network employs front-running protection, private mempools, obfuscation techniques, and random dispatching to safeguard user privacy comprehensively. Rest assured that your data is secure with us. For more details on how Engram Network handles your personal data, please visit our site: https://www.engramnetwork.com/privacy-policy.",
   };
 
 export const extraRpcs = {
@@ -885,6 +887,20 @@ export const extraRpcs = {
         url: "https://fantom.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  131: {
+    rpcs: [
+      {
+        url: "https://tokioswift.engram.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.engram,
+      },
+      {
+        url: "https://tokio-archive.engram.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.engram,
       },
     ],
   },
