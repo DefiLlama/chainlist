@@ -4065,7 +4065,13 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.hybrid,
       },
     ],
-  }
+  },
+  8899: {
+    rpcs: [
+      "https://rpc-l1.jibchain.net",
+      'https://jib-rpc.inan.in.th',
+    ]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
