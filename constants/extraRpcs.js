@@ -135,7 +135,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   itrocket:
-    "ITRocket does not track or store any user information that transits through our RPCs (location, IP, wallet, etc)",
+    "We don't store user data, but Cloudflare may process necessary information like IP addresses to deliver and secure services, as detailed in their policies.",
   };
 
 export const extraRpcs = {
@@ -4078,7 +4078,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://humans-mainnet-rpc.itrocket.net/",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.itrocket,
       },
      
@@ -4088,7 +4088,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://humans-testnet-rpc.itrocket.net/",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.itrocket,
       },     
     ],
