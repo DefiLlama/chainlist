@@ -4072,6 +4072,9 @@ export const extraRpcs = {
       'https://jib-rpc.inan.in.th',
     ]
   },
+  1972: {
+    rpcs: ["https://rpc2.redecoin.eu"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
