@@ -135,7 +135,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   nodeconnect:
-    "We do not collect anything as RPC provider: https://nodeconnect.org/privacy.txt",
+    "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   };
 
 export const extraRpcs = {
@@ -349,7 +349,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth.nodeconnect.org/",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
       },
     ],
