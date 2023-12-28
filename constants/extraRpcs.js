@@ -2132,6 +2132,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://ethereum-holesky.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   22: {
@@ -4065,7 +4070,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.hybrid,
       },
     ],
-  }
+  },
+  8899: {
+    rpcs: [
+      "https://rpc-l1.jibchain.net",
+      'https://jib-rpc.inan.in.th',
+    ]
+  },
+  1972: {
+    rpcs: ["https://rpc2.redecoin.eu"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
