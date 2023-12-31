@@ -4104,6 +4104,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.itrocket,
       },     
     ],
+  },
   1972: {
     rpcs: ["https://rpc2.redecoin.eu"],
   },
