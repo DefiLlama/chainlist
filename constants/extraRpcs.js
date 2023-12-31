@@ -136,6 +136,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   itrocket:
     "While providing our Services, we may collect the following categories of data: Personal Data: your name, email address, social media account details; Technical Information: IP address, operating system, browser type; Usage Data: information on the way you interact with our Services; Blockchain Request Data. This data is not used to reveal your identity. However, remember that blockchain transactions are publicly available and can be traced.https://itrocket.net/privacy-policy/",
+  nodeconnect:
+    "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   };
 
 export const extraRpcs = {
@@ -346,6 +348,11 @@ export const extraRpcs = {
         url: "https://services.tokenview.io/vipapi/nodeservice/eth?apikey=qVHq2o6jpaakcw3lRstl",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
+      },
+      {
+        url: "https://eth.nodeconnect.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.nodeconnect,
       },
     ],
   },
@@ -2133,6 +2140,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/holesky",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://ethereum-holesky.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       },
     ],
   },
@@ -4092,6 +4104,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.itrocket,
       },     
     ],
+  1972: {
+    rpcs: ["https://rpc2.redecoin.eu"],
   },
 };
 
