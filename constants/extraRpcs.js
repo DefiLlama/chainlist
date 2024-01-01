@@ -134,6 +134,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We collect End Users’ information when they use our Customers’ web3-enabled websites, web applications, and APIs. This information may include but is not limited to IP addresses, system configuration information, and other information about traffic to and from Customers’ websites (collectively, “Log Data”). We collect and use Log Data to operate, maintain, and improve our Services in performance of our obligations under our Customer agreements.https://rivet.cloud/privacy-policy",
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
+  itrocket:
+    "While providing our Services, we may collect the following categories of data: Personal Data: your name, email address, social media account details; Technical Information: IP address, operating system, browser type; Usage Data: information on the way you interact with our Services; Blockchain Request Data. This data is not used to reveal your identity. However, remember that blockchain transactions are publicly available and can be traced.https://itrocket.net/privacy-policy/",
   nodeconnect:
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   };
@@ -4083,6 +4085,25 @@ export const extraRpcs = {
       "https://rpc-l1.jibchain.net",
       'https://jib-rpc.inan.in.th',
     ]
+  },
+  1089: {
+    rpcs: [
+      {
+        url: "https://humans-mainnet-rpc.itrocket.net/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.itrocket,
+      },
+     
+    ],
+  },
+  4139: {
+    rpcs: [
+      {
+        url: "https://humans-testnet-rpc.itrocket.net/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.itrocket,
+      },     
+    ],
   },
   1972: {
     rpcs: ["https://rpc2.redecoin.eu"],
