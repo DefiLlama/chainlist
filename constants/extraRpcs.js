@@ -3173,6 +3173,7 @@ export const extraRpcs = {
   },
   8453: {
     rpcs: [
+      "https://mainnet.base.org",
       "https://developer-access-mainnet.base.org",
       {
         url: "https://base-mainnet.diamondswap.org/rpc",
