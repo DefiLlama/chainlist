@@ -2989,19 +2989,10 @@ export const extraRpcs = {
       "https://evmos-rpc.theamsolutions.info",
       "https://evmos-api.theamsolutions.info",
       "https://evmos-jsonrpc.theamsolutions.info",
-      "https://eth.bd.evmos.org:8545/",
-      "https://evmos-json-rpc.stakely.io",
-      "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
-      "https://json-rpc.evmos.blockhunters.org",
-      "https://evmos-json-rpc.agoranodes.com",
-      "https://evmos-json.antrixy.org",
-      "https://jsonrpc.evmos.nodestake.top",
-      "https://evmos-jsonrpc.alkadeta.com",
       "https://evm-rpc-evmos.hoodrun.io", 
       "https://evmos-json-rpc.0base.dev",
       "https://json-rpc.evmos.tcnetwork.io",
       "https://rpc-evm.evmos.dragonstake.io",
-      "https://json-rpc.evmos.tcnetwork.io",
       "https://evmosevm.rpc.stakin-nodes.com",
       "https://evmos-jsonrpc.stake-town.com",
       "https://json-rpc-evmos.mainnet.validatrium.club",
@@ -3173,6 +3164,7 @@ export const extraRpcs = {
   },
   8453: {
     rpcs: [
+      "https://mainnet.base.org",
       "https://developer-access-mainnet.base.org",
       {
         url: "https://base-mainnet.diamondswap.org/rpc",
