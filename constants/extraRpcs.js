@@ -3,7 +3,7 @@ import { mergeDeep } from "../utils/fetch.js";
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
 const privacyStatement = {
-blockswap: "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",  
+blockswap: "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",
 "48Club":
     "IP addresses will be read for rate-limit purpose without being actively stored at application layer. Also notice that we don't actively purge user footprint in lower-level protocol.",
   unitedbloc:
@@ -114,7 +114,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "CrispMind collects personal information and uses cookies for site operation, analysis, and enhancement, with no control over third-party cookies.https://softnote.com/privacy/",
   lava:
     "We, our service providers, and our business partners may automatically log information about you, your computer or mobile device, and your interaction over time with the Service..., such as: Device data, ...your computer or mobile device's operating system type and version, manufacturer and model, browser type, screen resolution, RAM and disk size, CPU usage, device type (e.g., phone, tablet), IP address, unique identifiers (including identifiers used for advertising purposes), language settings, mobile device carrier, radio/network information (e.g., Wi-Fi, LTE, 3G), and general location information such as city, state or geographic area. https://www.lavanet.xyz/privacy-policy",
-  merkle: 
+  merkle:
     "merkle does not track or store user information that transits through our RPCs (location, IP, wallet, etc).",
   liquify:
     "What data do we collect? Information collected automatically from your device, including IP address, device type,operating system, browser-type, broad geographic location and other technical information.https://www.liquify.io/privacy_policy.pdf",
@@ -1200,7 +1200,7 @@ export const extraRpcs = {
         url: "https://arbitrum-nova.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },  
+      },
     ],
   },
   421614: {
@@ -1832,7 +1832,7 @@ export const extraRpcs = {
         url: "https://iotex.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },    
+      },
     ],
   },
   66: {
@@ -1854,7 +1854,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
     ],
-   
+
   },
   288: {
     rpcs: [
@@ -1869,6 +1869,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://1rpc.io/boba/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      }
     ],
   },
   321: {
@@ -2048,7 +2053,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-    ],    
+    ],
   },
   246: {
     rpcs: ["https://rpc.energyweb.org"],
@@ -2195,7 +2200,7 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/xdc",
         tracking:"limited",
         trackingDetails: privacyStatement.ankr
-      },      
+      },
     ],
   },
   51: {
@@ -2804,7 +2809,7 @@ export const extraRpcs = {
         url: "wss://kava-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }, 
+      },
       {
         url: "https://evm.kava.chainstacklabs.com",
         tracking: "yes",
@@ -2860,7 +2865,7 @@ export const extraRpcs = {
         url: "https://1rpc.io/mantle",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      }      
+      }
     ],
   },
   5197: {
@@ -2927,11 +2932,11 @@ export const extraRpcs = {
         "https://jsonrpc-t.evmos.nodestake.top",
         "https://evmos-testnet-jsonrpc.autostake.com",
         "https://evmos-testnet-jsonrpc.alkadeta.com",
-        "https://evm-rpc.evmost.silentvalidator.com",	    
+        "https://evm-rpc.evmost.silentvalidator.com",
 	      "https://testnet-evm-rpc-evmos.hoodrun.io",
         "https://alphab.ai/rpc/eth/evmos_testnet",
         "https://t-evmos-jsonrpc.kalia.network",
-	      "https://jsonrpc-evmos-testnet.mzonder.com" 
+	      "https://jsonrpc-evmos-testnet.mzonder.com"
     ],
   },
   9001: {
@@ -2940,12 +2945,12 @@ export const extraRpcs = {
         url: "https://evmos.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      },  
+      },
       {
         url: "https://evmos-mainnet-jsonrpc.autostake.com",
         tracking: "limited",
         trackingDetails: privacyStatement.autostake
-      },      
+      },
       {
         url: "https://evmos-pokt.nodies.app",
         tracking: "none",
@@ -2989,7 +2994,7 @@ export const extraRpcs = {
       "https://evmos-rpc.theamsolutions.info",
       "https://evmos-api.theamsolutions.info",
       "https://evmos-jsonrpc.theamsolutions.info",
-      "https://evm-rpc-evmos.hoodrun.io", 
+      "https://evm-rpc-evmos.hoodrun.io",
       "https://evmos-json-rpc.0base.dev",
       "https://json-rpc.evmos.tcnetwork.io",
       "https://rpc-evm.evmos.dragonstake.io",
@@ -3840,7 +3845,7 @@ export const extraRpcs = {
         url: "https://scroll-testnet-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra,
-      },      
+      },
       {
         url: "https://rpc.ankr.com/scroll_sepolia_testnet",
         tracking: "limited",
@@ -3943,7 +3948,7 @@ export const extraRpcs = {
   },
   570: {
     rpcs: [
-      "wss://rpc.rollux.com/wss",			
+      "wss://rpc.rollux.com/wss",
       "https://rpc.rollux.com",
       "https://rollux.rpc.syscoin.org",
       "wss://rollux.rpc.syscoin.org/wss"
@@ -4085,7 +4090,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.itrocket,
       },
-     
+
     ],
   },
   4139: {
@@ -4094,7 +4099,7 @@ export const extraRpcs = {
         url: "https://humans-testnet-rpc.itrocket.net/",
         tracking: "yes",
         trackingDetails: privacyStatement.itrocket,
-      },     
+      },
     ],
   },
   1972: {
