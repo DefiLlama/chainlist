@@ -421,6 +421,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+      	url: "https://polygon-mumbai.api.onfinality.io/public",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   //Rinkeby testnet deprecated
@@ -3459,6 +3464,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },    
+      {
+        url: "https://eth-sepolia.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ]
   },
