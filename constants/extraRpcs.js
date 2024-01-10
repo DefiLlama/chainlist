@@ -4113,6 +4113,12 @@ export const extraRpcs = {
   1972: {
     rpcs: ["https://rpc2.redecoin.eu"],
   },
+  131: {
+    rpcs: [
+      "https://tokioswift.engram.tech",
+      "https://tokio-archive.engram.tech",
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
