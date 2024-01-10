@@ -1744,10 +1744,8 @@ export const extraRpcs = {
   },
   32659: {
     rpcs: [
-      "https://mainnet.anyswap.exchange",
-      "https://mainway.freemoon.xyz/gate",
-      "https://fsn.dev/api",
       "https://mainnet.fusionnetwork.io",
+      "wss://mainnet.fusionnetwork.io",
     ],
   },
   1284: {
