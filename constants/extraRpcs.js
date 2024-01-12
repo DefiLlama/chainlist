@@ -3666,12 +3666,6 @@ export const extraRpcs = {
       },
     ],
   },
-  970: {
-    rpcs: ["https://rpc.mainnet.computecoin.com"],
-  },
-  971: {
-    rpcs: ["https://beta-rpc.mainnet.computecoin.com"],
-  },
   10086: {
     rpcs: [],
     rpcWorking: false,
