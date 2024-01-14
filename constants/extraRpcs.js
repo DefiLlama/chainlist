@@ -1745,6 +1745,11 @@ export const extraRpcs = {
       "https://rpc2.teloskorea.com/evm",
       "https://rpc01.us.telosunlimited.io/evm",
       "https://rpc02.us.telosunlimited.io/evm",
+      {
+        url: "https://1rpc.io/telos/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   32659: {
@@ -4119,6 +4124,23 @@ export const extraRpcs = {
       "https://tokio-archive.engram.tech",
     ],
   },
+  255: {
+    rpcs: [
+      {
+        url: "https://1rpc.io/kroma",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc
+      },
+    ]
+  },	  
+  34443: {
+    rpcs: [
+      {
+        url: "https://1rpc.io/mode",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc
+      },
+    ]
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
