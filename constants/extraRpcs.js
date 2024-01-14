@@ -4135,8 +4135,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc
       },
     ]
+  }
 };
-
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
