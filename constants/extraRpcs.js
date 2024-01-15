@@ -4135,7 +4135,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc
       },
     ]
-  }
+  },
+	217:{
+		rpcs:[
+			{
+				https://rpc2.siriusnet.io
+			}
+		]
+	}
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
