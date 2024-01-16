@@ -1063,16 +1063,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://arbitrum.getblock.io/api_key/mainnet/",
-        tracking: "none",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
-        url: "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
-        tracking: "limited",
-        trackingDetails: privacyStatement.infura,
-      },
-      {
         url: "https://arb-mainnet.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
@@ -1096,11 +1086,6 @@ export const extraRpcs = {
         url: "https://arb-mainnet-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra
-      },
-      {
-        url: "https://arbitrum.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
       },
       {
         url: "https://rpc.arb1.arbitrum.gateway.fm",
