@@ -4112,7 +4112,7 @@ export const extraRpcs = {
       },
     ]
   },	  
-  34443: {
+ 34443: {
     rpcs: [
       {
         url: "https://1rpc.io/mode",
@@ -4120,7 +4120,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc
       },
     ]
-  }
+  },
+217: {
+  rpcs:["https://rpc2.siriusnet.io"]
+}
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
