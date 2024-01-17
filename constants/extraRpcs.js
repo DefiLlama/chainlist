@@ -3834,7 +3834,7 @@ export const extraRpcs = {
       },
       {
         url: "https://linea.decubate.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.decubate,
       },
     ],
