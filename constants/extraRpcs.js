@@ -139,7 +139,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   nodeconnect:
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   decubate:
-    "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
+    "We may collect, use, store and transfer different kinds of personal data about you in connection with your use of the Services, including but not limited to: a) transaction data including purchases of crypto assets b) technical data including IP address, time zone setting and locations, operating system, and other technologies on your device used to access the Platform.",
   };
 
 export const extraRpcs = {
