@@ -138,6 +138,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "While providing our Services, we may collect the following categories of data: Personal Data: your name, email address, social media account details; Technical Information: IP address, operating system, browser type; Usage Data: information on the way you interact with our Services; Blockchain Request Data. This data is not used to reveal your identity. However, remember that blockchain transactions are publicly available and can be traced.https://itrocket.net/privacy-policy/",
   nodeconnect:
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
+  decubate:
+    "We may collect, use, store and transfer different kinds of personal data about you in connection with your use of the Services, including but not limited to: a) transaction data including purchases of crypto assets b) technical data including IP address, time zone setting and locations, operating system, and other technologies on your device used to access the Platform.",
   };
 
 export const extraRpcs = {
@@ -3813,6 +3815,11 @@ export const extraRpcs = {
         url: "https://linea.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://linea.decubate.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.decubate,
       },
     ],
   },
