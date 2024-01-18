@@ -3910,6 +3910,15 @@ export const extraRpcs = {
       }
     ]
   },
+  167008: {
+    rpcs: [
+      {
+	url: "https://taiko-katla.blockpi.network/v1/rpc/public",
+	tracking: "limited",
+	trackingDetails: privacyStatement.blockpi,
+      }
+    ]
+  },
   2323: {
     rpcs: [
       {
