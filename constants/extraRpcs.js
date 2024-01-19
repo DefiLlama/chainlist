@@ -138,6 +138,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "While providing our Services, we may collect the following categories of data: Personal Data: your name, email address, social media account details; Technical Information: IP address, operating system, browser type; Usage Data: information on the way you interact with our Services; Blockchain Request Data. This data is not used to reveal your identity. However, remember that blockchain transactions are publicly available and can be traced.https://itrocket.net/privacy-policy/",
   nodeconnect:
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
+  decubate:
+    "We may collect, use, store and transfer different kinds of personal data about you in connection with your use of the Services, including but not limited to: a) transaction data including purchases of crypto assets b) technical data including IP address, time zone setting and locations, operating system, and other technologies on your device used to access the Platform.",
   };
 
 export const extraRpcs = {
@@ -1063,16 +1065,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://arbitrum.getblock.io/api_key/mainnet/",
-        tracking: "none",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
-        url: "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
-        tracking: "limited",
-        trackingDetails: privacyStatement.infura,
-      },
-      {
         url: "https://arb-mainnet.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
@@ -1096,11 +1088,6 @@ export const extraRpcs = {
         url: "https://arb-mainnet-public.unifra.io",
         tracking: "limited",
         trackingDetails: privacyStatement.unifra
-      },
-      {
-        url: "https://arbitrum.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
       },
       {
         url: "https://rpc.arb1.arbitrum.gateway.fm",
@@ -1745,6 +1732,11 @@ export const extraRpcs = {
       "https://rpc2.teloskorea.com/evm",
       "https://rpc01.us.telosunlimited.io/evm",
       "https://rpc02.us.telosunlimited.io/evm",
+      {
+        url: "https://1rpc.io/telos/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
+      },
     ],
   },
   32659: {
@@ -2196,7 +2188,6 @@ export const extraRpcs = {
       "https://rpc1.xinfin.network",
       "https://erpc.xinfin.network",
       "https://rpc.xinfin.network",
-      "https://rpc-xdc.icecreamswap.com",
       "https://erpc.xdcrpc.com",
       "https://rpc.xdc.org",
       {
@@ -3589,8 +3580,8 @@ export const extraRpcs = {
   },
   1501: {
     rpcs: [
-      "https://rpc-1.bevm.io/",
-      "https://rpc-2.bevm.io/"
+      "https://rpc-canary-1.bevm.io/",
+      "https://rpc-canary-2.bevm.io/"
     ]
   },
   1506: {
@@ -3665,12 +3656,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
     ],
-  },
-  970: {
-    rpcs: ["https://rpc.mainnet.computecoin.com"],
-  },
-  971: {
-    rpcs: ["https://beta-rpc.mainnet.computecoin.com"],
   },
   10086: {
     rpcs: [],
@@ -3831,6 +3816,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://linea.decubate.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.decubate,
+      },
     ],
   },
   59140: {
@@ -3923,6 +3913,15 @@ export const extraRpcs = {
         url: "https://taiko-jolnir.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      }
+    ]
+  },
+  167008: {
+    rpcs: [
+      {
+	url: "https://taiko-katla.blockpi.network/v1/rpc/public",
+	tracking: "limited",
+	trackingDetails: privacyStatement.blockpi,
       }
     ]
   },
@@ -4119,8 +4118,28 @@ export const extraRpcs = {
       "https://tokio-archive.engram.tech",
     ],
   },
+  255: {
+    rpcs: [
+      {
+        url: "https://1rpc.io/kroma",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc
+      },
+    ]
+  },	  
+ 34443: {
+    rpcs: [
+      {
+        url: "https://1rpc.io/mode",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc
+      },
+    ]
+  },
+217: {
+  rpcs:["https://rpc2.siriusnet.io"]
+}
 };
-
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
