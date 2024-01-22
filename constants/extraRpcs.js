@@ -2146,6 +2146,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://rpc.nocturnode.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.nocturnode,
+      },
     ],
   },
   22: {
