@@ -1,6 +1,7 @@
 import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.json" assert { type: "json" };
 import fetch from "node-fetch"
+import axios from "axios";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -106,4 +107,49 @@ export async function generateChainData(){
         return (b.tvl ?? 0) - (a.tvl ?? 0);
       });
     return sortedChains
-}  
+}
+
+export const rpcBody = JSON.stringify({
+  jsonrpc: "2.0",
+  method: "eth_getBlockByNumber",
+  params: ["latest", false],
+  id: 1,
+});
+
+export const fetchChain = async (baseURL) => {
+  if (baseURL.includes("API_KEY")) return null;
+  try {
+    let API = axios.create({
+      baseURL,
+      timeout: 3000,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    API.interceptors.request.use(function (request) {
+      request.requestStart = Date.now();
+      return request;
+    });
+
+    API.interceptors.response.use(
+      function (response) {
+        response.latency = Date.now() - response.config.requestStart;
+        return response;
+      },
+      function (error) {
+        if (error.response) {
+          error.response.latency = null;
+        }
+
+        return Promise.reject(error);
+      },
+    );
+
+    let { data, latency } = await API.post("", rpcBody);
+
+    return { ...data, latency };
+  } catch (error) {
+    return null;
+  }
+};
