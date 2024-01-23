@@ -2813,6 +2813,11 @@ export const extraRpcs = {
         url: "wss://wevm.kava.chainstacklabs.com",
         tracking: "yes",
         trackingDetails: privacyStatement.chainstack
+      },
+      {
+        url: "https://rpc.ankr.com/kava_evm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       }
     ],
   },
