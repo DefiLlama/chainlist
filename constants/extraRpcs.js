@@ -2146,6 +2146,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+     	"https://holesky-rpc.nocturnode.tech",
     ],
   },
   22: {
