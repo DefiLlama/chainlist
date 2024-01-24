@@ -139,7 +139,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   nodeconnect:
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   decubate:
-    "We may collect, use, store and transfer different kinds of personal data about you in connection with your use of the Services, including but not limited to: a) transaction data including purchases of crypto assets b) technical data including IP address, time zone setting and locations, operating system, and other technologies on your device used to access the Platform.",
+    "With the exception of data that will be public on chain, all the other metadata should remain private to users and other parties should not be able to access or collect it. Decubate doesn't store any data related to the user using the RPC. https://docs.decubate.com/rpc-privacy/",
   };
 
 export const extraRpcs = {
@@ -3818,7 +3818,7 @@ export const extraRpcs = {
       },
       {
         url: "https://linea.decubate.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.decubate,
       },
     ],
@@ -4087,7 +4087,8 @@ export const extraRpcs = {
   8899: {
     rpcs: [
       "https://rpc-l1.jibchain.net",
-      'https://jib-rpc.inan.in.th',
+      "https://jib-rpc.inan.in.th",
+      "https://rpc-l1.jbc.aomwara.in.th",
     ]
   },
   1089: {
