@@ -1823,6 +1823,8 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.io",
       "https://babel-api.mainnet.iotex.one",
       "https://babel-api.fastblocks.io",
+      "https://iotexrpc.com",
+      "https://iotex-network.rpc.thirdweb.com",    
       {
         url: "https://iotex.api.onfinality.io/public",
         tracking: "limited",
