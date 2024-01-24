@@ -2148,7 +2148,6 @@ export const extraRpcs = {
       },
       {
         url: "https://holesky-rpc.nocturnode.tech",
-        tracking: "none",
       },
     ],
   },
