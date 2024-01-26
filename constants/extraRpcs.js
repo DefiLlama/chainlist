@@ -2825,6 +2825,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/kava_evm",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://evm.kava-rpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       }
     ],
   },
