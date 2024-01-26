@@ -140,7 +140,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   decubate:
     "With the exception of data that will be public on chain, all the other metadata should remain private to users and other parties should not be able to access or collect it. Decubate doesn't store any data related to the user using the RPC. https://docs.decubate.com/rpc-privacy/",
-  polysplit: "When you use our Service, we may collect information that you provide to us voluntarily. This may include: accessed chain id and status of response."
+  polysplit: "When you use our Service, we does not track the IP address or other user info."
   };
 
 export const extraRpcs = {
