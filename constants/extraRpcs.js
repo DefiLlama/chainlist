@@ -140,6 +140,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   decubate:
     "With the exception of data that will be public on chain, all the other metadata should remain private to users and other parties should not be able to access or collect it. Decubate doesn't store any data related to the user using the RPC. https://docs.decubate.com/rpc-privacy/",
+  polysplit: 
+    "When you use our Service, we does not track the IP address or other user info.https://polysplit.cloud/privacy",
+  nocturnDao:
+    "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
   };
 
 export const extraRpcs = {
@@ -355,6 +359,11 @@ export const extraRpcs = {
         url: "https://eth.nodeconnect.org/",
         tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/1",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -726,6 +735,11 @@ export const extraRpcs = {
         url: "https://services.tokenview.io/vipapi/nodeservice/bsc?apikey=qVHq2o6jpaakcw3lRstl",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/56",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -2146,7 +2160,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-     	"https://holesky-rpc.nocturnode.tech",
+      {
+	      url: "https://holesky-rpc.nocturnode.tech",
+	      tracking: "none",
+        trackingDetails: privacyStatement.nocturnDao,
+      },
     ],
   },
   22: {
@@ -2817,6 +2835,11 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.ankr.com/kava_evm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://evm.kava-rpc.com",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       }
