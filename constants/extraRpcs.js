@@ -360,6 +360,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/1",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   2: {
@@ -730,6 +735,11 @@ export const extraRpcs = {
         url: "https://services.tokenview.io/vipapi/nodeservice/bsc?apikey=qVHq2o6jpaakcw3lRstl",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/56",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
