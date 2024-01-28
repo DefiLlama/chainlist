@@ -437,6 +437,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/80001",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   //Rinkeby testnet deprecated
@@ -523,6 +528,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.blockswap
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/5",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   //Ropsten testnet deprecated
@@ -574,6 +584,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/4002",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   "4444": {
@@ -622,6 +637,11 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/avax/fuji/public/ext/bc/C/rpc",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/43113",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -776,6 +796,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/97",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   900000: {
@@ -852,6 +877,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/43114",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   250: {
@@ -915,6 +945,11 @@ export const extraRpcs = {
         url: "https://fantom.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/250",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -1017,6 +1052,11 @@ export const extraRpcs = {
         url: "https://getblock.io/nodes/matic/",
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/137",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -1132,7 +1172,12 @@ export const extraRpcs = {
       	url: "https://arbitrum.drpc.org",
       	tracking: "none",
       	trackingDetails: privacyStatement.drpc,
-      }
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/42161",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   421613: {
@@ -1176,7 +1221,12 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/arb/goerli/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/421613",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   42170: {
@@ -1255,6 +1305,11 @@ export const extraRpcs = {
         url: "https://klaytn.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/8217",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -1477,6 +1532,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/10",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   11155420: {
@@ -1548,6 +1608,11 @@ export const extraRpcs = {
         url: "https://gateway.tenderly.co/public/optimism-goerli",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/420",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -2464,7 +2529,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      "https://rpc-pulsechain.g4mm4.io"
+      "https://rpc-pulsechain.g4mm4.io",
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/369",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   385: {
@@ -2554,6 +2624,11 @@ export const extraRpcs = {
         url: "https://klaytn.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/1001",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -2888,7 +2963,12 @@ export const extraRpcs = {
         url: "https://1rpc.io/mantle",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      }
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/5000",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   5197: {
@@ -3188,6 +3268,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/84531",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   8453: {
@@ -3259,6 +3344,11 @@ export const extraRpcs = {
         url: "https://base.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/8453",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
       },
     ],
   },
@@ -3684,6 +3774,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/943",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   10086: {
@@ -3826,6 +3921,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/1101",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   59144: {
@@ -3850,6 +3950,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.decubate,
       },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/59144",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
     ],
   },
   59140: {
@@ -3859,6 +3964,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
        },
+      {
+        url: "https://rpc.polysplit.cloud/v1/chain/59140",
+        tracking: "no",
+        trackingDetails: privacyStatement.polysplit,
+      },
      ],
    },
   534351: {
