@@ -362,7 +362,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/1",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -758,7 +758,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/56",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
