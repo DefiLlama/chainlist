@@ -945,12 +945,7 @@ export const extraRpcs = {
         url: "https://fantom.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://rpc.polysplit.cloud/v1/chain/250",
-        tracking: "none",
-        trackingDetails: privacyStatement.polysplit,
-      },
+      }
     ],
   },
   137: {
