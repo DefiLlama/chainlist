@@ -360,11 +360,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
       },
-      {
-        url: "https://rpc.polysplit.cloud/v1/chain/1",
+      /*{
+        url: "https://rpc.polysplit.cloud/v1/chain/1", // rpc is reporting blocks that don't exist
         tracking: "none",
         trackingDetails: privacyStatement.polysplit,
-      },
+      },*/
     ],
   },
   2: {
@@ -736,11 +736,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
       },
-      {
-        url: "https://rpc.polysplit.cloud/v1/chain/56",
+      /*{
+        url: "https://rpc.polysplit.cloud/v1/chain/56", // rpc is reporting blocks that don't exist
         tracking: "none",
         trackingDetails: privacyStatement.polysplit,
-      },
+      },*/
     ],
   },
   97: {
