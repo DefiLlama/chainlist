@@ -583,12 +583,7 @@ export const extraRpcs = {
         url: "https://fantom.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://rpc.polysplit.cloud/v1/chain/4002",
-        tracking: "none",
-        trackingDetails: privacyStatement.polysplit,
-      },
+      }
     ],
   },
   "4444": {
