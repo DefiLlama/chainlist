@@ -439,7 +439,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/80001",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -530,7 +530,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/5",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -586,7 +586,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/4002",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -640,7 +640,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/43113",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -798,7 +798,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/97",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -879,7 +879,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/43114",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -948,7 +948,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/250",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -1055,7 +1055,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/137",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -1175,7 +1175,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/42161",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -1224,7 +1224,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/421613",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -1308,7 +1308,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/8217",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -1534,7 +1534,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/10",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -1611,7 +1611,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/420",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -2532,7 +2532,7 @@ export const extraRpcs = {
       "https://rpc-pulsechain.g4mm4.io",
       {
         url: "https://rpc.polysplit.cloud/v1/chain/369",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -2627,7 +2627,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/1001",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -2966,7 +2966,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/5000",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -3270,7 +3270,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/84531",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -3347,7 +3347,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/8453",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -3776,7 +3776,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/943",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -3923,7 +3923,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/1101",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -3952,7 +3952,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/59144",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
     ],
@@ -3966,7 +3966,7 @@ export const extraRpcs = {
        },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/59140",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
      ],
