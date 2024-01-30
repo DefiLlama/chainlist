@@ -2652,6 +2652,15 @@ export const extraRpcs = {
       },
     ]
   },
+  300: {
+    rpcs: [
+      {
+	url: "https://zksync-era-sepolia.blockpi.network/v1/rpc/public",
+	tracking: "limited",
+	trackingDetails: privacyStatement.blockpi,
+      },
+    ]
+  },
   324: {
     rpcs: [
       {
