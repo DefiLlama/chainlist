@@ -135,7 +135,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   tokenview:
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   thirdweb:
-    "Server logs automatically record information and details about your online interactions with us. For example, server logs may record information about your visit to our Site on a particular time and day and collect information such as your device ID and IP address",
+    "Server logs automatically record information and details about your online interactions with us. For example, server logs may record information about your visit to our Site on a particular time and day and collect information such as your device ID and IP address.https://thirdweb.com/privacy",
   itrocket:
     "While providing our Services, we may collect the following categories of data: Personal Data: your name, email address, social media account details; Technical Information: IP address, operating system, browser type; Usage Data: information on the way you interact with our Services; Blockchain Request Data. This data is not used to reveal your identity. However, remember that blockchain transactions are publicly available and can be traced.https://itrocket.net/privacy-policy/",
   nodeconnect:
