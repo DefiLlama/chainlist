@@ -4144,7 +4144,7 @@ export const extraRpcs = {
   1089: {
     rpcs: [
       {
-        url: "https://humans-testnet-evm.itrocket.net",
+        url: "https://humans-mainnet-evm.itrocket.net",
         tracking: "none",
         trackingDetails: privacyStatement.itrocket,
       },
