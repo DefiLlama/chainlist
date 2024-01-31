@@ -146,6 +146,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "When you use our Service, we does not track the IP address or other user info.https://polysplit.cloud/privacy",
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
+  stateless:
+    "Stateless does not log any identifying information, such as IPs, request origin, or request data, through our RPC endpoints. Personal information is collected when creating an account or on our marketing website when provided by users, along with anonymous engagement metrics: https://www.stateless.solutions/privacy-policy",
   };
 
 export const extraRpcs = {
@@ -361,6 +363,11 @@ export const extraRpcs = {
         url: "https://eth.nodeconnect.org/",
         tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
+      },
+      {
+        url: "https://api.stateless.solutions/ethereum/v1/e9a59fdc-cae3-4682-a474-8afbd7d96bf5",
+        tracking: "no",
+        trackingDetails: privacyStatement.stateless,
       },
       /*{
         url: "https://rpc.polysplit.cloud/v1/chain/1", // rpc is reporting blocks that don't exist
@@ -1020,6 +1027,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
       },
+      {
+        url: "https://api.stateless.solutions/polygon/v1/cfa75b32-9418-42de-ae32-bb567b5522cc",
+        tracking: "none",
+        trackingDetails: privacyStatement.stateless,
+      },
     ],
   },
   25: {
@@ -1478,6 +1490,11 @@ export const extraRpcs = {
         url: "https://gateway.tenderly.co/public/optimism",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://api.stateless.solutions/optimism/v1/f373feb1-c8e4-41c9-bb74-2c691988dd34",
+        tracking: "none",
+        trackingDetails: privacyStatement.stateless,
       },
     ],
   },
