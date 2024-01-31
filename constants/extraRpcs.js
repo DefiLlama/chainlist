@@ -3975,16 +3975,6 @@ export const extraRpcs = {
       "https://mainnet-rpc.curvescan.io",
     ],
   },
-
-  167007: {
-    rpcs: [
-      {
-        url: "https://taiko-jolnir.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      }
-    ]
-  },
   167008: {
     rpcs: [
       {
