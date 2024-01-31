@@ -137,7 +137,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   thirdweb:
     "Server logs automatically record information and details about your online interactions with us. For example, server logs may record information about your visit to our Site on a particular time and day and collect information such as your device ID and IP address.https://thirdweb.com/privacy",
   itrocket:
-    "While providing our Services, we may collect the following categories of data: Personal Data: your name, email address, social media account details; Technical Information: IP address, operating system, browser type; Usage Data: information on the way you interact with our Services; Blockchain Request Data. This data is not used to reveal your identity. However, remember that blockchain transactions are publicly available and can be traced.https://itrocket.net/privacy-policy/",
+    "We do not track, store or process any personal data. You can check our privacy policy here: https://itrocket.net/privacy-policy/",
   nodeconnect:
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   decubate:
@@ -4157,8 +4157,8 @@ export const extraRpcs = {
   1089: {
     rpcs: [
       {
-        url: "https://humans-mainnet-rpc.itrocket.net/",
-        tracking: "yes",
+        url: "https://humans-mainnet-evm.itrocket.net",
+        tracking: "none",
         trackingDetails: privacyStatement.itrocket,
       },
 
@@ -4167,8 +4167,8 @@ export const extraRpcs = {
   4139: {
     rpcs: [
       {
-        url: "https://humans-testnet-rpc.itrocket.net/",
-        tracking: "yes",
+        url: "https://humans-testnet-evm.itrocket.net",
+        tracking: "none",
         trackingDetails: privacyStatement.itrocket,
       },
     ],
