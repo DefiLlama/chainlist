@@ -2809,6 +2809,15 @@ export const extraRpcs = {
       },
     ],
   },
+  7000: {
+    rpcs: [
+      {
+        url: "https://zetachain-evm.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
   },
