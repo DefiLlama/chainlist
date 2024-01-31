@@ -2551,7 +2551,11 @@ export const extraRpcs = {
   1001: {
     rpcs: [
       "https://public-en-baobab.klaytn.net",
-      "https://klaytn-baobab-rpc.allthatnode.com:8551",
+      {
+        url:"https://klaytn-baobab-rpc.allthatnode.com:8551",
+        tracking: "yes",
+        trackingDetails: privacyStatement.allthatnode
+      },
       {
         url: "https://rpc.ankr.com/klaytn_testnet",
         tracking: "limited",
@@ -2818,12 +2822,12 @@ export const extraRpcs = {
       },
       {
         url: "https://zetachain-mainnet-archive.allthatnode.com:8545",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
       },
       {
         url: "wss://zetachain-mainnet-archive.allthatnode.com:8546",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
       },
     ],
