@@ -2816,6 +2816,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://zetachain-mainnet-archive.allthatnode.com:8545",
+        tracking: "limited",
+        trackingDetails: privacyStatement.allthatnode,
+      },
+      {
+        url: "wss://zetachain-mainnet-archive.allthatnode.com:8546",
+        tracking: "limited",
+        trackingDetails: privacyStatement.allthatnode,
+      },
     ],
   },
   2025: {
