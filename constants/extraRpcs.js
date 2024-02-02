@@ -4152,6 +4152,7 @@ export const extraRpcs = {
       "https://rpc-l1.jibchain.net",
       "https://jib-rpc.inan.in.th",
       "https://rpc-l1.jbc.aomwara.in.th",
+      "https://rpc-l1.jbc.xpool.pw",
     ]
   },
   1089: {
