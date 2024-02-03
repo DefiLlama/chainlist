@@ -3608,7 +3608,7 @@ export const extraRpcs = {
     rpcs: ["https://mainnet.gather.network"],
   },
   245022926: {
-    rpcs: ["https://proxy.devnet.neonlabs.org/solana"],
+    rpcs: ["https://devnet.neonevm.org"]
   },
   245022934: {
     rpcs: ["https://neon-proxy-mainnet.solana.p2p.org", "https://neon-mainnet.everstake.one"],
