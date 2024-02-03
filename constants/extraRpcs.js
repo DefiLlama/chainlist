@@ -146,6 +146,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "When you use our Service, we does not track the IP address or other user info.https://polysplit.cloud/privacy",
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
+  tornadocash:
+   "TornadoCash RPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash /privacy"
   };
 
 export const extraRpcs = {
@@ -362,6 +364,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
+      },    
       /*{
         url: "https://rpc.polysplit.cloud/v1/chain/1", // rpc is reporting blocks that don't exist
         tracking: "none",
@@ -625,6 +632,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/avax",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
+      },
     ],
   },
   56: {
@@ -737,6 +749,11 @@ export const extraRpcs = {
         url: "https://services.tokenview.io/vipapi/nodeservice/bsc?apikey=qVHq2o6jpaakcw3lRstl",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
       },
       /*{
         url: "https://rpc.polysplit.cloud/v1/chain/56", // rpc is reporting blocks that don't exist
@@ -1020,6 +1037,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/polygon",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
+      },
     ],
   },
   25: {
@@ -1134,7 +1156,12 @@ export const extraRpcs = {
       	url: "https://arbitrum.drpc.org",
       	tracking: "none",
       	trackingDetails: privacyStatement.drpc,
-      }
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/arbitrum",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
+      },
     ],
   },
   421613: {
@@ -1479,6 +1506,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/optimism",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
+      },
     ],
   },
   11155420: {
@@ -1639,6 +1671,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/gnosis",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/gnosis",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadocash,
       },
     ],
   },
