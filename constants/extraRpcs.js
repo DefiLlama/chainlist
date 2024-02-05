@@ -147,7 +147,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
   rpcgrid:
-    "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes.",
+    "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes. https://rpcgrid.com/privacy-policy",
   };
 
 export const extraRpcs = {
@@ -2833,12 +2833,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.allthatnode,
       },
       {
-        url: "http://zeta.rpcgrid.com:8545",
+        url: "https://zeta.rpcgrid.com",
         tracking: "none",
         trackingDetails: privacyStatement.rpcgrid,
       },
       {
-        url: "ws://zeta.rpcgrid.com:8546",
+        url: "wss://zeta.rpcgrid.com",
         tracking: "none",
         trackingDetails: privacyStatement.rpcgrid,
       },
