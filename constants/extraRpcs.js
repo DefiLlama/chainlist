@@ -2970,6 +2970,7 @@ export const extraRpcs = {
   },
   7700: {
     rpcs: [
+    "https://canto-rpc.ansybl.io",
     "https://canto.gravitychain.io/",
     "https://canto.evm.chandrastation.com/",
     "https://jsonrpc.canto.nodestake.top/",
