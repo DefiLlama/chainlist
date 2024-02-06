@@ -2975,7 +2975,8 @@ export const extraRpcs = {
     "https://jsonrpc.canto.nodestake.top/",
     "https://canto.dexvaults.com/",
     "wss://canto.gravitychain.io:8546",
-    "wss://canto.dexvaults.com/ws"
+    "wss://canto.dexvaults.com/ws",
+    "https://canto-rpc.ansybl.io",
     ]
   },
   8000: {
