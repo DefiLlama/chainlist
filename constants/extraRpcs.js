@@ -2102,11 +2102,6 @@ export const extraRpcs = {
   88: {
     rpcs: ["https://rpc.tomochain.com",
       {
-        url: "https://tomo.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://viction.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
@@ -3474,11 +3469,6 @@ export const extraRpcs = {
         url: "https://scroll-alphanet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://scroll-testnet.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://scroll-alphanet.public.blastapi.io",
