@@ -4233,7 +4233,10 @@ export const extraRpcs = {
   rpcs:["https://rpc2.siriusnet.io"]
 },
 1100: {
-  rpcs:["https://jsonrpc.dymension.nodestake.org"]
+  rpcs:[
+  "https://jsonrpc.dymension.nodestake.org",
+  "https://evm-archive.dymd.bitszn.com"
+  ]
 }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
