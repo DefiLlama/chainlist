@@ -374,6 +374,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/mev",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },
     ],
   },
   2: {
@@ -531,6 +536,11 @@ export const extraRpcs = {
         url: "https://builder-rpc2.0xblockswap.com",
         tracking: "yes",
         trackingDetails: privacyStatement.blockswap
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/goerli",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
       },
     ],
   },
