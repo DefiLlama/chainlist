@@ -148,6 +148,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
   rpcgrid:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes. https://rpcgrid.com/privacy-policy",
+  tornadoRPC:
+    "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
   };
 
 export const extraRpcs = {
@@ -369,6 +371,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/mev",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },
     ],
   },
   2: {
@@ -526,6 +538,11 @@ export const extraRpcs = {
         url: "https://builder-rpc2.0xblockswap.com",
         tracking: "yes",
         trackingDetails: privacyStatement.blockswap
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/goerli",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
       },
     ],
   },
@@ -745,6 +762,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.polysplit,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },
     ],
   },
   97: {
@@ -855,6 +877,11 @@ export const extraRpcs = {
         url: "https://avalanche.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/avax",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
       },
     ],
   },
@@ -1022,6 +1049,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/polygon",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },    
     ],
   },
   25: {
@@ -1136,7 +1168,12 @@ export const extraRpcs = {
       	url: "https://arbitrum.drpc.org",
       	tracking: "none",
       	trackingDetails: privacyStatement.drpc,
-      }
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/arbitrum",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },    
     ],
   },
   421613: {
@@ -1481,6 +1518,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://rpc.tornadoeth.cash/optimism",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
+      },
     ],
   },
   11155420: {
@@ -1641,6 +1683,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/gnosis",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://rpc.tornadoeth.cash/gnosis",
+        tracking: "none",
+        trackingDetails: privacyStatement.tornadoRPC,
       },
     ],
   },
@@ -2066,11 +2113,6 @@ export const extraRpcs = {
   },
   88: {
     rpcs: ["https://rpc.tomochain.com",
-      {
-        url: "https://tomo.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       {
         url: "https://viction.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -2987,7 +3029,8 @@ export const extraRpcs = {
     "https://jsonrpc.canto.nodestake.top/",
     "https://canto.dexvaults.com/",
     "wss://canto.gravitychain.io:8546",
-    "wss://canto.dexvaults.com/ws"
+    "wss://canto.dexvaults.com/ws",
+    "https://canto-rpc.ansybl.io",
     ]
   },
   8000: {
@@ -3448,11 +3491,6 @@ export const extraRpcs = {
         url: "https://scroll-alphanet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://scroll-testnet.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://scroll-alphanet.public.blastapi.io",
@@ -4215,6 +4253,13 @@ export const extraRpcs = {
   },
 217: {
   rpcs:["https://rpc2.siriusnet.io"]
+},
+1100: {
+  rpcs:[
+  "https://jsonrpc.dymension.nodestake.org",
+  "https://evm-archive.dymd.bitszn.com",
+  "https://dymension.liquify.com/json-rpc"
+  ]
 }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
