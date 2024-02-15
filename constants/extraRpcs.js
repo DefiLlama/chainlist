@@ -146,8 +146,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "When you use our Service, we does not track the IP address or other user info.https://polysplit.cloud/privacy",
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
+  rpcgrid:
+    "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes. https://rpcgrid.com/privacy-policy",
   tornadoRPC:
-   "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy"
+    "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
   };
 
 export const extraRpcs = {
@@ -2872,6 +2874,16 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
       },
+      {
+        url: "https://zeta.rpcgrid.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.rpcgrid,
+      },
+      {
+        url: "wss://zeta.rpcgrid.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.rpcgrid,
+      },
     ],
   },
   2025: {
@@ -4246,7 +4258,8 @@ export const extraRpcs = {
   rpcs:[
   "https://jsonrpc.dymension.nodestake.org",
   "https://evm-archive.dymd.bitszn.com",
-  "https://dymension.liquify.com/json-rpc"
+  "https://dymension.liquify.com/json-rpc",
+  "https://dymension-evm.kynraze.com"
   ]
 }
 };
