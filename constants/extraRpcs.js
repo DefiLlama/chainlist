@@ -150,6 +150,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes. https://rpcgrid.com/privacy-policy",
   tornadoRPC:
     "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
+  stackup:
+    "Stackup values privacy. On public endpoints, Stackup may collect and store request methods and headers. Read more at https://www.stackup.sh/privacy",
   };
 
 export const extraRpcs = {
@@ -381,6 +383,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
       },
+      {
+        url: "https://public.stackup.sh/api/v1/node/ethereum-mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
+      },
     ],
   },
   2: {
@@ -452,6 +459,11 @@ export const extraRpcs = {
       	url: "https://polygon-mumbai.api.onfinality.io/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/polygon-mumbai",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ],
   },
@@ -644,6 +656,11 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
+      {
+      	url: "https://public.stackup.sh/api/v1/node/avalanche-fuji",
+      	tracking: "limited",
+      	trackingDetails: privacyStatement.zan,
+      },
     ],
   },
   56: {
@@ -767,6 +784,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
       },
+      {
+        url: "https://public.stackup.sh/api/v1/node/bsc-mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
+      },
     ],
   },
   97: {
@@ -801,6 +823,11 @@ export const extraRpcs = {
       	url: "https://bsc-testnet.blockpi.network/v1/rpc/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/bsc-testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ],
   },
@@ -882,6 +909,11 @@ export const extraRpcs = {
         url: "https://rpc.tornadoeth.cash/avax",
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/avalanche-mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ],
   },
@@ -1053,7 +1085,12 @@ export const extraRpcs = {
         url: "https://rpc.tornadoeth.cash/polygon",
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
-      },    
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/polygon-mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
+      },
     ],
   },
   25: {
@@ -1173,7 +1210,12 @@ export const extraRpcs = {
         url: "https://rpc.tornadoeth.cash/arbitrum",
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
-      },    
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/arbitrum-one",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
+      },
     ],
   },
   421613: {
@@ -1256,6 +1298,11 @@ export const extraRpcs = {
         url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/public ",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/arbitrum-sepolia",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ],
   },
@@ -1523,6 +1570,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
       },
+      {
+        url: "https://public.stackup.sh/api/v1/node/optimism-mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
+      },
     ],
   },
   11155420: {
@@ -1531,6 +1583,11 @@ export const extraRpcs = {
         url: "https://optimism-sepolia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/optimism-sepolia",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
    ],
 },
@@ -3233,10 +3290,15 @@ export const extraRpcs = {
   84532: {
     rpcs: [
       "https://rpc.notadegen.com/base/sepolia",
-	 {
+      {
         url: "https://base-sepolia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/base-sepolia",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ],
   },
@@ -3358,6 +3420,11 @@ export const extraRpcs = {
         url: "https://base.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/base-mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ],
   },
@@ -3586,6 +3653,11 @@ export const extraRpcs = {
         url: "https://eth-sepolia.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://public.stackup.sh/api/v1/node/ethereum-sepolia",
+        tracking: "limited",
+        trackingDetails: privacyStatement.stackup,
       },
     ]
   },
