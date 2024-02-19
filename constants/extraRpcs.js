@@ -142,7 +142,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We may collect information about how you interact with our Service. This may include information about your operating system, IP address, and browser type : https://nodeconnect.org/privacy.txt",
   decubate:
     "With the exception of data that will be public on chain, all the other metadata should remain private to users and other parties should not be able to access or collect it. Decubate doesn't store any data related to the user using the RPC. https://docs.decubate.com/rpc-privacy/",
-  polysplit: 
+  polysplit:
     "When you use our Service, we does not track the IP address or other user info.https://polysplit.cloud/privacy",
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
@@ -1053,7 +1053,7 @@ export const extraRpcs = {
         url: "https://rpc.tornadoeth.cash/polygon",
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
-      },    
+      },
     ],
   },
   25: {
@@ -1173,7 +1173,7 @@ export const extraRpcs = {
         url: "https://rpc.tornadoeth.cash/arbitrum",
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
-      },    
+      },
     ],
   },
   421613: {
@@ -1888,13 +1888,13 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.io",
       "https://babel-api.mainnet.iotex.one",
       "https://babel-api.fastblocks.io",
-      {    
+      {
         url: "https://iotexrpc.com",
 	tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://iotex-network.rpc.thirdweb.com",    
+        url: "https://iotex-network.rpc.thirdweb.com",
 	tracking: "yes",
 	trackingDetails: privacyStatement.thirdweb,
       },
@@ -3581,7 +3581,7 @@ export const extraRpcs = {
         url: "https://1rpc.io/sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },    
+      },
       {
         url: "https://eth-sepolia.api.onfinality.io/public",
         tracking: "limited",
@@ -4241,7 +4241,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc
       },
     ]
-  },	  
+  },
  34443: {
     rpcs: [
       {
@@ -4261,7 +4261,13 @@ export const extraRpcs = {
   "https://dymension.liquify.com/json-rpc",
   "https://dymension-evm.kynraze.com"
   ]
-}
+},
+  7070: {
+    rpcs:[
+      "https://planq-rpc.nodies.app",
+      "https://jsonrpc.planq.nodestake.top/"
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
