@@ -4267,6 +4267,15 @@ export const extraRpcs = {
       "https://planq-rpc.nodies.app",
       "https://jsonrpc.planq.nodestake.top/"
     ]
+  },
+  463: {
+    rpcs:[
+      "https://mainnet-rpc.areon.network",
+      "https://mainnet-rpc2.areon.network",
+      "https://mainnet-rpc3.areon.network",
+      "https://mainnet-rpc4.areon.network",
+      "https://mainnet-rpc5.areon.network"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
