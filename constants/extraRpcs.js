@@ -1331,6 +1331,15 @@ export const extraRpcs = {
       },
     ],
   },
+168587773: {
+    rpcs: [
+      {
+        url: "https://blast-sepolia.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   204: {
     rpcs: [
       {
