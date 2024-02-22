@@ -100,7 +100,7 @@ export async function generateChainData(){
     const chainTvls = await fetcher("https://api.llama.fi/chains");
   
     const sortedChains = chains
-      .filter((c) => c.name !== "420coin") // same chainId as ronin
+      .filter((c) => c.status !== "deprecated" && c.name !== "420coin") // same chainId as ronin
       .map((chain) => populateChain(chain, chainTvls))
       .sort((a, b) => {
         return (b.tvl ?? 0) - (a.tvl ?? 0);
