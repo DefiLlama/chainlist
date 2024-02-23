@@ -381,6 +381,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
       },
+      {
+        url: "https://eth1.lava.build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/",
+        tracking: "none",
+        trackingDetails: privacyStatement.lava,
+      },
     ],
   },
   2: {
