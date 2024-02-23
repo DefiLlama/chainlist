@@ -3492,6 +3492,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://scroll.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc
+      },
+      {
+        url: "https://scroll-mainnet.rpc.grove.city/v1/a7a7c8e2",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt
+      },
     ],
   },
   534353: {
@@ -3995,6 +4005,16 @@ export const extraRpcs = {
         url: "https://scroll-sepolia.chainstacklabs.com",
         tracking: "yes",
         trackingDetails: privacyStatement.chainstack
+      },
+      {
+        url: "https://scroll-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc
+      },
+      {
+        url: "https://scroll-testnet.rpc.grove.city/v1/a7a7c8e2",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt
       },
       "http://scroll-sepolia-rpc.01no.de:8545/",
     ],
