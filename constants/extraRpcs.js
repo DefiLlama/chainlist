@@ -147,7 +147,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
   stateless:
-    "Stateless does not log any identifying information, such as IPs, request origin, or request data, through our RPC endpoints. Personal information is collected when creating an account or on our marketing website when provided by users, along with anonymous engagement metrics: https://www.stateless.solutions/privacy-policy",
+    "Through any of our RPC API endpoints, whether public or private, we do not collect personal identifiers such as IP addresses, request origins, or specific request data. https://www.stateless.solutions/api-usage-privacy-policy",
   };
 
 export const extraRpcs = {
@@ -365,8 +365,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodeconnect,
       },
       {
-        url: "https://api.stateless.solutions/ethereum/v1/e9a59fdc-cae3-4682-a474-8afbd7d96bf5",
-        tracking: "no",
+        url: "https://api.stateless.solutions/ethereum/v1/0ec6cac0-ecac-4247-8a41-1e685deadfe4",
+        tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
       /*{
@@ -1028,7 +1028,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       {
-        url: "https://api.stateless.solutions/polygon/v1/cfa75b32-9418-42de-ae32-bb567b5522cc",
+        url: "https://api.stateless.solutions/polygon/v1/5850f066-209e-4e3c-a294-0757a4eb34b3",
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
@@ -1190,6 +1190,11 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/arb/goerli/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
+      }
+      {
+      	url: "https://api.stateless.solutions/arbitrum-one/v1/77abba85-53e4-4430-a332-a46deb9900ea",
+      	tracking: "none",
+      	trackingDetails: privacyStatement.stateless,
       }
     ],
   },
