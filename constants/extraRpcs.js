@@ -698,6 +698,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+	{
+        url: "https://getblock.io/nodes/bsc/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.getblock,
+      },
       "https://bscrpc.com",
       "https://bsc.rpcgator.com/",
       {
