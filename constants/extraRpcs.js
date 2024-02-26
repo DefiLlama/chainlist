@@ -3767,6 +3767,12 @@ export const extraRpcs = {
       "https://kekchain.interchained.org",
     ],
   },
+  88888: {
+    rpcs: ["https://rpc.chiliz.com"],
+  },
+  88882:{
+    rpcs:["https://spicy-rpc.chiliz.com"],
+  },
   420666: {
     rpcs: ["https://testnet.kekchain.com"],
   },
@@ -3787,7 +3793,7 @@ export const extraRpcs = {
   },
   943: {
     rpcs: [
-	     {
+	    {
         url: "https://pulsetest-s.projectpi.xyz",
         tracking: "none",
         trackingDetails: privacyStatement.projectpi,
