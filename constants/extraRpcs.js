@@ -1214,11 +1214,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://arbitrum-goerli.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
       	url: "https://api.zan.top/node/v1/arb/goerli/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
@@ -1588,11 +1583,6 @@ export const extraRpcs = {
         url: "wss://optimism-goerli-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://optimism-goerli.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
       	url: "https://api.zan.top/node/v1/opt/goerli/public",
@@ -2705,15 +2695,6 @@ export const extraRpcs = {
   1280: {
     rpcs: ["https://nodes.halo.land"],
   },
-  280: {
-    rpcs: [
-      {
-        url: "https://zksync-era-testnet.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-    ]
-  },
   300: {
     rpcs: [
       {
@@ -3270,11 +3251,6 @@ export const extraRpcs = {
         url: "https://1rpc.io/base-goerli",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://base-goerli.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://base-goerli.gateway.tenderly.co",
