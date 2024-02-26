@@ -386,6 +386,12 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
+	{
+        url: "https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+
     ],
   },
   2: {
@@ -3073,6 +3079,7 @@ export const extraRpcs = {
         "https://alphab.ai/rpc/eth/evmos_testnet",
         "https://t-evmos-jsonrpc.kalia.network",
 	      "https://jsonrpc-evmos-testnet.mzonder.com"
+	"https://evmos-testnet.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b"
     ],
   },
   9001: {
@@ -3142,6 +3149,7 @@ export const extraRpcs = {
       "https://alphab.ai/rpc/eth/evmos",
       "https://evmos-jsonrpc.kalia.network",
       "https://jsonrpc-evmos.mzonder.com",
+	"https://evmos.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/"
     ],
   },
   836542336838601: {
