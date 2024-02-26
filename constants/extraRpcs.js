@@ -4310,6 +4310,11 @@ export const extraRpcs = {
       "https://mainnet-rpc4.areon.network",
       "https://mainnet-rpc5.areon.network"
     ]
+  },
+  35441: {
+    rpcs:[
+      "https://rpc.q.org"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
