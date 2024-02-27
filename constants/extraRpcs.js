@@ -4329,6 +4329,15 @@ export const extraRpcs = {
       "https://mainnet-rpc4.areon.network",
       "https://mainnet-rpc5.areon.network"
     ]
+  },
+  35441: {
+    rpcs:[
+      {
+        url: "https://rpc.q.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.q,
+      },
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
