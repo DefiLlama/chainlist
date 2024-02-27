@@ -1242,7 +1242,7 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/arb/goerli/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
-      }
+      },
       {
       	url: "https://api.stateless.solutions/arbitrum-one/v1/77abba85-53e4-4430-a332-a46deb9900ea",
       	tracking: "none",
