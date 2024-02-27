@@ -4313,7 +4313,11 @@ export const extraRpcs = {
   },
   35441: {
     rpcs:[
-      "https://rpc.q.org"
+      {
+        url: "https://rpc.q.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.q,
+      },
     ]
   }
 };
