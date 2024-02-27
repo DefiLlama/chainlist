@@ -146,6 +146,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "When you use our Service, we does not track the IP address or other user info.https://polysplit.cloud/privacy",
   nocturnDao:
     "As a fundamental practice, we do not collect, store, or process any personal information from our users. This non-collection policy ensures absolute data security and privacy for our users.https://nocturnode.tech/privacy",
+  stateless:
+    "Through any of our RPC API endpoints, whether public or private, we do not collect personal identifiers such as IP addresses, request origins, or specific request data. https://www.stateless.solutions/api-usage-privacy-policy",
   rpcgrid:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes. https://rpcgrid.com/privacy-policy",
   tornadoRPC:
@@ -367,6 +369,11 @@ export const extraRpcs = {
         url: "https://eth.nodeconnect.org/",
         tracking: "yes",
         trackingDetails: privacyStatement.nodeconnect,
+      },
+      {
+        url: "https://api.stateless.solutions/ethereum/v1/0ec6cac0-ecac-4247-8a41-1e685deadfe4",
+        tracking: "none",
+        trackingDetails: privacyStatement.stateless,
       },
       {
         url: "https://rpc.polysplit.cloud/v1/chain/1",
@@ -1068,6 +1075,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       {
+        url: "https://api.stateless.solutions/polygon/v1/5850f066-209e-4e3c-a294-0757a4eb34b3",
+        tracking: "none",
+        trackingDetails: privacyStatement.stateless,
+      },
+      {
         url: "https://rpc.tornadoeth.cash/polygon",
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
@@ -1230,6 +1242,11 @@ export const extraRpcs = {
       	url: "https://api.zan.top/node/v1/arb/goerli/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
+      }
+      {
+      	url: "https://api.stateless.solutions/arbitrum-one/v1/77abba85-53e4-4430-a332-a46deb9900ea",
+      	tracking: "none",
+      	trackingDetails: privacyStatement.stateless,
       }
     ],
   },
@@ -1539,6 +1556,11 @@ export const extraRpcs = {
         url: "https://gateway.tenderly.co/public/optimism",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://api.stateless.solutions/optimism/v1/f373feb1-c8e4-41c9-bb74-2c691988dd34",
+        tracking: "none",
+        trackingDetails: privacyStatement.stateless,
       },
       {
         url: "https://rpc.tornadoeth.cash/optimism",
