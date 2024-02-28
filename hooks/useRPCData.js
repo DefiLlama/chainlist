@@ -5,10 +5,10 @@ import axios from "axios";
 const refetchInterval = 60_000;
 
 export const rpcBody = JSON.stringify({
-  jsonrpc: "2.0",
-  method: "eth_getBlockByNumber",
-  params: ["latest", false],
-  id: 1,
+  "jsonrpc": "2.0",
+  "method": "eth_getBlockByNumber",
+  "params": ["latest", false],
+  "id": 1,
 });
 
 const fetchChain = async (baseURL) => {
