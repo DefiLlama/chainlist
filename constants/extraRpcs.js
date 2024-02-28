@@ -3165,7 +3165,7 @@ export const extraRpcs = {
         url: "https://evmos.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      },	    
+      },
     ],
   },
   836542336838601: {
@@ -4337,6 +4337,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.q,
       },
+    ]
+  },
+  5151706: {
+    rpcs:[
+        "http://rpc.lootchain.com/http"
     ]
   }
 };
