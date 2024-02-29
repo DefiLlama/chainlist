@@ -1370,6 +1370,15 @@ export const extraRpcs = {
       },
     ],
   },
+81457: {
+    rpcs: [
+      {
+        url: "https://blast.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   204: {
     rpcs: [
       {
