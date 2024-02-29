@@ -1377,6 +1377,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://rpc.ankr.com/blast",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
     ],
   },
   204: {
