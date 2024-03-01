@@ -3415,15 +3415,23 @@ export const extraRpcs = {
   11235: {
     rpcs: [
       {
-        url: "https://haqq-evm-rpc.publicnode.com",
+        url: "https://haqq-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "wss://haqq-evm-rpc.publicnode.com",
+        url: "wss://haqq-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://evm.haqq.sh",
+        tracking: "none"
+      },
+      {
+        url: "wss://evm-ws.haqq.sh",
+        tracking: "none"
+      }
     ],
   },
   99999: {
