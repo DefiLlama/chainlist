@@ -1372,6 +1372,10 @@ export const extraRpcs = {
   },
 81457: {
     rpcs: [
+      "https://rpc.blast.io",
+      "https://blast.din.dev/rpc",
+      "https://blastl2-mainnet.public.blastapi.io",
+      "https://blast.blockpi.network/v1/rpc/public",
       {
         url: "https://blast.blockpi.network/v1/rpc/public",
         tracking: "limited",
