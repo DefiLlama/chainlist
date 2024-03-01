@@ -1,12 +1,10 @@
-import * as React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Layout from "../components/Layout";
-import Chain from "../components/chain";
-import { AdBanner } from "../components/AdBanner";
-import { generateChainData } from "../utils/fetch";
-import { Environment, HypeLab, HypeLabContext } from "hypelab-react";
-import { HYPELAB_API_URL, HYPELAB_PROPERTY_SLUG } from "../constants/hypelab";
+import * as React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Layout from '../components/Layout';
+import Chain from '../components/chain';
+import { AdBanner } from '../components/AdBanner';
+import { generateChainData } from '../utils/fetch';
 
 export async function getStaticProps() {
   const sortedChains = await generateChainData();
@@ -25,24 +23,24 @@ function Home({ chains }) {
   const { testnets, testnet, search } = router.query;
 
   const includeTestnets =
-    (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
+    (typeof testnets === 'string' && testnets === 'true') || (typeof testnet === 'string' && testnet === 'true');
 
   const sortedChains = !includeTestnets
     ? chains.filter((item) => {
         const testnet =
-          item.name?.toLowerCase().includes("test") ||
-          item.title?.toLowerCase().includes("test") ||
-          item.network?.toLowerCase().includes("test");
+          item.name?.toLowerCase().includes('test') ||
+          item.title?.toLowerCase().includes('test') ||
+          item.network?.toLowerCase().includes('test');
         const devnet =
-          item.name?.toLowerCase().includes("devnet") ||
-          item.title?.toLowerCase().includes("devnet") ||
-          item.network?.toLowerCase().includes("devnet");
+          item.name?.toLowerCase().includes('devnet') ||
+          item.title?.toLowerCase().includes('devnet') ||
+          item.network?.toLowerCase().includes('devnet');
         return !testnet && !devnet;
       })
     : chains;
 
   const filteredChains =
-    !search || typeof search !== "string" || search === ""
+    !search || typeof search !== 'string' || search === ''
       ? sortedChains
       : sortedChains.filter((chain) => {
           //filter
@@ -50,15 +48,9 @@ function Home({ chains }) {
             chain.chain.toLowerCase().includes(search.toLowerCase()) ||
             chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
             chain.name.toLowerCase().includes(search.toLowerCase()) ||
-            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(search.toLowerCase())
+            (chain.nativeCurrency ? chain.nativeCurrency.symbol : '').toLowerCase().includes(search.toLowerCase())
           );
         });
-
-  const client = new HypeLab({
-    URL: HYPELAB_API_URL,
-    propertySlug: HYPELAB_PROPERTY_SLUG,
-    environment: Environment.Production,
-  });
 
   return (
     <>
@@ -72,24 +64,17 @@ function Home({ chains }) {
       </Head>
 
       <Layout>
-        <HypeLabContext client={client}>
-          <React.Suspense fallback={<div className="h-screen"></div>}>
-            <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-              {filteredChains.map((chain, idx) => {
-                if (idx === 2) {
-                  return (
-                    <React.Fragment key={JSON.stringify(chain) + "en" + "with-banner"}>
-                      <AdBanner />
-                      <Chain chain={chain} lang="en" />
-                    </React.Fragment>
-                  );
-                }
-
-                return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
-              })}
-            </div>
-          </React.Suspense>
-        </HypeLabContext>
+        <React.Suspense fallback={<div className="h-screen"></div>}>
+          <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
+            {filteredChains.slice(0, 2).map((chain, idx) => {
+              return <Chain chain={chain} key={JSON.stringify(chain) + 'en'} lang="en" />;
+            })}
+            <AdBanner />
+            {filteredChains.slice(2).map((chain, idx) => {
+              return <Chain chain={chain} key={JSON.stringify(chain) + 'en'} lang="en" />;
+            })}
+          </div>
+        </React.Suspense>
       </Layout>
     </>
   );
