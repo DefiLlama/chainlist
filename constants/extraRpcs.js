@@ -153,7 +153,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   tornadoRPC:
     "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
   q:
-    "Our system records data and information about the computer used by the user automatically and with every visit on our website. The following data are collected: Information regarding the type and version of internet browser used to access the website, Operating system, IP address, Date and time of each access, Web page from which the user was redirected to our page, Web pages and resources that were visited, The data mentioned above are saved for a maximum time period of 30 days.https://q.org/privacy-policy"
+    "Our system records data and information about the computer used by the user automatically and with every visit on our website. The following data are collected: Information regarding the type and version of internet browser used to access the website, Operating system, IP address, Date and time of each access, Web page from which the user was redirected to our page, Web pages and resources that were visited, The data mentioned above are saved for a maximum time period of 30 days.https://q.org/privacy-policy",
+  haqqsh: 
+    "Haqqsh does not track or store user information that transits through our RPCs (location, IP, wallet, etc).",
   };
 
 export const extraRpcs = {
@@ -3426,11 +3428,13 @@ export const extraRpcs = {
       },
       {
         url: "https://evm.haqq.sh",
-        tracking: "none"
+        tracking: "none",
+        trackingDetails: privacyStatement.haqqsh,
       },
       {
         url: "wss://evm-ws.haqq.sh",
-        tracking: "none"
+        tracking: "none",
+        trackingDetails: privacyStatement.haqqsh,
       }
     ],
   },
