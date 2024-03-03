@@ -1394,7 +1394,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.gasswap,
       },
       {
-        url: "wss://blast.gasswap.org/ws",
+        url: "wss://blast.gasswap.org",
         tracking: "none",
         trackingDetails: privacyStatement.gasswap,
       },
