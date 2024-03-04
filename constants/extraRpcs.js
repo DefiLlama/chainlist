@@ -4168,9 +4168,7 @@ export const extraRpcs = {
         url: "wss://syscoin-tanenbaum-evm-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-        "https://rollux.rpc.tanenbaum.io",
-        "wss://rollux.rpc.tanenbaum.io/wss",
+      }
    ],
   },
   8081: {
