@@ -4366,6 +4366,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.q,
       },
     ]
+  },
+  1992: {
+    rpcs: [
+      "https://rpc.hubble.exchange",
+      "wss://ws-rpc.hubble.exchange"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
