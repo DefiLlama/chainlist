@@ -373,7 +373,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodeconnect,
       },
       {
-        url: "https://api.stateless.solutions/ethereum/v1/0ec6cac0-ecac-4247-8a41-1e685deadfe4",
+        url: "https://api.stateless.solutions/ethereum/v1/demo",
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
@@ -1077,7 +1077,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       {
-        url: "https://api.stateless.solutions/polygon/v1/5850f066-209e-4e3c-a294-0757a4eb34b3",
+        url: "https://api.stateless.solutions/polygon/v1/demo",
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
@@ -1206,6 +1206,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tornadoRPC,
       },
+      {
+      	url: "https://api.stateless.solutions/arbitrum-one/v1/demo",
+      	tracking: "none",
+      	trackingDetails: privacyStatement.stateless,
+      }
     ],
   },
   421613: {
@@ -1245,11 +1250,6 @@ export const extraRpcs = {
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
       },
-      {
-      	url: "https://api.stateless.solutions/arbitrum-one/v1/77abba85-53e4-4430-a332-a46deb9900ea",
-      	tracking: "none",
-      	trackingDetails: privacyStatement.stateless,
-      }
     ],
   },
   42170: {
@@ -1588,7 +1588,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://api.stateless.solutions/optimism/v1/f373feb1-c8e4-41c9-bb74-2c691988dd34",
+        url: "https://api.stateless.solutions/optimism/v1/demo",
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
