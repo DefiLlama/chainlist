@@ -4019,6 +4019,15 @@ export const extraRpcs = {
       },
     ],
   },
+2442: {
+    rpcs: [
+      {
+        url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+       },
+     ],
+   },
   59140: {
     rpcs: [
       {
