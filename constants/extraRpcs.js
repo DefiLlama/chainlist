@@ -151,7 +151,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   tornadoRPC:
     "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
   stackup:
-    "Stackup values privacy. On public endpoints, Stackup may collect and store request methods and headers. Read more at https://www.stackup.sh/privacy",
+    "We collect Personal Data about you from the following categories of sources: You, When you provide such information directly to us, When you create an account or use our interactive tools and Services. When you use the Services and such information is collected automatically, Third Parties. Read more at https://www.stackup.sh/privacy",
   };
 
 export const extraRpcs = {
