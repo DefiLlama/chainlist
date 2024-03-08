@@ -1247,6 +1247,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
       	url: "https://api.stateless.solutions/arbitrum-one/v1/demo",
       	tracking: "none",
       	trackingDetails: privacyStatement.stateless,
