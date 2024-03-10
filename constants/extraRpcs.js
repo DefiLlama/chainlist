@@ -158,6 +158,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Our system records data and information about the computer used by the user automatically and with every visit on our website. The following data are collected: Information regarding the type and version of internet browser used to access the website, Operating system, IP address, Date and time of each access, Web page from which the user was redirected to our page, Web pages and resources that were visited, The data mentioned above are saved for a maximum time period of 30 days.https://q.org/privacy-policy",
   gasswap:
     "GasSwap nodes are provided as a public good and we never store any identifiable information for users. See https://docs.gasswap.org/gasswap/public-node",
+  zeeve:
+      "We may collect personal and sensitive personal information about you and store this information in connection with the provision and fulfilment of our services to you. Personal information may include: First name and last name,Email address, Location,IP Address://www.zeeve.io/privacy-policy/",   	  
   };
 
 export const extraRpcs = {
@@ -4461,7 +4463,18 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.q,
       },
     ]
-  }
+  },
+  128123: {
+    rpcs: [
+      "https://node.ghostnet.etherlink.com",
+      {
+        url: "https://etherlink-ghostnet-6lcp5r.zeeve.net/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.zeeve,
+      },
+    ]
+  }	  
+	
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
