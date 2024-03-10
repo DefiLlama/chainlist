@@ -157,7 +157,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   gasswap:
     "GasSwap nodes are provided as a public good and we never store any identifiable information for users. See https://docs.gasswap.org/gasswap/public-node",
   zeeve:
-      "We strictly refrain from tracking or storing any user records transmitted via our RPC. For more details, please see https://www.zeeve.io/privacy-policy/",   	  
+      "We may collect personal and sensitive personal information about you and store this information in connection with the provision and fulfilment of our services to you. Personal information may include: First name and last name,Email address, Location,IP Address://www.zeeve.io/privacy-policy/",   	  
   };
 
 export const extraRpcs = {
