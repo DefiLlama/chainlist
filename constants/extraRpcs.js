@@ -2259,12 +2259,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://syscoin-evm-rpc.publicnode.com",
+        url: "https://syscoin-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "wss://syscoin-evm-rpc.publicnode.com",
+        url: "wss://syscoin-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
@@ -4257,12 +4257,12 @@ export const extraRpcs = {
   5700: {
     rpcs: [
       {
-        url: "https://syscoin-tanenbaum-evm-rpc.publicnode.com",
+        url: "https://syscoin-tanenbaum-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "wss://syscoin-tanenbaum-evm-rpc.publicnode.com",
+        url: "wss://syscoin-tanenbaum-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       }
