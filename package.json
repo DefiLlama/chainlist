@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@ariakit/react": "^0.2.12",
+    "@hypelab/sdk-react": "^1.0.2",
     "@tanstack/react-query": "^4.19.1",
     "axios": "^1.2.1",
     "fathom-client": "^3.5.0",
-    "hypelab-react": "^0.4.4",
     "next": "^13.0.6",
     "next-intl": "^2.10.2",
     "node-fetch": "^2.6.6",

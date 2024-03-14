@@ -89,6 +89,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@hypelab/sdk-react@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hypelab/sdk-react/-/sdk-react-1.0.2.tgz#c01d830867c0a2f7631fa70639590d606a55ab14"
+  integrity sha512-+X//Ncxcq4wULAP9JoNMMtIch8QsTQ4zCv4Nk9FwaYpc64maA0YI3GYVImLAAa9da0AUNCZ9J5mhCswMcVqLvg==
+
 "@next/env@13.0.6":
   version "13.0.6"
   resolved "https://registry.npmjs.org/@next/env/-/env-13.0.6.tgz"
@@ -698,11 +703,6 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
-
-hypelab-react@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.npmjs.org/hypelab-react/-/hypelab-react-0.4.4.tgz"
-  integrity sha512-ttmTy37SqCAzP+z+mxYESbLi0YroCpz6sKyLwfLRgISblU67J+UPVjqkrPXP9KvIt0FBcwf0rvv9zismufdtmg==
 
 ini@~1.3.0:
   version "1.3.8"
