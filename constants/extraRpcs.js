@@ -1924,6 +1924,7 @@ export const extraRpcs = {
       "https://rpc2.teloskorea.com/evm",
       "https://rpc01.us.telosunlimited.io/evm",
       "https://rpc02.us.telosunlimited.io/evm",
+      "https://evm.telos.detroitledger.tech",
       {
         url: "https://1rpc.io/telos/evm",
         tracking: "none",
