@@ -734,7 +734,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
 	{
-        url: "https://getblock.io/nodes/bsc/",
+        url: "https://go.getblock.io/cc778cdbdf5c4b028ec9456e0e6c0cf3",
         tracking: "limited",
         trackingDetails: privacyStatement.getblock,
       },
