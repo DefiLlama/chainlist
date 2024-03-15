@@ -4480,6 +4480,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zeeve,
       },
     ]
+  },
+  881: {
+    rpcs:[
+      "https://rpc.hypr.network"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
