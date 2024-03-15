@@ -160,7 +160,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "GasSwap nodes are provided as a public good and we never store any identifiable information for users. See https://docs.gasswap.org/gasswap/public-node",
   zeeve:
       "We may collect personal and sensitive personal information about you and store this information in connection with the provision and fulfilment of our services to you. Personal information may include: First name and last name,Email address, Location,IP Address://www.zeeve.io/privacy-policy/",   	  
-  };
+  tatum:
+      "Your privacy is important to us. It is Tatum Technology s.r.o.'s policy to respect your privacy regarding any information we may collect from you across our website, https://tatum.io, and other sites we own and operate.",    
+};
 
 export const extraRpcs = {
   1: {
@@ -410,6 +412,11 @@ export const extraRpcs = {
         url: "https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
+      },
+      {
+        url: "https://01-warsaw-020-01.rpc.tatum.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
