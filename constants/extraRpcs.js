@@ -4465,6 +4465,12 @@ export const extraRpcs = {
       },
     ]
   },
+  1992: {
+    rpcs: [
+      "https://rpc.hubble.exchange",
+      "wss://ws-rpc.hubble.exchange"
+    ]
+  },
   128123: {
     rpcs: [
       "https://node.ghostnet.etherlink.com",
@@ -4474,8 +4480,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zeeve,
       },
     ]
-  }	  
-	
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
