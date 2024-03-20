@@ -161,7 +161,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   zeeve:
       "We may collect personal and sensitive personal information about you and store this information in connection with the provision and fulfilment of our services to you. Personal information may include: First name and last name,Email address, Location,IP Address://www.zeeve.io/privacy-policy/",   	  
   tatum:
-      "Your privacy is important to us. It is Tatum Technology s.r.o.'s policy to respect your privacy regarding any information we may collect from you across our website, https://tatum.io, and other sites we own and operate.",    
+      "Tatum Technology s.r.o.'s policy respects your privacy regarding any information we may collect from you across our website, https://tatum.io, and other sites we own and operate.",    
 };
 
 export const extraRpcs = {
@@ -414,8 +414,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       {
-        url: "https://01-warsaw-020-01.rpc.tatum.io",
-        tracking: "none",
+        url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
+        tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
     ],
