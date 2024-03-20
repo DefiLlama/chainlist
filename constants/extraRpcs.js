@@ -160,6 +160,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "GasSwap nodes are provided as a public good and we never store any identifiable information for users. See https://docs.gasswap.org/gasswap/public-node",
   zeeve:
       "We may collect personal and sensitive personal information about you and store this information in connection with the provision and fulfilment of our services to you. Personal information may include: First name and last name,Email address, Location,IP Address://www.zeeve.io/privacy-policy/",
+  tatum:
+    "Tatum Technology s.r.o.'s policy respects your privacy regarding any information we may collect from you across our website, https://tatum.io, and other sites we own and operate. For more info, check https://tatum.io/privacy-policy ."
   };
 
 export const extraRpcs = {
@@ -1493,6 +1495,11 @@ export const extraRpcs = {
         url: "https://aurora.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/aurora-mainnet ",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
