@@ -2774,6 +2774,11 @@ export const extraRpcs = {
     rpcs: [
       "https://evm.confluxrpc.com",
       "https://conflux-espace-public.unifra.io",
+	{
+        url: "https://conflux-espace.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ],
   },
   1115: {
