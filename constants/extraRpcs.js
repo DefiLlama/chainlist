@@ -150,8 +150,6 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Through any of our RPC API endpoints, whether public or private, we do not collect personal identifiers such as IP addresses, request origins, or specific request data. https://www.stateless.solutions/api-usage-privacy-policy",
   rpcgrid:
     "Only strictly functional data is automatically collected by the RPC. None of this data is directly exported or used for commercial purposes. https://rpcgrid.com/privacy-policy",
-  tornadoRPC:
-    "TornadoRPC prioritizes user privacy and data security. We do not track or store any user information that passes through our RPC, except for data that is clearly visible on the blockchain. For detailed information about our privacy practices, see our Privacy Policy: https://rpc.tornadoeth.cash/privacy",
   stackup:
     "We collect Personal Data about you from the following categories of sources: You, When you provide such information directly to us, When you create an account or use our interactive tools and Services. When you use the Services and such information is collected automatically, Third Parties. Read more at https://www.stackup.sh/privacy",
   q:
@@ -389,16 +387,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.polysplit,
       },
       {
-        url: "https://rpc.tornadoeth.cash/eth",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
-      },
-      {
-        url: "https://rpc.tornadoeth.cash/mev",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
-      },
-      {
         url: "https://public.stackup.sh/api/v1/node/ethereum-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
@@ -575,11 +563,6 @@ export const extraRpcs = {
         url: "https://builder-rpc2.0xblockswap.com",
         tracking: "yes",
         trackingDetails: privacyStatement.blockswap
-      },
-      {
-        url: "https://rpc.tornadoeth.cash/goerli",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
       },
     ],
   },
@@ -810,11 +793,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.polysplit,
       },
       {
-        url: "https://rpc.tornadoeth.cash/bsc",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
-      },
-      {
         url: "https://public.stackup.sh/api/v1/node/bsc-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
@@ -934,11 +912,6 @@ export const extraRpcs = {
         url: "https://avalanche.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://rpc.tornadoeth.cash/avax",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
       },
       {
         url: "https://public.stackup.sh/api/v1/node/avalanche-mainnet",
@@ -1117,11 +1090,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stateless,
       },
       {
-        url: "https://rpc.tornadoeth.cash/polygon",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
-      },
-      {
         url: "https://public.stackup.sh/api/v1/node/polygon-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
@@ -1240,11 +1208,6 @@ export const extraRpcs = {
       	url: "https://arbitrum.drpc.org",
       	tracking: "none",
       	trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://rpc.tornadoeth.cash/arbitrum",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
       },
       {
         url: "https://public.stackup.sh/api/v1/node/arbitrum-one",
@@ -1648,11 +1611,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stateless,
       },
       {
-        url: "https://rpc.tornadoeth.cash/optimism",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
-      },
-      {
         url: "https://public.stackup.sh/api/v1/node/optimism-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
@@ -1817,11 +1775,6 @@ export const extraRpcs = {
         url: "https://1rpc.io/gnosis",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://rpc.tornadoeth.cash/gnosis",
-        tracking: "none",
-        trackingDetails: privacyStatement.tornadoRPC,
       },
     ],
   },
