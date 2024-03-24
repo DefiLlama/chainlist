@@ -4454,6 +4454,11 @@ export const extraRpcs = {
     rpcs:[
       "https://rpc.hypr.network"
     ]
+  },
+  2525: {
+    rpcs:[
+      "https://mainnet.rpc.inevm.com/http"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
