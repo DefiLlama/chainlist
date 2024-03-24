@@ -4454,6 +4454,11 @@ export const extraRpcs = {
     rpcs:[
       "https://rpc.hypr.network"
     ]
+  },	
+  5439: {
+    rpcs:[
+      "https://mainnet.egochain.org"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
