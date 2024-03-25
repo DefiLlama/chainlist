@@ -1,5 +1,7 @@
 import Document, { Head, Main, NextScript, Html } from "next/document";
+import Script from "next/script";
 import React from "react";
+import { HYPELAB_API_URL, HYPELAB_PROPERTY_SLUG } from "../constants/hypelab";
 
 const LANGUAGES = ["en", "zh"];
 
@@ -22,7 +24,21 @@ class MyDocument extends Document {
       <Html lang={lang}>
         <Head />
         <body>
-          <script dangerouslySetInnerHTML={{ __html: themeScript, }} />
+          <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+          <Script
+            id="hypelab"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `!(function (h, y, p, e, l, a, b) {
+                ((l = document.createElement(h)).async = !0),
+                  (l.src = y),
+                  (l.onload = function () {
+                    (a = { URL: p, propertySlug: e, environment: '<environment>' }), HypeLab.initialize(a);
+                  }),
+                  (b = document.getElementsByTagName(h)[0]).parentNode.insertBefore(l, b);
+              })('script', 'https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0', '${HYPELAB_API_URL}', '${HYPELAB_PROPERTY_SLUG}');`,
+            }}
+          />
           <Main />
           <NextScript />
         </body>
