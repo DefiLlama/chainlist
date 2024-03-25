@@ -4091,8 +4091,22 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
        },
+       {
+        url: "https://linea-goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.infura,
+      },       
      ],
    },
+   59141: {
+    rpcs: [
+      {
+        url: "https://linea-sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.infura,
+      }, 
+     ],
+   },   
   534351: {
     rpcs: [
       {
