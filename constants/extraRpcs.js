@@ -1878,7 +1878,7 @@ export const extraRpcs = {
   40: {
     rpcs: [
       "https://mainnet.telos.net/evm",
-      "https://mainnet15.telos.net/evm,
+      "https://mainnet15.telos.net/evm",
       "https://rpc3.us.telos.net/evm",
       "https://evm.telos.detroitledger.tech/evm",
       "https://mainnet-us.telos.net/evm",
