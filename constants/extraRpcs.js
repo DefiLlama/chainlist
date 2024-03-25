@@ -411,10 +411,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      {
-        url: "https://gateway.subquery.network/rpc/eth",
-        tracking: "unspecified",
-      },
+     "https://gateway.subquery.network/rpc/eth"
     ],
   },
   2: {
@@ -3499,10 +3496,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
-      {
-        url: "https://gateway.subquery.network/rpc/base",
-        tracking: "unspecified",
-      },
+     "https://gateway.subquery.network/rpc/base"
     ],
   },
   11235: {
