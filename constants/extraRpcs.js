@@ -398,11 +398,12 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-	    {
+      {
         url: "https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
+     "https://gateway.subquery.network/rpc/eth"
     ],
   },
   2: {
@@ -3463,6 +3464,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+     "https://gateway.subquery.network/rpc/base"
     ],
   },
   11235: {
