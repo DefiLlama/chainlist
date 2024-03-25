@@ -1877,16 +1877,12 @@ export const extraRpcs = {
   40: {
     rpcs: [
       "https://mainnet.telos.net/evm",
-      "https://rpc1.eu.telos.net/evm",
-      "https://rpc1.us.telos.net/evm",
-      "https://rpc2.us.telos.net/evm",
-      "https://api.kainosbp.com/evm",
-      "https://rpc2.eu.telos.net/evm",
-      "https://evm.teloskorea.com/evm",
-      "https://rpc2.teloskorea.com/evm",
-      "https://rpc01.us.telosunlimited.io/evm",
-      "https://rpc02.us.telosunlimited.io/evm",
+      "https://mainnet15.telos.net/evm,
+      "https://rpc3.us.telos.net/evm",
       "https://evm.telos.detroitledger.tech/evm",
+      "https://mainnet-us.telos.net/evm",
+      "https://mainnet-eu.telos.net/evm",
+      "https://mainnet-asia.telos.net/evm",
       {
         url: "https://1rpc.io/telos/evm",
         tracking: "none",
