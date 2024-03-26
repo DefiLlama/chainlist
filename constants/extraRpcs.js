@@ -925,6 +925,11 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/avalanche-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
+      }
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/avax-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
