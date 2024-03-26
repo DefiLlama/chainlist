@@ -2742,6 +2742,11 @@ export const extraRpcs = {
   },
   1115: {
     rpcs: ["https://rpc.test.btcs.network"],
+  }
+  {
+        url: "https://api.tatum.io/v3/blockchain/node/bitcoin-mainnet ",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
   },
   1116: {
     rpcs: [
