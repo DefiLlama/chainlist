@@ -19,8 +19,7 @@
     "explorers": [
       {
         "name": "Oklink",
-        "url": "https://www.oklink.com/ethw/",
-        "standard": "EIP3091"
+        "url": "https://www.oklink.com/ethw/"
       }
     ]
   }

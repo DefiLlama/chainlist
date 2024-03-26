@@ -19,8 +19,7 @@
     "explorers": [
       {
         "name": "Svmscan",
-        "url": "https://svmscan.io/",
-        "standard": "EIP3091"
+        "url": "https://svmscan.io/"
       }
     ]
   }

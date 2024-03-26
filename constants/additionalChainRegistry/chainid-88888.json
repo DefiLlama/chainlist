@@ -25,8 +25,7 @@
       },
       {
         "name": "Scan Chiliz",
-        "url": "https://scan.chiliz.com",
-        "standard": "EIP3091"
+        "url": "https://scan.chiliz.com"
       }
     ]
   }
