@@ -2059,6 +2059,11 @@ export const extraRpcs = {
       "https://smartbch.fountainhead.cash/mainnet",
       "https://global.uat.cash",
       "https://rpc.uatvo.com",
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/avax-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   19: {
