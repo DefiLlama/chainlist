@@ -804,7 +804,7 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/bsc-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
-      }
+      },
       {
         url: "https://api.tatum.io/v3/blockchain/node/bsc-mainnet",
         tracking: "yes",
@@ -930,7 +930,7 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/avalanche-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
-      }
+      },
       {
         url: "https://api.tatum.io/v3/blockchain/node/avax-mainnet",
         tracking: "yes",
@@ -2766,13 +2766,15 @@ export const extraRpcs = {
     ],
   },
   1115: {
-    rpcs: ["https://rpc.test.btcs.network"],
-  }
-  {
+    rpcs: [
+      "https://rpc.test.btcs.network",
+      {
         url: "https://api.tatum.io/v3/blockchain/node/bitcoin-mainnet ",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-  },
+      },
+    ],
+  },  
   1116: {
     rpcs: [
       "https://rpc.coredao.org",
