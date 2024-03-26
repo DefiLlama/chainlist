@@ -403,6 +403,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
      "https://gateway.subquery.network/rpc/eth"
     ],
   },
