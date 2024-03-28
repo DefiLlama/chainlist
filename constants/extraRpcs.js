@@ -1543,6 +1543,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/celo-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },    
     ],
   },
   10: {
@@ -2768,11 +2773,6 @@ export const extraRpcs = {
   1115: {
     rpcs: [
       "https://rpc.test.btcs.network",
-      {
-        url: "https://api.tatum.io/v3/blockchain/node/bitcoin-mainnet ",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tatum,
-      },
     ],
   },  
   1116: {
