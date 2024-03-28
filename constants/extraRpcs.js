@@ -1365,6 +1365,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/klaytn-cypress",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1666600000: {
