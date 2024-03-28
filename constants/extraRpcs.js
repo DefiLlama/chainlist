@@ -1112,6 +1112,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/polygon-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   25: {
