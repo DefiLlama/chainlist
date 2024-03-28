@@ -3497,6 +3497,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
      "https://gateway.subquery.network/rpc/base"
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/base-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      }
     ],
   },
   11235: {
