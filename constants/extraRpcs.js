@@ -3521,6 +3521,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       }
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/haqq-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      }
     ],
   },
   99999: {
