@@ -2382,6 +2382,11 @@ export const extraRpcs = {
         tracking:"limited",
         trackingDetails: privacyStatement.ankr
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/xdc-mainnet",
+        tracking:"yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   51: {
