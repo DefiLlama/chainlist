@@ -4519,6 +4519,12 @@ export const extraRpcs = {
     rpcs:[
       "https://mainnet.rpc.inevm.com/http"
     ]
+  },
+  7171: {
+    rpcs: [
+      "https://connect.bit-rock.io",
+      "https://brockrpc.io"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
