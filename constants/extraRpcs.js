@@ -1638,6 +1638,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/optimism-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   11155420: {
