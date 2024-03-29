@@ -161,7 +161,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   zeeve:
       "We may collect personal and sensitive personal information about you and store this information in connection with the provision and fulfilment of our services to you. Personal information may include: First name and last name,Email address, Location,IP Address://www.zeeve.io/privacy-policy/",
   tatum:
-    "Tatum Technology s.r.o.'s policy respects your privacy regarding any information we may collect from you across our website, https://tatum.io, and other sites we own and operate. For more info, check https://tatum.io/privacy-policy ."
+    "Tatum Technology s.r.o.'s policy respects your privacy regarding any information we may collect from you across our website, https://tatum.io, and other sites we own and operate. For more info, check https://tatum.io/privacy-policy .",
+  waterfall:
+    "At Waterfall Networks, we prioritize your privacy in accordance with our policy regarding any data we may gather from you through our website, https://waterfall.network/, for further details, please refer to https://waterfall.network/ ."
   };
 
 export const extraRpcs = {
@@ -4518,6 +4520,11 @@ export const extraRpcs = {
   2525: {
     rpcs:[
       "https://mainnet.rpc.inevm.com/http"
+    ]
+  },
+  8601152: {
+    rpcs:[
+      "https://rpc.testnet8.waterfall.network"
     ]
   }
 };
