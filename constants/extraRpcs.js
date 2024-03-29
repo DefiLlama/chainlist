@@ -1118,8 +1118,6 @@ export const extraRpcs = {
     rpcs: [
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
-      "https://rpc.vvs.finance",
-      "https://mmf-rpc.xstaking.sg",
       {
         url: "https://cronos.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -1140,6 +1138,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      "https://rpc.vvs.finance",
+      "https://mmf-rpc.xstaking.sg",
     ],
   },
   338: {
