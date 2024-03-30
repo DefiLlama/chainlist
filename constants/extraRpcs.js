@@ -2966,7 +2966,10 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet2.edgewa.re/evm",
       "https://mainnet3.edgewa.re/evm",
-      "https://edgeware-evm.jelliedowl.net/",
+      "https://edgeware-evm0.jelliedowl.net/",
+      "https://edgeware-evm1.jelliedowl.net/",
+      "https://edgeware-evm2.jelliedowl.net/",
+      "https://edgeware-evm3.jelliedowl.net/",
       {
         url: "https://edgeware.api.onfinality.io/public",
         tracking: "limited",
