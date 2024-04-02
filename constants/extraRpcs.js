@@ -1149,6 +1149,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      "https://rpc.vvs.finance",
+      "https://mmf-rpc.xstaking.sg",
     ],
   },
   338: {
