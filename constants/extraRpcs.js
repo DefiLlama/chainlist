@@ -4588,6 +4588,12 @@ export const extraRpcs = {
       "https://mainnet.rpc.inevm.com/http"
     ]
   },
+  7171: {
+    rpcs: [
+      "https://connect.bit-rock.io",
+      "https://brockrpc.io"
+      ],
+  },
   7000: {
     rpcs: [
       "https://zetachain-evm.blockpi.network/v1/rpc/public"
