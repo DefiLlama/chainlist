@@ -3550,7 +3550,13 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
-     "https://base.rpc.subquery.network/public"
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/base-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+     "https://base.rpc.subquery.network/public",
+     "https://gateway.subquery.network/rpc/base"
     ],
   },
   11235: {
