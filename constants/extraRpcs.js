@@ -4534,6 +4534,11 @@ export const extraRpcs = {
     rpcs:[
       "https://mainnet.rpc.inevm.com/http"
     ]
+  },
+  7000: {
+    rpcs: [
+      "https://zetachain-evm.blockpi.network/v1/rpc/public"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
