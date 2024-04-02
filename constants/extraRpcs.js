@@ -3582,7 +3582,7 @@ export const extraRpcs = {
         url: "wss://evm-ws.haqq.sh",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
       {
         url: "https://api.tatum.io/v3/blockchain/node/haqq-mainnet",
         tracking: "yes",
