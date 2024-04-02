@@ -4583,6 +4583,11 @@ export const extraRpcs = {
       "https://rpc.hypr.network"
     ]
   },
+  5439: {
+    rpcs:[
+      "https://mainnet.egochain.org"
+    ]
+  },
   2525: {
     rpcs:[
       "https://mainnet.rpc.inevm.com/http"
@@ -4592,7 +4597,7 @@ export const extraRpcs = {
     rpcs: [
       "https://connect.bit-rock.io",
       "https://brockrpc.io"
-      ],
+      ]
   },
   7000: {
     rpcs: [
