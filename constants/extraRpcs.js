@@ -3733,6 +3733,9 @@ export const extraRpcs = {
   955305: {
     rpcs: ["https://host-76-74-28-226.contentfabric.io/eth/"],
   },
+  9715052: {
+    rpcs: ["https://testnet-rpc.layeredge.io/http"],
+  },
   1313114: {
     rpcs: ["https://rpc.ethoprotocol.com"],
   },
