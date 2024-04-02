@@ -408,7 +408,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-     "https://gateway.subquery.network/rpc/eth"
+     "https://ethereum.rpc.subquery.network/public"
     ],
   },
   2: {
@@ -1112,6 +1112,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      "https://polygon.rpc.subquery.network/public"
     ],
   },
   25: {
@@ -1236,7 +1237,8 @@ export const extraRpcs = {
       	url: "https://api.stateless.solutions/arbitrum-one/v1/demo",
       	tracking: "none",
       	trackingDetails: privacyStatement.stateless,
-      }
+      },
+      "https://arbitrum.rpc.subquery.network/public"
     ],
   },
   421613: {
@@ -3496,7 +3498,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
-     "https://gateway.subquery.network/rpc/base"
+     "https://base.rpc.subquery.network/public"
     ],
   },
   11235: {
@@ -3750,6 +3752,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      "https://ethereum-sepolia.rpc.subquery.network/public"
     ]
   },
   7762959: {
