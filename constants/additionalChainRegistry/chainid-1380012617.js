@@ -1,4 +1,4 @@
-{
+export const data = {
     "name": "RARI Chain",
     "chain": "RARI",
     "icon": "rari",
