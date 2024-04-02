@@ -1,4 +1,4 @@
-{
+export const data = {
     "name": "ETHW-mainnet",
     "chain": "ETHW",
     "icon": "ethpow",

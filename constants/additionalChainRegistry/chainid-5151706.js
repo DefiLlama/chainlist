@@ -1,4 +1,4 @@
-{
+export const data = {
     "name": "Loot Mainnet",
     "chain": "LOOT",
     "icon": "loot",

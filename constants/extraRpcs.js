@@ -408,7 +408,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-     "https://gateway.subquery.network/rpc/eth"
+     "https://ethereum.rpc.subquery.network/public"
     ],
   },
   2: {
@@ -1000,6 +1000,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/fantom-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   137: {
@@ -1112,6 +1117,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/polygon-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      "https://polygon.rpc.subquery.network/public"
     ],
   },
   25: {
@@ -1236,7 +1247,8 @@ export const extraRpcs = {
       	url: "https://api.stateless.solutions/arbitrum-one/v1/demo",
       	tracking: "none",
       	trackingDetails: privacyStatement.stateless,
-      }
+      },
+      "https://arbitrum.rpc.subquery.network/public"
     ],
   },
   421613: {
@@ -1364,6 +1376,11 @@ export const extraRpcs = {
         url: "https://klaytn.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/klaytn-cypress",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -1543,6 +1560,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/celo-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },    
     ],
   },
   10: {
@@ -1638,6 +1660,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/optimism-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   11155420: {
@@ -1661,6 +1688,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.gitshock,
       }
+    ]
+  },
+4200: {
+      rpcs: [
+	  {
+        url: "https://merlin.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi
+      },
     ]
   },
   420: {
@@ -1798,6 +1834,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/gnosis",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/gno-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -2288,6 +2329,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/palm-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   7: {
@@ -2381,6 +2427,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/xdc",
         tracking:"limited",
         trackingDetails: privacyStatement.ankr
+      },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/xdc-mainnet",
+        tracking:"yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -2768,11 +2819,6 @@ export const extraRpcs = {
   1115: {
     rpcs: [
       "https://rpc.test.btcs.network",
-      {
-        url: "https://api.tatum.io/v3/blockchain/node/bitcoin-mainnet ",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tatum,
-      },
     ],
   },  
   1116: {
@@ -2960,13 +3006,21 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/doge-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   2021: {
     rpcs: [
       "https://mainnet2.edgewa.re/evm",
       "https://mainnet3.edgewa.re/evm",
-      "https://edgeware-evm.jelliedowl.net/",
+      "https://edgeware-evm0.jelliedowl.net/",
+      "https://edgeware-evm1.jelliedowl.net/",
+      "https://edgeware-evm2.jelliedowl.net/",
+      "https://edgeware-evm3.jelliedowl.net/",
       {
         url: "https://edgeware.api.onfinality.io/public",
         tracking: "limited",
@@ -3496,12 +3550,13 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
-     "https://gateway.subquery.network/rpc/base"
       {
         url: "https://api.tatum.io/v3/blockchain/node/base-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      }
+      },
+     "https://base.rpc.subquery.network/public",
+     "https://gateway.subquery.network/rpc/base"
     ],
   },
   11235: {
@@ -3525,6 +3580,11 @@ export const extraRpcs = {
         url: "wss://evm-ws.haqq.sh",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      }
+      {
+        url: "https://api.tatum.io/v3/blockchain/node/haqq-mainnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       }
     ],
   },
@@ -3755,6 +3815,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      "https://ethereum-sepolia.rpc.subquery.network/public"
     ]
   },
   7762959: {
@@ -4523,6 +4584,11 @@ export const extraRpcs = {
   2525: {
     rpcs:[
       "https://mainnet.rpc.inevm.com/http"
+    ]
+  },
+  7000: {
+    rpcs: [
+      "https://zetachain-evm.blockpi.network/v1/rpc/public"
     ]
   }
 };
