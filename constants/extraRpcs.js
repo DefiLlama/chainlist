@@ -1686,6 +1686,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/op/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
    ],
 },
   1881: {
@@ -2385,6 +2390,11 @@ export const extraRpcs = {
 	      url: "https://holesky-rpc.nocturnode.tech",
 	      tracking: "none",
         trackingDetails: privacyStatement.nocturnDao,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/holesky/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
