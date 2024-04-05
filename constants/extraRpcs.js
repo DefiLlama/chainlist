@@ -2096,21 +2096,6 @@ export const extraRpcs = {
       }
     ],
   },
-  28882: {
-    rpcs: [
-      "https://sepolia.boba.network/",
-      {
-        url: "https://boba-sepolia.gateway.tenderly.co",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://gateway.tenderly.co/public/boba-sepolia",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tenderly,
-      },
-    ],
-  },
   321: {
     rpcs: [
       "https://rpc-mainnet.kcc.network",
@@ -4624,7 +4609,22 @@ export const extraRpcs = {
     rpcs: [
       "https://zetachain-evm.blockpi.network/v1/rpc/public"
     ]
-  }
+  },
+  28882: {
+    rpcs: [
+      "https://sepolia.boba.network/",
+      {
+        url: "https://boba-sepolia.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/boba-sepolia",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
