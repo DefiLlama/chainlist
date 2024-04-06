@@ -1339,6 +1339,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/arbitrum/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   8217: {
@@ -1680,6 +1685,11 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/optimism-sepolia",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/op/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
    ],
 },
@@ -2381,6 +2391,11 @@ export const extraRpcs = {
 	      tracking: "none",
         trackingDetails: privacyStatement.nocturnDao,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/holesky/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   22: {
@@ -2881,6 +2896,11 @@ export const extraRpcs = {
 	tracking: "limited",
 	trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/zksync-era/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ]
   },
   324: {
@@ -2904,6 +2924,29 @@ export const extraRpcs = {
         url: "https://1rpc.io/zksync2-era",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/zksync-era/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  },
+  196: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/xlayer/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  },
+  195: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/xlayer/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ]
   },
@@ -2957,10 +3000,15 @@ export const extraRpcs = {
   },
   1442: {
     rpcs: [
-        {
+      {
       	url: "https://api.zan.top/node/v1/polygonzkevm/testnet/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/polygon-zkevm/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
 	{
       	url: "https://polygon-zkevm-testnet.blockpi.network/v1/rpc/public",
@@ -2983,6 +3031,24 @@ export const extraRpcs = {
   1856: {
     rpcs: ["rpcWorking:false"],
     rpcWorking: false,
+  },
+  1890: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/lightlink/phoenix/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ],
+  },
+  1891: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/lightlink/pegasus/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ],
   },
   1987: {
     rpcs: [],
@@ -3974,6 +4040,24 @@ export const extraRpcs = {
       "https://kekchain.interchained.org",
     ],
   },
+  42766:{
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/zkfair/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  },
+  43851:{
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/zkfair/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  },
   88888: {
     rpcs: ["https://rpc.chiliz.com"],
   },
@@ -4156,6 +4240,11 @@ export const extraRpcs = {
         url: "https://polygon-zkevm.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/polygon-zkevm/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
