@@ -2443,11 +2443,15 @@ export const extraRpcs = {
   50: {
     rpcs: [
       "https://rpc.xdcrpc.com",
+      "wss://rpc.xdcrpc.com/ws",
       "https://rpc1.xinfin.network",
       "https://erpc.xinfin.network",
-      "https://rpc.xinfin.network",
       "https://erpc.xdcrpc.com",
+      "wss://erpc.xdcrpc.com/ws",
       "https://rpc.xdc.org",
+      "https://earpc.xinfin.network/",
+      "https://erpc.xinfin.network/",
+      "wss://ews.xinfin.network/ws",
       {
         url: "https://rpc.ankr.com/xdc",
         tracking:"limited",
@@ -2462,9 +2466,11 @@ export const extraRpcs = {
   },
   51: {
     rpcs: [
-      "https://rpc.apothem.network",
       "https://erpc.apothem.network",
-      "https://apothem.xdcrpc.com"
+      "https://apothem.xdcrpc.com",
+      "https://earpc.apothem.network/",
+      "https://erpc.apothem.network/",
+      "wss://eaws.apothem.network/",
     ],
   },
   58: {
