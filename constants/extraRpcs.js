@@ -3018,11 +3018,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-	{
-      	url: "https://polygon-zkevm-testnet.blockpi.network/v1/rpc/public",
-      	tracking: "limited",
-      	trackingDetails: privacyStatement.blockpi,
-      },
     ],
   },
   1618: {
