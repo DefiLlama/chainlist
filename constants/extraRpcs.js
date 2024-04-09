@@ -687,6 +687,21 @@ export const extraRpcs = {
       },
     ],
   },
+  80002: {
+    rpcs: [
+      "https://rpc-amoy.polygon.technology",
+      {
+        url: "https://polygon-bor-amoy-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://polygon-bor-amoy-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   56: {
     rpcs: [
       "https://bsc-dataseed.bnbchain.org/",
