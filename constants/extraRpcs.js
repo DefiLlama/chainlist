@@ -1579,7 +1579,7 @@ export const extraRpcs = {
         url: "https://api.tatum.io/v3/blockchain/node/celo-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },    
+      },
     ],
   },
   10: {
@@ -2144,7 +2144,7 @@ export const extraRpcs = {
         url: "https://api.tatum.io/v3/blockchain/node/bch-mainnet ",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      }    
+      }
     ],
   },
   19: {
@@ -2851,7 +2851,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.test.btcs.network",
     ],
-  },  
+  },
   1116: {
     rpcs: [
       "https://rpc.coredao.org",
@@ -4301,7 +4301,7 @@ export const extraRpcs = {
         url: "https://linea-goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
-      },       
+      },
      ],
    },
    59141: {
@@ -4310,9 +4310,9 @@ export const extraRpcs = {
         url: "https://linea-sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
-      }, 
+      },
      ],
-   },   
+   },
   534351: {
     rpcs: [
       {
@@ -4707,7 +4707,22 @@ export const extraRpcs = {
     rpcs: [
       "https://zetachain-evm.blockpi.network/v1/rpc/public"
     ]
-  }
+  },
+  28882: {
+    rpcs: [
+      "https://sepolia.boba.network/",
+      {
+        url: "https://boba-sepolia.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "https://gateway.tenderly.co/public/boba-sepolia",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
