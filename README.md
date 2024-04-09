@@ -1,4 +1,6 @@
-## Getting Started
+npm run dev
+# or
+yarn dev## Getting Started
 
 First, run the development server:
 
