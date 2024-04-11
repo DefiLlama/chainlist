@@ -889,11 +889,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://blastapi.io/public-api/avalanche",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
-      },
-      {
         url: "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
