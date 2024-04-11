@@ -661,6 +661,21 @@ export const extraRpcs = {
       },
     ],
   },
+  80002: {
+    rpcs: [
+      "https://rpc-amoy.polygon.technology",
+      {
+        url: "https://polygon-bor-amoy-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://polygon-bor-amoy-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   56: {
     rpcs: [
       "https://bsc-dataseed.bnbchain.org/",
@@ -845,11 +860,6 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/avalanche",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://blastapi.io/public-api/avalanche",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
@@ -4010,6 +4020,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
     ],
+      {
+        url: "https://zkfair.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ]
   },
   43851: {
     rpcs: [
