@@ -4066,6 +4066,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://zkfair.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
     ]
   },
   43851:{
