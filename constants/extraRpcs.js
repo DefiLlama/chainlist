@@ -1729,6 +1729,15 @@ export const extraRpcs = {
       },
     ]
   },
+686868: {
+      rpcs: [
+	  {
+        url: "https://merlin-testnet.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi
+      },
+    ]
+  },
   420: {
     rpcs: [
       {
