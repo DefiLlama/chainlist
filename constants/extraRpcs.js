@@ -4738,6 +4738,10 @@ export const extraRpcs = {
       },
     ],
   },
+200901: {
+    rpcs: [
+      "https://rpc.bitlayer.org"
+    ]	
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
