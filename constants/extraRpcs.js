@@ -4370,8 +4370,17 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-	"https://oasys-mainnet.gateway.pokt.network/v1/lb/c967bd31",
-	"https://oasys-mainnet-archival.gateway.pokt.network/v1/lb/c967bd31",
+      {
+        url: "https://oasys-mainnet.rpc.grove.city/v1/167fa7a3",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt
+      },
+      {
+        url: "https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt
+      },
+      "wss://ws.mainnet.oasys.games/",
     ],
   },
   3501: {
