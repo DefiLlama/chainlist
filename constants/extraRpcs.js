@@ -591,11 +591,7 @@ export const extraRpcs = {
   },
   195: {
       rpcs: [
-	  {
-        url: "https://x1-testnet.blockpi.network/v1/rpc/public ",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi
-      },
+	  
     ]
   },
   4002: {
