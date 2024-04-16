@@ -4415,18 +4415,18 @@ export const extraRpcs = {
   167008: {
     rpcs: [
       {
-	url: "https://taiko-katla.blockpi.network/v1/rpc/public",
-	tracking: "limited",
-	trackingDetails: privacyStatement.blockpi,
+        url: "https://taiko-katla.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       }
     ]
   },
   167009: {
     rpcs: [
       {
-	url: "https://taiko-hekla.blockpi.network/v1/rpc/public",
-	tracking: "limited",
-	trackingDetails: privacyStatement.blockpi,
+        url: "https://taiko-hekla.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
       }
     ]
   },
@@ -4747,10 +4747,16 @@ export const extraRpcs = {
       },
     ],
   },
-200901: {
+  200901: {
     rpcs: [
       "https://rpc.bitlayer.org"
     ]	
+  },
+  131313: {
+    rpcs: [
+      "https://testnode.dioneprotocol.com/ext/bc/D/rpc"
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
