@@ -4421,6 +4421,15 @@ export const extraRpcs = {
       }
     ]
   },
+  167009: {
+    rpcs: [
+      {
+	url: "https://taiko-hekla.blockpi.network/v1/rpc/public",
+	tracking: "limited",
+	trackingDetails: privacyStatement.blockpi,
+      }
+    ]
+  },
   2323: {
     rpcs: [
       {
