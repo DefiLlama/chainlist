@@ -1160,6 +1160,7 @@ export const extraRpcs = {
       },
       "https://rpc.vvs.finance",
       "https://mmf-rpc.xstaking.sg",
+      "https://rpc.nebkas.ro",
     ],
   },
   338: {
