@@ -4757,6 +4757,11 @@ export const extraRpcs = {
       "https://testnode.dioneprotocol.com/ext/bc/D/rpc"
     ]
   },
+  77001: {
+    rpcs: [
+      "https://public-node.api.boraportal.com/bora/mainnet"
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
