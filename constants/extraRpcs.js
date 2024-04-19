@@ -2266,7 +2266,7 @@ export const extraRpcs = {
     rpcs: ["https://mainnet-rpc.thundercore.com"],
   },
   20: {
-    rpcs: ["https://api.elastos.io/esc", "https://api.trinity-tech.io/esc"],
+    rpcs: ["https://api.elastos.io/esc", "https://api.trinity-tech.io/esc", "https://api2.elastos.io/esc", "https://api2.elastos.net/esc", "https://api2.elastos.io/eth", "https://api2.elastos.net/eth", "https://rpc.glidefinance.io/"],
   },
   82: {
     rpcs: ["https://rpc.meter.io",
