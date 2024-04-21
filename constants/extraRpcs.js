@@ -1160,6 +1160,7 @@ export const extraRpcs = {
       },
       "https://rpc.vvs.finance",
       "https://mmf-rpc.xstaking.sg",
+      "https://rpc.nebkas.ro",
     ],
   },
   338: {
@@ -2266,7 +2267,7 @@ export const extraRpcs = {
     rpcs: ["https://mainnet-rpc.thundercore.com"],
   },
   20: {
-    rpcs: ["https://api.elastos.io/esc", "https://api.trinity-tech.io/esc"],
+    rpcs: ["https://api.elastos.io/esc", "https://api.trinity-tech.io/esc", "https://api2.elastos.io/esc", "https://api2.elastos.net/esc", "https://api2.elastos.io/eth", "https://api2.elastos.net/eth", "https://rpc.glidefinance.io/"],
   },
   82: {
     rpcs: ["https://rpc.meter.io",
@@ -2924,6 +2925,11 @@ export const extraRpcs = {
         url: "https://zksync-era.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://go.getblock.io/f76c09905def4618a34946bf71851542",
+        tracking: "limited",
+        trackingDetails: privacyStatement.getblock,
       },
       {
         url: "https://zksync.meowrpc.com",
@@ -4762,6 +4768,11 @@ export const extraRpcs = {
       "https://public-node.api.boraportal.com/bora/mainnet"
     ],
   },
+  267: {
+    rpcs: [
+      "https://rpc.ankr.com/neura_testnet"
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
