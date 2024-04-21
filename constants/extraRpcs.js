@@ -4757,6 +4757,11 @@ export const extraRpcs = {
       "https://testnode.dioneprotocol.com/ext/bc/D/rpc"
     ]
   },
+  267: {
+    rpcs: [
+      "https://rpc.ankr.com/neura_testnet"
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
