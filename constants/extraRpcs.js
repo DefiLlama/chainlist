@@ -2926,6 +2926,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
+        url: "https://go.getblock.io/f76c09905def4618a34946bf71851542",
+        tracking: "limited",
+        trackingDetails: privacyStatement.getblock,
+      },
+      {
         url: "https://zksync.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
