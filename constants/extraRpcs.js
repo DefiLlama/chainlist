@@ -2955,6 +2955,7 @@ export const extraRpcs = {
   },
   196: {
     rpcs: [
+      "https://rpc.xlayer.tech",
       {
         url: "https://endpoints.omniatech.io/v1/xlayer/mainnet/public",
         tracking: "none",
