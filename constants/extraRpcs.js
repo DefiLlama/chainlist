@@ -4714,6 +4714,11 @@ export const extraRpcs = {
       },
     ]
   },
+  42793: {
+    rpcs: [
+      "https://node.mainnet.etherlink.com"
+    ]
+  },
   881: {
     rpcs:[
       "https://rpc.hypr.network"
