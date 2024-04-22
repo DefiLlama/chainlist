@@ -4774,6 +4774,11 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.ankr.com/neura_testnet"
     ]
+  },
+  42072: {
+    rpcs: [
+      "https://testnet-rpc.agentlayer.xyz/"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
