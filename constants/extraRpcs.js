@@ -165,7 +165,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   nodifi:
   "Nodifi AI privacy policy request no privacy intrusion. We do not track IP, wallets, or the websites connected to our nodes. For more info check https://nodifi.ai/privacy-policy",
   rockx:
-    "For operational reasons, we briefly log IP addresses to enforce usage restrictions and protect our network from denial of service attacks. While we analyze general data concerning the success of transactions conducted through the blockchain RPC, we do not link these wallet transactions with the IPs from which the requests are made. Consequently, we do not utilize any personally identifiable information (PII), such as wallet addresses, nor do we share this data. For more detailed information, please see our privacy policy at https://www.rockx.com/privacy-policy.",
+    "We may automatically collect and store certain information about your interaction with our Applications including IP address, browser type, internet service provider, referring/exit pages, operating system, date/time stamps and related data. For more info check https://www.rockx.com/privacy-policy.",
  };
 
 export const extraRpcs = {
@@ -1723,7 +1723,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rockx-merlin.w3node.com/public-merlin/api",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.rockx
       }
     ]
