@@ -1723,7 +1723,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rockx-merlin.w3node.com/public-merlin/api",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.rockx
       }
     ]
