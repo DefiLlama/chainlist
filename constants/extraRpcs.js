@@ -4772,6 +4772,11 @@ export const extraRpcs = {
       "https://testnode.dioneprotocol.com/ext/bc/D/rpc"
     ]
   },
+  1123: {
+    rpcs: [
+      "https://b2-testnet.alt.technology"
+    ]
+  },
   77001: {
     rpcs: [
       "https://public-node.api.boraportal.com/bora/mainnet"
@@ -4780,11 +4785,6 @@ export const extraRpcs = {
   267: {
     rpcs: [
       "https://rpc.ankr.com/neura_testnet"
-    ]
-  },
-  1123: {
-    rpcs: [
-      "https://b2-testnet.alt.technology"
     ]
   }
 };
