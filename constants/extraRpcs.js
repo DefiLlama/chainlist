@@ -4332,6 +4332,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
       },
+      {
+        url: "https://linea-sepolia.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
      ],
    },
   534351: {
