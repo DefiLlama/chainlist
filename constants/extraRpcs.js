@@ -4786,6 +4786,12 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.ankr.com/neura_testnet"
     ]
+  },
+  60808: {
+    rpcs: [
+      "https://rpc.gobob.xyz", 
+      "wss://rpc.gobob.xyz"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
