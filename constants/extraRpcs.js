@@ -167,8 +167,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   rockx:
     "We may automatically collect and store certain information about your interaction with our Applications including IP address, browser type, internet service provider, referring/exit pages, operating system, date/time stamps and related data. For more info check https://www.rockx.com/privacy-policy.",
   taikotools:
-    "We don't gather: User IP addresses, wallets, sources of requests and request content. For more info check http://localhost:3000/privacy-policy",
-};
+    "We don't gather: User IP addresses, wallets, sources of requests and request content. For more info check https://taiko.tools/privacy-policy",
+  sigmacore:
+    "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",  
+  };
 
 export const extraRpcs = {
   1: {
@@ -2325,6 +2327,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      "https://rpc.pollum.services",
+      "wss://rpc.pollum.services/wss"
     ],
   },
   8: {
@@ -4495,7 +4499,9 @@ export const extraRpcs = {
       "wss://rpc.rollux.com/wss",
       "https://rpc.rollux.com",
       "https://rollux.rpc.syscoin.org",
-      "wss://rollux.rpc.syscoin.org/wss"
+      "wss://rollux.rpc.syscoin.org/wss",
+      "https://rollux.pollum.services",
+      "wss://rollux.pollum.services/wss"
     ],
   },
   5700: {
@@ -4509,8 +4515,32 @@ export const extraRpcs = {
         url: "wss://syscoin-tanenbaum-evm.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://rpc-testnet.pollum.services/wss",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://rpc-testnet.pollum.services",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       }
    ],
+  },
+  57000:{
+    rpcs: [
+      {
+        url: "https://rollux.rpc-testnet.pollum.services",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://rollux.rpc-testnet.pollum.services/wss",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ]
   },
   8081: {
     rpcs: [
@@ -4798,6 +4828,21 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.ankr.com/neura_testnet"
     ]
+  },
+  60808: {
+    rpcs: [
+      "https://rpc.gobob.xyz", 
+      "wss://rpc.gobob.xyz"
+    ]
+  },
+  42: {
+    rpcs: [
+      {
+        url: "https://rpc.lukso.sigmacore.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.sigmacore,
+      },
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
