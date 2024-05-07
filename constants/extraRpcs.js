@@ -4831,6 +4831,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.sigmacore,
       },
     ],
+  },
+  223: {
+    rpcs: [
+      "https://rpc.bsquared.network",
+      "https://b2-mainnet.alt.technology",
+      "https://b2-mainnet-public.s.chainbase.com",
+      "https://mainnet.b2-rpc.com"
+    ]	  
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
