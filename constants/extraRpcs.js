@@ -166,6 +166,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   "Nodifi AI privacy policy request no privacy intrusion. We do not track IP, wallets, or the websites connected to our nodes. For more info check https://nodifi.ai/privacy-policy",
   rockx:
     "We may automatically collect and store certain information about your interaction with our Applications including IP address, browser type, internet service provider, referring/exit pages, operating system, date/time stamps and related data. For more info check https://www.rockx.com/privacy-policy.",
+  taikotools:
+    "We don't gather: User IP addresses, wallets, sources of requests and request content. For more info check https://taiko.tools/privacy-policy",
   sigmacore:
     "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",  
   };
@@ -4442,6 +4444,11 @@ export const extraRpcs = {
         url: "https://taiko-katla.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://katla.taiko.tools",
+        tracking: "none",
+        trackingDetails: privacyStatement.taikotools,
       }
     ]
   },
@@ -4451,6 +4458,11 @@ export const extraRpcs = {
         url: "https://taiko-hekla.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://hekla.taiko.tools",
+        tracking: "none",
+        trackingDetails: privacyStatement.taikotools,
       }
     ]
   },
