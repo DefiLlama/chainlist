@@ -169,7 +169,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   taikotools:
     "We don't gather: User IP addresses, wallets, sources of requests and request content. For more info check https://taiko.tools/privacy-policy",
   sigmacore:
-    "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",  
+    "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",
+  graffiti:
+    "We believe in the decentralization of Ethereum, thus we don't track or log any data or user activity. We offer a public, powerful, full node as an Ethereum public good, powered by Rust-based RETH",
+
   };
 
 export const extraRpcs = {
@@ -427,7 +430,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodifi,
       },
      "https://gateway.subquery.network/rpc/eth",
-     "https://ethereum.rpc.subquery.network/public"
+     "https://ethereum.rpc.subquery.network/public",
+      {
+        url: "https://rpc.graffiti.farm",
+        tracking: "none",
+        trackingDetails: privacyStatement.graffiti,
+      },
     ],
   },
   2: {
