@@ -167,7 +167,10 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   taikotools:
     "We don't gather: User IP addresses, wallets, sources of requests and request content. For more info check https://taiko.tools/privacy-policy",
   sigmacore:
-    "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",  
+    "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",
+  graffiti:
+    "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 7 days to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 7 days, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period.https://graffiti.farm/privacy-policy/",
+
   };
 
 export const extraRpcs = {
@@ -425,7 +428,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodifi,
       },
      "https://gateway.subquery.network/rpc/eth",
-     "https://ethereum.rpc.subquery.network/public"
+     "https://ethereum.rpc.subquery.network/public",
+      {
+        url: "https://rpc.graffiti.farm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.graffiti,
+      },
     ],
   },
   2: {
