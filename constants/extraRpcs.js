@@ -427,7 +427,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodifi,
       },
-     "https://gateway.subquery.network/rpc/eth",
      "https://ethereum.rpc.subquery.network/public",
       {
         url: "https://rpc.graffiti.farm",
@@ -3661,7 +3660,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
      "https://base.rpc.subquery.network/public",
-     "https://gateway.subquery.network/rpc/base"
     ],
   },
   11235: {
