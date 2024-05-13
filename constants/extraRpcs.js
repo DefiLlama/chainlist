@@ -4862,6 +4862,11 @@ export const extraRpcs = {
       "https://b2-mainnet-public.s.chainbase.com",
       "https://mainnet.b2-rpc.com"
     ]	  
+  },
+  2014: {
+    rpcs: [
+      "https://rpc.nowscan.io"
+    ]	  
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
