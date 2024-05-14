@@ -4445,11 +4445,6 @@ export const extraRpcs = {
   167008: {
     rpcs: [
       {
-        url: "https://taiko-katla.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://katla.taiko.tools",
         tracking: "none",
         trackingDetails: privacyStatement.taikotools,
