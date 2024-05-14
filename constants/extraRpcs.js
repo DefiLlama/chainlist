@@ -170,7 +170,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",
   graffiti:
     "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 7 days to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 7 days, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period.https://graffiti.farm/privacy-policy/",
-
+  NOWNodes:
+    "We do not collect any financial data. Other data may be collected by third parties; we are not responsible for the actions of third parties. We do not collect any Personal data other than the Personal data set out in this Policy: https://nownodes.io/assets/data/privacy-pol.pdf. ",
+	
   };
 
 export const extraRpcs = {
@@ -422,6 +424,12 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+	{
+        url: "https://eth.nownodes.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.NOWNodes,
+      },
+	    
       {
         url: "rpc.nodifi.ai/api/rpc/free",
         tracking: "none",
@@ -840,6 +848,12 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+	{
+        url: "https://bsc.nownodes.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.NOWNodes,
+      },
+	    
     ],
   },
   97: {
