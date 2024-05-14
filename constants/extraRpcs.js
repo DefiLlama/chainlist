@@ -171,7 +171,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   graffiti:
     "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 7 days to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 7 days, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period.https://graffiti.farm/privacy-policy/",
   NOWNodes:
-    "We collect information about your computer hardware and software automatically. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses. Terms of use: https://nownodes.io/assets/data/TOS.pdf",
+    "We do not collect any financial data. Other data may be collected by third parties; we are not responsible for the actions of third parties. We do not collect any Personal data other than the Personal data set out in this Policy: https://nownodes.io/assets/data/privacy-pol.pdf. ",
 	
   };
 
