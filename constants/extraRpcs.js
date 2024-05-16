@@ -4476,6 +4476,11 @@ export const extraRpcs = {
         url: "https://hekla.taiko.tools",
         tracking: "none",
         trackingDetails: privacyStatement.taikotools,
+      },
+      {
+        url: "https://rpc.ankr.com/taiko_hekla",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       }
     ]
   },
