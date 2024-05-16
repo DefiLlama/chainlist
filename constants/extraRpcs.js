@@ -4874,6 +4874,11 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.nowscan.io"
     ]	  
+  },
+  62831: {
+    rpcs: [
+      "https://subnets.avax.network/plyr/testnet/rpc"
+    ]	  
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
