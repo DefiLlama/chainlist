@@ -1,7 +1,7 @@
 module.exports = {
-    reactStrictMode: true,
-    images: {
-      domains: ['defillama.com'],
-    },
-  }
-  
+  // i18n: {
+  //   locales: ["en", "zh"],
+  //   defaultLocale: "en",
+  // },
+  reactStrictMode: true,
+};
