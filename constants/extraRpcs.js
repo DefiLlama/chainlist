@@ -1502,6 +1502,8 @@ export const extraRpcs = {
   },
   204: {
     rpcs: [
+      "https://opbnb-mainnet-rpc.bnbchain.org",
+      "https://opbnb.drpc.org",
       {
         url: "https://opbnb-rpc.publicnode.com",
         tracking: "none",
@@ -1577,6 +1579,8 @@ export const extraRpcs = {
   },
   5165: {
     rpcs: [
+      "https://rpc1.bahamut.io",		
+      "https://rpc2.bahamut.io",
       {
         url: "https://bahamut-rpc.publicnode.com",
         tracking: "none",
@@ -2409,6 +2413,16 @@ export const extraRpcs = {
   17000: {
     rpcs: [
       {
+        url: "https://endpoints.omniatech.io/v1/eth/holesky/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://ethereum-holesky.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
         url: "https://ethereum-holesky-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -2424,20 +2438,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://ethereum-holesky.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
 	      url: "https://holesky-rpc.nocturnode.tech",
 	      tracking: "none",
         trackingDetails: privacyStatement.nocturnDao,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/eth/holesky/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
+      },      
     ],
   },
   22: {
@@ -3255,6 +3259,12 @@ export const extraRpcs = {
   },
   5000: {
     rpcs: [
+      "https://rpc.mantle.xyz",
+      {
+        url: "https://mantle-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
       {
         url: "https://mantle-rpc.publicnode.com",
         tracking: "none",
@@ -3264,11 +3274,6 @@ export const extraRpcs = {
         url: "wss://mantle-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://mantle-mainnet.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://mantle.drpc.org",
@@ -3305,6 +3310,7 @@ export const extraRpcs = {
   },
   6688: {
     rpcs: [
+      "https://evmrpc.irishub-1.irisnet.org",
       {
         url: "https://iris-evm-rpc.publicnode.com",
         tracking: "none",
