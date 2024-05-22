@@ -1,6 +1,7 @@
 import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.json" assert { type: "json" };
 import fetch from "node-fetch"
+import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -98,9 +99,14 @@ export function arrayMove(array, fromIndex, toIndex) {
 export async function generateChainData(){
     const chains = await fetcher("https://chainid.network/chains.json");
     const chainTvls = await fetcher("https://api.llama.fi/chains");
+    const overwrittenIds = overwrittenChains.reduce((acc, curr)=>{
+        acc[curr.chainId] = true;
+        return acc
+    }, {})
   
     const sortedChains = chains
-      .filter((c) => c.name !== "420coin") // same chainId as ronin
+      .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
+      .concat(overwrittenChains)
       .map((chain) => populateChain(chain, chainTvls))
       .sort((a, b) => {
         return (b.tvl ?? 0) - (a.tvl ?? 0);

@@ -55,10 +55,10 @@ function Home({ chains }) {
   return (
     <>
       <Head>
-        <title>Chainlist</title>
+        <title>ChainList</title>
         <meta
           name="description"
-          content="Chainlist is a list of RPCs for EVM(Ethereum Virtual Machine) networks. Use the information to connect your wallets and Web3 middleware providers to the appropriate Chain ID and Network ID. Find the best RPC for both Mainnet and Testnet to connect to the correct chain"
+          content="ChainList is a list of RPCs for EVM(Ethereum Virtual Machine) networks. Use the information to connect your wallets and Web3 middleware providers to the appropriate Chain ID and Network ID. Find the best RPC for both Mainnet and Testnet to connect to the correct chain"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -66,16 +66,11 @@ function Home({ chains }) {
       <Layout>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {filteredChains.map((chain, idx) => {
-              if (idx === 2) {
-                return (
-                  <React.Fragment key={JSON.stringify(chain) + "en" + "with-banner"}>
-                    <AdBanner />
-                    <Chain chain={chain} lang="en" />
-                  </React.Fragment>
-                );
-              }
-
+            {filteredChains.slice(0, 2).map((chain, idx) => {
+              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
+            })}
+            <AdBanner />
+            {filteredChains.slice(2).map((chain, idx) => {
               return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
             })}
           </div>
