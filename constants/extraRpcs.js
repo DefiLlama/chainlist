@@ -4890,6 +4890,16 @@ export const extraRpcs = {
     rpcs: [
       "https://subnets.avax.network/plyr/testnet/rpc"
     ]	  
+  },
+  12324: {
+    rpcs: [
+      "https://rpc-mainnet.l3x.com"
+    ]
+  },
+  12325: {
+    rpcs: [
+      "https://rpc-testnet.l3x.com"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
