@@ -2892,6 +2892,7 @@ export const extraRpcs = {
   },
   1116: {
     rpcs: [
+      "ws://ws.coredao.org",
       "https://rpc.coredao.org",
       "https://core.public.infstones.com",
       {
