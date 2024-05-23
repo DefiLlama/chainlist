@@ -172,7 +172,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 7 days to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 7 days, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period.https://graffiti.farm/privacy-policy/",
   NOWNodes:
     "We do not collect any financial data. Other data may be collected by third parties; we are not responsible for the actions of third parties. We do not collect any Personal data other than the Personal data set out in this Policy: https://nownodes.io/assets/data/privacy-pol.pdf. ",
-	
+  Envelop:
+    "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy"	  
   };
 
 export const extraRpcs = {
@@ -1512,6 +1513,11 @@ export const extraRpcs = {
         url: "wss://blast.gasswap.org",
         tracking: "none",
         trackingDetails: privacyStatement.gasswap,
+      },
+      {
+        url: "https://rpc.envelop.is/blast",
+        tracking: "none",
+        trackingDetails: privacyStatement.Envelop,
       },
     ],
   },
