@@ -4483,6 +4483,15 @@ export const extraRpcs = {
       "https://mainnet-rpc.curvescan.io",
     ],
   },
+  167000: {
+    rpcs: [
+      {
+        url: "https://taiko.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      }
+    ]
+  },
   167008: {
     rpcs: [
       {
