@@ -38,6 +38,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
+  radiumblock:
+    "Except for the data that is publicly accessible on the blockchain, RadiumBlock does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our customer privacy policy please visit https://radiumblock.com/privacy.html",	
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days We do use these infos to improve our services.",
   omnia:
@@ -189,6 +191,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/eth",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },    
+      {
+        url: "https://rpc.public.curie.radiumblock.co/http/ethereum",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
        {
         url: "https://go.getblock.io/d9fde9abc97545f4887f56ae54f3c2c0",
