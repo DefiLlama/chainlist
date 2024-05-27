@@ -4483,6 +4483,15 @@ export const extraRpcs = {
       "https://mainnet-rpc.curvescan.io",
     ],
   },
+  167000: {
+    rpcs: [
+      {
+        url: "https://rpc.taiko.tools",
+        tracking: "none",
+        trackingDetails: privacyStatement.taikotools,
+      }
+    ]
+  },
   167008: {
     rpcs: [
       {
