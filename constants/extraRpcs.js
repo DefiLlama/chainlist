@@ -192,11 +192,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },    
-      {
-        url: "https://rpc.public.curie.radiumblock.co/http/ethereum",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
        {
         url: "https://go.getblock.io/d9fde9abc97545f4887f56ae54f3c2c0",
         tracking: "none",
@@ -449,6 +444,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.graffiti,
       },
+      {
+        url: "https://rpc.public.curie.radiumblock.co/http/ethereum",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },	    
     ],
   },
   2: {
