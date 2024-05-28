@@ -38,6 +38,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
+  radiumblock:
+    "Except for the data that is publicly accessible on the blockchain, RadiumBlock does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our customer privacy policy please visit https://radiumblock.com/privacy.html",	
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days We do use these infos to improve our services.",
   omnia:
@@ -1965,6 +1967,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality
       },
       {
+        url: "https://moonriver.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
+      {
         url: "https://moonriver.unitedbloc.com:2000",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
@@ -2052,6 +2059,11 @@ export const extraRpcs = {
         url: "https://moonbeam.unitedbloc.com:3000",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+        url: "https://moonbeam.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
       {
         url: "wss://moonbeam.unitedbloc.com:3001",
@@ -2241,6 +2253,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
+        url: "https://shiden.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
+      {
         url: "https://shiden-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
@@ -2275,6 +2292,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/astr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://astar.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
       {
         url: "https://astar-mainnet.g.alchemy.com/v2/demo",
