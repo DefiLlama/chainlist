@@ -406,7 +406,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://eth1.lava.build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/",
+        url: "https://eth1..build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
@@ -420,6 +420,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },    
+      {
+        url: "https://eth1.lava.build/lava-referer-ffaf6728-0819-4d38-87e0-c9eaa062ac48/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
       {
         url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
         tracking: "yes",
