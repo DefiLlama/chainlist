@@ -1967,11 +1967,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality
       },
       {
-        url: "https://moonriver.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
         url: "https://moonriver.unitedbloc.com:2000",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
@@ -2005,6 +2000,11 @@ export const extraRpcs = {
         url: "wss://moonriver-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://moonriver.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
     ],
   },
@@ -2061,11 +2061,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "https://moonbeam.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
         url: "wss://moonbeam.unitedbloc.com:3001",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
@@ -2109,6 +2104,11 @@ export const extraRpcs = {
         url: "wss://moonbeam-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://moonbeam.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
     ],
   },
@@ -2253,11 +2253,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://shiden.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
         url: "https://shiden-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
@@ -2271,6 +2266,11 @@ export const extraRpcs = {
         url: "https://shiden.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://shiden.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
     ],
   },
@@ -2292,11 +2292,6 @@ export const extraRpcs = {
         url: "https://1rpc.io/astr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://astar.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
       },
       {
         url: "https://astar-mainnet.g.alchemy.com/v2/demo",
@@ -2322,6 +2317,11 @@ export const extraRpcs = {
         url: "wss://astar-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://astar.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
       },
     ],
   },
