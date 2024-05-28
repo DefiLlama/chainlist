@@ -406,7 +406,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://eth1..build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/",
+        url: "https://eth1.lava.build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
