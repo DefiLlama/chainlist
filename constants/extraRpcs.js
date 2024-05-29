@@ -421,6 +421,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },    
       {
+        url: "https://eth1.lava.build/lava-referer-ffaf6728-0819-4d38-87e0-c9eaa062ac48/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+      {
         url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -4489,6 +4494,11 @@ export const extraRpcs = {
         url: "https://taiko.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://rpc.taiko.tools",
+        tracking: "none",
+        trackingDetails: privacyStatement.taikotools
       }
     ]
   },
