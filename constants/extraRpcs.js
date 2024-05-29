@@ -392,12 +392,22 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       {
+        url: "https://eth1.lava.build/lava-referer-0d2c6b4c-637c-40ce-aef4-cf22c6d3218e/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+      {
         url: "https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
       {
         url: "https://eth1.lava.build/lava-referer-67d3f842-d21f-489d-b4f2-cf902ea4b1e5/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+      {
+        url: "https://eth1.lava.build/lava-referer-ffaf6728-0819-4d38-87e0-c9eaa062ac48/",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
@@ -2906,6 +2916,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.coredao.org",
       "https://core.public.infstones.com",
+      "wss://ws.coredao.org",
       {
         url: "https://1rpc.io/core",
         tracking: "none",
@@ -4476,6 +4487,22 @@ export const extraRpcs = {
   },
   827431: {
     rpcs: ["https://mainnet-rpc.curvescan.io"],
+  },
+  167000: {
+    rpcs: [
+      "https://rpc.taiko.xyz",
+      "wss://ws.taiko.xyz",
+      {
+        url: "https://taiko.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://rpc.taiko.tools",
+        tracking: "none",
+        trackingDetails: privacyStatement.taikotools
+      }
+    ]
   },
   167008: {
     rpcs: [
