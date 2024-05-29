@@ -2925,7 +2925,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.coredao.org",
       "https://core.public.infstones.com",
-      "ws://ws.coredao.org"
+      "wss://ws.coredao.org",
       {
         url: "https://1rpc.io/core",
         tracking: "none",
@@ -4496,6 +4496,8 @@ export const extraRpcs = {
   },
   167000: {
     rpcs: [
+      "https://rpc.taiko.xyz",
+      "wss://ws.taiko.xyz",
       {
         url: "https://taiko.blockpi.network/v1/rpc/public",
         tracking: "limited",
