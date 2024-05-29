@@ -2925,6 +2925,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.coredao.org",
       "https://core.public.infstones.com",
+      "ws://ws.coredao.org"
       {
         url: "https://1rpc.io/core",
         tracking: "none",
