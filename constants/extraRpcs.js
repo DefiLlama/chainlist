@@ -4491,9 +4491,14 @@ export const extraRpcs = {
   167000: {
     rpcs: [
       {
+        url: "https://taiko.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
         url: "https://rpc.taiko.tools",
         tracking: "none",
-        trackingDetails: privacyStatement.taikotools,
+        trackingDetails: privacyStatement.taikotools
       }
     ]
   },
