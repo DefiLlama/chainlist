@@ -1074,7 +1074,11 @@ export const extraRpcs = {
   },
   137: {
     rpcs: [
-      "https://rpc-mainnet.maticvigil.com",
+      {
+        url: "https://rpc.ankr.com/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
         tracking: "none",
@@ -1087,24 +1091,16 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
-      "https://matic-mainnet-full-rpc.bwarelabs.com",
-      "https://matic-mainnet-archive-rpc.bwarelabs.com",
       {
         url: "https://polygon-pokt.nodies.app",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://rpc.ankr.com/polygon",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
         url: "https://polygon-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      "https://polygonapi.terminet.io/rpc",
       {
         url: "https://1rpc.io/matic",
         tracking: "none",
@@ -1121,7 +1117,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      "https://polygon-mainnet-public.unifra.io",
       {
         url: "https://polygon-mainnet.g.alchemy.com/v2/demo",
         tracking: "yes",
@@ -1166,18 +1161,7 @@ export const extraRpcs = {
         url: "https://polygon.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
-      },
-      {
-        url: "https://getblock.io/nodes/matic/",
-        tracking: "none",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
-        url: "https://api.stateless.solutions/polygon/v1/demo",
-        tracking: "none",
-        trackingDetails: privacyStatement.stateless,
-      },
-      {
+      },      {
         url: "https://public.stackup.sh/api/v1/node/polygon-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
