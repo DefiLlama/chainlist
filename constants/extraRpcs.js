@@ -1085,7 +1085,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       "https://polygon-rpc.com",
-      "https://rpc-mainnet.matic.network",
       {
         url: "https://rpc-mainnet.matic.quiknode.pro",
         tracking: "yes",
