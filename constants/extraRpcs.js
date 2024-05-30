@@ -4931,7 +4931,17 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc-testnet.l3x.com"
     ]
-  }
+  },
+  721: {
+    rpcs: [
+      "https://rpc.lycanchain.com",
+      "https://us-east.lycanchain.com",
+      "https://us-west.lycanchain.com",
+      "https://eu-north.lycanchain.com",
+      "https://eu-west.lycanchain.com",
+      "https://asia-southeast.lycanchain.com",
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
