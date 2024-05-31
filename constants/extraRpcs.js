@@ -4385,11 +4385,6 @@ export const extraRpcs = {
    },
   59140: {
     rpcs: [
-      {
-        url: "https://linea-goerli.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-       },
        {
         url: "https://linea-goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
         tracking: "limited",
