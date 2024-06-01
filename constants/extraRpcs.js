@@ -4964,6 +4964,20 @@ export const extraRpcs = {
       "https://asia-southeast.lycanchain.com",
     ],
   },
+  44474237230: {
+    rpcs: [
+      "https://https://rpc.dev.deriw.com/",
+    ],
+    tracking: "none",
+    trackingDetails: privacyStatement.Deriw
+  },
+  90483539238: {
+    rpcs: [
+      "https://https://rpc.test.deriw.com/",
+    ],
+    tracking: "none",
+    trackingDetails: privacyStatement.Deriw
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
