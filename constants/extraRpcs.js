@@ -4964,6 +4964,15 @@ export const extraRpcs = {
       "https://asia-southeast.lycanchain.com",
     ],
   },
+  167000: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/taiko",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      }
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
