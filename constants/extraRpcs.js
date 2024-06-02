@@ -3290,6 +3290,16 @@ export const extraRpcs = {
   8131: {
     rpcs: ["https://testnet.meerlabs.com"]
   },
+  167000: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/taiko",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      }
+    ]
+  }
+
 
 };
 
