@@ -4512,6 +4512,11 @@ export const extraRpcs = {
         url: "https://rpc.taiko.tools",
         tracking: "none",
         trackingDetails: privacyStatement.taikotools
+      },
+      {
+        url: "https://rpc.ankr.com/taiko",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
       }
     ]
   },
