@@ -2215,7 +2215,7 @@ export const extraRpcs = {
     ],
   },
   19: {
-    rpcs: ["https://songbird.towolabs.com/rpc"],
+    rpcs: [],
   },
   122: {
     rpcs: [
