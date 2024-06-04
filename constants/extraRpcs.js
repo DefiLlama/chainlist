@@ -2215,7 +2215,13 @@ export const extraRpcs = {
     ],
   },
   19: {
-    rpcs: [],
+    rpcs: [
+      "https://songbird-api.flare.network/ext/C/rpc",
+      "https://01-gravelines-006-01.rpc.tatum.io/ext/bc/C/rpc",
+      "https://02-tokyo-006-03.rpc.tatum.io/ext/bc/C/rpc",
+      "https://rpc.ftso.au/songbird",
+      "https://songbird.solidifi.app/ext/C/rpc"
+    ],
   },
   122: {
     rpcs: [
