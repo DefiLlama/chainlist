@@ -1524,6 +1524,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Envelop,
       },
+      {
+        url: "https://blast-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://blast-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   204: {
