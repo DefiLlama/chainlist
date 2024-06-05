@@ -3390,6 +3390,11 @@ export const extraRpcs = {
     "https://canto-rpc.ansybl.io",
     ]
   },
+  7924: {
+    rpcs: [
+    "https://mainnet-rpc.mochain.app/",
+    ]
+  },
   8000: {
     rpcs: ["https://dataseed.testnet.teleport.network"],
   },
