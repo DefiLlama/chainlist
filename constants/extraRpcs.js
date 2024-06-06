@@ -4990,6 +4990,11 @@ export const extraRpcs = {
       "https://asia-southeast.lycanchain.com",
     ],
   },
+  62298: {
+    rpcs: [
+      "https://rpc.devnet.citrea.xyz",
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
