@@ -185,11 +185,6 @@ export const extraRpcs = {
     rpcs: [
       // Quicknode -> tracks IP
       {
-        url: "https://eth-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
-      {
         url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -470,7 +465,12 @@ export const extraRpcs = {
         url: "https://rpc.public.curie.radiumblock.co/http/ethereum",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
-      },	    
+      },
+      {
+        url: "https://eth-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
+      },
     ],
   },
   2: {
@@ -789,11 +789,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["48Club"],
       },
       {
-        url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
-      {
         url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -903,7 +898,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.NOWNodes,
       },
-	    
+      {
+        url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
+      },    
     ],
   },
   97: {
@@ -912,11 +911,6 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/bsc/testnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-	          {
-        url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
       },
       "https://bsctestapi.terminet.io/rpc",
       {
@@ -948,6 +942,11 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/bsc-testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
+      },
+      {
+        url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
       },
     ],
   },
@@ -1563,11 +1562,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://opbnb-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
-      {
         url: "wss://opbnb-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -1576,6 +1570,11 @@ export const extraRpcs = {
         url: "https://1rpc.io/opbnb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://opbnb-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
       },
     ],
   },
@@ -1685,11 +1684,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
-      {
         url: "https://rpc.ankr.com/optimism",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -1778,6 +1772,11 @@ export const extraRpcs = {
         url: "https://api.tatum.io/v3/blockchain/node/optimism-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
       },
     ],
   },
@@ -3963,11 +3962,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy
       },
       {
-        url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
-      {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -4037,6 +4031,11 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/ethereum-sepolia",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
+      },
+      {
+        url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
       },
       "https://ethereum-sepolia.rpc.subquery.network/public"
     ]
@@ -4571,16 +4570,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.taikotools
       },
-	          {
-        url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
       {
         url: "https://rpc.ankr.com/taiko",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       }
+      {
+        url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
+      },
     ]
   },
   167008: {
@@ -4599,11 +4598,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-	          {
-        url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
-        trackingDetails: privacyStatement.4everland,
-      },
       {
         url: "https://hekla.taiko.tools",
         tracking: "none",
@@ -4614,6 +4608,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       }
+      {
+        url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "none",
+        trackingDetails: privacyStatement.4everland,
+      },
     ]
   },
   2323: {
