@@ -438,6 +438,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       {
+        url: "https://eth1.lava.build/lava-referer-41c0c220-fa74-400a-9222-bcf212b062d9/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+      {
         url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
