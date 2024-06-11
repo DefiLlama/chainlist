@@ -1627,6 +1627,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://Bahamut-mainnet-2h93.zeeve.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.zeeve,
+      }, 
     ],
   },
   42220: {
