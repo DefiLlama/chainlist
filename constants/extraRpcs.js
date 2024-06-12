@@ -410,36 +410,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://eth1.lava.build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://eth1.lava.build/lava-referer-0d2c6b4c-637c-40ce-aef4-cf22c6d3218e/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://eth1.lava.build/lava-referer-67d3f842-d21f-489d-b4f2-cf902ea4b1e5/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://eth1.lava.build/lava-referer-425ca573-01dd-4233-9942-c2d5b7f8ac22/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },    
-      {
-        url: "https://eth1.lava.build/lava-referer-ffaf6728-0819-4d38-87e0-c9eaa062ac48/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -3449,8 +3419,7 @@ export const extraRpcs = {
 	      "https://testnet-evm-rpc-evmos.hoodrun.io",
         "https://alphab.ai/rpc/eth/evmos_testnet",
         "https://t-evmos-jsonrpc.kalia.network",
-	      "https://jsonrpc-evmos-testnet.mzonder.com",
-	      "https://evmos-testnet.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b"
+	      "https://jsonrpc-evmos-testnet.mzonder.com"
     ],
   },
   9001: {
@@ -3520,11 +3489,6 @@ export const extraRpcs = {
       "https://alphab.ai/rpc/eth/evmos",
       "https://evmos-jsonrpc.kalia.network",
       "https://jsonrpc-evmos.mzonder.com",
-      {
-        url: "https://evmos.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
     ],
   },
   836542336838601: {
