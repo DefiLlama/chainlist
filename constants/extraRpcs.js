@@ -3425,16 +3425,6 @@ export const extraRpcs = {
   9001: {
     rpcs: [
       {
-        url: "https://evmos.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://evmos-mainnet-jsonrpc.autostake.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.autostake
-      },
-      {
         url: "https://evmos-pokt.nodies.app",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
