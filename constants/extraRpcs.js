@@ -4950,6 +4950,7 @@ export const extraRpcs = {
   },
   42: {
     rpcs: [
+      "https://rpc.mainnet.lukso.network",
       {
         url: "https://rpc.lukso.sigmacore.io",
         tracking: "none",
