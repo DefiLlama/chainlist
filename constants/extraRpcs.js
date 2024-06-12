@@ -206,11 +206,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodereal,
       },
       {
-        url:"https://glc-dataseed.glscan.io/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.glc,
-      },
-      {
         url: "https://ethereum-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -4958,8 +4953,12 @@ export const extraRpcs = {
     ]	  
   },
   10222: {
-    rpcs: [
-      "https://glc-dataseed.glscan.io/"
+    rpcs: [      
+      {
+        url:"https://glc-dataseed.glscan.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.glc,
+      },
     ]
   },
   12324: {
