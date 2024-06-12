@@ -1211,6 +1211,16 @@ export const extraRpcs = {
       },
     ],
   },
+  1075: {
+    rpcs: [
+      "https://json-rpc.evm.iotaledger.net",
+      {
+        url: "https://iota-testnet-evm.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
+  },
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
