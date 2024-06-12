@@ -193,7 +193,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },    
        {
-        url: "https://go.getblock.io/d9fde9abc97545f4887f56ae54f3c2c0",
+        url: "https://go.getblock.io/aefd01aa907c4805ba3c00a9e5b48c6b",
         tracking: "none",
         trackingDetails: privacyStatement.getblock,
       },
