@@ -4955,6 +4955,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.sigmacore,
       },
+      {
+        url: "https://42.rpc.thirdweb.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.thirdweb,
+      },
+      {  
+        url: "https://lukso.nownodes.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.NOWNodes,
+      },
     ],
   },
   223: {
