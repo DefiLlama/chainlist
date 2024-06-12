@@ -1228,6 +1228,15 @@ export const extraRpcs = {
       },
     ],
   },
+  8822: {
+    rpcs: [
+      {
+        url: "https://iota-mainnet-evm.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+    ],
+  },
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
