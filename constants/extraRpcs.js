@@ -1230,6 +1230,7 @@ export const extraRpcs = {
   },
   8822: {
     rpcs: [
+      "https://json-rpc.evm.iotaledger.net",
       {
         url: "https://iota-mainnet-evm.public.blastapi.io",
         tracking: "limited",
