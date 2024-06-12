@@ -177,7 +177,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   Envelop:
     "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
   4everland:
-    "Privacy Notice: 4EVERLAND RPC highly values user privacy. We do not track any user information such as IP addresses or location data. No user information is stored or logged in any form. Your privacy and security are our top priorities."
+    "Privacy Notice: 4EVERLAND RPC highly values user privacy. We do not track any user information such as IP addresses or location data. No user information is stored or logged in any form. Your privacy and security are our top priorities: https://www.4everland.org/privacy-policy."
   };
 
 export const extraRpcs = {
