@@ -8,6 +8,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "IP addresses will be read for rate-limit purpose without being actively stored at application layer. Also notice that we don't actively purge user footprint in lower-level protocol.",
   unitedbloc:
     "UnitedBloc does not collect or store any PII information. UnitedBloc does use IP addresses and transaction requests solely for service management purposes. Performance measurements such as rate limiting and routing rules require the analysis of IP addresses and response time measurements require the analysis of transaction requests. UnitedBloc does not and will never use RPC requests to front run transactions.",
+  glc:
+    "The types of Personal Data that we collect directly from you or from third parties depend on the circumstances of collection and on the nature of the service requested or transaction undertaken. It may include (but is not limited to Personal information that links back to an individual, e.g. name, gender, date of birth, and other personal identification numbers Contact information, e.g. address phone number and email address Technical information e.g IP address for API services and login Statistical data such as website visits, for example hits to the GLCscan websie. (check out our privacy statement here: https://glscan.io/Policy)",  
   ankr:
     "For service delivery purposes, we temporarily record IP addresses to set usage limits and monitor for denial of service attacks against our infrastructure. Though we do look at high-level data around the success rate of transactions made over the blockchain RPC, we do not correlate wallet transactions made over the infrastructure to the IP address making the RPC request. Thus, we do not store, exploit, or share any information regarding Personal Identifiable Information (PII), including wallet addresses. https://www.ankr.com/blog/ankrs-ip-address-policy-and-your-privacy/",
   alchemy:
@@ -1123,6 +1125,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+
       {
         url: "wss://polygon-bor-rpc.publicnode.com",
         tracking: "none",
@@ -5006,6 +5009,15 @@ export const extraRpcs = {
     rpcs: [
       "https://subnets.avax.network/plyr/testnet/rpc"
     ]	  
+  },
+  10222: {
+    rpcs: [      
+      {
+        url:"https://glc-dataseed.glscan.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.glc,
+      },
+    ]
   },
   12324: {
     rpcs: [
