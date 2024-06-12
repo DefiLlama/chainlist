@@ -3419,7 +3419,7 @@ export const extraRpcs = {
 	      "https://testnet-evm-rpc-evmos.hoodrun.io",
         "https://alphab.ai/rpc/eth/evmos_testnet",
         "https://t-evmos-jsonrpc.kalia.network",
-	      "https://jsonrpc-evmos-testnet.mzonder.com"
+	      "https://jsonrpc-evmos-testnet.mzonder.com",
     ],
   },
   9001: {
