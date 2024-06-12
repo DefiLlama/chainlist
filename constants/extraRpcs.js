@@ -886,12 +886,12 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-	{
+      {
         url: "https://bsc.nownodes.io",
         tracking: "yes",
         trackingDetails: privacyStatement.NOWNodes,
       },
-	    
+      "https://bnb.rpc.subquery.network/public"
     ],
   },
   97: {
@@ -1757,6 +1757,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      "https://optimism.rpc.subquery.network/public"
     ],
   },
   11155420: {
