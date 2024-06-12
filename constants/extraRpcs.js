@@ -4998,6 +4998,11 @@ export const extraRpcs = {
       "https://rpc.devnet.citrea.xyz",
     ]
   },
+  328527624: {
+    rpcs: [
+      "https://testnet-rpc.nal.network",
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
