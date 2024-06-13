@@ -64,10 +64,12 @@ function Chain({ chain }) {
     return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
 
+  const chainName = chain.name === "OP Mainnet" ? "Optimism Maninnet" : chain.name;
+
   return (
     <>
       <Head>
-        <title>{`${chain.name} RPC and Chain settings | ChainList`}</title>
+        <title>{`Add ${chainName} to MetaMask | ChainList`}</title>
         <meta
           name="description"
           content={`Find the best ${chain.name} RPC to connect to your wallets and Web3 middleware providers.`}
@@ -86,7 +88,7 @@ function Chain({ chain }) {
               alt={chain.name + " logo"}
             />
             <h1 className="text-xl font-semibold overflow-hidden text-ellipsis relative top-[1px] dark:text-[#B3B3B3]">
-              {chain.name}
+              {`Add ${chain.name} to MetaMask`}
             </h1>
           </div>
 
