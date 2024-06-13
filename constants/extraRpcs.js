@@ -176,7 +176,7 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We do not collect any financial data. Other data may be collected by third parties; we are not responsible for the actions of third parties. We do not collect any Personal data other than the Personal data set out in this Policy: https://nownodes.io/assets/data/privacy-pol.pdf. ",
   Envelop:
     "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
-  4everland:
+  "4everland":
     "At 4EVERLAND, we are committed to protecting the privacy and security of your personal information. While we do collect certain data from our users, such as names, email addresses, account credentials, and usage information, we take robust measures to safeguard this data. We retain your personal information only for as long as your account remains active, plus an additional 6 months after closure: https://www.4everland.org/privacy-policy."
   };
 
@@ -468,7 +468,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
     ],
@@ -900,7 +900,7 @@ export const extraRpcs = {
       },
       {
         url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },    
     ],
@@ -945,7 +945,7 @@ export const extraRpcs = {
       },
       {
         url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
     ],
@@ -1573,7 +1573,7 @@ export const extraRpcs = {
       },
       {
         url: "https://opbnb-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
     ],
@@ -1775,7 +1775,7 @@ export const extraRpcs = {
       },
       {
         url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
     ],
@@ -4034,7 +4034,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
       "https://ethereum-sepolia.rpc.subquery.network/public"
@@ -4577,7 +4577,7 @@ export const extraRpcs = {
       }
       {
         url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
     ]
@@ -4610,7 +4610,7 @@ export const extraRpcs = {
       }
       {
         url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "none",
+        tracking: "limited",
         trackingDetails: privacyStatement.4everland,
       },
     ]
