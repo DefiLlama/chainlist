@@ -441,7 +441,7 @@ export const extraRpcs = {
       {
         url: "https://eth-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
     ],
   },
@@ -873,7 +873,7 @@ export const extraRpcs = {
       {
         url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },    
       "https://bnb.rpc.subquery.network/public"
     ],
@@ -919,7 +919,7 @@ export const extraRpcs = {
       {
         url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
     ],
   },
@@ -1568,7 +1568,7 @@ export const extraRpcs = {
       {
         url: "https://opbnb-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
     ],
   },
@@ -1775,7 +1775,7 @@ export const extraRpcs = {
       {
         url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
       "https://optimism.rpc.subquery.network/public"
     ],
@@ -4029,7 +4029,7 @@ export const extraRpcs = {
       {
         url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
       "https://ethereum-sepolia.rpc.subquery.network/public"
     ]
@@ -4568,11 +4568,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/taiko",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
-      }
+      },
       {
         url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
     ]
   },
@@ -4601,11 +4601,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/taiko_hekla",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      }
+      },
       {
         url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
-        trackingDetails: privacyStatement.4everland,
+        trackingDetails: privacyStatement["4everland"],
       },
     ]
   },
