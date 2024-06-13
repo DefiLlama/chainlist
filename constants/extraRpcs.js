@@ -177,7 +177,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   NOWNodes:
     "We do not collect any financial data. Other data may be collected by third parties; we are not responsible for the actions of third parties. We do not collect any Personal data other than the Personal data set out in this Policy: https://nownodes.io/assets/data/privacy-pol.pdf. ",
   Envelop:
-    "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy"	  
+    "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
+  "4everland":
+    "At 4EVERLAND, we are committed to protecting the privacy and security of your personal information. While we do collect certain data from our users, such as names, email addresses, account credentials, and usage information, we take robust measures to safeguard this data. We retain your personal information only for as long as your account remains active, plus an additional 6 months after closure: https://www.4everland.org/privacy-policy."
   };
 
 export const extraRpcs = {
@@ -435,7 +437,12 @@ export const extraRpcs = {
         url: "https://rpc.public.curie.radiumblock.co/http/ethereum",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
-      },	    
+      },
+      {
+        url: "https://eth-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
+      },
     ],
   },
   2: {
@@ -863,6 +870,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.NOWNodes,
       },
+      {
+        url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
+      },    
       "https://bnb.rpc.subquery.network/public"
     ],
   },
@@ -903,6 +915,11 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/bsc-testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
+      },
+      {
+        url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
       },
     ],
   },
@@ -1548,6 +1565,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://opbnb-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
+      },
     ],
   },
   1666700000: {
@@ -1749,6 +1771,11 @@ export const extraRpcs = {
         url: "https://api.tatum.io/v3/blockchain/node/optimism-mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
       },
       "https://optimism.rpc.subquery.network/public"
     ],
@@ -3999,6 +4026,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
       },
+      {
+        url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
+      },
       "https://ethereum-sepolia.rpc.subquery.network/public"
     ]
   },
@@ -4537,6 +4569,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       }
+      {
+        url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
+      },
     ]
   },
   167008: {
@@ -4565,6 +4602,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       }
+      {
+        url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement.4everland,
+      },
     ]
   },
   2323: {
