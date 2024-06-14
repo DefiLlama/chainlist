@@ -5060,6 +5060,11 @@ export const extraRpcs = {
       "https://testnet-rpc.nal.network",
     ]
   },
+  18071918: {
+    rpcs: [
+      "https://mande-mainnet.public.blastapi.io"
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
