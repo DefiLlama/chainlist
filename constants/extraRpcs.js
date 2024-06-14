@@ -443,6 +443,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "wss://eth-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
     ],
   },
   2: {
@@ -874,7 +879,12 @@ export const extraRpcs = {
         url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
-      },    
+      },
+      {
+        url: "wss://bsc-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      }, 
       "https://bnb.rpc.subquery.network/public"
     ],
   },
@@ -918,6 +928,11 @@ export const extraRpcs = {
       },
       {
         url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
+      {
+        url: "wss://bsc-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
@@ -1173,6 +1188,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       "https://polygon.rpc.subquery.network/public"
+      {
+        url: "https://polygon-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
+      {
+        url: "wss://polygon-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
     ],
   },
   25: {
@@ -1570,6 +1595,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "wss://opbnb-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
     ],
   },
   1666700000: {
@@ -1774,6 +1804,11 @@ export const extraRpcs = {
       },
       {
         url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
+      {
+        url: "wss://opt-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
@@ -4031,6 +4066,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "wss://eth-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
       "https://ethereum-sepolia.rpc.subquery.network/public"
     ]
   },
@@ -4574,6 +4614,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "wss://taiko-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
     ]
   },
   167008: {
@@ -4604,6 +4649,11 @@ export const extraRpcs = {
       },
       {
         url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        tracking: "limited",
+        trackingDetails: privacyStatement["4everland"],
+      },
+      {
+        url: "wss://taiko-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
