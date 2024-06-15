@@ -1187,7 +1187,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      "https://polygon.rpc.subquery.network/public"
+      "https://polygon.rpc.subquery.network/public",
       {
         url: "https://polygon-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
