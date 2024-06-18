@@ -36,6 +36,15 @@ function generateSiteMap(chains) {
      `;
        })
        .join("")}
+       ${Object.values(chainIds)
+         .map((name) => {
+           return `
+       <url>
+           <loc>${`https://chainlist.org/add-network/${name}`}</loc>
+       </url>
+     `;
+         })
+         .join("")}
      ${Object.values(chainIds)
        .map((name) => {
          return `
