@@ -2613,6 +2613,10 @@ export const extraRpcs = {
       "https://earpc.xinfin.network/",
       "https://erpc.xinfin.network/",
       "wss://ews.xinfin.network/ws",
+      "https://publicnexus.xdcchain.xyz/mainnet-rpc/",
+      "https://publicnexus.xdcchain.xyz/mainnet-0xrpc/",
+      "wss://publicnexus.xdcchain.xyz/mainnet-wss/",
+      "wss://publicnexus.xdcchain.xyz/mainnet-0xwss/",
       {
         url: "https://rpc.ankr.com/xdc",
         tracking:"limited",
@@ -2632,6 +2636,10 @@ export const extraRpcs = {
       "https://earpc.apothem.network/",
       "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
+      "https://publicnexus.xdcchain.xyz/apothem-rpc/",
+      "https://publicnexus.xdcchain.xyz/apothem-0xrpc/",
+      "wss://publicnexus.xdcchain.xyz/apothem-wss/",
+      "wss://publicnexus.xdcchain.xyz/apothem-0xwss/",
     ],
   },
   58: {
