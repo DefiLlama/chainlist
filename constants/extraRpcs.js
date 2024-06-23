@@ -1834,6 +1834,29 @@ export const extraRpcs = {
       },
    ],
 },
+2330: {
+    rpcs: [
+      {
+        url: "http://138.197.152.181:8145",
+        tracking: "none",
+        trackingDetails: privacyStatement.gitshock,
+      },
+      {
+        url: "https://rpc0.altcoinchain.org/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.gitshock,
+      }
+    ]
+  },	
+ 1773: {
+    rpcs: [
+      {
+        url: "http://138.197.152.181:8245",
+        tracking: "none",
+        trackingDetails: privacyStatement.gitshock,
+      }
+    ]
+  },
   1881: {
     rpcs: [
       {
