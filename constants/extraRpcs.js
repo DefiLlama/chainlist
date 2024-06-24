@@ -5099,6 +5099,11 @@ export const extraRpcs = {
       "https://testnet-rpc.nal.network",
     ]
   },
+  80084: {
+    rpcs: [
+      "https://bartio.rpc.berachain.com",
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
