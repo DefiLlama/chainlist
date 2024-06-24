@@ -2675,21 +2675,6 @@ export const extraRpcs = {
       "https://rpc.etcinscribe.com",
       "https://etc.etcdesktop.com",
       {
-        url: "https://besu-de.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://geth-de.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://besu-oc.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
         url: "https://besu-at.etc-network.info",
         tracking: "none",
         trackingDetails: privacyStatement.etcnetworkinfo,
