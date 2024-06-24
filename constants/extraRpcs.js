@@ -657,7 +657,7 @@ export const extraRpcs = {
   },
   4058: {
     rpcs:[
-      "https://rpc1.ocean.bahamutchain.com"
+      "https://rpc1.ocean.bahamutchain.com",
       {
         url: "https://Bahamut-ocean-6h42j7.zeeve.net",
         tracking: "none",
