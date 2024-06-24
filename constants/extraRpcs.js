@@ -448,6 +448,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "https://rpc.public.curie.radiumblock.co/ws/ethereum",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
     ],
   },
   2: {
@@ -2076,6 +2081,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://moonriver.public.curie.radiumblock.co/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
     ],
   },
   361: {
@@ -2177,6 +2187,11 @@ export const extraRpcs = {
       },
       {
         url: "https://moonbeam.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
+      {
+        url: "https://moonbeam.public.curie.radiumblock.co/ws",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
@@ -2348,6 +2363,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://shiden.public.curie.radiumblock.co/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
     ],
   },
   592: {
@@ -2396,6 +2416,11 @@ export const extraRpcs = {
       },
       {
         url: "https://astar.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
+      {
+        url: "https://astar.public.curie.radiumblock.co/ws",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
