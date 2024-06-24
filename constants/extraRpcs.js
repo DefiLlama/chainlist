@@ -4662,12 +4662,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        url: "https://taiko-hekla.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "wss://taiko-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        url: "wss://taiko-hekla.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
