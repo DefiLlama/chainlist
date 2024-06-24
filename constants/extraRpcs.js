@@ -655,6 +655,16 @@ export const extraRpcs = {
       },
     ],
   },
+  4058: {
+    rpcs:[
+      "https://rpc1.ocean.bahamutchain.com"
+      {
+        url: "https://Bahamut-ocean-6h42j7.zeeve.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.zeeve,
+      },
+    ],
+  },
   "4444": {
     rpcs: ["https://janus.htmlcoin.dev/janus/"],
   },
