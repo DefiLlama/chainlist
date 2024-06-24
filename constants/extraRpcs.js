@@ -4967,17 +4967,17 @@ export const extraRpcs = {
   },
   128123: {
     rpcs: [
-      "https://node.ghostnet.etherlink.com",
-      {
-        url: "https://etherlink-ghostnet-6lcp5r.zeeve.net/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.zeeve,
-      },
+      "https://node.ghostnet.etherlink.com"
     ]
   },
   42793: {
     rpcs: [
-      "https://node.mainnet.etherlink.com"
+      "https://node.mainnet.etherlink.com",
+      {
+        url: "https://etherlink-mainnet-pub-l5p9tu.zeeve.net/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.zeeve,
+      },
     ]
   },
   881: {
