@@ -1849,6 +1849,17 @@ export const extraRpcs = {
       },
    ],
   },
+  2330: {
+    rpcs: [
+      "http://138.197.152.181:8145",
+      "https://rpc0.altcoinchain.org/rpc"
+    ]
+  },	
+ 1773: {
+    rpcs: [
+     "http://138.197.152.181:8245"
+    ]
+  },
   1881: {
     rpcs: [
       "https://rpc.cartenz.works"
