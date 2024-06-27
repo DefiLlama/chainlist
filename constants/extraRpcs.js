@@ -5139,6 +5139,11 @@ export const extraRpcs = {
       "https://bartio.rpc.berachain.com",
     ]
   },
+  42793: {
+    rpcs: [
+      "https://node.mainnet.etherlink.com",
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
