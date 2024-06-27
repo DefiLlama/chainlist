@@ -7,7 +7,7 @@ export const data = {
       "https://api-gateway.skymavis.com/rpc/archive"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-    "faucets": [],
+    "faucets": ["https://faucet.roninchain.com"],
     "nativeCurrency": {
       "name": "Ronin",
       "symbol": "RON",
