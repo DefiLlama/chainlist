@@ -50,8 +50,8 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
     "We do not collect request data or request origin. We only temporarily record the request method names and IP addresses for 7 days to ensure our service functionality such as load balancing and DDoS protection. All the data is automatically deleted after 7 days and we do not store any user information for longer periods of time. https://blockpi.io/privacy-policy",
   payload:
     "Sent transactions are private: https://payload.de/docs. By default, no data is collected when using the RPC endpoint. If provided by the user, the public address for authentication is captured when using the RPC endpoint in order to prioritize requests under high load. This information is optional and solely provided at the user's discretion. https://payload.de/privacy/",
-  gitshock:
-    "We do not collect any personal data from our users. Our platform is built on blockchain technology, which ensures that all transactions are recorded on a public ledger that is accessible to all users. However, this information is anonymous and cannot be linked to any specific individual. https://docs.gitshock.com/users-guide/privacy-policy",
+  /*gitshock:
+    "We do not collect any personal data from our users. Our platform is built on blockchain technology, which ensures that all transactions are recorded on a public ledger that is accessible to all users. However, this information is anonymous and cannot be linked to any specific individual. https://docs.gitshock.com/users-guide/privacy-policy",*/ // website is down
   gashawk:
     "Sign-in with Ethereum on https://www.gashawk.io required prior to use. We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error), read the terms of service https://www.gashawk.io/#/terms and the privacy policy https://www.gashawk.io/#/privacy.",
   LiveplexOracleEVM:
@@ -448,6 +448,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "https://rpc.public.curie.radiumblock.co/ws/ethereum",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
     ],
   },
   2: {
@@ -647,6 +652,16 @@ export const extraRpcs = {
         url: "https://fantom.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+    ],
+  },
+  4058: {
+    rpcs:[
+      "https://rpc1.ocean.bahamutchain.com",
+      {
+        url: "https://Bahamut-ocean-6h42j7.zeeve.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.zeeve,
       },
     ],
   },
@@ -1833,8 +1848,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
    ],
-},
-2330: {
+  },
+  2330: {
     rpcs: [
       "http://138.197.152.181:8145",
       "https://rpc0.altcoinchain.org/rpc"
@@ -1845,18 +1860,14 @@ export const extraRpcs = {
      "http://138.197.152.181:8245"
     ]
   },
-1881: {
+  1881: {
     rpcs: [
-      {
-        url: "https://rpc.cartenz.works",
-        tracking: "none",
-        trackingDetails: privacyStatement.gitshock,
-      }
+      "https://rpc.cartenz.works"
     ]
   },
-4200: {
-      rpcs: [
-	  {
+  4200: {
+    rpcs: [
+	    {
         url: "https://merlin.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi
@@ -2091,6 +2102,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://moonriver.public.curie.radiumblock.co/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
     ],
   },
   361: {
@@ -2192,6 +2208,11 @@ export const extraRpcs = {
       },
       {
         url: "https://moonbeam.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
+      {
+        url: "https://moonbeam.public.curie.radiumblock.co/ws",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
@@ -2363,6 +2384,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://shiden.public.curie.radiumblock.co/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
     ],
   },
   592: {
@@ -2411,6 +2437,11 @@ export const extraRpcs = {
       },
       {
         url: "https://astar.public.curie.radiumblock.co/http",
+        tracking: "none",
+        trackingDetails: privacyStatement.radiumblock,
+      },
+      {
+        url: "https://astar.public.curie.radiumblock.co/ws",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
@@ -2624,6 +2655,10 @@ export const extraRpcs = {
       "https://earpc.xinfin.network/",
       "https://erpc.xinfin.network/",
       "wss://ews.xinfin.network/ws",
+      "https://publicnexus.xdcchain.xyz/mainnet-rpc/",
+      "https://publicnexus.xdcchain.xyz/mainnet-0xrpc/",
+      "wss://publicnexus.xdcchain.xyz/mainnet-wss/",
+      "wss://publicnexus.xdcchain.xyz/mainnet-0xwss/",
       {
         url: "https://rpc.ankr.com/xdc",
         tracking:"limited",
@@ -2643,6 +2678,10 @@ export const extraRpcs = {
       "https://earpc.apothem.network/",
       "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
+      "https://publicnexus.xdcchain.xyz/apothem-rpc/",
+      "https://publicnexus.xdcchain.xyz/apothem-0xrpc/",
+      "wss://publicnexus.xdcchain.xyz/apothem-wss/",
+      "wss://publicnexus.xdcchain.xyz/apothem-0xwss/",
     ],
   },
   58: {
@@ -2685,21 +2724,6 @@ export const extraRpcs = {
       "https://etc.mytokenpocket.vip",
       "https://rpc.etcinscribe.com",
       "https://etc.etcdesktop.com",
-      {
-        url: "https://besu-de.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://geth-de.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://besu-oc.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
       {
         url: "https://besu-at.etc-network.info",
         tracking: "none",
@@ -4659,12 +4683,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://taiko-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        url: "https://taiko-hekla.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "wss://taiko-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
+        url: "wss://taiko-hekla.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
@@ -4964,17 +4988,17 @@ export const extraRpcs = {
   },
   128123: {
     rpcs: [
-      "https://node.ghostnet.etherlink.com",
-      {
-        url: "https://etherlink-ghostnet-6lcp5r.zeeve.net/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.zeeve,
-      },
+      "https://node.ghostnet.etherlink.com"
     ]
   },
   42793: {
     rpcs: [
-      "https://node.mainnet.etherlink.com"
+      "https://node.mainnet.etherlink.com",
+      {
+        url: "https://etherlink-mainnet-pub-l5p9tu.zeeve.net/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.zeeve,
+      },
     ]
   },
   881: {
@@ -5119,6 +5143,11 @@ export const extraRpcs = {
   328527624: {
     rpcs: [
       "https://testnet-rpc.nal.network",
+    ]
+  },
+  80084: {
+    rpcs: [
+      "https://bartio.rpc.berachain.com",
     ]
   },
 };
