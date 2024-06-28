@@ -3571,6 +3571,11 @@ export const extraRpcs = {
     websiteDead: true,
     rpcWorking: false,
   },
+  18026: {
+    rpcs: [],
+    websiteDead: true,
+    rpcWorking: false,
+  },
   19845: {
     rpcs: [],
     websiteDead: true,
