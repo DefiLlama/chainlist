@@ -5042,6 +5042,11 @@ export const extraRpcs = {
   80084: {
     rpcs: ["https://bartio.rpc.berachain.com"],
   },
+  18071918: {
+    rpcs: [
+      "https://mande-mainnet.public.blastapi.io"
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
