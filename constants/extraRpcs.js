@@ -5005,6 +5005,9 @@ export const extraRpcs = {
   2014: {
     rpcs: ["https://rpc.nowscan.io"],
   },
+  16180: {
+    rpcs: ["https://subnets.avax.network/plyr/mainnet/rpc"],
+  },
   62831: {
     rpcs: ["https://subnets.avax.network/plyr/testnet/rpc"],
   },
