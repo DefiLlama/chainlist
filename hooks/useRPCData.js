@@ -1,52 +1,8 @@
 import { useCallback } from "react";
 import { useQueries } from "@tanstack/react-query";
-import axios from "axios";
+import { rpcBody, fetchChain } from "../utils/fetch";
 
 const refetchInterval = 60_000;
-
-export const rpcBody = JSON.stringify({
-  jsonrpc: "2.0",
-  method: "eth_getBlockByNumber",
-  params: ["latest", false],
-  id: 1,
-});
-
-const fetchChain = async (baseURL) => {
-  if (baseURL.includes("API_KEY")) return null;
-  try {
-    let API = axios.create({
-      baseURL,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    API.interceptors.request.use(function (request) {
-      request.requestStart = Date.now();
-      return request;
-    });
-
-    API.interceptors.response.use(
-      function (response) {
-        response.latency = Date.now() - response.config.requestStart;
-        return response;
-      },
-      function (error) {
-        if (error.response) {
-          error.response.latency = null;
-        }
-
-        return Promise.reject(error);
-      },
-    );
-
-    let { data, latency } = await API.post("", rpcBody);
-
-    return { ...data, latency };
-  } catch (error) {
-    return null;
-  }
-};
 
 const formatData = (url, data) => {
   let height = data?.result?.number ?? null;
