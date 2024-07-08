@@ -2200,6 +2200,7 @@ export const extraRpcs = {
   },
   30: {
         rpcs: [
+            "https://mycrypto.rsk.co",
             "https://public-node.rsk.co",
             "https://rootstock.drpc.org",
             "wss://rootstock.drpc.org",
