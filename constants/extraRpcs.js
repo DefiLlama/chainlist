@@ -2458,7 +2458,11 @@ export const extraRpcs = {
     rpcs: ["https://rpc.callisto.network", "https://clo-geth.0xinfra.com/"],
   },
   108: {
-    rpcs: ["https://mainnet-rpc.thundercore.com", "https://thundercore.drpc.org", wss://thundercore.drpc.org],
+    rpcs: [
+      "https://mainnet-rpc.thundercore.com", 
+      "https://thundercore.drpc.org", 
+      "wss://thundercore.drpc.org"
+    ],
   },
   20: {
     rpcs: [
