@@ -2955,6 +2955,7 @@ export const extraRpcs = {
   },
   1001: {
     rpcs: [
+      "https://public-en-baobab.klaytn.net",
       "https://public-en.kairos.node.kaia.io",
       {
         url: "https://klaytn-baobab.g.allthatnode.com/full/evm",
@@ -4822,6 +4823,7 @@ export const extraRpcs = {
       "https://jib-rpc.inan.in.th",
       "https://rpc-l1.jbc.aomwara.in.th",
       "https://rpc-l1.jbc.xpool.pw",
+      "https://rpc2-l1.jbc.xpool.pw",
     ],
   },
   1089: {
