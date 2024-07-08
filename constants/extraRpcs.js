@@ -1430,7 +1430,7 @@ export const extraRpcs = {
     rpcs: [
       "https://public-en-cypress.klaytn.net",
       {
-        url: "https://klaytn-mainnet-rpc.allthatnode.com:8551",
+        url: "https://klaytn-mainnet.g.allthatnode.com/full/evm",
         tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
       },
@@ -2958,7 +2958,7 @@ export const extraRpcs = {
       "https://public-en-baobab.klaytn.net",
       "https://public-en.kairos.node.kaia.io",
       {
-        url: "https://klaytn-baobab-rpc.allthatnode.com:8551",
+        url: "https://klaytn-baobab.g.allthatnode.com/full/evm",
         tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
       },
