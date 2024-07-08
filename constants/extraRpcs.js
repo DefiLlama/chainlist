@@ -2956,6 +2956,7 @@ export const extraRpcs = {
   1001: {
     rpcs: [
       "https://public-en-baobab.klaytn.net",
+      "https://public-en.kairos.node.kaia.io",
       {
         url: "https://klaytn-baobab-rpc.allthatnode.com:8551",
         tracking: "yes",
