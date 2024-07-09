@@ -2199,13 +2199,13 @@ export const extraRpcs = {
     ],
   },
   30: {
-        rpcs: [
-            "https://mycrypto.rsk.co",
-            "https://public-node.rsk.co",
-            "https://rootstock.drpc.org",
-            "wss://rootstock.drpc.org",
-        ]
-      },
+    rpcs: [
+      "https://mycrypto.rsk.co",
+      "https://public-node.rsk.co",
+      "https://rootstock.drpc.org",
+      "wss://rootstock.drpc.org",
+    ],
+  },
 
   4689: {
     rpcs: [
@@ -2458,11 +2458,7 @@ export const extraRpcs = {
     rpcs: ["https://rpc.callisto.network", "https://clo-geth.0xinfra.com/"],
   },
   108: {
-    rpcs: [
-      "https://mainnet-rpc.thundercore.com", 
-      "https://thundercore.drpc.org", 
-      "wss://thundercore.drpc.org"
-    ],
+    rpcs: ["https://mainnet-rpc.thundercore.com", "https://thundercore.drpc.org", "wss://thundercore.drpc.org"],
   },
   20: {
     rpcs: [
@@ -3312,6 +3308,26 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://7001.rpc.thirdweb.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.thirdweb,
+      },
+      {
+        url: "https://zetachain-athens.g.allthatnode.com/archive/evm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.allthatnode,
+      },
+      {
+        url: "https://zeta-chain-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://zetachain-testnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
   7000: {
@@ -3322,24 +3338,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://zetachain-mainnet-archive.allthatnode.com:8545",
+        url: "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
         tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
-      },
-      {
-        url: "wss://zetachain-mainnet-archive.allthatnode.com:8546",
-        tracking: "yes",
-        trackingDetails: privacyStatement.allthatnode,
-      },
-      {
-        url: "https://zeta.rpcgrid.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.rpcgrid,
-      },
-      {
-        url: "wss://zeta.rpcgrid.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.rpcgrid,
       },
       {
         url: "https://zeta-chain.drpc.org",
@@ -3347,9 +3348,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://zeta-chain.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
+        url: "https://zetachain-mainnet.public.blastapi.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://7000.rpc.thirdweb.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.thirdweb,
       },
     ],
   },
@@ -5005,9 +5011,6 @@ export const extraRpcs = {
   },
   7171: {
     rpcs: ["https://connect.bit-rock.io", "https://brockrpc.io"],
-  },
-  7000: {
-    rpcs: ["https://zetachain-evm.blockpi.network/v1/rpc/public"],
   },
   28882: {
     rpcs: [
