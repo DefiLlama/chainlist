@@ -2199,13 +2199,13 @@ export const extraRpcs = {
     ],
   },
   30: {
-        rpcs: [
-            "https://mycrypto.rsk.co",
-            "https://public-node.rsk.co",
-            "https://rootstock.drpc.org",
-            "wss://rootstock.drpc.org",
-        ]
-      },
+    rpcs: [
+      "https://mycrypto.rsk.co",
+      "https://public-node.rsk.co",
+      "https://rootstock.drpc.org",
+      "wss://rootstock.drpc.org",
+    ],
+  },
 
   4689: {
     rpcs: [
@@ -2458,11 +2458,7 @@ export const extraRpcs = {
     rpcs: ["https://rpc.callisto.network", "https://clo-geth.0xinfra.com/"],
   },
   108: {
-    rpcs: [
-      "https://mainnet-rpc.thundercore.com", 
-      "https://thundercore.drpc.org", 
-      "wss://thundercore.drpc.org"
-    ],
+    rpcs: ["https://mainnet-rpc.thundercore.com", "https://thundercore.drpc.org", "wss://thundercore.drpc.org"],
   },
   20: {
     rpcs: [
@@ -3318,7 +3314,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.thirdweb,
       },
       {
-        url: "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
+        url: "https://zetachain-athens.g.allthatnode.com/archive/evm",
         tracking: "yes",
         trackingDetails: privacyStatement.allthatnode,
       },
