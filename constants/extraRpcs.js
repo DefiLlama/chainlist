@@ -5113,6 +5113,9 @@ export const extraRpcs = {
   80084: {
     rpcs: ["https://bartio.rpc.berachain.com"],
   },
+  328527: {
+    rpcs: ["https://rpc.nal.network","wss://wss.nal.network"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
