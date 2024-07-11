@@ -161,6 +161,7 @@ const privacyStatement = {
     "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
   "4everland":
     "At 4EVERLAND, we are committed to protecting the privacy and security of your personal information. While we do collect certain data from our users, such as names, email addresses, account credentials, and usage information, we take robust measures to safeguard this data. We retain your personal information only for as long as your account remains active, plus an additional 6 months after closure: https://www.4everland.org/privacy-policy.",
+  conduit: "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -5114,7 +5115,13 @@ export const extraRpcs = {
     rpcs: ["https://bartio.rpc.berachain.com"],
   },
   17071: {
-    rpcs: ["https://rpc.onchainpoints.xyz"],
+    rpcs: [
+      {
+        url: "https://rpc.onchainpoints.xyz",
+        tracking: "yes",
+        trackingDetails: privacyStatement.conduit
+      }
+    ],
   },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
