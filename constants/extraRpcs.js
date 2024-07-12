@@ -239,6 +239,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
+      
       {
         url: "https://cloudflare-eth.com/",
         tracking: "yes",
@@ -300,6 +301,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.gashawk,
       },
+      //“https://virtual.mainnet.rpc.tenderly.co/28fd9014-c991-4637-bf7d-4377aee42282“,
       //"http://127.0.0.1:8545",
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
       //"https://api.mycryptoapi.com/eth",
