@@ -5131,6 +5131,9 @@ export const extraRpcs = {
       "wss://wss.nal.network",
     ],
   },
+  988207: {
+    rpcs: ["https://mainnet-rpc.ecroxscan.com"],
+  },
   17071: {
     rpcs: [
       {
