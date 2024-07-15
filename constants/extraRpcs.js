@@ -5134,6 +5134,12 @@ export const extraRpcs = {
       }
     ],
   },
+  187: {
+    rpcs: ["https://rpc-d11k.dojima.network"],
+  },
+  184: {
+    rpcs: ["https://rpc-test-d11k.dojima.network"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
