@@ -4668,7 +4668,7 @@ export const extraRpcs = {
       },
       {
         url: "https://taiko-mainnet.rpc.porters.xyz/taiko-public",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.porters,
       },
     ],
