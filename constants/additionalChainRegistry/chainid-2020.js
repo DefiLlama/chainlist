@@ -6,7 +6,7 @@ export const data = {
       "https://api.roninchain.com/rpc",
       "https://api-gateway.skymavis.com/rpc?apikey=9aqYLBbxSC6LROynQJBvKkEIsioqwHmr",
       "https://ronin.lgns.net/rpc",
-      "https://ronin.drpc.org",
+      "https://ronin.drpc.org"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": ["https://faucet.roninchain.com"],
