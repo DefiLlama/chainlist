@@ -113,8 +113,6 @@ const privacyStatement = {
     "Private transactions. No tracking of any kind (no IPs, location, wallet etc.): https://lokibuilder.xyz/privacy",
   cyphercore:
     "We collect information about you in various ways when you use our website. This includes information you provide directly to us, information we collect automatically, and information we obtain from third-party sources.https://cyphercore.io/privacy-policy/",
-  projectpi:
-    "When you use Project Pi as an RPC provider we will not store your IP address or any data for more than 24 hours. IP addresses are not connected or correlated to wallet addresses",
   hybrid:
     "HybridChain may automatically collect information regarding your computer hardware and software. This data can encompass details like your IP address, browser type, domain names, access times, and referring website addresses. This collection is in line with HybridChain's privacy policy and aims to optimize service provision and enhance user experience.https://docs.hybridchain.ai/privacy-policy",
   rivet:
@@ -2907,11 +2905,6 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.pulsechain.com",
       {
-        url: "https://pulse-s.projectpi.xyz",
-        tracking: "none",
-        trackingDetails: privacyStatement.projectpi,
-      },
-      {
         url: "https://pulsechain-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -4321,11 +4314,6 @@ export const extraRpcs = {
   },
   943: {
     rpcs: [
-      {
-        url: "https://pulsetest-s.projectpi.xyz",
-        tracking: "none",
-        trackingDetails: privacyStatement.projectpi,
-      },
       {
         url: "https://pulsechain-testnet-rpc.publicnode.com",
         tracking: "none",
