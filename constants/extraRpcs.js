@@ -5137,6 +5137,11 @@ export const extraRpcs = {
   184: {
     rpcs: ["https://rpc-test-d11k.dojima.network"],
   },
+  18071918: {
+    rpcs: [
+      "https://mande-mainnet.public.blastapi.io"
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
