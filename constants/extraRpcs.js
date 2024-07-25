@@ -392,7 +392,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
+        url: "https://ethereum-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -720,7 +720,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/polygon-amoy",
+        url: "https://polygon-amoy.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -852,7 +852,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/bsc-mainnet",
+        url: "https://bsc-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -999,7 +999,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/avax-mainnet",
+        url: "https://avax-x-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1068,7 +1068,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/fantom-mainnet",
+        url: "https://fantom-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1170,7 +1170,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/polygon-mainnet",
+        url: "https://polygon-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1402,7 +1402,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/arb-nova-mainnet",
+        url: "https://arb-nova-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1466,7 +1466,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/klaytn-cypress",
+        url: "https://klaytn-cypress.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1625,7 +1625,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/aurora-mainnet ",
+        url: "https://aurora-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1693,7 +1693,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/celo-mainnet",
+        url: "https://celo-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1803,7 +1803,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/optimism-mainnet",
+        url: "https://optimism-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -1994,7 +1994,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/gno-mainnet",
+        url: "https://gno-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -2312,7 +2312,7 @@ export const extraRpcs = {
       "https://global.uat.cash",
       "https://rpc.uatvo.com",
       {
-        url: "https://api.tatum.io/v3/blockchain/node/bch-mainnet ",
+        url: "https://bch-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -2321,8 +2321,6 @@ export const extraRpcs = {
   19: {
     rpcs: [
       "https://songbird-api.flare.network/ext/C/rpc",
-      "https://01-gravelines-006-01.rpc.tatum.io/ext/bc/C/rpc",
-      "https://02-tokyo-006-03.rpc.tatum.io/ext/bc/C/rpc",
       "https://rpc.ftso.au/songbird",
       "https://songbird.solidifi.app/ext/C/rpc",
     ],
@@ -2558,7 +2556,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/palm-mainnet",
+        url: "https://palm-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -2670,7 +2668,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/xdc-mainnet",
+        url: "https://xdc-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -3276,7 +3274,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/doge-mainnet",
+        url: "https://doge-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -3829,7 +3827,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stackup,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/base-mainnet",
+        url: "https://base-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
@@ -3859,7 +3857,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://api.tatum.io/v3/blockchain/node/haqq-mainnet",
+        url: "https://haqq-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
