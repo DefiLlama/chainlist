@@ -5140,6 +5140,11 @@ export const extraRpcs = {
       "https://mande-mainnet.public.blastapi.io"
     ]
   },
+  48900: {
+    rpcs: [
+      "https://zircuit-mainnet.drpc.org"
+    ]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
