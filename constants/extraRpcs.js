@@ -5142,7 +5142,11 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
-      "https://zircuit-mainnet.drpc.org"
+      {
+        url: "https://zircuit-mainnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc
+      }
     ]
   },
 };
