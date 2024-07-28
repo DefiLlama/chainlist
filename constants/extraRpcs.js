@@ -1217,17 +1217,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://cronos-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://cronos.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://cronos-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -2988,17 +2978,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://manta-pacific-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://manta-pacific.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://manta-pacific-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -3197,17 +3177,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://core-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://core.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://core-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -3588,17 +3558,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://kava-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://kava.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://kava-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -3771,17 +3731,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://evmos-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://evmos.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://evmos-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -4079,17 +4029,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://haqq-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://haqq.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://haqq-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -4633,17 +4573,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://filecoin-calibration.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://filecoin.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://filecoin-calibration.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -5221,17 +5151,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://mode-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://mode.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://mode-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -5495,17 +5415,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://fraxtal-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://fraxtal.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://fraxtal-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -5519,17 +5429,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://immutable-zkevm-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://immutable-zkevm.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://immutable-zkevm-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -5543,17 +5443,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://lisk-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://lisk.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://lisk-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -5595,17 +5485,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://zora-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://zora.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zora-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
