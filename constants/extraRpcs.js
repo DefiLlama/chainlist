@@ -5387,6 +5387,18 @@ export const extraRpcs = {
   },
   56288: {
     rpcs: [
+      "https://bnb.boba.network",
+      "https://replica.bnb.boba.network",
+      {
+        url:"https://boba-bnb.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url:"https://gateway.tenderly.co/public/boba-bnb",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
       {
         url: "https://boba-bnb.drpc.org",
         tracking: "none",
@@ -5401,6 +5413,7 @@ export const extraRpcs = {
   },
   252: {
     rpcs: [
+      "https://rpc.frax.com",
       {
         url: "https://fraxtal.drpc.org",
         tracking: "none",
@@ -5415,6 +5428,9 @@ export const extraRpcs = {
   },
   13371: {
     rpcs: [
+      "https://rpc.immutable.com",	
+      "https://immutable-zkevm.drpc.org",
+      "wss://immutable-zkevm.drpc.org",
       {
         url: "https://immutable-zkevm.drpc.org",
         tracking: "none",
@@ -5429,6 +5445,7 @@ export const extraRpcs = {
   },
   1135: {
     rpcs: [
+      "https://rpc.api.lisk.com",
       {
         url: "https://lisk.drpc.org",
         tracking: "none",
@@ -5443,6 +5460,7 @@ export const extraRpcs = {
   },
   656476: {
     rpcs: [
+      "https://rpc.open-campus-codex.gelato.digital",
       {
         url: "https://open-campus-codex-sepolia.drpc.org",
         tracking: "none",
@@ -5457,6 +5475,13 @@ export const extraRpcs = {
   },
   111188: {
     rpcs: [
+      "https://real.drpc.org",
+      "wss://real.drpc.org",
+      {
+        url:"https://tangible-real.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
       {
         url: "https://real.drpc.org",
         tracking: "none",
@@ -5471,6 +5496,7 @@ export const extraRpcs = {
   },
   7777777: {
     rpcs: [
+      "https://rpc.zora.energy",
       {
         url: "https://zora.drpc.org",
         tracking: "none",
