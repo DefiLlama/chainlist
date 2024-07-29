@@ -1211,6 +1211,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://cronos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://cronos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
       "https://rpc.vvs.finance",
       "https://mmf-rpc.xstaking.sg",
       "https://rpc.nebkas.ro",
@@ -1502,6 +1512,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://harmony-0.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://harmony-0.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   168587773: {
@@ -1569,7 +1589,16 @@ export const extraRpcs = {
   204: {
     rpcs: [
       "https://opbnb-mainnet-rpc.bnbchain.org",
-      "https://opbnb.drpc.org",
+      {
+        url: "https://opbnb.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://opbnb.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
       {
         url: "https://opbnb-rpc.publicnode.com",
         tracking: "none",
@@ -1924,6 +1953,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://metis.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://metis.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   1246: {
@@ -2090,6 +2129,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://moonriver.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moonriver.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   361: {
@@ -2118,6 +2167,16 @@ export const extraRpcs = {
         url: "https://1rpc.io/telos/evm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://telos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://telos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -2197,14 +2256,32 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://moonbeam.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moonbeam.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   30: {
     rpcs: [
       "https://mycrypto.rsk.co",
       "https://public-node.rsk.co",
-      "https://rootstock.drpc.org",
-      "wss://rootstock.drpc.org",
+      {
+        url: "https://rootstock.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://rootstock.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
 
@@ -2283,6 +2360,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://boba-eth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://boba-eth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   321: {
@@ -2347,6 +2434,16 @@ export const extraRpcs = {
         url: "https://fuse.liquify.com",
         tracking: "yes",
         trackingDetails: privacyStatement.liquify,
+      },
+      {
+        url: "https://fuse.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://fuse.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -2457,7 +2554,19 @@ export const extraRpcs = {
     rpcs: ["https://rpc.callisto.network", "https://clo-geth.0xinfra.com/"],
   },
   108: {
-    rpcs: ["https://mainnet-rpc.thundercore.com", "https://thundercore.drpc.org", "wss://thundercore.drpc.org"],
+    rpcs: [
+      "https://mainnet-rpc.thundercore.com",
+      {
+        url: "https://thundercore.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://thundercore.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   20: {
     rpcs: [
@@ -2855,6 +2964,16 @@ export const extraRpcs = {
       "https://www.tencentcloud-rpc.com/v2/manta/manta-rpc",
       "https://r1.pacific.manta.systems/http",
       "https://manta.nirvanalabs.xyz/mantapublic",
+      {
+        url: "https://manta-pacific.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://manta-pacific.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   186: {
@@ -3044,6 +3163,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://core.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://core.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   1130: {
@@ -3173,6 +3302,16 @@ export const extraRpcs = {
         url: "wss://moonbeam-alpha.api.onfinality.io/public-ws",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://moonbase-alpha.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moonbase-alpha.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -3334,6 +3473,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "wss://zeta-chain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
         url: "https://zetachain-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -3399,6 +3543,16 @@ export const extraRpcs = {
         url: "https://evm.kava-rpc.com",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://kava.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://kava.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -3523,8 +3677,6 @@ export const extraRpcs = {
       "https://alphab.ai/rpc/eth/evmos_testnet",
       "https://t-evmos-jsonrpc.kalia.network",
       "https://jsonrpc-evmos-testnet.mzonder.com",
-      "https://evmos.drpc.org",
-      "wss://evmos.drpc.org",
     ],
   },
   9001: {
@@ -3564,6 +3716,16 @@ export const extraRpcs = {
         url: "https://evmos-jsonrpc.cyphercore.io",
         tracking: "yes",
         trackingDetails: privacyStatement.cyphercore,
+      },
+      {
+        url: "https://evmos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://evmos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
       "https://eth.bd.evmos.org:8545/",
       "https://evmos-json-rpc.stakely.io",
@@ -3852,6 +4014,16 @@ export const extraRpcs = {
         url: "https://haqq-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://haqq.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://haqq.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -4143,7 +4315,20 @@ export const extraRpcs = {
     rpcs: ["https://devnet.neonevm.org"],
   },
   245022934: {
-    rpcs: ["https://neon-proxy-mainnet.solana.p2p.org", "https://neon-mainnet.everstake.one"],
+    rpcs: [
+      "https://neon-proxy-mainnet.solana.p2p.org",
+      "https://neon-mainnet.everstake.one",
+      {
+        url: "https://neon-evm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://neon-evm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   311752642: {
     rpcs: ["https://mainnet-rpc.oneledger.network"],
@@ -4187,7 +4372,19 @@ export const extraRpcs = {
     ],
   },
   1666600001: {
-    rpcs: ["https://s1.api.harmony.one"],
+    rpcs: [
+      "https://s1.api.harmony.one",
+      {
+        url: "https://harmony-1.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://harmony-1.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   1666600002: {
     rpcs: ["https://s2.api.harmony.one"],
@@ -4362,6 +4559,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.SFTProtocol,
       },
       "https://api.chain.love/rpc/v1",
+      {
+        url: "https://filecoin.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://filecoin.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   314159: {
@@ -4689,6 +4896,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "https://taiko-hekla.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://taiko-hekla.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   2323: {
@@ -4920,6 +5137,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://mode.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://mode.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   217: {
@@ -5097,7 +5324,19 @@ export const extraRpcs = {
     rpcs: ["https://testnet-rpc.nal.network"],
   },
   80084: {
-    rpcs: ["https://bartio.rpc.berachain.com"],
+    rpcs: [
+      "https://bartio.rpc.berachain.com",
+      {
+        url: "https://bartio.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://bartio.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   328527: {
     rpcs: [
@@ -5137,10 +5376,113 @@ export const extraRpcs = {
       {
         url: "https://zircuit-mainnet.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.drpc
-      }
-    ]
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zircuit-mainnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
+  56288: {
+    rpcs: [
+      {
+        url: "https://boba-bnb.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://boba-bnb.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  252: {
+    rpcs: [
+      {
+        url: "https://fraxtal.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://fraxtal.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  13371: {
+    rpcs: [
+      {
+        url: "https://immutable-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://immutable-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1135: {
+    rpcs: [
+      {
+        url: "https://lisk.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lisk.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  656476: {
+    rpcs: [
+      {
+        url: "https://open-campus-codex-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://open-campus-codex-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  111188: {
+    rpcs: [
+      {
+        url: "https://real.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://real.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  7777777: {
+    rpcs: [
+      {
+        url: "https://zora.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zora.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
