@@ -5475,10 +5475,13 @@ export const extraRpcs = {
   },
   111188: {
     rpcs: [
-      "https://real.drpc.org",
-      "wss://real.drpc.org",
       {
         url:"https://tangible-real.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url:"wss://tangible-real.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
