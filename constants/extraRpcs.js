@@ -5388,6 +5388,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://zircuit1-mainnet.p2pify.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack,
+      },
+      {
+        url: "https://zircuit1-mainnet.liquify.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.liquify,
+      },
     ],
   },
   56288: {
