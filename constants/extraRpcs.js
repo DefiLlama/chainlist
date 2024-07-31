@@ -5379,6 +5379,11 @@ export const extraRpcs = {
   48900: {
     rpcs: [
       {
+        url: "https://zircuit1-mainnet.p2pify.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack,
+      },
+      {
         url: "https://zircuit-mainnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -5387,11 +5392,6 @@ export const extraRpcs = {
         url: "wss://zircuit-mainnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://zircuit1-mainnet.p2pify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
       },
       {
         url: "https://zircuit1-mainnet.liquify.com",
