@@ -433,6 +433,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "wss://ws-rpc.graffiti.farm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.graffiti,
+      },
     ],
   },
   2: {
