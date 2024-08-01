@@ -5526,6 +5526,20 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
+  },
+  4162: {
+    rpcs: [
+      {
+        url: "https://rpc.sx-rollup.gelato.digital",
+      },
+    ],
+  },
+  79479957: {
+    rpcs: [
+      {
+        url: "https://rpc.sx-rollup-testnet.t.raas.gelato.cloud",
+      },
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
