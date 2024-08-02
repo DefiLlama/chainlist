@@ -5529,16 +5529,12 @@ export const extraRpcs = {
   },
   4162: {
     rpcs: [
-      {
-        url: "https://rpc.sx-rollup.gelato.digital",
-      },
+      "https://rpc.sx-rollup.gelato.digital"
     ],
   },
   79479957: {
     rpcs: [
-      {
-        url: "https://rpc.sx-rollup-testnet.t.raas.gelato.cloud",
-      },
+      "https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"
     ],
   }
 };
