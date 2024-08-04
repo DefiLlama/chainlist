@@ -5160,7 +5160,7 @@ export const extraRpcs = {
   1100: {
     rpcs: [
       "https://jsonrpc.dymension.nodestake.org",
-      "https://evm-archive.dymd.bitszn.com",
+     
       "https://dymension.liquify.com/json-rpc",
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
