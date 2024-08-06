@@ -92,7 +92,7 @@
   "9001": "evmos",
   "9790": "carbon",
   "10000": "smartbch",
-  "13371": "immutable_zkevm",
+  "13371": "immutable zkevm",
   "15551": "loop",
   "16507": "genesys",
   "17777": "eos_evm",
