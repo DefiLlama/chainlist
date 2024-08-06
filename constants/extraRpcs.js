@@ -5536,6 +5536,11 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"
     ],
+  },
+  388: {
+    rpcs: [
+      "https://mainnet.zkevm.cronos.org"
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
