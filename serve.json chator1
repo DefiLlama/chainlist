@@ -1,0 +1,21 @@
+{0xFD689e5f2d8d9Aec0aD328225Ae62FdBDdb30328
+  "cleanUrls": true,
+  "redirects": [0xFD689e5f2d8d9Aec0aD328225Ae62FdBDdb30328
+    {
+      "source": "/top-rpcs/:path*",remix
+      "destination": "/chain/:path*",
+      "type": 3080xFD689e5f2d8d9Aec0aD328225Ae62FdBDdb30328
+    },
+    {
+      "source": "/best-rpcs/:path*",0x9d36b1658d4ef42e3703253f797c413fa6b3a79a
+      "destination": "/chain/:path*",0xFD689e5f2d8d9Aec0aD328225Ae62FdBDdb30328
+      "type": 308
+    },@chator1
+    {0xFD689e5f2d8d9Aec0aD328225Ae62FdBDdb30328
+      "source": "/_next/image**",
+      "destination": "https://icons.llamao.fi/icons/misc/sus-chainlist",
+      "type": 302
+    }
+  ],
+  "directoryListing": false
+}
