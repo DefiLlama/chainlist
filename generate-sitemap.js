@@ -1,6 +1,7 @@
 const chainIds = require("./constants/chainIds.json");
 const fetch = require("node-fetch");
 const fs = require("fs");
+const { generateChainData } = require("./utils/fetch");
 
 function generateSiteMap(chains) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -68,8 +69,7 @@ function generateSiteMap(chains) {
 }
 
 async function writeSiteMap() {
-  const res = await fetch("https://chainid.network/chains.json");
-  const chains = await res.json();
+  const chains = await generateChainData();
 
   // We generate the XML sitemap with the chains data
   const sitemap = generateSiteMap(chains);

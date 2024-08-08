@@ -8,18 +8,26 @@ import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
 import chainIds from "../../constants/chainIds.json";
+import { overwrittenChains } from "../../constants/additionalChainRegistry/list";
 
 export async function getStaticProps({ params }) {
   const chains = await fetcher("https://chainid.network/chains.json");
 
   const chainTvls = await fetcher("https://api.llama.fi/chains");
 
-  const chain = chains.find(
-    (c) =>
-      c.chainId?.toString() === params.chain ||
-      c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
-      c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
-  );
+  const chain =
+    overwrittenChains.find(
+      (c) =>
+        c.chainId?.toString() === params.chain ||
+        c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
+        c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
+    ) ??
+    chains.find(
+      (c) =>
+        c.chainId?.toString() === params.chain ||
+        c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
+        c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
+    );
 
   if (!chain) {
     return {
