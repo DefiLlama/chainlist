@@ -4480,9 +4480,6 @@ export const extraRpcs = {
       },
     ],
   },
-  88888: {
-    rpcs: ["https://rpc.chiliz.com"],
-  },
   88882: {
     rpcs: ["https://spicy-rpc.chiliz.com"],
   },
