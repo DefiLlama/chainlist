@@ -5538,6 +5538,15 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.zkevm.cronos.org"
     ],
+  },
+  20230825: {
+    rpcs: [
+      {
+        url: "https://testnet.vcity.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
