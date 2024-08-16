@@ -159,9 +159,11 @@ const privacyStatement = {
     "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
   "4everland":
     "At 4EVERLAND, we are committed to protecting the privacy and security of your personal information. While we do collect certain data from our users, such as names, email addresses, account credentials, and usage information, we take robust measures to safeguard this data. We retain your personal information only for as long as your account remains active, plus an additional 6 months after closure: https://www.4everland.org/privacy-policy.",
-  porters: "The Company does not store, process, or share personal data except your IPv4 or IPv6 address, the signatures the User performs using an EVM-compatible key pair (hereinafter referred to as “Key”). The Company also stores the User’s public Key. The user may request the deletion of such data and the closure of the User’s account via email to info@porters.xyz. The User understands that through your use of the Services and the Platform, They consent to the collection and use of this information in accordance with the Terms. https://porters.xyz/tos",
-  conduit: "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
-  nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html"
+  porters:
+    "The Company does not store, process, or share personal data except your IPv4 or IPv6 address, the signatures the User performs using an EVM-compatible key pair (hereinafter referred to as “Key”). The Company also stores the User’s public Key. The user may request the deletion of such data and the closure of the User’s account via email to info@porters.xyz. The User understands that through your use of the Services and the Platform, They consent to the collection and use of this information in accordance with the Terms. https://porters.xyz/tos",
+  conduit:
+    "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
+  nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html",
 };
 
 export const extraRpcs = {
@@ -5157,7 +5159,7 @@ export const extraRpcs = {
   1100: {
     rpcs: [
       "https://jsonrpc.dymension.nodestake.org",
-     
+
       "https://dymension.liquify.com/json-rpc",
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
@@ -5345,7 +5347,7 @@ export const extraRpcs = {
       {
         url: "https://rpc.nal.network",
         tracking: "yes",
-        trackingDetails: privacyStatement.nal
+        trackingDetails: privacyStatement.nal,
       },
       "wss://wss.nal.network",
     ],
@@ -5358,8 +5360,8 @@ export const extraRpcs = {
       {
         url: "https://rpc.onchainpoints.xyz",
         tracking: "yes",
-        trackingDetails: privacyStatement.conduit
-      }
+        trackingDetails: privacyStatement.conduit,
+      },
     ],
   },
   187: {
@@ -5369,9 +5371,7 @@ export const extraRpcs = {
     rpcs: ["https://rpc-test-d11k.dojima.network"],
   },
   18071918: {
-    rpcs: [
-      "https://mande-mainnet.public.blastapi.io"
-    ]
+    rpcs: ["https://mande-mainnet.public.blastapi.io"],
   },
   48900: {
     rpcs: [
@@ -5402,12 +5402,12 @@ export const extraRpcs = {
       "https://bnb.boba.network",
       "https://replica.bnb.boba.network",
       {
-        url:"https://boba-bnb.gateway.tenderly.co",
+        url: "https://boba-bnb.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url:"https://gateway.tenderly.co/public/boba-bnb",
+        url: "https://gateway.tenderly.co/public/boba-bnb",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -5440,7 +5440,7 @@ export const extraRpcs = {
   },
   13371: {
     rpcs: [
-      "https://rpc.immutable.com",	
+      "https://rpc.immutable.com",
       "https://immutable-zkevm.drpc.org",
       "wss://immutable-zkevm.drpc.org",
       {
@@ -5488,12 +5488,12 @@ export const extraRpcs = {
   111188: {
     rpcs: [
       {
-        url:"https://tangible-real.gateway.tenderly.co",
+        url: "https://tangible-real.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url:"wss://tangible-real.gateway.tenderly.co",
+        url: "wss://tangible-real.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -5525,19 +5525,13 @@ export const extraRpcs = {
     ],
   },
   4162: {
-    rpcs: [
-      "https://rpc.sx-rollup.gelato.digital"
-    ],
+    rpcs: ["https://rpc.sx-rollup.gelato.digital"],
   },
   79479957: {
-    rpcs: [
-      "https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"
-    ],
+    rpcs: ["https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"],
   },
   388: {
-    rpcs: [
-      "https://mainnet.zkevm.cronos.org"
-    ],
+    rpcs: ["https://mainnet.zkevm.cronos.org"],
   },
   20230825: {
     rpcs: [
@@ -5545,9 +5539,9 @@ export const extraRpcs = {
         url: "https://testnet.vcity.app",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
     ],
-  }
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
