@@ -5535,6 +5535,7 @@ export const extraRpcs = {
   },
   20230825: {
     rpcs: [
+      "https://testnet.vcity.app",
       {
         url: "https://testnet.vcity.app",
         tracking: "none",
