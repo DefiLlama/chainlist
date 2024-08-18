@@ -3620,6 +3620,9 @@ export const extraRpcs = {
   5729: {
     rpcs: ["https://rpc-testnet.hika.network"],
   },
+  5858: {
+    rpcs: ["https://rpc.cthscan.com"],
+  },
   5869: {
     rpcs: ["https://proxy.wegochain.io"],
   },
