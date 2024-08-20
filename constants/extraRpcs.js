@@ -5533,6 +5533,9 @@ export const extraRpcs = {
   388: {
     rpcs: ["https://mainnet.zkevm.cronos.org"],
   },
+  3883: {
+    rpcs: ["https://mainnet.utclife.com/"],
+  },
   20230825: {
     rpcs: [
       "https://testnet.vcity.app",
