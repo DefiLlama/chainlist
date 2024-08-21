@@ -5543,6 +5543,9 @@ export const extraRpcs = {
       },
     ],
   },
+  996: {
+    rpcs: ["https://hk.p.bifrost-rpc.liebi.com"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
