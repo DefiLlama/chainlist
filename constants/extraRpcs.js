@@ -5549,6 +5549,9 @@ export const extraRpcs = {
   996: {
     rpcs: ["https://hk.p.bifrost-rpc.liebi.com"],
   },
+  698: {
+    rpcs: ["https://rpc.matchscan.io"]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
