@@ -2635,8 +2635,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      "https://rpc.pollum.services",
-      "wss://rpc.pollum.services/wss",
     ],
   },
   8: {
@@ -4949,8 +4947,6 @@ export const extraRpcs = {
       "https://rpc.rollux.com",
       "https://rollux.rpc.syscoin.org",
       "wss://rollux.rpc.syscoin.org/wss",
-      "https://rollux.pollum.services",
-      "wss://rollux.pollum.services/wss",
     ],
   },
   5700: {
@@ -4962,30 +4958,6 @@ export const extraRpcs = {
       },
       {
         url: "wss://syscoin-tanenbaum-evm.publicnode.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "wss://rpc-testnet.pollum.services/wss",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://rpc-testnet.pollum.services",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-    ],
-  },
-  57000: {
-    rpcs: [
-      {
-        url: "https://rollux.rpc-testnet.pollum.services",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "wss://rollux.rpc-testnet.pollum.services/wss",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
