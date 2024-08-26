@@ -5521,6 +5521,9 @@ export const extraRpcs = {
   996: {
     rpcs: ["https://hk.p.bifrost-rpc.liebi.com"],
   },
+  133: {
+    rpcs: ["https://hashkeychain-testnet.alt.technology"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
