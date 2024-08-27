@@ -164,7 +164,9 @@ const privacyStatement = {
   conduit:
     "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
   nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html",
-};
+  oragonnetwork:
+    "At Oragon Network, we are committed to protecting your privacy and ensuring the security of your data. This Privacy Policy outlines how we handle and safeguard your personal information when you use our blockchain RPC services, decentralized exchange (DEX), wallet services, and smart contract creation tools."
+  };
 
 export const extraRpcs = {
   1: {
@@ -5523,6 +5525,15 @@ export const extraRpcs = {
   },
   133: {
     rpcs: ["https://hashkeychain-testnet.alt.technology"],
+  },
+  88808: {
+    rpcs: [ 
+      {
+        url: "https://rpc.oragon.network/node/ethereum_api",
+        tracking: "none",
+        trackingDetails: privacyStatement.oragonnetwork,
+      }
+    ]
   },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
