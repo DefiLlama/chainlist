@@ -5524,6 +5524,8 @@ export const extraRpcs = {
   133: {
     rpcs: ["https://hashkeychain-testnet.alt.technology"],
   },
+  1946: {
+    rpcs: ["https://rpc.minato.soneium.org/"],
   41455: {
     rpcs: [
       "https://rpc.alephzero.raas.gelato.cloud",
