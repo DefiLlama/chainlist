@@ -5524,6 +5524,15 @@ export const extraRpcs = {
   133: {
     rpcs: ["https://hashkeychain-testnet.alt.technology"],
   },
+  41455: {
+    rpcs: [
+      {
+      url: "https://alephzero.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
