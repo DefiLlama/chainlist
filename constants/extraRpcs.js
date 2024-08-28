@@ -5524,6 +5524,9 @@ export const extraRpcs = {
   133: {
     rpcs: ["https://hashkeychain-testnet.alt.technology"],
   },
+  1946: {
+  rpcs: ["https://rpc.minato.soneium.org/"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
