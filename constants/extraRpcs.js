@@ -5526,6 +5526,7 @@ export const extraRpcs = {
   },
   1946: {
     rpcs: ["https://rpc.minato.soneium.org/"],
+  },
   41455: {
     rpcs: [
       "https://rpc.alephzero.raas.gelato.cloud",
@@ -5537,7 +5538,7 @@ export const extraRpcs = {
       },
     ],
   },
-};
+}
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
