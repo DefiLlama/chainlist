@@ -5525,7 +5525,17 @@ export const extraRpcs = {
     rpcs: ["https://hashkeychain-testnet.alt.technology"],
   },
   1946: {
-  rpcs: ["https://rpc.minato.soneium.org/"],
+    rpcs: ["https://rpc.minato.soneium.org/"],
+  41455: {
+    rpcs: [
+      "https://rpc.alephzero.raas.gelato.cloud",
+      "wss://ws.alephzero.raas.gelato.cloud",
+      {
+      url: "https://alephzero.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
