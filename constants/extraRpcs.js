@@ -5526,6 +5526,8 @@ export const extraRpcs = {
   },
   41455: {
     rpcs: [
+      "https://rpc.alephzero.raas.gelato.cloud",
+      "wss://ws.alephzero.raas.gelato.cloud",
       {
       url: "https://alephzero.drpc.org",
       tracking: "none",
