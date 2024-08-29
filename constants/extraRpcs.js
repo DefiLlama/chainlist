@@ -5536,6 +5536,25 @@ export const extraRpcs = {
       tracking: "none",
       trackingDetails: privacyStatement.drpc,
       },
+      {
+      url: "wss://alephzero.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1111: {
+    rpcs: [
+      {
+      url: "https://wemix.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://wemix.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
 }
