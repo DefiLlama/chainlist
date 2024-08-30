@@ -5562,6 +5562,7 @@ export const extraRpcs = {
   },
   1750: {
     rpcs: [
+      "https://rpc.metall2.com",
       {
       url: "https://metall2.drpc.org",
       tracking: "none",
