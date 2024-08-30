@@ -5567,6 +5567,8 @@ export const extraRpcs = {
   },
   1111: {
     rpcs: [
+      "https://api.wemix.com",
+      "wss://ws.wemix.com",
       {
       url: "https://wemix.drpc.org",
       tracking: "none",
