@@ -1460,7 +1460,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://klaytn.blockpi.network/v1/rpc/public",
+        url: "https://kaia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
@@ -3116,7 +3116,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
+        url: "https://kaia-kairos.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
@@ -5109,6 +5109,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://kroma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://kroma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   34443: {
@@ -5234,7 +5244,19 @@ export const extraRpcs = {
     rpcs: ["https://rpc.ankr.com/neura_testnet"],
   },
   60808: {
-    rpcs: ["https://rpc.gobob.xyz", "wss://rpc.gobob.xyz"],
+    rpcs: [
+      "https://rpc.gobob.xyz", "wss://rpc.gobob.xyz",
+      {
+        url: "https://bob.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://bob.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   42: {
     rpcs: [
@@ -5536,6 +5558,9 @@ export const extraRpcs = {
     ]
   1946: {
     rpcs: ["https://rpc.minato.soneium.org/"],
+  1946: {
+    rpcs: ["https://rpc.minato.soneium.org/"],
+  },
   41455: {
     rpcs: [
       "https://rpc.alephzero.raas.gelato.cloud",
@@ -5548,6 +5573,45 @@ export const extraRpcs = {
     ],
   },
 };
+      {
+      url: "wss://alephzero.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1111: {
+    rpcs: [
+      "https://api.wemix.com",
+      "wss://ws.wemix.com",
+      {
+      url: "https://wemix.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://wemix.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1750: {
+    rpcs: [
+      "https://rpc.metall2.com",
+      {
+      url: "https://metall2.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://metall2.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+}
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
