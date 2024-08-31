@@ -5529,7 +5529,7 @@ export const extraRpcs = {
   88808: {
     rpcs: [ 
       {
-        url: "https://rpc.oragon.network/node/ethereum_api",
+        url: "https://rpc.oragon.network/index.php/node/ethereum_api",
         tracking: "none",
         trackingDetails: privacyStatement.oragonnetwork,
       }

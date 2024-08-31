@@ -3,7 +3,7 @@ export const data = {
     "chain": "Oragon",
     "icon": "oragonnetwork",
     "rpc": [
-      "https://rpc.oragon.network/node/ethereum_api",
+      "https://rpc.oragon.network/index.php/node/ethereum_api",
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],
