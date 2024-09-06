@@ -3806,7 +3806,7 @@ export const extraRpcs = {
   },
   32520: {
     rpcs: [
-      "https://rpc.icecreamswap.com",
+      "https://rpc-bitgert.icecreamswap.com",
       "https://nodes.vefinetwork.org/bitgert",
       "https://flux-rpc.brisescan.com",
       "https://flux-rpc1.brisescan.com",
