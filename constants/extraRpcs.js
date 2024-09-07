@@ -164,6 +164,8 @@ const privacyStatement = {
   conduit:
     "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
   nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html",
+  originstake:
+    "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy"
 };
 
 export const extraRpcs = {
@@ -5582,7 +5584,15 @@ export const extraRpcs = {
     ],
   },
   1513: {
-    rpcs: ["https://story-rpc-evm.validatorvn.com"],
+    rpcs: [
+      "https://testnet.storyrpc.io",
+      "https://story-rpc-evm.validatorvn.com",
+      {
+        url: "https://story-rpc01.originstake.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      }
+    ]
   },
   1750: {
     rpcs: [
