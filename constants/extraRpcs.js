@@ -3808,7 +3808,7 @@ export const extraRpcs = {
   },
   32520: {
     rpcs: [
-      "https://rpc.icecreamswap.com",
+      "https://rpc-bitgert.icecreamswap.com",
       "https://nodes.vefinetwork.org/bitgert",
       "https://flux-rpc.brisescan.com",
       "https://flux-rpc1.brisescan.com",
@@ -5585,7 +5585,8 @@ export const extraRpcs = {
   },
   1513: {
     rpcs: [
-      "https://story-rpc01.originstake.com",
+      "https://testnet.storyrpc.io",
+      "https://story-rpc-evm.validatorvn.com",
       {
         url: "https://story-rpc01.originstake.com",
         tracking: "none",
