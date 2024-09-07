@@ -5581,6 +5581,9 @@ export const extraRpcs = {
       },
     ],
   },
+  1513: {
+    rpcs: ["https://story-rpc-evm.validatorvn.com"],
+  },
   1750: {
     rpcs: [
       "https://rpc.metall2.com",
