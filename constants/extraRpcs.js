@@ -160,7 +160,7 @@ const privacyStatement = {
   "4everland":
     "At 4EVERLAND, we are committed to protecting the privacy and security of your personal information. While we do collect certain data from our users, such as names, email addresses, account credentials, and usage information, we take robust measures to safeguard this data. We retain your personal information only for as long as your account remains active, plus an additional 6 months after closure: https://www.4everland.org/privacy-policy.",
   porters:
-    "The Company does not store, process, or share personal data except your IPv4 or IPv6 address, the signatures the User performs using an EVM-compatible key pair (hereinafter referred to as “Key”). The Company also stores the User’s public Key. The user may request the deletion of such data and the closure of the User’s account via email to info@porters.xyz. The User understands that through your use of the Services and the Platform, They consent to the collection and use of this information in accordance with the Terms. https://porters.xyz/tos",
+    "The Company does not store, process, or share personal data except the User's public Key tied to the PORTERs account. The User's public key is only stored and not shared at any time. The User may request the deletion of such data and the closure of the User's account via email to info@porters.xyz. The User understands that through their use of the Services and the Platform, They consent to the collection and use of this information in accordance with the Terms. https://porters.xyz/tos",
   conduit:
     "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
   nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html",
@@ -4867,7 +4867,7 @@ export const extraRpcs = {
       },
       {
         url: "https://taiko-mainnet.rpc.porters.xyz/taiko-public",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.porters,
       },
     ],
@@ -4917,6 +4917,11 @@ export const extraRpcs = {
         url: "wss://taiko-hekla.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://hekla-testnet.rpc.porters.xyz/taiko-public",
+        tracking: "none",
+        trackingDetails: privacyStatement.porters,
       },
     ],
   },
