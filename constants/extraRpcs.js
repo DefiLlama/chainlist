@@ -5597,12 +5597,12 @@ export const extraRpcs = {
     rpcs: [
       "https://testnet.storyrpc.io",
       "https://story-rpc-evm.validatorvn.com",
-      "https://story-rpc-evm.mandragora.io",
       {
         url: "https://story-rpc01.originstake.com",
         tracking: "none",
         trackingDetails: privacyStatement.originstake,
-      }
+      },
+      "https://story-rpc-evm.mandragora.io"
     ]
   },
   1750: {
