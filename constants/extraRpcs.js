@@ -5601,7 +5601,8 @@ export const extraRpcs = {
         url: "https://story-rpc01.originstake.com",
         tracking: "none",
         trackingDetails: privacyStatement.originstake,
-      }
+      },
+      "https://story-rpc-evm.mandragora.io"
     ]
   },
   1750: {
