@@ -5596,8 +5596,7 @@ export const extraRpcs = {
   1513: {
     rpcs: [
       "https://testnet.storyrpc.io",
-      "https://story-rpc-evm.validatorvn.com"
-      "https://story-evm-testnet-rpc.tech-coha05.xyz",
+      "https://story-rpc-evm.validatorvn.com",
       {
         url: "https://story-rpc01.originstake.com",
         tracking: "none",
