@@ -5603,7 +5603,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.originstake,
       },
-      "https://story-rpc-evm.mandragora.io"
+      "https://story-rpc-evm.mandragora.io",
+      "https://story-testnet-jsonrpc.blockhub.id"
     ]
   },
   1750: {
