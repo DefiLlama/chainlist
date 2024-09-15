@@ -14,6 +14,13 @@
     "add-to-imToken": "添加到imToken",
     "add-to-wallet": "添加到Wallet",
     "add-to-xdefi": "添加到XDEFI",
-    "toggle-theme": "Toggle Theme"
+    "toggle-theme": "切换主题",
+    "add-to-brave": "添加到Brave",
+    "add-to-coinbase": "添加到Coinbase Wallet",
+    "add-to-taho": "添加到Taho",
+    "add-to-trust": "添加到Trust Wallet",
+    "contact-us": "联系我们",
+    "no-privacy-info": "没有隐私信息",
+    "your-ad-here": "您的广告在这里"
   }
 }
