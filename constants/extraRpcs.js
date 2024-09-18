@@ -5612,7 +5612,8 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.itrocket,
       },
       "https://story-rpc-evm.mandragora.io",
-      "https://story-testnet-jsonrpc.blockhub.id"
+      "https://story-testnet-jsonrpc.blockhub.id",
+      "https://rpc-storyevm-testnet.aldebaranode.xyz"
     ]
   },
   1750: {
