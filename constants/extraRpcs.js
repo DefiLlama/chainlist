@@ -5600,6 +5600,7 @@ export const extraRpcs = {
       "https://story-evm-testnet-rpc.tech-coha05.xyz",
       "https://story-rpc.oneiricts.com:8445",
       "https://evm-rpc-story.josephtran.xyz",
+      "https://lightnode-rpc-story.grandvalleys.com",
       {
         url: "https://story-rpc01.originstake.com",
         tracking: "none",
