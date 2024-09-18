@@ -5629,6 +5629,9 @@ export const extraRpcs = {
       },
     ],
   },
+  8428: {
+    rpcs: ["https://api.thatchain.io", "https://api.thatchain.io/mainnet"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
