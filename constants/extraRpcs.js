@@ -4829,7 +4829,6 @@ export const extraRpcs = {
   167000: {
     rpcs: [
       "https://rpc.taiko.xyz",
-      "wss://ws.taiko.xyz",
       {
         url: "https://taiko.blockpi.network/v1/rpc/public",
         tracking: "limited",
