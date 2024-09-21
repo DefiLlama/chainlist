@@ -5697,6 +5697,7 @@ export const extraRpcs = {
   },
   16600: {
     rpcs: [
+      "https://rpc-testnet.0g.ai",
       "https://0g-json-rpc-public.originstake.com",
       {
       url: "https://0g-json-rpc-public.originstake.com",
