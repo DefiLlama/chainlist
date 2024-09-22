@@ -5698,6 +5698,7 @@ export const extraRpcs = {
   16600: {
     rpcs: [
       "https://rpc-testnet.0g.ai",
+      "https://lightnode-json-rpc-0g.grandvalleys.com",
       "https://0g-json-rpc-public.originstake.com",
       {
       url: "https://0g-json-rpc-public.originstake.com",
