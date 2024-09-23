@@ -294,11 +294,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
       {
-        url: "https://eth.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://core.gashawk.io/rpc",
         tracking: "yes",
         trackingDetails: privacyStatement.gashawk,
