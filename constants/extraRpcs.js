@@ -5724,6 +5724,12 @@ export const extraRpcs = {
   5115: {
     rpcs: ["https://rpc.testnet.citrea.xyz"],
   },
+ 14800: {
+    rpcs: [
+      "https://rpc.moksha.vana.org",
+      "https://moksha-vana-rpc.tech-coha05.xyz",
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
