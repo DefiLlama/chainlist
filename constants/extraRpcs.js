@@ -1144,6 +1144,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
+        url: "https://go.getblock.io/02667b699f05444ab2c64f9bff28f027",
+        tracking: "yes",
+        trackingDetails: privacyStatement.getblock,
+      },
+      {
         url: "https://polygon.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
