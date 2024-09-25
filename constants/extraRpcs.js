@@ -165,7 +165,9 @@ const privacyStatement = {
     "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
   nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html",
   originstake:
-    "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy"
+    "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy",
+  callstatic:
+    "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 24 hours to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 24 hours, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period. https://callstatic.com/privacy-policy/"
 };
 
 export const extraRpcs = {
@@ -436,6 +438,11 @@ export const extraRpcs = {
         url: "wss://ws-rpc.graffiti.farm",
         tracking: "limited",
         trackingDetails: privacyStatement.graffiti,
+      },
+      {
+        url: "wss://ethereum.callstaticrpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.callstatic,
       },
     ],
   },
@@ -881,6 +888,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       "https://bnb.rpc.subquery.network/public",
+      {
+        url: "wss://bsc.callstaticrpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.callstatic,
+      },
     ],
   },
   97: {
@@ -1085,6 +1097,11 @@ export const extraRpcs = {
         url: "https://fantom-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "wss://fantom.callstaticrpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.callstatic,
       },
     ],
   },
@@ -1361,6 +1378,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "wss://arbitrum.callstaticrpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.callstatic,
+      },
     ],
   },
   421613: {
@@ -1617,6 +1639,11 @@ export const extraRpcs = {
         url: "https://blast.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "wss://blast.callstaticrpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.callstatic,
       },
     ],
   },
@@ -4041,6 +4068,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       "https://base.rpc.subquery.network/public",
+      {
+        url: "wss://base.callstaticrpc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.callstatic,
+      },
     ],
   },
   11235: {
