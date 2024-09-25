@@ -167,7 +167,7 @@ const privacyStatement = {
   originstake:
     "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy",
   callstatic:
-    "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 24 hours to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 24 hours, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period. https://callstatic.com/privacy-policy/"
+    "The Company will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. https://callstatic.com/privacy-policy/"
 };
 
 export const extraRpcs = {
@@ -441,7 +441,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://ethereum.callstaticrpc.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -890,7 +890,7 @@ export const extraRpcs = {
       "https://bnb.rpc.subquery.network/public",
       {
         url: "wss://bsc.callstaticrpc.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -1100,7 +1100,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://fantom.callstaticrpc.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -1380,7 +1380,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://arbitrum.callstaticrpc.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -1642,7 +1642,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://blast.callstaticrpc.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -4070,7 +4070,7 @@ export const extraRpcs = {
       "https://base.rpc.subquery.network/public",
       {
         url: "wss://base.callstaticrpc.com",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
