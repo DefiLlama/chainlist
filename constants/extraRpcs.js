@@ -5765,7 +5765,7 @@ export const extraRpcs = {
   14800: {
     rpcs: [
       "https://rpc.moksha.vana.org",
-      "https://rpc-moksha-vana-josephtran.xyz",
+      "https://rpc-moksha-vana.josephtran.xyz",
     ],
   },
   
