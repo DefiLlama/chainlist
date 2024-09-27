@@ -1102,11 +1102,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      {
-        url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       "https://polygon-rpc.com",
       {
         url: "https://rpc-mainnet.matic.quiknode.pro",
