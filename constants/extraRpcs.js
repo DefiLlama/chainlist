@@ -764,11 +764,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["48Club"],
       },
       {
-        url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://bsc-pokt.nodies.app",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -1321,11 +1316,6 @@ export const extraRpcs = {
         url: "https://arbitrum-one.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://arb-mainnet-public.unifra.io",
@@ -4046,11 +4036,6 @@ export const extraRpcs = {
         url: "https://base.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://base.api.onfinality.io/public",
