@@ -4515,15 +4515,6 @@ export const extraRpcs = {
       }
     ]
   },
-  167008: {
-    rpcs: [
-      {
-        url: "https://katla.taiko.tools",
-        tracking: "none",
-        trackingDetails: privacyStatement.taikotools,
-      }
-    ]
-  },
   167009: {
     rpcs: [
       {
