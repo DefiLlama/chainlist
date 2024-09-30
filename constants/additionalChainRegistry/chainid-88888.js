@@ -3,6 +3,7 @@ export const data = {
     "chain": "CHZ",
     "icon": "chiliz",
     "rpc": [
+      "https://rpc.chiliz.com",
       "https://rpc.ankr.com/chiliz/",
       "https://chiliz.publicnode.com"
     ],
