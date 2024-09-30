@@ -4913,16 +4913,6 @@ export const extraRpcs = {
       },
     ],
   },
-  167008: {
-    rpcs: [
-      "https://rpc.katla.taiko.xyz",
-      {
-        url: "https://katla.taiko.tools",
-        tracking: "none",
-        trackingDetails: privacyStatement.taikotools,
-      },
-    ],
-  },
   167009: {
     rpcs: [
       "https://rpc.hekla.taiko.xyz",
