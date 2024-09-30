@@ -5732,6 +5732,15 @@ export const extraRpcs = {
       "https://moksha-vana-rpc.tech-coha05.xyz",
     ],
   },
+  55244: {
+    rpcs: [
+      {
+        url: "https://rpc.superposition.so",
+        tracking: "yes",
+        trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
   
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
