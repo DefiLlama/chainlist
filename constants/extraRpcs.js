@@ -1274,7 +1274,7 @@ export const extraRpcs = {
   },
   1075: {
     rpcs: [
-      "https://evm-toolkit-api.evm.testnet.iotaledger.net",,
+      "https://evm-toolkit-api.evm.testnet.iotaledger.net",
       {
         url: "https://iota-testnet-evm.public.blastapi.io",
         tracking: "limited",
