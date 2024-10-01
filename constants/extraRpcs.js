@@ -2351,6 +2351,7 @@ export const extraRpcs = {
         url: "https://rootstock-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
     ],
   },
 
