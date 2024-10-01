@@ -167,7 +167,8 @@ const privacyStatement = {
   originstake:
     "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy",
   callstatic:
-    "The Company will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. https://callstatic.com/privacy-policy/"
+    "The Company will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. https://callstatic.com/privacy-policy/",
+  helachain: "We collect device information and request metadata like IP address and User Agent for the purpose of load balancing and rate limiting. visit https://helalabs.com for more details"
 };
 
 export const extraRpcs = {
@@ -5745,6 +5746,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.conduit,
       },
     ],
+  },
+  8668: {
+    rpcs: ["https://mainnet-rpc.helachain.com"]
   },
   
 };
