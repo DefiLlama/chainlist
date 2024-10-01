@@ -436,7 +436,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://ethereum.callstaticrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -883,7 +883,7 @@ export const extraRpcs = {
       "https://bnb.rpc.subquery.network/public",
       {
         url: "wss://bsc.callstaticrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -1088,7 +1088,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://fantom.callstaticrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
       {
@@ -1368,7 +1368,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://arbitrum.callstaticrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -1631,7 +1631,7 @@ export const extraRpcs = {
       },
       {
         url: "wss://blast.callstaticrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
@@ -4065,7 +4065,7 @@ export const extraRpcs = {
       "https://base.rpc.subquery.network/public",
       {
         url: "wss://base.callstaticrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
     ],
