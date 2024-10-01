@@ -5746,7 +5746,9 @@ export const extraRpcs = {
       },
     ],
   },
-  
+  8668: {
+    rpcs: ["https://mainnet-rpc.helachain.com"]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
