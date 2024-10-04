@@ -5754,6 +5754,9 @@ export const extraRpcs = {
   8668: {
     rpcs: ["https://mainnet-rpc.helachain.com"]
   },
+  698: {
+    rpcs: ["https://rpc.matchscan.io"]
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
