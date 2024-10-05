@@ -167,7 +167,9 @@ const privacyStatement = {
   originstake:
     "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy",
   callstatic:
-    "While making RPC requests, we do not log, store, or track your IP address, country, location, or any personal data. We log usage data to help you monitor app performance, such as request volume and success rates. These logs are associated solely with the unique API key generated for each of your endpoints, are anonymized, and are not stored in logs. https://callstatic.com/privacy-policy/"
+    "While making RPC requests, we do not log, store, or track your IP address, country, location, or any personal data. We log usage data to help you monitor app performance, such as request volume and success rates. These logs are associated solely with the unique API key generated for each of your endpoints, are anonymized, and are not stored in logs. https://callstatic.com/privacy-policy/",
+  bctech:
+    "This privacy policy (Policy) applies when we are acting as a data controller with respect to the personal data of our users. This Policy describes how we collect, use and share personal data of consumer users across our websites, including https://www.versatizecoin.com (the Website), BC Exchange mobile application (the App) and services offered to users (collectively with the Website and the App, the Services), and from our partners and other third parties. When using any of our Services you consent to the collection, transfer, storage, disclosure, and use of your personal data as described in this Policy. For more details: https://www.versatizecoin.com/Privacy_Policy.html"
 };
 
 export const extraRpcs = {
@@ -5762,6 +5764,13 @@ export const extraRpcs = {
   698: {
     rpcs: ["https://rpc.matchscan.io"]
   },
+  6060: {
+    rpcs: [{
+      url: "https://rpc01.bchscan.io/",
+      tracking: "none",
+      trackingDetails: privacyStatement.bctech,
+    }]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
