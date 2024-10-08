@@ -1479,21 +1479,26 @@ export const extraRpcs = {
   },
   8217: {
     rpcs: [
-      "https://public-en-cypress.klaytn.net",
+      "https://public-en.node.kaia.io",
       {
-        url: "https://klaytn-mainnet.g.allthatnode.com/full/evm",
+        url: "https://alpha-hardworking-orb.kaia-mainnet.quiknode.pro/",
         tracking: "yes",
-        trackingDetails: privacyStatement.allthatnode,
-      },
-      {
-        url: "https://rpc.ankr.com/klaytn ",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
+        trackingDetails: privacyStatement.quicknode,
       },
       {
         url: "https://kaia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://kaia-mainnet.rpc.grove.city/v1/803ceedf",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://go.getblock.io/d7094dbd80ab474ba7042603fe912332",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
       },
       {
         url: "https://klaytn.api.onfinality.io/public",
@@ -1506,11 +1511,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://klaytn-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
         url: "https://klaytn.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -1519,6 +1519,11 @@ export const extraRpcs = {
         url: "https://klaytn-cypress.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc.ankr.com/klaytn ",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       },
     ],
   },
@@ -3174,22 +3179,21 @@ export const extraRpcs = {
   },
   1001: {
     rpcs: [
-      "https://public-en-baobab.klaytn.net",
       "https://public-en.kairos.node.kaia.io",
       {
-        url: "https://klaytn-baobab.g.allthatnode.com/full/evm",
+        url: "https://responsive-green-emerald.kaia-kairos.quiknode.pro/",
         tracking: "yes",
-        trackingDetails: privacyStatement.allthatnode,
-      },
-      {
-        url: "https://rpc.ankr.com/klaytn_testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
+        trackingDetails: privacyStatement.quicknode,
       },
       {
         url: "https://kaia-kairos.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://rpc.ankr.com/klaytn_testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       },
       {
         url: "https://klaytn.api.onfinality.io/public",
