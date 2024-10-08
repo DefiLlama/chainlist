@@ -167,7 +167,9 @@ const privacyStatement = {
   originstake:
     "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy",
   callstatic:
-    "While making RPC requests, we do not log, store, or track your IP address, country, location, or any personal data. We log usage data to help you monitor app performance, such as request volume and success rates. These logs are associated solely with the unique API key generated for each of your endpoints, are anonymized, and are not stored in logs. https://callstatic.com/privacy-policy/"
+    "While making RPC requests, we do not log, store, or track your IP address, country, location, or any personal data. We log usage data to help you monitor app performance, such as request volume and success rates. These logs are associated solely with the unique API key generated for each of your endpoints, are anonymized, and are not stored in logs. https://callstatic.com/privacy-policy/",
+  bctech:
+    "When you use the Services, we may automatically process information about your computer and internet connection (including your IP address, operating system and browser type), your mobile carrier, device information (including device and application IDs), search terms, cookie information, as well as information about the timing, frequency and pattern of your service use, and information about to the transactions you make on our Services.For more visit https://www.versatizecoin.com/Privacy_Policy.html"
 };
 
 export const extraRpcs = {
@@ -5762,6 +5764,13 @@ export const extraRpcs = {
   698: {
     rpcs: ["https://rpc.matchscan.io"]
   },
+  6060: {
+    rpcs: [{
+      url: "https://rpc01.bchscan.io/",
+      tracking: "yes",
+      trackingDetails: privacyStatement.bctech,
+    }]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
