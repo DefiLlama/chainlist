@@ -1100,6 +1100,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      "https://fantom-json-rpc.stakely.io",
     ],
   },
   137: {
@@ -4934,6 +4935,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      "https://taiko-json-rpc.stakely.io/"
     ],
   },
   167009: {
