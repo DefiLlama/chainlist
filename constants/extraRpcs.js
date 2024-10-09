@@ -4525,11 +4525,6 @@ export const extraRpcs = {
       "https://connect.bit-rock.io",
       "https://brockrpc.io"
     ]
-  },
-  7771: {
-    rpcs: [
-      "https://testnet.bit-rock.io"
-    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
