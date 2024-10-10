@@ -1078,7 +1078,7 @@ export const extraRpcs = {
       {
         url: "https://rpc.fantom.gateway.fm",
         tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
+        trackingDetails: privacyStatement.gateway, 
       },
       {
         url: "https://fantom.drpc.org",
@@ -1805,7 +1805,13 @@ export const extraRpcs = {
   10: {
     rpcs: [
       "https://mainnet.optimism.io/",
-      {
+      {,
+      }
+        url: "https://optimism.llamarpc.com/sk_llama_8fae97d13ddb244ef6344bc8ebecf1fe"
+        traking: "yes"
+        trackingDetails: privacyStatement.llamarpc,
+      {,
+      }
         url: "https://rpc.ankr.com/optimism",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
