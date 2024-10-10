@@ -1805,6 +1805,12 @@ export const extraRpcs = {
   10: {
     rpcs: [
       "https://mainnet.optimism.io/",
+      },
+      {    
+       url: "https://rpc.buildbear.io/esquivelfabian",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://rpc.ankr.com/optimism",
         tracking: "limited",
