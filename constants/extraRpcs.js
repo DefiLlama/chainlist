@@ -1741,6 +1741,16 @@ export const extraRpcs = {
       "https://http-mainnet.hecochain.com",
       "https://http-mainnet-node.huobichain.com",
       "https://hecoapi.terminet.io/rpc",
+      {
+        url: "https://heco.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://heco.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   256: {
@@ -3352,6 +3362,16 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/xlayer/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://xlayer.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://xlayer.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -5806,7 +5826,21 @@ export const extraRpcs = {
       tracking: "yes",
       trackingDetails: privacyStatement.bctech,
     }]
-  }
+  },
+  25327: {
+    rpcs: [
+      {
+      url: "https://everclear.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://everclear.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
