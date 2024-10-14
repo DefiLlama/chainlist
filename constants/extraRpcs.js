@@ -1521,11 +1521,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://klaytn-cypress.gateway.tatum.io",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tatum,
-      },
-      {
         url: "https://rpc.ankr.com/klaytn ",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
