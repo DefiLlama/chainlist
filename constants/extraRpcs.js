@@ -5811,6 +5811,7 @@ export const extraRpcs = {
   },
   383353: {
     rpcs: [
+      "https://rpc.cheesechain.xyz",
       "https://rpc.cheesechain.xyz/http",
       "https://cheesechain.calderachain.xyz/http",
       "wss://cheesechain.calderachain.xyz/ws",
