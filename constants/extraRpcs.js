@@ -1802,13 +1802,7 @@ export const extraRpcs = {
   10: {
     rpcs: [
       "https://mainnet.optimism.io/",
-      {,
-      }  
-      url: "https://rpc.buildbear.io/esquivelfabian/", 
-      tracking: "none", 
-      trackingDetails:: privacyStatement.buildbear
-      {,
-      }
+      {
         url: "https://rpc.ankr.com/optimism",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -1917,6 +1911,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/op/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://rpc.buildbear.io/esquivelfabian/", 
+        tracking: "yes", 
+        trackingDetails: privacyStatement.buildbear
       },
       "https://optimism.rpc.subquery.network/public",
     ],
