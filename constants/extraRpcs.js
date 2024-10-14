@@ -5808,6 +5808,13 @@ export const extraRpcs = {
       tracking: "yes",
       trackingDetails: privacyStatement.bctech,
     }]
+  },
+  383353: {
+    rpcs: [
+      "https://rpc.cheesechain.xyz/http",
+      "https://cheesechain.calderachain.xyz/http",
+      "wss://cheesechain.calderachain.xyz/ws",
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
