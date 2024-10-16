@@ -174,6 +174,8 @@ const privacyStatement = {
     "When you use the Services, we may automatically process information about your computer and internet connection (including your IP address, operating system and browser type), your mobile carrier, device information (including device and application IDs), search terms, cookie information, as well as information about the timing, frequency and pattern of your service use, and information about to the transactions you make on our Services.For more visit https://www.versatizecoin.com/Privacy_Policy.html",
   buildbear:
     "Usage Data is collected automatically when using the Service.Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.https://www.buildbear.io/privacy-policy"
+  BlockRazor:
+    "Privacy notice: BlockRazor RPC does not track any kind of user information (i.e. IP, location, etc.). Only information that is public on the blockchain are preserved, such as timestamp of a transaction. For more information please visit: https://blockrazor.gitbook.io/blockrazor/scutum-mev-protect-rpc#privacy-statement"
 };
 
 export const extraRpcs = {
@@ -338,7 +340,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://virtual.mainnet.rpc.tenderly.co/7355b215-ef17-4e3e-8f64-d494284ef18a						",
+        url: "https://virtual.mainnet.rpc.tenderly.co/7355b215-ef17-4e3e-8f64-d494284ef18a",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -445,6 +447,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
+      {
+        url: "https://eth.blockrazor.xyz",
+        tracking: "none",
+        trackingDetails: privacyStatement.BlockRazor,
+      }
     ],
   },
   2: {
@@ -886,6 +893,11 @@ export const extraRpcs = {
         url: "wss://bsc.callstaticrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.callstatic,
+      },
+      {
+        url: "https://bsc.blockrazor.xyz",
+        tracking: "none",
+        trackingDetails: privacyStatement.BlockRazor,
       },
     ],
   },
