@@ -775,7 +775,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["48Club"],
       },
       {
-        url: "https://koge-rpc-bsc.48.club",
+        url: "https://0.48.club",
+        tracking: "limited",
+        trackingDetails: privacyStatement["48Club"],
+      },
+      {
+        url: "wss://rpc-bsc.48.club/ws/",
         tracking: "limited",
         trackingDetails: privacyStatement["48Club"],
       },
