@@ -5859,6 +5859,20 @@ export const extraRpcs = {
       "https://cheesechain.calderachain.xyz/http",
       "wss://cheesechain.calderachain.xyz/ws",
     ],
+  },
+  1319: {
+    rpcs: [
+      {
+        url: "https://aiachain.bycrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.flashbots,
+      },
+      {
+        url: "https://aiachain.znodes.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.flashbots,
+      },
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
