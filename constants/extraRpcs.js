@@ -407,7 +407,7 @@ export const extraRpcs = {
       },
 
       {
-        url: "rpc.nodifi.ai/api/rpc/free",
+        url: "https://rpc.nodifi.ai/api/rpc/free",
         tracking: "none",
         trackingDetails: privacyStatement.nodifi,
       },
