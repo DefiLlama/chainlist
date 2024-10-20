@@ -1301,6 +1301,11 @@ export const extraRpcs = {
       }
     ],
   },
+  33139: {
+    rpcs: [
+      "https://rpc.apechain.com/http",
+    ]
+  },
   42161: {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
