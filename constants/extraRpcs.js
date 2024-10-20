@@ -5874,16 +5874,12 @@ export const extraRpcs = {
   },
   1319: {
     rpcs: [
-      {
-        url: "https://aiachain.bycrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.flashbots,
-      },
-      {
-        url: "https://aiachain.znodes.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.flashbots,
-      },
+      "https://aia-dataseed2.aiachain.org",
+      "https://aia-dataseed3.aiachain.org",	
+      "https://aia-dataseed1.aiachain.org",
+      "https://aia-dataseed4.aiachain.org",
+      "https://aiachain.bycrpc.com",
+      "https://aiachain.znodes.net",
     ],
   }
 };
