@@ -4580,11 +4580,6 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.zkfair.io",
       {
-        url: "https://zkfair.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://endpoints.omniatech.io/v1/zkfair/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
