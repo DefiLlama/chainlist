@@ -5755,7 +5755,8 @@ export const extraRpcs = {
       },
       "https://story-rpc-evm.mandragora.io",
       "https://story-testnet-jsonrpc.blockhub.id",
-      "https://rpc-storyevm-testnet.aldebaranode.xyz"
+      "https://rpc-storyevm-testnet.aldebaranode.xyz",
+      "https://story-testnet.nodeinfra.com"
     ]
   },
   16600: {
