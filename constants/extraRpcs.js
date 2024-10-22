@@ -5872,6 +5872,11 @@ export const extraRpcs = {
       "wss://cheesechain.calderachain.xyz/ws",
     ],
   },
+  383414847825: {
+    rpcs: [
+      "https://api.zeniq.network"
+    ]
+  },
   1319: {
     rpcs: [
       "https://aia-dataseed2.aiachain.org",
