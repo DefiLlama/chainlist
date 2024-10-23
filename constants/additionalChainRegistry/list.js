@@ -14,5 +14,5 @@ export const overwrittenChains = [
     d,
     e,
     f,
-    g
+    g,
 ]
