@@ -5887,7 +5887,7 @@ export const extraRpcs = {
       "https://aiachain.bycrpc.com",
       "https://aiachain.znodes.net",
     ],
-  },
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
