@@ -5880,7 +5880,7 @@ export const extraRpcs = {
     rpcs: ["https://mainnet-rpc.helachain.com"],
   },
   698: {
-    rpcs: ["https://rpc.matchscan.io"],
+    rpcs: ["https://rpc.matchain.io"],
   },
   251: {
     rpcs: [
