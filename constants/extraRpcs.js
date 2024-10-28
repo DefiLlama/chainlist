@@ -6002,6 +6002,12 @@ export const extraRpcs = {
       },
     ]
   }
+   1516: {
+    rpcs: [
+      "https://odyssey.storyrpc.io",
+      "https://odyssey-evm.spidernode.net",
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
