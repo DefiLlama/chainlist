@@ -452,6 +452,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.BlockRazor,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   2: {
@@ -901,6 +906,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.BlockRazor,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   97: {
@@ -1230,6 +1240,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   25: {
@@ -1269,10 +1284,21 @@ export const extraRpcs = {
       "https://rpc.vvs.finance",
       "https://mmf-rpc.xstaking.sg",
       "https://rpc.nebkas.ro",
+      {
+        url: "https://endpoints.omniatech.io/v1/cronos/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   338: {
-    rpcs: ["https://evm-t3.cronos.org/"],
+    rpcs: ["https://evm-t3.cronos.org/",
+      {
+        url: "https://endpoints.omniatech.io/v1/cronos/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ],
   },
   142857: {
     rpcs: [
@@ -1392,6 +1418,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   421613: {
@@ -1420,11 +1451,6 @@ export const extraRpcs = {
         url: "wss://arbitrum-goerli-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/arbitrum/goerli/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -1586,6 +1612,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/blast/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   81457: {
@@ -1648,6 +1679,11 @@ export const extraRpcs = {
         url: "wss://blast.callstaticrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.callstatic,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/blast/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -1987,6 +2023,11 @@ export const extraRpcs = {
       },
       "https://rpc-merlin.rockx.com",
       "https://merlin-mainnet-enterprise.unifra.io",
+      {
+        url: "https://endpoints.omniatech.io/v1/merlin/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   420: {
@@ -2025,11 +2066,6 @@ export const extraRpcs = {
         url: "https://gateway.tenderly.co/public/optimism-goerli",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/op/goerli/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -3082,6 +3118,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/manta-pacific/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   186: {
@@ -3465,7 +3506,13 @@ export const extraRpcs = {
     ],
   },
   1442: {
-    rpcs: [],
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/polygon-zkevm/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ],
   },
   1618: {
     rpcs: ["https://send.catechain.com"],
@@ -3733,7 +3780,21 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/mantle/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
+  },
+  5003: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/mantle/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
   },
   5197: {
     rpcs: ["https://mainnet.eraswap.network"],
@@ -4044,11 +4105,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      {
-        url: "https://endpoints.omniatech.io/v1/base/goerli/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
     ],
   },
   8453: {
@@ -4136,6 +4192,11 @@ export const extraRpcs = {
         url: "https://api.zan.top/base-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -4296,6 +4357,11 @@ export const extraRpcs = {
         url: "https://scroll.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://endpoints.omniatech.io/v1/scroll/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
     ],
   },
@@ -4869,6 +4935,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       "http://scroll-sepolia-rpc.01no.de:8545/",
+      {
+        url: "https://endpoints.omniatech.io/v1/scroll/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
     ],
   },
   431140: {
@@ -5885,6 +5956,7 @@ export const extraRpcs = {
   },
   2192: {
     rpcs: [
+      "https://mainnet.snaxchain.io",
       {
         url: "https://snaxchain.drpc.org",
         tracking: "none",
@@ -5899,6 +5971,7 @@ export const extraRpcs = {
   },
   1329: {
     rpcs: [
+      "https://evm-rpc.sei-apis.com",
       {
         url: "https://sei.drpc.org",
         tracking: "none",
@@ -5911,6 +5984,24 @@ export const extraRpcs = {
       },
     ],
   },
+  1301: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/unichain/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  },
+  3441006: {
+    rpcs: [
+      {
+        url: "https://endpoints.omniatech.io/v1/manta-pacific/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
