@@ -5954,6 +5954,36 @@ export const extraRpcs = {
       "https://aiachain.znodes.net",
     ],
   },
+  2192: {
+    rpcs: [
+      "https://mainnet.snaxchain.io",
+      {
+        url: "https://snaxchain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://snaxchain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1329: {
+    rpcs: [
+      "https://evm-rpc.sei-apis.com",
+      {
+        url: "https://sei.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://sei.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
   1301: {
     rpcs: [
       {
