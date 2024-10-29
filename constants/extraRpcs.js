@@ -5825,6 +5825,11 @@ export const extraRpcs = {
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
+  1516: {
+    rpcs: [
+      "https://evm-rpc-story.josephtran.xyz"
+    ],
+  },
   16600: {
     rpcs: [
       "https://rpc-testnet.0g.ai",
