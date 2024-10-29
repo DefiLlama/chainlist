@@ -6001,6 +6001,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
     ]
+  },
+  1516: {
+    rpcs: ["https://story-rpc-evm.mandragora.io"]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
