@@ -6001,6 +6001,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
     ]
+  },
+  763373: {
+    rpcs: [
+      "https://rpc-gel-sepolia.inkonchain.com",
+      "wss://ws-gel-sepolia.inkonchain.com",
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
