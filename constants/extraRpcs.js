@@ -5820,9 +5820,8 @@ export const extraRpcs = {
       },
       "https://story-rpc-evm.mandragora.io",
       "https://story-testnet-jsonrpc.blockhub.id",
-      "https://rpc-storyevm-testnet.aldebaranode.xyz",
+      "https://rpc-storyevm-testnet-iliad.aldebaranode.xyz",
       "https://story-testnet.nodeinfra.com",
-      "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
   1516: {
@@ -5831,7 +5830,8 @@ export const extraRpcs = {
       "https://lightnode-json-rpc-story.grandvalleys.com",
       "https://odyssey-evm.spidernode.net",
       "https://story-rpc-evm.mandragora.io",
-      "https://evm-rpc-story.josephtran.xyz"
+      "https://evm-rpc-story.josephtran.xyz",
+      "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
   16600: {
