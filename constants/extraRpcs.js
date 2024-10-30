@@ -5825,6 +5825,12 @@ export const extraRpcs = {
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
+  1516: {
+    rpcs: [
+      "https://odyssey.storyrpc.io",
+      "https://lightnode-json-rpc-story.grandvalleys.com",
+    ],
+  },
   16600: {
     rpcs: [
       "https://rpc-testnet.0g.ai",
