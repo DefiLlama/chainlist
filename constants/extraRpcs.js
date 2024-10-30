@@ -5829,6 +5829,7 @@ export const extraRpcs = {
     rpcs: [
       "https://odyssey.storyrpc.io",
       "https://lightnode-json-rpc-story.grandvalleys.com",
+      "https://odyssey-evm.spidernode.net"
     ],
   },
   16600: {
