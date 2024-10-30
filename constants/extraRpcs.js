@@ -5831,7 +5831,8 @@ export const extraRpcs = {
       "https://lightnode-json-rpc-story.grandvalleys.com",
       "https://odyssey-evm.spidernode.net",
       "https://story-rpc-evm.mandragora.io",
-      "https://evm-rpc-story.josephtran.xyz"
+      "https://evm-rpc-story.josephtran.xyz",
+      "https://story-testnet-evm.itrocket.net"
     ],
   },
   16600: {
