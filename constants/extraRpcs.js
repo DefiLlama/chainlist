@@ -5803,7 +5803,6 @@ export const extraRpcs = {
   1513: {
     rpcs: [
       "https://testnet.storyrpc.io",
-      "https://story-rpc-evm.validatorvn.com",
       "https://story-evm-testnet-rpc.tech-coha05.xyz",
       "https://story-rpc.oneiricts.com:8445",
       "https://evm-rpc-story.josephtran.xyz",
@@ -5831,6 +5830,7 @@ export const extraRpcs = {
       "https://lightnode-json-rpc-story.grandvalleys.com",
       "https://odyssey-evm.spidernode.net",
       "https://story-rpc-evm.mandragora.io",
+      "https://story-rpc-evm.validatorvn.com",
       "https://evm-rpc-story.josephtran.xyz"
     ],
   },
