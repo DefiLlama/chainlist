@@ -5814,9 +5814,8 @@ export const extraRpcs = {
       },
       "https://story-rpc-evm.mandragora.io",
       "https://story-testnet-jsonrpc.blockhub.id",
-      "https://rpc-storyevm-testnet.aldebaranode.xyz",
+      "https://rpc-storyevm-testnet-iliad.aldebaranode.xyz",
       "https://story-testnet.nodeinfra.com",
-      "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
   1516: {
@@ -5832,6 +5831,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.itrocket,
       },
       "https://story-rpc-evm.validatorvn.com",
+      "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
   16600: {
