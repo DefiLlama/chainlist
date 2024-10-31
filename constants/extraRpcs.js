@@ -5812,11 +5812,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.originstake,
       },
-      {
-        url: "https://story-testnet-evm.itrocket.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.itrocket,
-      },
       "https://story-rpc-evm.mandragora.io",
       "https://story-testnet-jsonrpc.blockhub.id",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
@@ -5831,7 +5826,11 @@ export const extraRpcs = {
       "https://odyssey-evm.spidernode.net",
       "https://story-rpc-evm.mandragora.io",
       "https://evm-rpc-story.josephtran.xyz",
-      "https://story-testnet-evm.itrocket.net"
+      {
+        url: "https://story-testnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
+      },
       "https://story-rpc-evm.validatorvn.com",
     ],
   },
