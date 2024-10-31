@@ -5003,11 +5003,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://taiko.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://rpc.taiko.tools",
         tracking: "none",
         trackingDetails: privacyStatement.taikotools,
@@ -5052,11 +5047,6 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/taiko_hekla",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://taiko-hekla.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://hekla.taiko.tools",
