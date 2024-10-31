@@ -6000,6 +6000,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
     ]
+  },
+  7744: {
+    rpcs: ["https://testnet.phron.ai","wss://testnet.phron.ai"]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
