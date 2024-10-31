@@ -5117,6 +5117,14 @@ export const extraRpcs = {
       },
     ],
   },
+  2818: {
+    rpcs: [
+      "https://rpc.morphl2.io",
+      "wss://rpc.morphl2.io:8443",
+      "https://rpc-quicknode.morphl2.io",
+      "wss://rpc-quicknode.morphl2.io",
+    ],
+  },
   570: {
     rpcs: [
       "wss://rpc.rollux.com/wss",
@@ -6001,6 +6009,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
     ]
+  },
+  531050104: {
+    rpcs: [
+      "https://rpc.testnet.sophon.xyz",
+    ],
+  },
+  50104: {
+    rpcs: [
+      "https://rpc.sophon.xyz",
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
