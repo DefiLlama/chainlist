@@ -6009,6 +6009,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
     ]
+  },
+  531050104: {
+    rpcs: [
+      "https://rpc.testnet.sophon.xyz",
+    ],
+  },
+  50104: {
+    rpcs: [
+      "https://rpc.sophon.xyz",
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
