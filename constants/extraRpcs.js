@@ -5824,6 +5824,7 @@ export const extraRpcs = {
       "https://story-rpc-evm.mandragora.io",
       "https://evm-rpc-story.josephtran.xyz",
       "https://story-testnet-rpc.blockhub.id",
+      "https://story-evm.endorphinestake.com",
       {
         url: "https://story-testnet-evm.itrocket.net",
         tracking: "none",
