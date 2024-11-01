@@ -6001,6 +6001,12 @@ export const extraRpcs = {
       },
     ]
   },
+  763373: {
+    rpcs: [
+      "https://rpc-gel-sepolia.inkonchain.com",
+      "wss://ws-gel-sepolia.inkonchain.com",
+    ]
+  },
   3441006: {
     rpcs: [
       {
