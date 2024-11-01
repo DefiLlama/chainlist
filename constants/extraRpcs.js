@@ -5831,6 +5831,7 @@ export const extraRpcs = {
       },
       "https://story-rpc-evm.validatorvn.com",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
+      "https://story-evm.endorphinestake.com",
     ],
   },
   16600: {
