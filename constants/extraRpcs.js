@@ -2277,7 +2277,7 @@ export const extraRpcs = {
   },
   42262: {
     rpcs: [
-      "https://emerald.oasis.dev/",
+      "https://emerald.oasis.io",
       {
         url: "https://1rpc.io/oasis/emerald",
         tracking: "none",
