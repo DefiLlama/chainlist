@@ -4198,6 +4198,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://base.lava.build", 
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      },
     ],
   },
   11235: {
