@@ -457,6 +457,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://eth1.lava.build", 
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   2: {
