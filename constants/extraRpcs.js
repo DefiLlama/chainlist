@@ -1251,6 +1251,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://polygon.lava.build",
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   25: {
@@ -4774,6 +4780,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://filecoin.lava.build", 
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   314159: {
@@ -5562,6 +5574,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://berat2.lava.build",
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   328527: {
