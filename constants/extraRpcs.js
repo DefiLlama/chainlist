@@ -1429,6 +1429,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://arb1.lava.build", 
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   421613: {
