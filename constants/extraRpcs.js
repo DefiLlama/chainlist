@@ -5823,7 +5823,7 @@ export const extraRpcs = {
       "https://odyssey-evm.spidernode.net",
       "https://story-rpc-evm.mandragora.io",
       "https://evm-rpc-story.josephtran.xyz",
-      "https://story-testnet-rpc.blockhub.id",
+      "https://story-testnet-jsonrpc.blockhub.id",
       {
         url: "https://story-testnet-evm.itrocket.net",
         tracking: "none",
