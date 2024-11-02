@@ -1983,6 +1983,12 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.buildbear,
       },
+      {
+        url: "https://optimism.lava.build", 
+        tracking: "limited",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      },
       "https://optimism.rpc.subquery.network/public",
     ],
   },
