@@ -6026,6 +6026,20 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.sophon.xyz",
     ],
+  },
+  33139: {
+    rpcs: [
+      {
+        url: "https://apechain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://apechain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
