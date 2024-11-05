@@ -184,13 +184,6 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
-  const handleCopyToClipboard = (textToCopy) => {
-    // do nothing if textToCopy is not present
-    if (!textToCopy) return;
-
-    navigator.clipboard.writeText(textToCopy);
-  };
-
   return (
     <tr className={className}>
       <td className="border px-3 py-1 max-w-[40ch]">{isLoading ? <Shimmer /> : <CopyUrl url={data?.url} />}</td>
