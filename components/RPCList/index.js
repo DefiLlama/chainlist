@@ -185,10 +185,26 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
+  const handleCopyToClipboard = (textToCopy) => {
+    // do nothing if textToCopy is not present
+    if (!textToCopy) return;
+
+    navigator.clipboard.writeText(textToCopy);
+  };
+
   return (
     <tr className={className}>
-      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
-        {isLoading ? <Shimmer /> : data?.url}
+      <td className="border px-3 py-1 max-w-[40ch]">
+        {isLoading ? (
+          <Shimmer />
+        ) : (
+          <button
+            className="max-w-[40ch] px-2 py-[2px] -my-[2px] text-center text-sm overflow-hidden whitespace-nowrap text-ellipsis dark:hover:bg-[#171717] hover:bg-[#EAEAEA] rounded-[50px]"
+            onClick={() => handleCopyToClipboard(data?.url)}
+          >
+            {data?.url}
+          </button>
+        )}
       </td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
