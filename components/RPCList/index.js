@@ -186,7 +186,9 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   return (
     <tr className={className}>
-      <td className="border px-3 py-1 max-w-[40ch]">{isLoading ? <Shimmer /> : <CopyUrl url={data?.url} />}</td>
+      <td className="border px-3 py-1 max-w-[40ch]">
+        {isLoading ? <Shimmer /> : data?.url ? <CopyUrl url={data.url} /> : null}
+      </td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
       <td className="px-3 py-1 text-sm border">
@@ -288,8 +290,6 @@ const CopyUrl = ({ url }) => {
 
   const popover = usePopoverStore({ placement: "bottom", open });
 
-  if (!url) return;
-
   return (
     <>
       <PopoverDisclosure
@@ -298,7 +298,6 @@ const CopyUrl = ({ url }) => {
           <button
             className="max-w-[40ch] px-2 py-[2px] -my-[2px] text-center text-sm overflow-hidden whitespace-nowrap text-ellipsis dark:hover:bg-[#222222] dark:hover:text-white hover:bg-[#EAEAEA] rounded-[50px]"
             onClick={() => {
-              if (!url) return;
               navigator.clipboard.writeText(url).then(
                 () => {
                   setOpen(true);
