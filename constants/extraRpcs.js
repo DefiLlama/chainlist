@@ -6029,6 +6029,7 @@ export const extraRpcs = {
   },
   33139: {
     rpcs: [
+      "https://rpc.apechain.com",
       {
         url: "https://apechain.drpc.org",
         tracking: "none",
