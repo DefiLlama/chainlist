@@ -171,7 +171,7 @@ const privacyStatement = {
   glidexp:
     "At Glide Protocol, we strictly adhere to privacy principles by ensuring that no IP addresses, geolocation data, financial information, or any personal data are logged, stored, or tracked during RPC requests. This is made possible by the decentralized nature of blockchain technology, which facilitates secure and transparent without the need for personal information, aligning with our commitment to safeguarding user privacy. For more information, visit https://glideprotocol.xyz/privacy-policy",
   bctech:
-    "When you use the Services, we may automatically process information about your computer and internet connection (including your IP address, operating system and browser type), your mobile carrier, device information (including device and application IDs), search terms, cookie information, as well as information about the timing, frequency and pattern of your service use, and information about to the transactions you make on our Services.For more visit https://www.versatizecoin.com/Privacy_Policy.html",
+    "We do not collect, use, or share any personal data of BC Hyper Chain Blockchain RPC endpoint users. Specifically: We do not collect IP addresses, operating systems, or browser types.No device information, including application IDs, is collected. This commitment ensures that users' information remains private and secure when interacting with our RPC endpoint.For more visit https://versatizecoin.com/rpc_privacy.html",
   buildbear:
     "Usage Data is collected automatically when using the Service.Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.https://www.buildbear.io/privacy-policy",
   BlockRazor:
@@ -5923,7 +5923,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://rpc01.bchscan.io/",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
     ],
