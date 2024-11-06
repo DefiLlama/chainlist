@@ -5830,7 +5830,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.itrocket,
       },
       "https://story-rpc-evm.validatorvn.com",
-      "https://story-evm.endorphinestake.com",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
     ],
   },
