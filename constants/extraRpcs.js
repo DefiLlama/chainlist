@@ -3842,6 +3842,7 @@ export const extraRpcs = {
       "wss://canto.gravitychain.io:8546",
       "wss://canto.dexvaults.com/ws",
       "https://canto-rpc.ansybl.io",
+      "https://canto.dexrouting.com",
     ],
   },
   7924: {
