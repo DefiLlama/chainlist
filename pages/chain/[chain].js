@@ -7,7 +7,7 @@ import { populateChain, fetcher } from "../../utils/fetch";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
-import chainIds from "../../constants/chainIds.json";
+import chainIds from "../../constants/chainIds.js";
 import { overwrittenChains } from "../../constants/additionalChainRegistry/list";
 
 export async function getStaticProps({ params }) {
