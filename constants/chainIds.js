@@ -1,4 +1,4 @@
-{
+export default {
   "1": "ethereum",
   "8": "ubiq",
   "10": "optimism",

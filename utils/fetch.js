@@ -1,5 +1,5 @@
 import allExtraRpcs from "../constants/extraRpcs.js";
-import chainIds from "../constants/chainIds.json";
+import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch"
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
 
