@@ -461,7 +461,6 @@ export const extraRpcs = {
         url: "https://eth1.lava.build", 
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       }
     ],
   },
@@ -1255,7 +1254,6 @@ export const extraRpcs = {
         url: "https://polygon.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       }
     ],
   },
@@ -1439,7 +1437,6 @@ export const extraRpcs = {
         url: "https://arb1.lava.build", 
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       }
     ],
   },
@@ -1993,7 +1990,6 @@ export const extraRpcs = {
         url: "https://optimism.lava.build", 
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       },
       "https://optimism.rpc.subquery.network/public",
     ],
@@ -4227,7 +4223,6 @@ export const extraRpcs = {
         url: "https://base.lava.build", 
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       },
     ],
   },
@@ -4785,7 +4780,6 @@ export const extraRpcs = {
         url: "https://filecoin.lava.build", 
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       }
     ],
   },
@@ -5579,7 +5573,6 @@ export const extraRpcs = {
         url: "https://berat2.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-        isOpenSource: true,
       }
     ],
   },
