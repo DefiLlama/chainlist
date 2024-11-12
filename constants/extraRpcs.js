@@ -457,6 +457,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://eth1.lava.build", 
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   2: {
@@ -1245,6 +1251,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://polygon.lava.build",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   25: {
@@ -1423,6 +1435,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://arb1.lava.build", 
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   421613: {
@@ -1970,6 +1988,12 @@ export const extraRpcs = {
         url: "https://rpc.buildbear.io/esquivelfabian/",
         tracking: "yes",
         trackingDetails: privacyStatement.buildbear,
+      },
+      {
+        url: "https://optimism.lava.build", 
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
       },
       "https://optimism.rpc.subquery.network/public",
     ],
@@ -4199,6 +4223,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://base.lava.build", 
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      },
     ],
   },
   11235: {
@@ -4751,6 +4781,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://filecoin.lava.build", 
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   314159: {
@@ -5539,6 +5575,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://berat2.lava.build",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+        isOpenSource: true,
+      }
     ],
   },
   328527: {
