@@ -6078,6 +6078,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
+  },
+  151: {
+    rpcs: [
+      "https://governors.mainnet.redbelly.network"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
