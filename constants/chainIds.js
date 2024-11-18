@@ -32,6 +32,7 @@ export default {
   "128": "heco",
   "137": "polygon",
   "148": "shimmer_evm",
+  "151": "rbn",
   "169": "manta",
   "196": "xlayer",
   "200": "xdaiarb",
