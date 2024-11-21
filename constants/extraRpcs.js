@@ -6083,6 +6083,11 @@ export const extraRpcs = {
     rpcs: [
       "https://governors.mainnet.redbelly.network"
     ]
+  },
+  1605: {
+    rpcs: [
+      "https://rpc.bethscan.io"
+    ]
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
