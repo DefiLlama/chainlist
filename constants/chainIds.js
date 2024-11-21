@@ -149,4 +149,5 @@ export default {
   "383414847825": "zeniq",
   "836542336838601": "curio",
   "1605":"betherance"
+  
 }
