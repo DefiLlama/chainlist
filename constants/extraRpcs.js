@@ -176,6 +176,8 @@ const privacyStatement = {
     "Usage Data is collected automatically when using the Service.Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.https://www.buildbear.io/privacy-policy",
   BlockRazor:
     "Privacy notice: BlockRazor RPC does not track any kind of user information (i.e. IP, location, etc.). Only information that is public on the blockchain are preserved, such as timestamp of a transaction. For more information please visit: https://blockrazor.gitbook.io/blockrazor/scutum-mev-protect-rpc#privacy-statement",
+  TWMCrypto:
+    "We value your trust and are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you interact with our services. For more information please visit: https://twmcrypto.com/privacy-policy-2024-revised/"
 };
 
 export const extraRpcs = {
@@ -6095,7 +6097,17 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.vanarchain.com"
     ]
-  }
+  },
+  426: {
+    rpcs: [
+      "https://rpc.twmcrypto.com",
+      {
+        url: "https://twmcrypto.com/",
+        tracking: "none",
+        trackingDetails: privacyStatement.TWMCrypto,
+      },
+    ],
+  },
   
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
