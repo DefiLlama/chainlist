@@ -2451,16 +2451,8 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.io",
       "https://babel-api.mainnet.iotex.one",
       "https://babel-api.fastblocks.io",
-      {
-        url: "https://rpc.depinscan.io/iotex",
-        tracking: "limited",
-        trackingDetails: privacyStatement.digitalocean,
-      },
-      {
-        url: "https://rpc.chainanalytics.org/iotex",
-        tracking: "limited",
-        trackingDetails: privacyStatement.aws,
-      },
+      "https://rpc.depinscan.io/iotex",
+      "https://rpc.chainanalytics.org/iotex",
       {
         url: "https://iotexrpc.com",
         tracking: "limited",
