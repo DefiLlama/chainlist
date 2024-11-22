@@ -6083,7 +6083,18 @@ export const extraRpcs = {
     rpcs: [
       "https://governors.mainnet.redbelly.network"
     ]
+  },
+  78600: {
+    rpcs: [
+      "https://rpc-vanguard.vanarchain.com"
+    ]
+  },
+  2040: {
+    rpcs: [
+      "https://rpc.vanarchain.com"
+    ]
   }
+  
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
