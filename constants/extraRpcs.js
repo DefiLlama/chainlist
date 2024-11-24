@@ -6090,6 +6090,11 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.vanarchain.com"
     ]
+  },
+  408: {
+    rpcs: [
+      "https://mainnet-rpc.omtch.com"
+    ]
   }
   
 };
