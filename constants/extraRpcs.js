@@ -458,10 +458,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://eth1.lava.build", 
+        url: "https://eth1.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   2: {
@@ -1254,7 +1254,7 @@ export const extraRpcs = {
         url: "https://polygon.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   25: {
@@ -1302,7 +1302,8 @@ export const extraRpcs = {
     ],
   },
   338: {
-    rpcs: ["https://evm-t3.cronos.org/",
+    rpcs: [
+      "https://evm-t3.cronos.org/",
       {
         url: "https://endpoints.omniatech.io/v1/cronos/testnet/public",
         tracking: "none",
@@ -1434,10 +1435,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://arb1.lava.build", 
+        url: "https://arb1.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   421613: {
@@ -1987,7 +1988,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.buildbear,
       },
       {
-        url: "https://optimism.lava.build", 
+        url: "https://optimism.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
@@ -3816,7 +3817,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-    ]
+    ],
   },
   5197: {
     rpcs: ["https://mainnet.eraswap.network"],
@@ -4222,7 +4223,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://base.lava.build", 
+        url: "https://base.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
@@ -4779,10 +4780,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://filecoin.lava.build", 
+        url: "https://filecoin.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   314159: {
@@ -5421,9 +5422,7 @@ export const extraRpcs = {
     rpcs: ["https://node.ghostnet.etherlink.com"],
   },
   42793: {
-    rpcs: [
-      "https://node.mainnet.etherlink.com",
-    ],
+    rpcs: ["https://node.mainnet.etherlink.com"],
   },
   881: {
     rpcs: ["https://rpc.hypr.network"],
@@ -5570,7 +5569,7 @@ export const extraRpcs = {
         url: "https://berat2.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   328527: {
@@ -6034,13 +6033,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-    ]
+    ],
   },
   763373: {
-    rpcs: [
-      "https://rpc-gel-sepolia.inkonchain.com",
-      "wss://ws-gel-sepolia.inkonchain.com",
-    ]
+    rpcs: ["https://rpc-gel-sepolia.inkonchain.com", "wss://ws-gel-sepolia.inkonchain.com"],
   },
   3441006: {
     rpcs: [
@@ -6049,17 +6045,13 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-    ]
+    ],
   },
   531050104: {
-    rpcs: [
-      "https://rpc.testnet.sophon.xyz",
-    ],
+    rpcs: ["https://rpc.testnet.sophon.xyz"],
   },
   50104: {
-    rpcs: [
-      "https://rpc.sophon.xyz",
-    ],
+    rpcs: ["https://rpc.sophon.xyz"],
   },
   33139: {
     rpcs: [
@@ -6077,21 +6069,28 @@ export const extraRpcs = {
     ],
   },
   151: {
-    rpcs: [
-      "https://governors.mainnet.redbelly.network"
-    ]
+    rpcs: ["https://governors.mainnet.redbelly.network"],
   },
   78600: {
-    rpcs: [
-      "https://rpc-vanguard.vanarchain.com"
-    ]
+    rpcs: ["https://rpc-vanguard.vanarchain.com"],
   },
   2040: {
+    rpcs: ["https://rpc.vanarchain.com"],
+  },
+  777777: {
     rpcs: [
-      "https://rpc.vanarchain.com"
-    ]
-  }
-  
+      {
+        url: "https://rpc.winr.games",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodeconnect,
+      },
+      {
+        url: "wss://rpc-ws.winr.games",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodeconnect,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
