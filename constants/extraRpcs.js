@@ -5858,6 +5858,7 @@ export const extraRpcs = {
       "https://evm-rpc-story.josephtran.xyz",
       "https://story.evm.t.stavr.tech",
       "https://story-testnet-jsonrpc.blockhub.id",
+      "https://story-testnet-jsonrpc.daaps-j4ran.cloud",
       {
         url: "https://story-testnet-evm.itrocket.net",
         tracking: "none",
