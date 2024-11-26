@@ -177,7 +177,7 @@ const privacyStatement = {
   BlockRazor:
     "Privacy notice: BlockRazor RPC does not track any kind of user information (i.e. IP, location, etc.). Only information that is public on the blockchain are preserved, such as timestamp of a transaction. For more information please visit: https://blockrazor.gitbook.io/blockrazor/scutum-mev-protect-rpc#privacy-statement",
   Histori:
-    "Histori does not track or log your API requests. Learn more in our [Privacy Policy](https://histori.xyz/support/privacy-policy).",
+    "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
 };
 
 export const extraRpcs = {
