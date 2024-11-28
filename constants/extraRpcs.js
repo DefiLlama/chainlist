@@ -6085,7 +6085,35 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.vanarchain.com"
     ]
-  }
+  },
+  21000000: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/corn_maizenet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://maizenet-rpc.usecorn.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
+  21000001: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/corn_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://testnet-rpc.usecorn.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
   
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
