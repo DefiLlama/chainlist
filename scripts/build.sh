@@ -26,7 +26,7 @@ BUILD_STATUS=${PIPESTATUS[0]}
 
 BUILD_TIME_SEC=$(($(date -u +"%s") - $START_TIME_TS))
 BUILD_TIME_MIN=$(($BUILD_TIME_SEC / 60))
-BUILD_TIME_STR=$(printf "%ss" $(($BUILD_TIME_SEC % 60)))
+BUILD_TIME_STR=$(printf "%s seconds" $(($BUILD_TIME_SEC % 60)))
 if [ $BUILD_TIME_MIN -gt 0 ]; then
   BUILD_TIME_STR=$(printf "%sm %s" $BUILD_TIME_MIN $BUILD_TIME_STR)
 fi
