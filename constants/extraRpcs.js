@@ -6775,6 +6775,13 @@ export const extraRpcs = {
       },
     ],
   },
+  44474237230: {
+    rpcs: [
+      "https://rpc.dev.deriw.com/",
+    ],
+    tracking: "none",
+    trackingDetails: privacyStatement.Deriw
+  },
   
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
