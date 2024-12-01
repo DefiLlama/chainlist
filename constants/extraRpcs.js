@@ -2928,7 +2928,7 @@ export const extraRpcs = {
     ],
   },
   820: {
-    rpcs: ["https://rpc.callisto.network", "https://clo-geth.0xinfra.com/"],
+    rpcs: ["https://rpc.callistodao.org"],
   },
   108: {
     rpcs: [
