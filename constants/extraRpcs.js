@@ -176,8 +176,7 @@ const privacyStatement = {
     "Usage Data is collected automatically when using the Service.Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.https://www.buildbear.io/privacy-policy",
   BlockRazor:
     "Privacy notice: BlockRazor RPC does not track any kind of user information (i.e. IP, location, etc.). Only information that is public on the blockchain are preserved, such as timestamp of a transaction. For more information please visit: https://blockrazor.gitbook.io/blockrazor/scutum-mev-protect-rpc#privacy-statement",
-  numa:
-    "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers, and other diagnostic data. Check out our Terms of use: https://app.numa.network/terms-of-use/ and Privacy Policy: https://app.numa.network/privacy-policy/",
+  numa: "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers, and other diagnostic data. Check out our Terms of use: https://app.numa.network/terms-of-use/ and Privacy Policy: https://app.numa.network/privacy-policy/",
 
   Histori:
     "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
@@ -468,10 +467,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://eth1.lava.build", 
+        url: "https://eth1.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   2: {
@@ -1358,7 +1357,8 @@ export const extraRpcs = {
     ],
   },
   338: {
-    rpcs: ["https://evm-t3.cronos.org/",
+    rpcs: [
+      "https://evm-t3.cronos.org/",
       {
         url: "https://endpoints.omniatech.io/v1/cronos/testnet/public",
         tracking: "none",
@@ -1490,7 +1490,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://arb1.lava.build", 
+        url: "https://arb1.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
@@ -1976,40 +1976,40 @@ export const extraRpcs = {
   },
   44787: {
     rpcs: [
-        "https://alfajores-forno.celo-testnet.org",
-        "wss://alfajores-forno.celo-testnet.org/ws",
-        {
-          url: "https://node.histori.xyz/celo-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-      ]
+      "https://alfajores-forno.celo-testnet.org",
+      "wss://alfajores-forno.celo-testnet.org/ws",
+      {
+        url: "https://node.histori.xyz/celo-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   480: {
     rpcs: [
-        "https://worldchain-mainnet.g.alchemy.com/public",
-        "https://480.rpc.thirdweb.com",
-        "https://worldchain-mainnet.gateway.tenderly.co",
-        "wss://worldchain-mainnet.gateway.tenderly.co",
-        {
-          url: "https://node.histori.xyz/worldchain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-      ]
+      "https://worldchain-mainnet.g.alchemy.com/public",
+      "https://480.rpc.thirdweb.com",
+      "https://worldchain-mainnet.gateway.tenderly.co",
+      "wss://worldchain-mainnet.gateway.tenderly.co",
+      {
+        url: "https://node.histori.xyz/worldchain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   4801: {
     rpcs: [
-        "https://worldchain-sepolia.g.alchemy.com/public",
-        "https://4801.rpc.thirdweb.com",
-        "https://worldchain-sepolia.gateway.tenderly.co",
-        "wss://worldchain-sepolia.gateway.tenderly.co",
-        {
-          url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-      ]
+      "https://worldchain-sepolia.g.alchemy.com/public",
+      "https://4801.rpc.thirdweb.com",
+      "https://worldchain-sepolia.gateway.tenderly.co",
+      "wss://worldchain-sepolia.gateway.tenderly.co",
+      {
+        url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   10: {
     rpcs: [
@@ -2130,7 +2130,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.buildbear,
       },
       {
-        url: "https://optimism.lava.build", 
+        url: "https://optimism.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
@@ -2506,7 +2506,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   32659: {
     rpcs: ["https://mainnet.fusionnetwork.io", "wss://mainnet.fusionnetwork.io"],
@@ -2603,14 +2603,14 @@ export const extraRpcs = {
   },
   31: {
     rpcs: [
-        "https://public-node.testnet.rsk.co",
-        "https://mycrypto.testnet.rsk.co",
-        {
-          url: "https://node.histori.xyz/rsk-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://public-node.testnet.rsk.co",
+      "https://mycrypto.testnet.rsk.co",
+      {
+        url: "https://node.histori.xyz/rsk-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   30: {
     rpcs: [
@@ -2631,7 +2631,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      
+
       {
         url: "https://node.histori.xyz/rsk-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2893,7 +2893,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
-      
+
       {
         url: "https://node.histori.xyz/astar-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3031,10 +3031,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-          url: "https://node.histori.xyz/palm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
+        url: "https://node.histori.xyz/palm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
     ],
   },
   7: {
@@ -3355,7 +3355,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/manta-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3399,14 +3399,14 @@ export const extraRpcs = {
   },
   360: {
     rpcs: [
-        "https://mainnet.shape.network",
-        "https://shape-mainnet.g.alchemy.com/public",
-        {
-          url: "https://node.histori.xyz/shape-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-      ]
+      "https://mainnet.shape.network",
+      "https://shape-mainnet.g.alchemy.com/public",
+      {
+        url: "https://node.histori.xyz/shape-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   369: {
     rpcs: [
@@ -3515,7 +3515,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      
+
       {
         url: "https://node.histori.xyz/kaia-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3628,7 +3628,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/zksync-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3674,7 +3674,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      
+
       {
         url: "https://node.histori.xyz/zksync-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3701,7 +3701,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/xlayer-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3718,7 +3718,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/xlayer-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3764,7 +3764,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/moonbeam-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3872,7 +3872,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   2021: {
     rpcs: [
@@ -3887,7 +3887,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      
+
       {
         url: "https://node.histori.xyz/lens-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3922,7 +3922,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      
+
       {
         url: "https://node.histori.xyz/zetachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3962,7 +3962,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.thirdweb,
       },
-      
+
       {
         url: "https://node.histori.xyz/zetachain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3994,7 +3994,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   2222: {
     rpcs: [
@@ -4049,7 +4049,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/kava-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4117,7 +4117,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/mantle-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4133,13 +4133,13 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/mantle-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   5197: {
     rpcs: ["https://mainnet.eraswap.network"],
@@ -4308,13 +4308,13 @@ export const extraRpcs = {
   },
   11011: {
     rpcs: [
-        "https://sepolia.shape.network",
-        {
-          url: "https://node.histori.xyz/shape-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-      ],
+      "https://sepolia.shape.network",
+      {
+        url: "https://node.histori.xyz/shape-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   11111: {
     rpcs: ["https://api.trywagmi.xyz/rpc"],
@@ -4349,10 +4349,7 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   24734: {
-    rpcs: [
-      "https://node1.mintme.com",
-      "https://node.1000x.ch",
-    ],
+    rpcs: ["https://node1.mintme.com", "https://node.1000x.ch"],
   },
   31102: {
     rpcs: ["rpcWorking:false"],
@@ -4396,23 +4393,23 @@ export const extraRpcs = {
   },
   63157: {
     rpcs: [
-        "https://geist-mainnet.g.alchemy.com/public",
-        {
-          url: "https://node.histori.xyz/geist-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://geist-mainnet.g.alchemy.com/public",
+      {
+        url: "https://node.histori.xyz/geist-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   631571: {
     rpcs: [
-        "https://geist-polter.g.alchemy.com/public",
-        {
-          url: "https://node.histori.xyz/geist-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://geist-polter.g.alchemy.com/public",
+      {
+        url: "https://node.histori.xyz/geist-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   70000: {
     rpcs: [],
@@ -4445,7 +4442,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      
+
       {
         url: "https://node.histori.xyz/base-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4584,12 +4581,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://base.lava.build", 
+        url: "https://base.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
       {
-        url: "https://rpc.numa.network/base", 
+        url: "https://rpc.numa.network/base",
         tracking: "yes",
         trackingDetails: privacyStatement.numa,
       },
@@ -4763,7 +4760,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/scroll-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4930,13 +4927,13 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/neon-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      
+
       {
         url: "https://node.histori.xyz/neon-devnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4966,7 +4963,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      
+
       {
         url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5177,10 +5174,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://filecoin.lava.build", 
+        url: "https://filecoin.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      }
+      },
     ],
   },
   314159: {
@@ -5272,7 +5269,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/polygon-zkevm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5303,7 +5300,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.decubate,
       },
-      
+
       {
         url: "https://node.histori.xyz/linea-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5319,7 +5316,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-      
+
       {
         url: "https://node.histori.xyz/polygon-zkevm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5343,7 +5340,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-      
+
       {
         url: "https://node.histori.xyz/linea-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5395,7 +5392,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/scroll-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5499,7 +5496,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       "https://taiko-json-rpc.stakely.io/",
-      
+
       {
         url: "https://node.histori.xyz/taiko-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5550,7 +5547,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      
+
       {
         url: "https://node.histori.xyz/taiko-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5651,23 +5648,23 @@ export const extraRpcs = {
   },
   545: {
     rpcs: [
-        "https://testnet.evm.nodes.onflow.org",
-        {
-          url: "https://node.histori.xyz/flow-evm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://testnet.evm.nodes.onflow.org",
+      {
+        url: "https://node.histori.xyz/flow-evm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   747: {
     rpcs: [
-        "https://mainnet.evm.nodes.onflow.org",
-        {
-          url: "https://node.histori.xyz/flow-evm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://mainnet.evm.nodes.onflow.org",
+      {
+        url: "https://node.histori.xyz/flow-evm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   1707: {
     rpcs: ["https://rpc.blockchain.or.th"],
@@ -5788,7 +5785,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   255: {
     rpcs: [
@@ -5809,7 +5806,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://rpc-kroma.rockx.com",
-      
+
       {
         url: "https://node.histori.xyz/kroma-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5897,9 +5894,7 @@ export const extraRpcs = {
     rpcs: ["https://node.ghostnet.etherlink.com"],
   },
   42793: {
-    rpcs: [
-      "https://node.mainnet.etherlink.com",
-    ],
+    rpcs: ["https://node.mainnet.etherlink.com"],
   },
   881: {
     rpcs: ["https://rpc.hypr.network"],
@@ -6047,7 +6042,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      
+
       {
         url: "https://node.histori.xyz/berachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6108,7 +6103,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.liquify,
       },
-      
+
       {
         url: "https://node.histori.xyz/zircuit-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6124,7 +6119,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   56288: {
     rpcs: [
@@ -6154,13 +6149,13 @@ export const extraRpcs = {
   },
   2522: {
     rpcs: [
-        "https://rpc.testnet.frax.com",
-        {
-          url: "https://node.histori.xyz/fraxtal-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://rpc.testnet.frax.com",
+      {
+        url: "https://node.histori.xyz/fraxtal-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   252: {
     rpcs: [
@@ -6180,7 +6175,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      
+
       {
         url: "https://node.histori.xyz/fraxtal-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6198,7 +6193,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   13371: {
     rpcs: [
@@ -6220,7 +6215,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      
+
       {
         url: "https://node.histori.xyz/immutable-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6236,7 +6231,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   1135: {
     rpcs: [
@@ -6256,7 +6251,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      
+
       {
         url: "https://node.histori.xyz/lisk-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6306,13 +6301,13 @@ export const extraRpcs = {
   },
   999999999: {
     rpcs: [
-        "https://sepolia.rpc.zora.energy",
-        {
-          url: "https://node.histori.xyz/zora-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://sepolia.rpc.zora.energy",
+      {
+        url: "https://node.histori.xyz/zora-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   7777777: {
     rpcs: [
@@ -6327,7 +6322,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/zora-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6362,14 +6357,14 @@ export const extraRpcs = {
   },
   1946: {
     rpcs: [
-        "https://rpc.minato.soneium.org/",
-        
-        {
-          url: "https://node.histori.xyz/soneium-minato-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-     ],
+      "https://rpc.minato.soneium.org/",
+
+      {
+        url: "https://node.histori.xyz/soneium-minato-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   41455: {
     rpcs: [
@@ -6385,7 +6380,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/aleph-zero-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6467,7 +6462,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   1750: {
     rpcs: [
@@ -6482,7 +6477,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/metal-l2-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6492,23 +6487,23 @@ export const extraRpcs = {
   },
   80008: {
     rpcs: [
-        "https://rpc.sepolia.polynomial.fi",
-        {
-          url: "https://node.histori.xyz/polynomial-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-    ]
+      "https://rpc.sepolia.polynomial.fi",
+      {
+        url: "https://node.histori.xyz/polynomial-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   8008: {
-      rpcs: [
-        "https://rpc.polynomial.fi",
-        {
-          url: "https://node.histori.xyz/polynomial-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
-      ]
+    rpcs: [
+      "https://rpc.polynomial.fi",
+      {
+        url: "https://node.histori.xyz/polynomial-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
+    ],
   },
   8428: {
     rpcs: ["https://api.thatchain.io", "https://api.thatchain.io/mainnet"],
@@ -6635,7 +6630,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   1329: {
     rpcs: [
@@ -6650,7 +6645,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6666,19 +6661,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/unichain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   763373: {
-    rpcs: [
-      "https://rpc-gel-sepolia.inkonchain.com",
-      "wss://ws-gel-sepolia.inkonchain.com",
-    ]
+    rpcs: ["https://rpc-gel-sepolia.inkonchain.com", "wss://ws-gel-sepolia.inkonchain.com"],
   },
   3441006: {
     rpcs: [
@@ -6688,23 +6680,19 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      
+
       {
         url: "https://node.histori.xyz/manta-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   531050104: {
-    rpcs: [
-      "https://rpc.testnet.sophon.xyz",
-    ],
+    rpcs: ["https://rpc.testnet.sophon.xyz"],
   },
   50104: {
-    rpcs: [
-      "https://rpc.sophon.xyz",
-    ],
+    rpcs: ["https://rpc.sophon.xyz"],
   },
   33139: {
     rpcs: [
@@ -6719,7 +6707,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      
+
       {
         url: "https://node.histori.xyz/apechain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6735,22 +6723,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ]
+    ],
   },
   151: {
-    rpcs: [
-      "https://governors.mainnet.redbelly.network"
-    ]
+    rpcs: ["https://governors.mainnet.redbelly.network"],
   },
   78600: {
-    rpcs: [
-      "https://rpc-vanguard.vanarchain.com"
-    ]
+    rpcs: ["https://rpc-vanguard.vanarchain.com"],
   },
   2040: {
-    rpcs: [
-      "https://rpc.vanarchain.com"
-    ]
+    rpcs: ["https://rpc.vanarchain.com"],
   },
   21000000: {
     rpcs: [
@@ -6780,7 +6762,6 @@ export const extraRpcs = {
       },
     ],
   },
-  
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
