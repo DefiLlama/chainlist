@@ -3854,15 +3854,6 @@ export const extraRpcs = {
       },
     ],
   },
-  2020: {
-    rpcs: [
-      {
-        url: "https://node.histori.xyz/ronin-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-    ],
-  },
   2021: {
     rpcs: [
       "https://mainnet2.edgewa.re/evm",
