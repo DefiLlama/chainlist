@@ -4602,7 +4602,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.numa.network/base", 
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.numa,
       },
       {
