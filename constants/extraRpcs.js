@@ -4358,7 +4358,10 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   24734: {
-    rpcs: ["https://node1.mintme.com"],
+    rpcs: [
+      "https://node1.mintme.com",
+      "https://node.1000x.ch",
+    ],
   },
   31102: {
     rpcs: ["rpcWorking:false"],
