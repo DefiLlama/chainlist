@@ -654,7 +654,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/fantom-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -724,7 +723,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/avalanche-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -775,7 +773,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/matic-amoy-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -944,7 +941,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/bsc-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1000,7 +996,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/bsc-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1092,7 +1087,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/avalanche-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1184,7 +1178,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/fantom-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1313,7 +1306,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/matic-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1502,7 +1494,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/arbitrum-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1577,12 +1568,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
-        {
-          url: "https://node.histori.xyz/arbitrum-nova-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-          tracking: "none",
-          trackingDetails: privacyStatement.Histori,
-        },
+      {
+        url: "https://node.histori.xyz/arbitrum-nova-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        tracking: "none",
+        trackingDetails: privacyStatement.Histori,
+      },
     ],
   },
   421614: {
@@ -1612,7 +1602,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/arbitrum-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1663,7 +1652,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/kaia-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1706,7 +1694,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/harmony-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1726,7 +1713,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/blast-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1800,7 +1786,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/blast-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1881,7 +1866,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/aurora-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1899,7 +1883,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/aurora-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1984,7 +1967,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/celo-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -1994,7 +1976,8 @@ export const extraRpcs = {
   },
   44787: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://alfajores-forno.celo-testnet.org",
+        "wss://alfajores-forno.celo-testnet.org/ws",
         {
           url: "https://node.histori.xyz/celo-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -2004,7 +1987,10 @@ export const extraRpcs = {
   },
   480: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://worldchain-mainnet.g.alchemy.com/public",
+        "https://480.rpc.thirdweb.com",
+        "https://worldchain-mainnet.gateway.tenderly.co",
+        "wss://worldchain-mainnet.gateway.tenderly.co",
         {
           url: "https://node.histori.xyz/worldchain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -2014,7 +2000,10 @@ export const extraRpcs = {
   },
   4801: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://worldchain-sepolia.g.alchemy.com/public",
+        "https://4801.rpc.thirdweb.com",
+        "https://worldchain-sepolia.gateway.tenderly.co",
+        "wss://worldchain-sepolia.gateway.tenderly.co",
         {
           url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -2146,7 +2135,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       "https://optimism.rpc.subquery.network/public",
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/optimism-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2182,7 +2170,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/optimism-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2357,7 +2344,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/gnosis-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2388,7 +2374,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/gnosis-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2468,7 +2453,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/moonriver-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2507,7 +2491,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/telos-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2517,7 +2500,7 @@ export const extraRpcs = {
   },
   41: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://testnet.telos.net/evm",
       {
         url: "https://node.histori.xyz/telos-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2611,7 +2594,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/moonbeam-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2621,7 +2603,8 @@ export const extraRpcs = {
   },
   31: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://public-node.testnet.rsk.co",
+        "https://mycrypto.testnet.rsk.co",
         {
           url: "https://node.histori.xyz/rsk-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -2648,7 +2631,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/rsk-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -2910,7 +2893,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/astar-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3372,7 +3355,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/manta-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3416,7 +3399,8 @@ export const extraRpcs = {
   },
   360: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://mainnet.shape.network",
+        "https://shape-mainnet.g.alchemy.com/public",
         {
           url: "https://node.histori.xyz/shape-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -3531,7 +3515,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/kaia-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3644,7 +3628,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/zksync-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3690,7 +3674,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/zksync-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3717,7 +3701,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/xlayer-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3734,7 +3718,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/xlayer-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3780,7 +3764,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/moonbeam-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3883,7 +3867,6 @@ export const extraRpcs = {
   },
   2020: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
       {
         url: "https://node.histori.xyz/ronin-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3904,7 +3887,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/lens-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3939,7 +3922,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/zetachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -3979,7 +3962,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.thirdweb,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/zetachain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4001,7 +3984,11 @@ export const extraRpcs = {
   },
   2221: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://evm.testnet.kava.io",
+      "https://kava-evm-testnet.rpc.thirdweb.com",
+      "wss://wevm.testnet.kava.io",
+      "https://kava-testnet.drpc.org",
+      "wss://kava-testnet.drpc.org",
       {
         url: "https://node.histori.xyz/kava-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4062,7 +4049,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/kava-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4130,7 +4117,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/mantle-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4140,12 +4127,13 @@ export const extraRpcs = {
   },
   5003: {
     rpcs: [
+      "https://rpc.sepolia.mantle.xyz",
       {
         url: "https://endpoints.omniatech.io/v1/mantle/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/mantle-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4320,7 +4308,7 @@ export const extraRpcs = {
   },
   11011: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://sepolia.shape.network",
         {
           url: "https://node.histori.xyz/shape-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -4408,7 +4396,7 @@ export const extraRpcs = {
   },
   63157: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://geist-mainnet.g.alchemy.com/public",
         {
           url: "https://node.histori.xyz/geist-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -4418,7 +4406,7 @@ export const extraRpcs = {
   },
   631571: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://geist-polter.g.alchemy.com/public",
         {
           url: "https://node.histori.xyz/geist-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -4457,7 +4445,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/base-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4775,7 +4763,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/scroll-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4942,13 +4930,13 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/neon-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/neon-devnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -4971,12 +4959,14 @@ export const extraRpcs = {
   },
   11297108099: {
     rpcs: [
+      "https://palm-testnet.infura.io/v3/${INFURA_API_KEY}",
+      "https://palm-testnet.public.blastapi.io",
       {
         url: "https://palm-testnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5282,7 +5272,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/polygon-zkevm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5313,7 +5303,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.decubate,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/linea-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5329,7 +5319,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/polygon-zkevm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5353,7 +5343,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/linea-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5405,7 +5395,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/scroll-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5509,7 +5499,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       "https://taiko-json-rpc.stakely.io/",
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/taiko-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5560,7 +5550,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/taiko-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5661,7 +5651,7 @@ export const extraRpcs = {
   },
   545: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://testnet.evm.nodes.onflow.org",
         {
           url: "https://node.histori.xyz/flow-evm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -5671,7 +5661,7 @@ export const extraRpcs = {
   },
   747: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://mainnet.evm.nodes.onflow.org",
         {
           url: "https://node.histori.xyz/flow-evm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -5792,7 +5782,7 @@ export const extraRpcs = {
   },
   2358: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://api.sepolia.kroma.network",
       {
         url: "https://node.histori.xyz/kroma-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -5819,7 +5809,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://rpc-kroma.rockx.com",
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/kroma-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6057,7 +6047,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/berachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6118,7 +6108,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.liquify,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/zircuit-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6128,7 +6118,7 @@ export const extraRpcs = {
   },
   48899: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://zircuit1-testnet.p2pify.com/",
       {
         url: "https://node.histori.xyz/zircuit-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6164,7 +6154,7 @@ export const extraRpcs = {
   },
   2522: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://rpc.testnet.frax.com",
         {
           url: "https://node.histori.xyz/fraxtal-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -6190,7 +6180,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/fraxtal-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6200,7 +6190,9 @@ export const extraRpcs = {
   },
   13473: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://rpc.testnet.immutable.com",
+      "https://immutable-zkevm-testnet.drpc.org",
+      "wss://immutable-zkevm-testnet.drpc.org",
       {
         url: "https://node.histori.xyz/immutable-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6228,7 +6220,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/immutable-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6238,7 +6230,7 @@ export const extraRpcs = {
   },
   4202: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://rpc.sepolia-api.lisk.com",
       {
         url: "https://node.histori.xyz/lisk-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6264,7 +6256,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/lisk-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6314,7 +6306,7 @@ export const extraRpcs = {
   },
   999999999: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://sepolia.rpc.zora.energy",
         {
           url: "https://node.histori.xyz/zora-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -6335,7 +6327,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/zora-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6371,7 +6363,7 @@ export const extraRpcs = {
   1946: {
     rpcs: [
         "https://rpc.minato.soneium.org/",
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        
         {
           url: "https://node.histori.xyz/soneium-minato-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -6393,7 +6385,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/aleph-zero-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6469,7 +6461,7 @@ export const extraRpcs = {
   },
   1740: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://testnet.rpc.metall2.com",
       {
         url: "https://node.histori.xyz/metal-l2-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6490,7 +6482,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/metal-l2-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6500,7 +6492,7 @@ export const extraRpcs = {
   },
   80008: {
     rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://rpc.sepolia.polynomial.fi",
         {
           url: "https://node.histori.xyz/polynomial-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -6510,7 +6502,7 @@ export const extraRpcs = {
   },
   8008: {
       rpcs: [
-        // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+        "https://rpc.polynomial.fi",
         {
           url: "https://node.histori.xyz/polynomial-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
           tracking: "none",
@@ -6636,7 +6628,8 @@ export const extraRpcs = {
   },
   1328: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://evm-rpc-testnet.sei-apis.com",
+      "wss://evm-ws-testnet.sei-apis.com",
       {
         url: "https://node.histori.xyz/sei-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6657,7 +6650,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6667,12 +6660,13 @@ export const extraRpcs = {
   },
   1301: {
     rpcs: [
+      "https://sepolia.unichain.org",
       {
         url: "https://endpoints.omniatech.io/v1/unichain/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/unichain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6688,12 +6682,13 @@ export const extraRpcs = {
   },
   3441006: {
     rpcs: [
+      "https://pacific-rpc.sepolia-testnet.manta.network/http",
       {
         url: "https://endpoints.omniatech.io/v1/manta-pacific/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/manta-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6724,7 +6719,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      
       {
         url: "https://node.histori.xyz/apechain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
@@ -6734,7 +6729,7 @@ export const extraRpcs = {
   },
   33111: {
     rpcs: [
-      // Histori Public MultiNode is rate limited. Get an API key at https://histori.xyz/
+      "https://rpc.curtis.apechain.com",
       {
         url: "https://node.histori.xyz/apechain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
