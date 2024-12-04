@@ -7,7 +7,7 @@ export default {
   "20": "elastos",
   "24": "kardia",
   "25": "cronos",
-  "30": "rsk",
+  "30": "rootstock",
   "40": "telos",
   "42": "lukso",
   "44": "crab",

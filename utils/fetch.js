@@ -44,18 +44,15 @@ export function populateChain(chain, chainTvls) {
 
     const chainSlug = chainIds[chain.chainId];
 
-    if (chainSlug !== undefined) {
-        const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
+    const defiChain = chainTvls.find((c) => c.chainId === chain.chainId);
 
-        return defiChain === undefined
+    return defiChain === undefined
         ? chain
         : {
             ...chain,
             tvl: defiChain.tvl,
             chainSlug,
             };
-    }
-    return chain;
 }
 
 export function mergeDeep(target, source) {
