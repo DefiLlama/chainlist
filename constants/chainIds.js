@@ -111,7 +111,7 @@ export default {
   "16507": "genesys",
   "17777": "eos evm",
   "22776": "map protocol",
-  "23294": "oasis_sapphire",
+  "23294": "sapphire",
   "32520": "bitgert",
   "32659": "fusion",
   "32769": "zilliqa",
