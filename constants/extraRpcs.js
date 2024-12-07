@@ -6622,6 +6622,15 @@ export const extraRpcs = {
       },
     ],
   },
+30311: {
+    rpcs: [
+      {
+        url: "https://dream-rpc.somnia.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.somnia,
+      }
+    ]
+  },
   763373: {
     rpcs: ["https://rpc-gel-sepolia.inkonchain.com", "wss://ws-gel-sepolia.inkonchain.com"],
   },
@@ -6654,7 +6663,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
+{
         url: "wss://apechain.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
