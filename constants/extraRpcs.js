@@ -6713,6 +6713,16 @@ export const extraRpcs = {
       },
     ],
   },
+  11155111: {
+    rpcs: [
+      {
+        url: "https://eth-sepolia.g.alchemy.com/v2/WddzdzI2o9S3COdT73d5w6AIogbKq4X-",
+        tracking: "limited",
+        trackingDetails: "https://www.alchemy.com/privacy-policy",
+      },
+    ],
+  },
+
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
