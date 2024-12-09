@@ -91,12 +91,9 @@ export function arrayMove(array, fromIndex, toIndex) {
 }
 
 export async function generateChainData() {
-  const [chains, chainTvls, thirdWebRpcs] = await Promise.all([
+  const [chains, chainTvls] = await Promise.all([
     fetcher("https://chainid.network/chains.json"),
-    fetcher("https://api.llama.fi/chains"),
-    fetcher("https://api.thirdweb.com/v1/chains/")
-      .then((r) => r.data)
-      .catch(() => []),
+    fetcher("https://api.llama.fi/chains")
   ]);
 
   const overwrittenIds = overwrittenChains.reduce((acc, curr) => {
@@ -107,7 +104,7 @@ export async function generateChainData() {
   const sortedChains = chains
     .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
     .concat(overwrittenChains)
-    .map((chain) => populateChain(chain, chainTvls, thirdWebRpcs.find((c) => c.chainId === chain.chainId)?.rpc ?? []))
+    .map((chain) => populateChain(chain, chainTvls))
     .sort((a, b) => {
       return (b.tvl ?? 0) - (a.tvl ?? 0);
     });
