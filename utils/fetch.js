@@ -41,8 +41,6 @@ export function populateChain(chain, chainTvls, thirdWebRpcs) {
       !rpc.url.includes("${THIRDWEB_API_KEY}") &&
       !rpcs.find((r) => r.url === rpc.url)
     ) {
-      console.clear();
-      console.log({ rpc });
       rpcs = [...rpcs, rpc];
     }
   }
