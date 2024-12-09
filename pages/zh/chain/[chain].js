@@ -11,12 +11,9 @@ import chainIds from "../../../constants/chainIds.js";
 import { overwrittenChains } from "../../../constants/additionalChainRegistry/list";
 
 export async function getStaticProps({ params }) {
-  const [chains, chainTvls, thirdWebRpcs] = await Promise.all([
+  const [chains, chainTvls] = await Promise.all([
     fetcher("https://chainid.network/chains.json"),
     fetcher("https://api.llama.fi/chains"),
-    fetcher("https://api.thirdweb.com/v1/chains/")
-      .then((r) => r.data)
-      .catch(() => []),
   ]);
 
 
@@ -43,7 +40,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       chain: chain
-        ? populateChain(chain, chainTvls, thirdWebRpcs.find((c) => c.chainId === chain.chainId)?.rpc ?? [])
+        ? populateChain(chain, chainTvls)
         : null,
       // messages: (await import(`../../../translations/${locale}.json`)).default,
     },

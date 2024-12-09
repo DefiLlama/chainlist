@@ -22,25 +22,13 @@ function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
-export function populateChain(chain, chainTvls, thirdWebRpcs) {
+export function populateChain(chain, chainTvls) {
   let rpcs = (allExtraRpcs[chain.chainId]?.rpcs ?? []).map(removeEndingSlashObject);
 
   for (const rpcUrl of chain.rpc) {
     const rpc = removeEndingSlashObject(rpcUrl);
 
     if (!rpc.url.includes("${INFURA_API_KEY}") && !rpcs.find((r) => r.url === rpc.url)) {
-      rpcs = [...rpcs, rpc];
-    }
-  }
-
-  for (const rpcUrl of thirdWebRpcs) {
-    const rpc = removeEndingSlashObject(rpcUrl);
-
-    if (
-      !rpc.url.includes("${INFURA_API_KEY}") &&
-      !rpc.url.includes("${THIRDWEB_API_KEY}") &&
-      !rpcs.find((r) => r.url === rpc.url)
-    ) {
       rpcs = [...rpcs, rpc];
     }
   }

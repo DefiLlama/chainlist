@@ -8,12 +8,7 @@ export default async function handler(req, res) {
   const { chain: chainIdOrName } = req.query;
 
   if (req.method === "GET") {
-    const [chains, thirdWebRpcs] = await Promise.all(
-      fetcher("https://chainid.network/chains.json"),
-      fetcher("https://api.thirdweb.com/v1/chains/")
-        .then((r) => r.data)
-        .catch(() => []),
-    );
+    const chains = await fetcher("https://chainid.network/chains.json")
 
     let chain =
       overwrittenChains.find(
@@ -24,7 +19,7 @@ export default async function handler(req, res) {
       return res.status(404).json({ message: "chain not found" });
     }
 
-    chain = populateChain(chain, chainTvls, thirdWebRpcs.find((c) => c.chainId === chain.chainId)?.rpc ?? []);
+    chain = populateChain(chain, chainTvls);
 
     const llamaNodesRpc = llamaNodesRpcs[chain.chainId] ?? null;
 
