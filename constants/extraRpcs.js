@@ -1991,6 +1991,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://worldchain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://worldchain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   4801: {
@@ -2962,6 +2972,16 @@ export const extraRpcs = {
         url: "https://viction.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://viction.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://viction.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -6293,7 +6313,19 @@ export const extraRpcs = {
     rpcs: ["https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"],
   },
   388: {
-    rpcs: ["https://mainnet.zkevm.cronos.org"],
+    rpcs: [
+      "https://mainnet.zkevm.cronos.org",
+      {
+        url: "https://cronos-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://cronos-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   20230825: {
     rpcs: [
@@ -6714,6 +6746,20 @@ export const extraRpcs = {
         url: "https://testnet-rpc.usecorn.com",
         tracking: "none",
         trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
+  543210: {
+    rpcs: [
+      {
+        url: "https://zero.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zero.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
