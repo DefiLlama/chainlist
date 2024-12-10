@@ -179,6 +179,8 @@ const privacyStatement = {
   numa: "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers, and other diagnostic data. Check out our Terms of use: https://app.numa.network/terms-of-use/ and Privacy Policy: https://app.numa.network/privacy-policy/",
   Histori:
     "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
+  MemeCore:
+    "We do not log, store, or track any user data without consent with exception of data publicly available on chain.",
 };
 
 export const extraRpcs = {
@@ -6749,8 +6751,23 @@ export const extraRpcs = {
       },
     ],
   },
+  43521: {
+    rpcs: [
+      {
+        url: "https://rpc.formicarium.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+      {
+        url: "wss://ws.formicarium.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+    ],
+  },
   543210: {
     rpcs: [
+      "https://rpc.zerion.io/v1/zero",
       {
         url: "https://zero.drpc.org",
         tracking: "none",
