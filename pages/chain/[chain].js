@@ -11,9 +11,11 @@ import chainIds from "../../constants/chainIds.js";
 import { overwrittenChains } from "../../constants/additionalChainRegistry/list";
 
 export async function getStaticProps({ params }) {
-  const chains = await fetcher("https://chainid.network/chains.json");
+  const [chains, chainTvls] = await Promise.all([
+    fetcher("https://chainid.network/chains.json"),
+    fetcher("https://api.llama.fi/chains")
+  ]);
 
-  const chainTvls = await fetcher("https://api.llama.fi/chains");
 
   const chain =
     overwrittenChains.find(
@@ -37,7 +39,9 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      chain: chain ? populateChain(chain, chainTvls) : null,
+      chain: chain
+        ? populateChain(chain, chainTvls)
+        : null,
       // messages: (await import(`../../translations/${locale}.json`)).default,
     },
     revalidate: 3600,
