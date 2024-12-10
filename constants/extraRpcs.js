@@ -1991,6 +1991,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://sparkling-autumn-dinghy.worldchain-mainnet.quiknode.pro",
     ],
   },
   4801: {
