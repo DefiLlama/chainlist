@@ -1983,6 +1983,7 @@ export const extraRpcs = {
   480: {
     rpcs: [
       "https://worldchain-mainnet.g.alchemy.com/public",
+      "https://sparkling-autumn-dinghy.worldchain-mainnet.quiknode.pro",
       "https://480.rpc.thirdweb.com",
       "https://worldchain-mainnet.gateway.tenderly.co",
       "wss://worldchain-mainnet.gateway.tenderly.co",
