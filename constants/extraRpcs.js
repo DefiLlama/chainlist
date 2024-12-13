@@ -6726,6 +6726,11 @@ export const extraRpcs = {
   21000000: {
     rpcs: [
       {
+        url: "https://mainnet.corn-rpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
         url: "https://rpc.ankr.com/corn_maizenet",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -6739,6 +6744,11 @@ export const extraRpcs = {
   },
   21000001: {
     rpcs: [
+      {
+        url: "https://testnet.corn-rpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
       {
         url: "https://rpc.ankr.com/corn_testnet",
         tracking: "none",

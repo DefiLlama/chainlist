@@ -142,6 +142,7 @@ export default {
   "888888": "vision",
   "7225878": "saakuru",
   "7777777": "zora",
+  "21000000": "corn",
   "245022934": "neon",
   "1313161554": "aurora",
   "1666600000": "harmony",
