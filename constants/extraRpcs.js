@@ -6775,6 +6775,10 @@ export const extraRpcs = {
       },
     ],
   },
+   1480: {
+    rpcs: ["https://rpc.vana.org"],
+     rpcs: ["https://islander-vana-rpc.spidernode.net"],
+  },
   543210: {
     rpcs: [
       "https://rpc.zerion.io/v1/zero",
