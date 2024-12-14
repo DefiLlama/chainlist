@@ -6436,6 +6436,10 @@ export const extraRpcs = {
       },
     ],
   },
+
+
+
+
   16600: {
     rpcs: [
       "https://rpc-testnet.0g.ai",
@@ -6775,6 +6779,13 @@ export const extraRpcs = {
       },
     ],
   },
+
+1480: {
+    rpcs: ["https://rpc.vana.org"],
+    rpcs: ["https://evm-rpc-vana.josephtran.xyz"],
+    rpcs: ["https://evm-rpc-vana.j-node.net"],
+  },
+
   543210: {
     rpcs: [
       "https://rpc.zerion.io/v1/zero",
