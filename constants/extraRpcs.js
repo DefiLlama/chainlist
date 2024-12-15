@@ -179,6 +179,8 @@ const privacyStatement = {
   numa: "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers, and other diagnostic data. Check out our Terms of use: https://app.numa.network/terms-of-use/ and Privacy Policy: https://app.numa.network/privacy-policy/",
   Histori:
     "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
+  MemeCore:
+    "We do not log, store, or track any user data without consent with exception of data publicly available on chain.",
 };
 
 export const extraRpcs = {
@@ -1992,6 +1994,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://sparkling-autumn-dinghy.worldchain-mainnet.quiknode.pro",
+      {
+        url: "https://worldchain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://worldchain.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   4801: {
@@ -2963,6 +2975,16 @@ export const extraRpcs = {
         url: "https://viction.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://viction.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://viction.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -6294,7 +6316,19 @@ export const extraRpcs = {
     rpcs: ["https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"],
   },
   388: {
-    rpcs: ["https://mainnet.zkevm.cronos.org"],
+    rpcs: [
+      "https://mainnet.zkevm.cronos.org",
+      {
+        url: "https://cronos-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://cronos-zkevm.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   20230825: {
     rpcs: [
@@ -6403,6 +6437,10 @@ export const extraRpcs = {
       },
     ],
   },
+
+
+
+
   16600: {
     rpcs: [
       "https://rpc-testnet.0g.ai",
@@ -6693,6 +6731,11 @@ export const extraRpcs = {
   21000000: {
     rpcs: [
       {
+        url: "https://mainnet.corn-rpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
         url: "https://rpc.ankr.com/corn_maizenet",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -6707,6 +6750,11 @@ export const extraRpcs = {
   21000001: {
     rpcs: [
       {
+        url: "https://testnet.corn-rpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
         url: "https://rpc.ankr.com/corn_testnet",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -6715,6 +6763,45 @@ export const extraRpcs = {
         url: "https://testnet-rpc.usecorn.com",
         tracking: "none",
         trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
+  43521: {
+    rpcs: [
+      {
+        url: "https://rpc.formicarium.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+      {
+        url: "wss://ws.formicarium.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+    ],
+  },
+
+1480: {
+    rpcs: [
+      "https://rpc.vana.org",
+      "https://evm-rpc-vana.josephtran.xyz",
+      "https://evm-rpc-vana.j-node.net",
+      "https://islander-vana-rpc.spidernode.net"
+    ],
+  },
+
+  543210: {
+    rpcs: [
+      "https://rpc.zerion.io/v1/zero",
+      {
+        url: "https://zero.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zero.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
