@@ -135,6 +135,7 @@ export default {
   "111188": "real",
   "167000": "taiko",
   "200901": "bitlayer",
+  "222222": "hydration",
   "333999": "polis",
   "534352": "scroll",
   "420420": "kekchain",
