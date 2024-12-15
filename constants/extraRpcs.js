@@ -6781,9 +6781,12 @@ export const extraRpcs = {
   },
 
 1480: {
-    rpcs: ["https://rpc.vana.org"],
-    rpcs: ["https://evm-rpc-vana.josephtran.xyz"],
-    rpcs: ["https://evm-rpc-vana.j-node.net"],
+    rpcs: [
+      "https://rpc.vana.org",
+      "https://evm-rpc-vana.josephtran.xyz",
+      "https://evm-rpc-vana.j-node.net",
+      "https://islander-vana-rpc.spidernode.net"
+    ],
   },
 
   543210: {
