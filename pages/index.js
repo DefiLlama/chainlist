@@ -22,7 +22,9 @@ function Home({ chains }) {
   const [chainName, setChainName] = React.useState("");
 
   const router = useRouter();
-  const { testnets, testnet, searchh } = router.query;
+  const { testnets, testnet, search } = router.query;
+
+  const chainToFilter = search?.length > 0 && chainName.length === 0 ? search : chainName;
 
   const includeTestnets =
     (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
@@ -42,15 +44,17 @@ function Home({ chains }) {
     : chains;
 
   const filteredChains =
-    !chainName || typeof chainName !== "string" || chainName === ""
+    !chainToFilter || typeof chainToFilter !== "string" || chainToFilter === ""
       ? sortedChains
       : sortedChains.filter((chain) => {
           //filter
           return (
-            chain.chain.toLowerCase().includes(chainName.toLowerCase()) ||
-            chain.chainId.toString().toLowerCase().includes(chainName.toLowerCase()) ||
-            chain.name.toLowerCase().includes(chainName.toLowerCase()) ||
-            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(chainName.toLowerCase())
+            chain.chain.toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            chain.chainId.toString().toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            chain.name.toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
+              .toLowerCase()
+              .includes(chainToFilter.toLowerCase())
           );
         });
 

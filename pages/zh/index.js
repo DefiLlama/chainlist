@@ -23,6 +23,8 @@ function Home({ chains }) {
   const router = useRouter();
   const { testnets, testnet, search } = router.query;
 
+  const chainToFilter = search?.length > 0 && chainName.length === 0 ? search : chainName;
+
   const includeTestnets =
     (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
 
@@ -41,18 +43,19 @@ function Home({ chains }) {
     : chains;
 
   const filteredChains =
-    !search || typeof search !== "string" || search === ""
+    !chainToFilter || typeof chainToFilter !== "string" || chainToFilter === ""
       ? sortedChains
       : sortedChains.filter((chain) => {
           //filter
           return (
-            chain.chain.toLowerCase().includes(search.toLowerCase()) ||
-            chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
-            chain.name.toLowerCase().includes(search.toLowerCase()) ||
-            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(search.toLowerCase())
+            chain.chain.toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            chain.chainId.toString().toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            chain.name.toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
+              .toLowerCase()
+              .includes(chainToFilter.toLowerCase())
           );
         });
-
   return (
     <>
       <Head>

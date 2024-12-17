@@ -44,33 +44,58 @@ function Header({ lang, chainName, setChainName }) {
               <span className="font-bold text-sm dark:text-[#B3B3B3] text-black whitespace-nowrap px-3 pt-4 sm:pt-0">
                 {t("search-networks")}
               </span>
-              <input
-                placeholder="ETH, Fantom, ..."
-                autoFocus
-                // defaultValue={search ?? ""}
-                // onKeyUp={(event) => {
-                //   clearTimeout(timeout.current);
-                //   timeout.current = setTimeout(() => {
-                //     router
-                //       .push(
-                //         {
-                //           pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
-                //           query: { ...router.query, search: event.target.value },
-                //         },
-                //         undefined,
-                //         { shallow: true },
-                //       )
-                //       .then(() => {
-                //         clearTimeout(timeout.current);
-                //       });
-                //   }, 100);
-                // }}
-                value={chainName}
-                onChange={(e) => {
-                  setChainName(e.target.value);
-                }}
-                className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
-              />
+              {setChainName ? (
+                <input
+                  placeholder="ETH, Fantom, ..."
+                  autoFocus
+                  value={chainName}
+                  onChange={(e) => {
+                    setChainName(e.target.value);
+                  }}
+                  onKeyUp={(event) => {
+                    clearTimeout(timeout.current);
+                    timeout.current = setTimeout(() => {
+                      router
+                        .push(
+                          {
+                            pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+                            query: { ...router.query, search: event.target.value },
+                          },
+                          undefined,
+                          { shallow: true },
+                        )
+                        .then(() => {
+                          clearTimeout(timeout.current);
+                        });
+                    }, 1000);
+                  }}
+                  className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
+                />
+              ) : (
+                <input
+                  placeholder="ETH, Fantom, ..."
+                  autoFocus
+                  defaultValue={search ?? ""}
+                  onKeyUp={(event) => {
+                    clearTimeout(timeout.current);
+                    timeout.current = setTimeout(() => {
+                      router
+                        .push(
+                          {
+                            pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+                            query: { ...router.query, search: event.target.value },
+                          },
+                          undefined,
+                          { shallow: true },
+                        )
+                        .then(() => {
+                          clearTimeout(timeout.current);
+                        });
+                    }, 100);
+                  }}
+                  className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
+                />
+              )}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
