@@ -93,10 +93,10 @@ function Home({ chains }) {
         </React.Suspense>
         {end - 1 < finalChains.length ? (
           <button
-            onClick={() => setEnd((prev) => prev + 10)}
+            onClick={() => setEnd(finalChains.length)}
             className="w-full border dark:border-[#171717] border-[#EAEAEA] px-4 py-2 rounded-[50px] mb-auto text-white bg-[#2F80ED] mx-auto"
           >
-            Show more
+            Show all
           </button>
         ) : null}
       </Layout>
