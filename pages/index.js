@@ -66,7 +66,7 @@ function Home({ chains }) {
     return finalChains;
   }, [includeTestnets, chainToFilter, chains]);
 
-  const [end, setEnd] = React.useState(11);
+  const [end, setEnd] = React.useState(15);
 
   return (
     <>
