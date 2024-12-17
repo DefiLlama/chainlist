@@ -27,30 +27,32 @@ function Header({ lang, chainName }) {
       { shallow: true },
     );
 
-  const [searchTerm, setSearchTerm] = React.useState(chainName);
-
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  const searchInput = React.useRef(null);
 
   React.useEffect(() => {
-    const handler = setTimeout(() => {
-      if ((!debouncedSearchTerm || debouncedSearchTerm === "") && (!search || search === "")) {
-        return;
-      }
+    let timeout = null;
 
-      router.push(
-        {
-          pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
-          query: { ...router.query, search: debouncedSearchTerm },
-        },
-        undefined,
-        { shallow: true },
-      );
-    }, 200);
+    const handler = () => {
+      clearTimeout(timeout);
 
-    return () => {
-      clearTimeout(handler);
+      timeout = setTimeout(function () {
+        if (searchInput.current) {
+          router.push(
+            {
+              pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+              query: { ...router.query, search: searchInput.current.value },
+            },
+            undefined,
+            { shallow: true },
+          );
+        }
+      }, 500);
     };
-  }, [debouncedSearchTerm]);
+
+    searchInput.current?.addEventListener("keyup", handler);
+
+    return () => searchInput.current?.removeEventListener("keyup", handler);
+  }, []);
 
   const { mutate: connectWallet } = useConnect();
 
@@ -69,9 +71,9 @@ function Header({ lang, chainName }) {
               </span>
               <input
                 placeholder="ETH, Fantom, ..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                ref={(input) => input && input.focus()}
+                defaultValue={search ?? ""}
+                autoFocus
+                ref={searchInput}
                 className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
               />
               <svg
