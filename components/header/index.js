@@ -7,7 +7,7 @@ import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
 
-function Header({ lang }) {
+function Header({ lang, chainName, setChainName }) {
   const t = useTranslations("Common", lang);
 
   const router = useRouter();
@@ -47,23 +47,27 @@ function Header({ lang }) {
               <input
                 placeholder="ETH, Fantom, ..."
                 autoFocus
-                defaultValue={search ?? ""}
-                onKeyUp={(event) => {
-                  clearTimeout(timeout.current);
-                  timeout.current = setTimeout(() => {
-                    router
-                      .push(
-                        {
-                          pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
-                          query: { ...router.query, search: event.target.value },
-                        },
-                        undefined,
-                        { shallow: true },
-                      )
-                      .then(() => {
-                        clearTimeout(timeout.current);
-                      });
-                  }, 200);
+                // defaultValue={search ?? ""}
+                // onKeyUp={(event) => {
+                //   clearTimeout(timeout.current);
+                //   timeout.current = setTimeout(() => {
+                //     router
+                //       .push(
+                //         {
+                //           pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+                //           query: { ...router.query, search: event.target.value },
+                //         },
+                //         undefined,
+                //         { shallow: true },
+                //       )
+                //       .then(() => {
+                //         clearTimeout(timeout.current);
+                //       });
+                //   }, 100);
+                // }}
+                value={chainName}
+                onChange={(e) => {
+                  setChainName(e.target.value);
                 }}
                 className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
               />

@@ -18,6 +18,8 @@ export async function getStaticProps() {
 }
 
 function Home({ chains }) {
+  const [chainName, setChainName] = React.useState("");
+
   const router = useRouter();
   const { testnets, testnet, search } = router.query;
 
@@ -62,7 +64,7 @@ function Home({ chains }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout lang="zh">
+      <Layout lang="zh" chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
             {filteredChains.map((chain) => (
