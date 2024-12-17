@@ -23,7 +23,7 @@ const initTheme = () => {
   }
 };
 
-export default function Layout({ children, lang }) {
+export default function Layout({ children, lang, chainName, setChainName }) {
   useEffect(() => {
     initTheme();
   }, []);
@@ -124,8 +124,7 @@ export default function Layout({ children, lang }) {
         </div>
       </div>
       <div className="dark:bg-[#181818] bg-[#f3f3f3] p-5 relative flex flex-col gap-5">
-        <Header lang={lang} />
-
+        <Header lang={lang} chainName={chainName} setChainName={setChainName} />
         {children}
       </div>
     </div>
