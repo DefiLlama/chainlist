@@ -2,7 +2,7 @@ import * as React from "react";
 import { useRouter } from "next/router";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
-import { formatAddress, getProvider, useDebounce } from "../../utils";
+import { formatAddress, getProvider } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
@@ -27,32 +27,7 @@ function Header({ lang, chainName }) {
       { shallow: true },
     );
 
-  const searchInput = React.useRef(null);
-
-  React.useEffect(() => {
-    let timeout = null;
-
-    const handler = () => {
-      clearTimeout(timeout);
-
-      timeout = setTimeout(function () {
-        if (searchInput.current) {
-          router.push(
-            {
-              pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
-              query: { ...router.query, search: searchInput.current.value },
-            },
-            undefined,
-            { shallow: true },
-          );
-        }
-      }, 500);
-    };
-
-    searchInput.current?.addEventListener("keyup", handler);
-
-    return () => searchInput.current?.removeEventListener("keyup", handler);
-  }, []);
+  const timeout = React.useRef(null);
 
   const { mutate: connectWallet } = useConnect();
 
@@ -71,9 +46,25 @@ function Header({ lang, chainName }) {
               </span>
               <input
                 placeholder="ETH, Fantom, ..."
-                defaultValue={search ?? ""}
                 autoFocus
-                ref={searchInput}
+                defaultValue={search ?? ""}
+                onKeyUp={(event) => {
+                  clearTimeout(timeout.current);
+                  timeout.current = setTimeout(() => {
+                    router
+                      .push(
+                        {
+                          pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+                          query: { ...router.query, search: event.target.value },
+                        },
+                        undefined,
+                        { shallow: true },
+                      )
+                      .then(() => {
+                        clearTimeout(timeout.current);
+                      });
+                  }, 1000);
+                }}
                 className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
               />
               <svg
