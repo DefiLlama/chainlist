@@ -7,7 +7,7 @@ import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
 
-function Header({ lang, chainName }) {
+function Header({ lang }) {
   const t = useTranslations("Common", lang);
 
   const router = useRouter();
@@ -63,7 +63,7 @@ function Header({ lang, chainName }) {
                       .then(() => {
                         clearTimeout(timeout.current);
                       });
-                  }, 1000);
+                  }, 200);
                 }}
                 className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
               />
