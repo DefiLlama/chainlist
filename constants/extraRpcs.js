@@ -3177,6 +3177,7 @@ export const extraRpcs = {
     rpcs: [
       "https://erpc.apothem.network",
       "https://apothem.xdcrpc.com",
+      "https://rpc.ankr.com/xdc_testnet",
       "https://earpc.apothem.network/",
       "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
