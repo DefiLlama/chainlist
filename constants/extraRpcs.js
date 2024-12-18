@@ -6822,11 +6822,6 @@ export const extraRpcs = {
       },
     ],
   },
-  57073: {
-    rpcs: [
-      "https://rpc-gel.inkonchain.com/"
-    ]
-  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
