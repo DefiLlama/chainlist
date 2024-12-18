@@ -127,6 +127,7 @@ export default {
   "52014": "etn",
   "55555": "reichain",
   "56288": "boba_bnb",
+  "57073": "ink",
   "59144": "linea",
   "60808": "bob",
   "71402": "godwoken",
