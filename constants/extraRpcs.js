@@ -1570,6 +1570,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://arbnova-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://${QUICKNODE_IDENTIFIER}.nova-mainnet.quiknode.pro/${QUICKNODE_API_KEY}",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
+      {
+        url: "https://docs-demo.nova-mainnet.quiknode.pro",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
     ],
   },
   421614: {
@@ -6439,9 +6454,6 @@ export const extraRpcs = {
     ],
   },
 
-
-
-
   16600: {
     rpcs: [
       "https://rpc-testnet.0g.ai",
@@ -6666,14 +6678,14 @@ export const extraRpcs = {
       },
     ],
   },
-30311: {
+  30311: {
     rpcs: [
       {
         url: "https://dream-rpc.somnia.network",
         tracking: "none",
         trackingDetails: privacyStatement.somnia,
-      }
-    ]
+      },
+    ],
   },
   763373: {
     rpcs: ["https://rpc-gel-sepolia.inkonchain.com", "wss://ws-gel-sepolia.inkonchain.com"],
@@ -6715,7 +6727,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-{
+      {
         url: "wss://apechain.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -6799,12 +6811,12 @@ export const extraRpcs = {
     ],
   },
 
-1480: {
+  1480: {
     rpcs: [
       "https://rpc.vana.org",
       "https://evm-rpc-vana.josephtran.xyz",
       "https://evm-rpc-vana.j-node.net",
-      "https://islander-vana-rpc.spidernode.net"
+      "https://islander-vana-rpc.spidernode.net",
     ],
   },
 
