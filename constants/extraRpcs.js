@@ -6677,6 +6677,14 @@ export const extraRpcs = {
   763373: {
     rpcs: ["https://rpc-gel-sepolia.inkonchain.com", "wss://ws-gel-sepolia.inkonchain.com"],
   },
+  57073: {
+    rpcs: [
+      "https://rpc-gel.inkonchain.com",
+      "https://rpc-qnd.inkonchain.com",
+      "wss://rpc-gel.inkonchain.com",
+      "wss://rpc-qnd.inkonchain.com"
+    ],
+  },
   3441006: {
     rpcs: [
       "https://pacific-rpc.sepolia-testnet.manta.network/http",
