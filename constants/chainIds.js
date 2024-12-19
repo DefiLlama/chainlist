@@ -34,6 +34,7 @@ export default {
   "148": "shimmer_evm",
   "151": "rbn",
   "169": "manta",
+  "177": "hsk",
   "196": "xlayer",
   "200": "xdaiarb",
   "204": "op_bnb",
