@@ -6819,7 +6819,6 @@ export const extraRpcs = {
       "https://islander-vana-rpc.spidernode.net",
     ],
   },
-
   543210: {
     rpcs: [
       "https://rpc.zerion.io/v1/zero",
@@ -6830,6 +6829,20 @@ export const extraRpcs = {
       },
       {
         url: "wss://zero.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  146: {
+    rpcs: [
+      {
+        url: "https://sonic.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://sonic.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
