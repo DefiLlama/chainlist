@@ -3531,7 +3531,7 @@ export const extraRpcs = {
   },
   1001: {
     rpcs: [
-      "https://public-en.kairos.node.kaia.io",
+      "https://public-en-kairos.node.kaia.io",
       {
         url: "https://responsive-green-emerald.kaia-kairos.quiknode.pro/",
         tracking: "yes",
