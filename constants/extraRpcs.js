@@ -6836,6 +6836,7 @@ export const extraRpcs = {
   },
   146: {
     rpcs: [
+      "https://rpc.soniclabs.com",
       {
         url: "https://sonic.drpc.org",
         tracking: "none",
