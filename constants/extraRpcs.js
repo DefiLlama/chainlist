@@ -6066,6 +6066,15 @@ export const extraRpcs = {
   988207: {
     rpcs: ["https://mainnet-rpc.ecroxscan.com"],
   },
+  7865: {
+    rpcs: [
+      {
+        url: "https://rpc.powerloom.network",
+        tracking: "yes",
+        trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
   17071: {
     rpcs: [
       {

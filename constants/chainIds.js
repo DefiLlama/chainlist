@@ -98,6 +98,7 @@ export default {
   "7171": "bitrock",
   "7560": "cyeth",
   "7700": "canto",
+  "7865": "powerloom",
   "8217": "klaytn",
   "8428": "that",
   "8453": "base",
