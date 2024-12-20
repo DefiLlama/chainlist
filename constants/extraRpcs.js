@@ -2519,6 +2519,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://rpc.ankr.com/telos",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "wss://rpc.ankr.com/telos/ws/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
     ],
   },
   41: {
@@ -6849,6 +6858,30 @@ export const extraRpcs = {
         url: "wss://sonic.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.ankr.com/sonic_mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "wss://rpc.ankr.com/sonic_mainnet/ws/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  57054: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/sonic_blaze_testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "wss://rpc.ankr.com/sonic_blaze_testnet/ws",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ankr,
       },
     ],
   },
