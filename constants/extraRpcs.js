@@ -6879,6 +6879,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "wss://sonic.callstaticrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.callstatic,
+      },
     ],
   },
   57054: {
