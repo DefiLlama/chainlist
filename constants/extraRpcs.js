@@ -2528,6 +2528,7 @@ export const extraRpcs = {
         url: "wss://rpc.ankr.com/telos/ws/",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      }
     ],
   },
   41: {
