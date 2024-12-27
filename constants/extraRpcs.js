@@ -6900,6 +6900,12 @@ export const extraRpcs = {
       },
     ],
   },
+  1514: {
+    rpcs: [
+      "https://mainnet.storyrpc.io",
+      "https://story-evm-rpc.spidernode.net",
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
