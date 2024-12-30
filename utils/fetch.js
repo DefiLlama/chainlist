@@ -22,7 +22,7 @@ function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
-export function populateChain(chain, chainTvls) {
+export const populateChain = (chain, chainTvls) => {
   let rpcs = (allExtraRpcs[chain.chainId]?.rpcs ?? []).map(removeEndingSlashObject);
 
   for (const rpcUrl of chain.rpc) {

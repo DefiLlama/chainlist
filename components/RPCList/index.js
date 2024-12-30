@@ -12,6 +12,7 @@ import useAccount from "../../hooks/useAccount";
 import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
 
 export default function RPCList({ chain, lang }) {
+  const t = useTranslations("Common", lang);
   const [sortChains, setSorting] = useState(true);
 
   const urlToData = chain.rpc.reduce((all, c) => ({ ...all, [c.url]: c }), {});
@@ -108,34 +109,25 @@ export default function RPCList({ chain, lang }) {
         </caption>
         <thead>
           <tr>
-            <th className="px-3 py-1 font-medium border">RPC Server Address</th>
-            <th className="px-3 py-1 font-medium border">Height</th>
-            <th className="px-3 py-1 font-medium border">Latency</th>
-            <th className="px-3 py-1 font-medium border">Score</th>
-            <th className="px-3 py-1 font-medium border">Privacy</th>
-            <th className="px-3 py-1 font-medium border"></th>
+            <th>RPC Server Address</th>
+            <th>Height</th>
+            <th>Latency</th>
+            <th>Score</th>
+            <th>Privacy</th>
+            <th></th>
           </tr>
         </thead>
-
         <tbody>
-          {rpcData.map((item, index) => {
-            let className = "bg-inherit";
-
-            if (hasLlamaNodesRpc && index === 0) {
-              className = "dark:bg-[#0D0D0D] bg-[#F9F9F9]";
-            }
-
-            return (
-              <Row
-                values={item}
-                chain={chain}
-                key={"rpc" + index}
-                privacy={urlToData[item.data.url]}
-                lang={lang}
-                className={className}
-              />
-            );
-          })}
+          {chain.rpc.map((rpc, idx) => (
+            <Row
+              values={data[idx]}
+              chain={chain}
+              key={"rpc" + idx}
+              privacy={urlToData[rpc.url]}
+              lang={lang}
+              className={hasLlamaNodesRpc && idx === 0 ? "dark:bg-[#0D0D0D] bg-[#F9F9F9]" : "bg-inherit"}
+            />
+          ))}
         </tbody>
       </table>
     </div>
