@@ -6473,6 +6473,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      "https://story-odyssey-rpc.auranode.xyz",
     ],
   },
 
