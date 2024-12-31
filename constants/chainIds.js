@@ -31,6 +31,7 @@ export default {
   "122": "fuse",
   "128": "heco",
   "137": "polygon",
+  "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",
   "169": "manta",
