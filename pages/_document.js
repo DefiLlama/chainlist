@@ -1,17 +1,44 @@
-/* eslint-disable react/jsx-filename-extension */
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import Document, { Head, Main, NextScript, Html } from "next/document";
+import Script from "next/script";
+import React from "react";
+import { HYPELAB_API_URL, HYPELAB_PROPERTY_SLUG } from "../constants/hypelab";
 
-export default class MyDocument extends Document {
+const LANGUAGES = ["en", "zh"];
+
+function presetTheme() {
+  const dark = localStorage.getItem("theme") === "dark";
+
+  if (dark) {
+    document.body.classList.add("dark");
+  }
+}
+
+const themeScript = `(() => { ${presetTheme.toString()}; presetTheme() })()`;
+
+class MyDocument extends Document {
   render() {
+    const pathPrefix = this.props.__NEXT_DATA__.page.split("/")[1];
+    const lang = LANGUAGES.indexOf(pathPrefix) !== -1 ? pathPrefix : LANGUAGES[0];
+
     return (
-      <Html lang="en">
-        <Head>
-          <link rel="stylesheet" href="/fonts/Inter/Inter.css" />
-          <link rel="stylesheet" href="/fonts/Druk/Druk.css" />
-        </Head>
+      <Html lang={lang}>
+        <Head />
         <body>
+          <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+          <Script
+            id="hypelab"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `!(function (h, y, p, e, l, a, b) {
+                ((l = document.createElement(h)).async = !0),
+                  (l.src = y),
+                  (l.onload = function () {
+                    (a = { URL: p, propertySlug: e, environment: '<environment>' }), HypeLab.initialize(a);
+                  }),
+                  (b = document.getElementsByTagName(h)[0]).parentNode.insertBefore(l, b);
+              })('script', 'https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0', '${HYPELAB_API_URL}', '${HYPELAB_PROPERTY_SLUG}');`,
+            }}
+          />
           <Main />
           <NextScript />
         </body>
@@ -20,23 +47,4 @@ export default class MyDocument extends Document {
   }
 }
 
-// `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with server-side generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
-
-  // Render app and page and get the context of the page with collected side effects.
-  const sheets = new ServerStyleSheets();
-  const originalRenderPage = ctx.renderPage;
-
-  ctx.renderPage = () => originalRenderPage({
-    enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-  });
-
-  const initialProps = await Document.getInitialProps(ctx);
-
-  return {
-    ...initialProps,
-    // Styles fragment is rendered after the app and page rendering finish.
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
-  };
-};
+export default MyDocument;

@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/top-rpcs/:path*",
+      "destination": "/chain/:path*",
+      "type": 308
+    },
+    {
+      "source": "/best-rpcs/:path*",
+      "destination": "/chain/:path*",
+      "type": 308
+    },
+    {
+      "source": "/_next/image**",
+      "destination": "https://icons.llamao.fi/icons/misc/sus-chainlist",
+      "type": 302
+    }
+  ],
+  "directoryListing": false
+}
