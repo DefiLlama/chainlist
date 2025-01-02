@@ -2293,6 +2293,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+     {
+        url: "https://metis.rpc.hypersync.xyz/",
+        tracking: "none",
+        trackingDetails: privacyStatement.envio,
+     },
     ],
   },
   1246: {
