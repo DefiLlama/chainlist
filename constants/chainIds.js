@@ -70,6 +70,7 @@ export default {
   "1101": "polygon zkevm",
   "1116": "core",
   "1135": "lisk",
+  "1229": "Nexis Network",
   "1231": "ultron",
   "1234": "step",
   "1284": "moonbeam",
@@ -78,6 +79,7 @@ export default {
   "1559": "tenet",
   "1625": "gravity",
   "1729": "reya network",
+  "1916": "Spark Testnet"
   "1975": "onus",
   "1992": "hubblenet",
   "1996": "sanko",
