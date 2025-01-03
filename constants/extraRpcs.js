@@ -2293,6 +2293,55 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://metis.rpc.hypersync.xyz/",  
+        tracking: "none",
+        trackingDetails: privacyStatement.envio,
+      },
+      {
+        url: "https://metis-pokt.nodies.app/",  
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm", 
+        tracking: "none",
+        trackingDetails: privacyStatement.blockeden,
+      },
+      {
+        url: "https://metis-andromeda.rpc.thirdweb.com/",  
+        tracking: "limited",
+        trackingDetails: privacyStatement.thirdweb,
+      },
+      {
+        url: "https://metis-andromeda.gateway.tenderly.co",  
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
+    ],
+  },
+  59902: {
+    rpcs: [
+      {
+        url: "wss://metis-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://metis-sepolia-rpc.publicnode.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://sepolia.metisdevops.link",
+        tracking: "none",
+        trackingDetails: privacyStatement.metisdevops,
+      },
+      {
+        url: "https://metis-sepolia.gateway.tenderly.co",  
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   1246: {
