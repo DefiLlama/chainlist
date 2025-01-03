@@ -3558,11 +3558,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://klaytn.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://node.histori.xyz/kaia-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
