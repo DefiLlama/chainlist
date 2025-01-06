@@ -153,4 +153,5 @@ export default {
   "11297108109": "palm",
   "383414847825": "zeniq",
   "836542336838601": "curio"
+   "21548": "curly sandman ethereum"
 }
