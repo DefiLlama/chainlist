@@ -2293,6 +2293,55 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://metis.rpc.hypersync.xyz/",  
+        tracking: "none",
+        trackingDetails: privacyStatement.envio,
+      },
+      {
+        url: "https://metis-pokt.nodies.app/",  
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm", 
+        tracking: "none",
+        trackingDetails: privacyStatement.blockeden,
+      },
+      {
+        url: "https://metis-andromeda.rpc.thirdweb.com/",  
+        tracking: "limited",
+        trackingDetails: privacyStatement.thirdweb,
+      },
+      {
+        url: "https://metis-andromeda.gateway.tenderly.co",  
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
+    ],
+  },
+  59902: {
+    rpcs: [
+      {
+        url: "wss://metis-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://metis-sepolia-rpc.publicnode.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://sepolia.metisdevops.link",
+        tracking: "none",
+        trackingDetails: privacyStatement.metisdevops,
+      },
+      {
+        url: "https://metis-sepolia.gateway.tenderly.co",  
+        tracking: "limited",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   1246: {
@@ -3556,11 +3605,6 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/klaytn_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://klaytn.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
       },
       {
         url: "https://node.histori.xyz/kaia-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
@@ -6474,7 +6518,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       "https://story-odyssey-rpc.auranode.xyz",
-      "https://evm-rpc.story.testnet.dteam.tech"
+      "https://evm-rpc.story.testnet.dteam.tech",
+      "https://evm-rpc-2.story.testnet.dteam.tech",
+      "https://evm-rpc-3.story.testnet.dteam.tech"
     ],
   },
 
@@ -6906,6 +6952,7 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.storyrpc.io",
       "https://story-evm-rpc.spidernode.net",
+      "https://evm-rpc.story.mainnet.dteam.tech"
     ],
   },
 };
