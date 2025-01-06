@@ -6518,6 +6518,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       "https://story-odyssey-rpc.auranode.xyz",
+      "https://evm-rpc.story.testnet.dteam.tech",
       "https://evm-rpc-2.story.testnet.dteam.tech",
       "https://evm-rpc-3.story.testnet.dteam.tech"
     ],
