@@ -6908,6 +6908,11 @@ export const extraRpcs = {
     ],
   },
 };
+21548
+rpc:[
+     "https://rpc.buildbear.io/curly-sandman-10c6e11a",
+   ],
+  },
+};
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
-
 export default allExtraRpcs;
