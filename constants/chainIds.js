@@ -86,6 +86,7 @@ export default {
   "2002": "milkomeda_a1",
   "2222": "kava",
   "2332": "soma",
+  "2410": "karak",
   "2818": "morph",
   "4337": "beam",
   "4689": "iotex",
