@@ -87,6 +87,7 @@ export default {
   "2222": "kava",
   "2332": "soma",
   "2818": "morph",
+  "4158": "crossfi",
   "4337": "beam",
   "4689": "iotex",
   "5000": "mantle",
