@@ -88,6 +88,7 @@ export default {
   "2332": "soma",
   "2410": "karak",
   "2818": "morph",
+  "4158": "crossfi",
   "4337": "beam",
   "4689": "iotex",
   "5000": "mantle",
