@@ -1,16 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import * as Fathom from "fathom-client";
-// import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
-import { useClipboard } from "../../hooks/useClipboard";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { FATHOM_DROPDOWN_EVENTS_ID } from "../../hooks/useAnalytics";
 import { useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
 import useAccount from "../../hooks/useAccount";
+import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
 
 export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
@@ -187,8 +186,8 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   return (
     <tr className={className}>
-      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
-        {isLoading ? <Shimmer /> : data?.url}
+      <td className="border px-3 py-1 max-w-[40ch]">
+        {isLoading ? <Shimmer /> : data?.url ? <CopyUrl url={data.url} /> : null}
       </td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
@@ -229,27 +228,6 @@ const Row = ({ values, chain, privacy, lang, className }) => {
         )}
       </td>
     </tr>
-  );
-};
-
-const CopyUrl = ({ url = "" }) => {
-  const { hasCopied, onCopy } = useClipboard();
-
-  const handleCopy = () => {
-    if (url.includes("eth.llamarpc")) {
-      Fathom.trackGoal(FATHOM_DROPDOWN_EVENTS_ID[1], 0);
-    }
-
-    return onCopy(url);
-  };
-
-  return (
-    <button
-      className="px-2 py-[2px] -my-[2px] text-sm dark:hover:bg-[#171717] hover:bg-[#EAEAEA] rounded-[50px] mx-auto"
-      onClick={handleCopy}
-    >
-      {!hasCopied ? "Copy URL" : "Copied!"}
-    </button>
   );
 };
 
@@ -298,3 +276,53 @@ const LightGreenIcon = () => (
     />
   </svg>
 );
+
+const CopyUrl = ({ url }) => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      setTimeout(() => {
+        setOpen(false);
+      }, 500);
+    }
+  }, [open]);
+
+  const popover = usePopoverStore({ placement: "bottom", open });
+
+  return (
+    <>
+      <PopoverDisclosure
+        store={popover}
+        render={
+          <button
+            className="max-w-[40ch] px-2 py-[2px] -my-[2px] text-center text-sm overflow-hidden whitespace-nowrap text-ellipsis dark:hover:bg-[#222222] dark:hover:text-white hover:bg-[#EAEAEA] rounded-[50px]"
+            onClick={() => {
+              navigator.clipboard.writeText(url).then(
+                () => {
+                  setOpen(true);
+                  if (url.includes("eth.llamarpc")) {
+                    Fathom.trackGoal(FATHOM_DROPDOWN_EVENTS_ID[1], 0);
+                  }
+                },
+                () => {
+                  console.error(`Failed to copy ${url}`);
+                },
+              );
+            }}
+          >
+            {url}
+          </button>
+        }
+      />
+      {popover.show ? (
+        <Popover
+          store={popover}
+          className="max-w-md p-1 text-sm border border-gray-500 rounded bg-neutral-50 text-black drop-shadow"
+        >
+          <p>Copied!</p>
+        </Popover>
+      ) : null}
+    </>
+  );
+};

@@ -2,12 +2,12 @@ import * as React from "react";
 import { useRouter } from "next/router";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
-import { formatAddress, getProvider, useDebounce } from "../../utils";
+import { formatAddress, getProvider } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
 
-function Header({ lang, chainName }) {
+function Header({ lang, chainName, setChainName }) {
   const t = useTranslations("Common", lang);
 
   const router = useRouter();
@@ -27,30 +27,7 @@ function Header({ lang, chainName }) {
       { shallow: true },
     );
 
-  const [searchTerm, setSearchTerm] = React.useState(chainName);
-
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
-
-  React.useEffect(() => {
-    const handler = setTimeout(() => {
-      if ((!debouncedSearchTerm || debouncedSearchTerm === "") && (!search || search === "")) {
-        return;
-      }
-
-      router.push(
-        {
-          pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
-          query: { ...router.query, search: debouncedSearchTerm },
-        },
-        undefined,
-        { shallow: true },
-      );
-    }, 200);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [debouncedSearchTerm]);
+  const timeout = React.useRef(null);
 
   const { mutate: connectWallet } = useConnect();
 
@@ -67,13 +44,58 @@ function Header({ lang, chainName }) {
               <span className="font-bold text-sm dark:text-[#B3B3B3] text-black whitespace-nowrap px-3 pt-4 sm:pt-0">
                 {t("search-networks")}
               </span>
-              <input
-                placeholder="ETH, Fantom, ..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                ref={(input) => input && input.focus()}
-                className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
-              />
+              {setChainName ? (
+                <input
+                  placeholder="ETH, Fantom, ..."
+                  autoFocus
+                  value={chainName}
+                  onChange={(e) => {
+                    setChainName(e.target.value);
+                  }}
+                  onKeyUp={(event) => {
+                    clearTimeout(timeout.current);
+                    timeout.current = setTimeout(() => {
+                      router
+                        .push(
+                          {
+                            pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+                            query: { ...router.query, search: event.target.value },
+                          },
+                          undefined,
+                          { shallow: true },
+                        )
+                        .then(() => {
+                          clearTimeout(timeout.current);
+                        });
+                    }, 1000);
+                  }}
+                  className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
+                />
+              ) : (
+                <input
+                  placeholder="ETH, Fantom, ..."
+                  autoFocus
+                  defaultValue={search ?? ""}
+                  onKeyUp={(event) => {
+                    clearTimeout(timeout.current);
+                    timeout.current = setTimeout(() => {
+                      router
+                        .push(
+                          {
+                            pathname: router.pathname.includes("/chain/") ? "/" : router.pathname,
+                            query: { ...router.query, search: event.target.value },
+                          },
+                          undefined,
+                          { shallow: true },
+                        )
+                        .then(() => {
+                          clearTimeout(timeout.current);
+                        });
+                    }, 100);
+                  }}
+                  className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
+                />
+              )}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
