@@ -8,7 +8,10 @@ export default async function handler(req, res) {
   const { chain: chainIdOrName } = req.query;
 
   if (req.method === "GET") {
-    const chains = await fetcher("https://chainid.network/chains.json");
+    const [chains, chainTvls] = await Promise.all([
+      fetcher("https://chainid.network/chains.json"),
+      fetcher("https://api.llama.fi/chains")
+    ]);
 
     let chain =
       overwrittenChains.find(
@@ -19,7 +22,7 @@ export default async function handler(req, res) {
       return res.status(404).json({ message: "chain not found" });
     }
 
-    chain = populateChain(chain, []);
+    chain = populateChain(chain, chainTvls);
 
     const llamaNodesRpc = llamaNodesRpcs[chain.chainId] ?? null;
 

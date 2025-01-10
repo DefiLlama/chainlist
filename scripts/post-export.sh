@@ -1,7 +1,7 @@
 #!/bin/sh
 
-node generate-sitemap.js
 sed -i '4 i "type": "module",' package.json
+node generate-sitemap.js
 node generate-json.js
 sed -i "4 d" package.json
 rm out/404.html

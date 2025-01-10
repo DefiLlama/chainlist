@@ -46,7 +46,7 @@ const llamas = LLAMAS_LIST.split(',').map((llama) => {
 })
 
 const formatMention = (name) => {
-	const id = llamas.find((llama) => llama.name === name).id
+	const id = llamas.find((llama) => llama.name === name)?.id
 	if (!id) {
 		return ''
 	} else {

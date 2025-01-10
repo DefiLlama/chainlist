@@ -18,8 +18,12 @@ export async function getStaticProps() {
 }
 
 function Home({ chains }) {
+  const [chainName, setChainName] = React.useState("");
+
   const router = useRouter();
   const { testnets, testnet, search } = router.query;
+
+  const chainToFilter = search?.length > 0 && chainName.length === 0 ? search : chainName;
 
   const includeTestnets =
     (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
@@ -39,18 +43,19 @@ function Home({ chains }) {
     : chains;
 
   const filteredChains =
-    !search || typeof search !== "string" || search === ""
+    !chainToFilter || typeof chainToFilter !== "string" || chainToFilter === ""
       ? sortedChains
       : sortedChains.filter((chain) => {
           //filter
           return (
-            chain.chain.toLowerCase().includes(search.toLowerCase()) ||
-            chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
-            chain.name.toLowerCase().includes(search.toLowerCase()) ||
-            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(search.toLowerCase())
+            chain.chain.toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            chain.chainId.toString().toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            chain.name.toLowerCase().includes(chainToFilter.toLowerCase()) ||
+            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "")
+              .toLowerCase()
+              .includes(chainToFilter.toLowerCase())
           );
         });
-
   return (
     <>
       <Head>
@@ -62,7 +67,7 @@ function Home({ chains }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout lang="zh">
+      <Layout lang="zh" chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
             {filteredChains.map((chain) => (
