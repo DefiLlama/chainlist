@@ -6606,7 +6606,9 @@ export const extraRpcs = {
     rpcs: ["https://mainnet-rpc.helachain.com"],
   },
   698: {
-    rpcs: ["https://rpc.matchain.io"],
+    rpcs: ["https://rpc.matchain.io",
+           "https://rpc.ankr.com/matchain_mainnet"
+    ],
   },
   251: {
     rpcs: [
