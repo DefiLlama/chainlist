@@ -5471,12 +5471,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://oasys-mainnet.rpc.grove.city/v1/167fa7a3",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3",
+        url: "https://oasys.rpc.grove.city/v1/167fa7a3",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
