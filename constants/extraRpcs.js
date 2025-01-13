@@ -6940,7 +6940,7 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.storyrpc.io",
       "https://story-evm-rpc.spidernode.net",
-      "https://evm-rpc.story.mainnet.dteam.tech"
+      "https://evm-rpc.story.mainnet.dteam.tech",
       "https://evm-rpc-story.j-node.net"
     ],
   },
