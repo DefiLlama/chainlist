@@ -78,6 +78,7 @@ export default {
   "1559": "tenet",
   "1625": "gravity",
   "1729": "reya network",
+  "1868": "soneium",
   "1975": "onus",
   "1992": "hubblenet",
   "1996": "sanko",
