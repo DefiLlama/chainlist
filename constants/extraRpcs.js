@@ -6746,14 +6746,37 @@ export const extraRpcs = {
     ],
   },
   763373: {
-    rpcs: ["https://rpc-gel-sepolia.inkonchain.com", "wss://ws-gel-sepolia.inkonchain.com"],
+    rpcs: [
+      "https://rpc-gel-sepolia.inkonchain.com",
+      "wss://ws-gel-sepolia.inkonchain.com",
+      {
+        url: "https://ink-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://ink-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   57073: {
     rpcs: [
       "https://rpc-gel.inkonchain.com",
       "https://rpc-qnd.inkonchain.com",
       "wss://rpc-gel.inkonchain.com",
-      "wss://rpc-qnd.inkonchain.com"
+      "wss://rpc-qnd.inkonchain.com",
+      {
+        url: "https://ink.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+       {
+        url: "wss://ink.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   3441006: {
