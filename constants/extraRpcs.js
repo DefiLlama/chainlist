@@ -6944,6 +6944,15 @@ export const extraRpcs = {
       "https://evm-rpc-story.j-node.net",
     ],
   },
+  3030: {
+    rpcs: [
+      {
+        url: "https://datahub-asia01.bchscan.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.bctech,
+      },
+    ],
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
