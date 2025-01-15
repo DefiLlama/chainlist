@@ -126,6 +126,7 @@ export default {
   "32659": "fusion",
   "32769": "zilliqa",
   "33139": "apechain",
+  "42070": "wmc",
   "42161": "arbitrum",
   "42170": "arbitrum nova",
   "42220": "celo",
