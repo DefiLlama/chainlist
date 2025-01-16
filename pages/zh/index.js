@@ -21,6 +21,8 @@ export async function getStaticProps() {
 function Home({ chains }) {
   const [chainName, setChainName] = React.useState("");
 
+  const t = useTranslations("Common");
+
   const router = useRouter();
   const { testnets, testnet, search } = router.query;
 
@@ -57,9 +59,6 @@ function Home({ chains }) {
               .includes(chainToFilter.toLowerCase())
           );
         });
-
-  const t = useTranslations("Common");
-
   return (
     <>
       <Head>
