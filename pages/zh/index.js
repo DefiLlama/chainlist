@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import Chain from "../../components/chain";
 import { generateChainData } from "../../utils/fetch";
+import { useTranslations } from "next-intl";
 
 export async function getStaticProps() {
   const sortedChains = await generateChainData();
@@ -56,6 +57,9 @@ function Home({ chains }) {
               .includes(chainToFilter.toLowerCase())
           );
         });
+
+  const t = useTranslations("Common");
+
   return (
     <>
       <Head>
