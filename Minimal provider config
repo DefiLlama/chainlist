@@ -1,0 +1,49 @@
+version: v1
+port: 12448
+host: 0.0.0.0
+ 
+tls:
+  enabled: true
+  server:
+    certificate: /path_to_ssl_certs/your_ssl_cert.crt
+    key: /path_to_ssl_certs/your_ssl_key.p8.key
+ 
+auth:
+  enabled: true
+  publicKeyOwner: drpc
+  server:
+    keys:
+      provider-private-key: /path_to_keys/private-provider-name.p8.key
+      external-public-key: /path_to_keys/public-drpc.pem
+ 
+cluster:
+  upstreams:
+    - id: ethnode1
+      chain: ethereum
+      method-groups:
+        enabled:
+          - trace
+          - filter #only if you are running nethermind or erigon node
+      connection:
+        ethereum-pos:
+          execution:
+            rpc:
+              url: "http://example2.com:8545"
+            ws:
+              url: "ws://example2.com:8545"
+    - id: ethnode2
+      chain: ethereum
+      labels:
+        archive: true
+      method-groups:
+        enabled:
+          - trace
+      connection:
+        ethereum-pos:
+          execution:
+            rpc:
+              url: "http://example1.com:8545"
+            ws:
+              frameSize: 20Mb
+              msgSize: 50Mb
+              url: "ws://example1.com:8545"
