@@ -1,0 +1,7 @@
+auth:
+  enabled: true
+  publicKeyOwner: drpc
+  server:
+    keys:
+      provider-private-key: /path_to_keys/private-provider-name.p8.key
+      external-public-key: /path_to_keys/public-drpc.pem
