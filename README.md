@@ -30,6 +30,12 @@ To check for funding information, run:
 npm fund
 ```
 
+To fix vulnerabilities, run:
+
+```bash
+npm audit fix
+```
+
 ## Adding your RPC
 
 If you wish to add your RPC, please follow this [PR template](https://github.com/DefiLlama/chainlist/blob/main/pull_request_template.md)
