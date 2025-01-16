@@ -1,5 +1,4 @@
-# This docker-compose.yaml file defines a service named `dshackle` that uses the `drpcorg/dshackle:latest` image.
-# It also maps volumes and ports as specified below.
+# This docker-compose file defines the services required to run the dshackle application
 
 version: "3"
 services:
@@ -7,7 +6,7 @@ services:
     container_name: dshackle
     image: drpcorg/dshackle:latest
     volumes:
-      - "./dshackle.yaml:/etc/dshackle/dshackle.yaml"
+      - "./config/dshackle.yaml:/etc/dshackle/dshackle.yaml"
       - "./ssl_certs:/path_to_ssl_certs"
       - "./keys:/path_to_keys"
     ports:
