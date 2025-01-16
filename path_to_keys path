@@ -1,0 +1,5 @@
+tls:
+  enabled: true
+  server:
+    certificate: /path_to_ssl_certs/your_ssl_cert.crt
+    key: /path_to_ssl_certs/your_ssl_key.p8.key
