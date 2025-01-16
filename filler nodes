@@ -1,0 +1,6 @@
+eth_newFilter
+eth_newBlockFilter
+eth_newPendingTransactionFilter
+eth_getFilterChanges
+eth_getFilterLogs
+eth_uninstallFilter
