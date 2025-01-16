@@ -1,0 +1,11 @@
+version: "3"
+services:
+  dshackle:
+    container_name: dshackle
+    image: drpcorg/dshackle:latest
+    volumes:
+      - "/path_to_config/dshackle.yaml:/etc/dshackle/dshackle.yaml"
+      - "/path_to_ssl_certs:/path_to_ssl_certs"
+      - "/path_to_keys:/path_to_keys"
+    ports:
+      - "12448:12448"
