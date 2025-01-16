@@ -184,10 +184,19 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
+  const isValidUrl = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  };
+
   return (
     <tr className={className}>
       <td className="border px-3 py-1 max-w-[40ch]">
-        {isLoading ? <Shimmer /> : data?.url ? <CopyUrl url={data.url} /> : null}
+        {isLoading ? <Shimmer /> : data?.url && isValidUrl(data.url) ? <CopyUrl url={data.url} /> : null}
       </td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
