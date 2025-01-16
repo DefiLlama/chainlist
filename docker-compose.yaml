@@ -1,4 +1,4 @@
-# Docker Compose file for running dshackle service
+# Docker Compose file for running the dshackle service
 
 version: "3"
 services:
