@@ -42,6 +42,12 @@ To check for vulnerabilities, run:
 npm audit
 ```
 
+To run tests, use the following command:
+
+```bash
+npm test
+```
+
 ## Adding your RPC
 
 If you wish to add your RPC, please follow this [PR template](https://github.com/DefiLlama/chainlist/blob/main/pull_request_template.md)
