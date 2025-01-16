@@ -184,6 +184,25 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
+  const isValidIconUrl = (url) => {
+    const img = new Image();
+    img.src = url;
+    return new Promise((resolve) => {
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+    });
+  };
+
+  const iconUrl = `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg`;
+
+  const [validIconUrl, setValidIconUrl] = useState(false);
+
+  useEffect(() => {
+    isValidIconUrl(iconUrl).then((isValid) => {
+      setValidIconUrl(isValid);
+    });
+  }, [iconUrl]);
+
   return (
     <tr className={className}>
       <td className="border px-3 py-1 max-w-[40ch]">
