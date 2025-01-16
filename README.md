@@ -6,6 +6,12 @@ First, install the dependencies:
 npm install
 ```
 
+Then, build the project:
+
+```bash
+npm run build
+```
+
 Then, run the development server:
 
 ```bash
