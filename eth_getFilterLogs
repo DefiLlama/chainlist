@@ -1,0 +1,14 @@
+id: ethnode2
+chain: ethereum
+method-groups:
+  enabled:
+    - filter 
+connection:
+  ethereum-pos:
+    execution:
+      rpc:
+        url: "http://example1.com:8545"
+      ws:
+        frameSize: 20Mb
+        msgSize: 50Mb
+        url: "ws://example1.com:8545"
