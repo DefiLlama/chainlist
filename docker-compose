@@ -1,0 +1,36 @@
+version: '3'
+services:
+  traefik:
+    image: traefik:latest
+    ports:
+      - "443:443"
+      - "12448:12448"
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.websecure.address=:443"
+      - "--entryPoints.grpc.address=:12448"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=$MAIL"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    volumes:
+      - "./traefik/letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+  dshackle:
+    image: drpcorg/dshackle:latest
+    volumes:
+      - "/path_to_config/dshackle.yaml:/etc/dshackle/dshackle.yaml"
+      - "/path_to_keys:/path_to_keys"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.drpc.loadbalancer.server.scheme=h2c"
+      - "traefik.http.services.drpc.loadbalancer.server.port=12448"
+      - "traefik.http.routers.drpc.entrypoints=grpc"
+      - "traefik.http.routers.drpc.tls.certresolver=myresolver"
+      - "traefik.http.routers.drpc.rule=Host(`$DOMAIN`)"
+Example of a Nginx configuration:
+
+location / {
+    set $host_grpc_pass "grpc://<dshackle-server-address>:<dshackle-server-port>";
+    grpc_pass $host_grpc_pass;
+}
