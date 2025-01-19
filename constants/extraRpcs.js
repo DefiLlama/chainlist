@@ -6523,7 +6523,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.originstake,
       },
       {
-        url: "https://og-testnet-rpc.itrocket.net",
+        url: "https://og-testnet-evm.itrocket.net",
         tracking: "none",
         trackingDetails: privacyStatement.itrocket,
       },
