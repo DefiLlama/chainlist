@@ -6522,6 +6522,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.originstake,
       },
+      {
+        url: "https://og-testnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
+      },
     ],
   },
   1740: {
