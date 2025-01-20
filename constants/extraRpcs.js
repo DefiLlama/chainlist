@@ -181,8 +181,6 @@ const privacyStatement = {
     "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
   MemeCore:
     "We do not log, store, or track any user data without consent with exception of data publicly available on chain.",
-  wmc:
-    "We do not store or track any user information (e.g., IP, location, wallet, etc.). All requests are processed without retaining any user data. Only on-chain data is handled, and no personal information is logged or shared."
 };
 
 export const extraRpcs = {
@@ -6957,11 +6955,7 @@ export const extraRpcs = {
   },
   42070: {
     rpcs: [
-      {
-        url: "https://rpc-testnet-base.worldmobile.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.wmc,
-      },
+      "https://rpc-testnet-base.worldmobile.net"
     ],
   }
 };
