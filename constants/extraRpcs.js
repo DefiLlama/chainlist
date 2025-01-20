@@ -6957,6 +6957,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bctech,
       },
     ],
+  },
+  42070: {
+    rpcs: [
+      "https://rpc-testnet-base.worldmobile.net"
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
