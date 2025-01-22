@@ -127,7 +127,7 @@ export default {
   "32659": "fusion",
   "32769": "zilliqa",
   "33139": "apechain",
-  "41923": "occ",
+  "41923": "edu chain",
   "42161": "arbitrum",
   "42170": "arbitrum nova",
   "42220": "celo",
