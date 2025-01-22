@@ -77,6 +77,7 @@ export default {
   "1234": "step",
   "1284": "moonbeam",
   "1285": "moonriver",
+  "1300": "glue",
   "1329": "sei",
   "1440": "living assets mainnet",
   "1559": "tenet",
