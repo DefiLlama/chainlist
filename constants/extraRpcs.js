@@ -6908,6 +6908,10 @@ export const extraRpcs = {
     ],
   },
 };
+ 10: {
+  rpc: [
+   "https://optimism.gateway.tenderly.co/lQeVOq1W9OkGogPc9eeM2"
+    "wss://optimism.gateway.tenderly.co/lQeVOq1W9OkGogPc9eeM2"
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
