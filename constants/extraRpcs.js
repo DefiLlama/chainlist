@@ -181,6 +181,8 @@ const privacyStatement = {
     "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
   MemeCore:
     "We do not log, store, or track any user data without consent with exception of data publicly available on chain.",
+  "0xRPC":
+    "We do not store any sent data nor any IPs or metadata. See https://github.com/0xRPC/0xRPC.github.io/blob/main/README.md#about as well",
 };
 
 export const extraRpcs = {
@@ -469,6 +471,16 @@ export const extraRpcs = {
         url: "https://eth1.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
+      },
+      {
+        url: "https://0xrpc.io/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -944,6 +956,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://0xrpc.io/bnb",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/bnb",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   97: {
@@ -1088,6 +1110,16 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/avalanche-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://0xrpc.io/avax",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/avax",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -1306,6 +1338,16 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/matic-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://0xrpc.io/pol",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/pol",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -2168,6 +2210,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://0xrpc.io/op",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/op",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   11155420: {
@@ -2413,6 +2465,16 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/gnosis-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://0xrpc.io/gno",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/gno",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -4657,6 +4719,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://0xrpc.io/base",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/base",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   11235: {
@@ -4929,6 +5001,16 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://0xrpc.io/sep",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/sep",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
