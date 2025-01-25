@@ -4238,6 +4238,9 @@ export const extraRpcs = {
       },
     ],
   },
+  7181: {
+    rpcs: ["https://rpc-sepolia.uxlinkone.com/"],
+  },
   7341: {
     rpcs: ["https://rpc.shyft.network/"],
   },
