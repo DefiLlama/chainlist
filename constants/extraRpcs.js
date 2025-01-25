@@ -182,7 +182,7 @@ const privacyStatement = {
   MemeCore:
     "We do not log, store, or track any user data without consent with exception of data publicly available on chain.",
   "0xRPC":
-    "We do not store any sent data nor any IPs or metadata. See https://github.com/0xRPC/0xRPC.github.io/blob/main/README.md#about as well",
+    "We do not store any sent data nor any IPs or metadata. See https://github.com/0xRPC/0xRPC.github.io/blob/main/README.md#about-tos-privacy-policy as well",
 };
 
 export const extraRpcs = {
