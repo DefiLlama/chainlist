@@ -51,13 +51,14 @@ const fetchChain = async (baseURL) => {
 const formatData = (url, data) => {
   let height = data?.result?.number ?? null;
   let latency = data?.latency ?? null;
+  let blockGasLimit = data?.result?.gasLimit ?? null;
   if (height) {
     const hexString = height.toString(16);
     height = parseInt(hexString, 16);
   } else {
     latency = null;
   }
-  return { url, height, latency };
+  return { url, height, latency, blockGasLimit };
 };
 
 const useHttpQuery = (url) => {

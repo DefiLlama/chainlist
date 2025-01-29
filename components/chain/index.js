@@ -73,6 +73,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
             <tr>
               <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">ChainID</th>
               <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">{t("currency")}</th>
+              <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">Block Gas Limit</th>
             </tr>
           </thead>
           <tbody>
@@ -82,6 +83,9 @@ export default function Chain({ chain, buttonOnly, lang }) {
               ).toString(16)})`}</td>
               <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                 {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
+              </td>
+              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
+                {chain.blockGasLimit ? chain.blockGasLimit : "Unknown"}
               </td>
             </tr>
           </tbody>
