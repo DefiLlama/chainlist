@@ -84,6 +84,12 @@ export default function Chain({ chain, buttonOnly, lang }) {
                 {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
               </td>
             </tr>
+            <tr>
+              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">Block Gas Limit</td>
+              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
+                {chain.blockGasLimit ? chain.blockGasLimit : "Unknown"}
+              </td>
+            </tr>
           </tbody>
         </table>
 
