@@ -37,6 +37,37 @@ export default function Chain({ chain, buttonOnly, lang }) {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
+  const [blockGasLimit, setBlockGasLimit] = React.useState('Unknown');
+
+  React.useEffect(() => {
+    async function fetchBlockGasLimit() {
+      try {
+        const response = await fetch(chain.rpc[0].url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            jsonrpc: '2.0',
+            method: 'eth_getBlockByNumber',
+            params: ['latest', false],
+            id: 1,
+          }),
+        });
+        const data = await response.json();
+        if (data.result && data.result.gasLimit) {
+          setBlockGasLimit(parseInt(data.result.gasLimit, 16));
+        }
+      } catch (error) {
+        console.error('Error fetching block gas limit:', error);
+      }
+    }
+
+    if (chain.rpc && chain.rpc.length > 0) {
+      fetchBlockGasLimit();
+    }
+  }, [chain.rpc]);
+
   if (!chain) {
     return <></>;
   }
@@ -73,6 +104,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
             <tr>
               <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">ChainID</th>
               <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">{t("currency")}</th>
+              <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">Block Gas Limit</th>
             </tr>
           </thead>
           <tbody>
@@ -83,6 +115,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
               <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                 {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
               </td>
+              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{blockGasLimit}</td>
             </tr>
           </tbody>
         </table>
