@@ -1763,11 +1763,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.gasswap,
       },
-      {
-        url: "https://rpc.envelop.is/blast",
-        tracking: "none",
-        trackingDetails: privacyStatement.Envelop,
-      },
+      
       {
         url: "https://blast-rpc.publicnode.com",
         tracking: "none",
