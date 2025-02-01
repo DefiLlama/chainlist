@@ -6978,6 +6978,7 @@ export const extraRpcs = {
       "https://story-evm-rpc.spidernode.net",
       "https://evm-rpc.story.mainnet.dteam.tech",
       "https://evm-rpc-story.j-node.net",
+      "https://lightnode-json-rpc-mainnet-story.grandvalleys.com"
     ],
   },
   3030: {
