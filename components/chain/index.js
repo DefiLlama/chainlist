@@ -8,6 +8,7 @@ import { notTranslation as useTranslations } from "../../utils";
 import { useChain } from "../../stores";
 import useAccount from "../../hooks/useAccount";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
+import { Tooltip } from "../Tooltip";
 
 export default function Chain({ chain, buttonOnly, lang }) {
   const t = useTranslations("Common", lang);
@@ -115,7 +116,11 @@ export default function Chain({ chain, buttonOnly, lang }) {
               <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                 {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
               </td>
-              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{blockGasLimit}</td>
+              <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
+                <Tooltip content={blockGasLimit}>
+                  <span>Hover to see</span>
+                </Tooltip>
+              </td>
             </tr>
           </tbody>
         </table>
