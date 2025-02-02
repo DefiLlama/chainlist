@@ -74,6 +74,7 @@ export default {
   "1101": "polygon zkevm",
   "1116": "core",
   "1135": "lisk",
+  "1190": "aieagle",
   "1231": "ultron",
   "1234": "step",
   "1284": "moonbeam",
