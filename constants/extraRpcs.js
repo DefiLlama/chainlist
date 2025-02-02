@@ -478,6 +478,9 @@ export const extraRpcs = {
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
+  1190: {
+    rpcs: ["https://rpc.aieglescan.com"],
+  },
   80001: {
     rpcs: [
       "https://rpc-mumbai.maticvigil.com",
