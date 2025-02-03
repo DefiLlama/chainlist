@@ -4976,6 +4976,9 @@ export const extraRpcs = {
   61717561: {
     rpcs: ["https://c.onical.org"],
   },
+  66633666: {
+    rpcs: ["http://testnet-rpc.juchain.org"],
+  }
   192837465: {
     rpcs: ["https://mainnet.gather.network"],
   },
