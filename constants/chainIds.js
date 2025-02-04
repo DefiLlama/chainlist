@@ -153,7 +153,7 @@ export default {
   "88888": "chiliz",
   "111188": "real", 
   "153153": "odyssey",
-  "167000": "taiko",
+  "167000": "taiko alethia",
   "200901": "bitlayer",
   "222222": "hydration",
   "322202": "parex",
