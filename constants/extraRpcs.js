@@ -470,6 +470,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
+      "https://0xrpc.io/eth",
     ],
   },
   2: {
@@ -944,6 +945,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://0xrpc.io/bnb",
     ],
   },
   97: {
@@ -1089,6 +1091,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://0xrpc.io/avax",
     ],
   },
   250: {
@@ -1307,6 +1310,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://0xrpc.io/pol",
     ],
   },
   25: {
@@ -2164,6 +2168,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://0xrpc.io/op",
     ],
   },
   11155420: {
@@ -2430,6 +2435,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://0xrpc.io/gno",
     ],
   },
   10200: {
@@ -4676,6 +4682,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      "https://0xrpc.io/base",
     ],
   },
   11235: {
@@ -4949,6 +4956,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      "https://0xrpc.io/sep",
     ],
   },
   7762959: {
