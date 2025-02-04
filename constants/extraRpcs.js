@@ -7023,6 +7023,7 @@ export const extraRpcs = {
   },
   2741: {
     rpcs: [
+      "https://api.mainnet.abs.xyz",
       {
         url: "https://abstract.drpc.org",
         tracking: "none",
@@ -7037,6 +7038,7 @@ export const extraRpcs = {
   },
   1868: {
     rpcs: [
+      "https://rpc.soneium.org",
       {
         url: "https://soneium.drpc.org",
         tracking: "none",
