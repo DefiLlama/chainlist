@@ -2234,6 +2234,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://endpoints.omniatech.io/v1/merlin/mainnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://merlin.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://merlin.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   420: {
@@ -6522,7 +6537,7 @@ export const extraRpcs = {
 
   16600: {
     rpcs: [
-      "https://rpc-testnet.0g.ai",
+      "https://evmrpc-testnet.0g.ai",
       "https://lightnode-json-rpc-0g.grandvalleys.com",
       "https://0g-json-rpc-public.originstake.com",
       {
@@ -6978,7 +6993,8 @@ export const extraRpcs = {
       "https://story-evm-rpc.spidernode.net",
       "https://evm-rpc.story.mainnet.dteam.tech",
       "https://evm-rpc-story.j-node.net",
-      "https://lightnode-json-rpc-mainnet-story.grandvalleys.com"
+      "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
+      "https://story-evm-rpc.krews.xyz"
     ],
   },
   3030: {
