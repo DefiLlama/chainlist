@@ -183,6 +183,8 @@ const privacyStatement = {
     "We do not log, store, or track any user data without consent with exception of data publicly available on chain.",
   owlracle:
     "For rate-limiting and to prevent abuse, we collect and store the IP address of the user making the request. This data is stored for 1 month and is not shared with any third parties. https://owlracle.info/privacy",
+  DTEAM:
+    "We do not log, store, or track your IP, location, or personal data during RPC requests. https://dteam.tech/privacy-policy",
 };
 
 export const extraRpcs = {
