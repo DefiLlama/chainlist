@@ -6299,7 +6299,11 @@ export const extraRpcs = {
     ],
   },
   53456: {
-    rpcs: ["https://rpc.birdlayer.xyz"],
+    rpcs: [        
+      "https://rpc.birdlayer.xyz",
+      "https://rpc1.birdlayer.xyz",
+      "wss://rpc.birdlayer.xyz/ws"
+    ],
   },
   56288: {
     rpcs: [
