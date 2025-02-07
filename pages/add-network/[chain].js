@@ -72,6 +72,9 @@ function Chain({ chain }) {
   const t = useTranslations("Common", "en");
 
   const icon = React.useMemo(() => {
+    if (chain?.nativeCurrency?.symbol?.toUpperCase() === "REDEV2") {
+      return "https://raw.githubusercontent.com/redecoinproject/redecoin/refs/heads/master/redev2.png"; // Logo RedeCoin
+    }
     return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
 
@@ -132,3 +135,4 @@ function Chain({ chain }) {
 }
 
 export default Chain;
+

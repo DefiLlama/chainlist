@@ -23,7 +23,7 @@ export async function getStaticProps({ params }) {
         c.chainId?.toString() === params.chain ||
         c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
         c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
-    ) ??
+    ) ?? 
     chains.find(
       (c) =>
         c.chainId?.toString() === params.chain ||
@@ -73,6 +73,9 @@ function Chain({ chain }) {
   const t = useTranslations("Common", "zh");
 
   const icon = React.useMemo(() => {
+    if (chain?.nativeCurrency?.symbol?.toUpperCase() === "REDEV2") {
+      return "https://raw.githubusercontent.com/redecoinproject/redecoin/refs/heads/master/redev2.png"; // Logo RedeCoin
+    }
     return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
 

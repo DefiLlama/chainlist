@@ -15,6 +15,9 @@ export default function Chain({ chain, buttonOnly, lang }) {
   const router = useRouter();
 
   const icon = React.useMemo(() => {
+    if (chain?.nativeCurrency?.symbol?.toUpperCase() === "REDEV2") {
+      return "https://raw.githubusercontent.com/redecoinproject/redecoin/refs/heads/master/redev2.png";
+    }
     return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
 
