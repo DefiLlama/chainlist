@@ -142,6 +142,7 @@ export default {
   "48900": "zircuit",
   "50104": "sophon",
   "52014": "etn",
+  "53456": "birdlayer",
   "55244": "superposition",
   "55555": "reichain",
   "56288": "boba_bnb",

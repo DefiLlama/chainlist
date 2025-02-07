@@ -6298,6 +6298,9 @@ export const extraRpcs = {
       },
     ],
   },
+  53456: {
+    rpcs: ["https://rpc.birdlayer.xyz"],
+  },
   56288: {
     rpcs: [
       "https://bnb.boba.network",
