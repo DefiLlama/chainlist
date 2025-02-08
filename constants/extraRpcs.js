@@ -6639,9 +6639,21 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       "https://story-odyssey-rpc.auranode.xyz",
-      "https://evm-rpc.story.testnet.dteam.tech",
-      "https://evm-rpc-2.story.testnet.dteam.tech",
-      "https://evm-rpc-3.story.testnet.dteam.tech"
+      {
+        url: "https://evm-rpc.story.testnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "https://evm-rpc-2.story.testnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "https://evm-rpc-3.story.testnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
     ],
   },
 
@@ -7104,7 +7116,11 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.storyrpc.io",
       "https://story-evm-rpc.spidernode.net",
-      "https://evm-rpc.story.mainnet.dteam.tech",
+      {
+        url: "https://evm-rpc.story.mainnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
       "https://evm-rpc-story.j-node.net",
       "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
       "https://story-evm-rpc.krews.xyz"
