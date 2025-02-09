@@ -163,6 +163,8 @@ export default {
   "534352": "scroll",
   "543210": "zero_network",
   "810180": "zklink nova",
+  "224433": "conet cancun",
+  "224400": "conet mainnet",
   "888888": "vision",
   "7225878": "saakuru",
   "7777777": "zora",
