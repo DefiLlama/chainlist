@@ -7138,6 +7138,15 @@ export const extraRpcs = {
       },
     ],
   },
+  80094: {
+    rpcs: [
+      {
+        url: "https://berachain.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   2741: {
     rpcs: [
       "https://api.mainnet.abs.xyz",
