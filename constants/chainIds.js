@@ -150,6 +150,7 @@ export default {
   "59144": "linea",
   "60808": "bob",
   "71402": "godwoken",
+  "80094": "berachain",
   "81457": "blast",
   "88888": "chiliz",
   "105105": "stratis",
