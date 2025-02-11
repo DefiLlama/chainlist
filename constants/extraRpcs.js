@@ -899,7 +899,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://services.tokenview.io/vipapi/nodeservice/bsc?apikey=gVFJX5OyPdc2kHH7youg
+        url: "https://services.tokenview.io/vipapi/nodeservice/bsc?apikey=gVFJX5OyPdc2kHH7youg",
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
       },
@@ -7141,6 +7141,7 @@ export const extraRpcs = {
   },
   80094: {
     rpcs: [
+      "https://rpc.berachain.com",
       {
         url: "https://berachain.blockpi.network/v1/rpc/public",
         tracking: "limited",
