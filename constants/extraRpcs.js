@@ -6874,6 +6874,11 @@ export const extraRpcs = {
       },
     ],
   },
+  130: {
+    rpcs: [
+      "https://mainnet.unichain.org/"
+    ]
+  },
   1301: {
     rpcs: [
       "https://sepolia.unichain.org",
