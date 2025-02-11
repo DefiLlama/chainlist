@@ -11,6 +11,7 @@ export default {
   "40": "telos",
   "42": "lukso",
   "44": "crab",
+  "46": "darwinia",
   "50": "xdc",
   "52": "csc",
   "55": "zyx",
