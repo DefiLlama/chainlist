@@ -31,6 +31,7 @@ export default {
   "119": "enuls",
   "122": "fuse",
   "128": "heco",
+  "130": "unichain",
   "137": "polygon",
   "146": "sonic",
   "148": "shimmer_evm",
