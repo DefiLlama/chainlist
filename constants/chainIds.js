@@ -36,6 +36,7 @@ export default {
   "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",
+  "166": "omni",
   "169": "manta",
   "177": "hsk",
   "181": "water",
