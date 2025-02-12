@@ -6876,7 +6876,12 @@ export const extraRpcs = {
   },
   130: {
     rpcs: [
-      "https://mainnet.unichain.org/"
+      "https://mainnet.unichain.org/",
+      {
+        url: "https://unichain.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ]
   },
   1301: {
@@ -6891,6 +6896,11 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/unichain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://unichain-sepolia.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
