@@ -7129,7 +7129,8 @@ export const extraRpcs = {
       "https://evm-rpc-story.j-node.net",
       "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
       "https://story-evm-rpc.krews.xyz",
-      "https://story-mainnet-jsonrpc.blockhub.id"
+      "https://story-mainnet-jsonrpc.blockhub.id",
+      "https://evm-rpc.story.silentvalidator.com"
     ],
   },
   3030: {
