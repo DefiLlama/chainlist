@@ -6983,7 +6983,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    ]
+    ],
   },
   1301: {
     rpcs: [
