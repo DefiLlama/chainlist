@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Chain from "../components/chain";
 import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
+import { useFilteredChains } from '../hooks/useFilteredChains';
 
 export async function getStaticProps() {
   const sortedChains = await generateChainData();
@@ -19,52 +20,7 @@ export async function getStaticProps() {
 }
 
 function Home({ chains }) {
-  const [chainName, setChainName] = React.useState("");
-
-  const router = useRouter();
-  const { testnets, testnet, search } = router.query;
-
-  const chainToFilter =
-    search && search.length > 0 && chainName.length === 0
-      ? typeof search === "string"
-        ? search
-        : search[0]
-      : chainName;
-
-  const includeTestnets =
-    (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
-
-  const finalChains = React.useMemo(() => {
-    let finalChains = [];
-    for (const chain of chains) {
-      let toFilter = true;
-
-      if (!includeTestnets) {
-        toFilter = !(
-          chain.name?.toLowerCase().includes("test") ||
-          chain.title?.toLowerCase().includes("test") ||
-          chain.network?.toLowerCase().includes("test") ||
-          chain.name?.toLowerCase().includes("devnet") ||
-          chain.title?.toLowerCase().includes("devnet") ||
-          chain.network?.toLowerCase().includes("devnet")
-        );
-      }
-
-      if (chainToFilter.length > 0 && toFilter) {
-        toFilter =
-          chain.chain.toLowerCase().includes(chainToFilter.toLowerCase()) ||
-          chain.chainId.toString().toLowerCase().includes(chainToFilter.toLowerCase()) ||
-          chain.name.toLowerCase().includes(chainToFilter.toLowerCase()) ||
-          (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(chainToFilter.toLowerCase());
-      }
-
-      if (toFilter) {
-        finalChains.push(chain);
-      }
-    }
-
-    return finalChains;
-  }, [includeTestnets, chainToFilter, chains]);
+  const { chainName, setChainName, finalChains } = useFilteredChains(chains);
 
   const [end, setEnd] = React.useState(15);
 
