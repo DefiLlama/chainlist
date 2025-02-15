@@ -1334,7 +1334,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/pol",
       {
         url: "https://rpc.owlracle.info/poly/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -6876,7 +6875,8 @@ export const extraRpcs = {
   },
   130: {
     rpcs: [
-      "https://mainnet.unichain.org/"
+      "https://mainnet.unichain.org/",
+      "https://0xrpc.io/uni",
     ]
   },
   1301: {
