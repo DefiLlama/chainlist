@@ -6611,7 +6611,7 @@ export const extraRpcs = {
       },
       "https://story-rpc-evm.mandragora.io",
       "https://story-testnet-jsonrpc.blockhub.id",
-      "https://rpc-storyevm-testnet-iliad.aldebaranode.xyz",
+      "https://rpc-storyevm-testnet.aldebaranode.xyz",
       "https://story-testnet.nodeinfra.com",
     ],
   },
@@ -7132,7 +7132,8 @@ export const extraRpcs = {
       "https://story-mainnet-jsonrpc.blockhub.id",
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
-      "https://evm-rpc.story.silentvalidator.com"
+      "https://evm-rpc.story.silentvalidator.com",
+      "https://rpc-storyevm.aldebaranode.xyz"
     ],
   },
   3030: {
