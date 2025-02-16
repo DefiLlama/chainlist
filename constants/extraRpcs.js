@@ -7207,7 +7207,11 @@ export const extraRpcs = {
   1315: {
     rpcs: [
       "https://aeneid.storyrpc.io/",
-      "https://evm-aeneid-story.j-node.net/",
+      {
+      url: "https://evm-aeneid-story.j-node.net",
+      tracking: "none",
+      trackingDetails: privacyStatement.Jnode,
+      },
     ],
   }
 };
