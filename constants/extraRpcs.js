@@ -7203,6 +7203,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
+  },
+
+  1315: {
+    rpcs: [
+      "https://aeneid.storyrpc.io/",
+      {
+      url: "https://evm-aeneid-story.j-node.net",
+      tracking: "none",
+      trackingDetails: privacyStatement.Jnode,
+      },
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
