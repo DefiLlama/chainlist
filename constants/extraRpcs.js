@@ -7497,6 +7497,27 @@ export const extraRpcs = {
       ],
     },
   },
+  224433: {
+    rpcs: [
+		"https://cancun-rpc.conet.network",
+		"https://rpc.conet.network",
+      {
+        url: "https://conet.network/",
+        tracking: "none",
+        trackingDetails: privacyStatement.alchemy,
+      },
+    ],
+  },
+  224400: {
+    rpcs: [
+		"https://mainnet-rpc.conet.network",
+      {
+        url: "https://conet.network/",
+        tracking: "none",
+        trackingDetails: privacyStatement.alchemy,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
