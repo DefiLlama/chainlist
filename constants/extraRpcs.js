@@ -475,6 +475,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       "https://0xrpc.io/eth",
+      "wss://0xrpc.io/eth",
       {
         url: "https://rpc.owlracle.info/eth/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -955,6 +956,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/bnb",
+      "wss://0xrpc.io/bnb",
       {
         url: "https://rpc.owlracle.info/bsc/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -1106,6 +1108,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/avax",
+      "wss://0xrpc.io/avax",
       {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -1334,7 +1337,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/pol",
       {
         url: "https://rpc.owlracle.info/poly/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -2228,6 +2230,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/op",
+      "wss://0xrpc.io/op",
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -2500,6 +2503,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/gno",
+      "wss://0xrpc.io/gno",
     ],
   },
   10200: {
@@ -4767,6 +4771,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/base",
+      "wss://0xrpc.io/base",
       {
         url: "https://rpc.owlracle.info/base/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -5046,6 +5051,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       "https://0xrpc.io/sep",
+      "wss://0xrpc.io/sep",
       {
         url: "https://rpc.owlracle.info/sepolia/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -6876,7 +6882,9 @@ export const extraRpcs = {
   },
   130: {
     rpcs: [
-      "https://mainnet.unichain.org/"
+      "https://mainnet.unichain.org/",
+      "https://0xrpc.io/uni",
+      "wss://0xrpc.io/uni",
     ]
   },
   1301: {
