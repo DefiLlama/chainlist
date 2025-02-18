@@ -6978,6 +6978,11 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.unichain.org/",
       {
+        url: "https://unichain.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
         url: "https://unichain-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -7008,6 +7013,11 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/unichain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://unichain-sepolia.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
       {
         url: "https://unichain-sepolia-rpc.publicnode.com",
