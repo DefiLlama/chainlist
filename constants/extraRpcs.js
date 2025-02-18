@@ -475,6 +475,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       "https://0xrpc.io/eth",
+      "wss://0xrpc.io/eth",
       {
         url: "https://rpc.owlracle.info/eth/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -965,6 +966,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/bnb",
+      "wss://0xrpc.io/bnb",
       {
         url: "https://rpc.owlracle.info/bsc/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -1126,6 +1128,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/avax",
+      "wss://0xrpc.io/avax",
       {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -1354,7 +1357,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/pol",
       {
         url: "https://rpc.owlracle.info/poly/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -2268,6 +2270,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/op",
+      "wss://0xrpc.io/op",
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -2540,6 +2543,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/gno",
+      "wss://0xrpc.io/gno",
     ],
   },
   10200: {
@@ -4844,6 +4848,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://0xrpc.io/base",
+      "wss://0xrpc.io/base",
       {
         url: "https://rpc.owlracle.info/base/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -5123,6 +5128,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       "https://0xrpc.io/sep",
+      "wss://0xrpc.io/sep",
       {
         url: "https://rpc.owlracle.info/sepolia/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -6707,7 +6713,7 @@ export const extraRpcs = {
       },
       "https://story-rpc-evm.mandragora.io",
       "https://story-testnet-jsonrpc.blockhub.id",
-      "https://rpc-storyevm-testnet-iliad.aldebaranode.xyz",
+      "https://rpc-storyevm-testnet.aldebaranode.xyz",
       "https://story-testnet.nodeinfra.com",
     ],
   },
@@ -6983,7 +6989,9 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    ],
+      "https://0xrpc.io/uni",
+      "wss://0xrpc.io/uni",
+    ]
   },
   1301: {
     rpcs: [
@@ -7268,7 +7276,8 @@ export const extraRpcs = {
       "https://story-mainnet-jsonrpc.blockhub.id",
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
-      "https://evm-rpc.story.silentvalidator.com"
+      "https://evm-rpc.story.silentvalidator.com",
+      "https://rpc-storyevm.aldebaranode.xyz"
     ],
   },
   3030: {
@@ -7351,6 +7360,7 @@ export const extraRpcs = {
   },
   2345: {
     rpcs: [
+      "https://rpc.goat.network",
       {
         url: "https://goat-mainnet-alpha.drpc.org",
         tracking: "none",
@@ -7365,6 +7375,7 @@ export const extraRpcs = {
   },
   31611: {
     rpcs: [
+      "https://rpc.test.mezo.org",
       {
         url: "https://mezo-testnet.drpc.org",
         tracking: "none",
@@ -7379,6 +7390,7 @@ export const extraRpcs = {
   },
   133: {
     rpcs: [
+      "https://hashkeychain-testnet.alt.technology",
       {
         url: "https://hashkey-testnet.drpc.org",
         tracking: "none",
@@ -7393,6 +7405,7 @@ export const extraRpcs = {
   },
   89: {
     rpcs: [
+      "https://rpc-testnet.viction.xyz",
       {
         url: "https://viction-testnet.drpc.org",
         tracking: "none",
@@ -7407,6 +7420,8 @@ export const extraRpcs = {
   },
   1112: {
     rpcs: [
+      "https://api.test.wemix.com",
+      "wss://ws.test.wemix.com",
       {
         url: "https://wemix-testnet.drpc.org",
         tracking: "none",
@@ -7421,6 +7436,8 @@ export const extraRpcs = {
   },
   808813: {
     rpcs: [
+      "https://bob-sepolia.rpc.gobob.xyz",
+      "wss://bob-sepolia.rpc.gobob.xyz",
       {
         url: "https://bob-testnet.drpc.org",
         tracking: "none",
@@ -7435,6 +7452,7 @@ export const extraRpcs = {
   },
   37111: {
     rpcs: [
+      "https://rpc.testnet.lens.dev",
       {
         url: "https://lens-testnet.drpc.org",
         tracking: "none",
@@ -7444,6 +7462,15 @@ export const extraRpcs = {
         url: "wss://lens-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  1315: {
+    rpcs: [
+      "https://aeneid.storyrpc.io/",
+      {
+      url: "https://evm-aeneid-story.j-node.net",
+      tracking: "none",
+      trackingDetails: privacyStatement.Jnode,
       },
     ],
   }
