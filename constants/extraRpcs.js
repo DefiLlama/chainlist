@@ -1843,7 +1843,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.gasswap,
       },
-      
+
       {
         url: "https://blast-rpc.publicnode.com",
         tracking: "none",
@@ -2427,22 +2427,22 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://metis-pokt.nodies.app/",  
+        url: "https://metis-pokt.nodies.app/",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://metis-andromeda.rpc.thirdweb.com/",  
+        url: "https://metis-andromeda.rpc.thirdweb.com/",
         tracking: "yes",
         trackingDetails: privacyStatement.thirdweb,
       },
       {
-        url: "https://metis-andromeda.gateway.tenderly.co",  
+        url: "https://metis-andromeda.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
       "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm",
-      "https://metis.rpc.hypersync.xyz/"
+      "https://metis.rpc.hypersync.xyz/",
     ],
   },
   59902: {
@@ -2458,11 +2458,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://metis-sepolia.gateway.tenderly.co",  
+        url: "https://metis-sepolia.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://sepolia.metisdevops.link"
+      "https://sepolia.metisdevops.link",
     ],
   },
   1246: {
@@ -2705,7 +2705,7 @@ export const extraRpcs = {
         url: "wss://rpc.ankr.com/telos/ws/",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      }
+      },
     ],
   },
   41: {
@@ -6394,11 +6394,7 @@ export const extraRpcs = {
     ],
   },
   53456: {
-    rpcs: [        
-      "https://rpc.birdlayer.xyz",
-      "https://rpc1.birdlayer.xyz",
-      "wss://rpc.birdlayer.xyz/ws"
-    ],
+    rpcs: ["https://rpc.birdlayer.xyz", "https://rpc1.birdlayer.xyz", "wss://rpc.birdlayer.xyz/ws"],
   },
   56288: {
     rpcs: [
@@ -6853,10 +6849,7 @@ export const extraRpcs = {
     rpcs: ["https://mainnet-rpc.helachain.com"],
   },
   698: {
-    rpcs: [
-      "https://rpc.matchain.io",
-      "https://rpc.ankr.com/matchain_mainnet"
-    ],
+    rpcs: ["https://rpc.matchain.io", "https://rpc.ankr.com/matchain_mainnet"],
   },
   251: {
     rpcs: [
@@ -6991,7 +6984,7 @@ export const extraRpcs = {
       },
       "https://0xrpc.io/uni",
       "wss://0xrpc.io/uni",
-    ]
+    ],
   },
   1301: {
     rpcs: [
@@ -7054,7 +7047,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-       {
+      {
         url: "wss://ink.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -7277,7 +7270,7 @@ export const extraRpcs = {
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
-      "https://rpc-storyevm.aldebaranode.xyz"
+      "https://rpc-storyevm.aldebaranode.xyz",
     ],
   },
   3030: {
@@ -7290,9 +7283,7 @@ export const extraRpcs = {
     ],
   },
   42070: {
-    rpcs: [
-      "https://rpc-testnet-base.worldmobile.net"
-    ],
+    rpcs: ["https://rpc-testnet-base.worldmobile.net"],
   },
   10143: {
     rpcs: [
@@ -7464,16 +7455,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
-  1315: {
-    rpcs: [
-      "https://aeneid.storyrpc.io/",
-      {
-      url: "https://evm-aeneid-story.j-node.net",
-      tracking: "none",
-      trackingDetails: privacyStatement.Jnode,
-      },
-    ],
-  }
+    1315: {
+      rpcs: [
+        "https://aeneid.storyrpc.io/",
+        {
+          url: "https://evm-aeneid-story.j-node.net",
+          tracking: "none",
+          trackingDetails: privacyStatement.Jnode,
+        },
+      ],
+    },
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
