@@ -16,5 +16,10 @@ export const data = {
     "shortName": "hyper_evm",
     "chainId": 999,
     "networkId": 999,
-    "explorers": []
+    "explorers": [
+      {
+        "name": "Purrsec",
+        "url": "https://purrsec.com/"
+      }
+    ]
   }
