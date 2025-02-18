@@ -6312,6 +6312,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://berachain-testnet-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      }
     ],
   },
   328527: {
@@ -6973,6 +6978,11 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.unichain.org/",
       {
+        url: "https://unichain-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
         url: "https://unichain.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -6998,6 +7008,11 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/unichain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://unichain-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
       {
         url: "https://unichain-sepolia.drpc.org",
@@ -7307,6 +7322,11 @@ export const extraRpcs = {
         url: "https://berachain.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://berachain-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
       {
         url: "https://berachain.drpc.org",
