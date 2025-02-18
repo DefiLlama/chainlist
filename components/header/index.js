@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
-// import { useTranslations } from "next-intl";
-import { notTranslation as useTranslations } from "../../utils";
+import { useTranslations } from "next-intl";
 import { formatAddress, getProvider } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
