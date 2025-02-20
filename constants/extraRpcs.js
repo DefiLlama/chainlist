@@ -3722,9 +3722,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: [],
-    websiteDead: true,
-    rpcWorking: false,
+    rpcs: [
+      "https://rpc.hyperliquid-testnet.xyz/evm"
+    ],
   },
   1001: {
     rpcs: [
