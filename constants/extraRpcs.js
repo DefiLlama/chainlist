@@ -7518,6 +7518,20 @@ export const extraRpcs = {
       },
     ],
   },
+  4352: {
+    rpcs: [
+      {
+        url: "https://rpc.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+      {
+        url: "wss://ws.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
