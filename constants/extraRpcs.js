@@ -3722,9 +3722,9 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: [],
-    websiteDead: true,
-    rpcWorking: false,
+    rpcs: [
+      "https://rpc.hyperliquid-testnet.xyz/evm"
+    ],
   },
   1001: {
     rpcs: [
@@ -7523,6 +7523,20 @@ export const extraRpcs = {
       },
     ],
   },
+  4352: {
+    rpcs: [
+      {
+        url: "https://rpc.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+      {
+        url: "wss://ws.memecore.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.MemeCore,
+      },
+    ],
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
