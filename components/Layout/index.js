@@ -4,7 +4,6 @@ import Header from "../header";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
 import Logo from "./Logo";
-import { useRouter } from "next/router";
 
 const toggleTheme = (e) => {
   e.preventDefault();
@@ -24,18 +23,12 @@ const initTheme = () => {
   }
 };
 
-export default function Layout({ children, lang }) {
+export default function Layout({ children, lang, chainName, setChainName }) {
   useEffect(() => {
     initTheme();
   }, []);
 
   const t = useTranslations("Common", lang);
-
-  const router = useRouter();
-
-  const { search } = router.query;
-
-  const chainName = typeof search === "string" ? search : "";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[40vw,_auto]">
@@ -131,8 +124,7 @@ export default function Layout({ children, lang }) {
         </div>
       </div>
       <div className="dark:bg-[#181818] bg-[#f3f3f3] p-5 relative flex flex-col gap-5">
-        <Header lang={lang} chainName={chainName} key={chainName + "header"} />
-
+        <Header lang={lang} chainName={chainName} setChainName={setChainName} />
         {children}
       </div>
     </div>

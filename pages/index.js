@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Chain from "../components/chain";
 import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
+import { useFilteredChains } from '../hooks/useFilteredChains';
 
 export async function getStaticProps() {
   const sortedChains = await generateChainData();
@@ -19,38 +20,9 @@ export async function getStaticProps() {
 }
 
 function Home({ chains }) {
-  const router = useRouter();
-  const { testnets, testnet, search } = router.query;
+  const { chainName, setChainName, finalChains } = useFilteredChains(chains);
 
-  const includeTestnets =
-    (typeof testnets === "string" && testnets === "true") || (typeof testnet === "string" && testnet === "true");
-
-  const sortedChains = !includeTestnets
-    ? chains.filter((item) => {
-        const testnet =
-          item.name?.toLowerCase().includes("test") ||
-          item.title?.toLowerCase().includes("test") ||
-          item.network?.toLowerCase().includes("test");
-        const devnet =
-          item.name?.toLowerCase().includes("devnet") ||
-          item.title?.toLowerCase().includes("devnet") ||
-          item.network?.toLowerCase().includes("devnet");
-        return !testnet && !devnet;
-      })
-    : chains;
-
-  const filteredChains =
-    !search || typeof search !== "string" || search === ""
-      ? sortedChains
-      : sortedChains.filter((chain) => {
-          //filter
-          return (
-            chain.chain.toLowerCase().includes(search.toLowerCase()) ||
-            chain.chainId.toString().toLowerCase().includes(search.toLowerCase()) ||
-            chain.name.toLowerCase().includes(search.toLowerCase()) ||
-            (chain.nativeCurrency ? chain.nativeCurrency.symbol : "").toLowerCase().includes(search.toLowerCase())
-          );
-        });
+  const [end, setEnd] = React.useState(15);
 
   return (
     <>
@@ -63,18 +35,26 @@ function Home({ chains }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
+      <Layout chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {filteredChains.slice(0, 2).map((chain, idx) => {
+            {finalChains.slice(0, 2).map((chain) => {
               return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
             })}
             <AdBanner />
-            {filteredChains.slice(2).map((chain, idx) => {
+            {finalChains.slice(2, end).map((chain) => {
               return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
             })}
           </div>
         </React.Suspense>
+        {end - 1 < finalChains.length ? (
+          <button
+            onClick={() => setEnd(finalChains.length)}
+            className="w-full border dark:border-[#171717] border-[#EAEAEA] px-4 py-2 rounded-[50px] mb-auto text-white bg-[#2F80ED] mx-auto"
+          >
+            Show all
+          </button>
+        ) : null}
       </Layout>
     </>
   );
