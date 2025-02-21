@@ -7497,7 +7497,7 @@ export const extraRpcs = {
 	{
           url: "https://lightnode-json-rpc-story.grandvalleys.com",
           tracking: "none",
-          trackingDetails: "none",
+          trackingDetails: "privacyStatement.GrandValley",
         },
       ],
     },
