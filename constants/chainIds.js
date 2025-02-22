@@ -161,7 +161,7 @@ export default {
   "153153": "odyssey",
   "167000": "taiko",
   "200901": "bitlayer",
-  "222222": "hydration",
+  "222222": "hydradx",
   "322202": "parex",
   "333999": "polis",
   "420420": "kekchain",
