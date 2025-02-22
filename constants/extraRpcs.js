@@ -7288,8 +7288,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.DTEAM,
       },
+      {
+        url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.GrandValley,
+      },
       "https://evm-rpc-story.j-node.net",
-      "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
       "https://story-evm-rpc.krews.xyz",
       "https://story-mainnet-jsonrpc.blockhub.id",
       "https://evmrpc.story.nodestake.org",
