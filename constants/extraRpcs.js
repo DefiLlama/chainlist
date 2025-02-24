@@ -185,6 +185,8 @@ const privacyStatement = {
     "For rate-limiting and to prevent abuse, we collect and store the IP address of the user making the request. This data is stored for 1 month and is not shared with any third parties. https://owlracle.info/privacy",
   DTEAM:
     "We do not log, store, or track your IP, location, or personal data during RPC requests. https://dteam.tech/privacy-policy",
+  HypurrScan:
+    "HypurrScan is not logging anything you do on the EVM RPC endpoint",
 };
 
 export const extraRpcs = {
@@ -7530,6 +7532,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.MemeCore,
       },
+    ],
+  },
+  999: {
+    rpcs; [
+	{
+	  url: "https://rpc.hypurrscan.io",
+	  tracking: "none",
+	  trackingDetails: privacyStatement.HypurrScan,
+	},
     ],
   }
 };
