@@ -478,12 +478,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/eth",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/eth",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -1137,12 +1137,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/avax",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/avax",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -2287,12 +2287,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/op",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/op",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -2568,12 +2568,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/gno",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/gno",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
     ],
@@ -3482,12 +3482,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/etc",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/etc",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
     ],
@@ -4891,12 +4891,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/base",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/base",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -5179,12 +5179,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/sep",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/sep",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -7057,12 +7057,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/uni",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/uni",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
     ],
@@ -7416,12 +7416,12 @@ export const extraRpcs = {
       },
       {
         url: "https://0xrpc.io/bera",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/bera",
-        tracking: "no",
+        tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
     ],
