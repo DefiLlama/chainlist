@@ -7607,7 +7607,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.MemeCore,
       },
     ],
-  }
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
