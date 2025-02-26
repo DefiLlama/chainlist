@@ -60,7 +60,7 @@ export default {
   "388": "cronos zkevm",
   "416": "sx",
   "463": "areon",
-  "478": "formnetwork",
+  "478": "form network",
   "480": "wc",
   "534": "candle",
   "570": "rollux",
