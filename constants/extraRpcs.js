@@ -185,6 +185,8 @@ const privacyStatement = {
     "For rate-limiting and to prevent abuse, we collect and store the IP address of the user making the request. This data is stored for 1 month and is not shared with any third parties. https://owlracle.info/privacy",
   DTEAM:
     "We do not log, store, or track your IP, location, or personal data during RPC requests. https://dteam.tech/privacy-policy",
+  RHINO:
+    "We never collect, store, or track any identifying information. Data points like request volumes and success rates are only aggregated to monitor API performance. For more details, please visit https://rhinostake.com/resources/rhino-apis-terms-conditions",
 };
 
 export const extraRpcs = {
@@ -3722,9 +3724,7 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: [
-      "https://rpc.hyperliquid-testnet.xyz/evm"
-    ],
+    rpcs: ["https://rpc.hyperliquid-testnet.xyz/evm"],
   },
   1001: {
     rpcs: [
@@ -6316,7 +6316,7 @@ export const extraRpcs = {
         url: "https://berachain-testnet-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
     ],
   },
   328527: {
@@ -7348,6 +7348,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpc.berachain-apis.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.RHINO,
+      },
+      {
+        url: "wss://rpc.berachain-apis.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.RHINO,
+      },
     ],
   },
   2741: {
@@ -7499,8 +7509,8 @@ export const extraRpcs = {
   },
   224433: {
     rpcs: [
-		"https://cancun-rpc.conet.network",
-		"https://rpc.conet.network",
+      "https://cancun-rpc.conet.network",
+      "https://rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -7510,7 +7520,7 @@ export const extraRpcs = {
   },
   224400: {
     rpcs: [
-		"https://mainnet-rpc.conet.network",
+      "https://mainnet-rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -7531,7 +7541,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.MemeCore,
       },
     ],
-  }
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
