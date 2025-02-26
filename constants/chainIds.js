@@ -142,6 +142,7 @@ export default {
   "42262": "oasis",
   "42420": "assetchain",
   "42793": "etherlink",
+  "43111": "hemi",
   "43114": "avalanche",
   "47805": "rei",
   "48900": "zircuit",
