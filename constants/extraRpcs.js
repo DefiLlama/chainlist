@@ -4638,7 +4638,20 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   24734: {
-    rpcs: ["https://node1.mintme.com", "https://node.1000x.ch"],
+    rpcs: [
+      "https://node1.mintme.com",
+      "https://node.1000x.ch",
+      {
+        url: "https://0xrpc.io/mint",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/mint",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+    ],
   },
   31102: {
     rpcs: ["rpcWorking:false"],
