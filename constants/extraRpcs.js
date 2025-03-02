@@ -6825,7 +6825,6 @@ export const extraRpcs = {
   16600: {
     rpcs: [
       "https://evmrpc-testnet.0g.ai",
-      "https://lightnode-json-rpc-0g.grandvalleys.com",
       "https://0g-json-rpc-public.originstake.com",
       {
         url: "https://0g-json-rpc-public.originstake.com",
@@ -6836,6 +6835,11 @@ export const extraRpcs = {
         url: "https://og-testnet-evm.itrocket.net",
         tracking: "none",
         trackingDetails: privacyStatement.itrocket,
+      },
+      {
+        url: "https://lightnode-json-rpc-0g.grandvalleys.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.GrandValley,
       },
     ],
   },
