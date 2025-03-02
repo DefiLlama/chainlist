@@ -185,6 +185,12 @@ const privacyStatement = {
     "For rate-limiting and to prevent abuse, we collect and store the IP address of the user making the request. This data is stored for 1 month and is not shared with any third parties. https://owlracle.info/privacy",
   DTEAM:
     "We do not log, store, or track your IP, location, or personal data during RPC requests. https://dteam.tech/privacy-policy",
+  "0xRPC":
+    "Unidentifiable hashed value of IP and browser info are stored for 24 hours to prevent DDOS. See https://0xrpc.io/privacy",
+  RHINO:
+    "We never collect, store, or track any identifying information. Data points like request volumes and success rates are only aggregated to monitor API performance. For more details, please visit https://rhinostake.com/resources/rhino-apis-terms-conditions",
+  GrandValley:
+    "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md"
 };
 
 export const extraRpcs = {
@@ -474,8 +480,16 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      "https://0xrpc.io/eth",
-      "wss://0xrpc.io/eth",
+      {
+        url: "https://0xrpc.io/eth",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/eth",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
       {
         url: "https://rpc.owlracle.info/eth/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -965,8 +979,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/bnb",
-      "wss://0xrpc.io/bnb",
       {
         url: "https://rpc.owlracle.info/bsc/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -1127,8 +1139,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/avax",
-      "wss://0xrpc.io/avax",
+      {
+        url: "https://0xrpc.io/avax",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/avax",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
       {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -2269,8 +2289,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/op",
-      "wss://0xrpc.io/op",
+      {
+        url: "https://0xrpc.io/op",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/op",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -2542,8 +2570,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/gno",
-      "wss://0xrpc.io/gno",
+      {
+        url: "https://0xrpc.io/gno",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/gno",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   10200: {
@@ -3447,6 +3483,16 @@ export const extraRpcs = {
         url: "https://etc.rivet.link",
         tracking: "none",
         trackingDetails: privacyStatement.rivet,
+      },
+      {
+        url: "https://0xrpc.io/etc",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/etc",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -4847,8 +4893,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-      "https://0xrpc.io/base",
-      "wss://0xrpc.io/base",
+      {
+        url: "https://0xrpc.io/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
       {
         url: "https://rpc.owlracle.info/base/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -5127,8 +5181,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      "https://0xrpc.io/sep",
-      "wss://0xrpc.io/sep",
+      {
+        url: "https://0xrpc.io/sep",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/sep",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
       {
         url: "https://rpc.owlracle.info/sepolia/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -6997,8 +7059,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      "https://0xrpc.io/uni",
-      "wss://0xrpc.io/uni",
+      {
+        url: "https://0xrpc.io/uni",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/uni",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   1301: {
@@ -7352,6 +7422,26 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://0xrpc.io/bera",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/bera",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "https://rpc.berachain-apis.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.RHINO,
+      },
+      {
+        url: "wss://rpc.berachain-apis.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.RHINO,
+      },
     ],
   },
   2741: {
@@ -7476,6 +7566,14 @@ export const extraRpcs = {
       },
     ],
   },
+  8691942025: {
+    rpcs: [
+      "https://rpc.onfa.io", 
+      "https://rpc.onfachain.com", 
+      "wss://ws.onfachain.com", 
+      "wss://ws.onfa.io"
+    ], 
+  }, 
   37111: {
     rpcs: [
       "https://rpc.testnet.lens.dev",
@@ -7540,7 +7638,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.MemeCore,
       },
     ],
-  }
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
