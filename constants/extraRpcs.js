@@ -7656,6 +7656,11 @@ export const extraRpcs = {
       },
     ],
   },
+  5464: {
+    rpcs: [
+      "https://sagaevm.jsonrpc.sagarpc.io", 
+    ]
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
