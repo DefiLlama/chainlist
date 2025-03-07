@@ -6437,6 +6437,11 @@ export const extraRpcs = {
   48900: {
     rpcs: [
       {
+        url: "https://mainnet.zircuit.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
         url: "https://zircuit1-mainnet.p2pify.com",
         tracking: "yes",
         trackingDetails: privacyStatement.chainstack,
