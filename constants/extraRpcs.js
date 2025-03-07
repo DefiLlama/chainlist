@@ -6436,6 +6436,7 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
+	"https://mainnet.zircuit.com",
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
