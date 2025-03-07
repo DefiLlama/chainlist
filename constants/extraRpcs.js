@@ -190,7 +190,7 @@ const privacyStatement = {
   RHINO:
     "We never collect, store, or track any identifying information. Data points like request volumes and success rates are only aggregated to monitor API performance. For more details, please visit https://rhinostake.com/resources/rhino-apis-terms-conditions",
   GrandValley:
-    "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md"
+    "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md",
 };
 
 export const extraRpcs = {
@@ -3768,9 +3768,7 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: [
-      "https://rpc.hyperliquid-testnet.xyz/evm"
-    ],
+    rpcs: ["https://rpc.hyperliquid-testnet.xyz/evm"],
   },
   1001: {
     rpcs: [
@@ -6391,7 +6389,7 @@ export const extraRpcs = {
         url: "https://berachain-testnet-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
     ],
   },
   328527: {
@@ -6436,7 +6434,7 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
-	"https://mainnet.zircuit.com",
+      "https://mainnet.zircuit.com",
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
@@ -7585,13 +7583,8 @@ export const extraRpcs = {
     ],
   },
   8691942025: {
-    rpcs: [
-      "https://rpc.onfa.io", 
-      "https://rpc.onfachain.com", 
-      "wss://ws.onfachain.com", 
-      "wss://ws.onfa.io"
-    ], 
-  }, 
+    rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
+  },
   37111: {
     rpcs: [
       "https://rpc.testnet.lens.dev",
@@ -7614,7 +7607,7 @@ export const extraRpcs = {
           tracking: "none",
           trackingDetails: privacyStatement.Jnode,
         },
-	{
+        {
           url: "https://lightnode-json-rpc-story.grandvalleys.com",
           tracking: "none",
           trackingDetails: "privacyStatement.GrandValley",
@@ -7624,8 +7617,8 @@ export const extraRpcs = {
   },
   224433: {
     rpcs: [
-		"https://cancun-rpc.conet.network",
-		"https://rpc.conet.network",
+      "https://cancun-rpc.conet.network",
+      "https://rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -7635,7 +7628,7 @@ export const extraRpcs = {
   },
   224400: {
     rpcs: [
-		"https://mainnet-rpc.conet.network",
+      "https://mainnet-rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -7658,10 +7651,8 @@ export const extraRpcs = {
     ],
   },
   5464: {
-    rpcs: [
-      "https://sagaevm.jsonrpc.sagarpc.io", 
-    ]
-  }
+    rpcs: ["https://sagaevm.jsonrpc.sagarpc.io"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
