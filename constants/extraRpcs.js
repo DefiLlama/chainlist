@@ -7385,7 +7385,7 @@ export const extraRpcs = {
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
-      "https://story-evm-rpc.mandragora.io",
+      "https://story-rpc-evm.mandragora.io",
       "https://rpc-storyevm.aldebaranode.xyz",
     ],
   },
