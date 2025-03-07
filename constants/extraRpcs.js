@@ -6811,11 +6811,6 @@ export const extraRpcs = {
       "https://story-rpc-evm.validatorvn.com",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
       "https://rpc-evm-story.rawaki.xyz",
-      {
-        url: "https://story-odyssey-evm.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       "https://story-odyssey-rpc.auranode.xyz",
       {
         url: "https://evm-rpc.story.testnet.dteam.tech",
