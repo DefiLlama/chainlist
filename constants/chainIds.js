@@ -171,7 +171,6 @@ export default {
   "543210": "zero_network",
   "810180": "zklink nova",
   "888888": "vision",
-  "911867": "Odyssey Testnet",
   "7225878": "saakuru",
   "7777777": "zora",
   "21000000": "corn",
