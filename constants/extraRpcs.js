@@ -7655,8 +7655,11 @@ export const extraRpcs = {
   },
   911867: {
     rpcs: [
-      'https://odyssey.ithaca.xyz'
-    ]
+      {
+        url: 'https://odyssey.ithaca.xyz',
+        trackingDetails: privacyStatement.conduit
+      }
+    ],
   }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
