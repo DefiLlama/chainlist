@@ -7657,6 +7657,7 @@ export const extraRpcs = {
     rpcs: [
       {
         url: 'https://odyssey.ithaca.xyz',
+        tracking: "yes",
         trackingDetails: privacyStatement.conduit
       }
     ],
