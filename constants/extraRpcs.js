@@ -7653,6 +7653,14 @@ export const extraRpcs = {
   5464: {
     rpcs: ["https://sagaevm.jsonrpc.sagarpc.io"],
   },
+  911867: {
+    rpcs: [
+      {
+        url: 'https://odyssey.ithaca.xyz',
+        trackingDetails: privacyStatement.conduit
+      }
+    ],
+  }
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
