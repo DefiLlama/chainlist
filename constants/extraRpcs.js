@@ -7661,7 +7661,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.conduit
       }
     ],
-  }
+  },
+  3073: {
+    rpcs: ["https://mainnet.movementnetwork.xyz"],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 

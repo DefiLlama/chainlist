@@ -101,6 +101,7 @@ export default {
   "2410": "karak",
   "2741": "abstract",
   "2818": "morph",
+  "3073": "move",
   "4158": "crossfi",
   "4337": "beam",
   "4689": "iotex",
