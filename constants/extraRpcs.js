@@ -7663,7 +7663,7 @@ export const extraRpcs = {
     ],
   },
   3073: {
-    rpcs: ["https://mainnet.movementnetwork.xyz"],
+    rpcs: ["https://mainnet.movementnetwork.xyz/v1"],
   },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
