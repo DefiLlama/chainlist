@@ -7663,7 +7663,14 @@ export const extraRpcs = {
     ],
   },
   3073: {
-    rpcs: ["https://mainnet.movementnetwork.xyz/v1"],
+    rpcs: [
+      "https://mainnet.movementnetwork.xyz/v1",
+      {
+        url: "https://movement.lava.build",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+    ],
   },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
