@@ -198,7 +198,7 @@ export const extraRpcs = {
     rpcs: [
       // Quicknode -> tracks IP
       {
-        url: "https://rpc.ankr.com/eth",
+        url: "https://rpc.ankr.com/eth/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -511,11 +511,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      {
-        url: "https://rpc.ankr.com/polygon_mumbai",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
       "https://polygontestapi.terminet.io/rpc",
       {
         url: "https://polygon-testnet.public.blastapi.io",
@@ -566,15 +561,10 @@ export const extraRpcs = {
   },
   //Rinkeby testnet deprecated
   4: {
-    rpcs: ["https://rpc.ankr.com/eth_rinkeby", "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161"],
+    rpcs: ["https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161"],
   },
   5: {
     rpcs: [
-      {
-        url: "https://rpc.ankr.com/eth_goerli",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
       {
         url: "https://endpoints.omniatech.io/v1/eth/goerli/public",
         tracking: "none",
@@ -639,7 +629,7 @@ export const extraRpcs = {
   },
   //Ropsten testnet deprecated
   3: {
-    rpcs: ["https://rpc.ankr.com/eth_ropsten", "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
+    rpcs: ["https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
   },
   195: {
     rpcs: ["https://xlayertestrpc.okx.com", "https://testrpc.xlayer.tech"],
@@ -651,11 +641,6 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/fantom/testnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://rpc.ankr.com/fantom_testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
       },
       {
         url: "https://fantom-testnet.public.blastapi.io",
@@ -706,12 +691,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://rpc.ankr.com/avalanche_fuji",
+        url: "https://rpc.ankr.com/avalanche_fuji/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://rpc.ankr.com/avalanche_fuji-c",
+        url: "https://rpc.ankr.com/avalanche_fuji-c/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -782,7 +767,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://rpc.ankr.com/polygon_amoy",
+        url: "https://rpc.ankr.com/polygon_amoy/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -816,7 +801,7 @@ export const extraRpcs = {
   56: {
     rpcs: [
       {
-        url: "https://rpc.ankr.com/bsc",
+        url: "https://rpc.ankr.com/bsc/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -1059,7 +1044,7 @@ export const extraRpcs = {
       "https://api.avax.network/ext/bc/C/rpc",
       "https://avalanche.public-rpc.com",
       {
-        url: "https://rpc.ankr.com/avalanche",
+        url: "https://rpc.ankr.com/avalanche/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -1170,11 +1155,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       "https://rpc.ftm.tools/",
-      {
-        url: "https://rpc.ankr.com/fantom",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
       "https://rpc.fantom.network",
       "https://rpc2.fantom.network",
       "https://rpc3.fantom.network",
@@ -1254,7 +1234,7 @@ export const extraRpcs = {
   137: {
     rpcs: [
       {
-        url: "https://rpc.ankr.com/polygon",
+        url: "https://rpc.ankr.com/polygon/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -1476,7 +1456,7 @@ export const extraRpcs = {
     rpcs: [
       "https://arb1.arbitrum.io/rpc",
       {
-        url: "https://rpc.ankr.com/arbitrum",
+        url: "https://rpc.ankr.com/arbitrum/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -1760,7 +1740,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpc.ankr.com/klaytn ",
+        url: "https://rpc.ankr.com/kaia/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -1777,7 +1757,7 @@ export const extraRpcs = {
       "https://a.api.s0.t.hmny.io",
       "https://api.s0.t.hmny.io",
       {
-        url: "https://rpc.ankr.com/harmony",
+        url: "https://rpc.ankr.com/harmony/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -1849,7 +1829,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://rpc.ankr.com/blast",
+        url: "https://rpc.ankr.com/blast/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -2061,7 +2041,7 @@ export const extraRpcs = {
     rpcs: [
       "https://forno.celo.org",
       {
-        url: "https://rpc.ankr.com/celo",
+        url: "https://rpc.ankr.com/celo/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -2164,7 +2144,7 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.optimism.io/",
       {
-        url: "https://rpc.ankr.com/optimism",
+        url: "https://rpc.ankr.com/optimism/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -2516,7 +2496,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://rpc.ankr.com/gnosis",
+        url: "https://rpc.ankr.com/gnosis/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -2733,12 +2713,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       {
-        url: "https://rpc.ankr.com/telos",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "wss://rpc.ankr.com/telos/ws/",
+        url: "https://rpc.ankr.com/telos/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -2786,7 +2761,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://rpc.ankr.com/moonbeam",
+        url: "https://rpc.ankr.com/moonbeam/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -2889,7 +2864,7 @@ export const extraRpcs = {
   4689: {
     rpcs: [
       {
-        url: "https://rpc.ankr.com/iotex",
+        url: "https://rpc.ankr.com/iotex/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -3238,7 +3213,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.syscoin.org",
       {
-        url: "https://rpc.ankr.com/syscoin",
+        url: "https://rpc.ankr.com/syscoin/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -3405,7 +3380,7 @@ export const extraRpcs = {
       "https://erpc.xinfin.network/",
       "wss://ews.xinfin.network/ws",
       {
-        url: "https://rpc.ankr.com/xdc",
+        url: "https://rpc.ankr.com/xdc/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -3420,7 +3395,7 @@ export const extraRpcs = {
     rpcs: [
       "https://erpc.apothem.network",
       "https://apothem.xdcrpc.com",
-      "https://rpc.ankr.com/xdc_testnet",
+      "https://rpc.ankr.com/xdc_testnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
       "https://earpc.apothem.network/",
       "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
@@ -3784,7 +3759,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://rpc.ankr.com/klaytn_testnet",
+        url: "https://rpc.ankr.com/kaia_testnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -3846,7 +3821,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://rpc.ankr.com/core",
+        url: "https://rpc.ankr.com/core/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -4297,7 +4272,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.chainstack,
       },
       {
-        url: "https://rpc.ankr.com/kava_evm",
+        url: "https://rpc.ankr.com/kava_evm/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -4362,11 +4337,6 @@ export const extraRpcs = {
         url: "wss://mantle.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://rpc.ankr.com/mantle",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
       },
       {
         url: "https://1rpc.io/mantle",
@@ -5483,7 +5453,7 @@ export const extraRpcs = {
       "https://api.node.glif.io",
       "https://node.filutils.com/rpc/v1",
       {
-        url: "https://rpc.ankr.com/filecoin",
+        url: "https://rpc.ankr.com/filecoin/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -5570,7 +5540,7 @@ export const extraRpcs = {
   1101: {
     rpcs: [
       {
-        url: "https://rpc.ankr.com/polygon_zkevm",
+        url: "https://rpc.ankr.com/polygon_zkevm/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -5708,7 +5678,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.unifra,
       },
       {
-        url: "https://rpc.ankr.com/scroll_sepolia_testnet",
+        url: "https://rpc.ankr.com/scroll_sepolia_testnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -5796,7 +5766,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.taiko.xyz",
       {
-        url: "https://rpc.ankr.com/taiko",
+        url: "https://rpc.ankr.com/taiko/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
@@ -5847,7 +5817,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.hekla.taiko.xyz",
       {
-        url: "https://rpc.ankr.com/taiko_hekla",
+        url: "https://rpc.ankr.com/taiko_hekla/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -6932,7 +6902,7 @@ export const extraRpcs = {
     rpcs: ["https://mainnet-rpc.helachain.com"],
   },
   698: {
-    rpcs: ["https://rpc.matchain.io", "https://rpc.ankr.com/matchain_mainnet"],
+    rpcs: ["https://rpc.matchain.io", "https://rpc.ankr.com/matchain_mainnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3"],
   },
   251: {
     rpcs: [
@@ -7243,7 +7213,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://rpc.ankr.com/corn_maizenet",
+        url: "https://rpc.ankr.com/corn_maizenet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
@@ -7262,7 +7232,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://rpc.ankr.com/corn_testnet",
+        url: "https://rpc.ankr.com/corn_testnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
@@ -7325,12 +7295,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpc.ankr.com/sonic_mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "wss://rpc.ankr.com/sonic_mainnet/ws/",
+        url: "https://rpc.ankr.com/sonic_mainnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
@@ -7344,12 +7309,7 @@ export const extraRpcs = {
   57054: {
     rpcs: [
       {
-        url: "https://rpc.ankr.com/sonic_blaze_testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "wss://rpc.ankr.com/sonic_blaze_testnet/ws",
+        url: "https://rpc.ankr.com/sonic_blaze_testnet/6cacd1f501bf0cc249dd424e913db3dd54db03c70bdcb5d6b5539e3bf49e80d3",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
