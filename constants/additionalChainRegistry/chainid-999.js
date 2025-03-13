@@ -5,7 +5,7 @@ export const data = {
     "rpc": [
       "https://rpc.hyperliquid.xyz/evm",
       "https://rpc.hypurrscan.io",
-      "https://hyperliquid-json-rpc-server-01.stakely.io"
+      "https://hyperliquid-json-rpc.stakely.io"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],
