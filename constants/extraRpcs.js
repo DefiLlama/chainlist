@@ -6414,6 +6414,15 @@ export const extraRpcs = {
       },
     ],
   },
+  7869: {
+    rpcs: [
+      {
+        url: "https://rpc-v2.powerloom.network",
+        tracking: "yes",
+        trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
   17071: {
     rpcs: [
       {
