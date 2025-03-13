@@ -7662,6 +7662,16 @@ export const extraRpcs = {
       }
     ],
   },
+  108160679: {
+    rpcs: [
+      "https://evm.orai.io",
+      {
+        url: "https://oraichain-mainnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
+      },
+    ],
+  },
   3073: {
     rpcs: [
       "https://mainnet.movementnetwork.xyz/v1",
