@@ -6416,6 +6416,7 @@ export const extraRpcs = {
   },
   7869: {
     rpcs: [
+      "https://rpc-v2.powerloom.network",
       {
         url: "https://rpc-v2.powerloom.network",
         tracking: "yes",
