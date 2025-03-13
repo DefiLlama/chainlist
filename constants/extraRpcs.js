@@ -192,7 +192,7 @@ const privacyStatement = {
   GrandValley:
     "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md",
   reliableninjas:
-  "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy"
+    "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -3770,9 +3770,7 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: [
-      "https://rpc.hyperliquid-testnet.xyz/evm"
-    ],
+    rpcs: ["https://rpc.hyperliquid-testnet.xyz/evm"],
   },
   1001: {
     rpcs: [
@@ -6403,7 +6401,7 @@ export const extraRpcs = {
         url: "https://berachain-testnet-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      }
+      },
     ],
   },
   328527: {
@@ -6448,6 +6446,12 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
+      "https://mainnet.zircuit.com",
+      {
+        url: "https://mainnet.zircuit.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
       {
         url: "https://zircuit1-mainnet.p2pify.com",
         tracking: "yes",
@@ -6823,11 +6827,6 @@ export const extraRpcs = {
       "https://story-rpc-evm.validatorvn.com",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
       "https://rpc-evm-story.rawaki.xyz",
-      {
-        url: "https://story-odyssey-evm.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       "https://story-odyssey-rpc.auranode.xyz",
       {
         url: "https://evm-rpc.story.testnet.dteam.tech",
@@ -7398,7 +7397,7 @@ export const extraRpcs = {
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
-      "https://story-rpc-evm.mandragora.io",
+      "https://story-evm-rpc.mandragora.io",
       "https://rpc-storyevm.aldebaranode.xyz",
     ],
   },
@@ -7596,13 +7595,8 @@ export const extraRpcs = {
     ],
   },
   8691942025: {
-    rpcs: [
-      "https://rpc.onfa.io", 
-      "https://rpc.onfachain.com", 
-      "wss://ws.onfachain.com", 
-      "wss://ws.onfa.io"
-    ], 
-  }, 
+    rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
+  },
   37111: {
     rpcs: [
       "https://rpc.testnet.lens.dev",
@@ -7625,7 +7619,7 @@ export const extraRpcs = {
           tracking: "none",
           trackingDetails: privacyStatement.Jnode,
         },
-	{
+        {
           url: "https://lightnode-json-rpc-story.grandvalleys.com",
           tracking: "none",
           trackingDetails: "privacyStatement.GrandValley",
@@ -7635,8 +7629,8 @@ export const extraRpcs = {
   },
   224433: {
     rpcs: [
-		"https://cancun-rpc.conet.network",
-		"https://rpc.conet.network",
+      "https://cancun-rpc.conet.network",
+      "https://rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -7646,7 +7640,7 @@ export const extraRpcs = {
   },
   224400: {
     rpcs: [
-		"https://mainnet-rpc.conet.network",
+      "https://mainnet-rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -7665,6 +7659,28 @@ export const extraRpcs = {
         url: "wss://ws.memecore.net",
         tracking: "none",
         trackingDetails: privacyStatement.MemeCore,
+      },
+    ],
+  },
+  5464: {
+    rpcs: ["https://sagaevm.jsonrpc.sagarpc.io"],
+  },
+  911867: {
+    rpcs: [
+      {
+        url: 'https://odyssey.ithaca.xyz',
+        tracking: "yes",
+        trackingDetails: privacyStatement.conduit
+      }
+    ],
+  },
+  3073: {
+    rpcs: [
+      "https://mainnet.movementnetwork.xyz/v1",
+      {
+        url: "https://movement.lava.build",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
       },
     ],
   },
