@@ -194,7 +194,7 @@ const privacyStatement = {
   reliableninjas:
     "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
   LinkPool:
-    "We do not collect or store information such as IP address, geolocation or any personal data. Only requested URLs are stored in logs and aggregate metrics are used to monitor API health and performance."
+    "We do not collect or store information such as IP address, geolocation or any personal data. Only requested URLs are stored in logs and aggregate metrics are used to monitor API health and performance.",
 };
 
 export const extraRpcs = {
@@ -7685,10 +7685,10 @@ export const extraRpcs = {
   911867: {
     rpcs: [
       {
-        url: 'https://odyssey.ithaca.xyz',
+        url: "https://odyssey.ithaca.xyz",
         tracking: "yes",
-        trackingDetails: privacyStatement.conduit
-      }
+        trackingDetails: privacyStatement.conduit,
+      },
     ],
   },
   108160679: {
@@ -7718,8 +7718,8 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.LinkPool,
       },
-    ]
-  }
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
