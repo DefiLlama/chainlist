@@ -50,6 +50,7 @@ export default {
   "252": "fraxtal",
   "269": "hpb",
   "288": "boba",
+  "295": "hbar",
   "311": "omax",
   "314": "filecoin",
   "321": "kucoin",
