@@ -192,7 +192,7 @@ const privacyStatement = {
   GrandValley:
     "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md",
   reliableninjas:
-    "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy"
+    "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
 };
 
 export const extraRpcs = {
@@ -570,7 +570,8 @@ export const extraRpcs = {
   4: {
     rpcs: [
       // "https://rpc.ankr.com/eth_rinkeby",
-       "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161"],
+      "https://rinkeby.infura.io/3/9aa3d95b3bc440fa88ea12eaa4456161",
+    ],
   },
   5: {
     rpcs: [
@@ -644,8 +645,9 @@ export const extraRpcs = {
   //Ropsten testnet deprecated
   3: {
     rpcs: [
-      // "https://rpc.ankr.com/eth_ropsten", 
-      "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
+      // "https://rpc.ankr.com/eth_ropsten",
+      "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+    ],
   },
   195: {
     rpcs: ["https://xlayertestrpc.okx.com", "https://testrpc.xlayer.tech"],
@@ -4466,10 +4468,7 @@ export const extraRpcs = {
     rpcs: ["https://http-mainnet.chain.pixie.xyz"],
   },
   6231991: {
-    rpcs: [
-      "https://block-chain.alt.technology",
-      "wss://block-chain.alt.technology/ws"
-    ],
+    rpcs: ["https://block-chain.alt.technology", "wss://block-chain.alt.technology/ws"],
   },
   6688: {
     rpcs: [
@@ -6970,7 +6969,7 @@ export const extraRpcs = {
   },
   698: {
     rpcs: [
-      "https://rpc.matchain.io", 
+      "https://rpc.matchain.io",
       // "https://rpc.ankr.com/matchain_mainnet"
     ],
   },
@@ -7696,10 +7695,10 @@ export const extraRpcs = {
   911867: {
     rpcs: [
       {
-        url: 'https://odyssey.ithaca.xyz',
+        url: "https://odyssey.ithaca.xyz",
         tracking: "yes",
-        trackingDetails: privacyStatement.conduit
-      }
+        trackingDetails: privacyStatement.conduit,
+      },
     ],
   },
   108160679: {
@@ -7722,11 +7721,8 @@ export const extraRpcs = {
       },
     ],
   },
-    16166: { 
-    rpcs: [
-      "https://pubnodes.cypherium.io/rpc",
-      "https://make-cph-great-again.community"
-    ],
+  16166: {
+    rpcs: ["https://pubnodes.cypherium.io/rpc", "https://make-cph-great-again.community"],
   },
   560048: {
     rpcs: [
@@ -7742,6 +7738,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["0xRPC"],
       },
     ],
+  },
+  295: {
+    rpcs: ["https://hedera.linkpool.pro"],
   },
 };
 
