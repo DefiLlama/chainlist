@@ -1,0 +1,27 @@
+{
+  "name": "STOchain Network Mainnet",
+  "chain": "STO",
+  "rpc": ["https://api-stoc-mainnet.stochainscan.io/"],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "STOchain Mainnet Token",
+    "symbol": "STO",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://stochain.io",
+  "shortName": "STO",
+  "chainId": 700,
+  "networkId": 700,
+  "slip44": 1,
+  "icon": "sto",
+  "explorers": [
+    {
+      "name": "blockscout",
+      "url": "https://stochainscan.io/en",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
+  "status": "active"
+}
