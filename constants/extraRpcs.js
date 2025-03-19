@@ -7708,8 +7708,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
     ],
-  },
+},
+  16166: { 
+  rpcs: [
+    "https://make-cph-great-again.community"
+  ],
+},
 };
+
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
