@@ -4671,6 +4671,9 @@ export const extraRpcs = {
   31102: {
     rpcs: ["rpcWorking:false"],
   },
+  32323: {
+    rpcs: ["https://mainnet.basedaibridge.com/rpc/"],
+  },
   32520: {
     rpcs: [
       "https://rpc-bitgert.icecreamswap.com",
