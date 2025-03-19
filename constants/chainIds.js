@@ -132,7 +132,6 @@ export default {
   "17777": "eos evm",
   "22776": "map protocol",
   "23294": "sapphire",
-  "32323": "basedai",
   "32520": "bitgert",
   "32659": "fusion",
   "32769": "zilliqa",
@@ -182,5 +181,6 @@ export default {
   "1666600000": "harmony",
   "11297108109": "palm",
   "383414847825": "zeniq",
-  "836542336838601": "curio"
+  "836542336838601": "curio",
+  "32323": "basedai"
 }
