@@ -7716,6 +7716,20 @@ export const extraRpcs = {
       },
     ],
   },
+  560048: {
+    rpcs: [
+      {
+        url: "https://0xrpc.io/hoodi",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/hoodi",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
