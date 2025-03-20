@@ -191,6 +191,8 @@ const privacyStatement = {
     "We never collect, store, or track any identifying information. Data points like request volumes and success rates are only aggregated to monitor API performance. For more details, please visit https://rhinostake.com/resources/rhino-apis-terms-conditions",
   GrandValley:
     "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md",
+  reliableninjas:
+    "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -2873,11 +2875,11 @@ export const extraRpcs = {
       "https://babel-api.fastblocks.io",
       "https://rpc.depinscan.io/iotex",
       "https://rpc.chainanalytics.org/iotex",
-      {
-        url: "https://iotexrpc.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
+      // {
+      //   url: "https://iotexrpc.com",
+      //   tracking: "limited",
+      //   trackingDetails: privacyStatement.ankr,
+      // },
       {
         url: "https://iotex-network.rpc.thirdweb.com",
         tracking: "yes",
@@ -3937,6 +3939,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://zksync.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   196: {
@@ -4102,16 +4109,16 @@ export const extraRpcs = {
       "https://rpc01-sg.dogechain.dog",
       "https://rpc02-sg.dogechain.dog",
       "https://rpc03-sg.dogechain.dog",
-      {
-        url: "https://dogechain.ankr.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://dogechain-sj.ankr.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.ankr,
-      },
+      // {
+      //   url: "https://dogechain.ankr.com",
+      //   tracking: "limited",
+      //   trackingDetails: privacyStatement.ankr,
+      // },
+      // {
+      //   url: "https://dogechain-sj.ankr.com",
+      //   tracking: "limited",
+      //   trackingDetails: privacyStatement.ankr,
+      // },
       {
         url: "https://doge-mainnet.gateway.tatum.io",
         tracking: "yes",
@@ -4171,6 +4178,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://zetachain-testnet-evm.reliableninjas.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.reliableninjas,
+      },
     ],
   },
   7000: {
@@ -4209,6 +4221,11 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/zetachain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://zetachain-mainnet-evm.reliableninjas.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.reliableninjas,
       },
     ],
   },
@@ -4413,6 +4430,12 @@ export const extraRpcs = {
   },
   6626: {
     rpcs: ["https://http-mainnet.chain.pixie.xyz"],
+  },
+  6231991: {
+    rpcs: [
+      "https://block-chain.alt.technology",
+      "wss://block-chain.alt.technology/ws"
+    ],
   },
   6688: {
     rpcs: [
@@ -6240,9 +6263,9 @@ export const extraRpcs = {
   77001: {
     rpcs: ["https://public-node.api.boraportal.com/bora/mainnet"],
   },
-  267: {
-    rpcs: ["https://rpc.ankr.com/neura_testnet"],
-  },
+  // 267: {
+  //   rpcs: ["https://rpc.ankr.com/neura_testnet"],
+  // },
   60808: {
     rpcs: [
       "https://rpc.gobob.xyz",
@@ -6379,6 +6402,16 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://rpc.powerloom.network",
+        tracking: "yes",
+        trackingDetails: privacyStatement.conduit,
+      },
+    ],
+  },
+  7869: {
+    rpcs: [
+      "https://rpc-v2.powerloom.network",
+      {
+        url: "https://rpc-v2.powerloom.network",
         tracking: "yes",
         trackingDetails: privacyStatement.conduit,
       },
@@ -7345,7 +7378,7 @@ export const extraRpcs = {
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
-      "https://story-evm-rpc.mandragora.io",
+      "https://story-mainnet-evmrpc.mandragora.io",
       "https://rpc-storyevm.aldebaranode.xyz",
     ],
   },
@@ -7622,6 +7655,16 @@ export const extraRpcs = {
       }
     ],
   },
+  108160679: {
+    rpcs: [
+      "https://evm.orai.io",
+      {
+        url: "https://oraichain-mainnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
+      },
+    ],
+  },
   3073: {
     rpcs: [
       "https://mainnet.movementnetwork.xyz/v1",
@@ -7632,7 +7675,29 @@ export const extraRpcs = {
       },
     ],
   },
+  16166: {
+    rpcs: [
+      "https://pubnodes.cypherium.io/rpc",
+      "https://make-cph-great-again.community"
+    ],
+  },
+  560048: {
+    rpcs: [
+      "https://rpc.hoodi.ethpandaops.io",
+      {
+        url: "https://0xrpc.io/hoodi",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/hoodi",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+    ],
+  },
 };
+
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;

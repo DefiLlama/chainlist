@@ -160,7 +160,7 @@ export default {
   "81457": "blast",
   "88888": "chiliz",
   "105105": "stratis",
-  "111188": "real", 
+  "111188": "real",
   "153153": "odyssey",
   "167000": "taiko",
   "200901": "bitlayer",
@@ -181,5 +181,5 @@ export default {
   "1666600000": "harmony",
   "11297108109": "palm",
   "383414847825": "zeniq",
-  "836542336838601": "curio"
+  "836542336838601": "curio",
 }
