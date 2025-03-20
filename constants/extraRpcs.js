@@ -4465,6 +4465,12 @@ export const extraRpcs = {
   6626: {
     rpcs: ["https://http-mainnet.chain.pixie.xyz"],
   },
+  6231991: {
+    rpcs: [
+      "https://block-chain.alt.technology",
+      "wss://block-chain.alt.technology/ws"
+    ],
+  },
   6688: {
     rpcs: [
       "https://evmrpc.irishub-1.irisnet.org",
