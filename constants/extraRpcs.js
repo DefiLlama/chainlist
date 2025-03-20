@@ -7711,6 +7711,7 @@ export const extraRpcs = {
 },
   16166: { 
   rpcs: [
+    "https://pubnodes.cypherium.io/rpc",
     "https://make-cph-great-again.community"
   ],
 },
