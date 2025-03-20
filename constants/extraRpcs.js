@@ -7722,6 +7722,12 @@ export const extraRpcs = {
       },
     ],
   },
+    16166: { 
+    rpcs: [
+      "https://pubnodes.cypherium.io/rpc",
+      "https://make-cph-great-again.community"
+    ],
+  },
   560048: {
     rpcs: [
       "https://rpc.hoodi.ethpandaops.io",
@@ -7738,6 +7744,7 @@ export const extraRpcs = {
     ],
   },
 };
+
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
