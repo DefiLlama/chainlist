@@ -7718,6 +7718,7 @@ export const extraRpcs = {
   },
   560048: {
     rpcs: [
+      "https://rpc.hoodi.ethpandaops.io",
       {
         url: "https://0xrpc.io/hoodi",
         tracking: "limited",
