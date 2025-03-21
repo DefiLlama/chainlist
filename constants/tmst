@@ -1,0 +1,45 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract TMST is ERC20, Ownable {
+    uint256 public constant INITIAL_SUPPLY = 100_000_000 * (10 ** 18); // 100 milhões de tokens
+    uint256 public buyTax = 5; // Taxa de compra em %
+    uint256 public sellTax = 5; // Taxa de venda em %
+    address public taxWallet;
+
+    mapping(address => bool) private isExcludedFromFees;
+
+    constructor(address _taxWallet) ERC20("TMST Token", "TMST") {
+        _mint(msg.sender, INITIAL_SUPPLY);
+        taxWallet = _taxWallet;
+        isExcludedFromFees[msg.sender] = true;
+    }
+
+    function _transfer(address sender, address recipient, uint256 amount) internal override {
+        if (isExcludedFromFees[sender] || isExcludedFromFees[recipient]) {
+            super._transfer(sender, recipient, amount);
+        } else {
+            uint256 taxAmount = (recipient == owner()) ? (amount * sellTax / 100) : (amount * buyTax / 100);
+            uint256 transferAmount = amount - taxAmount;
+            super._transfer(sender, taxWallet, taxAmount);
+            super._transfer(sender, recipient, transferAmount);
+        }
+    }
+
+    function setBuyTax(uint256 _buyTax) external onlyOwner {
+        require(_buyTax <= 10, "Taxa não pode ser maior que 10%");
+        buyTax = _buyTax;
+    }
+
+    function setSellTax(uint256 _sellTax) external onlyOwner {
+        require(_sellTax <= 10, "Taxa não pode ser maior que 10%");
+        sellTax = _sellTax;
+    }
+
+    function excludeFromFees(address account, bool excluded) external onlyOwner {
+        isExcludedFromFees[account] = excluded;
+    }
+}
