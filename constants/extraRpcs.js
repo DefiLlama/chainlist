@@ -2074,16 +2074,6 @@ export const extraRpcs = {
       //   trackingDetails: privacyStatement.ankr,
       // },
       {
-        url: "https://1rpc.io/celo",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://celo.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://celo-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -2099,14 +2089,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/celo-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://celo.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://rpc.owlracle.info/celo/70d38ce1826c4a60bb2a8e05a6c8b20f",
-        tracking: "limited",
-        trackingDetails: privacyStatement.owlracle,
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -2114,11 +2099,6 @@ export const extraRpcs = {
     rpcs: [
       "https://alfajores-forno.celo-testnet.org",
       "wss://alfajores-forno.celo-testnet.org/ws",
-      {
-        url: "https://node.histori.xyz/celo-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
       {
         url: "https://celo-alfajores.drpc.org",
         tracking: "none",
