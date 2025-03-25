@@ -2088,11 +2088,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://celo.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
     ],
   },
   44787: {
