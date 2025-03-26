@@ -147,6 +147,7 @@ export default {
   "42793": "etherlink",
   "43111": "hemi",
   "43114": "avalanche",
+  "44003": "qday",
   "47805": "rei",
   "48900": "zircuit",
   "50104": "sophon",

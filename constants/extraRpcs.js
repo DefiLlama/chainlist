@@ -702,6 +702,9 @@ export const extraRpcs = {
       },
     ],
   },
+  44003: {
+    rpcs: ["https://dawn-rpc.qday.info/"],
+  },
   4444: {
     rpcs: ["https://janus.htmlcoin.dev/janus/"],
   },
