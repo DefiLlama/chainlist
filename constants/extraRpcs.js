@@ -2088,6 +2088,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      "https://celo-json-rpc.stakely.io"
     ],
   },
   44787: {
