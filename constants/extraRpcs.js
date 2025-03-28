@@ -7356,6 +7356,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.callstatic,
       },
+      {
+        url: "https:/sonic.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   57054: {
