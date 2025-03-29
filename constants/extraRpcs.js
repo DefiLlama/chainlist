@@ -7083,6 +7083,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
+        url: "wss://unichain-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
         url: "https://unichain.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
