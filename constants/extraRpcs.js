@@ -7467,16 +7467,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://0xrpc.io/bera",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/bera",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
         url: "https://rpc.berachain-apis.com",
         tracking: "none",
         trackingDetails: privacyStatement.RHINO,
