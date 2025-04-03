@@ -1460,6 +1460,15 @@ export const extraRpcs = {
       },
     ],
   },
+  334: {
+    rpcs: [
+      {
+        url: "https://t3rn-b2n.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+    ],
+  },
   8822: {
     rpcs: [
       "https://json-rpc.evm.iotaledger.net",
