@@ -35,7 +35,7 @@ function listFiles(dir, files = []) {
   return files
     .map((file) => file.replace(process.cwd() + "/out", ""))
     .filter((file) => !file.startsWith("/_next"))
-    .map((file) => file.replace(" ", "%20"))
+    .map((file) => file.replace(/ /g, "%20"))
     .map((file) => file.replace(".html", ""));
 }
 
