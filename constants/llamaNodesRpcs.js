@@ -34,39 +34,6 @@ export const llamaNodesRpcs = {
       },
     ]
   },
-  10: {
-    name: 'Optimism LlamaNodes',
-    rpcs: [
-      {
-        url: 'https://optimism.llamarpc.com',
-        tracking: 'none',
-        trackingDetails: privacyStatement,
-        isOpenSource: true,
-      },
-    ]
-  },
-  137: {
-    name: 'Polygon LlamaNodes',
-    rpcs: [
-      {
-        url: 'https://polygon.llamarpc.com',
-        tracking: 'none',
-        trackingDetails: privacyStatement,
-        isOpenSource: true,
-      },
-    ]
-  },
-  42161: {
-    name: 'Arbitrum LlamaNodes',
-    rpcs: [
-      {
-        url: 'https://arbitrum.llamarpc.com',
-        tracking: 'none',
-        trackingDetails: privacyStatement,
-        isOpenSource: true,
-      },
-    ]
-  },
 }
 
 export const llamaNodesRpcByUrl = {};
