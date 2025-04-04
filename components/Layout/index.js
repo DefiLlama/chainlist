@@ -1,8 +1,7 @@
 import * as React from "react";
 import { useEffect } from "react";
 import Header from "../header";
-// import { useTranslations } from "next-intl";
-import { notTranslation as useTranslations } from "../../utils";
+import { useTranslations } from "next-intl";
 import Logo from "./Logo";
 
 const toggleTheme = (e) => {
@@ -120,6 +119,18 @@ export default function Layout({ children, lang, chainName, setChainName }) {
               ></path>
             </svg>
             <span className="text-base font-medium">{t("toggle-theme")}</span>
+          </a>
+
+          <a
+            className="flex items-center gap-2 mx-auto lg:ml-0"
+            href="/rpcs.json"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="#2F80ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span className="text-base font-medium">API</span>
           </a>
         </div>
       </div>
