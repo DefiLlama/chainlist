@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import Chain from "../../components/chain";
 import { generateChainData } from "../../utils/fetch";
+import { useTranslations } from "next-intl";
 
 export async function getStaticProps() {
   const sortedChains = await generateChainData();
@@ -19,6 +20,8 @@ export async function getStaticProps() {
 
 function Home({ chains }) {
   const [chainName, setChainName] = React.useState("");
+
+  const t = useTranslations("Common");
 
   const router = useRouter();
   const { testnets, testnet, search } = router.query;

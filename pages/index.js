@@ -6,6 +6,7 @@ import Chain from "../components/chain";
 import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
 import { useFilteredChains } from '../hooks/useFilteredChains';
+import { useTranslations } from "next-intl";
 
 export async function getStaticProps() {
   const sortedChains = await generateChainData();
@@ -23,6 +24,8 @@ function Home({ chains }) {
   const { chainName, setChainName, finalChains } = useFilteredChains(chains);
 
   const [end, setEnd] = React.useState(15);
+
+  const t = useTranslations("Common");
 
   return (
     <>
