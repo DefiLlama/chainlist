@@ -1,6 +1,6 @@
 import * as React from "react";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-// import { NextIntlProvider } from "next-intl";
+import { NextIntlProvider } from "next-intl";
 import { useAnalytics } from "../hooks/useAnalytics";
 import "../styles/globals.css";
 
@@ -11,10 +11,9 @@ function App({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <NextIntlProvider messages={pageProps.messages}> */}
-      <Component {...pageProps} />
-      {/* <SnackbarController /> */}
-      {/* </NextIntlProvider> */}
+      <NextIntlProvider messages={pageProps.messages}>
+        <Component {...pageProps} />
+      </NextIntlProvider>
     </QueryClientProvider>
   );
 }
