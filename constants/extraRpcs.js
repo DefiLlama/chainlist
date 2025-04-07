@@ -6868,6 +6868,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.GrandValley,
       },
+      "https://0g-evm-rpc.murphynode.net"
     ],
   },
   1740: {
