@@ -7722,6 +7722,25 @@ export const extraRpcs = {
     rpcs: ["https://hedera.linkpool.pro"],
   }
 };
+// NetworkCoin Ai Mainnet
+  // Network ID / ChainID: 101888 (0x18E00)
+  // Currency: Ai
+  101888: {
+    rpcs: [
+      "https://rpc.mainnet.networkcoin.ai/"
+    ]
+  },
+
+  // NetworkCoin Ai Testnet
+  // Network ID / ChainID: 1018888 (0xF8C08)
+  // Currency: Ai
+  1018888: {
+    rpcs: [
+      "https://rpc.testnet.networkcoin.ai/"
+    ]
+  },
+
+};
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
