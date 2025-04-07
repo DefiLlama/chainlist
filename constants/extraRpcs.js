@@ -7145,14 +7145,14 @@ export const extraRpcs = {
       },
     ],
   },
-  30311: {
+  50312: {
     rpcs: [
-      "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811"
       {
         url: "https://dream-rpc.somnia.network",
         tracking: "none",
         trackingDetails: privacyStatement.somnia,
       },
+      "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811"
     ],
   },
   763373: {
