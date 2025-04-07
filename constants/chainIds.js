@@ -162,6 +162,7 @@ export default {
   "80094": "berachain",
   "81457": "blast",
   "88888": "chiliz",
+  "98866": "plume-mainnet",
   "105105": "stratis",
   "111188": "real",
   "153153": "odyssey",
