@@ -7606,6 +7606,16 @@ export const extraRpcs = {
   8691942025: {
     rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
+  232: {
+    rpcs: [
+      "https://rpc.lens.xyz",
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
   37111: {
     rpcs: [
       "https://rpc.testnet.lens.dev",
