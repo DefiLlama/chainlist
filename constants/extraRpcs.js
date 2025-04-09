@@ -7149,11 +7149,7 @@ export const extraRpcs = {
   },
   50312: {
     rpcs: [
-      {
-        url: "https://dream-rpc.somnia.network",
-        tracking: "none",
-        trackingDetails: privacyStatement.somnia,
-      },
+      "https://dream-rpc.somnia.network",
       "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811"
     ],
   },
@@ -7609,11 +7605,7 @@ export const extraRpcs = {
   232: {
     rpcs: [
       "https://rpc.lens.xyz",
-      {
-        url: "https://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
+      "https://lens.drpc.org"
     ],
   },
   37111: {
@@ -7633,15 +7625,11 @@ export const extraRpcs = {
     1315: {
       rpcs: [
         "https://aeneid.storyrpc.io/",
-        {
-          url: "https://evm-aeneid-story.j-node.net",
-          tracking: "none",
-          trackingDetails: privacyStatement.Jnode,
-        },
+        "https://evm-aeneid-story.j-node.net",
         {
           url: "https://lightnode-json-rpc-story.grandvalleys.com",
           tracking: "none",
-          trackingDetails: "privacyStatement.GrandValley",
+          trackingDetails: privacyStatement.GrandValley,
         },
       ],
     },
