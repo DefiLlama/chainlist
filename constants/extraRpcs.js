@@ -7722,6 +7722,16 @@ export const extraRpcs = {
   295: {
     rpcs: ["https://hedera.linkpool.pro"],
   },
+  1020: {
+    rpcs: [
+      "https://rpc.brillianceglobal.ltd",
+      {
+        url: "https://scan.brillianceglobal.ltd",
+        tracking: "yes",
+        trackingDetails: privacyStatement.lava,
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
