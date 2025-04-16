@@ -497,6 +497,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      "https://rpc.therpc.io/ethereum",
     ],
   },
   2: {
