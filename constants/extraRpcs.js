@@ -193,6 +193,8 @@ const privacyStatement = {
     "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md",
   reliableninjas:
     "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
+  therpc:
+    "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -497,7 +499,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
-      "https://rpc.therpc.io/ethereum",
+      {
+        url: "https://rpc.therpc.io/ethereum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   2: {
