@@ -6219,6 +6219,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.mxc,
       },
+      {
+        url: "https://rpc.moonchain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.mxc,
+      },
+      {
+        url: "wss://rpc.moonchain.com/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.mxc,
+      }
     ],
   },
   35441: {
