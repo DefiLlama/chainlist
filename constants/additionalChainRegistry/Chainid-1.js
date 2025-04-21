@@ -1,0 +1,22 @@
+module.exports = {
+  name: "EthrumScan",
+  chain: "Ethereum Mainnet",
+  rpc: [
+    "https://virtual.mainnet.rpc.tenderly.co/5804dcf7-70e6-4988-b2b0-3672193e0c91"
+  ],
+  features: [],
+  nativeCurrency: {
+    name: "Ethrum",
+    symbol: "ETH",
+    decimals: 18
+  },
+  chainId: 1,
+  networkId: 1,
+  explorers: [
+    {
+      name: "Ethrum Explorer",
+      url: "https://etherscan.io",
+      standard: "EIP3091"
+    }
+  ]
+};
