@@ -194,7 +194,9 @@ const privacyStatement = {
   reliableninjas:
     "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
   therpc:
-    "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy"
+    "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
+  redbelly:
+    "For the purpose of rate limiting and protection against DDoS attacks, Redbelly Network may log the IP address of the device making RPC requests. This information is used solely for security and operational integrity and is not shared with third parties.",
 };
 
 export const extraRpcs = {
@@ -7274,7 +7276,7 @@ export const extraRpcs = {
   50312: {
     rpcs: [
       "https://dream-rpc.somnia.network",
-      "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811"
+      "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811",
     ],
   },
   763373: {
@@ -7373,7 +7375,13 @@ export const extraRpcs = {
     ],
   },
   151: {
-    rpcs: ["https://governors.mainnet.redbelly.network"],
+    rpcs: [
+      {
+        url: "https://governors.mainnet.redbelly.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.redbelly,
+      },
+    ],
   },
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
@@ -7754,10 +7762,7 @@ export const extraRpcs = {
     rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
   232: {
-    rpcs: [
-      "https://rpc.lens.xyz",
-      "https://lens.drpc.org"
-    ],
+    rpcs: ["https://rpc.lens.xyz", "https://lens.drpc.org"],
   },
   37111: {
     rpcs: [
@@ -7858,10 +7863,7 @@ export const extraRpcs = {
     ],
   },
   16166: {
-    rpcs: [
-      "https://pubnodes.cypherium.io/rpc",
-      "https://make-cph-great-again.community"
-    ],
+    rpcs: ["https://pubnodes.cypherium.io/rpc", "https://make-cph-great-again.community"],
   },
   560048: {
     rpcs: [
