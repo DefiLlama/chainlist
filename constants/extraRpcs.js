@@ -7882,7 +7882,7 @@ export const extraRpcs = {
   },
   295: {
     rpcs: ["https://hedera.linkpool.pro"],
-  },
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
