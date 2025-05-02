@@ -6317,7 +6317,7 @@ export const extraRpcs = {
   1100: {
     rpcs: [
       "https://jsonrpc.dymension.nodestake.org",
-
+      "https://rollapp.jrpc.cumulo.com.es",
       "https://dymension.liquify.com/json-rpc",
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
