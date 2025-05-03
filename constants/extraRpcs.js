@@ -7969,6 +7969,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      "https://story-aeneid-rpc.spidernode.net",
     ],
   },
   224433: {
