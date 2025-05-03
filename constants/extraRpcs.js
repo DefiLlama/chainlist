@@ -7959,6 +7959,7 @@ export const extraRpcs = {
     rpcs: [
       "https://aeneid.storyrpc.io/",
       "https://evm-aeneid-story.j-node.net",
+      "https://aeneid-evm-rpc.krews.xyz",
       {
         url: "https://lightnode-json-rpc-story.grandvalleys.com",
         tracking: "none",
