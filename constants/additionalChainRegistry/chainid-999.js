@@ -8,6 +8,7 @@ export const data = {
       "https://hyperliquid-json-rpc.stakely.io",
       "https://hyperliquid.drpc.org",
       "wss://hyperliquid.drpc.org",
+      "https://rpc.hyperlend.finance"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],
