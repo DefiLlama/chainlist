@@ -7708,7 +7708,8 @@ export const extraRpcs = {
       "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
       "https://story-mainnet-evmrpc.mandragora.io",
-      "https://evm.story.cumulo.me"
+      "https://evm.story.cumulo.me",
+      {
         url: "https://rpc.ankr.com/story_mainnet",
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
