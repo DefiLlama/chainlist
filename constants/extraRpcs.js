@@ -7960,6 +7960,7 @@ export const extraRpcs = {
       "https://aeneid.storyrpc.io/",
       "https://evm-aeneid-story.j-node.net",
       "https://evmrpc-t.story.nodestake.org",
+      "https://json-rpc.story-aeneid.cumulo.me",
       {
         url: "https://lightnode-json-rpc-story.grandvalleys.com",
         tracking: "none",
