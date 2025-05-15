@@ -7498,10 +7498,16 @@ export const extraRpcs = {
     ],
   },
   531050104: {
-    rpcs: ["https://rpc.testnet.sophon.xyz"],
+    rpcs: [
+      "https://rpc.testnet.sophon.xyz",
+      "https://testnet.rpc-quicknode.sophon.xyz",
+    ],
   },
   50104: {
-    rpcs: ["https://rpc.sophon.xyz"],
+    rpcs: [
+      "https://rpc.sophon.xyz",
+      "https://rpc-quicknode.sophon.xyz",
+    ],
   },
   33139: {
     rpcs: [
