@@ -8228,6 +8228,21 @@ export const extraRpcs = {
       },
     ],
   },
+  13505: {
+    rpcs: [
+      "https://rpc-sepolia.gravity.xyz",
+      {
+        url: "https://gravity-alpha-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://gravity-alpha-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
