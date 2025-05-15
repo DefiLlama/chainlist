@@ -8230,6 +8230,7 @@ export const extraRpcs = {
   },
   13505: {
     rpcs: [
+      "https://rpc-sepolia.gravity.xyz",
       {
         url: "https://gravity-alpha-sepolia.drpc.org",
         tracking: "none",
