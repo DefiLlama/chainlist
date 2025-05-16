@@ -7501,7 +7501,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.testnet.sophon.xyz",
       {
-        url: "https://testnet.rpc-quicknode.sophon.xyz",
+        url: "https://rpc-quicknode.testnet.sophon.xyz",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
