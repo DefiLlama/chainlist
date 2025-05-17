@@ -7702,7 +7702,6 @@ export const extraRpcs = {
       },
       "https://evm-rpc-story.j-node.net",
       "https://story-evm-rpc.krews.xyz",
-      "https://story-mainnet-jsonrpc.blockhub.id",
       "https://evmrpc.story.nodestake.org",
       "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
