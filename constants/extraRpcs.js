@@ -7678,7 +7678,7 @@ export const extraRpcs = {
     ],
   },
   57054: {
-    rpcs: [,
+    rpcs: [
       {
         url: "https://rpc.ankr.com/sonic_blaze_testnet",
         tracking: "limited",
