@@ -7674,11 +7674,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
-      "https://sonic-json-rpc.stakely.io/"
+      "https://sonic-json-rpc.stakely.io/",
     ],
   },
   57054: {
-    rpcs: [
+    rpcs: [,
       {
         url: "https://rpc.ankr.com/sonic_blaze_testnet",
         tracking: "limited",
