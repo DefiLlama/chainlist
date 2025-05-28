@@ -113,6 +113,7 @@ export default {
   "5551": "nahmii",
   "6001": "bouncebit",
   "6880": "mtt_network",
+  "6900": "nibiru",
   "6969": "tombchain",
   "7000": "zetachain",
   "7070": "planq",
