@@ -194,7 +194,7 @@ const privacyStatement = {
   reliableninjas:
     "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
   therpc:
-    "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy"
+    "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
 };
 
 export const extraRpcs = {
@@ -503,7 +503,7 @@ export const extraRpcs = {
         url: "https://rpc.therpc.io/ethereum",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
     ],
   },
   2: {
@@ -2140,7 +2140,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      "https://celo-json-rpc.stakely.io"
+      "https://celo-json-rpc.stakely.io",
     ],
   },
   44787: {
@@ -3676,7 +3676,7 @@ export const extraRpcs = {
   177: {
     rpcs: [
       "https://mainnet.hsk.xyz",
-       {
+      {
         url: "https://hashkey.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -3685,7 +3685,7 @@ export const extraRpcs = {
         url: "wss://hashkey.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      }, 
+      },
     ],
   },
   169: {
@@ -7287,6 +7287,9 @@ export const extraRpcs = {
       "wss://cheesechain.calderachain.xyz/ws",
     ],
   },
+  6900: {
+    rpcs: ["https://evm-rpc.nibiru.fi", "wss://evm-rpc-ws.nibiru.fi"],
+  },
   383414847825: {
     rpcs: ["https://api.zeniq.network"],
   },
@@ -7444,7 +7447,7 @@ export const extraRpcs = {
   50312: {
     rpcs: [
       "https://dream-rpc.somnia.network",
-      "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811"
+      "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811",
     ],
   },
   763373: {
@@ -7953,10 +7956,7 @@ export const extraRpcs = {
     rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
   232: {
-    rpcs: [
-      "https://rpc.lens.xyz",
-      "https://lens.drpc.org"
-    ],
+    rpcs: ["https://rpc.lens.xyz", "https://lens.drpc.org"],
   },
   37111: {
     rpcs: [
@@ -8061,28 +8061,25 @@ export const extraRpcs = {
     ],
   },
   16166: {
-    rpcs: [
-      "https://pubnodes.cypherium.io/rpc",
-      "https://make-cph-great-again.community"
-    ],
+    rpcs: ["https://pubnodes.cypherium.io/rpc", "https://make-cph-great-again.community"],
   },
   560048: {
-  rpcs: [
-    {
-      url: "https://rpc.hoodi.ethpandaops.io",
-    },
-    {
-      url: "https://0xrpc.io/hoodi",
-      tracking: "limited",
-      trackingDetails: privacyStatement["0xRPC"],
-    },
-    {
-      url: "wss://0xrpc.io/hoodi",
-      tracking: "limited",
-      trackingDetails: privacyStatement["0xRPC"],
-    },
-  ],
-},
+    rpcs: [
+      {
+        url: "https://rpc.hoodi.ethpandaops.io",
+      },
+      {
+        url: "https://0xrpc.io/hoodi",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/hoodi",
+        tracking: "limited",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+    ],
+  },
   295: {
     rpcs: ["https://hedera.linkpool.pro"],
   },
