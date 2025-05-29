@@ -8253,6 +8253,26 @@ export const extraRpcs = {
       },
     ],
   },
+
+  73115: {
+    rpcs: [
+      {
+        url: "https://rpc1-mainnet.icbnetwork.info",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc2-mainnet.icbnetwork.info",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://main1.rpc-icb-network.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
