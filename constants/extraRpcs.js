@@ -7677,6 +7677,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      "https://sonic-json-rpc.stakely.io/",
     ],
   },
   57054: {
