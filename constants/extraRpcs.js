@@ -3058,6 +3058,9 @@ export const extraRpcs = {
   888: {
     rpcs: ["https://gwan-ssl.wandevs.org:56891", "https://gwan2-ssl.wandevs.org"],
   },
+  999: {
+    rpcs: ["https://rpc.hyperliquid.xyz/evm", "https://hyperliquid-json-rpc.stakely.io", "https://rpc.hypurrscan.io", "https://rpc.hyperlend.finance"],
+  },
   106: {
     rpcs: [
       "https://evmexplorer.velas.com/rpc",
