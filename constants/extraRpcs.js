@@ -8243,6 +8243,13 @@ export const extraRpcs = {
       },
     ],
   },
+  73115: {
+    rpcs: [
+      "https://rpc1-mainnet.icbnetwork.info",
+      "https://rpc2-mainnet.icbnetwork.info",
+      "https://main1.rpc-icb-network.io/",
+    ],
+  },
   2632500: {
     rpcs: ["https://coti-rpc.Hyperflow.finance", "wss://coti-rpc.Hyperflow.finance"],
   },
