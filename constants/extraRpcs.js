@@ -8248,8 +8248,8 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.luxeports.com",
       "https://erpc.luxeports.com",
-      "wss://rpc.luxeports.com/ws”,
-      "wss://erpc.luxeports.com/ws”,
+      "wss://rpc.luxeports.com/ws",
+      "wss://erpc.luxeports.com/ws",
     ],
   },
   73115: {
