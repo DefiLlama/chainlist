@@ -114,7 +114,7 @@ export default {
   "5330": "superseed",
   "5551": "nahmii",
   "6001": "bouncebit",
-  "6880": "mtt_network",
+  "6880": "mtt network",
   "6900": "nibiru",
   "6969": "tombchain",
   "7000": "zetachain",
