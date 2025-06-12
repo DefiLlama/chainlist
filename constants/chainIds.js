@@ -74,7 +74,7 @@ export default {
   "888": "wanchain",
   "957": "lyra chain",
   "996": "bifrost",
-  "999": "hyperliquid",
+  "999": "wanchain testnet",
   "1030": "conflux",
   "1088": "metis",
   "1100": "dymension",

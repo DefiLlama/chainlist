@@ -4,7 +4,6 @@ import {data as c} from "./chainid-88888.js"
 import {data as d} from "./chainid-5151706.js"
 import {data as e} from "./chainid-1380012617.js"
 import {data as f} from "./chainid-2020.js"
-import {data as g} from "./chainid-999.js"
 
 
 export const overwrittenChains = [
@@ -14,5 +13,4 @@ export const overwrittenChains = [
     d,
     e,
     f,
-    g
 ]
