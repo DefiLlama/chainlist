@@ -8258,7 +8258,7 @@ export const extraRpcs = {
     rpcs: ["https://coti-test-rpc.Hyperflow.finance", "wss://coti-test-rpc.Hyperflow.finance"],
   },
   7233: {
-    rpcs: ["https://rpc-mainnet.inichain.com"],
+    rpcs: ["https://rpc-mainnet.inichain.com"]
   },
 };
 
