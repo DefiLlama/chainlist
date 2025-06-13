@@ -120,6 +120,7 @@ export default {
   "7070": "planq",
   "7171": "bitrock",
   "7200": "xsat",
+  "7233": "initverse",
   "7560": "cyeth",
   "7700": "canto",
   "8217": "klaytn",
