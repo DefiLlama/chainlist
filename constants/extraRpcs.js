@@ -5952,11 +5952,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
-      {
-        url: "https://oasys.rpc.grove.city/v1/167fa7a3",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
       "wss://ws.mainnet.oasys.games/",
     ],
   },
