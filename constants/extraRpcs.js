@@ -8259,7 +8259,7 @@ export const extraRpcs = {
   },
   7233: {
     rpcs: ["https://rpc-mainnet.inichain.com"],
-  }
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
