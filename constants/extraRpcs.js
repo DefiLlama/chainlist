@@ -8257,6 +8257,9 @@ export const extraRpcs = {
   7082400: {
     rpcs: ["https://coti-test-rpc.Hyperflow.finance", "wss://coti-test-rpc.Hyperflow.finance"],
   },
+  7233: {
+    rpcs: ["https://rpc-mainnet.inichain.com"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
