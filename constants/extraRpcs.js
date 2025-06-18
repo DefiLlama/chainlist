@@ -195,6 +195,8 @@ const privacyStatement = {
     "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
   therpc:
     "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
+  Spectrum:
+    "Privacy Statement: Spectrum does not collect, store, or log personal user data. This includes IP addresses, device identifiers, wallet information, and network metadata. IPs may be briefly processed in-memory for rate limiting and DDoS protection, but are never stored. We use no cookies, analytics, or tracking technologies. No user data is sold, shared, or retained. For full details, visit: https://spectrumnodes.com/privacy-policy",
 };
 
 export const extraRpcs = {
@@ -744,6 +746,11 @@ export const extraRpcs = {
         url: "wss://avalanche-fuji.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://spectrum-01.simplystaking.xyz/avalanche-mn-rpc/ext/bc/C/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.Spectrum,
       },
     ],
   },
@@ -3843,7 +3850,14 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   998: {
-    rpcs: ["https://rpc.hyperliquid-testnet.xyz/evm"],
+    rpcs: [
+      "https://rpc.hyperliquid-testnet.xyz/evm",
+      {
+        url: "https://spectrum-01.simplystaking.xyz/hyperliquid-tn-rpc/evm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.Spectrum,
+      },
+    ],
   },
   1001: {
     rpcs: [
