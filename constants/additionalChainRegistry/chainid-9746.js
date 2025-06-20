@@ -3,7 +3,7 @@ export const data = {
     "chain": "Plasma",
     "icon": "plasma",
     "rpc": [
-      "https://testnet.plasmalabs.tech"
+      "https://ultra-quick-paper.plasma-testnet.quiknode.pro/"
     ],
     "features": [{ "name": "EIP155" }],
     "faucets": [],
