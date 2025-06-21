@@ -44,7 +44,7 @@ export default function Layout({ children, lang, chainName, setChainName }) {
           <div className="flex flex-col gap-4 w-full">
             <a
               className="flex items-center justify-center mx-auto lg:ml-0 gap-2 rounded-[50px] max-w-[16.25rem] font-medium py-[18px] px-6 shadow-lg w-full dark:bg-[#2F80ED] bg-[#2F80ED] dark:text-black text-white"
-              href="https://github.com/ethereum-lists/chains"
+              href="https://github.com/DefiLlama/chainlist?tab=readme-ov-file#add-a-chain"
               target="_blank"
               rel="noopener noreferrer"
             >
