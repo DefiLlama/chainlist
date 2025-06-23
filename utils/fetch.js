@@ -5,6 +5,16 @@ import { overwrittenChains } from "../constants/additionalChainRegistry/list.js"
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
+const cache = {}
+const fetchWithCache = async (url) => {
+  if(cache[url]){
+    return cache[url]
+  }
+  const data = await fetch(url).then((res) => res.json());
+  cache[url] = data
+  return data
+}
+
 function removeEndingSlashObject(rpc) {
   if (typeof rpc === "string") {
     return {
@@ -92,8 +102,8 @@ export function arrayMove(array, fromIndex, toIndex) {
 
 export async function generateChainData() {
   const [chains, chainTvls] = await Promise.all([
-    fetcher("https://chainid.network/chains.json"),
-    fetcher("https://api.llama.fi/chains")
+    fetchWithCache("https://chainid.network/chains.json"),
+    fetchWithCache("https://api.llama.fi/chains")
   ]);
 
   const overwrittenIds = overwrittenChains.reduce((acc, curr) => {
