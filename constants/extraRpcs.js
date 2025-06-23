@@ -196,7 +196,7 @@ const privacyStatement = {
   therpc:
     "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
   Spectrum:
-    "Privacy Statement: Spectrum does not collect, store, or log personal user data. This includes IP addresses, device identifiers, wallet information, and network metadata. IPs may be briefly processed in-memory for rate limiting and DDoS protection, but are never stored. We use no cookies, analytics, or tracking technologies. No user data is sold, shared, or retained. For full details, visit: https://spectrumnodes.com/privacy-policy",
+    "At SpectrumNodes.com, we collect and process personal information to deliver, secure, and improve our RPC services, and we do so only with a valid legal basis such as your consent or to fulfill contractual obligations. We do not process sensitive personal data, sell user information, or collect from third parties, and we employ strong technical safeguards to protect your privacy. Users have rights to access, correct, or delete their data, and can contact us anytime at privacy@spectrumnodes.com or https://spectrumnodes.com/contact",
 };
 
 export const extraRpcs = {
@@ -749,7 +749,7 @@ export const extraRpcs = {
       },
       {
         url: "https://spectrum-01.simplystaking.xyz/avalanche-mn-rpc/ext/bc/C/rpc",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
     ],
@@ -3854,7 +3854,7 @@ export const extraRpcs = {
       "https://rpc.hyperliquid-testnet.xyz/evm",
       {
         url: "https://spectrum-01.simplystaking.xyz/hyperliquid-tn-rpc/evm",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
     ],
