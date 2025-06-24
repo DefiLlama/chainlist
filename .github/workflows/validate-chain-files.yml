@@ -23,6 +23,8 @@ jobs:
 
       - name: Validate chain and extracRpcs files
         run: |
+          echo "Files changed: $FILES_CHANGED"
+          echo "Extra RPC files changed: $EXTRA_RPC_CHANGED"
           if [ -z "$FILES_CHANGED" ] || [ -z "$EXTRA_RPC_CHANGED" ]; then
             echo "No relevant files changed."
             exit 0
