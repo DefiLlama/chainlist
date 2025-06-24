@@ -6,7 +6,7 @@ import { overwrittenChains } from "../constants/additionalChainRegistry/list.js"
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const cache = {}
-const fetchWithCache = async (url) => {
+export const fetchWithCache = async (url) => {
   if(cache[url]){
     return cache[url]
   }
