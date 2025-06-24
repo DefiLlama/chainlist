@@ -8256,7 +8256,18 @@ export const extraRpcs = {
   7233: {
     rpcs: ["https://rpc-mainnet.inichain.com"],
   },
+  
+  210000: {
+    rpcs: [
+      {
+        url: "https://rpc.juchain.org",
+      },
+      {
+        url: "wss://ws.juchain.org",
+      },
 };
+
+
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
