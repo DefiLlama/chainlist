@@ -8265,9 +8265,21 @@ export const extraRpcs = {
       {
         url: "wss://ws.juchain.org",
       },
+
+  210000:{
+      "name": "Juchain Mainnet",
+      "chain": "ETH",
+      },
+      "infoURL": "https://juchain.org",
+      "chainId": 210000,
+      "icon": "juchian",
+      "explorers": [{
+        "name": "juscan",
+        "url": "https://juscan.io",
+        "icon": "juchain",
+      }]
+    }
 };
-
-
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
