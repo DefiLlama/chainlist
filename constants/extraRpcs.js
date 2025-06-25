@@ -511,6 +511,14 @@ export const extraRpcs = {
   2: {
     rpcs: ["https://node.eggs.cool", "https://node.expanse.tech"],
   },
+  1961: {
+    rpcs: [
+      "https://rpc.selendra.org",
+      "https://rpcx.selendra.org",
+      "wss://rpc.selendra.org",
+      "wss://rpcx.selendra.org",
+    ],
+  },
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
@@ -7992,7 +8000,7 @@ export const extraRpcs = {
       "https://aeneid-evm-rpc.krews.xyz",
       "https://story-aeneid-rpc.spidernode.net",
       "https://evm-rpc.story.testnet.node75.org",
-      "https://story-aeneid-json-rpc.auranode.xyz"
+      "https://story-aeneid-json-rpc.auranode.xyz",
     ],
   },
   224433: {
