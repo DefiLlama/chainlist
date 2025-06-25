@@ -747,11 +747,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://spectrum-01.simplystaking.xyz/avalanche-mn-rpc/ext/bc/C/rpc",
-        tracking: "yes",
-        trackingDetails: privacyStatement.Spectrum,
-      },
     ],
   },
   80002: {
@@ -1149,6 +1144,11 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://spectrum-01.simplystaking.xyz/avalanche-mn-rpc/ext/bc/C/rpc",
+        tracking: "yes",
+        trackingDetails: privacyStatement.Spectrum,
       },
     ],
   },
