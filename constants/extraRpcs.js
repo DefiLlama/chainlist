@@ -511,14 +511,6 @@ export const extraRpcs = {
   2: {
     rpcs: ["https://node.eggs.cool", "https://node.expanse.tech"],
   },
-  1961: {
-    rpcs: [
-      "https://rpc.selendra.org",
-      "https://rpcx.selendra.org",
-      "wss://rpc.selendra.org",
-      "wss://rpcx.selendra.org",
-    ],
-  },
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
@@ -8277,6 +8269,14 @@ export const extraRpcs = {
   },
   7233: {
     rpcs: ["https://rpc-mainnet.inichain.com"],
+  },
+  1961: {
+    rpcs: [
+      "https://rpc.selendra.org",
+      "https://rpcx.selendra.org",
+      "wss://rpc.selendra.org",
+      "wss://rpcx.selendra.org",
+    ],
   },
 };
 
