@@ -60,6 +60,11 @@ echo "]" >> "$LIST_FILE"
 
 echo "✅ Generated $LIST_FILE with $IMPORT_COUNT chain imports"
 
+if [ -n "$ONLY_LIST_FILE" ]; then
+  echo "ONLY_LIST_FILE is set, exiting after generating list.js"
+  exit 0
+fi
+
 next build 2>&1 | tee build.log
 BUILD_STATUS=${PIPESTATUS[0]}
 
