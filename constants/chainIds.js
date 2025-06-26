@@ -99,6 +99,7 @@ export default {
   "2000": "dogechain",
   "2001": "milkomeda",
   "2002": "milkomeda_a1",
+  "2091": "frequency",
   "2222": "kava",
   "2332": "soma",
   "2410": "karak",
