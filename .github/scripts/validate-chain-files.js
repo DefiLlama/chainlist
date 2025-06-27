@@ -16,6 +16,17 @@ function writeToStepSummary(content) {
   }
 }
 
+// Function to write errors to a file that persists between steps
+function writeErrorsToFile(errors) {
+  try {
+    const errorContent = errors.join('\n');
+    fs.writeFileSync('/tmp/validation-errors.txt', errorContent);
+    console.log('Errors written to /tmp/validation-errors.txt');
+  } catch (error) {
+    console.error('Failed to write errors to file:', error.message);
+  }
+}
+
 // Main async function to run validation
 async function runValidation() {
   // Collect all errors
@@ -46,6 +57,7 @@ async function runValidation() {
   if (errors.length > 0) {
     const errorSummary = errors.join('\n');
     writeToStepSummary(`\n## Validation Summary\n\n${errors.length} validation error(s) found:\n\n${errorSummary}`);
+    writeErrorsToFile(errors);
     throw new Error(`Validation failed with ${errors.length} error(s):\n${errorSummary}`);
   }
 
