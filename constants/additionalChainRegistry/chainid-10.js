@@ -16,7 +16,7 @@ export const data = {
     "chainId": 10,
     "networkId": 10,
     "icon": "cross",
-    "slip44": 1100,
+    "slip44": 1100, 
     "explorers": [
       {
         "name": "CROSS Explorer",
