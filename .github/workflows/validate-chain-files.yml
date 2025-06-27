@@ -1,4 +1,3 @@
-
 name: Validate Chain Files
 
 on:
@@ -47,4 +46,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-               + "\n\nError message:\n```\n${process.env.GITHUB_STEP_SUMMARY || 'See workflow logs for details.'}\n```"})
+              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + (process.env.GITHUB_STEP_SUMMARY || 'See workflow logs for details.') + "\n```"
+            })
