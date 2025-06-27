@@ -1,20 +1,53 @@
-
 import path from 'path';
 import { fetchWithCache } from '../../utils/fetch.js';
+import fs from 'fs';
 
 const isExtracRpcsFileChanged = (process.env.EXTRA_RPC_CHANGED || '').trim().length > 0;
 const addedOrModified = process.env.FILES_CHANGED.split('\n')
 
+// Function to write to step summary
+function writeToStepSummary(content) {
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    try {
+      fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, content + '\n');
+    } catch (error) {
+      console.error('Failed to write to step summary:', error.message);
+    }
+  }
+}
 
-if (isExtracRpcsFileChanged)
-  validateExtracRpcs()
+// Collect all errors
+const errors = [];
 
+if (isExtracRpcsFileChanged) {
+  try {
+    validateExtracRpcs();
+  } catch (error) {
+    errors.push(error.message);
+    writeToStepSummary(`❌ ${error.message}`);
+  }
+}
 
-addedOrModified.forEach(validateChainFile)
+addedOrModified.forEach(filePath => {
+  if (filePath.trim()) {
+    try {
+      validateChainFile(filePath);
+    } catch (error) {
+      errors.push(error.message);
+      writeToStepSummary(`❌ ${error.message}`);
+    }
+  }
+});
 
+// If there are errors, throw them all at once
+if (errors.length > 0) {
+  throw new Error(`Validation failed with ${errors.length} error(s):\n${errorSummary}`);
+}
+
+// Write success message to step summary
+writeToStepSummary('✅ All chain files validated successfully!');
 
 const rpcTrackingSet = new Set(['none', 'limited', 'yes', 'unspecified']);
-
 
 // Validate chainid-*.js files
 async function validateChainFile(filePath) {
@@ -71,14 +104,11 @@ async function validateChainFile(filePath) {
       });
     }
 
-
-
     if (!Array.isArray(data.rpc) || data.rpc.length === 0) {
       throw new Error('RPCs should be a non-empty array');
     }
 
     data.rpc.map(validateRPC)
-
 
     const { chainIdConfigMap, } = await getChainlistConfig();
 
@@ -90,8 +120,6 @@ async function validateChainFile(filePath) {
       if (chainIdConfigMap[data.chainId].name !== data.name)
         throw new Error(`Chain ID ${data.chainId} already exists with a different name: ${chainIdConfigMap[data.chainId].name}`);
     }
-
-
 
     if (parent) {
       stringCheck(parent, 'type', true);
@@ -110,12 +138,6 @@ async function validateChainFile(filePath) {
       }
     }
 
-
-
-
-
-
-
   } catch (e) {
     throw new Error(`Validation failed for ${filename}: ${e.message}`);
   }
@@ -131,7 +153,6 @@ async function validateExtracRpcs() {
     throw new Error(`extracRpcs.js import failed: ${e.message}`);
   }
 }
-
 
 function validateRPCConfig(config, configId) {
   if (typeof config !== 'object') throw new Error('RPC config should be an object');
