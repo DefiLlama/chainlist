@@ -13,8 +13,8 @@ export const data = {
     },
     "infoURL": "https://to.nexus",
     "shortName": "cross",
-    "chainId": 612055,
-    "networkId": 612055,
+    "chainId": 10,
+    "networkId": 10,
     "icon": "cross",
     "slip44": 1100,
     "explorers": [
