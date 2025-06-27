@@ -16,36 +16,48 @@ function writeToStepSummary(content) {
   }
 }
 
-// Collect all errors
-const errors = [];
+// Main async function to run validation
+async function runValidation() {
+  // Collect all errors
+  const errors = [];
 
-if (isExtracRpcsFileChanged) {
-  try {
-    validateExtracRpcs();
-  } catch (error) {
-    errors.push(error.message);
-    writeToStepSummary(`❌ ${error.message}`);
-  }
-}
-
-addedOrModified.forEach(filePath => {
-  if (filePath.trim()) {
+  if (isExtracRpcsFileChanged) {
     try {
-      validateChainFile(filePath);
+      await validateExtracRpcs();
     } catch (error) {
       errors.push(error.message);
       writeToStepSummary(`❌ ${error.message}`);
     }
   }
-});
 
-// If there are errors, throw them all at once
-if (errors.length > 0) {
-  throw new Error(`Validation failed with ${errors.length} error(s):\n${errorSummary}`);
+  // Process chain files sequentially to avoid overwhelming the system
+  for (const filePath of addedOrModified) {
+    if (filePath.trim()) {
+      try {
+        await validateChainFile(filePath);
+      } catch (error) {
+        errors.push(error.message);
+        writeToStepSummary(`❌ ${error.message}`);
+      }
+    }
+  }
+
+  // If there are errors, throw them all at once
+  if (errors.length > 0) {
+    const errorSummary = errors.join('\n');
+    writeToStepSummary(`\n## Validation Summary\n\n${errors.length} validation error(s) found:\n\n${errorSummary}`);
+    throw new Error(`Validation failed with ${errors.length} error(s):\n${errorSummary}`);
+  }
+
+  // Write success message to step summary
+  writeToStepSummary('✅ All chain files validated successfully!');
 }
 
-// Write success message to step summary
-writeToStepSummary('✅ All chain files validated successfully!');
+// Run the validation
+runValidation().catch(error => {
+  console.error('Validation failed:', error.message);
+  process.exit(1);
+});
 
 const rpcTrackingSet = new Set(['none', 'limited', 'yes', 'unspecified']);
 
