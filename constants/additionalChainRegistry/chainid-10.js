@@ -1,6 +1,6 @@
 export const data = {
     "name": "CROSS Mainnet",
-    "chain": "CROSS",
+    "chain": "CROSS", 
     "rpc": [
       "https://mainnet.crosstoken.io:22001",
       "wss://mainnet.crosstoken.io:32001"
