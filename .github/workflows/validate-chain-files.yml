@@ -29,7 +29,7 @@ jobs:
             echo "No relevant files changed."
             exit 0
           fi
-          yarn ci
+          yarn
           ONLY_LIST_FILE=true npm run build
           node .github/scripts/validate-chain-files.js
           
