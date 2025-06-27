@@ -42,9 +42,20 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
+            let summaryContent = 'See workflow logs for details.';
+            
+            try {
+              if (process.env.GITHUB_STEP_SUMMARY && fs.existsSync(process.env.GITHUB_STEP_SUMMARY)) {
+                summaryContent = fs.readFileSync(process.env.GITHUB_STEP_SUMMARY, 'utf8');
+              }
+            } catch (error) {
+              console.log('Could not read step summary:', error.message);
+            }
+            
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + (cat process.env.GITHUB_STEP_SUMMARY || 'See workflow logs for details.') + "\n```"
+              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + summaryContent + "\n```"
             })
