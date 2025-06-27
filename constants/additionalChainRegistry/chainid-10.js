@@ -11,7 +11,7 @@ export const data = {
       "symbol": "CROSS",
       "decimals": 18
     },
-    "infoURL": "https://to.nexus",
+    "infoURL": "https://to.nexus", 
     "shortName": "cross",
     "chainId": 10,
     "networkId": 10,
