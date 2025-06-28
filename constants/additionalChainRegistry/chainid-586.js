@@ -21,4 +21,4 @@ export const data = {
         "url": "https://explorer.marketcapy.xyz/"
       }
     ]
-  }
+}
