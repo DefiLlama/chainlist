@@ -30,7 +30,6 @@ const uploadBuildLog = async () => {
 
 // convert the bash script above to JS
 const LLAMAS_LIST = process.env.LLAMAS_LIST || ''
-const BUILD_LLAMAS = process.env.BUILD_LLAMAS || ''
 const BUILD_STATUS_DASHBOARD = process.env.BUILD_STATUS_DASHBOARD
 const BUILD_STATUS_WEBHOOK = process.env.BUILD_STATUS_WEBHOOK
 const EMOJI_TIRESOME = '<:tiresome:1023676964319535286>'
@@ -43,7 +42,6 @@ const EMOJI_UPLLAMA = '<:upllama:996096214841950269>'
 const EMOJI_EVIL = '<:evilllama:1011045461030879353>'
 const EMOJI_PEPENOTES = '<a:pepenotes:1061068916140544052>'
 
-const buildLlamas = BUILD_LLAMAS.split(',')
 const llamas = LLAMAS_LIST.split(',').map((llama) => {
 	const [name, id] = llama.split(':')
 	return { name, id }
@@ -108,11 +106,10 @@ const sendMessages = async () => {
 	await sendDiscordMessage(buildLogMessage)
 
 	const authorMention = formatMention(COMMIT_AUTHOR)
-	const buildLlamasMentions = buildLlamas.map((llama) => formatMention(llama)).join(' ')
 
 	if (BUILD_STATUS !== '0') {
 		if (LLAMAS_LIST) {
-			const llamaMessage = `${EMOJI_CRINGE} ${authorMention}\n${EMOJI_TIRESOME} ${buildLlamasMentions}\n${EMOJI_BINOCULARS} ${BUILD_STATUS_DASHBOARD}`
+			const llamaMessage = `${EMOJI_CRINGE} ${authorMention}\n${EMOJI_BINOCULARS} ${BUILD_STATUS_DASHBOARD}`
 			await sendDiscordMessage(llamaMessage)
 		}
 	} else {
