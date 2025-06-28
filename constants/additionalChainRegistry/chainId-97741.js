@@ -22,4 +22,4 @@ export const data = {
         "url": "https://pepuscan.com/"
       }
     ]
-  };
+  }
