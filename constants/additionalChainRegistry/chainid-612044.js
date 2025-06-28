@@ -22,7 +22,7 @@ export const data = {
       "name": "CROSS Testnet Explorer",
       "url": "https://testnet.crossscan.io",
       "icon": "cross",
-      "standard": "EIP3091"
+      "standard": "EIP3091",
     }
   ]
 }
