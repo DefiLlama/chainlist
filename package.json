@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "./scripts/build.sh",
-    "export": "next build && ./scripts/post-export.sh",
-    "build2": "./scripts/build.sh && next build",
+    "build2": "./scripts/build.sh",
     "start": "next start",
     "serve": "serve out"
   },

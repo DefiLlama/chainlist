@@ -98,5 +98,7 @@ echo ""
 
 node ./scripts/build-msg.js $BUILD_STATUS "$BUILD_TIME_STR" "$START_TIME" "$BUILD_ID" "$COMMIT_COMMENT" "$COMMIT_AUTHOR" "$COMMIT_HASH"
 
+./scripts/post-export.sh
+
 # exit with the build status
 exit $BUILD_STATUS
