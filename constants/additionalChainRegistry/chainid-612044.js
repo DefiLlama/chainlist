@@ -25,4 +25,4 @@ export const data = {
       "standard": "EIP3091",
     }
   ]
-}
+};
