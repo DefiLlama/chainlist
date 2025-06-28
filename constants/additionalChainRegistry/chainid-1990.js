@@ -20,4 +20,4 @@ export const data = {
     "name": "QIE mainnet explorer",
     "url": "https://mainnet.qie.digital/",
   }]
-}
+};
