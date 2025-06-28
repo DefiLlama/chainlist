@@ -19,5 +19,5 @@ export const data = {
       name: "Selendra Explorer",
       url: "https://portal.selendra.org",
     },
-  ],
+  ]
 };
