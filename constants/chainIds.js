@@ -93,7 +93,6 @@ export default {
   1729: "reya network",
   1868: "soneium",
   1923: "swellchain",
-  1961: "selendra",
   1975: "onus",
   1992: "hubblenet",
   1996: "sanko",
