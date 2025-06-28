@@ -3,7 +3,7 @@ import { fetchWithCache } from '../../utils/fetch.js';
 import fs from 'fs';
 
 const isExtracRpcsFileChanged = (process.env.EXTRA_RPC_CHANGED || '').trim().length > 0;
-const addedOrModified = process.env.FILES_CHANGED.split('\n')
+const addedOrModified = process.env.FILES_CHANGED.split(' ');
 
 // Function to write to step summary
 function writeToStepSummary(content) {
