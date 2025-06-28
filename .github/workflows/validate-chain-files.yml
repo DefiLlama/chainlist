@@ -17,8 +17,8 @@ jobs:
       - name: Set changed files
         id: files
         run: |
-          echo "FILES_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/additionalChainRegistry/' || true)" >> $GITHUB_ENV
-          echo "EXTRA_RPC_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/extraRpcs.js' || true)" >> $GITHUB_ENV
+          echo "FILES_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/additionalChainRegistry/' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
+          echo "EXTRA_RPC_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/extraRpcs.js' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
 
       - name: Validate chain and extracRpcs files
         run: |
