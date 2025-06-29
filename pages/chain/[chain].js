@@ -41,8 +41,7 @@ export async function getStaticProps({ params }) {
     props: {
       chain: chain ? populateChain(chain, chainTvls) : null,
       // messages: (await import(`../../translations/${locale}.json`)).default,
-    },
-    revalidate: 3600,
+    }
   };
 }
 

@@ -14,8 +14,7 @@ export async function getStaticProps() {
     props: {
       chains: sortedChains,
       // messages: (await import(`../translations/${locale}.json`)).default,
-    },
-    revalidate: 3600,
+    }
   };
 }
 

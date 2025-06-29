@@ -1,0 +1,61 @@
+name: Validate Chain Files
+
+on:
+  pull_request_target:
+    paths:
+      - 'constants/additionalChainRegistry/*'
+      - 'constants/extraRpcs.js'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 100
+
+      - name: Set changed files
+        id: files
+        run: |
+          echo "FILES_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/additionalChainRegistry/' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
+          echo "EXTRA_RPC_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/extraRpcs.js' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
+
+      - name: Validate chain and extracRpcs files
+        run: |
+          node -v
+          echo "Files changed: $FILES_CHANGED"
+          echo "Extra RPC files changed: $EXTRA_RPC_CHANGED"
+          if [ -z "$FILES_CHANGED" ] && [ -z "$EXTRA_RPC_CHANGED" ]; then
+            echo "No relevant files changed."
+            exit 0
+          fi
+          yarn
+          ONLY_LIST_FILE=true npm run build
+          node .github/scripts/validate-chain-files.js
+          
+        env:
+          FILES_CHANGED: ${{ env.FILES_CHANGED }}
+          EXTRA_RPC_CHANGED: ${{ env.EXTRA_RPC_CHANGED }}
+
+      - name: Comment on PR if validation fails
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let errorContent = 'See workflow logs for details.';
+            
+            try {
+              if (fs.existsSync('/tmp/validation-errors.txt')) {
+                errorContent = fs.readFileSync('/tmp/validation-errors.txt', 'utf8');
+              }
+            } catch (error) {
+              console.log('Could not read validation errors file:', error.message);
+            }
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + errorContent + "\n```"
+            })
