@@ -9,6 +9,10 @@ const LOGGER_API_URL = process.env.LOGGER_API_URL
 
 // upload the build.log file to the logger service
 const uploadBuildLog = async () => {
+	if (!LOGGER_API_KEY || !LOGGER_API_URL) {
+		console.error('LOGGER_API_KEY or LOGGER_API_URL is not set')
+		return '';
+	}
 	const response = await fetch(LOGGER_API_URL, {
 		method: 'POST',
 		headers: {
@@ -26,7 +30,6 @@ const uploadBuildLog = async () => {
 
 // convert the bash script above to JS
 const LLAMAS_LIST = process.env.LLAMAS_LIST || ''
-const BUILD_LLAMAS = process.env.BUILD_LLAMAS || ''
 const BUILD_STATUS_DASHBOARD = process.env.BUILD_STATUS_DASHBOARD
 const BUILD_STATUS_WEBHOOK = process.env.BUILD_STATUS_WEBHOOK
 const EMOJI_TIRESOME = '<:tiresome:1023676964319535286>'
@@ -39,7 +42,6 @@ const EMOJI_UPLLAMA = '<:upllama:996096214841950269>'
 const EMOJI_EVIL = '<:evilllama:1011045461030879353>'
 const EMOJI_PEPENOTES = '<a:pepenotes:1061068916140544052>'
 
-const buildLlamas = BUILD_LLAMAS.split(',')
 const llamas = LLAMAS_LIST.split(',').map((llama) => {
 	const [name, id] = llama.split(':')
 	return { name, id }
@@ -80,49 +82,41 @@ commitSummary += '\n' + `💬 ${COMMIT_COMMENT}`
 commitSummary += '\n' + `🦙 ${COMMIT_AUTHOR}`
 commitSummary += '\n' + `📸 ${COMMIT_HASH}`
 
-const sendMessages = async () => {
-	const message = `\`\`\`\n===== COMMIT SUMMARY =====\n${commitSummary}\n\n===== BUILD SUMMARY =====\n${buildSummary}\n\`\`\``
-	const body = { content: message }
+async function sendDiscordMessage(content) {
+	if (!BUILD_STATUS_WEBHOOK) {
+		console.error('BUILD_STATUS_WEBHOOK is not set')
+		return
+	}
+	const body = { content }
 	await fetch(BUILD_STATUS_WEBHOOK, {
 		method: 'POST',
 		body: JSON.stringify(body),
 		headers: { 'Content-Type': 'application/json' }
 	})
+}
+
+const sendMessages = async () => {
+	const message = `\`\`\`\n===== COMMIT SUMMARY =====\n${commitSummary}\n\n===== BUILD SUMMARY =====\n${buildSummary}\n\`\`\``
+	await sendDiscordMessage(message)
 
 	const buildLogId = await uploadBuildLog()
 	const buildLogUrl = `${LOGGER_API_URL}/get/${buildLogId}`
 	const buildLogMessage = `${EMOJI_PEPENOTES} ${buildLogUrl}`
 	console.log(buildLogMessage)
-	const buildLogBody = { content: buildLogMessage }
-	await fetch(BUILD_STATUS_WEBHOOK, {
-		method: 'POST',
-		body: JSON.stringify(buildLogBody),
-		headers: { 'Content-Type': 'application/json' }
-	})
+	await sendDiscordMessage(buildLogMessage)
 
 	const authorMention = formatMention(COMMIT_AUTHOR)
-	const buildLlamasMentions = buildLlamas.map((llama) => formatMention(llama)).join(' ')
 
 	if (BUILD_STATUS !== '0') {
 		if (LLAMAS_LIST) {
-			const llamaMessage = `${EMOJI_CRINGE} ${authorMention}\n${EMOJI_TIRESOME} ${buildLlamasMentions}\n${EMOJI_BINOCULARS} ${BUILD_STATUS_DASHBOARD}`
-			const llamaBody = { content: llamaMessage }
-			await fetch(BUILD_STATUS_WEBHOOK, {
-				method: 'POST',
-				body: JSON.stringify(llamaBody),
-				headers: { 'Content-Type': 'application/json' }
-			})
+			const llamaMessage = `${EMOJI_CRINGE} ${authorMention}\n${EMOJI_BINOCULARS} ${BUILD_STATUS_DASHBOARD}`
+			await sendDiscordMessage(llamaMessage)
 		}
 	} else {
 		const emojis = [EMOJI_LLAMACHEER, EMOJI_BONG, EMOJI_BEEGLUBB, EMOJI_UPLLAMA, EMOJI_EVIL]
 		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)]
 		const llamaMessage = `${randomEmoji}`
-		const llamaBody = { content: llamaMessage }
-		await fetch(BUILD_STATUS_WEBHOOK, {
-			method: 'POST',
-			body: JSON.stringify(llamaBody),
-			headers: { 'Content-Type': 'application/json' }
-		})
+		await sendDiscordMessage(llamaMessage)
 	}
 }
 
