@@ -65,7 +65,7 @@ if [ -n "$ONLY_LIST_FILE" ]; then
   exit 0
 fi
 
-next build 2>&1 | tee build.log
+npm run next-build build 2>&1 | tee build.log
 BUILD_STATUS=${PIPESTATUS[0]}
 
 BUILD_TIME_SEC=$(($(date -u +"%s") - $START_TIME_TS))

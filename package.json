@@ -7,6 +7,7 @@
     "build": "./scripts/build.sh",
     "export": "echo deprecated",
     "build2": "./scripts/build.sh",
+    "next-build": "next build",
     "start": "next start",
     "serve": "serve out"
   },
