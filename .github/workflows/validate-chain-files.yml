@@ -3,7 +3,7 @@ name: Validate Chain Files
 on:
   pull_request_target:
     paths:
-      - 'constants/additionalChainRegistry/*.js'
+      - 'constants/additionalChainRegistry/*'
       - 'constants/extraRpcs.js'
 
 jobs:
