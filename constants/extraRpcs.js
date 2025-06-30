@@ -2542,7 +2542,7 @@ export const extraRpcs = {
     ],
   },
   1246: {
-    rpcs: ["https://rpc-cnx.omplatform.com"],
+    rpcs: ["https://rpc.omplatform.com"],
   },
   100: {
     rpcs: [
