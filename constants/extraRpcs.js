@@ -8270,7 +8270,58 @@ export const extraRpcs = {
   7233: {
     rpcs: ["https://rpc-mainnet.inichain.com"],
   },
+  
+  210000:{
+  "name": "JuChain Mainnet",
+  "chain": "JU",
+  "rpc": [
+    "https://rpc.juchain.org",
+    "wss://ws.juchain.org"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "JuChain Token",
+    "symbol": "JU",
+    "decimals": 18
+  },
+  "infoURL": "https://juchain.org",
+  "shortName": "juchain",
+  "chainId": 210000,
+  "networkId": 210000,
+  "explorers": [{
+    "name": "Juscan",
+    "url": "https://juscan.io",
+  }]
+  }
+    
+  202599:{
+  "name": "JuChain Testnet",
+  "chain": "JU",
+  "rpc": [
+    "https://testnet-rpc.juchain.org",
+    "ws://testnet-ws.juchain.org"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "JuChain Token",
+    "symbol": "JU",
+    "decimals": 18
+  },
+  "infoURL": "https://juchain.org",
+  "shortName": "juchain-testnet",
+  "chainId": 202599,
+  "networkId": 202599,
+  "icon": "juchain",
+  "explorers": [{
+    "name": "Juscan Testnet",
+    "url": "https://testnet.juscan.io",
+
+  }]
+}
 };
+
+
+
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
