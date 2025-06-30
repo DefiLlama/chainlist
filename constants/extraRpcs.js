@@ -7762,11 +7762,6 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.berachain.com",
       {
-        url: "https://berachain.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://berachain-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
