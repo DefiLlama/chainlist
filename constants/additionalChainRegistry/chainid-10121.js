@@ -1,5 +1,5 @@
 export const data = {
-  name: "Ozone Chain Mainnet",
+  name: "Ozone Mainnet",
   chain: "OZONE",
   icon: "cross",
   rpc: ["https://chain.ozonescan.com/rpc/"],
