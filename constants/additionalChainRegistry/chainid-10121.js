@@ -10,7 +10,7 @@ export const data = {
     symbol: "OZONE",
     decimals: 18,
   },
-  infoURL: "",
+  infoURL: "https://ozonechain.com",
   shortName: "ozone",
   chainId: 10121,
   networkId: 10121,
