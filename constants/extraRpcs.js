@@ -7758,6 +7758,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpc.ankr.com/monad_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      }
     ],
   },
   80094: {
