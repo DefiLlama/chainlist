@@ -13,7 +13,7 @@ export const data = {
       "decimals": 18
     },
     "infoURL": "https://ibvm.io/",
-    "shortName": "IBVM",
+    "shortName": "IBVMT",
     "chainId": 2107,
     "networkId": 2107,
     "explorers": [
