@@ -2083,6 +2083,8 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc1.bahamut.io",
       "https://rpc2.bahamut.io",
+      "https://rpc1.ftnscan.io",
+      "https://rpc2.ftnscan.io",
       {
         url: "https://bahamut-rpc.publicnode.com",
         tracking: "none",
@@ -6621,8 +6623,13 @@ export const extraRpcs = {
       "wss://wss.nal.network",
     ],
   },
-  988207: {
-    rpcs: ["https://mainnet-rpc.ecroxscan.com"],
+ 988207: {
+    rpcs: [
+      "https://mainnet-rpc.ecroxscan.com",
+      "https://quantum-rpc.ecroxscan.com",
+      "https://neuron-rpc.ecroxscan.com",
+      "https://corex-rpc.ecroxscan.com",
+    ],
   },
   7865: {
     rpcs: [
@@ -7756,16 +7763,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpc.ankr.com/monad_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      }
     ],
   },
   80094: {
     rpcs: [
       "https://rpc.berachain.com",
-      {
-        url: "https://berachain.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       {
         url: "https://berachain-rpc.publicnode.com",
         tracking: "none",
