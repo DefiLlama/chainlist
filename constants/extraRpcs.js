@@ -2083,6 +2083,8 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc1.bahamut.io",
       "https://rpc2.bahamut.io",
+      "https://rpc1.ftnscan.io",
+      "https://rpc2.ftnscan.io",
       {
         url: "https://bahamut-rpc.publicnode.com",
         tracking: "none",
@@ -7761,11 +7763,6 @@ export const extraRpcs = {
   80094: {
     rpcs: [
       "https://rpc.berachain.com",
-      {
-        url: "https://berachain.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       {
         url: "https://berachain-rpc.publicnode.com",
         tracking: "none",
