@@ -502,7 +502,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/ethereum",
+        url: "https://ethereum.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -793,7 +793,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       {
-        url: "https://rpc.therpc.io/polygon-amoy",
+        url: "https://polygon-amoy.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -966,7 +966,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/bsc",
+        url: "https://bsc.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -1041,7 +1041,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.therpc.io/bsc-testnet",
+        url: "https://bsc-testnet.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -1374,7 +1374,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/polygon",
+        url: "https://polygon.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -1610,7 +1610,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/arbitrum",
+        url: "https://arbitrum.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -1753,7 +1753,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpc.therpc.io/arbitrum-sepolia",
+        url: "https://arbitrum-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -1948,7 +1948,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/blast",
+        url: "https://blast.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -2345,7 +2345,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/optimism",
+        url: "https://optimism.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -2390,7 +2390,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.therpc.io/optimism-sepolia",
+        url: "https://optimism-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -4905,7 +4905,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpc.therpc.io/base-sepolia",
+        url: "https://base-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -5072,7 +5072,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/base",
+        url: "https://base.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -5379,7 +5379,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://rpc.therpc.io/ethereum-sepolia",
+        url: "https://ethereum-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -7403,7 +7403,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
-        url: "https://rpc.therpc.io/unichain",
+        url: "https://unichain.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -7443,7 +7443,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpc.therpc.io/unichain-sepolia",
+        url: "https://unichain-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -7678,7 +7678,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.therpc.io/sonic",
+        url: "https://sonic.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
@@ -7703,7 +7703,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpc.therpc.io/sonic-blaze",
+        url: "https://sonic-blaze.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
