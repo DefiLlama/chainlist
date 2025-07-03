@@ -6623,8 +6623,13 @@ export const extraRpcs = {
       "wss://wss.nal.network",
     ],
   },
-  988207: {
-    rpcs: ["https://mainnet-rpc.ecroxscan.com"],
+ 988207: {
+    rpcs: [
+      "https://mainnet-rpc.ecroxscan.com",
+      "https://quantum-rpc.ecroxscan.com",
+      "https://neuron-rpc.ecroxscan.com",
+      "https://corex-rpc.ecroxscan.com",
+    ],
   },
   7865: {
     rpcs: [
