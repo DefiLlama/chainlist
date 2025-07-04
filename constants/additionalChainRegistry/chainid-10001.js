@@ -1,25 +1,25 @@
-export const data = {
-    "name": "ETHW-mainnet",
-    "chain": "ETHW",
-    "icon": "ethpow",
-    "rpc": [
-      "https://mainnet.ethereumpow.org/"
-    ],
-    "features": [{ "name": "EIP155" }],
-    "faucets": [],
-    "nativeCurrency": {
-      "name": "EthereumPoW",
-      "symbol": "ETHW",
-      "decimals": 18
-    },
-    "infoURL": "https://ethereumpow.org/",
-    "shortName": "ethw",
-    "chainId": 10001,
-    "networkId": 10001,
-    "explorers": [
-      {
-        "name": "Oklink",
-        "url": "https://www.oklink.com/ethw/"
-      }
-    ]
-  }
+{
+  "name": "Ethereum Mainnet",
+  "chain": "ETH",
+  "rpc": [
+    "https://eth.llamarpc.com",
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://ethereum.org",
+  "shortName": "eth",
+  "chainId": 1,
+  "networkId": 1,
+  "icon": "ethereum",
+  "explorers": [{
+    "name": "etherscan",
+    "url": "https://etherscan.io",
+    "icon": "etherscan",
+    "standard": "EIP3091"
+  }]
+}
