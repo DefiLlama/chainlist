@@ -6583,36 +6583,6 @@ export const extraRpcs = {
   328527624: {
     rpcs: ["https://testnet-rpc.nal.network"],
   },
-  80084: {
-    rpcs: [
-      "https://bartio.rpc.berachain.com",
-      {
-        url: "https://bartio.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://bartio.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://berat2.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://node.histori.xyz/berachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://berachain-testnet-rpc.publicnode.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-    ],
-  },
   328527: {
     rpcs: [
       {
