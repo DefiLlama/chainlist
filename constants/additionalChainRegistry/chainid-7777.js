@@ -12,7 +12,7 @@ export const data = {
     "symbol": "FITO",
     "decimals": 18
   },
-  "infoURL": "https://www.fitochain.com/",
+  "infoURL": "https://fitochain.com/",
   "shortName": "fitochain",
   "chainId": 7777,
   "networkId": 7777,
