@@ -5621,9 +5621,6 @@ export const extraRpcs = {
   2099156: {
     rpcs: ["https://mainnet.plian.io/pchain"],
   },
-  42421: {
-    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/c9359df1-29fe-4f4e-b06a-9f329217a086"],
-  },
   8007736: {
     rpcs: ["https://mainnet.plian.io/child_0"],
   },
@@ -8279,6 +8276,9 @@ export const extraRpcs = {
   },
   7233: {
     rpcs: ["https://rpc-mainnet.inichain.com"],
+  },
+  42421: {
+    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/c9359df1-29fe-4f4e-b06a-9f329217a086"],
   },
 };
 
