@@ -5621,6 +5621,9 @@ export const extraRpcs = {
   2099156: {
     rpcs: ["https://mainnet.plian.io/pchain"],
   },
+  42421: {
+    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/c9359df1-29fe-4f4e-b06a-9f329217a086"],
+  },
   8007736: {
     rpcs: ["https://mainnet.plian.io/child_0"],
   },
@@ -6623,7 +6626,7 @@ export const extraRpcs = {
       "wss://wss.nal.network",
     ],
   },
- 988207: {
+  988207: {
     rpcs: [
       "https://mainnet-rpc.ecroxscan.com",
       "https://quantum-rpc.ecroxscan.com",
@@ -7767,7 +7770,7 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/monad_testnet",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
-      }
+      },
     ],
   },
   80094: {
@@ -7999,7 +8002,7 @@ export const extraRpcs = {
       "https://aeneid-evm-rpc.krews.xyz",
       "https://story-aeneid-rpc.spidernode.net",
       "https://evm-rpc.story.testnet.node75.org",
-      "https://story-aeneid-json-rpc.auranode.xyz"
+      "https://story-aeneid-json-rpc.auranode.xyz",
     ],
   },
   224433: {
