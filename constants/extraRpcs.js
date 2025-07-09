@@ -6629,6 +6629,13 @@ export const extraRpcs = {
       "https://quantum-rpc.ecroxscan.com",
       "https://neuron-rpc.ecroxscan.com",
       "https://corex-rpc.ecroxscan.com",
+      "https://vertex-rpc.ecroxscan.com",
+      "https://synapse-rpc.ecroxscan.com",
+      "https://aether-rpc.ecroxscan.com",
+      "https://nucleus-rpc.ecroxscan.com",
+      "https://omni-rpc.ecroxscan.com",
+      "https://axiom-rpc.ecroxscan.com",
+      "https://cronos-rpc.ecroxscan.com",
     ],
   },
   7865: {
