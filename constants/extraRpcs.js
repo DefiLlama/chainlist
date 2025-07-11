@@ -4299,6 +4299,24 @@ export const extraRpcs = {
       },
     ],
   },
+  3637: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/botanix_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  239: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/tac",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
   7001: {
     rpcs: [
       {
@@ -6443,10 +6461,24 @@ export const extraRpcs = {
     rpcs: ["https://rpc.hubble.exchange", "wss://ws-rpc.hubble.exchange"],
   },
   128123: {
-    rpcs: ["https://node.ghostnet.etherlink.com"],
+    rpcs: [
+      "https://node.ghostnet.etherlink.com",
+      {
+        url: "https://rpc.ankr.com/etherlink_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
   },
   42793: {
-    rpcs: ["https://node.mainnet.etherlink.com"],
+    rpcs: [
+      "https://node.mainnet.etherlink.com",
+      {
+        url: "https://rpc.ankr.com/etherlink_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
   },
   881: {
     rpcs: ["https://rpc.hypr.network"],
@@ -7769,6 +7801,11 @@ export const extraRpcs = {
         url: "wss://monad-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.ankr.com/monad_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
       },
       {
         url: "https://rpc.ankr.com/monad_testnet",
