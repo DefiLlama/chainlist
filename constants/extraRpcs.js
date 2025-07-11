@@ -1708,19 +1708,14 @@ export const extraRpcs = {
   421614: {
     rpcs: [
       {
-        url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/private ",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        url: "https://endpoints.omniatech.io/v1/arbitrum/sepolia/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://public.stackup.sh/api/v1/node/arbitrum-sepolia",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/arbitrum/sepolia/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://arbitrum-sepolia.gateway.tenderly.co",
