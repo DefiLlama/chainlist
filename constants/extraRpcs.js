@@ -197,6 +197,8 @@ const privacyStatement = {
     "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
   Spectrum:
     "At SpectrumNodes.com, we collect and process personal information to deliver, secure, and improve our RPC services, and we do so only with a valid legal basis such as your consent or to fulfill contractual obligations. We do not process sensitive personal data, sell user information, or collect from third parties, and we employ strong technical safeguards to protect your privacy. Users have rights to access, correct, or delete their data, and can contact us anytime at privacy@spectrumnodes.com or https://spectrumnodes.com/contact",
+  STAKEME:
+    "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection, we temporarily $
 };
 
 export const extraRpcs = {
@@ -7400,6 +7402,11 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://sei-evm-rpc.stakeme.pro",
+        tracking: "none",
+        trackingDetails: privacyStatement.STAKEME,
       },
     ],
   },
