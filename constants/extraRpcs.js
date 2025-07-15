@@ -8317,7 +8317,7 @@ export const extraRpcs = {
     "url": "https://testnet.juscan.io",
 
   }]
-}
+  }
 };
 
 
