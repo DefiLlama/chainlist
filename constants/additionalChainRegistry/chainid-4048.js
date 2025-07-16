@@ -1,4 +1,4 @@
-{
+  export const data = {
   "name": "GANchain L1",
   "chain": "GAN",
   "rpc": [
