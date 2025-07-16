@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "JuChain Mainnet",
   "chain": "JU",
   "rpc": [
@@ -15,7 +15,7 @@
     { "name": "EIP1559" }
   ],
   "infoURL": "https://juchain.org",
-  "shortName": "ju",
+  "shortName": "juchain",
   "chainId": 210000,
   "icon": "juchain",
   "explorers": [
