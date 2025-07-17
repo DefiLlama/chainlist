@@ -198,7 +198,7 @@ const privacyStatement = {
   Spectrum:
     "At SpectrumNodes.com, we collect and process personal information to deliver, secure, and improve our RPC services, and we do so only with a valid legal basis such as your consent or to fulfill contractual obligations. We do not process sensitive personal data, sell user information, or collect from third parties, and we employ strong technical safeguards to protect your privacy. Users have rights to access, correct, or delete their data, and can contact us anytime at privacy@spectrumnodes.com or https://spectrumnodes.com/contact",
   STAKEME:
-    "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection, we temporarily $"
+    "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection, we temporarily $",
 };
 
 export const extraRpcs = {
@@ -8014,7 +8014,24 @@ export const extraRpcs = {
     rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
   232: {
-    rpcs: ["https://rpc.lens.xyz", "https://lens.drpc.org"],
+    rpcs: [
+      "https://rpc.lens.xyz",
+      {
+        url: "https://light-icy-dinghy.lens-mainnet.quiknode.pro",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
+      {
+        url: "https://lens-mainnet.g.alchemy.com/public",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   37111: {
     rpcs: [
@@ -8121,10 +8138,7 @@ export const extraRpcs = {
     ],
   },
   16166: {
-    rpcs: [
-      "https://pubnodes.cypherium.io/rpc",
-      "https://make-cph-great-again.community"
-    ],
+    rpcs: ["https://pubnodes.cypherium.io/rpc", "https://make-cph-great-again.community"],
   },
   560048: {
     rpcs: [
