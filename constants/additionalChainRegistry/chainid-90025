@@ -16,4 +16,5 @@
   "chainId": 90025,
   "networkId": 90025,
   "icon": "aipaw",
+  "explorers": []
 }
