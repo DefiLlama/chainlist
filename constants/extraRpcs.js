@@ -197,6 +197,8 @@ const privacyStatement = {
     "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
   Spectrum:
     "At SpectrumNodes.com, we collect and process personal information to deliver, secure, and improve our RPC services, and we do so only with a valid legal basis such as your consent or to fulfill contractual obligations. We do not process sensitive personal data, sell user information, or collect from third parties, and we employ strong technical safeguards to protect your privacy. Users have rights to access, correct, or delete their data, and can contact us anytime at privacy@spectrumnodes.com or https://spectrumnodes.com/contact",
+  STAKEME:
+    "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection, we temporarily $"
 };
 
 export const extraRpcs = {
@@ -4299,6 +4301,24 @@ export const extraRpcs = {
       },
     ],
   },
+  3637: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/botanix_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  239: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/tac",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
   7001: {
     rpcs: [
       {
@@ -6443,10 +6463,24 @@ export const extraRpcs = {
     rpcs: ["https://rpc.hubble.exchange", "wss://ws-rpc.hubble.exchange"],
   },
   128123: {
-    rpcs: ["https://node.ghostnet.etherlink.com"],
+    rpcs: [
+      "https://node.ghostnet.etherlink.com",
+      {
+        url: "https://rpc.ankr.com/etherlink_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
   },
   42793: {
-    rpcs: ["https://node.mainnet.etherlink.com"],
+    rpcs: [
+      "https://node.mainnet.etherlink.com",
+      {
+        url: "https://rpc.ankr.com/etherlink_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
   },
   881: {
     rpcs: ["https://rpc.hypr.network"],
@@ -7369,6 +7403,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://sei-evm-rpc.stakeme.pro",
+        tracking: "none",
+        trackingDetails: privacyStatement.STAKEME,
+      },
     ],
   },
   130: {
@@ -7775,6 +7814,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://rpc.ankr.com/monad_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
     ],
   },
   80094: {
@@ -8077,7 +8121,10 @@ export const extraRpcs = {
     ],
   },
   16166: {
-    rpcs: ["https://pubnodes.cypherium.io/rpc", "https://make-cph-great-again.community"],
+    rpcs: [
+      "https://pubnodes.cypherium.io/rpc",
+      "https://make-cph-great-again.community"
+    ],
   },
   560048: {
     rpcs: [
