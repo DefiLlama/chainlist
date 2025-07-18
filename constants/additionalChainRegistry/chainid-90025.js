@@ -1,13 +1,13 @@
 {
-  "name": "aipaw",
+  "name": "AIPaw Mainnet",
   "chain": "aipaw",
   "rpc": [
     "https://rpc.aipaw.xyz",
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "aipaw",
-    "symbol": "aipaw",
+    "name": "Aipaw",
+    "symbol": "AIPAW",
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }],
