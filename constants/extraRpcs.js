@@ -3475,6 +3475,7 @@ export const extraRpcs = {
       "https://erpc.xdcrpc.com",
       "wss://erpc.xdcrpc.com/ws",
       "https://rpc.xdc.org",
+      "https://rpc.xdc.network",
       "https://earpc.xinfin.network/",
       "https://erpc.xinfin.network/",
       "wss://ews.xinfin.network/ws",
