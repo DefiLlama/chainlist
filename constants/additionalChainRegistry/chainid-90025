@@ -2,7 +2,7 @@
   "name": "AIPaw Mainnet",
   "chain": "aipaw",
   "rpc": [
-    "https://rpc.aipaw.xyz"
+    "https://rpc.aipaw.xyz",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -12,7 +12,7 @@
   },
   "features": [{ "name": "EIP155" }],
   "infoURL": "https://aipaw.top",
-  "shortName": "AIPAW",
+  "shortName": "apaw",
   "chainId": 90025,
   "networkId": 90025,
   "icon": "aipaw",
