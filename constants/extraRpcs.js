@@ -8015,7 +8015,24 @@ export const extraRpcs = {
     rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
   232: {
-    rpcs: ["https://rpc.lens.xyz", "https://lens.drpc.org"],
+    rpcs: [
+      "https://rpc.lens.xyz",
+      {
+        url: "https://light-icy-dinghy.lens-mainnet.quiknode.pro",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
+      {
+        url: "https://lens-mainnet.g.alchemy.com/public",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   37111: {
     rpcs: [
