@@ -11,12 +11,96 @@ import { Tooltip } from "../../components/Tooltip";
 import useAccount from "../../hooks/useAccount";
 import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
 
+// Test functions for trace and archive support
+const testTraceSupport = async (rpcUrl) => {
+  const payload = {
+    jsonrpc: "2.0",
+    method: "debug_traceTransaction",
+    params: [
+      "0x5a5efc6dd80fd85b291d0c2f79a1c88f2cb36aa9e5bd1951972e8b4cf5d9b17b"
+    ],
+    id: 1,
+  };
+
+  try {
+    const response = await fetch(rpcUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    return data.result ? "supported" : "not-supported";
+  } catch (error) {
+    return "error";
+  }
+};
+
+const testArchiveSupport = async (rpcUrl) => {
+  const payload = {
+    jsonrpc: "2.0",
+    method: "eth_getBalance",
+    params: [
+      "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+      "0x0"
+    ],
+    id: 1,
+  };
+
+  try {
+    const response = await fetch(rpcUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    return data.result ? "supported" : "not-supported";
+  } catch (error) {
+    return "error";
+  }
+};
+
 export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
+  const [supportCache, setSupportCache] = useState({});
 
   const urlToData = chain.rpc.reduce((all, c) => ({ ...all, [c.url]: c }), {});
 
   const chains = useRPCData(chain.rpc);
+
+  // Test trace and archive support for each RPC
+  useEffect(() => {
+    const testSupport = async () => {
+      const newCache = { ...supportCache };
+      
+      for (const chain of chains || []) {
+        if (chain.data?.url && !supportCache[chain.data.url]) {
+          newCache[chain.data.url] = {
+            trace: "testing",
+            archive: "testing"
+          };
+          
+          // Test both features in parallel
+          const [traceResult, archiveResult] = await Promise.all([
+            testTraceSupport(chain.data.url),
+            testArchiveSupport(chain.data.url)
+          ]);
+          
+          newCache[chain.data.url] = {
+            trace: traceResult,
+            archive: archiveResult
+          };
+        }
+      }
+      
+      setSupportCache(newCache);
+    };
+
+    if (chains?.length > 0) {
+      testSupport();
+    }
+  }, [chains]);
 
   const data = useMemo(() => {
     const sortedData = sortChains
@@ -70,12 +154,23 @@ export default function RPCList({ chain, lang }) {
 
       const lat = latency ? (latency / 1000).toFixed(3) + "s" : null;
 
+      // Add trace and archive support data
+      const support = supportCache[url] || { trace: "unknown", archive: "unknown" };
+
       return {
         ...rest,
-        data: { ...data, height, latency: lat, trust, disableConnect },
+        data: { 
+          ...data, 
+          height, 
+          latency: lat, 
+          trust, 
+          disableConnect,
+          traceSupport: support.trace,
+          archiveSupport: support.archive
+        },
       };
     });
-  }, [chains]);
+  }, [chains, supportCache]);
 
   const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
 
@@ -113,6 +208,8 @@ export default function RPCList({ chain, lang }) {
             <th className="px-3 py-1 font-medium border">Latency</th>
             <th className="px-3 py-1 font-medium border">Score</th>
             <th className="px-3 py-1 font-medium border">Privacy</th>
+            <th className="px-3 py-1 font-medium border">Trace</th>
+            <th className="px-3 py-1 font-medium border">Archive</th>
             <th className="px-3 py-1 font-medium border"></th>
           </tr>
         </thead>
@@ -163,6 +260,21 @@ function PrivacyIcon({ tracking, isOpenSource = false }) {
   return <EmptyIcon />;
 }
 
+function SupportIcon({ support }) {
+  switch (support) {
+    case "supported":
+      return <GreenIcon />;
+    case "not-supported":
+      return <RedIcon />;
+    case "error":
+      return <OrangeIcon />;
+    case "testing":
+      return <div className="w-4 h-4 mx-auto animate-spin rounded-full border-2 border-gray-300 border-t-blue-600"></div>;
+    default:
+      return <EmptyIcon />;
+  }
+}
+
 const Row = ({ values, chain, privacy, lang, className }) => {
   const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
@@ -183,6 +295,21 @@ const Row = ({ values, chain, privacy, lang, className }) => {
   const address = accountData?.address ?? null;
 
   const { mutate: addToNetwork } = useAddToNetwork();
+
+  const getTooltipContent = (support, type) => {
+    switch (support) {
+      case "supported":
+        return `${type} methods are supported`;
+      case "not-supported":
+        return `${type} methods are not supported`;
+      case "error":
+        return `Error testing ${type} support`;
+      case "testing":
+        return `Testing ${type} support...`;
+      default:
+        return `${type} support unknown`;
+    }
+  };
 
   return (
     <tr className={className}>
@@ -209,6 +336,16 @@ const Row = ({ values, chain, privacy, lang, className }) => {
       <td className="px-3 py-1 text-sm border">
         <Tooltip content={privacy?.trackingDetails || t("no-privacy-info")}>
           {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
+        </Tooltip>
+      </td>
+      <td className="px-3 py-1 text-sm border">
+        <Tooltip content={getTooltipContent(data?.traceSupport, "Trace")}>
+          {isLoading ? <Shimmer /> : <SupportIcon support={data?.traceSupport} />}
+        </Tooltip>
+      </td>
+      <td className="px-3 py-1 text-sm border">
+        <Tooltip content={getTooltipContent(data?.archiveSupport, "Archive")}>
+          {isLoading ? <Shimmer /> : <SupportIcon support={data?.archiveSupport} />}
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm text-center border">
