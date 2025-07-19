@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "AIPaw Mainnet",
   "chain": "aipaw",
   "rpc": [
