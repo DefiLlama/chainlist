@@ -10,6 +10,7 @@ import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
 import useAccount from "../../hooks/useAccount";
 import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
+import { useQuery } from "@tanstack/react-query";
 
 // Test functions for trace and archive support
 const testTraceSupport = async (rpcUrl) => {
@@ -63,44 +64,10 @@ const testArchiveSupport = async (rpcUrl) => {
 
 export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
-  const [supportCache, setSupportCache] = useState({});
 
   const urlToData = chain.rpc.reduce((all, c) => ({ ...all, [c.url]: c }), {});
 
   const chains = useRPCData(chain.rpc);
-
-  // Test trace and archive support for each RPC
-  useEffect(() => {
-    const testSupport = async () => {
-      const newCache = { ...supportCache };
-      
-      for (const chain of chains || []) {
-        if (chain.data?.url && !supportCache[chain.data.url]) {
-          newCache[chain.data.url] = {
-            trace: "testing",
-            archive: "testing"
-          };
-          
-          // Test both features in parallel
-          const [traceResult, archiveResult] = await Promise.all([
-            testTraceSupport(chain.data.url),
-            testArchiveSupport(chain.data.url)
-          ]);
-          
-          newCache[chain.data.url] = {
-            trace: traceResult,
-            archive: archiveResult
-          };
-        }
-      }
-      
-      setSupportCache(newCache);
-    };
-
-    if (chains?.length > 0) {
-      testSupport();
-    }
-  }, [chains]);
 
   const data = useMemo(() => {
     const sortedData = sortChains
@@ -154,9 +121,6 @@ export default function RPCList({ chain, lang }) {
 
       const lat = latency ? (latency / 1000).toFixed(3) + "s" : null;
 
-      // Add trace and archive support data
-      const support = supportCache[url] || { trace: "unknown", archive: "unknown" };
-
       return {
         ...rest,
         data: { 
@@ -164,13 +128,11 @@ export default function RPCList({ chain, lang }) {
           height, 
           latency: lat, 
           trust, 
-          disableConnect,
-          traceSupport: support.trace,
-          archiveSupport: support.archive
+          disableConnect
         },
       };
     });
-  }, [chains, supportCache]);
+  }, [chains]);
 
   const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
 
@@ -296,7 +258,28 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
-  const getTooltipContent = (support, type) => {
+
+  const traceSupport = useQuery({
+    queryKey: ["support", data?.url],
+    queryFn: () => testTraceSupport(data?.url),
+    staleTime: 1000 * 60 * 60,
+    refetchInterval: 1000 * 60 * 60,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    enabled: !!data?.url,
+  })
+
+  const archiveSupport = useQuery({
+    queryKey: ["support", data?.url],
+    queryFn: () => testArchiveSupport(data?.url),
+    staleTime: 1000 * 60 * 60,
+    refetchInterval: 1000 * 60 * 60,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    enabled: !!data?.url,
+  })
+
+  const getSupportTooltipContent = (support, type) => {
     switch (support) {
       case "supported":
         return `${type} methods are supported`;
@@ -339,13 +322,13 @@ const Row = ({ values, chain, privacy, lang, className }) => {
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm border">
-        <Tooltip content={getTooltipContent(data?.traceSupport, "Trace")}>
-          {isLoading ? <Shimmer /> : <SupportIcon support={data?.traceSupport} />}
+        <Tooltip content={getSupportTooltipContent(traceSupport.isLoading ? 'testing' : traceSupport?.data ?? 'unknown', "Trace")}>
+          {isLoading ? <Shimmer /> : <SupportIcon support={traceSupport.isLoading ? 'testing' : traceSupport?.data ?? 'unknown'} />}
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm border">
-        <Tooltip content={getTooltipContent(data?.archiveSupport, "Archive")}>
-          {isLoading ? <Shimmer /> : <SupportIcon support={data?.archiveSupport} />}
+        <Tooltip content={getSupportTooltipContent(archiveSupport.isLoading ? 'testing' : archiveSupport?.data ?? 'unknown', "Archive")}>
+          {isLoading ? <Shimmer /> : <SupportIcon support={archiveSupport.isLoading ? 'testing' : archiveSupport?.data ?? 'unknown'} />}
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm text-center border">
