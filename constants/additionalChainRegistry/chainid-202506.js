@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Aurex Testnet",
   "chain": "AUREX",
   "rpc": [
