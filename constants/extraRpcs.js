@@ -6337,6 +6337,9 @@ export const extraRpcs = {
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
       "wss://dymension.drpc.org",
+      "https://rpc.mainnet.dymension.aviaone.com",
+      "https://evm.rpc.mainnet.dymension.aviaone.com",
+      "wss://evm.webSocket.mainnet.dymension.aviaone.com",
     ],
   },
   7070: {
