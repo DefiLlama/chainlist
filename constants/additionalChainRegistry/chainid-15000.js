@@ -12,7 +12,7 @@ export const data = {
     },
     "features": [{ "name": "EIP155" }],
     "infoURL": "https://qu.ai",
-    "shortName": "quai",
+    "shortName": "quait",
     "chainId": 15000,
     "networkId": 15000,
     "icon": "quai",
