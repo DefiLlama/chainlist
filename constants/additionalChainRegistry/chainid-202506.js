@@ -11,7 +11,7 @@
     "decimals": 18
   },
   "infoURL": "https://aurexgold.com",
-  "shortName": "aurex",
+  "shortName": "aurext",
   "chainId": 202506,
   "networkId": 202506,
   "slip44": 1,
