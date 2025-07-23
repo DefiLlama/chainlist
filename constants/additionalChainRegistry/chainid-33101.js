@@ -1,0 +1,23 @@
+export const data = {
+  "name": "Zilliqa 2 Testnet",
+  "chain": "ZIL",
+  "rpc": ["https://api.testnet.zilliqa.com"],
+  "faucets": ["https://faucet.testnet.zilliqa.com"],
+  "nativeCurrency": {
+    "name": "Zilliqa",
+    "symbol": "ZIL",
+    "decimals": 18
+  },
+  "infoURL": "https://www.zilliqa.com/",
+  "shortName": "zil-testnet",
+  "chainId": 33101,
+  "networkId": 33101,
+  "slip44": 1,
+  "explorers": [
+    {
+      "name": "Zilliqa 2 Explorer",
+      "url": "https://otterscan.testnet.zilliqa.com",
+      "standard": "none"
+    }
+  ]
+};
