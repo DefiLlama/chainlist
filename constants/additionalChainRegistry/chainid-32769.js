@@ -10,6 +10,7 @@ export const data = {
   },
   "infoURL": "https://www.zilliqa.com/",
   "shortName": "zil",
+   "features": [{ "name": "EIP155" }],
   "chainId": 32769,
   "networkId": 32769,
   "icon": "zilliqa",
@@ -20,4 +21,4 @@ export const data = {
       "standard": "none"
     }
   ]
-};
+}

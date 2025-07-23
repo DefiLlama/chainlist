@@ -10,6 +10,7 @@ export const data = {
   },
   "infoURL": "https://www.zilliqa.com/",
   "shortName": "zil-testnet",
+  "features": [{ "name": "EIP155" }],
   "chainId": 33101,
   "networkId": 33101,
   "slip44": 1,
@@ -20,4 +21,4 @@ export const data = {
       "standard": "none"
     }
   ]
-};
+}
