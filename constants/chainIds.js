@@ -61,7 +61,7 @@ export default {
   "369": "pulse",
   "388": "cronos zkevm",
   "416": "sx",
-  "463": "areon",
+  "463": "areum",
   "478": "form network",
   "480": "wc",
   "534": "candle",
