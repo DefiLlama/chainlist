@@ -16,7 +16,7 @@ export const data = {
   "slip44": 1,
   "explorers": [
     {
-      "name": "Zilliqa 2 Explorer",
+      "name": "Zilliqa 2 Testnet Explorer",
       "url": "https://testnet.zilliqa.blockscout.com/",
       "standard": "EIP3091"
     }

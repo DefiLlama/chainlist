@@ -16,7 +16,7 @@ export const data = {
   "icon": "zilliqa",
   "explorers": [
     {
-      "name": "Zilliqa 2 Explorer",
+      "name": "Zilliqa 2 Mainnet Explorer",
       "url": "https://zilliqa.blockscout.com/",
       "standard": "EIP3091"
     }
