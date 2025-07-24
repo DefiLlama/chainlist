@@ -8098,6 +8098,11 @@ export const extraRpcs = {
   80069: {
     rpcs: [
       {
+        url: "https://bepolia.rpc.berachain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.quicknode,
+      },
+      {
         url: "https://berachain-bepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
