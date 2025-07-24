@@ -685,6 +685,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://fantom-testnet.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   4058: {
@@ -749,6 +754,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://avalanche-fuji.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   80002: {
@@ -1147,6 +1157,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
+      {
+        url: "https://avalanche.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   250: {
@@ -1232,6 +1247,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://fantom.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   137: {
@@ -1784,6 +1804,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://kaia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   1666600000: {
@@ -1925,6 +1950,15 @@ export const extraRpcs = {
       },
     ],
   },
+  5611 : {
+    rpcs: [
+      {
+        url: "https://opbnb-testnet.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
+    ]
+  },
   204: {
     rpcs: [
       "https://opbnb-mainnet-rpc.bnbchain.org",
@@ -1963,6 +1997,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "https://opbnb.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   1666700000: {
@@ -2591,7 +2630,21 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
+      {
+        url: "https://gnosis.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
+  },
+  3338: {
+    rpcs: [
+      {
+        url: "https://peaq.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
+    ]
   },
   10200: {
     rpcs: [
@@ -2621,6 +2674,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://gnosis-chiado.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   1923: {
@@ -2883,6 +2941,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://moonbeam.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   31: {
@@ -4267,6 +4330,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://tac.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   7001: {
@@ -4436,6 +4504,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://kava.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   2559: {
@@ -4508,6 +4581,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://mantle.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   5003: {
@@ -5216,6 +5294,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://scroll.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   88888: {
@@ -5777,6 +5860,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://linea.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   2442: {
@@ -5815,6 +5903,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://linea-sepolia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   534351: {
@@ -5866,6 +5959,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://scroll-sepolia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   200810: {
@@ -5977,6 +6075,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://taiko.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   167009: {
@@ -6022,12 +6125,16 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-
       {
         url: "https://node.histori.xyz/taiko-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://taiko-hekla.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   2323: {
@@ -7326,6 +7433,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.STAKEME,
       },
+      {
+        url: "https://sei.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   130: {
@@ -7767,6 +7879,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.RHINO,
       },
+      {
+        url: "https://berachain.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   2741: {
@@ -8107,6 +8224,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://berachain-bepolia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   919: {
@@ -8205,6 +8327,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://tron.therpc.io/jsonrpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   48898: {
