@@ -17,8 +17,8 @@ export const data = {
   "explorers": [
     {
       "name": "Zilliqa 2 Explorer",
-      "url": "https://otterscan.zilliqa.com",
-      "standard": "none"
+      "url": "https://zilliqa.blockscout.com/",
+      "standard": "EIP3091"
     }
   ]
 }
