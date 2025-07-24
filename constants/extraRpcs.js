@@ -754,6 +754,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://avalanche-fuji.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   80002: {
@@ -1152,6 +1157,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
+      {
+        url: "https://avalanche.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   250: {
@@ -8317,6 +8327,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://tron.therpc.io/jsonrpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      }
     ],
   },
   48898: {
