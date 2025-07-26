@@ -8,3 +8,4 @@ export const walletIcons = {
   Wallet: "/connectors/icn-metamask.svg",
   "Trust Wallet": "/connectors/icon-trust.svg",
 };
+0xb4fdd4254cd5619c00aca7280dbe71901b886d6a
