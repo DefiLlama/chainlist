@@ -8081,6 +8081,7 @@ export const extraRpcs = {
   295: {
     rpcs: ["https://hedera.linkpool.pro"],
   },
+  347: ["https://rpc-v1.kross.network"],
   2741: {
     rpcs: [
       {
