@@ -3,7 +3,6 @@ export const data = {
   chain: "VRCN",
   icon: "VRCNChain",
   rpc: [
-    "https://vrc-chain.zeeve.net/77dcd2lsz70xjbq70im3/rpc",
     "https://rpc-mainnet-4.vrcchain.com/"
   ],
   features: [{ name: "EIP155" }],
