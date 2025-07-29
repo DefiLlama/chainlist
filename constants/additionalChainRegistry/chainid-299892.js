@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "t1 Testnet",
   "chain": "t1",
   "rpc": [
@@ -15,7 +15,7 @@
     { "name": "EIP1559" }
   ],
   "infoURL": "https://testnet.t1protocol.com/",
-  "shortName": "t1",
+  "shortName": "t1t",
   "chainId": 299892,
   "networkId": 299892,
   "icon": "t1",
