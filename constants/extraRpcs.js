@@ -513,6 +513,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://ethereum-json-rpc.stakely.io",
     ],
   },
   2: {
