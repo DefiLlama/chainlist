@@ -44,7 +44,7 @@ export default function Layout({ children, lang, chainName, setChainName }) {
           <div className="flex flex-col gap-4 w-full">
             <a
               className="flex items-center justify-center mx-auto lg:ml-0 gap-2 rounded-[50px] max-w-[16.25rem] font-medium py-[18px] px-6 shadow-lg w-full dark:bg-[#2F80ED] bg-[#2F80ED] dark:text-black text-white"
-              href="https://github.com/ethereum-lists/chains"
+              href="https://github.com/DefiLlama/chainlist?tab=readme-ov-file#add-a-chain"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -128,7 +128,7 @@ export default function Layout({ children, lang, chainName, setChainName }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="#2F80ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
             </svg>
             <span className="text-base font-medium">API</span>
