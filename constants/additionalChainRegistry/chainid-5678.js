@@ -1,0 +1,31 @@
+export const data = {
+    "name": "Tanssi Demo",
+    "chain": "Tanssi Demo",
+    "rpc": [
+      {
+        "url": "https://services.tanssi-testnet.network/dancelight-2001"
+      },
+      {
+        "url": "wss://services.tanssi-testnet.network/dancelight-2001"
+      }
+    ],
+    "faucets": [
+      "https://apps.tanssi.network/demo"
+    ],
+    "nativeCurrency": {
+      "name": "TANGO",
+      "symbol": "TANGO",
+      "decimals": 18
+    },
+    "infoURL": "https://docs.tanssi.network/builders/tanssi-network/testnet/demo-evm-network/",
+    "shortName": "tango",
+    "chainId": 5678,
+    "networkId": 5678,
+    "explorers": [
+      {
+        "name": "BlockScout",
+        "url": "https://dancelight-2001-blockscout.tanssi-chains.network",
+        "standard": "EIP3091"
+      }
+    ]
+  };
