@@ -8228,6 +8228,13 @@ export const extraRpcs = {
       "https://mainnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>"
     ],
   },
+  296: {
+    rpcs: [
+      "https://testnet.hedera.api.hgraph.io/rpc",
+      "https://296.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+      "https://testnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>"
+    ],
+  },
   2741: {
     rpcs: [
       {
