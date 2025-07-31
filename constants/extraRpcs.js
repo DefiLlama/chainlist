@@ -7913,6 +7913,24 @@ export const extraRpcs = {
       },
     ],
   },
+  20250217: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/xphere_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  1998991: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/xphere_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
   1868: {
     rpcs: [
       "https://rpc.soneium.org",
