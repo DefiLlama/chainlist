@@ -8221,7 +8221,12 @@ export const extraRpcs = {
     ],
   },
   295: {
-    rpcs: ["https://hedera.linkpool.pro"],
+    rpcs: [
+      "https://mainnet.hedera.api.hgraph.io/rpc",
+      "https://hedera.linkpool.pro",
+      "https://295.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+      "https://mainnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>"
+    ],
   },
   2741: {
     rpcs: [
