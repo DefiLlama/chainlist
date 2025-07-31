@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "ISTChain Mainnet",
   "chain": "Openverse",
   "rpc": [
