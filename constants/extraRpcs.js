@@ -3724,6 +3724,8 @@ export const extraRpcs = {
       "https://www.tencentcloud-rpc.com/v2/manta/manta-rpc",
       "https://r1.pacific.manta.systems/http",
       "https://manta.nirvanalabs.xyz/mantapublic",
+      "https://manta-pacific.calderachain.xyz/http",
+      "wss://manta-pacific.calderachain.xyz/ws",
       {
         url: "https://manta-pacific.drpc.org",
         tracking: "none",
@@ -7568,6 +7570,8 @@ export const extraRpcs = {
   3441006: {
     rpcs: [
       "https://pacific-rpc.sepolia-testnet.manta.network/http",
+      "https://manta-sepolia.rpc.caldera.xyz/http",
+      "wss://manta-sepolia.rpc.caldera.xyz/ws",
       {
         url: "https://endpoints.omniatech.io/v1/manta-pacific/sepolia/public",
         tracking: "none",
@@ -7603,6 +7607,7 @@ export const extraRpcs = {
   33139: {
     rpcs: [
       "https://rpc.apechain.com",
+      "wss://rpc.apechain.com/ws",
       {
         url: "https://apechain.drpc.org",
         tracking: "none",
@@ -7623,6 +7628,8 @@ export const extraRpcs = {
   33111: {
     rpcs: [
       "https://rpc.curtis.apechain.com",
+      "https://curtis.rpc.caldera.xyz/http",
+      "wss://curtis.rpc.caldera.xyz/ws",
       {
         url: "https://node.histori.xyz/apechain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
