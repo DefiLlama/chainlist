@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "rootVX testnet",
   "chain": "rootVX",
   "rpc": [
