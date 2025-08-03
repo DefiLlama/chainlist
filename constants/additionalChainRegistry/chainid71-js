@@ -1,0 +1,27 @@
+{
+  "name": "Conflux eSpace (Testnet)",
+  "chain": "CFX",
+  "rpc": [
+    "https://evmtestnet.confluxrpc.com"
+  ],
+  "faucets": [
+    "https://efaucet.confluxnetwork.org/"
+  ],
+  "nativeCurrency": {
+    "name": "Conflux",
+    "symbol": "CFX",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://confluxnetwork.org",
+  "shortName": "cfxtest",
+  "chainId": 71,
+  "networkId": 71,
+  "icon": "conflux",
+  "explorers": [{
+    "name": "Conflux Scan",
+    "url": "https://evmtestnet.confluxscan.io",
+    "icon": "conflux",
+    "standard": "EIP3091"
+  }]
+}
