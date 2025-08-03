@@ -1,0 +1,25 @@
+{
+  "name": "Conflux eSpace",
+  "chain": "CFX",
+  "rpc": [
+    "https://evm.confluxrpc.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Conflux",
+    "symbol": "CFX",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://confluxnetwork.org",
+  "shortName": "cfx",
+  "chainId": 1030,
+  "networkId": 1030,
+  "icon": "conflux",
+  "explorers": [{
+    "name": "Conflux Scan",
+    "url": "https://evm.confluxscan.io",
+    "icon": "conflux",
+    "standard": "EIP3091"
+  }]
+}
