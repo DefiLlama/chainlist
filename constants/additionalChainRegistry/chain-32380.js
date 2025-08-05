@@ -1,4 +1,4 @@
-{
+  export const data = {
   "name": "PAIX Development Network",
   "chain": "PAIX",
   "rpc": [
