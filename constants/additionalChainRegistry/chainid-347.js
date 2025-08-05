@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Kross Network Mainnet",
   "chain": "KSS",
   "rpc": [
