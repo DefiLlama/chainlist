@@ -202,6 +202,209 @@ const privacyStatement = {
 };
 
 export const extraRpcs = {
+  0: {
+    rpcs: [
+      {
+        url: "https://api-polkadot.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  1149: {
+    rpcs: [
+      {
+        url: "https://enjin-canary-matrix-rpc.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  46: {
+    rpcs: [
+      {
+        url: "https://api-darwinia.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  81: {
+    rpcs: [
+      {
+        url: "https://api-shibuya.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  1101: {
+    rpcs: [
+      {
+        url: "https://api-polygon-zkevm-mainnet-archive.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2000: {
+    rpcs: [
+      {
+        url: "https://api-acala.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2004: {
+    rpcs: [
+      {
+        url: "https://api-moonbeam.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2006: {
+    rpcs: [
+      {
+        url: "https://api-astar.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2007: {
+    rpcs: [
+      {
+        url: "https://api-shiden.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2015: {
+    rpcs: [
+      {
+        url: "https://api-integritee.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2019: {
+    rpcs: [
+      {
+        url: "https://api-composable.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2026: {
+    rpcs: [
+      {
+        url: "https://api-nodle.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2030: {
+    rpcs: [
+      {
+        url: "https://api-bifrost-polkadot.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2031: {
+    rpcs: [
+      {
+        url: "https://api-centrifuge.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2032: {
+    rpcs: [
+      {
+        url: "https://api-interlay.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2035: {
+    rpcs: [
+      {
+        url: "https://api-phala.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://api-aleph-zero-mainnet.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2091: {
+    rpcs: [
+      {
+        url: "https://api-frequency.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2092: {
+    rpcs: [
+      {
+        url: "https://api-zeitgeist.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  2094: {
+    rpcs: [
+      {
+        url: "https://api-pendulum.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  5000: {
+    rpcs: [
+      {
+        url: "https://api-mantle-mainnet.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  59144: {
+    rpcs: [
+      {
+        url: "https://api-linea-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
+  88888: {
+    rpcs: [
+      {
+        url: "https://api-chiliz-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+    ],
+  },
   1: {
     rpcs: [
       // Quicknode -> tracks IP
@@ -512,6 +715,11 @@ export const extraRpcs = {
         url: "https://eth.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://api-ethereum-mainnet.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -987,6 +1195,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://api-bsc-mainnet-full.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   97: {
@@ -1161,6 +1374,11 @@ export const extraRpcs = {
         url: "https://avalanche.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://api-avalanche-mainnet-archive.n.dwellir.com/ext/bc/C/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       }
     ],
   },
@@ -1251,6 +1469,11 @@ export const extraRpcs = {
         url: "https://fantom.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://api-fantom-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       }
     ],
   },
@@ -1385,6 +1608,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://api-polygon-mainnet-full.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   25: {
@@ -1428,6 +1656,11 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/cro/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://api-cronos-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -1620,6 +1853,11 @@ export const extraRpcs = {
         url: "https://arbitrum.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://api-arbitrum-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -2155,6 +2393,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://api-celo-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   44787: {
@@ -2363,6 +2606,11 @@ export const extraRpcs = {
         url: "https://optimism.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://api-optimism-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -2634,6 +2882,11 @@ export const extraRpcs = {
         url: "https://gnosis.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://api-gnosis-mainnet.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       }
     ],
   },
@@ -2678,6 +2931,11 @@ export const extraRpcs = {
         url: "https://gnosis-chiado.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://api-chiado.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       }
     ],
   },
@@ -2752,11 +3010,6 @@ export const extraRpcs = {
       },
       {
         url: "https://moonriver-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://moonriver-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
@@ -2893,11 +3146,6 @@ export const extraRpcs = {
       },
       {
         url: "https://moonbeam-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://moonbeam-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
@@ -3165,11 +3413,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.dwellir,
       },
       {
-        url: "wss://shiden-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
         url: "https://shiden.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -3222,11 +3465,6 @@ export const extraRpcs = {
       },
       {
         url: "https://astar-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://astar-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
@@ -3747,6 +3985,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://api-manta-pacific-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   186: {
@@ -4085,6 +4328,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://api-zksync-era-mainnet-full.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   196: {
@@ -4304,6 +4552,11 @@ export const extraRpcs = {
         url: "https://node.histori.xyz/lens-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
+      },
+      {
+        url: "https://enjin-relay-rpc.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -5126,6 +5379,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://api-base-mainnet-archive.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   11235: {
@@ -5300,6 +5558,11 @@ export const extraRpcs = {
         url: "https://scroll.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://api-scroll-mainnet.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       }
     ],
   },
@@ -6593,6 +6856,11 @@ export const extraRpcs = {
         url: "https://lukso.nownodes.io",
         tracking: "yes",
         trackingDetails: privacyStatement.NOWNodes,
+      },
+      {
+        url: "https://westend-rpc.n.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
