@@ -17,7 +17,7 @@ export const data = {
   "networkId": 181228,
   "icon": "ethereum",
   "explorers": [{
-    "name": "HPP Sepolia Expolorer",
+    "name": "HPP Sepolia Explorer",
     "url": "https://sepolia-explorer.hpp.io",
     "icon": "blockscout",
     "standard": "EIP3091"
