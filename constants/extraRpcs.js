@@ -606,31 +606,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-      {
-        url: "https://odyssey.nownodes.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.nownodes,
-      },
-      {
-        url: "wss://odyssey.nownodes.io/wss",
-        tracking: "none",
-        trackingDetails: privacyStatement.nownodes,
-      },
-      {
-        url: "https://public-lukso.nownodes.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.nownodes,
-      },
-      {
-        url: "https://public-bsc.nownodes.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.nownodes,
-      },
-      {
-        url: "https://public-eth.nownodes.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.nownodes,
-      },
     ],
   },
   4444: {
@@ -4794,6 +4769,35 @@ export const extraRpcs = {
       "https://b2-mainnet.alt.technology",
       "https://b2-mainnet-public.s.chainbase.com",
       "https://mainnet.b2-rpc.com",
+    ],
+  },
+  224: {
+    rpcs: [
+      {
+        url: "https://odyssey.nownodes.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.nownodes,
+      },
+      {
+        url: "wss://odyssey.nownodes.io/wss",
+        tracking: "none",
+        trackingDetails: privacyStatement.nownodes,
+      },
+      {
+        url: "https://public-lukso.nownodes.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.nownodes,
+      },
+      {
+        url: "https://public-bsc.nownodes.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.nownodes,
+      },
+      {
+        url: "https://public-eth.nownodes.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.nownodes,
+      },
     ],
   },
 };
