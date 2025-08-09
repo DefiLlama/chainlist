@@ -6,8 +6,8 @@
   ],
   "faucets": ["https://faucet.mars.movachain.com"],
   "nativeCurrency": {
-    "name": "Mova",
-    "symbol": "MOVA",
+    "name": "MARS Testnet GasCoin",
+    "symbol": "MARS",
     "decimals": 18
   },
   "infoURL": "https://movachain.com",
