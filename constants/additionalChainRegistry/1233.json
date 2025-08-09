@@ -18,7 +18,7 @@
   "shortName": "fitochain",
   "chainId": 1233,
   "networkId": 1233,
-  "icon": "fito",
+  "icon": "https://fitotechnology.com/wp-content/uploads/2025/08/fito.svg",
   "explorers": [
     {
       "name": "Fitochain Explorer",
