@@ -2,9 +2,9 @@
   "name": "Mova Beta",
   "chain": "MOVA",
   "rpc": [
-    "https://mars.rpc.movachain.com",
+    "https://mars.rpc.movachain.com"
   ],
-  "faucets": [https://faucet.mars.movachain.com],
+  "faucets": ["https://faucet.mars.movachain.com"],
   "nativeCurrency": {
     "name": "Mova",
     "symbol": "MOVA",
