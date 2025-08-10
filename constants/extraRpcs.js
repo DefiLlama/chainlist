@@ -8278,7 +8278,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc-mainnet.inichain.com"],
   },
   42421: {
-    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/c9359df1-29fe-4f4e-b06a-9f329217a086"],
+    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/b903e07d-54ee-4c4d-bffb-8b073e8163fa"],
+  },
+  42420: {
+    rpcs: ["https://eth.nodebridge.xyz/assetchain/exec/b2da3d33-5708-4f61-8d1e-2c677124c35a"],
   },
 };
 
