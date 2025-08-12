@@ -4,7 +4,7 @@ export const data = {
     "icon": "aut",
     "rpc": [
       "https://autonity.rpc.web3cdn.network/testnet",
-      "https://autonity.rpc.web3cdn.network/testnet/ws",
+      "wss://autonity.rpc.web3cdn.network/testnet/ws",
       "https://bakerloo.autonity-apis.com",
       "wss://bakerloo.autonity-apis.com"
     ],
