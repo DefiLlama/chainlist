@@ -9,7 +9,7 @@ export const data = {
     symbol: 'USDT',
     decimals: 18,
   },
-  features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+  features: [{ name: 'EIP1559' }],
   infoURL: 'https://docs.partners.stable.xyz/testnet/testnet-information',
   shortName: 'STABLE',
   chainId: 2201,
