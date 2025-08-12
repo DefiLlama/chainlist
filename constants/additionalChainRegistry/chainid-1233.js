@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Fitochain",
   "chain": "FITO",
   "rpc": [
