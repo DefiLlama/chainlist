@@ -3819,7 +3819,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.pulsechainrpc.com",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.PulseChainRpc,
       }
     ],
