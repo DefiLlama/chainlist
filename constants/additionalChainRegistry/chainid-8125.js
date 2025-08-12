@@ -12,7 +12,7 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }],
   "infoURL": "https://lerax.org/",
-  "shortName": "LERAX",
+  "shortName": "lerax",
   "chainId": 8125,
   "networkId": 8125,
   "icon": "https://testnet.leraxscan.com/assets/configs/network_icon.svg",
