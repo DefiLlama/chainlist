@@ -1,0 +1,30 @@
+{
+  "name": "Avalanche C-Chain",
+  "chain": "AVAX",
+  "rpc": [
+    "https://virtual.avalanche.eu.rpc.tenderly.co/c3ee5f68-da1b-47c5-a496-f4f6ad16f705"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
+  "infoURL": "https://www.avax.network",
+  "shortName": "avax",
+  "chainId": 43114,
+  "networkId": 43114,
+  "icon": "avalanche",
+  "explorers": [
+    {
+      "name": "SnowTrace",
+      "url": "https://snowtrace.io",
+      "icon": "snowtrace",
+      "standard": "EIP3091"
+    }
+  ]
+}
