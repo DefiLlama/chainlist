@@ -1,4 +1,4 @@
-{
+  export const data = {
   "name": "Mova Beta",
   "chain": "MOVA",
   "rpc": [
