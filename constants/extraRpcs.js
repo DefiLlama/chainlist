@@ -200,7 +200,7 @@ const privacyStatement = {
   STAKEME:
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
-    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months"
+    "When you use our Service, we does not track the IP address or other user info."
 };
 
 export const extraRpcs = {
@@ -3819,7 +3819,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.pulsechainrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.PulseChainRpc,
       }
     ],
