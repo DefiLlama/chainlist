@@ -1,19 +1,18 @@
 import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch";
-import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const cache = {}
+const cache = {};
 export const fetchWithCache = async (url) => {
-  if(cache[url]){
-    return cache[url]
+  if (cache[url]) {
+    return cache[url];
   }
   const data = await fetch(url).then((res) => res.json());
-  cache[url] = data
-  return data
-}
+  cache[url] = data;
+  return data;
+};
 
 function removeEndingSlashObject(rpc) {
   if (typeof rpc === "string") {
@@ -103,17 +102,11 @@ export function arrayMove(array, fromIndex, toIndex) {
 export async function generateChainData() {
   const [chains, chainTvls] = await Promise.all([
     fetchWithCache("https://chainid.network/chains.json"),
-    fetchWithCache("https://api.llama.fi/chains")
+    fetchWithCache("https://api.llama.fi/chains"),
   ]);
 
-  const overwrittenIds = overwrittenChains.reduce((acc, curr) => {
-    acc[curr.chainId] = true;
-    return acc;
-  }, {});
-
   const sortedChains = chains
-    .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
-    .concat(overwrittenChains)
+    .filter((c) => c.status !== "deprecated")
     .map((chain) => populateChain(chain, chainTvls))
     .sort((a, b) => {
       return (b.tvl ?? 0) - (a.tvl ?? 0);
