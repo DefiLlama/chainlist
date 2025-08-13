@@ -135,6 +135,7 @@ export default {
   "13371": "immutable zkevm",
   "15551": "loop",
   "16507": "genesys",
+  "16601": "zerog",
   "17777": "eos evm",
   "22776": "map protocol",
   "23294": "sapphire",
