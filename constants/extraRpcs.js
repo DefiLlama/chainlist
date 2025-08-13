@@ -1952,7 +1952,7 @@ export const extraRpcs = {
       },
     ],
   },
-  5611 : {
+  5611: {
     rpcs: [
       {
         url: "https://opbnb-testnet.therpc.io",
@@ -2638,15 +2638,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       }
     ],
-  },
-  3338: {
-    rpcs: [
-      {
-        url: "https://peaq.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      }
-    ]
   },
   10200: {
     rpcs: [
@@ -8441,7 +8432,7 @@ export const extraRpcs = {
       },
     ],
   },
-    743111: {
+  743111: {
     rpcs: [
       {
         url: "https://hemi-testnet.drpc.org",
