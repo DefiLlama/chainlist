@@ -1,8 +1,9 @@
 export const data = {
-  "name": "QIE Mainnet",
-  "chain": "QIE",
+  "name": "QIEMainnet",
+  "chain": "QIEV3",
   "rpc": [
     "https://rpc1mainnet.qie.digital",
+    "https://rpc5mainnet.qie.digital",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -12,10 +13,10 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://www.qie.digital/",
-  "shortName": "QIE",
+  "shortName": "QIEV3",
   "chainId": 1990,
   "networkId": 1990,
-  "icon": "QIE",
+  "icon": "qiev3",
   "explorers": [{
     "name": "QIE mainnet explorer",
     "url": "https://mainnet.qie.digital/",
