@@ -138,6 +138,7 @@ export default {
   "17777": "eos evm",
   "22776": "map protocol",
   "23294": "sapphire",
+  "32380": "paix",
   "32520": "bitgert",
   "32659": "fusion",
   "32769": "zilliqa",
