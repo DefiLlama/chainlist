@@ -16,7 +16,7 @@ export const data = {
       "symbol": "ATN",
       "decimals": 18
     },
-    "infoURL": "https://autonity.org/"",
+    "infoURL": "https://autonity.org/",
     "shortName": "aut-bakerloo",
     "chainId": 65010004,
     "networkId": 65010004,
