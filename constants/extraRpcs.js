@@ -3311,7 +3311,6 @@ export const extraRpcs = {
   },
   88: {
     rpcs: [
-      "https://rpc.tomochain.com",
       {
         url: "https://viction.blockpi.network/v1/rpc/public",
         tracking: "limited",
