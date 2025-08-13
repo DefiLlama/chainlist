@@ -10,6 +10,57 @@ import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
 import useAccount from "../../hooks/useAccount";
 import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
+import { useQuery } from "@tanstack/react-query";
+
+// Test functions for trace and archive support
+const testTraceSupport = async (rpcUrl) => {
+  const payload = {
+    jsonrpc: "2.0",
+    method: "debug_traceTransaction",
+    params: [
+      "0x5a5efc6dd80fd85b291d0c2f79a1c88f2cb36aa9e5bd1951972e8b4cf5d9b17b"
+    ],
+    id: 1,
+  };
+
+  try {
+    const response = await fetch(rpcUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    return data.result ? "supported" : "not-supported";
+  } catch (error) {
+    return "error";
+  }
+};
+
+const testArchiveSupport = async (rpcUrl) => {
+  const payload = {
+    jsonrpc: "2.0",
+    method: "eth_getBalance",
+    params: [
+      "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+      "0x0"
+    ],
+    id: 1,
+  };
+
+  try {
+    const response = await fetch(rpcUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    return data.result ? "supported" : "not-supported";
+  } catch (error) {
+    return "error";
+  }
+};
 
 export default function RPCList({ chain, lang }) {
   const [sortChains, setSorting] = useState(true);
@@ -72,7 +123,13 @@ export default function RPCList({ chain, lang }) {
 
       return {
         ...rest,
-        data: { ...data, height, latency: lat, trust, disableConnect },
+        data: { 
+          ...data, 
+          height, 
+          latency: lat, 
+          trust, 
+          disableConnect
+        },
       };
     });
   }, [chains]);
@@ -113,6 +170,8 @@ export default function RPCList({ chain, lang }) {
             <th className="px-3 py-1 font-medium border">Latency</th>
             <th className="px-3 py-1 font-medium border">Score</th>
             <th className="px-3 py-1 font-medium border">Privacy</th>
+            <th className="px-3 py-1 font-medium border">Trace</th>
+            <th className="px-3 py-1 font-medium border">Archive</th>
             <th className="px-3 py-1 font-medium border"></th>
           </tr>
         </thead>
@@ -163,6 +222,21 @@ function PrivacyIcon({ tracking, isOpenSource = false }) {
   return <EmptyIcon />;
 }
 
+function SupportIcon({ support }) {
+  switch (support) {
+    case "supported":
+      return <GreenIcon />;
+    case "not-supported":
+      return <RedIcon />;
+    case "error":
+      return <OrangeIcon />;
+    case "testing":
+      return <div className="w-4 h-4 mx-auto animate-spin rounded-full border-2 border-gray-300 border-t-blue-600"></div>;
+    default:
+      return <EmptyIcon />;
+  }
+}
+
 const Row = ({ values, chain, privacy, lang, className }) => {
   const t = useTranslations("Common", lang);
   const { data, isLoading, refetch } = values;
@@ -183,6 +257,42 @@ const Row = ({ values, chain, privacy, lang, className }) => {
   const address = accountData?.address ?? null;
 
   const { mutate: addToNetwork } = useAddToNetwork();
+
+
+  const traceSupport = useQuery({
+    queryKey: ["support", data?.url],
+    queryFn: () => testTraceSupport(data?.url),
+    staleTime: 1000 * 60 * 60,
+    refetchInterval: 1000 * 60 * 60,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    enabled: !!data?.url,
+  })
+
+  const archiveSupport = useQuery({
+    queryKey: ["support", data?.url],
+    queryFn: () => testArchiveSupport(data?.url),
+    staleTime: 1000 * 60 * 60,
+    refetchInterval: 1000 * 60 * 60,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    enabled: !!data?.url,
+  })
+
+  const getSupportTooltipContent = (support, type) => {
+    switch (support) {
+      case "supported":
+        return `${type} methods are supported`;
+      case "not-supported":
+        return `${type} methods are not supported`;
+      case "error":
+        return `Error testing ${type} support`;
+      case "testing":
+        return `Testing ${type} support...`;
+      default:
+        return `${type} support unknown`;
+    }
+  };
 
   return (
     <tr className={className}>
@@ -209,6 +319,16 @@ const Row = ({ values, chain, privacy, lang, className }) => {
       <td className="px-3 py-1 text-sm border">
         <Tooltip content={privacy?.trackingDetails || t("no-privacy-info")}>
           {isLoading ? <Shimmer /> : <PrivacyIcon tracking={privacy?.tracking} isOpenSource={privacy?.isOpenSource} />}
+        </Tooltip>
+      </td>
+      <td className="px-3 py-1 text-sm border">
+        <Tooltip content={getSupportTooltipContent(traceSupport.isLoading ? 'testing' : traceSupport?.data ?? 'unknown', "Trace")}>
+          {isLoading ? <Shimmer /> : <SupportIcon support={traceSupport.isLoading ? 'testing' : traceSupport?.data ?? 'unknown'} />}
+        </Tooltip>
+      </td>
+      <td className="px-3 py-1 text-sm border">
+        <Tooltip content={getSupportTooltipContent(archiveSupport.isLoading ? 'testing' : archiveSupport?.data ?? 'unknown', "Archive")}>
+          {isLoading ? <Shimmer /> : <SupportIcon support={archiveSupport.isLoading ? 'testing' : archiveSupport?.data ?? 'unknown'} />}
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm text-center border">
