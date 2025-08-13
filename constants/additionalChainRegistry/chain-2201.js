@@ -11,7 +11,7 @@ export const data = {
   },
   features: [{ name: 'EIP1559' }],
   infoURL: 'https://docs.partners.stable.xyz/testnet/testnet-information',
-  shortName: 'STABLE',
+  shortName: 'stable',
   chainId: 2201,
   networkId: 2201,
   explorers: [{
