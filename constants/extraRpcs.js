@@ -8357,30 +8357,6 @@ export const extraRpcs = {
     ],
   },
 
-
-  2691: {
-  rpcs: [
-    {
-      url: "https://mainnet-rpc.splendor.org",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    }
-  ],
-  websiteDead: false,
-  rpcWorking: true
-},
-2692: {
-  rpcs: [
-    {
-      url: "https://testnet-rpc.splendor.org",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    }
-  ],
-  websiteDead: false,
-  rpcWorking: true
-},
-
   48898: {
     rpcs: [
       {
@@ -8471,6 +8447,32 @@ export const extraRpcs = {
       },
     ],
   },
+
+  
+  2691: {
+  rpcs: [
+    {
+      url: "https://mainnet-rpc.splendor.org",
+      tracking: "none",
+      trackingDetails: "No user tracking or data collection"
+    }
+  ],
+  websiteDead: false,
+  rpcWorking: true
+},
+2692: {
+  rpcs: [
+    {
+      url: "https://testnet-rpc.splendor.org",
+      tracking: "none",
+      trackingDetails: "No user tracking or data collection"
+    }
+  ],
+  websiteDead: false,
+  rpcWorking: true
+},
+
+
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
