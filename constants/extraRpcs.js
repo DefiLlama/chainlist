@@ -1491,6 +1491,20 @@ export const extraRpcs = {
       },
     ],
   },
+  2440: {
+    rpcs: [
+      {
+        url: "https://rpc.atleta.mainnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "wss://rpc.atleta.mainnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
+    ],
+  },
   7887: {
     rpcs: [
       {
