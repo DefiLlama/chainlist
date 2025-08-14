@@ -7,7 +7,7 @@ export const data = {
   "faucets": [],
   "nativeCurrency": {
     "name": "Lerax",
-    "symbol": "LERAX",
+    "symbol": "tLRX",
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }],
