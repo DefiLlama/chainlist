@@ -200,7 +200,9 @@ const privacyStatement = {
   STAKEME:
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
-    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months"
+    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
+  MBF:
+    "ETC ETC",
 };
 
 export const extraRpcs = {
@@ -2716,8 +2718,16 @@ export const extraRpcs = {
   },
   1285: {
     rpcs: [
-      "https://rpc.api.moonriver.moonbeam.network",
-      "wss://wss.api.moonriver.moonbeam.network",
+      {
+        url: "https://rpc.api.moonriver.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "wss://wss.api.moonriver.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
       {
         url: "wss://moonriver.api.onfinality.io/public-ws",
         tracking: "limited",
@@ -2737,11 +2747,6 @@ export const extraRpcs = {
         url: "wss://moonriver.unitedbloc.com:2001",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "https://moonriver.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://moonriver-rpc.dwellir.com",
@@ -2764,16 +2769,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://moonriver.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
-        url: "https://moonriver.public.curie.radiumblock.co/ws",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
         url: "https://moonriver.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -2782,16 +2777,6 @@ export const extraRpcs = {
         url: "wss://moonriver.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://node.histori.xyz/moonriver-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://rpc.owlracle.info/movr/70d38ce1826c4a60bb2a8e05a6c8b20f",
-        tracking: "limited",
-        trackingDetails: privacyStatement.owlracle,
       },
     ],
   },
@@ -2853,7 +2838,16 @@ export const extraRpcs = {
   },
   1284: {
     rpcs: [
-      "https://rpc.api.moonbeam.network",
+      {
+        url: "https://rpc.api.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "wss://wss.api.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
       {
         url: "https://moonbeam.api.onfinality.io/public",
         tracking: "limited",
@@ -2866,18 +2860,13 @@ export const extraRpcs = {
       },
       {
         url: "https://moonbeam.unitedbloc.com:3000",
-        tracking: "yes",
+        tracking: "limited",
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
         url: "wss://moonbeam.unitedbloc.com:3001",
-        tracking: "yes",
-        trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "https://moonbeam.public.blastapi.io",
         tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
         url: "https://1rpc.io/glmr",
@@ -2895,9 +2884,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.dwellir,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
+        url: "https://moonbeam.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.omnia,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moonbeam.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://moonbeam.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://moonbeam-rpc.publicnode.com",
@@ -2909,36 +2908,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      {
-        url: "https://moonbeam.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
-        url: "https://moonbeam.public.curie.radiumblock.co/ws",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
-        url: "https://moonbeam.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://moonbeam.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://node.histori.xyz/moonbeam-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://moonbeam.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      }
     ],
   },
   31: {
@@ -4148,7 +4117,16 @@ export const extraRpcs = {
   },
   1287: {
     rpcs: [
-      "https://rpc.testnet.moonbeam.network",
+      {
+        url: "https://rpc.api.moonbase.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "wss://wss.api.moonbase.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
       {
         url: "https://moonbase.unitedbloc.com:1000",
         tracking: "yes",
@@ -4158,11 +4136,6 @@ export const extraRpcs = {
         url: "wss://moonbase.unitedbloc.com:1001",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "https://moonbase-alpha.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://moonbeam-alpha.api.onfinality.io/public",
@@ -4183,11 +4156,6 @@ export const extraRpcs = {
         url: "wss://moonbase-alpha.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://node.histori.xyz/moonbeam-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
     ],
   },
