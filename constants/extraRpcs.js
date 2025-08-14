@@ -2739,12 +2739,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://moonriver.unitedbloc.com:2000",
+        url: "https://moonriver.unitedbloc.com",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "wss://moonriver.unitedbloc.com:2001",
+        url: "wss://moonriver.unitedbloc.com",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
       },
@@ -2859,12 +2859,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://moonbeam.unitedbloc.com:3000",
+        url: "https://moonbeam.unitedbloc.com",
         tracking: "limited",
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "wss://moonbeam.unitedbloc.com:3001",
+        url: "wss://moonbeam.unitedbloc.com",
         tracking: "limited",
         trackingDetails: privacyStatement.unitedbloc,
       },
@@ -4128,12 +4128,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.MBF,
       },
       {
-        url: "https://moonbase.unitedbloc.com:1000",
+        url: "https://moonbase.unitedbloc.com",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "wss://moonbase.unitedbloc.com:1001",
+        url: "wss://moonbase.unitedbloc.com",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
       },
