@@ -8220,7 +8220,7 @@ export const extraRpcs = {
   295: {
     rpcs: ["https://hedera.linkpool.pro"],
   },
-  2741: {
+  11124: {
     rpcs: [
       {
         url: "https://abstract-sepolia.drpc.org",
