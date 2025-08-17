@@ -201,6 +201,8 @@ const privacyStatement = {
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
     "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months"
+  Hightower:
+    "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status (e.g., completed, pending, or failed). https://htw.tech/privacy-policy/"
 };
 
 export const extraRpcs = {
@@ -8446,6 +8448,20 @@ export const extraRpcs = {
       },
     ],
   },
+  743111: {
+    rpcs: [
+      {
+        url: "https://rpc.atleta.at.htw.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.Hightower,
+      },
+      {
+        url: "wss://rpc.atleta.at.htw.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.Hightower,
+      },
+    ],
+  },  
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
