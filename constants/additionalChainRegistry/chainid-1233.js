@@ -18,7 +18,7 @@ export const data = {
   "shortName": "fitochain",
   "chainId": 1233,
   "networkId": 1233,
-  "icon": "https://fitotechnology.com/wp-content/uploads/2025/08/fito.svg",
+  "icon": "fito",
   "explorers": [
     {
       "name": "Fitochain Explorer",
