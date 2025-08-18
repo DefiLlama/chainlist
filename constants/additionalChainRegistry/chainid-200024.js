@@ -14,7 +14,7 @@ export const data = {
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "infoURL": "https://nitrograph.com",
-    "shortName": "NOS",
+    "shortName": "nos",
     "chainId": 200024,
     "networkId": 200024,
     "icon": "https://github.com/nitrographtech/ng-assets/blob/main/logos/nitro_token_red.png",
