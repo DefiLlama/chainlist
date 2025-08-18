@@ -25,16 +25,18 @@ contract QNT89A7F3C2 is ERC20, Ownable {
 
     /**
     * @dev Costruttore
-    * @param initialSupply supply iniziale in token interi (senza decimali)
-    * @param _maxSupply supply massimo in token interi
+    * Imposta un initial supply di 1.000.000 di token e un max supply di 10.000.000 di token
     */
-    constructor(uint256 initialSupply, uint256 _maxSupply)
+    constructor()
     ERC20("QNT-89A7F3C2", "QNT89")
     Ownable(msg.sender)
     {
+        uint256 initialSupply = 1000000 * (10 ** decimals()); // 1.000.000 di token
+        uint256 _maxSupply = 10000000 * (10 ** decimals()); // 10.000.000 di token
+
         require(initialSupply <= _maxSupply, "Initial exceeds max");
-        maxSupply = _maxSupply * (10 ** decimals());
-        _mint(address(this), initialSupply * (10 ** decimals()));
+        maxSupply = _maxSupply;
+        _mint(address(this), initialSupply);
     }
 
     /**
