@@ -7894,7 +7894,7 @@ export const extraRpcs = {
         url: "https://berachain.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
       {
         url: "https://berachain-mainnet.gateway.tatum.io/",
         tracking: "yes",
