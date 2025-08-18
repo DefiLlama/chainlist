@@ -11,7 +11,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://gomchain.com",
-  "shortName": "istchain-mainnet",
+  "shortName": "gomchain-mainnet",
   "chainId": 190278,
   "networkId": 190278,
   "icon": "gom",
