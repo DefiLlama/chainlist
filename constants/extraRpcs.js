@@ -203,6 +203,8 @@ const privacyStatement = {
     "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
   MBF:
     "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  Hightower:
+    "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status https://www.htw.tech/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -8465,9 +8467,8 @@ export const extraRpcs = {
       },
     ],
   },
-
-  
-  2691: {
+ 
+2691: {
   rpcs: [
     {
       url: "https://mainnet-rpc.splendor.org",
@@ -8486,11 +8487,22 @@ export const extraRpcs = {
       trackingDetails: "No user tracking or data collection"
     }
   ],
-  websiteDead: false,
-  rpcWorking: true
 },
-
-
+2440: {
+  rpcs: [
+    {
+      url: "https://rpc.atleta.at.htw.tech",
+      tracking: "none",
+      trackingDetails: "privacyStatement.Hightower"
+    },
+    {
+      url: "wss://rpc.atleta.at.htw.tech",
+      tracking: "none",
+      trackingDetails: "privacyStatement.Hightower"
+    },
+  ],
+},
+  
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
