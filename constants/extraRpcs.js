@@ -200,7 +200,7 @@ const privacyStatement = {
   STAKEME:
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
-    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
+    "We do not store or track any user data other than the data publicly available on-chain.",
   MBF:
     "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
 };
@@ -3807,7 +3807,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.pulsechainrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.PulseChainRpc,
       }
     ],
