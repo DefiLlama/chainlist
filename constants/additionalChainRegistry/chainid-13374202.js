@@ -1,5 +1,6 @@
 export const data = {
   "name": "Ethereal Testnet",
+  "title": "Ethereal Testnet",
   "chain": "Ethereal",
   "rpc": ["https://rpc-ethereal-testnet-0.t.conduit.xyz"],
   "icon": "etherealtestnet",
