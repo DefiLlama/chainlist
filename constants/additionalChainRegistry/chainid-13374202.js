@@ -1,9 +1,8 @@
 export const data = {
   "name": "Ethereal Testnet",
-  "title": "Ethereal Testnet",
   "chain": "Ethereal",
+  "rpc": ["https://rpc-ethereal-testnet-0.t.conduit.xyz"],
   "icon": "etherealtestnet",
-  "rpc": ["https://rpc.etherealtest.net"],
   "faucets": [],
   "nativeCurrency": {
     "name": "USDe",
@@ -11,9 +10,9 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://www.ethereal.trade/",
-  "shortName": "ethereal-testnet",
-  "chainId": 657468,
-  "networkId": 657468,
+  "shortName": "ethereal-testnet-0",
+  "chainId": 13374202,
+  "networkId": 13374202,
   "explorers": [
     {
       "name": "blockscout",
