@@ -1505,6 +1505,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.DTEAM,
       },
+      {
+        url: "https://rpc.ankr.com/atleta_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
     ],
   },
   7887: {
@@ -2193,6 +2198,24 @@ export const extraRpcs = {
         url: "wss://celo-alfajores.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  62320: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/celo_baklava_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  11142220: {
+    rpcs: [
+      {
+        url: "https://rpc.ankr.com/celo_sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
       },
     ],
   },
@@ -4142,7 +4165,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-            {
+      {
         url: "https://moonbase-rpc.dwellir.com",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
@@ -8466,29 +8489,29 @@ export const extraRpcs = {
     ],
   },
 
-  
+
   2691: {
-  rpcs: [
-    {
-      url: "https://mainnet-rpc.splendor.org",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    }
-  ],
-  websiteDead: false,
-  rpcWorking: true
-},
-2692: {
-  rpcs: [
-    {
-      url: "https://testnet-rpc.splendor.org",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    }
-  ],
-  websiteDead: false,
-  rpcWorking: true
-},
+    rpcs: [
+      {
+        url: "https://mainnet-rpc.splendor.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection"
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true
+  },
+  2692: {
+    rpcs: [
+      {
+        url: "https://testnet-rpc.splendor.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection"
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true
+  },
 
 
 };
