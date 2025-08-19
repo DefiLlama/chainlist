@@ -4798,6 +4798,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nownodes,
       },
+      {
+        url: "https://atleta.nownodes.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.nownodes,
+      },
     ],
   },
 };
