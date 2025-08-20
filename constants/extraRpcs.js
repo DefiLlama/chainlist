@@ -8450,7 +8450,10 @@ export const extraRpcs = {
     ],
   },
   42420: {
-    rpcs: ["https://eth.nodebridge.xyz/assetchain/exec/b2da3d33-5708-4f61-8d1e-2c677124c35a"],
+    rpcs: [
+      "https://mainnet-rpc.assetchain.org",
+      "https://eth.nodebridge.xyz/assetchain/exec/b2da3d33-5708-4f61-8d1e-2c677124c35a"
+    ],
   },
 };
 
