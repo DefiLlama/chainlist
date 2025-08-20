@@ -8419,7 +8419,10 @@ export const extraRpcs = {
     rpcs: ["https://rpc-mainnet.inichain.com"],
   },
   42421: {
-    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/b903e07d-54ee-4c4d-bffb-8b073e8163fa"],
+    rpcs: [
+      "https://enugu-rpc.assetchain.org",
+      "https://eth.nodebridge.xyz/assetchaintestnet/exec/b903e07d-54ee-4c4d-bffb-8b073e8163fa"
+    ],
   },
   43111: {
     rpcs: [
