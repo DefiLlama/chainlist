@@ -7921,6 +7921,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://abstract-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   20250217: {
