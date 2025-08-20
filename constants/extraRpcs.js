@@ -2203,6 +2203,7 @@ export const extraRpcs = {
   },
   62320: {
     rpcs: [
+      "https://baklava-forno.celo-testnet.org",
       {
         url: "https://rpc.ankr.com/celo_baklava_testnet",
         tracking: "none",
