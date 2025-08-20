@@ -2213,6 +2213,7 @@ export const extraRpcs = {
   },
   11142220: {
     rpcs: [
+      "https://forno.celo-sepolia.celo-testnet.org",
       {
         url: "https://rpc.ankr.com/celo_sepolia",
         tracking: "none",
