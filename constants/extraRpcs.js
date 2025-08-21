@@ -1433,6 +1433,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://cro-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   338: {
