@@ -1509,12 +1509,12 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.atleta.at.htw.tech",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.Hightower,
       },
       {
         url: "wss://rpc.atleta.at.htw.tech",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.Hightower,
       },      
     ],
