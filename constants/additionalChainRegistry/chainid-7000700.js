@@ -19,7 +19,7 @@ export const data = {
     {
       "name": "JMDT Explorer",
       "url": "https://explorer.jmdt.io",
-      "icon": "https://explorer.jmdt.io/favicon/favicon.svg",
+      "icon": "jmdt",
       "standard": "EIP3091"
     }
   ]
