@@ -14,7 +14,7 @@ export const data = {
   "shortName": "jmdt",
   "chainId": 7000700,
   "networkId": 7000700,
-  "icon": "https://explorer.jmdt.io/favicon/favicon.svg",
+  "icon": "jmdt",
   "explorers": [
     {
       "name": "JMDT Explorer",
