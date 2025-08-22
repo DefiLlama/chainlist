@@ -17,7 +17,7 @@ export const data = {
     "explorers": [
       {
         "name": "IBVM explorer",
-        "url": "https://mainnet-explorer.ibvm.io",
+        "url": "https://ibvmscan.io",
         "standard": "EIP3091"
       }
     ],
