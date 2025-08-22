@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "JMDT Mainnet",
   "chain": "JMDT",
   "rpc": [
@@ -10,16 +10,16 @@
     "symbol": "JMDT",
     "decimals": 18
   },
-  "infoURL": "https://explorer.jmdt.io",
+  "infoURL": "https://jmdt.io",
   "shortName": "jmdt",
   "chainId": 7000700,
   "networkId": 7000700,
-  "icon": "jmdt",
+  "icon": "https://explorer.jmdt.io/favicon/favicon.svg",
   "explorers": [
     {
       "name": "JMDT Explorer",
       "url": "https://explorer.jmdt.io",
-      "icon": "jmdt",
+      "icon": "https://explorer.jmdt.io/favicon/favicon.svg",
       "standard": "EIP3091"
     }
   ]
