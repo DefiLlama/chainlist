@@ -6312,6 +6312,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://flow-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   747: {
