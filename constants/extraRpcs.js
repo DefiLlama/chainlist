@@ -203,6 +203,8 @@ const privacyStatement = {
     "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
   MBF:
     "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  fastnode:
+    "Fastnode temporarily logs request metadata (IP address, method, headers, timestamps, status, latency) for rate-limiting, security, DDoS protection and debugging. We do not correlate logs with on-chain wallet addresses, use them to front-run transactions, or sell personal data.https://fastnode.gitbook.io/privacy-policy/",
   Hightower:
     "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status. https://www.htw.tech/privacy-policy"
 };
@@ -1532,6 +1534,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://public-atla-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
+      {
         url: "https://rpc.atleta.at.htw.tech",
         tracking: "yes",
         trackingDetails: privacyStatement.Hightower,
