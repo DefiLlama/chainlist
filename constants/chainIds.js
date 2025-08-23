@@ -80,6 +80,7 @@ export default {
   "1100": "dymension",
   "1101": "polygon zkevm",
   "1116": "core",
+  "1124": "ecm",
   "1135": "lisk",
   "1231": "ultron",
   "1234": "step",
