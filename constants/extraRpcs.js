@@ -1848,6 +1848,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       }
+      {
+        url: "https://kaia-mainnet.gateway.tatum.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1666600000: {
