@@ -5,7 +5,7 @@
     "https://rpc.beschyperchain.com",
     "wss://rpc.beschyperchain.com/ws"
   ],
-  "faucets": [],
+  "faucets": "https://faucet.beschyperchain.com",
   "nativeCurrency": {
     "name": "BESC HyperChain",
     "symbol": "BESC",
