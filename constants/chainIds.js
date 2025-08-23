@@ -112,6 +112,7 @@ export default {
   "5000": "mantle",
   "5050": "skate",
   "5330": "superseed",
+  "5432": "yeying",
   "5551": "nahmii",
   "6001": "bouncebit",
   "6880": "mtt network",
