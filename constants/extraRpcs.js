@@ -203,6 +203,10 @@ const privacyStatement = {
     "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
   MBF:
     "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  fastnode:
+    "Fastnode temporarily logs request metadata (IP address, method, headers, timestamps, status, latency) for rate-limiting, security, DDoS protection and debugging. We do not correlate logs with on-chain wallet addresses, use them to front-run transactions, or sell personal data.https://fastnode.gitbook.io/privacy-policy/",
+  Hightower:
+    "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status. https://www.htw.tech/privacy-policy"
 };
 
 export const extraRpcs = {
@@ -685,6 +689,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       }
+      {
+        url: "https://fantom-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   4058: {
@@ -1384,6 +1393,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://cro-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   338: {
@@ -1393,6 +1407,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/cronos/testnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://cro-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -1418,6 +1437,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://iota-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1075: {
@@ -1432,6 +1456,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/iota_evm_testnet",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://iota-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -1461,6 +1490,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://public-atla-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://rpc.atleta.at.htw.tech",
+        tracking: "yes",
+        trackingDetails: privacyStatement.Hightower,
+      },
+      {
+        url: "wss://rpc.atleta.at.htw.tech",
+        tracking: "yes",
+        trackingDetails: privacyStatement.Hightower,
+      },      
     ],
   },
   7887: {
@@ -1769,6 +1813,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       }
+      {
+        url: "https://kaia-mainnet.gateway.tatum.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1666600000: {
@@ -2125,6 +2174,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/celo_sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://celo-sepolia.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -3475,6 +3529,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
       },
+      {
+        url: "https://ethereum-classic-mainnet.gateway.tatum.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   //Morden testnet deprecated
@@ -3784,6 +3843,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/kaia_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://kaia-kairos.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -5109,6 +5173,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://chiliz-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   888888: {
@@ -5226,6 +5295,11 @@ export const extraRpcs = {
         url: "https://ethereum-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://ethereum-sepolia.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -5999,11 +6073,21 @@ export const extraRpcs = {
   545: {
     rpcs: [
       "https://testnet.evm.nodes.onflow.org",
+      {
+        url: "https://flow-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   747: {
     rpcs: [
       "https://mainnet.evm.nodes.onflow.org",
+      {
+        url: "https://flow-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1707: {
@@ -6193,6 +6277,11 @@ export const extraRpcs = {
       "https://mainnet-rpc3.areon.network",
       "https://mainnet-rpc4.areon.network",
       "https://mainnet-rpc5.areon.network",
+      "https://mainnet-rpc.areum.network",
+      "https://mainnet-rpc2.areum.network",
+      "https://mainnet-rpc3.areum.network",
+      "https://mainnet-rpc4.areum.network",
+      "https://mainnet-rpc5.areum.network",
     ],
   },
   18686: {
@@ -7855,6 +7944,11 @@ export const extraRpcs = {
         url: "wss://0xrpc.io/hoodi",
         tracking: "limited",
         trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "https://ethereum-hoodi.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
