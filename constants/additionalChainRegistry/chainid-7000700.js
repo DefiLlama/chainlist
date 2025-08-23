@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "JMDT Mainnet",
   "chain": "JMDT",
   "rpc": [

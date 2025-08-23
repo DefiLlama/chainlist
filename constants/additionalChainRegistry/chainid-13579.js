@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Intuition Testnet",
   "chain": "INTUITION",
   "rpc": [

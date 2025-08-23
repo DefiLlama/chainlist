@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "BESC HYPERCHAIN",
   "chain": "BESC",
   "rpc": [

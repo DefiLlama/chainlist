@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "BMN Smart Chain",
   "chain": "BMN",
   "rpc": [
