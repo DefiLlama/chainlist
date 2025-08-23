@@ -1,10 +1,9 @@
 export const data = {
-    "name": "International Bitcoin Virtual Machine Testnet",
+    "name": "IBVM Testnet",
     "chain": "IBVM Testnet",
     "icon": "ibvmtest",
     "rpc": [
-      "https://rpc-testnet.ibvm.io/",
-      "wss://rpc-testnet.ibvm.io/ws/"
+      "https://rpc-testnet.ibvm.io/"
     ],
     "faucets": ["https://faucet.ibvm.io"],
     "nativeCurrency": {
