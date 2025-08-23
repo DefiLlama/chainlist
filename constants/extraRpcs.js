@@ -684,11 +684,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
+        url: "https://fantom-testnet.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
       {
         url: "https://fantom-testnet.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
       {
         url: "https://fantom-testnet.gateway.tatum.io/",
         tracking: "yes",
@@ -1808,11 +1812,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-      {
         url: "https://kaia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
       {
         url: "https://kaia-mainnet.gateway.tatum.io/",
         tracking: "limited",
@@ -1950,8 +1953,8 @@ export const extraRpcs = {
         url: "https://opbnb-testnet.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
-    ]
+      },
+    ],
   },
   204: {
     rpcs: [
@@ -1995,7 +1998,7 @@ export const extraRpcs = {
         url: "https://opbnb.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
     ],
   },
   1666700000: {
@@ -2645,11 +2648,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-      {
         url: "https://gnosis-chiado.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
     ],
   },
   1923: {
@@ -4409,7 +4411,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-      {
         url: "https://kava.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
@@ -4485,7 +4486,7 @@ export const extraRpcs = {
         url: "https://mantle.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
     ],
   },
   5003: {
@@ -5906,11 +5907,10 @@ export const extraRpcs = {
       },
       "https://taiko-json-rpc.stakely.io/",
       {
-      {
         url: "https://taiko.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
     ],
   },
   167009: {
@@ -5957,11 +5957,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-      {
         url: "https://taiko-hekla.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
 
     ],
   },
