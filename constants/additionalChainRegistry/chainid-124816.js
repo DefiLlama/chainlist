@@ -15,6 +15,10 @@ export const data = {
   networkId: 124816,
   icon: "https://storage.googleapis.com/mitosis-statics/logos/mitosis_logo_symbol_basic.png",
   explorers: [
-    "https://mitoscan.io/
+    {
+      name: "Mitoscan",
+      url: "https://mitoscan.io/",
+      standard: "EIP3091",
+    },
   ],
 };

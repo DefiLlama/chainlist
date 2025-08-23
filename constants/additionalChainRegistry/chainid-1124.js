@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "ECM Chain Testnet",
   "chain": "ECM Chain",
   "rpc": [
