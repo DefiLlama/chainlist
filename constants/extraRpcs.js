@@ -31,6 +31,7 @@ const privacyStatement = {
   bitstack:
     "Information about your computer hardware and software may be automatically collected by BitStack. This information can include: your IP address, browser type, domain names, access times and referring website addresses. https://bitstack.com/#/privacy",
   pokt: "What We Do Not Collect: User's IP address, request origin, request data. https://www.blog.pokt.network/rpc-logging-practices/",
+  nodies: "We collect data about the blockchain requests you make through our Service. However, we do not use this data to identify you personally. For our complete privacy polic, please visit https://www.nodies.app/privacy.txt",
   zmok: `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
@@ -294,9 +295,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bitstack,
       },
       {
-        url: "https://eth-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://ethereum-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://eth-mainnet-public.unifra.io",
@@ -554,11 +555,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://polygon-mumbai-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
         url: "https://polygon-mumbai.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -803,6 +799,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
+        url: "https://polygon-amoy-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://polygon-amoy.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
@@ -846,9 +847,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["48Club"],
       },
       {
-        url: "https://bsc-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://binance-smart-chain-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
@@ -1076,9 +1077,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://avax-pokt.nodies.app/ext/bc/C/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://avalanche-public.nodies.app/ext/bc/C/rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://avalanche.api.onfinality.io/public/ext/bc/C/rpc",
@@ -1151,9 +1152,9 @@ export const extraRpcs = {
     rpcs: [
       "https://rpcapi.fantom.network",
       {
-        url: "https://fantom-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://fantom-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       "https://rpc.ftm.tools/",
       "https://rpc.fantom.network",
@@ -1241,9 +1242,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.quicknode,
       },
       {
-        url: "https://polygon-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://polygon-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://polygon-mainnet.public.blastapi.io",
@@ -1538,9 +1539,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://arb-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://arbitrum-one-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://arb-mainnet.g.alchemy.com/v2/demo",
@@ -1782,6 +1783,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
+        url: "https://kaia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://kaia-mainnet.rpc.grove.city/v1/803ceedf",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -1834,11 +1840,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://hmyone-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
         url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -1871,6 +1872,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/blast/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://blast-testnet-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://rpc.ankr.com/blast_testnet_sepolia",
@@ -1939,6 +1945,11 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/blast/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://blast-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://blast.therpc.io",
@@ -2236,9 +2247,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://op-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://optimism-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://opt-mainnet.g.alchemy.com/v2/demo",
@@ -2387,6 +2398,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
+        url: "https://optimism-sepolia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://optimism-sepolia.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -2492,9 +2508,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://metis-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://metis-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://metis.drpc.org",
@@ -2505,11 +2521,6 @@ export const extraRpcs = {
         url: "wss://metis.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://metis-pokt.nodies.app/",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://metis-andromeda.rpc.thirdweb.com/",
@@ -2553,9 +2564,9 @@ export const extraRpcs = {
       "https://rpc.gnosischain.com",
       "https://xdai-archive.blockscout.com",
       {
-        url: "https://gnosis-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://gnosis-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://rpc.gnosis.gateway.fm",
@@ -3061,9 +3072,9 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.fuse.io",
       {
-        url: "https://fuse-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://fuse-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://fuse-mainnet.chainstacklabs.com",
@@ -4371,9 +4382,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://kava-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://kava-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "wss://kava-evm-rpc.publicnode.com",
@@ -4436,6 +4447,11 @@ export const extraRpcs = {
         url: "https://mantle-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://mantle-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://mantle-rpc.publicnode.com",
@@ -4602,11 +4618,6 @@ export const extraRpcs = {
         url: "https://evmos.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://evmos-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://evmos-mainnet.public.blastapi.io",
@@ -4824,6 +4835,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://base-sepolia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://base-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
@@ -4894,9 +4910,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://base-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://base-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://base.meowrpc.com",
@@ -5151,6 +5167,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
+        url: "https://scroll-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://endpoints.omniatech.io/v1/scroll/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -5260,6 +5281,11 @@ export const extraRpcs = {
         url: "https://public.stackup.sh/api/v1/node/ethereum-sepolia",
         tracking: "limited",
         trackingDetails: privacyStatement.stackup,
+      },
+      {
+        url: "https://ethereum-sepolia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -5682,6 +5708,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://polygon-zkevm-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://endpoints.omniatech.io/v1/polygon-zkevm/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -5783,6 +5814,11 @@ export const extraRpcs = {
         url: "https://scroll-testnet.rpc.grove.city/v1/a7a7c8e2",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://scroll-sepolia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       "http://scroll-sepolia-rpc.01no.de:8545/",
       {
@@ -6060,6 +6096,24 @@ export const extraRpcs = {
       },
     ],
   },
+  964: {
+    rpcs: [
+      {
+        url: "https://bittensor-lite-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+    ],
+  },
+  945: {
+    rpcs: [
+      {
+        url: "https://bittensor-testnet-lite-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+    ],
+  },
   7895: {
     rpcs: [
       {
@@ -6267,7 +6321,7 @@ export const extraRpcs = {
     ],
   },
   7070: {
-    rpcs: ["https://planq-rpc.nodies.app", "https://jsonrpc.planq.nodestake.top/"],
+    rpcs: ["https://planq-public.nodies.app", "https://jsonrpc.planq.nodestake.top/"],
   },
   463: {
     rpcs: [
@@ -7111,6 +7165,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://sei-testnet-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "wss://sei-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -7134,6 +7193,11 @@ export const extraRpcs = {
         url: "https://sei-evm-rpc.stakeme.pro",
         tracking: "none",
         trackingDetails: privacyStatement.STAKEME,
+      },
+      {
+        url: "https://sei-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://sei.therpc.io",
@@ -7259,6 +7323,11 @@ export const extraRpcs = {
         url: "https://ink.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://ink-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "wss://ink.drpc.org",
