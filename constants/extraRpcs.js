@@ -7145,23 +7145,41 @@ export const extraRpcs = {
     ],
   },
 
-  16601: {
+  16600: {
     rpcs: [
       "https://evmrpc-testnet.0g.ai",
+      "https://0g-json-rpc-public.originstake.com",
+      "https://og-testnet-jsonrpc.blockhub.id",
       {
-        url: "https://evmrpc-testnet.0g.ai",
+        url: "https://0g-json-rpc-public.originstake.com",
         tracking: "none",
-        trackingDetails: privacyStatement.default,
+        trackingDetails: privacyStatement.originstake,
       },
       {
-        url: "https://16601.rpc.thirdweb.com/",
+        url: "https://og-testnet-evm.itrocket.net",
         tracking: "none",
-        trackingDetails: privacyStatement.thirdweb,
+        trackingDetails: privacyStatement.itrocket,
       },
       {
-        url: "https://rpc.ankr.com/0g_galileo_testnet_evm",
+        url: "https://lightnode-json-rpc-0g.grandvalleys.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.GrandValley,
+      },
+      {
+        url: "https://rpc.ankr.com/0g_newton",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      "https://0g-evm-rpc.murphynode.net",
+      {
+        url: "https://0g-newton-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://0g-newton-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
