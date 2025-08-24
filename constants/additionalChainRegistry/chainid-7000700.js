@@ -10,7 +10,7 @@ export const data = {
     "symbol": "JMDT",
     "decimals": 18
   },
-  "infoURL": "https://explorer.jmdt.io",
+  "infoURL": "https://jmdt.io",
   "shortName": "jmdt",
   "chainId": 7000700,
   "networkId": 7000700,
