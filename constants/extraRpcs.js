@@ -1869,11 +1869,6 @@ export const extraRpcs = {
   168587773: {
     rpcs: [
       {
-        url: "https://blast-sepolia.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://endpoints.omniatech.io/v1/blast/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
