@@ -517,6 +517,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://rpc.poolz.finance/eth"
     ],
   },
   2: {
@@ -981,6 +982,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      "https://rpc.poolz.finance/bsc"
     ],
   },
   97: {
@@ -1145,7 +1147,8 @@ export const extraRpcs = {
         url: "https://avalanche.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      }
+      },
+      "https://rpc.poolz.finance/avalanche"
     ],
   },
   250: {
@@ -1354,6 +1357,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      "https://rpc.poolz.finance/polygon"
     ],
   },
   25: {
@@ -1644,6 +1648,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      "https://rpc.poolz.finance/arbitrum"
     ],
   },
   421613: {
@@ -2810,6 +2815,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      "https://rpc.poolz.finance/telos"
     ],
   },
   41: {
@@ -2913,6 +2919,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      "https://rpc.poolz.finance/moonbeam"
     ],
   },
   31: {
@@ -5011,6 +5018,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      "https://rpc.poolz.finance/base"
     ],
   },
   11235: {
@@ -7254,6 +7262,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      "https://rpc.poolz.finance/unichain"
     ],
   },
   1301: {
