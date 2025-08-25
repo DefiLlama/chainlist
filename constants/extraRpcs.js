@@ -1868,6 +1868,7 @@ export const extraRpcs = {
   },
   168587773: {
     rpcs: [
+      "https://sepolia.blast.io",
       {
         url: "https://endpoints.omniatech.io/v1/blast/sepolia/public",
         tracking: "none",
