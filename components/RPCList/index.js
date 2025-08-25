@@ -13,50 +13,52 @@ import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popo
 import { useQuery } from "@tanstack/react-query";
 
 // Test functions for trace and archive support
+
 const testTraceSupport = async (rpcUrl) => {
-  const payload = {
+  // Test trace support (with fake tx hash)
+  const tracePayload = {
     jsonrpc: "2.0",
     method: "debug_traceTransaction",
-    params: [
-      "0x5a5efc6dd80fd85b291d0c2f79a1c88f2cb36aa9e5bd1951972e8b4cf5d9b17b"
-    ],
+    params: ["0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef", {}],
     id: 1,
   };
 
   try {
-    const response = await fetch(rpcUrl, {
+    
+    const traceRes = await fetch(rpcUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+      body: JSON.stringify(tracePayload),
+    }).then(r => r.json());
 
-    const data = await response.json();
-    return data.result ? "supported" : "not-supported";
+    const traceSupported = !traceRes.error?.message.includes("method" || "API");
+    return traceSupported ? "supported" : "not-supported";
+
   } catch (error) {
     return "error";
   }
 };
 
 const testArchiveSupport = async (rpcUrl) => {
-  const payload = {
+  // Test archive support
+  const archivePayload = {
     jsonrpc: "2.0",
     method: "eth_getBalance",
-    params: [
-      "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
-      "0x0"
-    ],
+    params: ["0x0000000000000000000000000000000000000000", "0x1"],
     id: 1,
   };
 
   try {
-    const response = await fetch(rpcUrl, {
+    
+    const archiveRes = await fetch(rpcUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+      body: JSON.stringify(archivePayload),
+    }).then(r => r.json());
 
-    const data = await response.json();
-    return data.result ? "supported" : "not-supported";
+    const archiveSupported = !!archiveRes.result;
+    return archiveSupported ? "supported" : "not-supported";
+    
   } catch (error) {
     return "error";
   }
