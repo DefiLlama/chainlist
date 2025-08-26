@@ -80,6 +80,7 @@ export default {
   "1100": "dymension",
   "1101": "polygon zkevm",
   "1116": "core",
+  "1124": "ecm",
   "1135": "lisk",
   "1231": "ultron",
   "1234": "step",
@@ -111,6 +112,7 @@ export default {
   "5000": "mantle",
   "5050": "skate",
   "5330": "superseed",
+  "5432": "yeying",
   "5551": "nahmii",
   "6001": "bouncebit",
   "6880": "mtt network",
@@ -192,4 +194,5 @@ export default {
   "11297108109": "palm",
   "383414847825": "zeniq",
   "836542336838601": "curio",
+  "7000700": "jmdt",
 }
