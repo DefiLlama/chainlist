@@ -200,7 +200,7 @@ const privacyStatement = {
   STAKEME:
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
-    "We do not store or track any user data other than the data publicly available on-chain.",
+    "We do not store or track any user data other than the data publicly available on-chain.https://rpc.pulsechainrpc.com/privacy",
   MBF:
     "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
 };
