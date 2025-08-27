@@ -521,7 +521,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -822,7 +822,7 @@ export const extraRpcs = {
       },
       {
         url: "https://poly-amoy.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -995,7 +995,7 @@ export const extraRpcs = {
       },
       {
         url: "https://bsc.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -1164,7 +1164,7 @@ export const extraRpcs = {
       },
       {
         url: "https://avax.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -1249,7 +1249,7 @@ export const extraRpcs = {
       },
       {
         url: "https://fantom.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -1382,7 +1382,7 @@ export const extraRpcs = {
       },
       {
         url: "https://poly.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -1677,7 +1677,7 @@ export const extraRpcs = {
       },
       {
         url: "https://arbitrum-one.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -1805,7 +1805,7 @@ export const extraRpcs = {
       },
       {
         url: "https://arbitrum-sepolia-testnet.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -1825,7 +1825,7 @@ export const extraRpcs = {
       },
       {
         url: "https://kaia.rpc.grove.city/v1/803ceedf",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
       {
@@ -1902,7 +1902,7 @@ export const extraRpcs = {
       },
       {
         url: "https://harmony.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -2004,7 +2004,7 @@ export const extraRpcs = {
       },
       {
         url: "https://blast.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -2063,7 +2063,7 @@ export const extraRpcs = {
       },
       {
         url: "https://opbnb.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -2430,7 +2430,7 @@ export const extraRpcs = {
       },
       {
         url: "https://optimism.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -2475,7 +2475,7 @@ export const extraRpcs = {
       },
       {
         url: "https://optimism-sepolia-testnet.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -2701,7 +2701,7 @@ export const extraRpcs = {
       },
       {
         url: "https://gnosis.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -2845,7 +2845,7 @@ export const extraRpcs = {
       },
       {
         url: "https://moonriver.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -2996,7 +2996,7 @@ export const extraRpcs = {
       },
       {
         url: "https://moonbeam.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -3114,7 +3114,7 @@ export const extraRpcs = {
       },
       {
         url: "https://boba.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -3199,7 +3199,7 @@ export const extraRpcs = {
       },
       {
         url: "https://fuse.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -3501,7 +3501,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-holesky-testnet.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -4129,7 +4129,7 @@ export const extraRpcs = {
       },
       {
         url: "https://zksync-era.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -4539,7 +4539,7 @@ export const extraRpcs = {
       },
       {
         url: "https://kava.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -4621,7 +4621,7 @@ export const extraRpcs = {
       },
       {
         url: "https://mantle.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -4803,7 +4803,7 @@ export const extraRpcs = {
     ],
     {
         url: "https://evmos.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
   },
@@ -4977,7 +4977,7 @@ export const extraRpcs = {
       },
       {
         url: "https://base-testnet.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -5144,7 +5144,7 @@ export const extraRpcs = {
       },
       {
         url: "https://base.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -5294,7 +5294,7 @@ export const extraRpcs = {
       },
       {
         url: "https://scroll-mainnet.rpc.grove.city/v1/a7a7c8e2",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.pokt,
       },
       {
@@ -5324,7 +5324,7 @@ export const extraRpcs = {
       },
       {
         url: "https://scroll.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -5471,7 +5471,7 @@ export const extraRpcs = {
       },
       {
         url: "https://eth-sepolia-testnet.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -5580,7 +5580,7 @@ export const extraRpcs = {
       "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc",
       {
         url: "https://avax-dfk.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -5877,7 +5877,7 @@ export const extraRpcs = {
       },
       {
         url: "https://polygon-zkevm.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -5912,7 +5912,7 @@ export const extraRpcs = {
       },
       {
         url: "https://linea.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -5980,7 +5980,7 @@ export const extraRpcs = {
       },
       {
         url: "https://scroll-testnet.rpc.grove.city/v1/a7a7c8e2",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.pokt,
       },
       {
@@ -6044,7 +6044,7 @@ export const extraRpcs = {
       "wss://ws.mainnet.oasys.games/",
       {
         url: "https://oasys.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -6122,7 +6122,7 @@ export const extraRpcs = {
       },
       {
         url: "https://taiko.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -6177,7 +6177,7 @@ export const extraRpcs = {
       },
       {
         url: "https://taiko-hekla-testnet.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -6856,7 +6856,7 @@ export const extraRpcs = {
       },
       {
         url: "https://fraxtal.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -7398,7 +7398,7 @@ export const extraRpcs = {
       },
       {
         url: "https://sei.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -7533,7 +7533,7 @@ export const extraRpcs = {
       },
       {
         url: "https://ink.rpc.grove.city/v1/01fdb492"
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -7724,7 +7724,7 @@ export const extraRpcs = {
       "https://sonic-json-rpc.stakely.io/",
       {
         url: "https://sonic.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
@@ -7864,7 +7864,7 @@ export const extraRpcs = {
       },
       {
         url: "https://berachain.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       }
     ],
@@ -8350,7 +8350,7 @@ export const extraRpcs = {
       },
       {
         url: "https://tron.rpc.grove.city/v1/01fdb492",
-        tracking: "limited",
+        tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
     ],
