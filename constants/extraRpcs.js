@@ -201,15 +201,17 @@ const privacyStatement = {
   STAKEME:
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
-    "When you use our services or visit our websites, we may log your device’s IP address for debugging and security reasons. We may retain this information for up to twelve months",
+    "We do not store or track any user data other than the data publicly available on-chain.https://rpc.pulsechainrpc.com/privacy",
   MBF:
     "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
   fastnode:
     "Fastnode temporarily logs request metadata (IP address, method, headers, timestamps, status, latency) for rate-limiting, security, DDoS protection and debugging. We do not correlate logs with on-chain wallet addresses, use them to front-run transactions, or sell personal data.https://fastnode.gitbook.io/privacy-policy/",
   Hightower:
-    "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status. https://www.htw.tech/privacy-policy"
+    "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status. https://www.htw.tech/privacy-policy",
+  poolz:
+    "For service delivery and abuse prevention, we temporarily record IP addresses at the infrastructure level (via AWS) to set usage limits and monitor for denial of service attacks. These logs are used only for rate limiting and security purposes, and are automatically purged according to AWS retention policies. We do not correlate wallet addresses with IPs, and we do not store, exploit, or share any Personal Identifiable Information (PII). https://www.poolz.finance/privacy/",
   grove: 
-    "We store minimal PII related to your login information. We will retain Users’ PII (including Sensitive PII, where applicable) while they maintain an account with us or to the extent necessary to provide the services through the Service. Thereafter, we will keep PII for as long as reasonably necessary. See our Privacy Policy for more details: https://grove.city/privacy",
+    "We store minimal PII related to your login information. We will retain Users’ PII (including Sensitive PII, where applicable) while they maintain an account with us or to the extent necessary to provide the services through the Service. Thereafter, we will keep PII for as long as reasonably necessary. See our Privacy Policy for more details: https://grove.city/privacy"
 };
 
 export const extraRpcs = {
@@ -520,10 +522,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
+        url: "https://rpc.poolz.finance/eth",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+      {
         url: "https://eth.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
-      },
+      }
     ],
   },
   2: {
@@ -994,10 +1001,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       },
       {
+        url: "https://rpc.poolz.finance/bsc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+      {
         url: "https://bsc.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
-      },
+      }
     ],
   },
   97: {
@@ -1161,6 +1173,11 @@ export const extraRpcs = {
         url: "https://avalanche.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://rpc.poolz.finance/avalanche",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://avax.rpc.grove.city/v1/01fdb492",
@@ -1381,10 +1398,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       },
       {
+        url: "https://rpc.poolz.finance/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+      {
         url: "https://poly.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
-      },
+      }
     ],
   },
   25: {
@@ -1676,6 +1698,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
+        url: "https://rpc.poolz.finance/arbitrum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+      {
         url: "https://arbitrum-one.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
@@ -1909,11 +1936,7 @@ export const extraRpcs = {
   },
   168587773: {
     rpcs: [
-      {
-        url: "https://blast-sepolia.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
+      "https://sepolia.blast.io",
       {
         url: "https://endpoints.omniatech.io/v1/blast/sepolia/public",
         tracking: "none",
@@ -2886,6 +2909,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://rpc.poolz.finance/telos",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
     ],
   },
   41: {
@@ -2990,6 +3018,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://rpc.poolz.finance/moonbeam",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+      {        
         url: "https://node.histori.xyz/moonbeam-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
@@ -3864,7 +3897,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.pulsechainrpc.com",
-        tracking: "yes",
+        tracking: "none",
         trackingDetails: privacyStatement.PulseChainRpc,
       }
     ],
@@ -5143,10 +5176,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       },
       {
+        url: "https://rpc.poolz.finance/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+      {
         url: "https://base.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
-      },
+      }
     ],
   },
   11235: {
@@ -7451,6 +7489,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://rpc.poolz.finance/unichain",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
     ],
   },
   1301: {
@@ -8407,7 +8450,15 @@ export const extraRpcs = {
     ],
   },
   2632500: {
-    rpcs: ["https://coti-rpc.Hyperflow.finance", "wss://coti-rpc.Hyperflow.finance"],
+    rpcs: [
+      "https://coti-rpc.Hyperflow.finance",
+      "wss://coti-rpc.Hyperflow.finance",
+      {
+        url: "https://rpc.poolz.finance/coti",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
+    ],
   },
   7082400: {
     rpcs: ["https://coti-test-rpc.Hyperflow.finance", "wss://coti-test-rpc.Hyperflow.finance"],
