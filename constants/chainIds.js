@@ -134,6 +134,7 @@ export default {
   "9790": "carbon",
   "10000": "smartbch",
   "11820": "artela",
+  "102030": "creditcoin",
   "13371": "immutable zkevm",
   "15551": "loop",
   "16507": "genesys",
