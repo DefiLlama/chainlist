@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Panchain Mainnet",
   "chain": "PC",
   "rpc": [
