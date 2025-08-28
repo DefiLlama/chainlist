@@ -6361,20 +6361,6 @@ export const extraRpcs = {
   7070: {
     rpcs: ["https://planq-public.nodies.app", "https://jsonrpc.planq.nodestake.top/"],
   },
-  463: {
-    rpcs: [
-      "https://mainnet-rpc.areon.network",
-      "https://mainnet-rpc2.areon.network",
-      "https://mainnet-rpc3.areon.network",
-      "https://mainnet-rpc4.areon.network",
-      "https://mainnet-rpc5.areon.network",
-      "https://mainnet-rpc.areum.network",
-      "https://mainnet-rpc2.areum.network",
-      "https://mainnet-rpc3.areum.network",
-      "https://mainnet-rpc4.areum.network",
-      "https://mainnet-rpc5.areum.network",
-    ],
-  },
   18686: {
     rpcs: [
       {
