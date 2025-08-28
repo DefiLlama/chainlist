@@ -1170,6 +1170,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
+      {
         url: "https://avalanche.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
@@ -4833,12 +4834,12 @@ export const extraRpcs = {
       "https://alphab.ai/rpc/eth/evmos",
       "https://evmos-jsonrpc.kalia.network",
       "https://jsonrpc-evmos.mzonder.com",
-    ],
-    {
+      {
         url: "https://evmos.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+    ],
   },
   836542336838601: {
     rpcs: [],
@@ -7561,7 +7562,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://ink.rpc.grove.city/v1/01fdb492"
+        url: "https://ink.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
