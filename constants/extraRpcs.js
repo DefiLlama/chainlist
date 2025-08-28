@@ -8312,21 +8312,6 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true
   },
-  102030: {
-    rpcs: [
-      "https://mainnet3.creditcoin.network",
-    ],
-  },
-  102031: {
-    rpcs: [
-      "https://rpc.cc3-testnet.creditcoin.network",
-    ],
-  },
-  102032: {
-    rpcs: [
-      "https://rpc.cc3-devnet.creditcoin.network",
-    ],
-  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
