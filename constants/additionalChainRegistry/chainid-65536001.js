@@ -1,0 +1,25 @@
+export const data = {
+  "name": "Sovra",
+  "chain": "Sovra",
+  "rpc": [
+    "https://rpc.sovra.io",
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://sovra.io",
+  "shortName": "sovra",
+  "chainId": 65536001,
+  "networkId": 65536001,
+  "icon": "sovra",
+  "explorers": [{
+    "name": "Sovra Explorer",
+    "url": "https://explorer.sovra.io",
+    "icon": "blockscout",
+    "standard": "EIP3091"
+  }]
+}
