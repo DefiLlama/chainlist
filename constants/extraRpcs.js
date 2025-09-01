@@ -6475,13 +6475,11 @@ export const extraRpcs = {
     rpcs: ["https://tokioswift.engram.tech", "https://tokio-archive.engram.tech"],
   },
   9030: {
-    rpcs: ["https://evm.qubenode.space",
+    rpcs: [
+       "https://rpc.qubetics.com",
+       "https://evm.qubenode.space",
        "https://evm.qubeticstralbo.eu",
-      {
-        url: "wss://socket.qubetics.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
+       "wss://socket.qubetics.com"
     ],
   },
   2358: {
