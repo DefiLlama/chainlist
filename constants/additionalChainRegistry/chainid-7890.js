@@ -2,7 +2,7 @@ export const data = {
   "name": "Panchain Mainnet",
   "chain": "PC",
   "rpc": [
-    "https://rpc.panchain.io",
+    "https://publicrpc.panchain.io",
   ],
   "faucets": [],
   "nativeCurrency": {
