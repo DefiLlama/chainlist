@@ -8504,13 +8504,25 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true
   },
-  2692: {
+  2027: {
     rpcs: [
       {
-        url: "https://testnet-rpc.splendor.org",
+        url: "https://martian-rpc1.martianchain.com",
         tracking: "none",
         trackingDetails: "No user tracking or data collection"
-      }
+      }, {
+        url: "https://martian-rpc2.martianchain.com",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection"
+      }, {
+        url: "https://martian-rpc1.amichain.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection"
+      },{
+        url: "wss://martian-ws1.amichain.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection"
+      },
     ],
     websiteDead: false,
     rpcWorking: true
