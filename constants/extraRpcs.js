@@ -822,28 +822,6 @@ export const extraRpcs = {
       },
     ],
   },
-  86606: {
-    rpcs: [
-      {
-        url: "https://rpc-testnet.cpchain.com",
-        tracking: "limited",
-        trackingDetails: "No user tracking or data collection"
-      }
-    ],
-    websiteDead: false,
-    rpcWorking: true
-  },
-  86608: {
-    rpcs: [
-      {
-        url: "https://rpc.cpchain.com",
-        tracking: "limited",
-        trackingDetails: "No user tracking or data collection"
-      }
-    ],
-    websiteDead: false,
-    rpcWorking: true
-  },
   56: {
     rpcs: [
       "https://bsc-dataseed.bnbchain.org/",
@@ -8328,6 +8306,28 @@ export const extraRpcs = {
       {
         url: "https://testnet-rpc.splendor.org",
         tracking: "none",
+        trackingDetails: "No user tracking or data collection"
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true
+  },
+  86606: {
+    rpcs: [
+      {
+        url: "https://rpc-testnet.cpchain.com",
+        tracking: "limited",
+        trackingDetails: "No user tracking or data collection"
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true
+  },
+  86608: {
+    rpcs: [
+      {
+        url: "https://rpc.cpchain.com",
+        tracking: "limited",
         trackingDetails: "No user tracking or data collection"
       }
     ],
