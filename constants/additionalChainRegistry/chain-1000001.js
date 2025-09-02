@@ -1,4 +1,4 @@
-module.exports = {
+export const data = {
   name: "WLD Chain Mainnet",
   chain: "WLD",
   rpc: [
