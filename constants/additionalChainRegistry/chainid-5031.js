@@ -1,7 +1,7 @@
 export const data = {
   name: "Somnia Mainnet",
   chain: "SOMNIA",
-  rpc: ["https://api.infra.mainnet.somnia.network/"],
+  rpc: ["https://api.infra.mainnet.somnia.network"],
   faucets: [],
   nativeCurrency: {
     name: "SOMI",
@@ -9,7 +9,7 @@ export const data = {
     decimals: 18,
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
-  infoURL: "https://somnia.network/",
+  infoURL: "https://somnia.network",
   shortName: "Somnia",
   chainId: 5031,
   networkId: 5031,
@@ -17,7 +17,7 @@ export const data = {
   explorers: [
     {
       name: "Somnia Explorer",
-      url: "https://mainnet.somnia.w3us.site/",
+      url: "https://explorer.somnia.network",
       icon: "somnia explorer",
       standard: "EIP3091",
     },
