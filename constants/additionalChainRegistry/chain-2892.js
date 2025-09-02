@@ -14,7 +14,7 @@
   "infoURL": "",
   "shortName": "alpen",
   "chainId": 2892,
-  "networkId": 1,
+  "networkId": 2892,
     "icon": "https://avatars.githubusercontent.com/u/113091135",
   "explorers": [{
     "name": "explorer",
