@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Alpen Testnet",
   "chain": "Alpen",
   "rpc": [
