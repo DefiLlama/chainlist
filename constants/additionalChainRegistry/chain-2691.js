@@ -3,6 +3,7 @@ export const data = {
     "chain": "SPLENDOR",
     "rpc": [
       "https://mainnet-rpc.splendor.org",
+      "https://splendor-rpc.org/"
     ],
     "faucets": [],
     "nativeCurrency": {

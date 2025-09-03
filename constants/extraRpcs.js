@@ -8455,6 +8455,12 @@ export const extraRpcs = {
       url: "https://mainnet-rpc.splendor.org",
       tracking: "none",
       trackingDetails: "No user tracking or data collection"
+    },
+
+    {
+      url: "https://splendor-rpc.org/",
+      tracking: "none",
+      trackingDetails: "No user tracking or data collection"
     }
   ],
   websiteDead: false,
