@@ -153,7 +153,7 @@ const privacyStatement = {
   graffiti:
     "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 7 days to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 7 days, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period.https://graffiti.farm/privacy-policy/",
   nownodes:
-    "NOWNodes provides free public RPC endpoints! You do not need an API key to get node access. Learn more: https://nownodes.io/public-endpoints",
+    "NOWNodes provides free public RPC endpoints! You do not need an API key to get node access. Learn more: https://nownodes.io/public-endpoints. For our complete privacy policy, please visit https://nownodes.io/assets/data/privacy-pol.pdf",
 };
 
 export const extraRpcs = {
