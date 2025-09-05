@@ -39,6 +39,7 @@ const privacyStatement = {
     "Except for the data that is publicly accessible on the blockchain, RadiumBlock does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our customer privacy policy please visit https://radiumblock.com/privacy.html",
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days We do use these infos to improve our services.",
+  linkpool: "https://www.validationcloud.io/privacy",
   omnia:
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
@@ -122,6 +123,7 @@ const privacyStatement = {
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   thirdweb:
     "Server logs automatically record information and details about your online interactions with us. For example, server logs may record information about your visit to our Site on a particular time and day and collect information such as your device ID and IP address.https://thirdweb.com/privacy",
+  hgraph: "tbc",
   itrocket:
     "We do not track, store or process any personal data. You can check our privacy policy here: https://itrocket.net/privacy-policy/",
   nodeconnect:
@@ -8253,17 +8255,40 @@ export const extraRpcs = {
   },
   295: {
     rpcs: [
-      "https://mainnet.hedera.api.hgraph.io/rpc",
-      "https://hedera.linkpool.pro",
-      "https://295.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
-      "https://mainnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>"
+      {
+        url: "https://mainnet.hedera.api.hgraph.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hgraph,
+      },
+      {
+        url: "https://295.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+        tracking: "none",
+        trackingDetails: privacyStatement.thirdweb,
+      },
+      {
+        url:  "https://mainnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>",
+        tracking: "none",
+        trackingDetails: privacyStatement.linkpool,
+      }
     ],
   },
   296: {
     rpcs: [
-      "https://testnet.hedera.api.hgraph.io/rpc",
-      "https://296.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
-      "https://testnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>"
+      {
+        url: "https://testnet.hedera.api.hgraph.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hgraph,
+      },
+      {
+        url: "https://296.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+        tracking: "none",
+        trackingDetails: privacyStatement.thirdweb,
+      },
+      {
+        url: "https://testnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>",
+        tracking: "none",
+        trackingDetails: privacyStatement.linkpool,
+      }
     ],
   },
   11124: {
