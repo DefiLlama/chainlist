@@ -1,7 +1,7 @@
 export const data = {
-  "name": "Plasma Testnet",
+  "name": "Plasma Mainnet",
   "chain": "Plasma",
-  "rpc": ["https://testnet-rpc.plasma.to"],
+  "rpc": ["https://rpc.plasma.to"],
   "faucets": [],
   "nativeCurrency": {
     "name": "Plasma",
@@ -9,16 +9,15 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://plasma.to",
-  "shortName": "plasma-testnet",
-  "chainId": 9746,
-  "networkId": 9746,
+  "shortName": "plasma",
+  "chainId": 9745,
+  "networkId": 9745,
   "icon": "plasma",
   "explorers": [
     {
       "name": "Routescan",
-      "url": "https://testnet.plasmascan.to",
+      "url": "https://plasmascan.to",
       "standard": "EIP3091"
     }
-  ],
-  "testnet": true
+  ]
 }
