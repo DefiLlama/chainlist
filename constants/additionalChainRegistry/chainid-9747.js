@@ -4,7 +4,7 @@ export const data = {
   "rpc": ["https://devnet-rpc.plasma.to"],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Dev Plasma",
+    "name": "Plasma",
     "symbol": "XPL",
     "decimals": 18
   },
