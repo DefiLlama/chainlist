@@ -8530,6 +8530,18 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true
   },
+  612055: {
+    rpcs: [
+      "https://mainnet.crosstoken.io:22001",
+      "wss://mainnet.crosstoken.io:32001",
+    ],
+  },
+  612054: {
+    rpcs: [
+      "https://testnet.crosstoken.io:22001",
+      "wss://testnet.crosstoken.io:22001",
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
