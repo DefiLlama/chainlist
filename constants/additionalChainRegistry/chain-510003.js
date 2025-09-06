@@ -12,12 +12,12 @@ export const data = {
     "symbol": "SYND",
     "decimals": 18
   },
-  "rpc": ["https://commons.rpc.syndicate.io"],
+  "rpc": ["https://rpc.commons.syndicate.io"],
   "faucets": [],
   "explorers": [
     {
       "name": "Commons Explorer",
-      "url": "https://commons.explorer.syndicate.io",
+      "url": "https://explorer.commons.syndicate.io",
       'logo': 'blockscout',
       "standard": "EIP3091"
     }
