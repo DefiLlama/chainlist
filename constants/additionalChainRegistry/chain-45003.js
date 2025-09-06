@@ -1,6 +1,6 @@
 export const data = {
-  "name": "Juneo Mainnet",
-  "chain": "JUNE",
+  "name": "Juneo Supernet Mainnet",
+  "chain": "JUNE Chain",
   "rpc": [
     "https://rpc.juneo-mainnet.network/ext/bc/JUNE/rpc",
   ],
@@ -11,7 +11,7 @@ export const data = {
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": ["https://juneosupernet.com","https://juneo.com"],
+  "infoURL": ["https://juneosupernet.com", "https://juneo.com"],
   "shortName": "juneo",
   "chainId": 45003,
   "networkId": 2,
