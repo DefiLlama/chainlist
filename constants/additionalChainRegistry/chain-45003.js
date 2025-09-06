@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Juneo Mainnet",
   "chain": "JUNE",
   "rpc": [
