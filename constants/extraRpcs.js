@@ -440,7 +440,7 @@ export const extraRpcs = {
       {
         url: "https://public-eth.nownodes.io",
         tracking: "yes",
-        trackingDetails: privacyStatement.NOWNodes,
+        trackingDetails: privacyStatement.nownodes,
       },
       {
         url: "https://rpc.nodifi.ai/api/rpc/free",
@@ -969,7 +969,7 @@ export const extraRpcs = {
       {
         url: "https://public-bsc.nownodes.io",
         tracking: "yes",
-        trackingDetails: privacyStatement.NOWNodes,
+        trackingDetails: privacyStatement.nownodes,
       },
       {
         url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -6684,7 +6684,7 @@ export const extraRpcs = {
       {
         url: "https://public-lukso.nownodes.io",
         tracking: "yes",
-        trackingDetails: privacyStatement.NOWNodes,
+        trackingDetails: privacyStatement.nownodes,
       },
     ],
   },
