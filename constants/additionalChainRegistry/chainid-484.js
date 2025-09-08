@@ -12,7 +12,7 @@
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "infoURL": "https://docs.campnetwork.xyz",
-    "shortName": "CampMainnet",
+    "shortName": "campmainnet",
     "chainId": 484,
     "networkId": 484,
     "icon": "camp",
