@@ -1573,7 +1573,7 @@ export const extraRpcs = {
       },
       {
         url: "https://atleta.nownodes.io",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.nownodes,
       },
     ],
@@ -6631,12 +6631,12 @@ export const extraRpcs = {
       "https://testnode.dioneprotocol.com/ext/bc/D/rpc",
       {
         url: "https://odyssey.nownodes.io",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.nownodes,
       },
       {
         url: "wss://odyssey.nownodes.io/wss",
-        tracking: "none",
+        tracking: "yes",
         trackingDetails: privacyStatement.nownodes,
       },
     ],
@@ -8512,33 +8512,33 @@ export const extraRpcs = {
     rpcWorking: true,
   },
   2691: {
-  rpcs: [
-    {
-      url: "https://mainnet-rpc.splendor.org",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    },
+    rpcs: [
+      {
+        url: "https://mainnet-rpc.splendor.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
 
-    {
-      url: "https://splendor-rpc.org/",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    }
-  ],
-  websiteDead: false,
-  rpcWorking: true
-},
-2692: {
-  rpcs: [
-    {
-      url: "https://testnet-rpc.splendor.org",
-      tracking: "none",
-      trackingDetails: "No user tracking or data collection"
-    }
-  ],
-  websiteDead: false,
-  rpcWorking: true
-},
+      {
+        url: "https://splendor-rpc.org/",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  2692: {
+    rpcs: [
+      {
+        url: "https://testnet-rpc.splendor.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
