@@ -14,7 +14,7 @@ export const data = {
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "infoURL": "https://mocachain.org",
-    "shortName": "MOCA",
+    "shortName": "moca",
     "chainId": 2288,
     "networkId": 2288,
     "icon": "moca",
