@@ -2,11 +2,6 @@ export const data = {
     "name": "Areum Mainnet",
     "chain": "AREUM",
     "rpc": [
-      "https://mainnet-rpc.areon.network",
-      "https://mainnet-rpc2.areon.network",
-      "https://mainnet-rpc3.areon.network",
-      "https://mainnet-rpc4.areon.network",
-      "https://mainnet-rpc5.areon.network",
       "https://mainnet-rpc.areum.network",
       "https://mainnet-rpc2.areum.network",
       "https://mainnet-rpc3.areum.network",
