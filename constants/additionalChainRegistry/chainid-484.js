@@ -1,4 +1,4 @@
-{
+export const data ={
     "name": "Camp Network Mainnet",
     "chain": "CAMP",
     "rpc": [
