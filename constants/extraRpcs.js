@@ -123,7 +123,7 @@ const privacyStatement = {
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   thirdweb:
     "Server logs automatically record information and details about your online interactions with us. For example, server logs may record information about your visit to our Site on a particular time and day and collect information such as your device ID and IP address.https://thirdweb.com/privacy",
-  hgraph: "tbc",
+  hgraph: "https://hgraph.com/privacy",
   itrocket:
     "We do not track, store or process any personal data. You can check our privacy policy here: https://itrocket.net/privacy-policy/",
   nodeconnect:
