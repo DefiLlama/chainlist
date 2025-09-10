@@ -18,7 +18,7 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "martianchain.com",
-  "shortName": "Erol",
+  "shortName": "erol",
   "chainId": 2027,
   "networkId": 2027,
   "icon": "https://martianchain.com/img/martian.png",
@@ -39,4 +39,5 @@ export const data = {
     "url": "https://explorer.martianchain.com",
     "standard": "EIP3091"
   }]
+
 }
