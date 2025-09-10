@@ -3902,6 +3902,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.PulseChainRpc,
       },
+      {
+        url: "wss://ws.pulsechainrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.PulseChainRpc,
+      },
     ],
   },
   385: {
