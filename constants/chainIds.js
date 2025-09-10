@@ -131,6 +131,7 @@ export default {
   "8822": "iotaevm",
   "8899": "jbc",
   "9001": "evmos",
+  "9745": "plasma",
   "9790": "carbon",
   "10000": "smartbch",
   "11820": "artela",
