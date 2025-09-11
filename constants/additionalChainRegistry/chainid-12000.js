@@ -11,7 +11,7 @@ export const data = {
     decimals: 18,
   },
   infoURL: "https://kudora.org/",
-  shortName: "kud",
+  shortName: "kudora",
   chainId: 12000,
   networkId: 12000,
   explorers: [
