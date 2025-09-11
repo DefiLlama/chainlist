@@ -14,5 +14,8 @@ export const data = {
   shortName: "kud",
   chainId: 12000,
   networkId: 12000,
-  explorers: []
+  explorers: [    {
+      name: "Kudora Explorer",
+      url: "https://blockscout.kudora.org",
+    },]
 };
