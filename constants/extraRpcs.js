@@ -1256,7 +1256,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      "https://fantom-json-rpc.stakely.io",
+      {
+        url: "https://fantom-json-rpc.stakely.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
       {
         url: "https://api.zan.top/ftm-mainnet",
         tracking: "limited",
@@ -2239,7 +2243,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      "https://celo-json-rpc.stakely.io",
+      {
+        url: "https://celo-json-rpc.stakely.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
       {
         url: "https://celo.api.onfinality.io/public",
         tracking: "limited",
@@ -4817,7 +4825,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://eth.bd.evmos.org:8545/",
-      "https://evmos-json-rpc.stakely.io",
+      {
+        url: "https://evmos-json-rpc.stakely.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
@@ -6151,7 +6163,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://taiko-json-rpc.stakely.io/",
+      {
+        url: "https://taiko-json-rpc.stakely.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
       {
         url: "https://taiko.therpc.io",
         tracking: "limited",
@@ -7755,7 +7771,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
-      "https://sonic-json-rpc.stakely.io/",
+      {
+        url: "https://sonic-json-rpc.stakely.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
       {
         url: "https://sonic.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
