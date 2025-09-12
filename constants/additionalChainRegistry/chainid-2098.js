@@ -13,7 +13,7 @@ export const data = {
     "decimals": 18,
   },
   "infoURL": "https://www.realchain.io/",
-  "shortName": "RealChainTest",
+  "shortName": "realchaintest",
   "chainId": 2098,
   "networkId": 2098,
   "explorers": [
