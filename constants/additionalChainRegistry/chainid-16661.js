@@ -1,5 +1,5 @@
 export const data = {
-  "name": "0G-Mainnet",
+  "name": "0G Mainnet",
   "chain": "0G",
   "rpc": [
     "https://evmrpc.0g.ai"
