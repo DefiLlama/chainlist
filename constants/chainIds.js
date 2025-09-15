@@ -215,6 +215,7 @@ export default {
   "153153": "odyssey",
   "167000": "taiko",
   "200901": "bitlayer",
+  "220312": "kultchain",
   "222222": "hydradx",
   "256256": "cmp",
   "322202": "parex",
