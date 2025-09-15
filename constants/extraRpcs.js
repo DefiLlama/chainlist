@@ -6647,6 +6647,11 @@ export const extraRpcs = {
       },
     ],
   },
+  220312: {
+    rpcs: [
+      "https://kultrpc.kultchain.com",
+    ],
+  },
   131313: {
     rpcs: [
       "https://testnode.dioneprotocol.com/ext/bc/D/rpc",
