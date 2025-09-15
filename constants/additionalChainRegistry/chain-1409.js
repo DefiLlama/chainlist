@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "VFlow Volta Testnet",
   "chain": "TVFL",
   "rpc": [
