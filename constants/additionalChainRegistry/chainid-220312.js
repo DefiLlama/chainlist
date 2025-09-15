@@ -23,4 +23,4 @@ export const data = {
     "icon": "blockscout",
     "standard": "EIP3091"
   }]
-}
+};
