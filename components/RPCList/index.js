@@ -6,36 +6,55 @@ import useAddToNetwork from "../../hooks/useAddToNetwork";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { FATHOM_DROPDOWN_EVENTS_ID } from "../../hooks/useAnalytics";
 import { useRpcStore } from "../../stores";
-import { renderProviderText } from "../../utils";
+import { renderProviderText, containsAny } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
 import useAccount from "../../hooks/useAccount";
 import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
 import { useQuery } from "@tanstack/react-query";
 
-// Test functions for trace and archive support
+// Functions to test trace and archive support
+
+const SUPPORT_STATUS = {
+  supported: "supported",
+  not_supported: "not-supported",
+  error: "error",
+  testing: "testing",
+  unknown: "unknown",
+};
 
 const testTraceSupport = async (rpcUrl) => {
   // Test trace support (with fake tx hash)
+
+  const fakeTxHash = "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef";
   const tracePayload = {
     jsonrpc: "2.0",
     method: "debug_traceTransaction",
-    params: ["0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef", {}],
+    params: [fakeTxHash, {}],
     id: 1,
   };
 
   try {
-    
     const traceRes = await fetch(rpcUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(tracePayload),
-    }).then(r => r.json());
+      signal: AbortSignal.timeout(7000),
+    }).then((r) => r.json());
 
-    const traceSupported = !traceRes.error?.message.includes("method" || "API");
-    return traceSupported ? "supported" : "not-supported";
+    const errorMessage = traceRes?.error?.message || traceRes?.message;
 
+    // some RPCs might allow the trace with restrictions, better marks those as 'failed to test' instead of 'not supported'
+    if (containsAny(errorMessage, ["auth", "rate", "limit", "api", "allowed", "whitelist", "origin"])) {
+      throw new Error(errorMessage);
+    }
+
+    const traceSupported =
+      containsAny(errorMessage, ["transaction not found", `transaction ${fakeTxHash} not found`]) ||
+      traceRes?.result === null;
+
+    return traceSupported ? SUPPORT_STATUS.supported : SUPPORT_STATUS.not_supported;
   } catch (error) {
-    return "error";
+    return SUPPORT_STATUS.error;
   }
 };
 
@@ -49,18 +68,17 @@ const testArchiveSupport = async (rpcUrl) => {
   };
 
   try {
-    
     const archiveRes = await fetch(rpcUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(archivePayload),
-    }).then(r => r.json());
+      signal: AbortSignal.timeout(7000),
+    }).then((r) => r.json());
 
-    const archiveSupported = !!archiveRes.result;
-    return archiveSupported ? "supported" : "not-supported";
-    
+    const archiveSupported = Boolean(archiveRes.result);
+    return archiveSupported ? SUPPORT_STATUS.supported : SUPPORT_STATUS.not_supported;
   } catch (error) {
-    return "error";
+    return SUPPORT_STATUS.error;
   }
 };
 
@@ -125,12 +143,12 @@ export default function RPCList({ chain, lang }) {
 
       return {
         ...rest,
-        data: { 
-          ...data, 
-          height, 
-          latency: lat, 
-          trust, 
-          disableConnect
+        data: {
+          ...data,
+          height,
+          latency: lat,
+          trust,
+          disableConnect,
         },
       };
     });
@@ -226,14 +244,16 @@ function PrivacyIcon({ tracking, isOpenSource = false }) {
 
 function SupportIcon({ support }) {
   switch (support) {
-    case "supported":
+    case SUPPORT_STATUS.supported:
       return <GreenIcon />;
-    case "not-supported":
+    case SUPPORT_STATUS.not_supported:
       return <RedIcon />;
-    case "error":
+    case SUPPORT_STATUS.error:
       return <OrangeIcon />;
-    case "testing":
-      return <div className="w-4 h-4 mx-auto animate-spin rounded-full border-2 border-gray-300 border-t-blue-600"></div>;
+    case SUPPORT_STATUS.testing:
+      return (
+        <div className="w-4 h-4 mx-auto animate-spin rounded-full border-2 border-gray-300 border-t-blue-600"></div>
+      );
     default:
       return <EmptyIcon />;
   }
@@ -260,37 +280,38 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   const { mutate: addToNetwork } = useAddToNetwork();
 
-
   const traceSupport = useQuery({
-    queryKey: ["support", data?.url],
+    queryKey: ["trace-support", data?.url],
     queryFn: () => testTraceSupport(data?.url),
     staleTime: 1000 * 60 * 60,
     refetchInterval: 1000 * 60 * 60,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     enabled: !!data?.url,
-  })
+  });
 
   const archiveSupport = useQuery({
-    queryKey: ["support", data?.url],
+    queryKey: ["archive-support", data?.url],
     queryFn: () => testArchiveSupport(data?.url),
     staleTime: 1000 * 60 * 60,
     refetchInterval: 1000 * 60 * 60,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     enabled: !!data?.url,
-  })
+  });
 
   const getSupportTooltipContent = (support, type) => {
     switch (support) {
-      case "supported":
+      case SUPPORT_STATUS.supported:
         return `${type} methods are supported`;
-      case "not-supported":
+      case SUPPORT_STATUS.not_supported:
         return `${type} methods are not supported`;
-      case "error":
+      case SUPPORT_STATUS.error:
         return `Error testing ${type} support`;
-      case "testing":
+      case SUPPORT_STATUS.testing:
         return `Testing ${type} support...`;
+      case SUPPORT_STATUS.unknown:
+        return `${type} support unknown`;
       default:
         return `${type} support unknown`;
     }
@@ -324,13 +345,37 @@ const Row = ({ values, chain, privacy, lang, className }) => {
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm border">
-        <Tooltip content={getSupportTooltipContent(traceSupport.isLoading ? 'testing' : traceSupport?.data ?? 'unknown', "Trace")}>
-          {isLoading ? <Shimmer /> : <SupportIcon support={traceSupport.isLoading ? 'testing' : traceSupport?.data ?? 'unknown'} />}
+        <Tooltip
+          content={getSupportTooltipContent(
+            traceSupport.isLoading ? SUPPORT_STATUS.testing : traceSupport?.data ?? SUPPORT_STATUS.unknown,
+            "Trace",
+          )}
+        >
+          {isLoading ? (
+            <Shimmer />
+          ) : (
+            <SupportIcon
+              support={traceSupport.isLoading ? SUPPORT_STATUS.testing : traceSupport?.data ?? SUPPORT_STATUS.unknown}
+            />
+          )}
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm border">
-        <Tooltip content={getSupportTooltipContent(archiveSupport.isLoading ? 'testing' : archiveSupport?.data ?? 'unknown', "Archive")}>
-          {isLoading ? <Shimmer /> : <SupportIcon support={archiveSupport.isLoading ? 'testing' : archiveSupport?.data ?? 'unknown'} />}
+        <Tooltip
+          content={getSupportTooltipContent(
+            archiveSupport.isLoading ? SUPPORT_STATUS.testing : archiveSupport?.data ?? SUPPORT_STATUS.unknown,
+            "Archive",
+          )}
+        >
+          {isLoading ? (
+            <Shimmer />
+          ) : (
+            <SupportIcon
+              support={
+                archiveSupport.isLoading ? SUPPORT_STATUS.testing : archiveSupport?.data ?? SUPPORT_STATUS.unknown
+              }
+            />
+          )}
         </Tooltip>
       </td>
       <td className="px-3 py-1 text-sm text-center border">
