@@ -10,7 +10,7 @@ export const data = {
   "nativeCurrency": {
     "name": "KAS",
     "symbol": "KAS",
-    "decimals": 8
+    "decimals": 18
   },
   "infoURL": "https://kasplex.org/",
   "shortName": "kasplex",
