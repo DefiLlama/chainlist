@@ -16,13 +16,13 @@ export const data = {
   "chainId": 5888,
   "networkId": 5888,
   "slip44": 60,
-  "icon": "om",
+  "icon": "mantra",
   "explorers": [
     {
       "name": "MANTRA Scan",
       "url": "https://mantrascan.io",
       "standard": "none",
-      "icon": "om"
+      "icon": "https://mantrascan.io/favicon.svg"
     }
   ]
 }
