@@ -12,7 +12,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://mantrachain.io",
-  "shortName": "MANTRA",
+  "shortName": "mantra_evm",
   "chainId": 5888,
   "networkId": 5888,
   "slip44": 60,
