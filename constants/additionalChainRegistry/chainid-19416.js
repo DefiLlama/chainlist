@@ -1,4 +1,4 @@
-{
+export const data ={
   "name": "Igra Caravel Testnet",
   "chain": "IGRA", 
   "rpc": [
