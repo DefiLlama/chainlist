@@ -8569,6 +8569,28 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
+  86606: {
+    rpcs: [
+      {
+        url: "https://rpc-testnet.cpchain.com",
+        tracking: "limited",
+        trackingDetails: "No user tracking or data collection"
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true
+  },
+  86608: {
+    rpcs: [
+      {
+        url: "https://rpc.cpchain.com",
+        tracking: "limited",
+        trackingDetails: "No user tracking or data collection"
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
