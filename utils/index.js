@@ -94,3 +94,8 @@ export const notTranslation =
         return en[ns][key];
     }
   };
+
+export const containsAny = (str, substrings) => {
+  if (!str) return false;
+  return substrings.some((substring) => str.toLowerCase().includes(substring.toLowerCase()));
+};
