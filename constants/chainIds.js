@@ -246,3 +246,24 @@ export default {
   "836542336838601": "curio",
   "2716446429837000": "dchain",
 }
+296070: {
+  name: "Lightning Vault",
+  shortName: "LVT",
+  chain: "LVT",
+  chainId: 296070,
+  networkId: 296070,
+  nativeCurrency: {
+    name: "Lightning Vault Token",
+    symbol: "LVT",
+    decimals: 18,
+  },
+  rpc: ["http://lightning-mainnet.site"],
+  explorers: [
+    {
+      name: "Lightning Explorer",
+      url: "http://lightning-mainnet.site/explorer",
+      standard: "EIP3091"
+    }
+  ],
+  icon: "lvt",
+},
