@@ -5966,6 +5966,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://rpc.poolz.finance/linea",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
+      },
     ],
   },
   2442: {
