@@ -1,7 +1,7 @@
 export const data = {
   name: "Intuition Mainnet",
   chain: "INTUITION",
-  rpc: ["https://rpc.intuition.systems"],
+  rpc: ["https://intuition.calderachain.xyz/http", "https://rpc.intuition.systems"],
   faucets: [],
   nativeCurrency: {
     name: "Intuition",
@@ -16,7 +16,12 @@ export const data = {
   icon: "intuition",
   explorers: [
     {
-      name: "IntuitionScan (Mainnet)",
+      name: "Intuition Explorer (Mainnet)",
+      url: "https://intuition.calderaexplorer.xyz",
+      standard: "EIP3091",
+    },
+    {
+      name: "Intuition Explorer (Mainnet)",
       url: "https://explorer.intuition.systems",
       standard: "EIP3091",
     },
