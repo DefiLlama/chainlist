@@ -10,7 +10,7 @@ module.exports = {
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }, { name: "EIP4844" }],
   infoURL: "https://www.fluent.xyz/",
-  shortName: "fluent",
+  shortName: "fluent-devnet",
   chainId: 20993,
   networkId: 20993,
   explorers: [
