@@ -6,8 +6,8 @@ export const data ={
   ],
   "faucets": ["https://igra-faucet-ec24dbd67d05.herokuapp.com"],
   "nativeCurrency": {
-    "name": "Igra",
-    "symbol": "IGRA",
+    "name": "iKAS",
+    "symbol": "iKAS",
     "decimals": 18
   },
   "infoURL": "https://docs.igralabs.com/",
