@@ -13,12 +13,13 @@ export const data = {
   shortName: "carrchain",
   chainId: 76672,
   networkId: 76672,
-  icon: "ethereum",
+  icon: "carrchain",
   explorers: [
     {
       name: "CarrScan",
       url: "https://testnet.carrscan.io",
       standard: "EIP3091",
+      icon: "carrchain",
     },
   ],
 };
