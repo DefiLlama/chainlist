@@ -52,7 +52,7 @@ export default {
   "207": "vinuchain",
   "225": "lachain",
   "228": "mind network",
-  "232": "lc",
+  "232": "lens",
   "239": "tac",
   "246": "energyweb",
   "248": "oasys",
