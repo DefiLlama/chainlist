@@ -4427,6 +4427,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://evmrpc.tac.nodestake.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodestake,
+      },
     ],
   },
   7001: {
