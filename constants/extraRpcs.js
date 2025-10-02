@@ -8586,6 +8586,17 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
+  1: {
+    rpcs: [
+      {
+        url: "https://eth-beacon-chain-hoodi.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+},
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
