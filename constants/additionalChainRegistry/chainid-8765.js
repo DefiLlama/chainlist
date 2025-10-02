@@ -2,7 +2,7 @@ export const data = {
   "name": "Warden",
   "chain": "WARD",
   "icon": "warden",
-  "rpc": ["https://evm.chiado.wardenprotocol.org", "wss://evm-ws.chiado.wardenprotocol.org"],
+  "rpc": ["https://evm.wardenprotocol.org", "wss://evm-ws.wardenprotocol.org"],
   "nativeCurrency": {
     "name": "WARD",
     "symbol": "WARD",
