@@ -8592,7 +8592,18 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
-};
+  10143: {
+    rpcs: [
+      {
+        url: "https://monad-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
