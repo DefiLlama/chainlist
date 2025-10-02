@@ -8586,6 +8586,22 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
+  999: {
+    rpcs: [
+      {
+        url: "https://rpc.hyperliquid.xyz/evm",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://hyperliquid.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
