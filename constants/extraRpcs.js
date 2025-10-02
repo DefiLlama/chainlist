@@ -8586,7 +8586,23 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
-};
+  43111: {
+    rpcs: [
+      {
+        url: "https://rpc.hemi.network/rpc",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://hemi.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  }, 
+  };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
