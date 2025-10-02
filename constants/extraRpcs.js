@@ -8587,7 +8587,23 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
-};
+  100: {
+    rpcs: [
+      {
+        url: "https://rpc.gnosischain.com",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://gnosis-beacon-chain.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
