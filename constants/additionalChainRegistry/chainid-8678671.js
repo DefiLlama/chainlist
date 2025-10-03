@@ -2,7 +2,9 @@ export const data = {
   "name": "VinaChain Mainnet",
   "chain": "VPC",
   "rpc": [
-    "https://vncscan.io",
+    "https://beta-rpc.vncscan.io",
+    "https://beta-rpc1.vncscan.io",
+    "https://rpcus.vncscan.io",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -18,7 +20,7 @@ export const data = {
   "icon": "vinachain",
   "explorers": [{
     "name": "vncscan",
-    "url": "https://beta.vncscan.io",
+    "url": "https://vncscan.io",
     "icon": "vinachain",
     "standard": "EIP3091"
   }]

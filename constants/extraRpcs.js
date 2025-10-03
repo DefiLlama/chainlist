@@ -8580,6 +8580,11 @@ export const extraRpcs = {
         url: "https://a-rpc.nobody.network",
         tracking: "none",
         trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://a-rpc1.nobody.network",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
       }
     ],
     websiteDead: false,
@@ -8588,7 +8593,17 @@ export const extraRpcs = {
   8678671: {
     rpcs: [
       {
-        url: "https://vncscan.io",
+        url: "https://beta-rpc.vncscan.io",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://beta-rpc2.vncscan.io",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://rpcus.vncscan.io",
         tracking: "none",
         trackingDetails: "No user tracking or data collection",
       }

@@ -1,12 +1,13 @@
 export const data ={
-  "name": "Nobody Mainnet",
+  "name": "Nobody Chain",
   "chain": "IDS",
   "rpc": [
     "https://a-rpc.nobody.network",
+    "https://a-rpc1.nobody.network",
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "IDS",
+    "name": "Intelligent Decentralized Solution",
     "symbol": "IDS",
     "decimals": 18
   },
