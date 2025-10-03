@@ -8587,6 +8587,13 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
+   5031: {
+    rpcs: [
+      "https://rpc.somnia.network",
+      "https://somnia-json-rpc.stakely.io",
+      "https://somnia-rpc.publicnode.com"
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
