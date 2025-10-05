@@ -1,0 +1,23 @@
+module.exports = {
+  "name": "Linea Mainnet",
+  "chain": "LINEA",
+  "rpc": ["https://rpc.linea.build"],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "features": [{"name": "EIP155"}],
+  "infoURL": "https://linea.build",
+  "shortName": "linea",
+  "chainId": "59144",
+  "networkId": "59144",
+  "icon": "linea",
+  "explorers": [{
+    "name": "LineaScan",
+    "url": "https://lineascan.build",
+    "icon": "linea",
+    "standard": "EIP3091"
+  }]
+};
