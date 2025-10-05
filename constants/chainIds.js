@@ -227,6 +227,8 @@ export default {
   "80094": "berachain",
   "81457": "blast",
   "88888": "chiliz",
+  "97476": "doma-testnet",
+  "97477": "doma",
   "98865": "plume_deprecated",
   "98866": "plume",
   "105105": "stratis",
