@@ -14,7 +14,7 @@ export const data = {
     "shortName": "lit",
     "chainId": 175200,
     "networkId": 175200,
-    "icon": "lit",
+    "icon": "https://arweave.net/N-8JO-TorSdG2v9FUdvNpkQw11EYL47wEFbYA-KAMBg",
     "explorers": [{
       "name": "Lit Chain Explorer",
       "url": "https://lit-chain-explorer.litprotocol.com",
