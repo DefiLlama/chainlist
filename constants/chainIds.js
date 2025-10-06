@@ -138,6 +138,7 @@ export default {
   "3073": "move",
   "3338": "peaq",
   "3637": "botanix",
+  "3721": "xone chain",
   "3776": "astar zkevm",
   "4158": "crossfi",
   "4337": "beam",
