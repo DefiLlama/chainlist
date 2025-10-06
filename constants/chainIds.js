@@ -176,6 +176,7 @@ export default {
   "9745": "plasma",
   "9790": "carbon",
   "10000": "smartbch",
+  "10088": "gatelayer",
   "10507": "numbers",
   "11820": "artela",
   "13371": "immutable zkevm",
