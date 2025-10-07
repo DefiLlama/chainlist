@@ -2255,32 +2255,6 @@ export const extraRpcs = {
       },
     ],
   },
-  44787: {
-    rpcs: [
-      "https://alfajores-forno.celo-testnet.org",
-      "wss://alfajores-forno.celo-testnet.org/ws",
-      {
-        url: "https://celo-alfajores.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://celo-alfajores.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  62320: {
-    rpcs: [
-      "https://baklava-forno.celo-testnet.org",
-      {
-        url: "https://rpc.ankr.com/celo_baklava_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-    ],
-  },
   11142220: {
     rpcs: [
       "https://forno.celo-sepolia.celo-testnet.org",
