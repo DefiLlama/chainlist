@@ -20,7 +20,7 @@ export const data = {
   "icon": "vinachain",
   "explorers": [{
     "name": "vncscan",
-    "url": "https://vncscan.io",
+    "url": "https://beta.vncscan.io",
     "icon": "vinachain",
     "standard": "EIP3091"
   }]

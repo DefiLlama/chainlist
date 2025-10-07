@@ -8,6 +8,7 @@ export const data ={
   "faucets": [],
   "nativeCurrency": {
     "name": "Intelligent Decentralized Solution",
+
     "symbol": "IDS",
     "decimals": 18
   },
