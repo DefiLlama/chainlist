@@ -1,5 +1,5 @@
 export const data = {
-  "name": "VinaChain Mainnet",
+  "name": "VNC Mainnet",
   "chain": "VPC",
   "rpc": [
     "https://beta-rpc.vncscan.io",
