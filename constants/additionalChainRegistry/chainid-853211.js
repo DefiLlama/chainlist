@@ -1,6 +1,6 @@
 export const data = {
   "name": "HAQQ Testethic (L2 Sepolia Testnet)",
-  "chain": "HAQQ L2",
+  "chain": "ETH",
   "rpc": [
     "https://rpc.testethic.haqq.network",
     "wss://rpc.testethic.haqq.network"
