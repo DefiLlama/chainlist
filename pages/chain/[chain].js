@@ -60,7 +60,18 @@ export async function getStaticPaths() {
           chain: chain.name.toLowerCase(),
         },
       },
-    ])
+    ]).concat(overwrittenChains.map((chain) => [
+      {
+        params: {
+          chain: chain.chainId.toString(),
+        },
+      },
+      {
+        params: {
+          chain: chain.name.toLowerCase(),
+        },
+      },
+    ]))
     .flat();
 
   return { paths, fallback: false };
