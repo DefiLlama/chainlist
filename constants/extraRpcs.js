@@ -2255,32 +2255,6 @@ export const extraRpcs = {
       },
     ],
   },
-  44787: {
-    rpcs: [
-      "https://alfajores-forno.celo-testnet.org",
-      "wss://alfajores-forno.celo-testnet.org/ws",
-      {
-        url: "https://celo-alfajores.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://celo-alfajores.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  62320: {
-    rpcs: [
-      "https://baklava-forno.celo-testnet.org",
-      {
-        url: "https://rpc.ankr.com/celo_baklava_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-    ],
-  },
   11142220: {
     rpcs: [
       "https://forno.celo-sepolia.celo-testnet.org",
@@ -8593,6 +8567,127 @@ export const extraRpcs = {
       "https://somnia-json-rpc.stakely.io",
       "https://somnia-rpc.publicnode.com"
     ],
+  },
+   9745: {
+    rpcs: [
+      {
+        url: "https://plasma.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12123: {
+    rpcs: [
+      {
+        url: "https://hoodi.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  300: {
+    rpcs: [
+      {
+        url: "https://celo-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12124: {
+    rpcs: [
+      {
+        url: "https://eth-beacon-chain-hoodi.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12125: {
+    rpcs: [
+      {
+        url: "https://sonic-testnet-v2.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12126: {
+    rpcs: [
+      {
+        url: "https://hyperliquid.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12127: {
+    rpcs: [
+      {
+        url: "https://monad-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12128: {
+    rpcs: [
+      {
+        url: "https://hemi.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12129: {
+    rpcs: [
+      {
+        url: "https://hemi-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12130: {
+    rpcs: [
+      {
+        url: "https://gnosis-beacon-chain.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  12131: {
+    rpcs: [
+      {
+        url: "https://gnosis-chiado.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      }
+    ],
+    websiteDead: false,
+    rpcWorking: true,
   },
 };
 
