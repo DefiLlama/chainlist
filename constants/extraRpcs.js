@@ -1017,6 +1017,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://public-bsc-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
     ],
   },
   97: {
@@ -1280,6 +1285,11 @@ export const extraRpcs = {
         url: "https://fantom.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
+      },
+      {
+        url: "https://public-ftm-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
       },
     ],
   },
@@ -1723,6 +1733,11 @@ export const extraRpcs = {
         url: "https://arbitrum-one.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
+      },
+      {
+        url: "https://public-arb-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
       },
     ],
   },
@@ -2451,6 +2466,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://public-op-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
     ],
   },
   11155420: {
@@ -2721,6 +2741,11 @@ export const extraRpcs = {
         url: "https://gnosis.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
+      },      
+      {
+        url: "https://public-gno-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
       },
     ],
   },
@@ -8378,6 +8403,11 @@ export const extraRpcs = {
         url: "https://tron.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
+      },
+      {
+        url: "public-trx-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
       },
     ],
   },
