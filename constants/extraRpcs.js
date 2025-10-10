@@ -4142,6 +4142,7 @@ export const extraRpcs = {
   324: {
     rpcs: [
       "https://mainnet.era.zksync.io",
+      "https://li-fi-redirect.intustechno.workers.dev/rpc",
       {
         url: "https://go.getblock.io/f76c09905def4618a34946bf71851542",
         tracking: "limited",
