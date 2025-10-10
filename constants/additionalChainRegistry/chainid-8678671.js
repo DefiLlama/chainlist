@@ -1,8 +1,10 @@
 export const data = {
-  "name": "VinaChain Mainnet",
+  "name": "VNC Mainnet",
   "chain": "VPC",
   "rpc": [
-    "https://vncscan.io",
+    "https://beta-rpc.vncscan.io",
+    "https://beta-rpc1.vncscan.io",
+    "https://rpcus.vncscan.io",
   ],
   "faucets": [],
   "nativeCurrency": {
