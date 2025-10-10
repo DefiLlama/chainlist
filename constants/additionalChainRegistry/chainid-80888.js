@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Onyx",
   "chain": "onyx",
   "rpc": [
