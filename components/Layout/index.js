@@ -31,8 +31,8 @@ export default function Layout({ children, lang, chainName, setChainName }) {
   const t = useTranslations("Common", lang);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[40vw,_auto]">
-      <div className="dark:text-[#B3B3B3] text-black dark:bg-[#0D0D0D] bg-white relative h-full">
+    <div className="grid grid-cols-1 lg:grid-cols-[40vw,_auto] ">
+      <div className="dark:text-[#B3B3B3] text-black dark:bg-[#0D0D0D] bg-white relative h-full pt-6">
         <div className="p-5 sticky top-0 bottom-0 m-auto flex flex-col items-center gap-8 justify-center h-screen max-w-[480px] mx-auto">
           <figure className="lg:mr-auto">
             <Logo />
@@ -128,8 +128,18 @@ export default function Layout({ children, lang, chainName, setChainName }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+              fill="none"
+              stroke="#2F80ED"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
             </svg>
             <span className="text-base font-medium">API</span>
           </a>
