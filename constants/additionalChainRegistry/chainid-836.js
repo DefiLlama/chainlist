@@ -12,12 +12,12 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://www.thebinaryholdings.com/",
-  "shortName": "binary-mainnet",
+  "shortName": "binaryholdings-mainnet",
   "chainId": 836,
   "networkId": 836,
   "explorers": [
     {
-      "name": "BinaryHoldings Explorer",
+      "name": "Binary Explorer",
       "url": "https://explorer-binaryholdings.cogitus.io",
       "icon": "https://f005.backblazeb2.com/file/tracehawk-prod/logo/BinaryHoldings/Light.png",
       "standard": "EIP3091"
