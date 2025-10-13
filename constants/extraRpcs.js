@@ -8582,8 +8582,36 @@ export const extraRpcs = {
       "https://somnia-json-rpc.stakely.io",
       "https://somnia-rpc.publicnode.com"
     ],
+  },   
+  13766: {
+   rpcs: [
+     {
+       url: "https://services.tanssi-mainnet.network/tanssi-2003",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+     {
+       url: "wss://services.tanssi-mainnet.network/tanssi-2003",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+    ],
   },
-};
+  335700: {
+   rpcs: [
+     {
+       url: "https://services.tanssi-mainnet.network/tanssi-2004",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+     {
+       url: "wss://services.tanssi-mainnet.network/tanssi-2004",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+    ],
+  },
+};  
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
