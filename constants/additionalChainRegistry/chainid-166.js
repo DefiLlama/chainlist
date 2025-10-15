@@ -3,7 +3,7 @@ export const data = {
     "chain": "NOM",
     "icon": "https://raw.githubusercontent.com/omni-network/omni/refs/heads/main/docs/docs/public/nom/logo.png",
     "rpc": [
-      "https://mainnet.omni.network"
+      "https://mainnet.nomina.io"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -17,8 +17,8 @@ export const data = {
     "networkId": 166,
     "explorers": [
       {
-        "name": "Nomina Scan",
-        "url": "https://omniscan.network/",
+        "name": "Nomina Explorer",
+        "url": "https://nomscan.io/",
         "icon": "https://raw.githubusercontent.com/omni-network/omni/refs/heads/main/docs/docs/public/nom/logo.png",
         "standard": "EIP3091"
       }
