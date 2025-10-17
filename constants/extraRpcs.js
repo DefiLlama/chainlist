@@ -8249,7 +8249,7 @@ export const extraRpcs = {
       {
         url:  "https://mainnet.hedera.validationcloud.io/v1/<YOUR_API_KEY_HERE>",
         tracking: "none",
-        trackingDetails: privacyStatement.ol,
+        trackingDetails: privacyStatement.validationcloud,
       }
     ],
   },
