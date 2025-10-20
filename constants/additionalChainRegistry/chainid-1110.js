@@ -1,4 +1,4 @@
-{
+export const data ={
   "name": "GRX Mainnet",
   "chain": "GRX",
   "rpc": [
