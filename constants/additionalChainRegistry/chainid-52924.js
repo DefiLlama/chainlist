@@ -12,7 +12,7 @@
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://lazai.network",
-  "shortName": "lazai-mainnet",
+  "shortName": "lazai",
   "chainId": 52924,
   "networkId": 52924,
   "icon": "metis",
