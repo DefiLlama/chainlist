@@ -11,7 +11,7 @@
     "symbol": "METIS",
     "decimals": 18
   },
-  "features": [{ "name": "EIP1559" }],
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://lazai.network",
   "shortName": "lazai",
   "chainId": 52924,
