@@ -3,7 +3,7 @@
   "chain": "LazAI",
   "rpc": [
     "https://mainnet.lazai.network/",
-    "wss://mainnet.lazai.network/"
+    "wss://mainnet.lazai.network/",
   ],
   "faucets": [],
   "nativeCurrency": {
