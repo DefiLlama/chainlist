@@ -194,6 +194,7 @@ export default {
   "20402": "muuchain",
   "22776": "map protocol",
   "23294": "sapphire",
+  "28540": "rivool",
   "31612": "mezo",
   "32380": "paix",
   "32520": "bitgert",
