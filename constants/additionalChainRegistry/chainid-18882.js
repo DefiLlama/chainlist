@@ -14,7 +14,8 @@ export const data = {
   },
   "infoURL": "https://recordercoin.org",
   "shortName": "trecr",
-  "chainId": 18881,
+  "chainId": 18882
+,
   "networkId": 2233441,
   "explorers": [
     {
