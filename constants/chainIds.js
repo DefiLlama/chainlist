@@ -39,7 +39,7 @@ export default {
   "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",
-  "166": "omni",
+  "166": "nomina",
   "169": "manta",
   "173": "eni",
   "177": "hsk",
