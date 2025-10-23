@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "LazAI Mainnet",
   "chain": "LazAI",
   "rpc": [
