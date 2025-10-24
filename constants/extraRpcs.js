@@ -5196,7 +5196,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.grove,
       },
       {
-        url: "https://base-rpc.blxrbdn.com",
+        url: "https://base.rpc.blxrbdn.com",
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
