@@ -1,0 +1,27 @@
+export const data = 
+{
+  "name": "Scenium",
+  "chain": "Scenium",
+  "icon": "scenium",
+  "rpc": [
+    "https://services.tanssi-mainnet.network/tanssi-2004",
+    "wss://services.tanssi-mainnet.network/tanssi-2004"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "SCEN",
+    "symbol": "SCEN",
+    "decimals": 18
+  },
+  "infoURL": "https://www.scenium.io/",
+  "shortName": "scenium",
+  "chainId": 335700,
+  "networkId": 335700,
+  "explorers": [
+    {
+      "name": "Tanssi EVM Basic Explorer",
+      "url": "https://evmexplorer.tanssi-chains.network/?rpcUrl=https://services.tanssi-mainnet.network/tanssi-2004",
+      "standard": "none"
+    }
+  ]
+}
