@@ -2,18 +2,19 @@ import allExtraRpcs from "../constants/extraRpcs.js";
 import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch";
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
+import { isTestnet } from "./index.js";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const cache = {}
+const cache = {};
 export const fetchWithCache = async (url) => {
-  if(cache[url]){
-    return cache[url]
+  if (cache[url]) {
+    return cache[url];
   }
   const data = await fetch(url).then((res) => res.json());
-  cache[url] = data
-  return data
-}
+  cache[url] = data;
+  return data;
+};
 
 function removeEndingSlashObject(rpc) {
   if (typeof rpc === "string") {
@@ -100,10 +101,55 @@ export function arrayMove(array, fromIndex, toIndex) {
   return newArray;
 }
 
+function getBaseName(name) {
+  if (!name) return "";
+
+  return name
+    .replace(/\s+(Sepolia|Goerli|Testnet|Mumbai|Fuji|Amoy|Hoodi)(\s+.*)?$/i, "")
+    .replace(/\s+Test\s+Network$/i, "")
+    .replace(/\s+Mainnet$/i, "")
+    .replace(/\s+(One|C-Chain)$/i, "")
+    .trim();
+}
+
+function handleTestnets(activeChains) {
+  const parentChainTvls = {};
+  
+  // map testnets to their parent's TVL
+  activeChains.forEach((chain) => {
+    if (chain.tvl && !isTestnet(chain)) {
+      const baseName = getBaseName(chain.name);
+      if (!parentChainTvls[baseName] || parentChainTvls[baseName] < chain.tvl) {
+        parentChainTvls[baseName] = chain.tvl;
+      }
+    }
+  });
+
+  return activeChains.map((chain) => {
+    const isTestnetChain = isTestnet(chain);
+
+    if (isTestnetChain && !chain.tvl) {
+      const baseName = getBaseName(chain.name);
+      const parentTvl = parentChainTvls[baseName] || 0;
+
+      return {
+        ...chain,
+        isTestnet: true,
+        tvl: parentTvl,
+      };
+    }
+
+    return {
+      ...chain,
+      isTestnet: isTestnetChain,
+    };
+  });
+}
+
 export async function generateChainData() {
   const [chains, chainTvls] = await Promise.all([
     fetchWithCache("https://chainid.network/chains.json"),
-    fetchWithCache("https://api.llama.fi/chains")
+    fetchWithCache("https://api.llama.fi/chains"),
   ]);
 
   const overwrittenIds = overwrittenChains.reduce((acc, curr) => {
@@ -111,13 +157,23 @@ export async function generateChainData() {
     return acc;
   }, {});
 
-  const sortedChains = chains
+  const activeChains = chains
     .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
     .concat(overwrittenChains)
-    .map((chain) => populateChain(chain, chainTvls))
-    .sort((a, b) => {
-      return (b.tvl ?? 0) - (a.tvl ?? 0);
-    });
+    .map((chain) => populateChain(chain, chainTvls));
+
+  const chainsWithTestnetTvls = handleTestnets(activeChains);
+
+  const sortedChains = chainsWithTestnetTvls.sort((a, b) => {
+    // First: separate mainnets and testnets (mainnets first)
+    if (!a.isTestnet && b.isTestnet) return -1;
+    if (a.isTestnet && !b.isTestnet) return 1;
+
+    // Second: within same type (mainnet or testnet), sort by TVL (descending)
+    const aTvl = a.tvl ?? 0;
+    const bTvl = b.tvl ?? 0;
+    return bTvl - aTvl;
+  });
 
   return sortedChains;
 }
