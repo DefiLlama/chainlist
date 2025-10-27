@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import en from "../translations/en.json";
-import zh from "../translations/zh.json";
+import en from "../translations/en.json" with { type: "json" };
+import zh from "../translations/zh.json" with { type: "json" };
 
 export function formatCurrency(amount, decimals = 2) {
   if (!isNaN(amount)) {
