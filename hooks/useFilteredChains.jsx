@@ -1,23 +1,10 @@
 import React, { useMemo } from 'react';
 import { useRouter } from 'next/router';
-
-const TESTNET_KEYWORDS = ['test', 'devnet'];
+import { isTestnet } from '../utils';
 
 const createSearchMatcher = (searchTerm) => {
   const normalized = searchTerm.toLowerCase();
   return (value) => value?.toLowerCase().includes(normalized);
-};
-
-const isTestnet = (chain) => {
-  const lowercaseValues = [
-    chain.name,
-    chain.title,
-    chain.network
-  ].map((val) => val?.toLowerCase());
-
-  return TESTNET_KEYWORDS.some((keyword) => 
-    lowercaseValues.some((val) => val?.includes(keyword))
-  );
 };
 
 const matchesSearchTerm = (chain, matcher) => {

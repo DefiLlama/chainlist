@@ -94,3 +94,17 @@ export const notTranslation =
         return en[ns][key];
     }
   };
+
+const TESTNET_KEYWORDS = ['test', 'devnet', 'sepolia', 'goerli', 'mumbai', 'fuji', 'amoy', 'hoodi'];
+
+export const isTestnet = (chain) => {
+  const lowercaseValues = [
+    chain.name,
+    chain.title,
+    chain.network
+  ].map((val) => val?.toLowerCase());
+
+  return TESTNET_KEYWORDS.some((keyword) =>
+    lowercaseValues.some((val) => val?.includes(keyword))
+  );
+};
