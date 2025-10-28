@@ -99,6 +99,13 @@ echo ""
 node ./scripts/build-msg.js $BUILD_STATUS "$BUILD_TIME_STR" "$START_TIME" "$BUILD_ID" "$COMMIT_COMMENT" "$COMMIT_AUTHOR" "$COMMIT_HASH"
 
 ./scripts/post-export.sh
+POST_EXPORT_STATUS=$?
+
+# If post-export failed and build succeeded, update build status to reflect the failure
+if [ $POST_EXPORT_STATUS -ne 0 ] && [ $BUILD_STATUS -eq 0 ]; then
+  echo "⚠️  Post-export script failed with status $POST_EXPORT_STATUS"
+  BUILD_STATUS=$POST_EXPORT_STATUS
+fi
 
 # exit with the build status
 exit $BUILD_STATUS
