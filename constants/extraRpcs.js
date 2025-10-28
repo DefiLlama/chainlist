@@ -8731,6 +8731,61 @@ export const extraRpcs = {
     websiteDead: false,
     rpcWorking: true,
   },
+  98866: {
+    rpcs: [
+      {
+        url: "https://plume.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://plume.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  747474: {
+    rpcs: [
+      {
+        url: "https://katana.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://katana.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  737373: {
+    rpcs: [
+      {
+        url: "https://katana-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://katana-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  97477: {
+    rpcs: [
+      {
+        url: "https://doma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://doma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
