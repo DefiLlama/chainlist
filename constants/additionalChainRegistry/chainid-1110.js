@@ -2,7 +2,7 @@ export const data ={
   "name": "GRX Mainnet",
   "chain": "GRX",
   "rpc": [
-    "https://rpc.grxchain.io",
+    "https://rpc.grxchain.io"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -14,12 +14,12 @@ export const data ={
   "infoURL": "https://docs.grxchain.io",
   "shortName": "grx",
   "chainId": 1110,
-  "networkId": 1,
-  "icon": "https://raw.githubusercontent.com/GroveXchange/assets/main/grx-icon.png",
+  "networkId": 1110,
+  "icon": "grx",
   "explorers": [{
     "name": "grxscan",
     "url": "https://grxscan.io",
-    "icon": "https://raw.githubusercontent.com/GroveXchange/assets/main/grx-icon.png",
+    "icon": "grx",
     "standard": "EIP3091"
   }]
 }
