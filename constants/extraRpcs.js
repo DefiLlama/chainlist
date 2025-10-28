@@ -8804,7 +8804,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
-};
+}}
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
