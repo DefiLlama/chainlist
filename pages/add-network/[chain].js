@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
-import { populateChain, fetcher } from "../../utils/fetch";
+import { populateChain, fetchWithCache } from "../../utils/fetch";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
@@ -12,8 +12,8 @@ import { overwrittenChains } from "../../constants/additionalChainRegistry/list"
 
 export async function getStaticProps({ params }) {
   const [chains, chainTvls] = await Promise.all([
-    fetcher("https://chainid.network/chains.json"),
-    fetcher("https://api.llama.fi/chains")
+    fetchWithCache("https://chainid.network/chains.json"),
+    fetchWithCache("https://api.llama.fi/chains")
   ]);
 
   const chain =
@@ -47,7 +47,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const chains = await fetcher("https://chainid.network/chains.json");
+  const chains = await fetchWithCache("https://chainid.network/chains.json");
 
   const paths = chains
     .map((chain) => [
