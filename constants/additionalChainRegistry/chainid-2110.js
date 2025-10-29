@@ -5,11 +5,16 @@ export const data = {
   faucets: [],
   nativeCurrency: {
     name: "Parallax",
-    symbol: "PRLX",
+    symbol: "LAX",
     decimals: 18,
   },
-  infoURL: "https://github.com/microstack-tech/parallax-whitepaper",
+  icon: "parallaxchain",
+  infoURL: "https://parallaxchain.org",
   shortName: "parallax",
   chainId: 2110,
   networkId: 2110,
+  explorers: [{
+    name: "Parallax Blockscout",
+    url: "https://explorer.parallaxchain.org",
+  }]
 };
