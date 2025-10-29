@@ -113,6 +113,7 @@ export default {
   "1559": "tenet",
   "1625": "gravity",
   "1729": "reya network",
+  "1783": "kiichain",
   "1818": "cube",
   "1868": "soneium",
   "1890": "lightlink",
