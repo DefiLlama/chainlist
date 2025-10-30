@@ -1,6 +1,9 @@
 export const data = {
   name: "Parallax",
   chain: "PARALLAX",
+  rpc: [
+    "http://rpc.parallaxchain.org:8545",
+  ],
   features: [{ name: "EIP155" }],
   faucets: [],
   nativeCurrency: {
