@@ -531,11 +531,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Stakely,
       },
       {
-        url: "https://rpc.poolz.finance/eth",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
-      {
         url: "https://eth.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
@@ -1190,11 +1185,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       },
       {
-        url: "https://rpc.poolz.finance/avalanche",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
-      {
         url: "https://avax.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
@@ -1420,11 +1410,6 @@ export const extraRpcs = {
         url: "https://polygon.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/polygon",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://poly.rpc.grove.city/v1/01fdb492",
@@ -1725,11 +1710,6 @@ export const extraRpcs = {
         url: "https://arb-one-mainnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://rpc.poolz.finance/arbitrum",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://arbitrum-one.rpc.grove.city/v1/01fdb492",
@@ -2933,11 +2913,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      {
-        url: "https://rpc.poolz.finance/telos",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
     ],
   },
   41: {
@@ -3038,11 +3013,6 @@ export const extraRpcs = {
         url: "wss://moonbeam.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/moonbeam",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://node.histori.xyz/moonbeam-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
@@ -5986,11 +5956,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
-      {
-        url: "https://rpc.poolz.finance/linea",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
     ],
   },
   2442: {
@@ -7526,11 +7491,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      {
-        url: "https://rpc.poolz.finance/unichain",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
     ],
   },
   1301: {
@@ -8497,11 +8457,6 @@ export const extraRpcs = {
     rpcs: [
       "https://coti-rpc.Hyperflow.finance",
       "wss://coti-rpc.Hyperflow.finance",
-      {
-        url: "https://rpc.poolz.finance/coti",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
     ],
   },
   7082400: {
