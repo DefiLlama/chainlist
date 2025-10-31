@@ -540,6 +540,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://api-ethereum-mainnet-reth.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   2: {
@@ -1024,6 +1029,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.fastnode,
       },
+      {
+        url: "https://api-bsc-mainnet-full.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   97: {
@@ -1430,6 +1440,11 @@ export const extraRpcs = {
         url: "https://poly.rpc.grove.city/v1/01fdb492",
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
+      },
+      {
+        url: "https://api-polygon-mainnet-full.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "yes",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -2124,6 +2139,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://api-opbnb-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   1666700000: {
@@ -2474,6 +2494,11 @@ export const extraRpcs = {
         url: "https://public-op-mainnet.fastnode.io",
         tracking: "none",
         trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://api-optimism-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -5991,6 +6016,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.poolz,
       },
+      {
+        url: "https://api-linea-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   2442: {
@@ -7530,6 +7560,11 @@ export const extraRpcs = {
         url: "https://rpc.poolz.finance/unichain",
         tracking: "limited",
         trackingDetails: privacyStatement.poolz,
+      },
+      {
+        url: "https://api-unichain-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
