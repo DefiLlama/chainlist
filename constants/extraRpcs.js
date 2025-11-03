@@ -1993,6 +1993,7 @@ export const extraRpcs = {
       "https://rpc.blast.io",
       "https://blast.din.dev/rpc",
       "https://blastl2-mainnet.public.blastapi.io",
+      "https://li-fi-blast.intustechno.workers.dev/rpc",
       {
         url: "https://rpc.ankr.com/blast",
         tracking: "limited",
@@ -2240,6 +2241,7 @@ export const extraRpcs = {
   42220: {
     rpcs: [
       "https://forno.celo.org",
+      "https://rpc.celocolombia.org",
       {
         url: "https://rpc.ankr.com/celo",
         tracking: "limited",
@@ -4213,6 +4215,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://xlayer.rpc.blxrbdn.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
+      {
+        url: "https://okx-xlayer.rpc.blxrbdn.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
+      {
+        url: "https://flap-xlayer.rpc.blxrbdn.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
     ],
   },
   195: {
@@ -5078,6 +5095,7 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.base.org",
       "https://developer-access-mainnet.base.org",
+      "https://li-fi-base.intustechno.workers.dev/rpc",
       {
         url: "https://base-mainnet.diamondswap.org/rpc",
         tracking: "limited",
@@ -5196,7 +5214,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.grove,
       },
       {
-        url: "https://base-rpc.blxrbdn.com",
+        url: "https://base.rpc.blxrbdn.com",
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
@@ -8471,7 +8489,8 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc1-mainnet.icbnetwork.info",
       "https://rpc2-mainnet.icbnetwork.info",
-      "https://main1.rpc-icb-network.io/",
+      "https://main1.rpc-icb-network.io",
+      "https://main2.rpc-icb-network.io",
     ],
   },
   2632500: {
@@ -8730,6 +8749,76 @@ export const extraRpcs = {
     ],
     websiteDead: false,
     rpcWorking: true,
+  },
+  98866: {
+    rpcs: [
+      {
+        url: "https://plume.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://plume.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  747474: {
+    rpcs: [
+      {
+        url: "https://katana.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://katana.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  737373: {
+    rpcs: [
+      {
+        url: "https://katana-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://katana-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  97477: {
+    rpcs: [
+      {
+        url: "https://doma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://doma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  5042002: {
+    rpcs: [
+      {
+        url: "https://arc-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://arc-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
 };
 
