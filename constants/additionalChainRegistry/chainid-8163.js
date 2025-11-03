@@ -9,7 +9,7 @@ export const data = {
     decimals: 18,
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
-  infoURL: "https://svmscan.blazeapps.org",
+  infoURL: "https://steemvmscan.com",
   shortName: "svm-testnet",
   chainId: 8163,
   networkId: 8163,
