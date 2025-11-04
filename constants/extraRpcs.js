@@ -8625,6 +8625,20 @@ export const extraRpcs = {
      },
     ],
   },
+  23232: {
+   rpcs: [
+     {
+       url: "https://services.tanssi-mainnet.network/tanssi-2006",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+     {
+       url: "wss://services.tanssi-mainnet.network/tanssi-2006",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+    ],
+  },
 };  
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);

@@ -193,6 +193,7 @@ export default {
   "18888": "titan",
   "20402": "muuchain",
   "22776": "map protocol",
+  "23232": "gotas",
   "23294": "sapphire",
   "28540": "rivool",
   "31612": "mezo",
