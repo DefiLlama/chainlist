@@ -9,7 +9,7 @@ export const data = {
     decimals: 18,
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
-  infoURL: "https://steemvmscan.com",
+  infoURL: "https://steemit.com/steem-dev/@blaze.apps/general-introduction-to-the-steem-virtual-machine-svm",
   shortName: "svm-testnet",
   chainId: 8163,
   networkId: 8163,
@@ -17,7 +17,7 @@ export const data = {
   explorers: [
     {
       name: "SVM Scan",
-      url: "https://svmscan.blazeapps.org",
+      url: "https://steemvmscan.com",
       standard: "EIP3091",
     },
   ],
