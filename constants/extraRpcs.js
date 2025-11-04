@@ -204,6 +204,7 @@ const privacyStatement = {
   PulseChainRpc:
     "We do not store or track any user data other than the data publicly available on-chain.https://rpc.pulsechainrpc.com/privacy",
   MBF: "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  TF: "TF does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
   Stakely:
     "References are processed in hashed form exclusively for load balancing purposes and remain strictly volatile. No personal data is collected, and IP addresses are never associated with wallets or individual requests. https://stakely.io/policies/privacy-policy#rpc-load-balancer",
   fastnode:
@@ -4420,6 +4421,20 @@ export const extraRpcs = {
       },
     ],
   },
+  3230: {
+    rpcs: [
+      {
+        url: "https://services.tanssi-mainnet.network/tanssi-2002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.TF,
+      },
+      {
+        url: "wss://services.tanssi-mainnet.network/tanssi-2002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.TF,
+      },
+    ],
+  },
   3636: {
     rpcs: [
       {
@@ -8627,6 +8642,48 @@ export const extraRpcs = {
       "https://rpc.somnia.network",
       "https://somnia-json-rpc.stakely.io",
       "https://somnia-rpc.publicnode.com"
+    ],
+  },   
+  13766: {
+   rpcs: [
+     {
+       url: "https://services.tanssi-mainnet.network/tanssi-2003",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+     {
+       url: "wss://services.tanssi-mainnet.network/tanssi-2003",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+    ],
+  },
+  335700: {
+   rpcs: [
+     {
+       url: "https://services.tanssi-mainnet.network/tanssi-2004",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+     {
+       url: "wss://services.tanssi-mainnet.network/tanssi-2004",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+    ],
+  },
+  28540: {
+   rpcs: [
+     {
+       url: "https://services.tanssi-mainnet.network/tanssi-2005",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
+     {
+       url: "wss://services.tanssi-mainnet.network/tanssi-2005",
+       tracking: "limited",
+       trackingDetails: privacyStatement.TF,
+     },
     ],
   },
    9745: {
