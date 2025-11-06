@@ -78,16 +78,20 @@ fi
 # find the parent directory name of the file _buildManifest.js within the .next/static directory
 BUILD_ID=$(find .next -name _buildManifest.js | sed 's/\/_buildManifest.js//g' | sed 's/\.next\/static\///g')
 
-./scripts/post-export.sh
-POST_EXPORT_STATUS=$?
+# Only run post-export if the build succeeded
+if [ $BUILD_STATUS -eq 0 ]; then
+  ./scripts/post-export.sh
+  POST_EXPORT_STATUS=$?
 
-# If post-export failed, update build status to reflect the failure
-if [ $POST_EXPORT_STATUS -ne 0 ]; then
-  echo ""
-  echo "⚠️  Post-export script failed with status $POST_EXPORT_STATUS"
-  if [ $BUILD_STATUS -eq 0 ]; then
-    BUILD_STATUS=$POST_EXPORT_STATUS
+  # If post-export failed, always exit with 1
+  if [ $POST_EXPORT_STATUS -ne 0 ]; then
+    echo ""
+    echo "⚠️  Post-export script failed with status $POST_EXPORT_STATUS"
+    BUILD_STATUS=1
   fi
+else
+  echo ""
+  echo "⚠️  Build failed, skipping post-export script"
 fi
 
 echo ""
