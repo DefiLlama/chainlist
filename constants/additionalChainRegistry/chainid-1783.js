@@ -1,7 +1,7 @@
 export const data = {
   name: "Kii Chain",
   chain: "KII",
-  rpc: ["TODO"],
+  rpc: ["https://json-rpc.kiivalidator.com"],
   nativeCurrency: {
     name: "Kii",
     symbol: "KII",
