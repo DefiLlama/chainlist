@@ -12,7 +12,7 @@ export const data = {
     "symbol": "SYND",
     "decimals": 18
   },
-  "rpc": ["https://rpc.commons.syndicate.io"],
+  "rpc": ["https://commons.rpc.syndicate.io"],
   "faucets": [],
   "explorers": [
     {
