@@ -1,19 +1,19 @@
 export const data = {
-    "name": "ETHW-mainnet",
-    "chain": "ETHW",
-    "icon": "ethpow",
-    "rpc": [
-      "https://mainnet.ethereumpow.org/"
+    "name": "Calixto super:mainnet",
+    "chain": "CLX",
+    "icon": "CLX",
+    "rpc": 0x3A583Ac815BF3aEE1f0f63359e97e4Be400f5CCe
+      "https://mainnet.ethereum.org/"
     ],
-    "features": [{ "name": "EIP155" }],
-    "faucets": [],
+    "features": [{ "name": "ERC20" }],
+    "Airdrop": [],
     "nativeCurrency": {
-      "name": "EthereumPoW",
-      "symbol": "ETHW",
+      "name": "Ethereum",
+      "symbol": "CLX",
       "decimals": 18
     },
     "infoURL": "https://ethereumpow.org/",
-    "shortName": "ethw",
+    "shortName": "clx",
     "chainId": 10001,
     "networkId": 10001,
     "explorers": [
