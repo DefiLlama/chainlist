@@ -8555,6 +8555,7 @@ export const extraRpcs = {
   },
   43111: {
     rpcs: [
+      "https://rpc.hemi.network/rpc",
       {
         url: "https://hemi.drpc.org",
         tracking: "none",
