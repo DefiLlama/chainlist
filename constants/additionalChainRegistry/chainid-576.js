@@ -1,0 +1,31 @@
+export const data = {
+    "name": "Mawari Testnet",
+    "chain": "MAWARI",
+    "rpc": [
+      "https://rpc.testnet.mawari.net/http",
+      "wss://rpc.testnet.mawari.net/ws"
+    ],
+    "faucets": [
+      "https://mawari-testnet.hub.caldera.xyz/"
+    ],
+    "nativeCurrency": {
+      "name": "Mawari Test Token",
+      "symbol": "MAWARI",
+      "decimals": 18
+    },
+    "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+    "infoURL": "https://mawari-testnet.hub.caldera.xyz/",
+    "shortName": "mawari-testnet",
+    "chainId": 576,
+    "networkId": 576,
+    "icon": " https://ipfs.io/ipfs/bafkreic2gjvlpntux2hacsgesikyurkdbwbsp3yg7zj5mturvihgdafb5i",
+    "explorers": [
+      {
+        "name": "Mawari Testnet Explorer",
+        "url": "https://explorer.testnet.mawari.net/",
+        "icon": " https://ipfs.io/ipfs/bafkreic2gjvlpntux2hacsgesikyurkdbwbsp3yg7zj5mturvihgdafb5i",
+        "standard": "EIP3091"
+      }
+    ],
+    "testnet": true
+  }
