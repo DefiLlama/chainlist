@@ -3682,24 +3682,7 @@ export const extraRpcs = {
   },
   61: {
     rpcs: [
-      "https://etc.mytokenpocket.vip",
-      "https://rpc.etcinscribe.com",
       "https://etc.etcdesktop.com",
-      {
-        url: "https://besu-at.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://geth-at.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://services.tokenview.io/vipapi/nodeservice/etc?apikey=qVHq2o6jpaakcw3lRstl",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tokenview,
-      },
       {
         url: "https://etc.rivet.link",
         tracking: "none",
