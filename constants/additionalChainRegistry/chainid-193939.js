@@ -1,4 +1,4 @@
-export default {
+export const data ={
   "name": "R0AR Chain",
   "chain": "R0AR",
   "rpc": [
