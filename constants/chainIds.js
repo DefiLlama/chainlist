@@ -83,6 +83,7 @@ export default {
   "529": "firechain",
   "534": "candle",
   "570": "rollux",
+  "576": "mawari",
   "592": "astar",
   "648": "endurance",
   "690": "redstone",
