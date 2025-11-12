@@ -1,4 +1,4 @@
-{
+export const data ={
   "name": "AMR",
   "chain": "AMR",
   "rpc": [
