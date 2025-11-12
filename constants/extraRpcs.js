@@ -206,6 +206,7 @@ const privacyStatement = {
   PulseChainRpc:
     "We do not store or track any user data other than the data publicly available on-chain.https://rpc.pulsechainrpc.com/privacy",
   MBF: "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  DHF: "DHF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
   Stakely:
     "References are processed in hashed form exclusively for load balancing purposes and remain strictly volatile. No personal data is collected, and IP addresses are never associated with wallets or individual requests. https://stakely.io/policies/privacy-policy#rpc-load-balancer",
   fastnode:
@@ -8555,6 +8556,7 @@ export const extraRpcs = {
   },
   43111: {
     rpcs: [
+      "https://rpc.hemi.network/rpc",
       {
         url: "https://hemi.drpc.org",
         tracking: "none",
@@ -8854,6 +8856,34 @@ export const extraRpcs = {
         url: "wss://arc-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  55930: {
+    rpcs: [
+      {
+        url: "https://services.datahaven-mainnet.network/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+      {
+        url: "wss://services.datahaven-mainnet.network/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+    ],
+  },
+  55931: {
+    rpcs: [
+      {
+        url: "https://services.datahaven-testnet.network/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+      {
+        url: "wss://services.datahaven-testnet.network/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
       },
     ],
   },
