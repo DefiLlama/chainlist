@@ -219,6 +219,8 @@ export default {
   "53935": "dfk",
   "55244": "superposition",
   "55555": "reichain",
+  "55930": "datahaven",
+  "55931": "datahaven-testnet",
   "56288": "boba_bnb",
   "57073": "ink",
   "59144": "linea",
