@@ -2265,6 +2265,7 @@ export const extraRpcs = {
     rpcs: [
       "https://forno.celo.org",
       "https://rpc.celocolombia.org",
+      "https://rpc.celo-community.org",
       {
         url: "https://rpc.ankr.com/celo",
         tracking: "limited",
