@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import en from "../translations/en.json";
-import zh from "../translations/zh.json";
+import en from "../translations/en.json" with { type: "json" };
+import zh from "../translations/zh.json" with { type: "json" };
 
 export function formatCurrency(amount, decimals = 2) {
   if (!isNaN(amount)) {
@@ -94,3 +94,17 @@ export const notTranslation =
         return en[ns][key];
     }
   };
+
+const TESTNET_KEYWORDS = ['test', 'devnet', 'sepolia', 'goerli', 'mumbai', 'fuji', 'amoy', 'hoodi'];
+
+export const isTestnet = (chain) => {
+  const lowercaseValues = [
+    chain.name,
+    chain.title,
+    chain.network
+  ].map((val) => val?.toLowerCase());
+
+  return TESTNET_KEYWORDS.some((keyword) =>
+    lowercaseValues.some((val) => val?.includes(keyword))
+  );
+};
