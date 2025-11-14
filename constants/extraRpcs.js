@@ -2295,6 +2295,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      "https://rpc.celo-community.org",
     ],
   },
   11142220: {
