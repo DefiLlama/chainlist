@@ -1,9 +1,10 @@
-export default {
+export const data ={
   "chainId": 1199,
   "name": "BMC Chain",
   "shortName": "bmc",
   "chain": "BMC",
   "networkId": 1199,
+  "chainId": 1199,
   "infoURL": "https://bmcscan.io",
   "rpc": ["https://mainnet-rpc.bmcscan.io"],
   "nativeCurrency": {
