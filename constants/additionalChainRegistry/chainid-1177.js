@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Noreum Mainnet",
   "chain": "NOR",
   "rpc": [
