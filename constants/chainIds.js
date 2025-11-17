@@ -141,6 +141,7 @@ export default {
   "3637": "botanix",
   "3721": "xone chain",
   "3776": "astar zkevm",
+  "4114": "citrea",
   "4158": "crossfi",
   "4337": "beam",
   "4442": "denergy testnet",
