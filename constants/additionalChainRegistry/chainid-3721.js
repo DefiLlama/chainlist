@@ -3,6 +3,10 @@ export const data = {
   "chain": "XONE MAINNET",
   "rpc": [
     "https://rpc.xone.org",
+    "https://rpc-node-1.xone.org",
+    "https://rpc-node-2.xone.org",
+    "https://rpc-node-3.xone.org",
+    "https://rpc-node-4.xone.org",
     "wss://rpc.xone.org"
   ],
   "faucets": ["https://faucet.xone.org/"],
