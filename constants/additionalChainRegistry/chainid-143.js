@@ -13,7 +13,6 @@ export const data = {
   "shortName": "mon",
   "chainId": 143,
   "networkId": 143,
-  "icon": "monad",
   "explorers": [
     {
       "name": "Monvision",
