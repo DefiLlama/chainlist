@@ -1,0 +1,29 @@
+export const data = {
+  "name": "Monad",
+  "chain": "MON",
+  "icon": "monad",
+  "rpc": ["https://rpc.monad.xyz"],
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "nativeCurrency": {
+    "name": "Monad",
+    "symbol": "MON",
+    "decimals": 18
+  },
+  "infoURL": "https://monad.xyz",
+  "shortName": "mon",
+  "chainId": 143,
+  "networkId": 143,
+  "icon": "monad",
+  "explorers": [
+    {
+      "name": "Monvision",
+      "url": "https://mainnet-beta.monvision.io",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "Monadscan",
+      "url": "https://monadscan.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
