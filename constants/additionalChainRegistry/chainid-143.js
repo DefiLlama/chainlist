@@ -15,8 +15,8 @@ export const data = {
   "networkId": 143,
   "explorers": [
     {
-      "name": "Monvision",
-      "url": "https://mainnet-beta.monvision.io",
+      "name": "Monad Vision",
+      "url": "https://monadvision.com",
       "standard": "EIP3091"
     },
     {
