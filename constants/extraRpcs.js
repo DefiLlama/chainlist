@@ -8875,20 +8875,6 @@ export const extraRpcs = {
       },
     ],
   },
-  109: {
-    rpcs: [
-      {
-        url: "https://shibarium.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.dRPC,
-      },
-      {
-        url: "wss://shibarium.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.dRPC,
-      },
-    ],
-  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
