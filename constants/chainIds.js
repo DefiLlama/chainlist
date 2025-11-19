@@ -30,7 +30,6 @@ export default {
   "100": "xdai",
   "106": "velas",
   "108": "thundercore",
-  "109": "shibarium",
   "119": "enuls",
   "122": "fuse",
   "128": "heco",
