@@ -2,7 +2,13 @@ export const data = {
   "name": "Monad",
   "chain": "MON",
   "icon": "monad",
-  "rpc": ["https://rpc.monad.xyz"],
+  "rpc": [
+    "https://rpc.monad.xyz",
+    "https://rpc1.monad.xyz",
+    "https://rpc2.monad.xyz",
+    "https://rpc3.monad.xyz",
+    "https://rpc4.monad.xyz",
+  ],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "nativeCurrency": {
     "name": "Monad",
@@ -10,7 +16,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://monad.xyz",
-  "shortName": "mon",
+  "shortName": "monad",
   "chainId": 143,
   "networkId": 143,
   "explorers": [
