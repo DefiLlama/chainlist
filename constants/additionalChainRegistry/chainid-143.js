@@ -16,7 +16,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://monad.xyz",
-  "shortName": "mon",
+  "shortName": "monad",
   "chainId": 143,
   "networkId": 143,
   "explorers": [
