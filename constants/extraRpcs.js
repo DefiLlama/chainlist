@@ -218,7 +218,8 @@ const privacyStatement = {
   grove:
     "We store minimal PII related to your login information. We will retain Users’ PII (including Sensitive PII, where applicable) while they maintain an account with us or to the extent necessary to provide the services through the Service. Thereafter, we will keep PII for as long as reasonably necessary. See our Privacy Policy for more details: https://grove.city/privacy",
   Chainlink:
-    "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy."
+    "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy.",
+  celoCommunity: "Celo Community RPC is a stateless Cloudflare Worker gateway that forwards requests to validator-operated nodes. It does not add application-level analytics; only standard infrastructure logs (IP, headers, timestamps, error rates) may be kept for reliability and abuse prevention. See https://celo.org/privacy-policy for broader Celo data handling.",
 };
 
 export const extraRpcs = {
@@ -2294,6 +2295,11 @@ export const extraRpcs = {
         url: "https://celo.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://rpc.celo-community.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.celoCommunity,
       },
     ],
   },
