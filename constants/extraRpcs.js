@@ -7932,6 +7932,7 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      "https://rpc-testnet.monadinfra.com",
     ],
   },
   80094: {
