@@ -8890,6 +8890,11 @@ export const extraRpcs = {
       },
     ],
   },
+  766: {
+    rpcs: [
+      "https://evm-rpc-ql1.foxxone.one"
+    ]
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
