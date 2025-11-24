@@ -13,7 +13,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "",
-  "shortName": "tia",
+  "shortName": "edent",
   "chainId": 3735928814,
   "networkId": 3735928814,
   "icon": "celestia",
