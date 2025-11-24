@@ -8315,7 +8315,10 @@ export const extraRpcs = {
     ],
   },
   295: {
-    rpcs: ["https://hedera.linkpool.pro"],
+    rpcs: ["https://hedera.linkpool.pro", "https://295.rpc.thirdweb.com"],
+  },
+  296: {
+    rpcs: ["https://296.rpc.thirdweb.com"],
   },
   11124: {
     rpcs: [
