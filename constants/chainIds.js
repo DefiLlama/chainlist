@@ -35,6 +35,7 @@ export default {
   "128": "heco",
   "130": "unichain",
   "137": "polygon",
+  "143": "hbd chain",
   "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",
