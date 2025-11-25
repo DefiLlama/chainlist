@@ -119,13 +119,21 @@ export async function generateChainData() {
       return (b.tvl ?? 0) - (a.tvl ?? 0);
     });
 
-  // 特殊处理：将链ID为19478的链强制排在第三位
+  // 特殊处理：将链ID为19478的链强制插入到BNB链后面
   const specialChainIndex = sortedChains.findIndex(chain => chain.chainId === "19478");
-  if (specialChainIndex !== -1 && specialChainIndex !== 2) {
-    // 从当前位置移除
-    const [specialChain] = sortedChains.splice(specialChainIndex, 1);
-    // 插入到第三位（索引为2）
-    sortedChains.splice(2, 0, specialChain);
+  const bnbChainIndex = sortedChains.findIndex(chain => chain.chainId === "56");
+  
+  if (specialChainIndex !== -1 && bnbChainIndex !== -1) {
+    // 计算应该插入的位置（BNB链后面）
+    const insertPosition = bnbChainIndex + 1;
+    
+    // 如果特殊链已经在正确位置，则不需要移动
+    if (specialChainIndex !== insertPosition) {
+      // 从当前位置移除
+      const [specialChain] = sortedChains.splice(specialChainIndex, 1);
+      // 插入到BNB链后面
+      sortedChains.splice(insertPosition, 0, specialChain);
+    }
   }
 
   return sortedChains;
