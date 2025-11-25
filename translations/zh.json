@@ -21,6 +21,9 @@
     "add-to-trust": "添加到Trust Wallet",
     "contact-us": "联系我们",
     "no-privacy-info": "没有隐私信息",
-    "your-ad-here": "您的广告在这里"
+    "your-ad-here": "您的广告在这里",
+    "custom-chain-header": "需要定制区块链服务？",
+    "custom-chain-description": "Trustivon 提供专业的区块链定制开发服务，满足您的特定业务需求。",
+    "contact-for-customization": "联系我们咨询定制方案"
   }
 }

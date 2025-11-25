@@ -21,6 +21,9 @@
     "no-privacy-info": "Gizlilik bilgisi yok",
     "toggle-theme": "Temayı Değiştir",
     "your-ad-here": "Reklamınız burada görünür",
-    "contact-us": "Bize ulaşın"
+    "contact-us": "Bize ulaşın",
+    "custom-chain-header": "Özel blockchain hizmetlerine mi ihtiyacınız var?",
+    "custom-chain-description": "Trustivon, özel iş ihtiyaçlarınızı karşılamak için profesyonel blockchain özelleştirme hizmetleri sunar.",
+    "contact-for-customization": "Özelleştirme ihtiyaçlarınız için bizimle iletişime geçin"
   }
 }

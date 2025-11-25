@@ -39,6 +39,34 @@ export default function Layout({ children, lang, chainName, setChainName }) {
             <figcaption className="font-bold text-2xl">{t("help-info")}</figcaption>
           </figure>
 
+          {/* Trustivon 产品广告 */}
+          <div className="w-full p-4 rounded-lg bg-[#2F80ED] bg-opacity-10 border border-[#2F80ED] border-opacity-20 mt-4">
+            <h3 className="font-bold text-lg text-[#2F80ED] mb-2">{t("custom-chain-header")}</h3>
+            <p className="text-sm mb-3">{t("custom-chain-description")}</p>
+            <a 
+              href="https://trustivon.com/"
+              className="inline-flex items-center text-sm font-medium text-[#2F80ED] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("contact-for-customization")}
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="w-4 h-4 ml-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                />
+              </svg>
+            </a>
+          </div>
+
           <h1 className="font-medium text-base">{t("description")}</h1>
 
           <div className="flex flex-col gap-4 w-full">
