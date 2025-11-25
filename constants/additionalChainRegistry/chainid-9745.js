@@ -1,7 +1,7 @@
 export const data = {
   "name": "Plasma Mainnet",
   "chain": "Plasma",
-  "rpc": ["https://rpc.plasma.to"],
+  "rpc": ["https://rpc.plasma.to", "https://edge.goldsky.com/standard/evm/9745?secret=public"],
   "faucets": [],
   "nativeCurrency": {
     "name": "Plasma",

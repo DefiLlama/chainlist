@@ -4,7 +4,8 @@ export const data = {
   "chain": "Ethereal",
   "rpc": [
     "https://rpc.etherealtest.net",
-    "https://rpc-ethereal-testnet-0.t.conduit.xyz"
+    "https://rpc-ethereal-testnet-0.t.conduit.xyz",
+      "https://edge.goldsky.com/standard/evm/13374202?secret=public"
   ],
   "icon": "etherealtestnet",
   "faucets": [],

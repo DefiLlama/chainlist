@@ -218,7 +218,9 @@ const privacyStatement = {
   grove:
     "We store minimal PII related to your login information. We will retain Users’ PII (including Sensitive PII, where applicable) while they maintain an account with us or to the extent necessary to provide the services through the Service. Thereafter, we will keep PII for as long as reasonably necessary. See our Privacy Policy for more details: https://grove.city/privacy",
   Chainlink:
-    "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy."
+    "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy.",
+  goldsky:
+    "For service delivery purposes, we may temporarily record IP addresses. For more information, visit https://doc.golds.ky/edge"
 };
 
 export const extraRpcs = {
@@ -548,6 +550,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      },
     ],
   },
   2: {
@@ -680,7 +687,13 @@ export const extraRpcs = {
     rpcs: ["https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
   },
   195: {
-    rpcs: ["https://xlayertestrpc.okx.com", "https://testrpc.xlayer.tech"],
+    rpcs: ["https://xlayertestrpc.okx.com", "https://testrpc.xlayer.tech",
+      {
+        url: "https://edge.goldsky.com/standard/evm/195?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   4002: {
     rpcs: [
@@ -789,6 +802,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/43113?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   80002: {
@@ -849,6 +867,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/80002?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   56: {
@@ -1037,6 +1060,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/56?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   97: {
@@ -1102,6 +1130,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/97?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   900000: {
@@ -1212,6 +1245,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/43114?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   250: {
@@ -1306,6 +1344,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.fastnode,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/250?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   137: {
@@ -1449,6 +1492,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/137?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   25: {
@@ -1498,6 +1546,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/25?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   338: {
@@ -1542,6 +1595,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/8822?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1075: {
@@ -1759,6 +1817,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.fastnode,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/42161?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   421613: {
@@ -1838,6 +1901,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/42170?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   421614: {
@@ -1887,6 +1955,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/421614?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   8217: {
@@ -1947,6 +2020,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/8217?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1666600000: {
@@ -2004,6 +2082,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/168587773?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   81457: {
@@ -2083,6 +2166,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/81457?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   5611: {
@@ -2092,6 +2180,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/5611?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   204: {
@@ -2147,6 +2240,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/204?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1666700000: {
@@ -2295,6 +2393,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/42220?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   11142220: {
@@ -2329,6 +2432,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/480?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   4801: {
@@ -2347,6 +2455,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/4801?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   10: {
@@ -2503,6 +2616,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/10?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   11155420: {
@@ -2548,6 +2666,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/11155420?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2330: {
@@ -2589,6 +2712,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/4200?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   420: {
@@ -2670,6 +2798,11 @@ export const extraRpcs = {
       },
       "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm",
       "https://metis.rpc.hypersync.xyz/",
+      {
+        url: "https://edge.goldsky.com/standard/evm/1088?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   59902: {
@@ -2779,6 +2912,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.fastnode,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/100?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   10200: {
@@ -2809,6 +2947,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/10200?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1923: {
@@ -2818,6 +2961,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1923?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1924: {
@@ -2837,6 +2985,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1924?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1625: {
@@ -2846,6 +2999,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1625?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1231: {
@@ -2923,6 +3081,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1285?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   361: {
@@ -2936,6 +3099,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/42262?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   40: {
@@ -2966,6 +3134,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.poolz,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/40?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   41: {
@@ -3082,10 +3255,21 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1284?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   31: {
-    rpcs: ["https://public-node.testnet.rsk.co", "https://mycrypto.testnet.rsk.co"],
+    rpcs: ["https://public-node.testnet.rsk.co", "https://mycrypto.testnet.rsk.co",
+      {
+        url: "https://edge.goldsky.com/standard/evm/31?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   30: {
     rpcs: [
@@ -3106,6 +3290,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/30?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
 
@@ -3191,6 +3380,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/288?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   321: {
@@ -3276,6 +3470,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/122?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   336: {
@@ -3367,6 +3566,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/592?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   71394: {
@@ -3397,6 +3601,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/108?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   20: {
@@ -3445,6 +3654,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/88?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   246: {
@@ -3507,6 +3721,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/11297108109?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   7: {
@@ -3527,6 +3746,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/14?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   15: {
@@ -3577,6 +3801,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/17000?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   22: {
@@ -3611,6 +3840,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/44?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   50: {
@@ -3636,6 +3870,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/50?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   51: {
@@ -3646,6 +3885,11 @@ export const extraRpcs = {
       "https://earpc.apothem.network/",
       "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
+      {
+        url: "https://edge.goldsky.com/standard/evm/51?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   58: {
@@ -3854,6 +4098,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/169?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   186: {
@@ -3863,7 +4112,13 @@ export const extraRpcs = {
     rpcs: ["https://mainnet.bmcchain.com/"],
   },
   199: {
-    rpcs: ["https://rpc.bittorrentchain.io/"],
+    rpcs: ["https://rpc.bittorrentchain.io/",
+      {
+        url: "https://edge.goldsky.com/standard/evm/199?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   200: {
     rpcs: ["https://arbitrum.xdaichain.com"],
@@ -3891,7 +4146,13 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   360: {
-    rpcs: ["https://mainnet.shape.network", "https://shape-mainnet.g.alchemy.com/public"],
+    rpcs: ["https://mainnet.shape.network", "https://shape-mainnet.g.alchemy.com/public",
+      {
+        url: "https://edge.goldsky.com/standard/evm/360?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   369: {
     rpcs: [
@@ -3930,6 +4191,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.pulsechainstats,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/369?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   385: {
@@ -4006,6 +4272,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.Chainlink,
       }
+      {
+        url: "https://edge.goldsky.com/standard/evm/998?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1001: {
@@ -4056,6 +4327,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1030?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1115: {
@@ -4103,6 +4379,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1116?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1130: {
@@ -4150,6 +4431,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/300?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   324: {
@@ -4200,6 +4486,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/324?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   196: {
@@ -4241,6 +4532,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/196?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   195: {
@@ -4277,6 +4573,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/195?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1287: {
@@ -4321,6 +4622,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1287?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1288: {
@@ -4383,6 +4689,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1891?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1987: {
@@ -4414,6 +4725,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/2000?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2021: {
@@ -4429,6 +4745,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/2021?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   3636: {
@@ -4447,6 +4768,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/3637?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   239: {
@@ -4461,6 +4787,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/239?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   7001: {
@@ -4495,6 +4826,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.reliableninjas,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/7001?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   7000: {
@@ -4534,6 +4870,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.reliableninjas,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/7000?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2025: {
@@ -4555,6 +4896,11 @@ export const extraRpcs = {
       "wss://wevm.testnet.kava.io",
       "https://kava-testnet.drpc.org",
       "wss://kava-testnet.drpc.org",
+      {
+        url: "https://edge.goldsky.com/standard/evm/2221?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2222: {
@@ -4625,6 +4971,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/2222?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2559: {
@@ -4707,6 +5058,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/5000?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   5003: {
@@ -4727,6 +5083,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/5003?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   5197: {
@@ -5061,6 +5422,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/84532?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   84531: {
@@ -5229,6 +5595,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/8453?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   11235: {
@@ -5409,6 +5780,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/534352?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   88888: {
@@ -5423,6 +5799,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/88888?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   888888: {
@@ -5556,6 +5937,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/11155111?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   7762959: {
@@ -5626,6 +6012,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/245022934?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   311752642: {
@@ -5650,6 +6041,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/11297108099?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1313161556: {
@@ -5866,6 +6262,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/314?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   314159: {
@@ -5875,6 +6276,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ChainUpCloud,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/314159?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   13000: {
@@ -5962,6 +6368,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1101?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   59144: {
@@ -6007,10 +6418,21 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/59144?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2442: {
-    rpcs: ["https://rpc.cardona.zkevm-rpc.com"],
+    rpcs: ["https://rpc.cardona.zkevm-rpc.com",
+      {
+        url: "https://edge.goldsky.com/standard/evm/2442?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   59140: {
     rpcs: ["https://rpc.goerli.linea.build"],
@@ -6038,6 +6460,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/59141?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   534351: {
@@ -6094,6 +6521,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/534351?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   200810: {
@@ -6219,6 +6651,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/167000?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   167009: {
@@ -6314,6 +6751,11 @@ export const extraRpcs = {
       "wss://rpc.morphl2.io:8443",
       "https://rpc-quicknode.morphl2.io",
       "wss://rpc-quicknode.morphl2.io",
+      {
+        url: "https://edge.goldsky.com/standard/evm/2818?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   570: {
@@ -6407,6 +6849,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/545?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   747: {
@@ -6417,6 +6864,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/747?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1707: {
@@ -6457,6 +6909,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/23294?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1339: {
@@ -6584,6 +7041,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/34443?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   217: {
@@ -6634,7 +7096,13 @@ export const extraRpcs = {
     ],
   },
   1992: {
-    rpcs: ["https://rpc.hubble.exchange", "wss://ws-rpc.hubble.exchange"],
+    rpcs: ["https://rpc.hubble.exchange", "wss://ws-rpc.hubble.exchange",
+      {
+        url: "https://edge.goldsky.com/standard/evm/1992?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   128123: {
     rpcs: [
@@ -6644,6 +7112,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/128123?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   42793: {
@@ -6654,6 +7127,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/42793?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   881: {
@@ -6663,7 +7141,13 @@ export const extraRpcs = {
     rpcs: ["https://mainnet.egochain.org"],
   },
   2525: {
-    rpcs: ["https://mainnet.rpc.inevm.com/http"],
+    rpcs: ["https://mainnet.rpc.inevm.com/http",
+      {
+        url: "https://edge.goldsky.com/standard/evm/2525?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   7171: {
     rpcs: ["https://connect.bit-rock.io", "https://brockrpc.io"],
@@ -6681,6 +7165,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/28882?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   200901: {
@@ -6738,6 +7227,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/60808?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   42: {
@@ -6850,6 +7344,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.conduit,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/7869?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   17071: {
@@ -6898,6 +7397,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.liquify,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/48900?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   48899: {
@@ -6930,6 +7434,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/56288?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2522: {
@@ -6963,6 +7472,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/252?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   13473: {
@@ -6970,6 +7484,11 @@ export const extraRpcs = {
       "https://rpc.testnet.immutable.com",
       "https://immutable-zkevm-testnet.drpc.org",
       "wss://immutable-zkevm-testnet.drpc.org",
+      {
+        url: "https://edge.goldsky.com/standard/evm/13473?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   13371: {
@@ -6992,10 +7511,21 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/13371?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   4202: {
-    rpcs: ["https://rpc.sepolia-api.lisk.com"],
+    rpcs: ["https://rpc.sepolia-api.lisk.com",
+      {
+        url: "https://edge.goldsky.com/standard/evm/4202?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   1135: {
     rpcs: [
@@ -7015,6 +7545,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1135?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   656476: {
@@ -7030,6 +7565,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/656476?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   111188: {
@@ -7073,6 +7613,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/7777777?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   4162: {
@@ -7125,6 +7670,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1946?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   41455: {
@@ -7292,7 +7842,13 @@ export const extraRpcs = {
     rpcs: ["https://api.thatchain.io", "https://api.thatchain.io/mainnet"],
   },
   5115: {
-    rpcs: ["https://rpc.testnet.citrea.xyz"],
+    rpcs: ["https://rpc.testnet.citrea.xyz",
+      {
+        url: "https://edge.goldsky.com/standard/evm/5115?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
 
   14800: {
@@ -7300,6 +7856,11 @@ export const extraRpcs = {
       "https://rpc.moksha.vana.org",
       "https://rpc-moksha-vana.josephtran.xyz",
       "https://moksha-vana-rpc.tech-coha05.xyz",
+      {
+        url: "https://edge.goldsky.com/standard/evm/14800?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   55244: {
@@ -7309,6 +7870,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.conduit,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/55244?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   8668: {
@@ -7402,6 +7968,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/25327?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   383353: {
@@ -7413,7 +7984,13 @@ export const extraRpcs = {
     ],
   },
   6900: {
-    rpcs: ["https://evm-rpc.nibiru.fi", "wss://evm-rpc-ws.nibiru.fi"],
+    rpcs: ["https://evm-rpc.nibiru.fi", "wss://evm-rpc-ws.nibiru.fi",
+      {
+        url: "https://edge.goldsky.com/standard/evm/6900?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   383414847825: {
     rpcs: ["https://api.zeniq.network"],
@@ -7462,6 +8039,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1328?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1329: {
@@ -7497,6 +8079,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1329?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   130: {
@@ -7557,6 +8144,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/130?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1301: {
@@ -7592,12 +8184,22 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1301?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   50312: {
     rpcs: [
       "https://dream-rpc.somnia.network",
       "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811",
+      {
+        url: "https://edge.goldsky.com/standard/evm/50312?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   763373: {
@@ -7614,6 +8216,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/763373?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   57073: {
@@ -7642,6 +8249,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/57073?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   3441006: {
@@ -7664,6 +8276,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/531050104?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   50104: {
@@ -7674,6 +8291,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/50104?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   33139: {
@@ -7690,6 +8312,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/33139?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   33111: {
@@ -7707,10 +8334,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/33111?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   151: {
-    rpcs: ["https://governors.mainnet.redbelly.network"],
+    rpcs: ["https://governors.mainnet.redbelly.network",
+      {
+        url: "https://edge.goldsky.com/standard/evm/151?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
@@ -7735,6 +8373,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.conduit,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/21000000?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   21000001: {
@@ -7754,6 +8397,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.conduit,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/21000001?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   43521: {
@@ -7777,6 +8425,11 @@ export const extraRpcs = {
       "https://evm-rpc-vana.josephtran.xyz",
       "https://evm-rpc-vana.j-node.net",
       "https://islander-vana-rpc.spidernode.net",
+      {
+        url: "https://edge.goldsky.com/standard/evm/1480?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   543210: {
@@ -7792,6 +8445,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/543210?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   146: {
@@ -7837,6 +8495,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/146?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   57054: {
@@ -7861,6 +8524,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/57054?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1514: {
@@ -7891,6 +8559,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bctech,
       },
       "https://evm-rpc-archive.story.node75.org",
+      {
+        url: "https://edge.goldsky.com/standard/evm/1514?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   3030: {
@@ -7933,6 +8606,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       "https://rpc-testnet.monadinfra.com",
+      {
+        url: "https://edge.goldsky.com/standard/evm/10143?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   80094: {
@@ -7978,6 +8656,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/80094?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2741: {
@@ -8003,6 +8686,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/2741?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   20250217: {
@@ -8036,6 +8724,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/1868?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   2345: {
@@ -8074,6 +8767,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/660279?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   47279324479: {
@@ -8098,6 +8796,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/31611?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   133: {
@@ -8128,6 +8831,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/89?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1112: {
@@ -8160,6 +8868,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/808813?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   8691942025: {
@@ -8183,6 +8896,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/232?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   37111: {
@@ -8198,6 +8916,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/37111?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   1315: {
@@ -8220,6 +8943,11 @@ export const extraRpcs = {
       "https://story-aeneid-rpc.spidernode.net",
       "https://evm-rpc.story.testnet.node75.org",
       "https://story-aeneid-json-rpc.auranode.xyz",
+      {
+        url: "https://edge.goldsky.com/standard/evm/1315?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   224433: {
@@ -8258,7 +8986,13 @@ export const extraRpcs = {
     ],
   },
   5464: {
-    rpcs: ["https://sagaevm.jsonrpc.sagarpc.io"],
+    rpcs: ["https://sagaevm.jsonrpc.sagarpc.io",
+      {
+        url: "https://edge.goldsky.com/standard/evm/5464?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   911867: {
     rpcs: [
@@ -8312,10 +9046,21 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/560048?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   295: {
-    rpcs: ["https://hedera.linkpool.pro"],
+    rpcs: ["https://hedera.linkpool.pro",
+      {
+        url: "https://edge.goldsky.com/standard/evm/295?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+    ],
   },
   11124: {
     rpcs: [
@@ -8329,6 +9074,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/11124?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   80069: {
@@ -8348,6 +9098,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/80069?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   919: {
@@ -8395,6 +9150,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/2020?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   31: {
@@ -8409,6 +9169,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/31?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   713715: {
@@ -8437,6 +9202,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/5330?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   728126428: {
@@ -8481,6 +9251,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/48898?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   48899: {
@@ -8556,6 +9331,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/43111?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   743111: {
@@ -8790,6 +9570,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/98866?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+      {
+        url: "https://edge.goldsky.com/standard/evm/9745?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
+      {
+        url: "https://edge.goldsky.com/standard/evm/300?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   747474: {
@@ -8804,6 +9599,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://edge.goldsky.com/standard/evm/747474?secret=public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.goldsky,
+      }
     ],
   },
   737373: {

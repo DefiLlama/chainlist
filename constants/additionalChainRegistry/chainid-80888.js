@@ -3,6 +3,7 @@ export const data = {
   "chain": "onyx",
   "rpc": [
     "https://rpc.onyx.org",
+      "https://edge.goldsky.com/standard/evm/80888?secret=public"
   ],
   "faucets": [],
   "nativeCurrency": {

@@ -2,7 +2,8 @@ export const data = {
   "name": "Eden testnet",
   "chain": "Eden testnet",
   "rpc": [
-    "https://rpc.testnet.eden.gateway.fm"
+    "https://rpc.testnet.eden.gateway.fm",
+      "https://edge.goldsky.com/standard/evm/3735928814?secret=public"
   ],
   "faucets": [
     "https://faucet-eden-testnet.binarybuilders.services"

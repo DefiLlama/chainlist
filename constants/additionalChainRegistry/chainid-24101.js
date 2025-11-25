@@ -1,7 +1,7 @@
 export const data = {
   "name": "Incentiv",
   "chain": "Incentiv",
-  "rpc": ["https://rpc.incentiv.io", "https://rpc-archive.incentiv.io"],
+  "rpc": ["https://rpc.incentiv.io", "https://rpc-archive.incentiv.io", "https://edge.goldsky.com/standard/evm/24101?secret=public"],
   "faucets": [],
   "nativeCurrency": {
     "name": "CENT",

@@ -2,7 +2,8 @@ export const data = {
   "name": "0G Mainnet",
   "chain": "0G",
   "rpc": [
-    "https://evmrpc.0g.ai"
+    "https://evmrpc.0g.ai",
+      "https://edge.goldsky.com/standard/evm/16661?secret=public"
   ],
   "faucets": [],
   "nativeCurrency": {

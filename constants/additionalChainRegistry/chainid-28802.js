@@ -1,7 +1,7 @@
 export const data = {
   "name": "Incentiv Testnet",
   "chain": "TCENT",
-  "rpc": ["https://rpc3.testnet.incentiv.io"],
+  "rpc": ["https://rpc3.testnet.incentiv.io", "https://edge.goldsky.com/standard/evm/28802?secret=public"],
   "faucets": [],
   "nativeCurrency": {
     "name": "Testnet Incentiv Coin",

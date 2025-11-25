@@ -9,6 +9,7 @@ export const data = {
     "https://rpc3.monad.xyz",
     "https://rpc4.monad.xyz",
     "https://rpc-mainnet.monadinfra.com",
+    "https://edge.goldsky.com/standard/evm/143?secret=public"
   ],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "nativeCurrency": {

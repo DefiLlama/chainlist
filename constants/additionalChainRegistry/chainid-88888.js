@@ -5,7 +5,8 @@ export const data = {
     "rpc": [
       "https://rpc.chiliz.com",
       "https://rpc.ankr.com/chiliz/",
-      "https://chiliz.publicnode.com"
+      "https://chiliz.publicnode.com",
+      "https://edge.goldsky.com/standard/evm/88888?secret=public"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],
