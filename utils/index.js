@@ -83,7 +83,7 @@ export const renderProviderText = (address) => {
 };
 
 export const notTranslation =
-  (ns, lang = "en") =>
+  (ns, lang = "zh") =>
   (key) => {
     switch (lang) {
       case "en":
@@ -91,6 +91,6 @@ export const notTranslation =
       case "zh":
         return zh[ns][key];
       default:
-        return en[ns][key];
+        return zh[ns][key];
     }
   };
