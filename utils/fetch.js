@@ -111,13 +111,22 @@ export async function generateChainData() {
     return acc;
   }, {});
 
-  const sortedChains = chains
+  let sortedChains = chains
     .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
     .concat(overwrittenChains)
     .map((chain) => populateChain(chain, chainTvls))
     .sort((a, b) => {
       return (b.tvl ?? 0) - (a.tvl ?? 0);
     });
+
+  // 特殊处理：将链ID为19478的链强制排在第三位
+  const specialChainIndex = sortedChains.findIndex(chain => chain.chainId === "19478");
+  if (specialChainIndex !== -1 && specialChainIndex !== 2) {
+    // 从当前位置移除
+    const [specialChain] = sortedChains.splice(specialChainIndex, 1);
+    // 插入到第三位（索引为2）
+    sortedChains.splice(2, 0, specialChain);
+  }
 
   return sortedChains;
 }
