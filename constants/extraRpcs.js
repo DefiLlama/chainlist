@@ -7928,6 +7928,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       "https://rpc-testnet.monadinfra.com",
+      {
+        url: "https://monad-testnet.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   80094: {
