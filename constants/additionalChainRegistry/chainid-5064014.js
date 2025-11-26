@@ -2,7 +2,8 @@ export const data = {
   "name": "Ethereal Mainnet",
   "chain": "Ethereal",
   "rpc": [
-    "https://rpc.ethereal.trade"
+    "https://rpc.ethereal.trade",
+      "https://edge.goldsky.com/standard/evm/5064014?secret=public"
   ],
   "icon": "ethereal",
   "faucets": [],

@@ -1,7 +1,7 @@
 export const data = {
   name: "Stable Mainnet",
   chain: "stable",
-  rpc: ["https://rpc.stable.xyz"],
+  rpc: ["https://rpc.stable.xyz", "https://edge.goldsky.com/standard/evm/988?secret=public"],
   faucets: [],
   nativeCurrency: {
     name: "gUSDT",

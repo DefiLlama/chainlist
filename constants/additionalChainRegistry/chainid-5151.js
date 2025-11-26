@@ -3,6 +3,7 @@ export const data = {
     "chain": "Moca Chain",
     "rpc": [
       "https://devnet-rpc.mocachain.org",
+      "https://edge.goldsky.com/standard/evm/5151?secret=public"
     ],
     "faucets": [
         "https://devnet-scan.mocachain.org/faucet"

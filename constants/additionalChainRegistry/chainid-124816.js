@@ -1,7 +1,7 @@
 export const data = {
   name: "Mitosis",
   chain: "MITO",
-  rpc: ["https://rpc.mitosis.org"],
+  rpc: ["https://rpc.mitosis.org", "https://edge.goldsky.com/standard/evm/124816?secret=public"],
   faucets: [],
   nativeCurrency: {
     name: "Mitosis",

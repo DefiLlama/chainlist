@@ -4,7 +4,8 @@ export const data = {
     "icon": "rari",
     "rpc": [
       "https://mainnet.rpc.rarichain.org/http/",
-      "wss://mainnet.rpc.rarichain.org/ws"
+      "wss://mainnet.rpc.rarichain.org/ws",
+      "https://edge.goldsky.com/standard/evm/1380012617?secret=public"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],

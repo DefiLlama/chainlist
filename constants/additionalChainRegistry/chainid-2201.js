@@ -1,7 +1,7 @@
 export const data = {
   name: "Stable Testnet",
   chain: "stable",
-  rpc: ["https://rpc.testnet.stable.xyz"],
+  rpc: ["https://rpc.testnet.stable.xyz", "https://edge.goldsky.com/standard/evm/2201?secret=public"],
   faucets: ["https://faucet.stable.xyz"],
   nativeCurrency: {
     name: "gUSDT",

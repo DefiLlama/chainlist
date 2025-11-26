@@ -10,7 +10,8 @@ export const data = {
       "wss://hyperliquid.drpc.org",
       "https://rpc.hyperlend.finance",
       "https://hyperliquid.api.onfinality.io/evm/public",
-      "https://hyperliquid.rpc.blxrbdn.com"
+      "https://hyperliquid.rpc.blxrbdn.com",
+      "https://edge.goldsky.com/standard/evm/999?secret=public"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],

@@ -1,7 +1,7 @@
 export const data = {
   name: "Morph Hoodi",
   chain: "ETH",
-  rpc: ["https://rpc-hoodi.morphl2.io"],
+  rpc: ["https://rpc-hoodi.morphl2.io", "https://edge.goldsky.com/standard/evm/2910?secret=public"],
   faucets: [],
   nativeCurrency: {
     name: "Ether",

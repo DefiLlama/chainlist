@@ -1,7 +1,7 @@
 export const data = {
   name: "Etherlink Shadownet Testnet",
   chain: "Etherlink",
-  rpc: ["https://node.shadownet.etherlink.com"],
+  rpc: ["https://node.shadownet.etherlink.com", "https://edge.goldsky.com/standard/evm/127823?secret=public"],
   faucets: [],
   nativeCurrency: {
     name: "tez",

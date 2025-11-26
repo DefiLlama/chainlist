@@ -3,6 +3,7 @@ export const data = {
   "chain": "Sophon",
   "rpc": [
     "https://zksync-os-testnet-sophon.zksync.dev/",
+      "https://edge.goldsky.com/standard/evm/531050204?secret=public"
   ],
   "faucets": [],
   "nativeCurrency": {

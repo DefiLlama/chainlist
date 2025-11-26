@@ -1,7 +1,7 @@
 export const data = {
   "name": "Arc Testnet",
   "chain": "arc-testnet",
-  "rpc": ["https://rpc.testnet.arc.network"],
+  "rpc": ["https://rpc.testnet.arc.network", "https://edge.goldsky.com/standard/evm/5042002?secret=public"],
   "faucets": ["https://faucet.circle.com/"],
   "nativeCurrency": {
     "name": "USDC",

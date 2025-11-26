@@ -3,6 +3,7 @@ export const data = {
   "chain": "HPP",
   "rpc": [
     "https://mainnet.hpp.io",
+      "https://edge.goldsky.com/standard/evm/190415?secret=public"
   ],
   "faucets": [],
   "nativeCurrency": {

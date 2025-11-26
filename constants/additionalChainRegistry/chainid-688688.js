@@ -3,7 +3,7 @@ export const data = {
   "title": "Pharos Testnet",
   "chain": "Pharos",
   "icon": "pharostestnet",
-  "rpc": ["https://testnet.dplabs-internal.com"],
+  "rpc": ["https://testnet.dplabs-internal.com", "https://edge.goldsky.com/standard/evm/688688?secret=public"],
   "faucets": [],
   "nativeCurrency": {
     "name": "PHRS",

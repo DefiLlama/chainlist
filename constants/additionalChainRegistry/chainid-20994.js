@@ -1,7 +1,7 @@
 export const data ={
   name: "Fluent Testnet",
   chain: "FLUENT",
-  rpc: ["https://rpc.testnet.fluent.xyz"],
+  rpc: ["https://rpc.testnet.fluent.xyz", "https://edge.goldsky.com/standard/evm/20994?secret=public"],
   faucets: ["https://testnet.fluent.xyz/dev-portal"],
   nativeCurrency: {
     name: "Ether",

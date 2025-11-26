@@ -9,7 +9,8 @@ export const data = {
       "https://rpc.ankr.com/flare",
       "https://rpc.au.cc/flare",
       "https://flare.enosys.global/ext/C/rpc",
-      "https://flare.solidifi.app/ext/C/rpc"
+      "https://flare.solidifi.app/ext/C/rpc",
+      "https://edge.goldsky.com/standard/evm/14?secret=public"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],

@@ -1,7 +1,7 @@
 export const data = {
   "name": "Plasma Testnet",
   "chain": "Plasma",
-  "rpc": ["https://testnet-rpc.plasma.to"],
+  "rpc": ["https://testnet-rpc.plasma.to", "https://edge.goldsky.com/standard/evm/9746?secret=public"],
   "faucets": [],
   "nativeCurrency": {
     "name": "Plasma",

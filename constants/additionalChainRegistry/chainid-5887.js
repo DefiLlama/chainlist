@@ -4,7 +4,8 @@ export const data = {
   "icon": "om",
   "rpc": [
     "https://evm.dukong.mantrachain.io",
-    "wss://evm.dukong.mantrachain.io/ws"
+    "wss://evm.dukong.mantrachain.io/ws",
+      "https://edge.goldsky.com/standard/evm/5887?secret=public"
   ],
   "faucets": [
     "https://faucet.dukong.mantrachain.io"

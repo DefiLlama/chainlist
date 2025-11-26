@@ -4,7 +4,7 @@ export const data = {
   "title": "Lumia Beam Testnet",
   "chain": "ETH",
   "icon": "lumia",
-  "rpc": ["https://beam-rpc.lumia.org"],
+  "rpc": ["https://beam-rpc.lumia.org", "https://edge.goldsky.com/standard/evm/2030232745?secret=public"],
   "faucets": ["https://beam-faucet.lumia.org/"],
   "nativeCurrency": {
     "name": "Lumia",
