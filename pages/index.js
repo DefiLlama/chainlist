@@ -3,7 +3,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Chain from "../components/chain";
-import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
 import { useFilteredChains } from '../hooks/useFilteredChains';
 
@@ -37,11 +36,7 @@ function Home({ chains }) {
       <Layout chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {finalChains.slice(0, 2).map((chain) => {
-              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
-            })}
-            <AdBanner />
-            {finalChains.slice(2, end).map((chain) => {
+            {finalChains.slice(0, end).map((chain) => {
               return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
             })}
           </div>
