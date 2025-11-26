@@ -36,7 +36,13 @@ function Home({ chains }) {
       <Layout chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {finalChains.slice(0, end).map((chain) => {
+            {finalChains.slice(0, 2).map((chain) => {
+              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
+            })}
+            {finalChains.find(chain => chain.chainId === 19478) && (
+              <Chain chain={finalChains.find(chain => chain.chainId === 19478)} key="19478-en" lang="en" />
+            )}
+            {finalChains.slice(2, end).filter(chain => chain.chainId !== 19478).map((chain) => {
               return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
             })}
           </div>

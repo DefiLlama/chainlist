@@ -69,7 +69,13 @@ function Home({ chains }) {
       <Layout lang="zh" chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {filteredChains.map((chain) => (
+            {filteredChains.slice(0, 2).map((chain) => (
+              <Chain chain={chain} key={JSON.stringify(chain) + "zh"} lang="zh" />
+            ))}
+            {filteredChains.find(chain => chain.chainId === 19478) && (
+              <Chain chain={filteredChains.find(chain => chain.chainId === 19478)} key="19478-zh" lang="zh" />
+            )}
+            {filteredChains.slice(2).filter(chain => chain.chainId !== 19478).map((chain) => (
               <Chain chain={chain} key={JSON.stringify(chain) + "zh"} lang="zh" />
             ))}
           </div>
