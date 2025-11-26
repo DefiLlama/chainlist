@@ -1,22 +1,29 @@
 export const data = {
-  name: 'Stable Testnet',
-  chain: 'stabletestnet_2201-1',
-  rpc: ['https://stable-jsonrpc.testnet.chain0.dev'],
-  icon: 'stable',
-  faucets: ['https://demo.testnet.chain0.dev/faucet'],
+  name: "Stable Testnet",
+  chain: "stable",
+  rpc: ["https://rpc.testnet.stable.xyz"],
+  faucets: ["https://faucet.stable.xyz"],
   nativeCurrency: {
-    name: 'USDT',
-    symbol: 'USDT',
+    name: "gUSDT",
+    symbol: "gUSDT",
     decimals: 18,
   },
-  features: [{ name: 'EIP1559' }],
-  infoURL: 'https://docs.partners.stable.xyz/testnet/testnet-information',
-  shortName: 'stable',
+  features: [{ name: "EIP1559" }, { name: "EIP1559" }],
+  infoURL: "https://stable.xyz",
+  shortName: "stable-testnet",
   chainId: 2201,
   networkId: 2201,
-  explorers: [{
-    name: 'Stable Explorer',
-    url: 'https://stable-explorer.testnet.chain0.dev',
-    standard: 'EIP3091'
-  }],
+  icon: "stable",
+  explorers: [
+    {
+      "name": "Blockscout Explorer",
+      "url": "https://blockscout.testnet.stable.xyz",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "Stablescan",
+      "url": "https://testnet.stablescan.xyz",
+      "standard": "EIP3091"
+    }
+  ],
 };
