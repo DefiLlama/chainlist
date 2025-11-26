@@ -67,7 +67,6 @@ export default {
   "288": "boba",
   "291": "orderly",
   "295": "hedera",
-  "296": "hedera-testnet",
   "311": "omax",
   "314": "filecoin",
   "321": "kucoin",
