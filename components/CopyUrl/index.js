@@ -1,5 +1,7 @@
 import { Popover, PopoverDisclosure, usePopoverStore } from "@ariakit/react/popover";
 import { useEffect, useState } from "react";
+import * as Fathom from "fathom-client";
+import { FATHOM_DROPDOWN_EVENTS_ID } from "../../hooks/useAnalytics";
 
 export default function CopyUrl({ url }) {
   const [open, setOpen] = useState(false);
