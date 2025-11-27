@@ -2,7 +2,7 @@ export const data = {
   "name": "Sophon OS Testnet",
   "chain": "Sophon OS",
   "rpc": [
-    "https://testnet.os.sophon.com/",
+    "https://rpc.testnet.os.sophon.com/",
   ],
   "faucets": [],
   "nativeCurrency": {
