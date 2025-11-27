@@ -44,6 +44,10 @@ export default function ExplorerList({ chain, lang }) {
   );
 }
 
+const Shimmer = () => {
+  return <div className="rounded h-5 w-full min-w-[40px] animate-pulse dark:bg-[#171717] bg-[#EAEAEA]"></div>;
+};
+
 const ExplorerRow = ({ isLoading, explorer, className }) => {
   return (
     <tr className={className}>
