@@ -5,7 +5,7 @@ export default function ExplorerList({ chain, lang }) {
   const t = useTranslations("Common", lang);
   const explorerLinks = chain.explorers;
 
-  return (
+  return explorerLinks && explorerLinks.length > 0 ? (
     <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 col-span-full relative overflow-x-auto">
       <table className="m-0 border-collapse whitespace-nowrap dark:text-[#B3B3B3] text-black">
         <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
@@ -19,29 +19,21 @@ export default function ExplorerList({ chain, lang }) {
         </thead>
 
         <tbody>
-          {explorerLinks && explorerLinks.length > 0 ? (
-            explorerLinks?.map((explorer, index) => {
-              let className = "bg-inherit";
-              return (
-                <ExplorerRow
-                  isLoading={chain.isLoading}
-                  explorer={explorer}
-                  key={"explorer" + index}
-                  className={className}
-                />
-              );
-            })
-          ) : (
-            <tr>
-              <td colSpan={2} className="text-center">
-                No explorers found
-              </td>
-            </tr>
-          )}
+          {explorerLinks?.map((explorer, index) => {
+            let className = "bg-inherit";
+            return (
+              <ExplorerRow
+                isLoading={chain.isLoading}
+                explorer={explorer}
+                key={"explorer" + index}
+                className={className}
+              />
+            );
+          })}
         </tbody>
       </table>
     </div>
-  );
+  ) : null;
 }
 
 const Shimmer = () => {
