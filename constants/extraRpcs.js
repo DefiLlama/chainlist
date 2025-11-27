@@ -7715,6 +7715,9 @@ export const extraRpcs = {
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
   },
+  2035: {
+    rpcs: ["https://rpc.phala.network"],
+  },
   2040: {
     rpcs: ["https://rpc.vanarchain.com"],
   },
