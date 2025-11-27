@@ -19,17 +19,25 @@ export default function ExplorerList({ chain, lang }) {
         </thead>
 
         <tbody>
-          {explorerLinks.map((explorer, index) => {
-            let className = "bg-inherit";
-            return (
-              <ExplorerRow
-                isLoading={chain.isLoading}
-                explorer={explorer}
-                key={"explorer" + index}
-                className={className}
-              />
-            );
-          })}
+          {explorerLinks && explorerLinks.length > 0 ? (
+            explorerLinks?.map((explorer, index) => {
+              let className = "bg-inherit";
+              return (
+                <ExplorerRow
+                  isLoading={chain.isLoading}
+                  explorer={explorer}
+                  key={"explorer" + index}
+                  className={className}
+                />
+              );
+            })
+          ) : (
+            <tr>
+              <td colSpan={2} className="text-center">
+                No explorers found
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
