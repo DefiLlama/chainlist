@@ -8944,11 +8944,20 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.grove,
       },
       {
-        url: "wss://xrplevm-testnet.buildintheshade.com",
+       url: "wss://xrplevm-testnet.buildintheshade.com",
         tracking: "limited",
         trackingDetails: privacyStatement.grove,
       },
     ]
+  },
+  766: {
+    rpcs: [
+       {
+        url: "https://evm-rpc-ql1.foxxone.one",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+       },
+    ],
   },
 };
 
