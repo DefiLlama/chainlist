@@ -3819,6 +3819,9 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://monad-mainnet-rpc.spidernode.net/",
+      },
     ],
   },
   163: {
@@ -7956,13 +7959,6 @@ export const extraRpcs = {
         url: "https://monad-testnet.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-    ],
-  },
-  143: {
-    rpcs: [
-      {
-        url: "https://monad-mainnet-rpc.spidernode.net/",
       },
     ],
   },
