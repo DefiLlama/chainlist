@@ -15,8 +15,8 @@ export default {
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://hyperx.technology",
   "shortName": "hpx",
-  "chainId": 888,
-  "networkId": 888,
+  "chainId": 80808,
+  "networkId": 80808,
   "explorers": [
     {
       "name": "HyperX Explorer",
