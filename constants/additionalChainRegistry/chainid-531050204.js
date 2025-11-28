@@ -1,8 +1,8 @@
 export const data = {
-  "name": "Sophon zkSync-OS Testnet",
-  "chain": "Sophon",
+  "name": "Sophon OS Testnet",
+  "chain": "Sophon OS",
   "rpc": [
-    "https://zksync-os-testnet-sophon.zksync.dev/",
+    "https://rpc.testnet.os.sophon.com/",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -12,12 +12,19 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://sophon.xyz/",
-  "shortName": "sophon-testnet",
+  "shortName": "sophon-os-testnet",
   "chainId": 531050204,
   "networkId": 531050204,
-  "explorers": [{
-    "name": "Sophon zkSync Testnet Explorer",
-    "url": "https://block-explorer.zksync-os-testnet-sophon.zksync.dev/",
-    "standard": "EIP3091"
-  }]
+  "explorers": [
+    {
+      "name": "Sophscan Testnet",
+      "url": "https://testnet.sophscan.com/",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "Sophon OS Testnet Explorer",
+      "url": "https://explorer.testnet.os.sophon.com/",
+      "standard": "EIP3091"
+    }
+  ]
 }
