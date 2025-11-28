@@ -1,0 +1,21 @@
+export const data = {
+  "name": "Memento Testnet",
+  "chain": "Memento",
+  "rpc": ["https://rpc.memento.zeeve.online"],
+  "faucets": ["https://faucet.memento.zeeve.online"],
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "features": [
+    {
+      "name": "EIP155"
+    }
+  ],
+  "infoURL": "https://mementoblockchain.com/zk-chain",
+  "shortName": "memento-testnet",
+  "chainId": 2129,
+  "networkId": 2129,
+  "explorers": []
+}

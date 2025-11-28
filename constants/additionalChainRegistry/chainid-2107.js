@@ -18,7 +18,7 @@ export const data = {
     "explorers": [
       {
         "name": "IBVM Testnet explorer",
-        "url": "https://testnet-explorer.ibvm.io",
+        "url": "https://testnet.ibvmscan.io",
         "standard": "EIP3091"
       }
     ],
