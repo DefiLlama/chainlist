@@ -3807,6 +3807,15 @@ export const extraRpcs = {
   142: {
     rpcs: ["https://rpc.prodax.io"],
   },
+  143: {
+    rpcs: [
+      {
+        url: "https://monad-mainnet.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+    ],
+  },
   163: {
     rpcs: ["https://node.mainnet.lightstreams.io"],
   },
@@ -7931,6 +7940,11 @@ export const extraRpcs = {
         url: "https://monad-testnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://monad-testnet.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
       "https://rpc-testnet.monadinfra.com",
       {
