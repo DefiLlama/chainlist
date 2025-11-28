@@ -12,7 +12,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://makachain.io/",
-  "shortName": "MakaChain-mainnet",
+  "shortName": "MakaChain mainnet",
   "chainId": 777178,
   "networkId": 777178,
   "explorers": [
