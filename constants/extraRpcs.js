@@ -7935,6 +7935,13 @@ export const extraRpcs = {
       "https://rpc-testnet.monadinfra.com",
     ],
   },
+  143: {
+    rpcs: [
+      {
+        url: "https://monad-mainnet-rpc.spidernode.net/",
+      },
+    ],
+  },
   80094: {
     rpcs: [
       "https://rpc.berachain.com",
