@@ -36,6 +36,7 @@ export default {
   "130": "unichain",
   "137": "polygon",
   "140": "eteria",
+  "143": "monad",
   "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",

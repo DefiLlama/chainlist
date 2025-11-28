@@ -7,6 +7,7 @@ import { populateChain, fetchWithCache } from "../../utils/fetch";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
+import ExplorerList from "../../components/ExplorerList";
 import chainIds from "../../constants/chainIds.js";
 import { overwrittenChains } from "../../constants/additionalChainRegistry/list";
 import { useQuery } from "@tanstack/react-query";
@@ -41,7 +42,7 @@ export async function getStaticProps({ params }) {
     props: {
       chain: chain ? populateChain(chain, chainTvls) : null,
       // messages: (await import(`../../translations/${locale}.json`)).default,
-    }
+    },
   };
 }
 
@@ -60,18 +61,21 @@ export async function getStaticPaths() {
           chain: chain.name.toLowerCase(),
         },
       },
-    ]).concat(overwrittenChains.map((chain) => [
-      {
-        params: {
-          chain: chain.chainId.toString(),
+    ])
+    .concat(
+      overwrittenChains.map((chain) => [
+        {
+          params: {
+            chain: chain.chainId.toString(),
+          },
         },
-      },
-      {
-        params: {
-          chain: chain.name.toLowerCase(),
+        {
+          params: {
+            chain: chain.name.toLowerCase(),
+          },
         },
-      },
-    ]))
+      ]),
+    )
     .flat();
 
   return { paths, fallback: false };
@@ -139,7 +143,8 @@ function Chain({ chain }) {
           <AddNetwork chain={chain} buttonOnly lang="en" />
         </div>
 
-        <div className="max-w-[calc(60vw-56px)]">
+        <div className="w-full md:max-w-[calc(60vw-56px)] flex flex-col gap-5">
+          <ExplorerList chain={chain} lang="en" />
           <RPCList chain={chain} lang="en" />
         </div>
       </Layout>
