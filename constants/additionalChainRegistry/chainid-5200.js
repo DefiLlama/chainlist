@@ -1,7 +1,7 @@
 export const data = {
     "name": "SilverBitcoin",
     "chain": "SBTC",
-    "icon": "rsz_silverbitcoin",
+    "icon": "silverbitcoin",
     "rpc": [
       "https://rpc.silverbitcoin.org"
     ],
