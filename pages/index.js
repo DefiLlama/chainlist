@@ -46,7 +46,7 @@ function Home({ chains }) {
             })}
           </div>
         </React.Suspense>
-        {end - 1 < finalChains.length ? (
+        {end < finalChains.length ? (
           <button
             onClick={() => setEnd(finalChains.length)}
             className="w-full border dark:border-[#171717] border-[#EAEAEA] px-4 py-2 rounded-[50px] mb-auto text-white bg-[#2F80ED] mx-auto"
