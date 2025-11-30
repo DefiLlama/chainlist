@@ -1,9 +1,9 @@
 export const data = {
-  "name": "CX Chain Mainnet",
+  "name": "CX Chain Testnet",
   "chain": "CX",
   "icon": "ipfs://bafkreiemtyffyyodqiqxinaejvytbzcfn4n572waybnpknzzehtawumrla",
   "rpc": [
-    "https://subnets.avax.network/cx/mainnet/rpc",
+    "https://subnets.avax.network/cxctestnet/testnet/rpc",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -12,12 +12,11 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://www.cxchain.xyz/",
-  "shortName": "cx",
-  "chainId": 737373,
-  "networkId": 737373,
-  "icon": "cxchain",
+  "shortName": "cx-testnet",
+  "chainId": 70707,
+  "networkId": 70707,
   "explorers": [{
-    "name": "CX Chain Mainnet Explorer",
-    "url": "https://subnets.avax.network/cx",
+    "name": "CX Chain Testnet Explorer",
+    "url": "https://subnets-test.avax.network/cxctestnet",
   }]
 }
