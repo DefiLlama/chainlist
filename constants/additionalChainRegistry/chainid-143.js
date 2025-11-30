@@ -1,34 +1,24 @@
 export const data = {
-  "name": "Monad",
-  "chain": "MON",
-  "icon": "monad",
+  "name": "HBD Chain",
+  "chain": "HBD",
+  "icon": "hbd",
   "rpc": [
-    "https://rpc.monad.xyz",
-    "https://rpc1.monad.xyz",
-    "https://rpc2.monad.xyz",
-    "https://rpc3.monad.xyz",
-    "https://rpc4.monad.xyz",
-    "https://rpc-mainnet.monadinfra.com",
+    "https://rpc.hbdscan.com",
   ],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "nativeCurrency": {
-    "name": "Monad",
-    "symbol": "MON",
+    "name": "HBD Chain",
+    "symbol": "HBD",
     "decimals": 18
   },
-  "infoURL": "https://monad.xyz",
-  "shortName": "monad",
+  "infoURL": "https://www.hbdchain.com",
+  "shortName": "hbd",
   "chainId": 143,
   "networkId": 143,
   "explorers": [
     {
-      "name": "Monad Vision",
-      "url": "https://monadvision.com",
-      "standard": "EIP3091"
-    },
-    {
-      "name": "Monadscan",
-      "url": "https://monadscan.com",
+      "name": "HBD Scan",
+      "url": "https://hbdscan.com",
       "standard": "EIP3091"
     }
   ]
