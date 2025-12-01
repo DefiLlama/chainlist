@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "question1",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "question2",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "question3",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".learneth/remix-project-org/remix-workshops/1. Introduction/introduction.sol": "Quiz"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".learneth/remix-project-org/remix-workshops/1. Introduction/introduction.sol": {
+			"keccak256": "0x625ad9ff62c35d968e802aca0802dff5b0a8c5999b9ea0751adb76f319d1f3cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://28dc8997123d1eb01f6cb93c27eb9a3d799ce8a0afd72c77b59adc128492dcb6",
+				"dweb:/ipfs/QmajppiwzUemtYi7hcYwnc9cbbHWcJp82oVvxdksCCbHxm"
+			]
+		}
+	},
+	"version": 1
+}
