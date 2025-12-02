@@ -9050,26 +9050,26 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://mezo.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://mezo.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    ]
+    ],
 },
   31611: {
     rpcs: [
       {
         url: "https://mezo-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://mezo-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9078,7 +9078,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://plasma.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9087,12 +9087,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://haqq-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://haqq-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9101,12 +9101,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://goat-mainnet-alpha.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://goat-mainnet-alpha.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9115,12 +9115,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://goat-testnet3.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://goat-testnet3.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9129,12 +9129,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://sonic-testnet-v2.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://sonic-testnet-v2.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9143,7 +9143,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://bsc.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9152,7 +9152,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://scroll.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9161,7 +9161,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://scroll-sepolia.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9170,12 +9170,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://fraxtal-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://fraxtal-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9184,7 +9184,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://arbitrum.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9193,7 +9193,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://arbitrum-nova.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9202,12 +9202,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://arb-blueberry-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://arb-blueberry-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9216,12 +9216,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://cronos-zkevm-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://cronos-zkevm-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9230,12 +9230,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://celo-sepolia.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://celo-sepolia.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9244,7 +9244,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://avalanche.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9253,12 +9253,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://moonbase-alpha.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://moonbase-alpha.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9267,7 +9267,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://klaytn.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9276,12 +9276,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://klaytn-baobab.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://klaytn-baobab.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9290,12 +9290,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://opbnb-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://opbnb-testnet.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9304,7 +9304,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://polygon-amoy.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9313,12 +9313,12 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://polygon-zkevm-cardona.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
        url: "wss://polygon-zkevm-cardona.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
@@ -9327,7 +9327,7 @@ export const extraRpcs = {
     rpcs: [
       {
        url: "wss://gnosis.drpc.org",
-        tracking: “none”,
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ]
