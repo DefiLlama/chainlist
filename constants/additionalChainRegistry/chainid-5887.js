@@ -20,6 +20,12 @@ export const data = {
   "networkId": 5887,
   "explorers": [
     {
+      "name": "Dukong Blockscout Explorer",
+      "url": "https://explorer.dukong.io",
+      "standard": "EIP3091",
+      "icon": "mantra"
+    },
+    {
       "name": "Dukong Explorer",
       "url": "http://mantrascan.io/dukong",
       "standard": "none",
