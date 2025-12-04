@@ -8666,7 +8666,7 @@ export const extraRpcs = {
       "https://community-enabler-1.fullnode.mainnet.coti.io/rpc",
       "wss://community-enabler-1.fullnode.mainnet.coti.io/ws",
     ],
-},
+  },
   7082400: {
     rpcs: ["https://coti-test-rpc.Hyperflow.finance", "wss://coti-test-rpc.Hyperflow.finance"],
   },
