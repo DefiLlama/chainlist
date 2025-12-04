@@ -9,7 +9,7 @@ export const data = {
       "symbol": "CELO",
       "decimals": 18
     },
-    "infoURL": "https://docs.celo.org/",
+    "infoURL": "https://sepolia.celoscan.io/",
     "shortName": "celo-sep",
     "chainId": 11142220,
     "networkId": 11142220,

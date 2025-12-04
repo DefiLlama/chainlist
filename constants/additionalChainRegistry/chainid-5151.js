@@ -1,0 +1,27 @@
+export const data = {
+    "name": "Moca Chain Devnet",
+    "chain": "Moca Chain",
+    "rpc": [
+      "https://devnet-rpc.mocachain.org",
+    ],
+    "faucets": [
+        "https://devnet-scan.mocachain.org/faucet"
+    ],
+    "nativeCurrency": {
+      "name": "MOCA",
+      "symbol": "MOCA",
+      "decimals": 18
+    },
+    "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+    "infoURL": "https://mocachain.org",
+    "shortName": "mocat",
+    "chainId": 5151,
+    "networkId": 5151,
+    "icon": "moca",
+    "explorers": [{
+      "name": "Moca Chain Scan",
+      "url": "https://devnet-scan.mocachain.org",
+      "icon": "moca",
+      "standard": "EIP3091"
+    }]
+}

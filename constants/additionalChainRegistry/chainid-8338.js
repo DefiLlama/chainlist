@@ -14,8 +14,8 @@ export const data = {
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "infoURL": "https://forknet.io",
     "shortName": "forknet",
-    "chainId": 838,
-    "networkId": 838,
+    "chainId": 8338,
+    "networkId": 8338,
     "icon": "forknet",
     "explorers": [{
       "name": "forkscan",
