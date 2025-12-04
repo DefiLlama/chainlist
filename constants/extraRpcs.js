@@ -8239,11 +8239,6 @@ export const extraRpcs = {
         url: "https://mainnet.hedera.api.hgraph.io/rpc",
         tracking: "none",
         trackingDetails: privacyStatement.hgraph,
-      },
-      {
-        url: "https://295.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
-        tracking: "none",
-        trackingDetails: privacyStatement.thirdweb,
       }
     ],
   },
@@ -8253,11 +8248,6 @@ export const extraRpcs = {
         url: "https://testnet.hedera.api.hgraph.io/rpc",
         tracking: "none",
         trackingDetails: privacyStatement.hgraph,
-      },
-      {
-        url: "https://296.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
-        tracking: "none",
-        trackingDetails: privacyStatement.thirdweb,
       }
     ],
   },
