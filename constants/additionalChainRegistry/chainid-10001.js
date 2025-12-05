@@ -1,25 +1,25 @@
 export const data = {
-    "name": "ETHW-mainnet",
-    "chain": "ETHW",
-    "icon": "ethpow",
+    "name": "Calixto Super Main Net",
+    "chain": "Calixto",
+    "icon": "CSP",
     "rpc": [
-      "https://mainnet.ethereumpow.org/"
+      "https://   https://rpc.calixto.network"
     ],
     "features": [{ "name": "EIP155" }],
     "faucets": [],
     "nativeCurrency": {
-      "name": "EthereumPoW",
-      "symbol": "ETHW",
+      "name": "Calixto",
+      "symbol": "CALX",
       "decimals": 18
     },
     "infoURL": "https://ethereumpow.org/",
     "shortName": "ethw",
-    "chainId": 10001,
-    "networkId": 10001,
+    "chainId": 8888,
+    "networkId": 8888,
     "explorers": [
       {
         "name": "Oklink",
-        "url": "https://www.oklink.com/ethw/"
+        "url": "https://https://explorer.calixto.network
       }
     ]
   }
