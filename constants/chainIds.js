@@ -139,6 +139,8 @@ export default {
   "2818": "morph",
   "3073": "move",
   "3338": "peaq",
+  "3343": "edge",
+  "33431": "edge testnet",
   "3637": "botanix",
   "3721": "xone chain",
   "3776": "astar zkevm",
