@@ -1,7 +1,7 @@
 export const data = {
   "name": "MANTRACHAIN Testnet",
   "chain": "Dukong",
-  "icon": "om",
+  "icon": "mantra",
   "rpc": [
     "https://evm.dukong.mantrachain.io",
     "wss://evm.dukong.mantrachain.io/ws"
@@ -10,8 +10,8 @@ export const data = {
     "https://faucet.dukong.mantrachain.io"
   ],
   "nativeCurrency": {
-    "name": "OM",
-    "symbol": "OM",
+    "name": "MANTRA",
+    "symbol": "MANTRA",
     "decimals": 18
   },
   "infoURL": "https://mantrachain.io",
@@ -20,10 +20,16 @@ export const data = {
   "networkId": 5887,
   "explorers": [
     {
+      "name": "Dukong Blockscout Explorer",
+      "url": "https://explorer.dukong.io",
+      "standard": "EIP3091",
+      "icon": "mantra"
+    },
+    {
       "name": "Dukong Explorer",
-      "url": "http://mantrascan.io",
+      "url": "http://mantrascan.io/dukong",
       "standard": "none",
-      "icon": "om"
+      "icon": "mantra"
     }
   ]
 }
