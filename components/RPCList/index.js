@@ -1,12 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import * as Fathom from "fathom-client";
-// import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
+import CopyUrl from "../CopyUrl";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
-import { useClipboard } from "../../hooks/useClipboard";
 import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
-import { FATHOM_DROPDOWN_EVENTS_ID } from "../../hooks/useAnalytics";
 import { useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
@@ -81,7 +78,7 @@ export default function RPCList({ chain, lang }) {
   const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
 
   return (
-    <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 overflow-hidden col-span-full relative overflow-x-auto">
+    <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 col-span-full relative overflow-x-auto">
       <table className="m-0 border-collapse whitespace-nowrap dark:text-[#B3B3B3] text-black">
         <caption className="relative w-full px-3 py-1 text-base font-medium border border-b-0">
           <span className="mr-4">{`${chain.name} RPC URL List`}</span>
@@ -187,8 +184,8 @@ const Row = ({ values, chain, privacy, lang, className }) => {
 
   return (
     <tr className={className}>
-      <td className="border px-3 text-sm py-1 max-w-[40ch] overflow-hidden whitespace-nowrap text-ellipsis">
-        {isLoading ? <Shimmer /> : data?.url}
+      <td className="border px-3 py-1 max-w-[40ch]">
+        {isLoading ? <Shimmer /> : data?.url ? <CopyUrl url={data.url} /> : null}
       </td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.height}</td>
       <td className="px-3 py-1 text-sm text-center border">{isLoading ? <Shimmer /> : data?.latency}</td>
@@ -229,27 +226,6 @@ const Row = ({ values, chain, privacy, lang, className }) => {
         )}
       </td>
     </tr>
-  );
-};
-
-const CopyUrl = ({ url = "" }) => {
-  const { hasCopied, onCopy } = useClipboard();
-
-  const handleCopy = () => {
-    if (url.includes("eth.llamarpc")) {
-      Fathom.trackGoal(FATHOM_DROPDOWN_EVENTS_ID[1], 0);
-    }
-
-    return onCopy(url);
-  };
-
-  return (
-    <button
-      className="px-2 py-[2px] -my-[2px] text-sm dark:hover:bg-[#171717] hover:bg-[#EAEAEA] rounded-[50px] mx-auto"
-      onClick={handleCopy}
-    >
-      {!hasCopied ? "Copy URL" : "Copied!"}
-    </button>
   );
 };
 

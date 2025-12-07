@@ -3,17 +3,20 @@ import Head from "next/head";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
-import { populateChain, fetcher } from "../../utils/fetch";
+import { populateChain, fetchWithCache } from "../../utils/fetch";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
-import chainIds from "../../constants/chainIds.json";
+import ExplorerList from "../../components/ExplorerList";
+import chainIds from "../../constants/chainIds.js";
 import { overwrittenChains } from "../../constants/additionalChainRegistry/list";
+import { useQuery } from "@tanstack/react-query";
 
 export async function getStaticProps({ params }) {
-  const chains = await fetcher("https://chainid.network/chains.json");
-
-  const chainTvls = await fetcher("https://api.llama.fi/chains");
+  const [chains, chainTvls] = await Promise.all([
+    fetchWithCache("https://chainid.network/chains.json"),
+    fetchWithCache("https://api.llama.fi/chains"),
+  ]);
 
   const chain =
     overwrittenChains.find(
@@ -40,12 +43,11 @@ export async function getStaticProps({ params }) {
       chain: chain ? populateChain(chain, chainTvls) : null,
       // messages: (await import(`../../translations/${locale}.json`)).default,
     },
-    revalidate: 3600,
   };
 }
 
 export async function getStaticPaths() {
-  const chains = await fetcher("https://chainid.network/chains.json");
+  const chains = await fetchWithCache("https://chainid.network/chains.json");
 
   const paths = chains
     .map((chain) => [
@@ -60,6 +62,20 @@ export async function getStaticPaths() {
         },
       },
     ])
+    .concat(
+      overwrittenChains.map((chain) => [
+        {
+          params: {
+            chain: chain.chainId.toString(),
+          },
+        },
+        {
+          params: {
+            chain: chain.name.toLowerCase(),
+          },
+        },
+      ]),
+    )
     .flat();
 
   return { paths, fallback: false };
@@ -71,6 +87,11 @@ function Chain({ chain }) {
   const icon = React.useMemo(() => {
     return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
   }, [chain]);
+
+  const { data: blockGasLimit } = useQuery({
+    queryKey: ["blockGasLimit", chain?.rpc?.[0]],
+    queryFn: () => fetchBlockGasLimit(chain?.rpc?.[0]?.url),
+  });
 
   return (
     <>
@@ -103,6 +124,7 @@ function Chain({ chain }) {
               <tr>
                 <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">ChainID</th>
                 <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">{t("currency")}</th>
+                <th className="font-normal text-gray-500 dark:text-[#B3B3B3]">Block Gas Limit</th>
               </tr>
             </thead>
             <tbody>
@@ -113,6 +135,7 @@ function Chain({ chain }) {
                 <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">
                   {chain.nativeCurrency ? chain.nativeCurrency.symbol : "none"}
                 </td>
+                <td className="text-center font-bold px-4 dark:text-[#B3B3B3]">{blockGasLimit ?? "Unknown"}</td>
               </tr>
             </tbody>
           </table>
@@ -120,10 +143,38 @@ function Chain({ chain }) {
           <AddNetwork chain={chain} buttonOnly lang="en" />
         </div>
 
-        <RPCList chain={chain} lang="en" />
+        <div className="w-full md:max-w-[calc(60vw-56px)] flex flex-col gap-5">
+          <ExplorerList chain={chain} lang="en" />
+          <RPCList chain={chain} lang="en" />
+        </div>
       </Layout>
     </>
   );
+}
+
+async function fetchBlockGasLimit(rpc) {
+  if (!rpc) return null;
+  try {
+    const response = await fetch(rpc, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        method: "eth_getBlockByNumber",
+        params: ["latest", false],
+        id: 1,
+      }),
+    });
+    const data = await response.json();
+    if (data.result && data.result.gasLimit) {
+      return parseInt(data.result.gasLimit, 16);
+    }
+    return "Unknown";
+  } catch (error) {
+    console.error("Error fetching block gas limit:", error);
+  }
 }
 
 export default Chain;

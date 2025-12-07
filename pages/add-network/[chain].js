@@ -3,17 +3,18 @@ import Head from "next/head";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
-import { populateChain, fetcher } from "../../utils/fetch";
+import { populateChain, fetchWithCache } from "../../utils/fetch";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
-import chainIds from "../../constants/chainIds.json";
+import chainIds from "../../constants/chainIds.js";
 import { overwrittenChains } from "../../constants/additionalChainRegistry/list";
 
 export async function getStaticProps({ params }) {
-  const chains = await fetcher("https://chainid.network/chains.json");
-
-  const chainTvls = await fetcher("https://api.llama.fi/chains");
+  const [chains, chainTvls] = await Promise.all([
+    fetchWithCache("https://chainid.network/chains.json"),
+    fetchWithCache("https://api.llama.fi/chains")
+  ]);
 
   const chain =
     overwrittenChains.find(
@@ -37,15 +38,16 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      chain: chain ? populateChain(chain, chainTvls) : null,
+      chain: chain
+        ? populateChain(chain, chainTvls)
+        : null,
       // messages: (await import(`../../translations/${locale}.json`)).default,
-    },
-    revalidate: 3600,
+    }
   };
 }
 
 export async function getStaticPaths() {
-  const chains = await fetcher("https://chainid.network/chains.json");
+  const chains = await fetchWithCache("https://chainid.network/chains.json");
 
   const paths = chains
     .map((chain) => [
