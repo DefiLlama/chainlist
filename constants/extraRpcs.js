@@ -3911,6 +3911,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://infra.originstake.com/monad/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      },
+      {
         url: "https://monad-mainnet-rpc.spidernode.net/",
       },
     ],
