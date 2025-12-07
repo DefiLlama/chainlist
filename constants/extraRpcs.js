@@ -7442,17 +7442,6 @@ export const extraRpcs = {
       },
     ],
   },
-  16600: {
-    rpcs: [
-      "https://0g-json-rpc-public.originstake.com",
-      {
-      url: "https://0g-json-rpc-public.originstake.com",
-      tracking: "none",
-      trackingDetails: privacyStatement.originstake,
-      },
-    ],
-  },
-  
   1750: {
     rpcs: [
       "https://rpc.metall2.com",
