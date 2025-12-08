@@ -1,26 +1,35 @@
 export const data = {
-  "name": "Watr Mainnet",
-  "chain": "WATR",
-  "icon": "watr",
+  "name": "Aeru",
+  "chain": "ARU",
+  "icon": "aru",
   "rpc": [
-    "https://rpc.watr.org/ext/bc/EypLFUSzC2wdbFJovYS3Af1E7ch1DJf7KxKoGR5QFPErxQkG1/rpc"
+    "https://rpc.aruscan.com",
+    "wss://wss.aruscan.com"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "WAT",
-    "symbol": "WAT",
+    "name": "Aeru",
+    "symbol": "ARU",
     "decimals": 18
   },
-  "infoURL": "https://www.watr.org",
-  "shortName": "watr-mainnet",
+  "features": [{ "name": "EIP155" }],
+  "infoURL": "https://atheru.org/",
+  "shortName": "aru",
   "chainId": 192,
   "networkId": 192,
   "explorers": [
     {
-      "name": "Watr Explorer",
-      "url": "https://explorer.watr.org",
-      "icon": "watr",
+      "name": "aruscan",
+      "url": "https://aruscan.com",
       "standard": "EIP3091"
+    }
+  ],
+  "icons": [
+    {
+      "url": "ipfs://bafkreihwgtuhhd7twd73f4lw42vlz5la47s5t5maotlvf5b26xxlmmbq7m",
+      "width": 4501,
+      "height": 4501,
+      "format": "png"
     }
   ]
 }

@@ -45,6 +45,7 @@ export default {
   "173": "eni",
   "177": "hsk",
   "181": "water",
+  "192": "aru",
   "185": "mint",
   "196": "xlayer",
   "199": "bittorrent",
