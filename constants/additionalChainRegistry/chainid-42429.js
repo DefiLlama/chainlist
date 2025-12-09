@@ -7,7 +7,7 @@ export const data = {
   nativeCurrency: {
     name: "USD",
     symbol: "USD",
-    decimals: 18,
+    decimals: 6,
   },
   infoURL: "https://tempo.xyz/",
   shortName: "TempoTestnet",
