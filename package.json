@@ -7,7 +7,8 @@
     "export": "echo deprecated",
     "build2": "./scripts/build.sh",
     "start": "next start",
-    "serve": "serve out"
+    "serve": "serve out",
+    "test": "node tests/check-duplicate-keys.js"
   },
   "dependencies": {
     "@ariakit/react": "^0.2.12",
