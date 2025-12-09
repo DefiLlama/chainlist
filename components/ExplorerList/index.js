@@ -1,9 +1,10 @@
 import { notTranslation as useTranslations } from "../../utils";
 import CopyUrl from "../CopyUrl";
+import { explorerBlacklist } from "../../constants/explorerBlacklist";
 
 export default function ExplorerList({ chain, lang }) {
   const t = useTranslations("Common", lang);
-  const explorerLinks = chain.explorers;
+  const explorerLinks = chain.explorers?.filter((explorer) => !explorerBlacklist.includes(explorer?.url));
 
   return explorerLinks && explorerLinks.length > 0 ? (
     <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 col-span-full relative overflow-x-auto">
