@@ -20,9 +20,10 @@ export const data = {
     "explorers": [
       {
         "name": "Celes Testnet Explorer",
-        "url": "https://testnet-explore.celeschain.org",
+        "url": "https://testnet-explorer.celeschain.org",
         "icon": "celes",
         "standard": "EIP3091"
       }
     ]
   }
+  
