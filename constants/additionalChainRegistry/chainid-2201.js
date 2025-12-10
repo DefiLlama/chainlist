@@ -10,7 +10,7 @@ export const data = {
   },
   features: [{ name: "EIP1559" }, { name: "EIP1559" }],
   infoURL: "https://stable.xyz",
-  shortName: "stable",
+  shortName: "stable-testnet",
   chainId: 2201,
   networkId: 2201,
   icon: "stable",
