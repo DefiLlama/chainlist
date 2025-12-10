@@ -65,6 +65,18 @@ if [ -n "$ONLY_LIST_FILE" ]; then
   exit 0
 fi
 
+# Run duplicate key checks
+echo ""
+echo "🔍 Running duplicate key checks..."
+node tests/check-duplicate-keys.js
+DUPLICATE_CHECK_STATUS=$?
+
+if [ $DUPLICATE_CHECK_STATUS -ne 0 ]; then
+  echo ""
+  echo "🚨 Duplicate key check failed! Fix duplicates before building."
+  exit 1
+fi
+
 next build 2>&1 | tee build.log
 BUILD_STATUS=${PIPESTATUS[0]}
 
@@ -77,6 +89,22 @@ fi
 
 # find the parent directory name of the file _buildManifest.js within the .next/static directory
 BUILD_ID=$(find .next -name _buildManifest.js | sed 's/\/_buildManifest.js//g' | sed 's/\.next\/static\///g')
+
+# Only run post-export if the build succeeded
+if [ $BUILD_STATUS -eq 0 ]; then
+  ./scripts/post-export.sh
+  POST_EXPORT_STATUS=$?
+
+  # If post-export failed, always exit with 1
+  if [ $POST_EXPORT_STATUS -ne 0 ]; then
+    echo ""
+    echo "⚠️  Post-export script failed with status $POST_EXPORT_STATUS"
+    BUILD_STATUS=1
+  fi
+else
+  echo ""
+  echo "⚠️  Build failed, skipping post-export script"
+fi
 
 echo ""
 echo "======================="
@@ -97,8 +125,6 @@ echo "======================="
 echo ""
 
 node ./scripts/build-msg.js $BUILD_STATUS "$BUILD_TIME_STR" "$START_TIME" "$BUILD_ID" "$COMMIT_COMMENT" "$COMMIT_AUTHOR" "$COMMIT_HASH"
-
-./scripts/post-export.sh
 
 # exit with the build status
 exit $BUILD_STATUS
