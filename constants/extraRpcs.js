@@ -8066,6 +8066,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bctech,
       },
       "https://evm-rpc-archive.story.node75.org",
+      {
+        url: "https://story-json-rpc.stakely.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      }
     ],
   },
   3030: {
@@ -8822,7 +8827,15 @@ export const extraRpcs = {
     rpcWorking: true,
   },
   5031: {
-    rpcs: ["https://rpc.somnia.network", "https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
+    rpcs: [
+      "https://rpc.somnia.network",
+      {
+        url: "https://somnia-json-rpc.stakely.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
+     "https://somnia-rpc.publicnode.com"
+    ],
   },
   9745: {
     rpcs: [
