@@ -5368,6 +5368,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   11235: {
@@ -7158,7 +7168,19 @@ export const extraRpcs = {
     ],
   },
   4202: {
-    rpcs: ["https://rpc.sepolia-api.lisk.com"],
+    rpcs: [
+      "https://rpc.sepolia-api.lisk.com",
+      {
+        url: "https://lisk-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lisk-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   1135: {
     rpcs: [
@@ -7226,7 +7248,19 @@ export const extraRpcs = {
     ],
   },
   999999999: {
-    rpcs: ["https://sepolia.rpc.zora.energy"],
+    rpcs: [
+      "https://sepolia.rpc.zora.energy",
+      {
+        url: "https://zora-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zora-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   7777777: {
     rpcs: [
@@ -7824,6 +7858,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://manta-pacific-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://manta-pacific-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   531050104: {
@@ -8361,6 +8405,16 @@ export const extraRpcs = {
       },
       {
         url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lens.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -9063,6 +9117,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.grove,
       },
+      {
+        url: "https://xrpl.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://xrpl.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   1449000: {
@@ -9192,34 +9256,6 @@ export const extraRpcs = {
       },
     ],
   },
-  4202: {
-    rpcs: [
-      {
-        url: "https://lisk-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://lisk-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
-  3441006: {
-    rpcs: [
-      {
-        url: "https://manta-pacific-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://manta-pacific-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
   397: {
     rpcs: [
       {
@@ -9228,82 +9264,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-       url: "wss://near.drpc.org",
+        url: "wss://near.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    ]
-},
-  999999999: {
-    rpcs: [
-      {
-        url: "https://zora-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://zora-sepolia.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
-  8453: {
-    rpcs: [
-      {
-        url: "https://base.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://base.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
-  232: {
-    rpcs: [
-      {
-        url: "https://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
-  1440000: {
-    rpcs: [
-      {
-        url: "https://xrpl.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://xrpl.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
-  97477: {
-    rpcs: [
-      {
-        url: "https://doma.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-       url: "wss://doma.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ]
-},
+    ],
+  },
   2523: {
     rpcs: [
       {
@@ -9312,11 +9278,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-       url: "wss://fraxtal-testnet.drpc.org",
+        url: "wss://fraxtal-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    ]
+    ],
   },
 };
 
