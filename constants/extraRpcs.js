@@ -1,4 +1,4 @@
-fimport { mergeDeep } from "../utils/fetch.js";
+import { mergeDeep } from "../utils/fetch.js";
 
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
@@ -7392,13 +7392,7 @@ export const extraRpcs = {
   16600: {
     rpcs: [
       "https://evmrpc-testnet.0g.ai",
-      "https://0g-json-rpc-public.originstake.com",
       "https://og-testnet-jsonrpc.blockhub.id",
-      {
-        url: "https://0g-json-rpc-public.originstake.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.originstake,
-      },
       {
         url: "https://og-testnet-evm.itrocket.net",
         tracking: "none",
