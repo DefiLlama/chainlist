@@ -1,4 +1,4 @@
-import { mergeDeep } from "../utils/fetch.js";
+fimport { mergeDeep } from "../utils/fetch.js";
 
 import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
 
@@ -8056,6 +8056,11 @@ export const extraRpcs = {
         url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
         tracking: "none",
         trackingDetails: privacyStatement.GrandValley,
+      },
+      {
+        url: "https://infra.originstake.com/story/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
       },
       "https://evm-rpc-story.j-node.net",
       "https://story-evm-rpc.krews.xyz",
