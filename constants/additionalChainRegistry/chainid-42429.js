@@ -10,7 +10,7 @@ export const data = {
     decimals: 6,
   },
   infoURL: "https://tempo.xyz/",
-  shortName: "TempoTestnet",
+  shortName: "tempotestnet",
   chainId: 42429,
   networkId: 42429,
   explorers: [
