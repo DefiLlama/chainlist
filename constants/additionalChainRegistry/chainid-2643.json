@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Notes Network Mainnet",
   "chain": "NOTES",
   "rpc": ["https://rpc-mainnet.noschain.org"],
