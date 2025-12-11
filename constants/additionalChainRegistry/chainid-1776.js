@@ -6,7 +6,9 @@ export const data = {
     "https://sentry.evm-rpc.injective.network",
     "wss://sentry.evm-ws.injective.network",
     "https://injectiveevm-rpc.polkachu.com",
-    "wss://injectiveevm-ws.polkachu.com"
+    "wss://injectiveevm-ws.polkachu.com",
+    "https://injective-evm-rpc.scvsecurity.io",
+    "wss://injective-evm-ws.scvsecurity.io"
   ],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "faucets": ["https://injective.com/getinj"],
