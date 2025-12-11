@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Quantum Sharded Network Testnet",
   "chain": "QSN",
   "rpc": [
