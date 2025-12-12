@@ -3913,6 +3913,11 @@ export const extraRpcs = {
       {
         url: "https://monad-mainnet-rpc.spidernode.net/",
       },
+      {
+        url: "https://monad-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   163: {
