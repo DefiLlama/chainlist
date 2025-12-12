@@ -3809,6 +3809,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
+      {
+        url: "https://0xrpc.io/mordor",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/mordor",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   64: {
