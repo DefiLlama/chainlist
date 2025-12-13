@@ -6,8 +6,8 @@ export const data = {
   ],
   faucets: [],
   nativeCurrency: {
-    name: "KGF.e",
-    symbol: "KGF.e",
+    name: "KGFe",
+    symbol: "KGFe",
     decimals: 18
   },
   infoURL: "https://entropychain.live",
