@@ -1,6 +1,6 @@
 export const data = {
-    "name": "Dinari Paper Network",
-    "chain": "DPN",
+    "name": "Dinari Financial Network Paper",
+    "chain": "DFNP",
     "rpc": [
       "https://subnets.avax.network/dfnpaper/testnet/rpc",
     ],
@@ -10,7 +10,10 @@ export const data = {
       "symbol": "DGAS",
       "decimals": 18
     },
-    "features": [{ "name": "EIP155" }],
+    "features": [
+      { "name": "EIP155" },
+      { "name": "EIP1559" }
+    ],
     "infoURL": "https://dinari.com",
     "shortName": "dpn",
     "chainId": 179205,

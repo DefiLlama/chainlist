@@ -10,7 +10,10 @@ export const data = {
       "symbol": "DGAS",
       "decimals": 18
     },
-    "features": [{ "name": "EIP155" }],
+    "features": [
+      { "name": "EIP155" },
+      { "name": "EIP1559" }
+    ],
     "infoURL": "https://dinari.com",
     "shortName": "dfn",
     "chainId": 202110,
