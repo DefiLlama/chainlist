@@ -9202,6 +9202,13 @@ export const extraRpcs = {
       },
     ],
   },
+  2999: {
+    rpcs: [
+      "https://mainnet.bityuan.com/eth",
+      "https://node1.bityuan.com/eth",
+      "https://node2.bityuan.com/eth",
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
