@@ -8,6 +8,31 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
+
+/**
+ * Check JavaScript syntax validity by attempting to import the ES module
+ */
+function checkJsSyntax(filePath, fileName) {
+  console.log(`Checking ${fileName} for valid JavaScript syntax...`);
+
+  try {
+    // Try to import the module - this will catch syntax errors
+    execSync(`node --input-type=module -e "import '${filePath}'"`, {
+      encoding: "utf-8",
+      stdio: "pipe",
+    });
+    console.log(`✓ ${fileName} has valid JavaScript syntax`);
+  } catch (error) {
+    const errorOutput = error.stderr || error.stdout || error.message;
+    // Extract the relevant error line
+    const syntaxMatch = errorOutput.match(/SyntaxError: (.+)/);
+    const errorMsg = syntaxMatch ? syntaxMatch[1] : "Invalid syntax";
+    console.error(`ERROR: Invalid JavaScript syntax in ${fileName}`);
+    console.error(`  ${errorMsg}`);
+    throw new Error(`Invalid JavaScript syntax in ${fileName}: ${errorMsg}`);
+  }
+}
 
 /**
  * Check for duplicate keys in privacyStatement object by parsing the source file
@@ -123,11 +148,25 @@ function checkChainIdsDuplicates() {
 
 // Run all tests and collect errors
 console.log("=".repeat(60));
-console.log("Running duplicate key checks...");
+console.log("Running syntax and duplicate key checks...");
 console.log("=".repeat(60));
 
 const errors = [];
 
+// First check syntax validity
+try {
+  checkJsSyntax(path.join(__dirname, "../constants/extraRpcs.js"), "extraRpcs.js");
+} catch (error) {
+  errors.push(error.message);
+}
+
+try {
+  checkJsSyntax(path.join(__dirname, "../constants/chainIds.js"), "chainIds.js");
+} catch (error) {
+  errors.push(error.message);
+}
+
+// Then check for duplicates
 try {
   checkPrivacyStatementDuplicates();
 } catch (error) {

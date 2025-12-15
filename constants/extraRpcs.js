@@ -3913,6 +3913,11 @@ export const extraRpcs = {
       {
         url: "https://monad-mainnet-rpc.spidernode.net/",
       },
+      {
+        url: "https://monad-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   163: {
@@ -8776,6 +8781,14 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.poolz,
       },
+      "https://tokyo.fullnode.mainnet.coti.io/rpc",
+      "wss://tokyo.fullnode.mainnet.coti.io/ws",
+      "https://virginia.fullnode.mainnet.coti.io/rpc",
+      "wss://virginia.fullnode.mainnet.coti.io/ws",
+      "https://new-york.fullnode.mainnet.coti.io/rpc",
+      "wss://new-york.fullnode.mainnet.coti.io/ws",
+      "https://community-enabler-1.fullnode.mainnet.coti.io/rpc",
+      "wss://community-enabler-1.fullnode.mainnet.coti.io/ws",
     ],
   },
   7082400: {
@@ -8876,7 +8889,7 @@ export const extraRpcs = {
     rpcWorking: true,
   },
   5031: {
-    rpcs: ["https://rpc.somnia.network", "https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
+    rpcs: ["https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
   },
   9745: {
     rpcs: [
@@ -9004,6 +9017,11 @@ export const extraRpcs = {
         url: "wss://plume.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://plume-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -9283,6 +9301,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
+  },
+  2999: {
+    rpcs: ["https://mainnet.bityuan.com/eth", "https://node1.bityuan.com/eth", "https://node2.bityuan.com/eth"],
   },
 };
 
