@@ -8,17 +8,25 @@
 
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
 const { execSync } = require("child_process");
 
 /**
  * Check JavaScript syntax validity by attempting to import the ES module
+ * Uses a temporary .mjs wrapper to force ES module parsing
  */
 function checkJsSyntax(filePath, fileName) {
   console.log(`Checking ${fileName} for valid JavaScript syntax...`);
 
+  // Convert to file:// URL for cross-platform compatibility
+  const fileUrl = `file://${filePath.replace(/\\/g, "/")}`;
+
+  // Create a temporary .mjs file to force ES module context
+  const tempFile = path.join(os.tmpdir(), `syntax-check-${Date.now()}-${Math.random().toString(36).slice(2)}.mjs`);
+  fs.writeFileSync(tempFile, `import "${fileUrl}";\n`);
+
   try {
-    // Try to import the module - this will catch syntax errors
-    execSync(`node --input-type=module -e "import '${filePath}'"`, {
+    execSync(`node "${tempFile}"`, {
       encoding: "utf-8",
       stdio: "pipe",
     });
@@ -27,10 +35,15 @@ function checkJsSyntax(filePath, fileName) {
     const errorOutput = error.stderr || error.stdout || error.message;
     // Extract the relevant error line
     const syntaxMatch = errorOutput.match(/SyntaxError: (.+)/);
-    const errorMsg = syntaxMatch ? syntaxMatch[1] : "Invalid syntax";
+    const errorMsg = syntaxMatch ? syntaxMatch[1] : errorOutput.split("\n")[0] || "Invalid syntax";
     console.error(`ERROR: Invalid JavaScript syntax in ${fileName}`);
     console.error(`  ${errorMsg}`);
     throw new Error(`Invalid JavaScript syntax in ${fileName}: ${errorMsg}`);
+  } finally {
+    // Clean up temp file
+    try {
+      fs.unlinkSync(tempFile);
+    } catch {}
   }
 }
 
