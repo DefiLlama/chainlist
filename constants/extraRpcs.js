@@ -8827,7 +8827,7 @@ export const extraRpcs = {
     rpcWorking: true,
   },
   5031: {
-    rpcs: ["https://rpc.somnia.network", "https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
+    rpcs: ["https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
   },
   9745: {
     rpcs: [
