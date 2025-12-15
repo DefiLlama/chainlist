@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Apollo Mainnet",
   "chain": "APOLLO",
   "rpc": [
