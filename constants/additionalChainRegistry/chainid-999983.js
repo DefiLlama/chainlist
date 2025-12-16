@@ -12,7 +12,7 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://brevis.network/",
-  "shortName": "brevis-network-testnet",
+  "shortName": "brevis-provernet-testnet",
   "chainId": 999983,
   "networkId": 999983,
   "explorers": [{
