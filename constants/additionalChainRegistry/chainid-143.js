@@ -9,6 +9,7 @@ export const data = {
     "https://rpc3.monad.xyz",
     "https://rpc4.monad.xyz",
     "https://rpc-mainnet.monadinfra.com",
+    "https://monad.rpc.blxrbdn.com",
   ],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "nativeCurrency": {
