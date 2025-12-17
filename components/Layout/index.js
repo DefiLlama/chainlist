@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useEffect } from "react";
+import Link from "next/link";
 import Header from "../header";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
@@ -35,7 +36,9 @@ export default function Layout({ children, lang, chainName, setChainName }) {
       <div className="dark:text-[#B3B3B3] text-black dark:bg-[#0D0D0D] bg-white relative h-full">
         <div className="p-5 sticky top-0 bottom-0 m-auto flex flex-col items-center gap-8 justify-center h-screen max-w-[480px] mx-auto">
           <figure className="lg:mr-auto">
-            <Logo />
+            <Link href="/" prefetch={false}>
+              <Logo />
+            </Link>
             <figcaption className="font-bold text-2xl">{t("help-info")}</figcaption>
           </figure>
 
@@ -44,7 +47,7 @@ export default function Layout({ children, lang, chainName, setChainName }) {
           <div className="flex flex-col gap-4 w-full">
             <a
               className="flex items-center justify-center mx-auto lg:ml-0 gap-2 rounded-[50px] max-w-[16.25rem] font-medium py-[18px] px-6 shadow-lg w-full dark:bg-[#2F80ED] bg-[#2F80ED] dark:text-black text-white"
-              href="https://github.com/ethereum-lists/chains"
+              href="https://github.com/DefiLlama/chainlist?tab=readme-ov-file#add-a-chain"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -128,8 +131,18 @@ export default function Layout({ children, lang, chainName, setChainName }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="#2F80ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+              fill="none"
+              stroke="#2F80ED"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
             </svg>
             <span className="text-base font-medium">API</span>
           </a>
