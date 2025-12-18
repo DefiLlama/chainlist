@@ -1,7 +1,7 @@
 export const data = {
-    "name": "Cp Chain Testnet",
-    "chain": "CP",
-    "icon": "cp",
+    "name": "CpChain Testnet",
+    "chain": "CpChain",
+    "icon": "cpchain",
     "rpc": [
         "https://rpc-testnet.cpchain.com",
     ],
@@ -10,17 +10,17 @@ export const data = {
         "https://www.cpchain.com/faucet"
     ],
     "nativeCurrency": {
-        "name": "cp",
+        "name": "CP",
         "symbol": "CP",
         "decimals": 18
     },
     "infoURL": "https://www.cpchain.com/",
-    "shortName": "cp",
+    "shortName": "cpchain-testnet",
     "chainId": 86606,
     "networkId": 86606,
     "explorers": [
         {
-            "name": "CpChainExplorer",
+            "name": "CpChain Testnet Explorer",
             "url": "https://explorer-testnet.cpchain.com/",
             "standard": "EIP3091"
         },
