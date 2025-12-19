@@ -3915,8 +3915,6 @@ export const extraRpcs = {
       },
       {
         url: "https://monad-mainnet.gateway.tatum.io",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
