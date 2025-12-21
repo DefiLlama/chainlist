@@ -508,12 +508,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/eth",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/eth",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://rpc.owlracle.info/eth/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -1194,12 +1194,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/avax",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/avax",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -2545,12 +2545,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/op",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/op",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -2831,12 +2831,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/gno",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/gno",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://gnosis.therpc.io",
@@ -3783,12 +3783,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/etc",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/etc",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://ethereum-classic-mainnet.gateway.tatum.io/",
@@ -3812,12 +3812,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/mordor",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/mordor",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
     ],
   },
@@ -5096,12 +5096,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/mint",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/mint",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
     ],
   },
@@ -5708,12 +5708,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/sep",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/sep",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://rpc.owlracle.info/sepolia/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -7749,12 +7749,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/uni",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/uni",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://unichain.therpc.io",
@@ -8550,12 +8550,12 @@ export const extraRpcs = {
       {
         url: "https://0xrpc.io/hoodi",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "wss://0xrpc.io/hoodi",
         tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.0xrpc,
       },
       {
         url: "https://ethereum-hoodi.gateway.tatum.io/",
