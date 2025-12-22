@@ -14,7 +14,14 @@ export const data = {
     "shortName": "midl-testnet",
     "chainId": 15001,
     "networkId": 15001,
-    "explorers": []
+    "explorers": [
+        {
+            "name": "Midl Testnet Explorer",
+            "url": "blockscout.regtest.midl.xyz",
+            "icon": "midl",
+            "standard": "EIP3091"
+        }
+    ]
   }
   
   
