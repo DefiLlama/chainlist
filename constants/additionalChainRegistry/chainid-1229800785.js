@@ -15,6 +15,6 @@ export const data = {
   "shortName": "itani",
   "chainId": 1229800785,
   "networkId": 1229800785,
-  "icon": "https://github.com/iTaniCore/iTani-Network-Chain/blob/main/favicon.svg",
+  "icon": "itani",
   "explorers": []
 }
