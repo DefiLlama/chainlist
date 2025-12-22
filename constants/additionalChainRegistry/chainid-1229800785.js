@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "iTani Network Chain",
   "chain": "ITANI",
   "rpc": [
@@ -15,6 +15,6 @@
   "shortName": "itani",
   "chainId": 1229800785,
   "networkId": 1229800785,
-  "icon": "itani",
+  "icon": "https://github.com/iTaniCore/iTani-Network-Chain/blob/main/favicon.svg",
   "explorers": []
 }
