@@ -3914,6 +3914,11 @@ export const extraRpcs = {
         url: "https://monad-mainnet-rpc.spidernode.net/",
       },
       {
+        url: "https://infra.originstake.com/monad/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      },
+      {
         url: "https://monad-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -8095,6 +8100,11 @@ export const extraRpcs = {
         url: "https://evm-rpc.story.mainnet.dteam.tech",
         tracking: "none",
         trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "https://infra.originstake.com/story/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
       },
       {
         url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
