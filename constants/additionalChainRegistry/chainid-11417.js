@@ -1,4 +1,3 @@
-
 export const data = {
   "name": "Anq World Testnet",
   "chain": "ETH",
@@ -24,4 +23,3 @@ export const data = {
     "standard": "EIP3091"
   }]
 }
-
