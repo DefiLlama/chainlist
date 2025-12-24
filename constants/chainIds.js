@@ -156,7 +156,7 @@ export default {
   "5432": "yeying",
   "5464": "saga",
   "5551": "nahmii",
-  "5858": "cth",
+  "5858": "chang chain foundation",
   "6001": "bouncebit",
   "6699": "ox",
   "6880": "mtt network",
