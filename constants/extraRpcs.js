@@ -566,7 +566,7 @@ export const extraRpcs = {
   1492: {
     rpcs: [
       {
-        url: "https://rpc.roonchain.com/",
+        url: "https://rpc.roonchain.com",
         tracking: "unspecified",
       },
     ],

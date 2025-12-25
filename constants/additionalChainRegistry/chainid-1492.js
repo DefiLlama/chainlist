@@ -2,7 +2,7 @@ export const data ={
     "name": "ROON Mainnet",
     "chain": "ROON",
     "rpc": [
-      "https://rpc.roonchain.com/"
+      "https://rpc.roonchain.com"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -15,12 +15,12 @@ export const data ={
     "shortName": "roonchain",
     "chainId": 1492,
     "networkId": 1492,
-    "icon": "roon",
+    "icon": "roonchain",
     "explorers": [
         {
           "name": "Roon Mainnet explorer",
-          "url": "https://browser.roonchain.com/",
-          "icon": "roon",
+          "url": "https://browser.roonchain.com",
+          "icon": "roonchain",
           "standard": "EIP3091"
         }
       ]
