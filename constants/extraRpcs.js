@@ -9308,6 +9308,23 @@ export const extraRpcs = {
       },
     ],
   },
+   // Dolphinet 主网
+  1520: {
+    rpcs: [
+      { url: "https://rpc.dolphinode.world", tracking: "none" },
+      { url: "wss://wss.dolphinode.world", tracking: "none" },
+      { url: "https://rpc-dev01.dolphinode.world", tracking: "none" },
+      { url: "wss://wss-dev01.dolphinode.world", tracking: "none" },
+    ],
+  },
+
+  // Dolphinet Testnet
+  1519: {
+    rpcs: [
+      { url: "https://rpc-testnet.dolphinode.world", tracking: "none" },
+      { url: "wss://wss-testnet.dolphinode.world", tracking: "none" },
+    ],
+  },
   2523: {
     rpcs: [
       {
