@@ -1,11 +1,16 @@
-module.exports = {
+export const data = {
   name: "Dolphinet Mainnet",
   chain: "DOL",
+  icon: "dolphinet",
   rpc: [
     "https://rpc.dolphinode.world",
     "wss://wss.dolphinode.world",
     "https://rpc-dev01.dolphinode.world",
     "wss://wss-dev01.dolphinode.world"
+  ],
+  features: [
+    { name: "EIP155" },
+    { name: "EIP1559" }
   ],
   faucets: [],
   nativeCurrency: {
@@ -13,10 +18,6 @@ module.exports = {
     symbol: "DOL",
     decimals: 18
   },
-  features: [
-    { name: "EIP155" },
-    { name: "EIP1559" }
-  ],
   infoURL: "https://chain.dolphinode.world/",
   shortName: "dolphinet",
   chainId: 1520,
@@ -24,9 +25,7 @@ module.exports = {
   explorers: [
     {
       name: "blockscout",
-      url: "https://explorer.dolphinode.world/",
-      icon: "blockscout",
-      standard: "EIP3091"
+      url: "https://explorer.dolphinode.world/"
     }
   ]
 };
