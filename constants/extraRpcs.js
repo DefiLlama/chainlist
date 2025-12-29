@@ -8823,6 +8823,18 @@ export const extraRpcs = {
       "https://eth.nodebridge.xyz/assetchaintestnet/exec/b903e07d-54ee-4c4d-bffb-8b073e8163fa",
     ],
   },
+    42429: {
+    rpcs: [
+      "https://tempo-testnet.drpc.org",
+      "wss://tempo-testnet.drpc.org",
+    ],
+  },
+      6281971: {
+    rpcs: [
+      "https://dogeos-testnet.drpc.org",
+      "wss://dogeos-testnet.drpc.org",
+    ],
+  },
   43111: {
     rpcs: [
       "https://rpc.hemi.network/rpc",
