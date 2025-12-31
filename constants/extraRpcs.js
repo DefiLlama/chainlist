@@ -1192,16 +1192,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://0xrpc.io/avax",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/avax",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
@@ -2542,16 +2532,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.lava,
       },
       "https://optimism.rpc.subquery.network/public",
-      {
-        url: "https://0xrpc.io/op",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/op",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -7750,16 +7730,6 @@ export const extraRpcs = {
         url: "wss://unichain.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://0xrpc.io/uni",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/uni",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://unichain.therpc.io",
