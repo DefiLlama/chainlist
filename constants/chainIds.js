@@ -23,6 +23,7 @@ export default {
   "61": "ethereumclassic",
   "66": "okexchain",
   "70": "hoo",
+  "81": "joc",
   "82": "meter",
   "87": "nova network",
   "88": "tomochain",
