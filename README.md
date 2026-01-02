@@ -1,7 +1,15 @@
 # Chainlist
+## Ethereum Sepolia Testnet
 
+**Network Name:** Ethereum Sepolia  
+**Chain ID:** 11155111  
+**RPC URL:** https://rpc.sepolia.org  
+**Currency Symbol:** ETH  
+**Block Explorer:** https://sepolia.etherscan.io  
+Ethereum Sepolia is the official Ethereum proof-of-stake test network, intended for testing smart contracts, infrastructure, and decentralized applications prior to mainnet deployment. It replaces older testnets such as Ropsten and Goerli and is recommended for current Ethereum development.
 ## Add a chain
-
+Add Ethereum Sepolia testnet details
+Adds basic network information for Ethereum Sepolia testnet, including chain ID, RPC endpoint, and block explorer.
 Submit a PR that adds a new file to the [constants/additionalChainRegistry folder](https://github.com/DefiLlama/chainlist/tree/main/constants/additionalChainRegistry). The new file should be named `chainid-{chainid_number}.js` and the contents should follow this structure:
 ```
 {
