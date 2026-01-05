@@ -17,12 +17,7 @@ export const data ={
   "shortName": "r0art",
   "chainId": 11166111,
   "networkId": 11166111,
-  "icon": {
-    "url": "ipfs://bafkreidkjnapgtiklxnefhflatxs72t6knhft6ma7oaqkbfebr67uouyke",
-    "format": "png",
-    "width": 512,
-    "height": 512
-  },
+  "icon": "r0ar",
   "explorers": [
     {
       "name": "R0ARscan (testnet)",
