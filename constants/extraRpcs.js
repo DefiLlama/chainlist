@@ -3817,6 +3817,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
       },
+      {
+        url: "https://0xrpc.io/mordor",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/mordor",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
     ],
   },
   64: {
@@ -3920,6 +3930,16 @@ export const extraRpcs = {
       },
       {
         url: "https://monad-mainnet-rpc.spidernode.net/",
+      },
+      {
+        url: "https://infra.originstake.com/monad/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      },
+      {
+        url: "https://monad-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -5375,6 +5395,16 @@ export const extraRpcs = {
         url: "https://api-base-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -7166,7 +7196,19 @@ export const extraRpcs = {
     ],
   },
   4202: {
-    rpcs: ["https://rpc.sepolia-api.lisk.com"],
+    rpcs: [
+      "https://rpc.sepolia-api.lisk.com",
+      {
+        url: "https://lisk-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lisk-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   1135: {
     rpcs: [
@@ -7234,7 +7276,19 @@ export const extraRpcs = {
     ],
   },
   999999999: {
-    rpcs: ["https://sepolia.rpc.zora.energy"],
+    rpcs: [
+      "https://sepolia.rpc.zora.energy",
+      {
+        url: "https://zora-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zora-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   7777777: {
     rpcs: [
@@ -7832,6 +7886,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
+      {
+        url: "https://manta-pacific-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://manta-pacific-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   531050104: {
@@ -8054,6 +8118,11 @@ export const extraRpcs = {
         url: "https://evm-rpc.story.mainnet.dteam.tech",
         tracking: "none",
         trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "https://infra.originstake.com/story/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
       },
       {
         url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
@@ -8369,6 +8438,16 @@ export const extraRpcs = {
       },
       {
         url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lens.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -8730,6 +8809,14 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.poolz,
       },
+      "https://tokyo.fullnode.mainnet.coti.io/rpc",
+      "wss://tokyo.fullnode.mainnet.coti.io/ws",
+      "https://virginia.fullnode.mainnet.coti.io/rpc",
+      "wss://virginia.fullnode.mainnet.coti.io/ws",
+      "https://new-york.fullnode.mainnet.coti.io/rpc",
+      "wss://new-york.fullnode.mainnet.coti.io/ws",
+      "https://community-enabler-1.fullnode.mainnet.coti.io/rpc",
+      "wss://community-enabler-1.fullnode.mainnet.coti.io/ws",
     ],
   },
   7082400: {
@@ -8830,7 +8917,7 @@ export const extraRpcs = {
     rpcWorking: true,
   },
   5031: {
-    rpcs: ["https://rpc.somnia.network", "https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
+    rpcs: ["https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
   },
   9745: {
     rpcs: [
@@ -8959,6 +9046,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://plume-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   747474: {
@@ -9070,6 +9162,16 @@ export const extraRpcs = {
         url: "wss://xrplevm.buildintheshade.com",
         tracking: "limited",
         trackingDetails: privacyStatement.grove,
+      },
+      {
+        url: "https://xrpl.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://xrpl.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -9199,6 +9301,37 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
+  },
+  397: {
+    rpcs: [
+      {
+        url: "https://near.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://near.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2523: {
+    rpcs: [
+      {
+        url: "https://fraxtal-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://fraxtal-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2999: {
+    rpcs: ["https://mainnet.bityuan.com/eth", "https://node1.bityuan.com/eth", "https://node2.bityuan.com/eth"],
   },
 };
 
