@@ -40,6 +40,7 @@ export default {
   "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",
+  "1492": "roonchain",
   "166": "nomina",
   "169": "manta",
   "173": "eni",
