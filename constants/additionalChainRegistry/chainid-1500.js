@@ -2,7 +2,7 @@ export const data = {
   "name": "Midl Mainnet",
   "chain": "MIDL",
   "rpc": [
-    "https://rpc.midl.org",
+    "https://rpc.midl.xyz",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -17,7 +17,7 @@ export const data = {
   "explorers": [
     {
       "name": "Midl Mainnet Explorer",
-      "url": "blockscout.midl.org",
+      "url": "blockscout.midl.xyz",
       "icon": "midl",
       "standard": "EIP3091"
     }

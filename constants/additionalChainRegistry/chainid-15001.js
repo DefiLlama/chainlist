@@ -2,7 +2,7 @@ export const data = {
     "name": "Midl Testnet",
     "chain": "MIDL",
     "rpc": [
-      "https://rpc.testnet.midl.org",
+      "https://rpc.testnet.midl.xyz",
     ],
     "faucets": [],
     "nativeCurrency": {
