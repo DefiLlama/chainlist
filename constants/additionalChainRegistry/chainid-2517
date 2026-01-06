@@ -19,8 +19,8 @@ export const data ={
   ],
   "infoURL": "https://svpchain.org",
   "shortName": "svp-testnet",
-  "chainId": 1718,
-  "networkId": 1718,
+  "chainId": 2517,
+  "networkId": 2517,
   "icon": "svp",
   "explorers": [
     {
