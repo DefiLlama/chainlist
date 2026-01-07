@@ -6738,6 +6738,12 @@ export const extraRpcs = {
       "wss://socket.qubetics.com",
     ],
   },
+  6163: {
+    rpcs: [
+      "https://evm-rpc-arc.testnet.stackflow.site",
+      "wss://evm-ws.testnet.stackflow.site",
+    ],
+  },
   2358: {
     rpcs: ["https://api.sepolia.kroma.network"],
   },
