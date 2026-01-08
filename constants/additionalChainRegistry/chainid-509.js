@@ -17,10 +17,9 @@ export const data = {
   "explorers": [
     {
       "name": "BTB Chain Explorer",
-      "url": "https://btb-explorer.btbchain.org",
+      "url": "https://btbscan.io",
       "standard": "EIP3091"
     }
   ],
-  "chainSlug": "btb",
   "isTestnet": false
 }
