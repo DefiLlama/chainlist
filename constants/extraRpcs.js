@@ -563,6 +563,20 @@ export const extraRpcs = {
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
+  2517: {
+    rpcs: [
+          "https://svp-dataseed1-testnet.svpchain.org",
+          "https://svp-dataseed2-testnet.svpchain.org",
+          "https://svp-dataseed3-testnet.svpchain.org"
+        ],
+  },
+  2518: {
+    rpcs: [
+          "https://svp-dataseed1.svpchain.org",
+          "https://svp-dataseed2.svpchain.org",
+          "https://svp-dataseed3.svpchain.org"
+        ],
+  },
   80001: {
     rpcs: [
       "https://rpc-mumbai.maticvigil.com",
