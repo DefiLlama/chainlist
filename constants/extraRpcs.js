@@ -98,6 +98,8 @@ const privacyStatement = {
   zan: "ZAN Node Service generally does not store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs except for one senario ——we may track your IP address when you are using our RPCs and will delete it immediately when you stoping using our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf",
   quicknode:
     "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
+  hairylabs:
+    "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://pulsechain.hairylabs.io",
   pulsechainstats:
     "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
   chainstack:
@@ -4051,6 +4053,11 @@ export const extraRpcs = {
         url: "https://rpc.pulsechainstats.com",
         tracking: "limited",
         trackingDetails: privacyStatement.pulsechainstats,
+      },
+      {
+        url: "https://rpc.hairylabs.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hairylabs,
       },
     ],
   },
