@@ -1,4 +1,4 @@
-module.exports = {
+export const data = {
   name: "Kalichain",
   chain: "Kalichain",
   rpc: [
