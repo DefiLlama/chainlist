@@ -4197,25 +4197,9 @@ export const extraRpcs = {
       },
     ],
   },
-  1115: {
-    rpcs: [
-      "https://rpc.test.btcs.network",
-      {
-        url: "https://core-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://core-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
   1116: {
     rpcs: [
       "https://rpc.coredao.org",
-      "https://core.public.infstones.com",
       "wss://ws.coredao.org",
       {
         url: "https://1rpc.io/core",
