@@ -8783,14 +8783,7 @@ export const extraRpcs = {
       },
     ],
   },
-  1122: {
-    rpcs: [
-      "https://rpc.luxeports.com",
-      "https://erpc.luxeports.com",
-      "wss://rpc.luxeports.com/ws",
-      "wss://erpc.luxeports.com/ws",
-    ],
-  },
+  
   73115: {
     rpcs: [
       "https://rpc1-mainnet.icbnetwork.info",

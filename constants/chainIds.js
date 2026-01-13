@@ -32,7 +32,6 @@ export default {
   "108": "thundercore",
   "119": "enuls",
   "122": "fuse",
-  "1122": "luxeports",
   "128": "heco",
   "130": "unichain",
   "137": "polygon",
