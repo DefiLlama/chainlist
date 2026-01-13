@@ -12,7 +12,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://hypercluster.org/",
-  "shortName": "HyperCluster",
+  "shortName": "hypercluster",
   "chainId": 838838,
   "networkId": 838838,
   "explorers": [
