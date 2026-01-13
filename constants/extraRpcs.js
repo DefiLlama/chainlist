@@ -8121,16 +8121,12 @@ export const extraRpcs = {
   },
   3030: {
     rpcs: [
+      "https://datahub-asia02.bchscan.io/",
+      "https://datahub-asia01.bchscan.io/",
       {
-        url: "https://datahub-asia01.bchscan.io/",
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
-      {
-        url: "https://datahub-asia02.bchscan.io/",
-        tracking: "none",
-        trackingDetails: privacyStatement.bctech,
-      }
     ],
   },
   42070: {
