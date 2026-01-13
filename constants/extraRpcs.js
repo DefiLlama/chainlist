@@ -8130,7 +8130,7 @@ export const extraRpcs = {
         url: "https://datahub-asia02.bchscan.io/",
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
-      },
+      }
     ],
   },
   42070: {
