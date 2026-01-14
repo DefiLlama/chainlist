@@ -4,8 +4,8 @@ export const data = {
   rpc: ["https://rpc.testnet.stable.xyz"],
   faucets: ["https://faucet.stable.xyz"],
   nativeCurrency: {
-    name: "gUSDT",
-    symbol: "gUSDT",
+    name: "USDT0",
+    symbol: "USDT0",
     decimals: 18,
   },
   features: [{ name: "EIP1559" }, { name: "EIP1559" }],
@@ -15,11 +15,6 @@ export const data = {
   networkId: 2201,
   icon: "stable",
   explorers: [
-    {
-      "name": "Blockscout Explorer",
-      "url": "https://blockscout.testnet.stable.xyz",
-      "standard": "EIP3091"
-    },
     {
       "name": "Stablescan",
       "url": "https://testnet.stablescan.xyz",
