@@ -1,7 +1,6 @@
 export const data = {
   "name": "MegaETH",
   "chain": "MEGA",
-  "icon": "megaeth",
   "rpc": [
     "https://mainnet.megaeth.com/rpc",
   ],
