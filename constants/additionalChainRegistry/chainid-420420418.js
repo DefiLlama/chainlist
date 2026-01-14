@@ -2,8 +2,8 @@ export const data = {
   "name": "Kusama",
   "chain": "KSM",
   "rpc": [
-    "https://eth-rpc.kusama.polkadot.io",
-    "wss://eth-rpc.kusama.polkadot.io"
+    "https://eth-rpc-kusama.polkadot.io",
+    "wss://eth-rpc-kusama.polkadot.io"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -22,7 +22,7 @@ export const data = {
   "explorers": [
     {
       "name": "blockscout",
-      "url": "https://blockscout.kusama.polkadot.io",
+      "url": "https://blockscout-kusama.polkadot.io",
       "standard": "none"
     }
   ]

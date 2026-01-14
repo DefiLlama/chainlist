@@ -4,8 +4,8 @@ export const data = {
   "rpc": [
     "https://services.polkadothub-rpc.com/testnet",
     "wss://services.polkadothub-rpc.com/testnet",
-    "https://eth-rpc.testnet.polkadot.io",
-    "wss://eth-rpc.testnet.polkadot.io"
+    "https://eth-rpc-testnet.polkadot.io",
+    "wss://eth-rpc-testnet.polkadot.io"
   ],
   "faucets": [
     "https://faucet.polkadot.io/"
@@ -26,7 +26,7 @@ export const data = {
   "explorers": [
     {
       "name": "blockscout",
-      "url": "https://blockscout.testnet.polkadot.io",
+      "url": "https://blockscout-testnet.polkadot.io",
       "standard": "none"
     },
     {
