@@ -26,12 +26,12 @@ export const data = {
   "explorers": [
     {
       "name": "blockscout",
-      "url": "https://blockscout.testnet.polkadot.io/",
+      "url": "https://blockscout.testnet.polkadot.io",
       "standard": "none"
     },
     {
       "name": "routescan",
-      "url": "https://polkadot.testnet.routescan.io/",
+      "url": "https://polkadot.testnet.routescan.io",
       "standard": "none"
     }
   ]

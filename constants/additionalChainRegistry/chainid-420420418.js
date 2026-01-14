@@ -22,7 +22,7 @@ export const data = {
   "explorers": [
     {
       "name": "blockscout",
-      "url": "https://blockscout.kusama.polkadot.io/",
+      "url": "https://blockscout.kusama.polkadot.io",
       "standard": "none"
     }
   ]
