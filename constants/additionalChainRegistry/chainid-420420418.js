@@ -1,0 +1,29 @@
+export const data = {
+  "name": "Kusama",
+  "chain": "DOT",
+  "rpc": [
+    "https://eth-rpc.kusama.polkadot.io",
+    "wss://eth-rpc.kusama.polkadot.io"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "KSM",
+    "symbol": "KSM",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
+  "infoURL": "https://polkadot.com",
+  "shortName": "ksm",
+  "chainId": 420420418,
+  "networkId": 420420418,
+  "explorers": [
+    {
+      "name": "blockscout",
+      "url": "https://blockscout.kusama.polkadot.io/",
+      "standard": "none"
+    }
+  ]
+}
