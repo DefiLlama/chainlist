@@ -1,6 +1,6 @@
 export const data = {
   "name": "Kusama",
-  "chain": "DOT",
+  "chain": "KSM",
   "rpc": [
     "https://eth-rpc.kusama.polkadot.io",
     "wss://eth-rpc.kusama.polkadot.io"
