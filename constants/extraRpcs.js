@@ -8102,6 +8102,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.GrandValley,
       },
+      {
+        url: "https://story-mainnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
+      },
       "https://evm-rpc-story.j-node.net",
       "https://story-evm-rpc.krews.xyz",
       "https://evmrpc.story.nodestake.org",
@@ -8452,6 +8457,11 @@ export const extraRpcs = {
         url: "https://lightnode-json-rpc-story.grandvalleys.com",
         tracking: "none",
         trackingDetails: privacyStatement.GrandValley,
+      },
+      {
+        url: "https://story-testnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
       },
       {
         url: "https://rpc.ankr.com/story_aeneid_testnet",
