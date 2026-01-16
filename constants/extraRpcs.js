@@ -8126,6 +8126,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
+      {
+        url: "https://datahub-asia02.bchscan.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.bctech,
+      },
     ],
   },
   42070: {
