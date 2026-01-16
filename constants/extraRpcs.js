@@ -223,6 +223,8 @@ const privacyStatement = {
     "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy.",
   fullsend:
     "Full Send RPC does not track any kind of PII (i.e., IP address, location, etc.) in our backend services. We use Cloudflare strictly for DDoS protection, rate limiting, and performance optimization. Cloudflare may collect standard edge-level metadata such as IP addresses and request headers as part of its security and traffic-management functions; this data is processed according to Cloudflare’s own privacy policies and is not stored or used by Full Send. Only signed transactions are preserved for status tracking and service improvements. For more information about our privacy practices, please reference https://www.spire.dev/docs/terms-and-conditions",
+  OpsLayer:
+    "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
 };
 
 export const extraRpcs = {
@@ -9318,6 +9320,44 @@ export const extraRpcs = {
   },
   2999: {
     rpcs: ["https://mainnet.bityuan.com/eth", "https://node1.bityuan.com/eth", "https://node2.bityuan.com/eth"],
+  },
+  420420417: {
+    rpcs: [
+      {
+        url: "https://services.polkadothub-rpc.com/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      {
+        url: "wss://services.polkadothub-rpc.com/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      "https://eth-rpc.testnet.polkadot.io",
+      "wss://eth-rpc.testnet.polkadot.io"
+    ],
+  },
+  420420418: {
+    rpcs: [
+        "https://eth-rpc.kusama.polkadot.io",
+        "wss://eth-rpc.kusama.polkadot.io"
+    ],
+  },
+  420420419: {
+    rpcs: [
+      {
+        url: "https://services.polkadothub-rpc.com/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      {
+        url: "wss://services.polkadothub-rpc.com/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      "https://eth-rpc.polkadot.io",
+      "wss://eth-rpc.polkadot.io"
+    ],
   },
 };
 
