@@ -27,7 +27,7 @@ export const data = {
   "explorers": [
     {
       "name": "Ethiq Blockscout",
-      "url": "https://explorer.ethiq.haqq.network",
+      "url": "https://explorer.ethiq.network",
       "icon": "blockscout",
       "standard": "EIP3091"
     }
