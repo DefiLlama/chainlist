@@ -8765,6 +8765,7 @@ export const extraRpcs = {
       },
     ],
   },
+  
   73115: {
     rpcs: [
       "https://rpc1-mainnet.icbnetwork.info",
