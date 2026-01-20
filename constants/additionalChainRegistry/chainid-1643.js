@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "XGR Mainnet",
   "chain": "XGR",
   "rpc": [
