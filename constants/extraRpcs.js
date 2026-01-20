@@ -9327,7 +9327,7 @@ export const extraRpcs = {
         url: "https://rpc.evm.pharos.testnet.cosmostation.io",
         tracking: "none",
         trackingDetails: privacyStatement.Cosmostation
-      },
+      }
     ]
   }
 };
