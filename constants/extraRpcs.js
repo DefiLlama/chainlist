@@ -48,8 +48,6 @@ const privacyStatement = {
     "Sent transactions are private: https://payload.de/docs. By default, no data is collected when using the RPC endpoint. If provided by the user, the public address for authentication is captured when using the RPC endpoint in order to prioritize requests under high load. This information is optional and solely provided at the user's discretion. https://payload.de/privacy/",
   /*gitshock:
     "We do not collect any personal data from our users. Our platform is built on blockchain technology, which ensures that all transactions are recorded on a public ledger that is accessible to all users. However, this information is anonymous and cannot be linked to any specific individual. https://docs.gitshock.com/users-guide/privacy-policy",*/ // website is down
-  gashawk:
-    "Sign-in with Ethereum on https://www.gashawk.io required prior to use. We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error), read the terms of service https://www.gashawk.io/#/terms and the privacy policy https://www.gashawk.io/#/privacy.",
   LiveplexOracleEVM:
     "Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data. When You access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data. We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device. https://www.liveplex.io/privacypolicy.html",
   jellypool:
@@ -99,7 +97,7 @@ const privacyStatement = {
   quicknode:
     "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
   hairylabs:
-    "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://pulsechain.hairylabs.io",
+    "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://hairylabs.io",
   pulsechainstats:
     "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
   chainstack:
@@ -223,6 +221,8 @@ const privacyStatement = {
     "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy.",
   fullsend:
     "Full Send RPC does not track any kind of PII (i.e., IP address, location, etc.) in our backend services. We use Cloudflare strictly for DDoS protection, rate limiting, and performance optimization. Cloudflare may collect standard edge-level metadata such as IP addresses and request headers as part of its security and traffic-management functions; this data is processed according to Cloudflare’s own privacy policies and is not stored or used by Full Send. Only signed transactions are preserved for status tracking and service improvements. For more information about our privacy practices, please reference https://www.spire.dev/docs/terms-and-conditions",
+  OpsLayer:
+    "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
   Cosmostation:
     "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy"
 };
@@ -340,11 +340,6 @@ export const extraRpcs = {
         url: "https://eth-mainnet.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
-      },
-      {
-        url: "https://core.gashawk.io/rpc",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gashawk,
       },
       //"http://127.0.0.1:8545",
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
@@ -5385,6 +5380,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://rpcbase.hairylabs.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hairylabs,
+      },
     ],
   },
   11235: {
@@ -8104,6 +8104,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.GrandValley,
       },
+      {
+        url: "https://story-mainnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
+      },
       "https://evm-rpc-story.j-node.net",
       "https://story-evm-rpc.krews.xyz",
       "https://evmrpc.story.nodestake.org",
@@ -8454,6 +8459,11 @@ export const extraRpcs = {
         url: "https://lightnode-json-rpc-story.grandvalleys.com",
         tracking: "none",
         trackingDetails: privacyStatement.GrandValley,
+      },
+      {
+        url: "https://story-testnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
       },
       {
         url: "https://rpc.ankr.com/story_aeneid_testnet",
@@ -9320,6 +9330,44 @@ export const extraRpcs = {
   },
   2999: {
     rpcs: ["https://mainnet.bityuan.com/eth", "https://node1.bityuan.com/eth", "https://node2.bityuan.com/eth"],
+  },
+  420420417: {
+    rpcs: [
+      {
+        url: "https://services.polkadothub-rpc.com/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      {
+        url: "wss://services.polkadothub-rpc.com/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      "https://eth-rpc.testnet.polkadot.io",
+      "wss://eth-rpc.testnet.polkadot.io"
+    ],
+  },
+  420420418: {
+    rpcs: [
+        "https://eth-rpc.kusama.polkadot.io",
+        "wss://eth-rpc.kusama.polkadot.io"
+    ],
+  },
+  420420419: {
+    rpcs: [
+      {
+        url: "https://services.polkadothub-rpc.com/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      {
+        url: "wss://services.polkadothub-rpc.com/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.OpsLayer,
+      },
+      "https://eth-rpc.polkadot.io",
+      "wss://eth-rpc.polkadot.io"
+    ],
   },
   688689: {
     rpcs: [
