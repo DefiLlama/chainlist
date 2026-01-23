@@ -4367,42 +4367,6 @@ export const extraRpcs = {
       },
     ],
   },
-  195: {
-    rpcs: [
-      "https://xlayertestrpc.okx.com",
-      "https://testrpc.xlayer.tech",
-      {
-        url: "https://endpoints.omniatech.io/v1/xlayer/testnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://rpc.ankr.com/xlayer_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://xlayer-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://xlayer-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://moonbase-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://moonbase-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-    ],
-  },
   1287: {
     rpcs: [
       {
