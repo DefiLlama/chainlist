@@ -1669,6 +1669,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodies,
       },
       {
+  url: "https://rpc.ankr.com/arbitrum/c4cc6a8c87ec30258076de433ab2cf3d834228aae3fc4d76087873e4fea11635",
+  tracking: "yes",
+  trackingDetails: privacyStatement.ankr,
+},
+      {
         url: "https://arb-mainnet.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
