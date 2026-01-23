@@ -48,7 +48,7 @@ export default {
   "177": "hsk",
   "181": "water",
   "185": "mint",
-  "196": "xlayer",
+  "196": "x layer",
   "199": "bittorrent",
   "200": "xdaiarb",
   "204": "op_bnb",
