@@ -3,7 +3,37 @@ export const data = {
     "chain": "X Layer",
     "icon": "x layer",
     "rpc": [
-      "https://testrpc.xlayer.tech", "https://xlayertestrpc.okx.com"
+      "https://testrpc.xlayer.tech", "https://xlayertestrpc.okx.com",
+      {
+        url: "https://endpoints.omniatech.io/v1/xlayer/testnet/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://rpc.ankr.com/xlayer_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://xlayer-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://xlayer-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://moonbase-rpc.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "wss://moonbase-rpc.dwellir.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
     "faucets": ["https://www.okx.com/xlayer/faucet"],
     "nativeCurrency": {
@@ -23,3 +53,5 @@ export const data = {
       }
     ]
   }
+
+  
