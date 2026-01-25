@@ -16,7 +16,6 @@ export const data ={
   "shortName": "bie",
   "chainId": 1342,
   "networkId": 1342,
-  "icon": "bie",
   "explorers": [
     {
       "name": "BIE Explorer",
