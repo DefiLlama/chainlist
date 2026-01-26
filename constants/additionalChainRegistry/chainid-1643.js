@@ -1,0 +1,27 @@
+export const data = {
+  "name": "XGR Mainnet",
+  "chain": "XGR",
+  "rpc": [
+    "https://rpc.xgr.network",
+    "https://rpc1.xgr.network",
+    "https://rpc2.xgr.network",
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "XGR",
+    "symbol": "XGR",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://xgr.network",
+  "shortName": "xgr",
+  "chainId": 1643,
+  "networkId": 1643,
+  "icon": "https://xgr.network//Graphics/xgr_logo200.png",
+  "explorers": [{
+    "name": "XGR Explorer",
+    "url": "https://explorer.xgr.network",
+    "icon": "https://xgr.network//Graphics/xgr_logo200.png",
+    "standard": "EIP3091"
+  }]
+}

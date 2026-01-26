@@ -225,6 +225,8 @@ const privacyStatement = {
     "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
   sentio:
     "We may collect IP address information to support security measures and troubleshooting activities. For additional details about our privacy practices, please refer to this Privacy Statement https://www.sentio.xyz/privacy",
+  Cosmostation:
+    "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy"
 };
 
 export const extraRpcs = {
@@ -4439,42 +4441,6 @@ export const extraRpcs = {
       },
     ],
   },
-  195: {
-    rpcs: [
-      "https://xlayertestrpc.okx.com",
-      "https://testrpc.xlayer.tech",
-      {
-        url: "https://endpoints.omniatech.io/v1/xlayer/testnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://rpc.ankr.com/xlayer_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://xlayer-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://xlayer-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://moonbase-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://moonbase-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-    ],
-  },
   1287: {
     rpcs: [
       {
@@ -7169,19 +7135,13 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
-      "https://mainnet.zircuit.com",
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://zircuit1-mainnet.p2pify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
-      },
-      {
-        url: "https://zircuit-mainnet.drpc.org",
+        url: "wss://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -8263,6 +8223,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
+      {
+        url: "https://datahub-asia02.bchscan.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.bctech,
+      },
     ],
   },
   42070: {
@@ -8881,27 +8846,12 @@ export const extraRpcs = {
   48898: {
     rpcs: [
       {
-        url: "https://zircuit-garfield-testnet.drpc.org",
+        url: "https://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://zircuit-garfield-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  48899: {
-    rpcs: [
-      "https://zircuit1-testnet.p2pify.com/",
-      {
-        url: "https://zircuit-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zircuit-testnet.drpc.org",
+        url: "wss://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -9514,6 +9464,15 @@ export const extraRpcs = {
       "wss://eth-rpc.polkadot.io"
     ],
   },
+  688689: {
+    rpcs: [
+      {
+        url: "https://rpc.evm.pharos.testnet.cosmostation.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Cosmostation
+      }
+    ]
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
