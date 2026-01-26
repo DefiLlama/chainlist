@@ -1,4 +1,4 @@
-module.exports = {
+export const data = {
   name: "BNX Smart Chain",
   chain: "BNX",
   rpc: [
