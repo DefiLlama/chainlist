@@ -7028,31 +7028,15 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
-      "https://mainnet.zircuit.com",
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://zircuit1-mainnet.p2pify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
-      },
-      {
-        url: "https://zircuit-mainnet.drpc.org",
+        url: "wss://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zircuit-mainnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://zircuit1-mainnet.liquify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.liquify,
       },
     ],
   },
@@ -8705,27 +8689,12 @@ export const extraRpcs = {
   48898: {
     rpcs: [
       {
-        url: "https://zircuit-garfield-testnet.drpc.org",
+        url: "https://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://zircuit-garfield-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  48899: {
-    rpcs: [
-      "https://zircuit1-testnet.p2pify.com/",
-      {
-        url: "https://zircuit-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zircuit-testnet.drpc.org",
+        url: "wss://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
