@@ -552,6 +552,14 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.fullsend,
       },
+      {
+        url: "https://eth.tokentrustgroup.com/",
+        tracking: "unspecified"
+      },
+      {
+        url: "wss://eth.tokentrustgroup.com/",
+        tracking: "unspecified"
+      },
     ],
   },
   2: {
