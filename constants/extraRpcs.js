@@ -223,6 +223,8 @@ const privacyStatement = {
     "Full Send RPC does not track any kind of PII (i.e., IP address, location, etc.) in our backend services. We use Cloudflare strictly for DDoS protection, rate limiting, and performance optimization. Cloudflare may collect standard edge-level metadata such as IP addresses and request headers as part of its security and traffic-management functions; this data is processed according to Cloudflare’s own privacy policies and is not stored or used by Full Send. Only signed transactions are preserved for status tracking and service improvements. For more information about our privacy practices, please reference https://www.spire.dev/docs/terms-and-conditions",
   OpsLayer:
     "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
+  Cosmostation:
+    "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy"
 };
 
 export const extraRpcs = {
@@ -9336,6 +9338,15 @@ export const extraRpcs = {
       "wss://eth-rpc.polkadot.io"
     ],
   },
+  688689: {
+    rpcs: [
+      {
+        url: "https://rpc.evm.pharos.testnet.cosmostation.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Cosmostation
+      }
+    ]
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
