@@ -224,7 +224,9 @@ const privacyStatement = {
   OpsLayer:
     "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
   Cosmostation:
-    "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy"
+    "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy",
+  GlobalStake:
+    "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
 };
 
 export const extraRpcs = {
@@ -4725,6 +4727,15 @@ export const extraRpcs = {
   2559: {
     rpcs: [],
     rpcWorking: false,
+  },
+  4326: {
+    rpcs: [
+      {
+        url: "https://rpc-megaeth-mainnet.globalstake.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+    ],
   },
   2612: {
     rpcs: ["https://api.ezchain.com/ext/bc/C/rpc"],
