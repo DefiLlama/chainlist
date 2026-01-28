@@ -2,8 +2,8 @@ export const data = {
   "name": "HAQQ Testethiq (L2 Sepolia Testnet)",
   "chain": "ETH",
   "rpc": [
-    "https://rpc.testethiq.haqq.network",
-    "wss://rpc.testethiq.haqq.network"
+    "https://rpc.testnet.ethiq.network",
+    "wss://rpc.testnet.ethiq.network"
   ],
   "faucets": [
   ],
@@ -18,7 +18,7 @@ export const data = {
     { "name": "EIP2930" },
     { "name": "EIP4844" }
   ],
-  "infoURL": "https://www.haqq.network",
+  "infoURL": "https://ethiq.network",
   "shortName": "haqq-testethiq",
   "chainId": 853211,
   "networkId": 853211,
@@ -27,7 +27,7 @@ export const data = {
   "explorers": [
     {
       "name": "HAQQ Testethiq Blockscout",
-      "url": "https://explorer.testethiq.haqq.network",
+      "url": "https://explorer.testnet.ethiq.network",
       "icon": "blockscout",
       "standard": "EIP3091"
     }

@@ -1,0 +1,31 @@
+export const data = {
+  name: "Dolphinet Mainnet",
+  chain: "DOL",
+  icon: "dolphinet",
+  rpc: [
+    "https://rpc.dolphinode.world",
+    "wss://wss.dolphinode.world",
+    "https://rpc-dev01.dolphinode.world",
+    "wss://wss-dev01.dolphinode.world"
+  ],
+  features: [
+    { name: "EIP155" },
+    { name: "EIP1559" }
+  ],
+  faucets: [],
+  nativeCurrency: {
+    name: "DOL",
+    symbol: "DOL",
+    decimals: 18
+  },
+  infoURL: "https://chain.dolphinode.world/",
+  shortName: "dolphinet",
+  chainId: 1520,
+  networkId: 1520,
+  explorers: [
+    {
+      name: "blockscout",
+      url: "https://explorer.dolphinode.world/"
+    }
+  ]
+};
