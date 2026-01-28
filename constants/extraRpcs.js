@@ -223,6 +223,10 @@ const privacyStatement = {
     "Full Send RPC does not track any kind of PII (i.e., IP address, location, etc.) in our backend services. We use Cloudflare strictly for DDoS protection, rate limiting, and performance optimization. Cloudflare may collect standard edge-level metadata such as IP addresses and request headers as part of its security and traffic-management functions; this data is processed according to Cloudflare’s own privacy policies and is not stored or used by Full Send. Only signed transactions are preserved for status tracking and service improvements. For more information about our privacy practices, please reference https://www.spire.dev/docs/terms-and-conditions",
   OpsLayer:
     "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
+  Cosmostation:
+    "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy",
+  GlobalStake:
+    "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
 };
 
 export const extraRpcs = {
@@ -4724,6 +4728,15 @@ export const extraRpcs = {
     rpcs: [],
     rpcWorking: false,
   },
+  4326: {
+    rpcs: [
+      {
+        url: "https://rpc-megaeth-mainnet.globalstake.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+    ],
+  },
   2612: {
     rpcs: ["https://api.ezchain.com/ext/bc/C/rpc"],
   },
@@ -7026,31 +7039,15 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
-      "https://mainnet.zircuit.com",
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://zircuit1-mainnet.p2pify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
-      },
-      {
-        url: "https://zircuit-mainnet.drpc.org",
+        url: "wss://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zircuit-mainnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://zircuit1-mainnet.liquify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.liquify,
       },
     ],
   },
@@ -8095,6 +8092,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
+      {
+        url: "https://datahub-asia02.bchscan.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.bctech,
+      },
     ],
   },
   42070: {
@@ -8698,27 +8700,12 @@ export const extraRpcs = {
   48898: {
     rpcs: [
       {
-        url: "https://zircuit-garfield-testnet.drpc.org",
+        url: "https://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://zircuit-garfield-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  48899: {
-    rpcs: [
-      "https://zircuit1-testnet.p2pify.com/",
-      {
-        url: "https://zircuit-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zircuit-testnet.drpc.org",
+        url: "wss://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -9331,6 +9318,15 @@ export const extraRpcs = {
       "wss://eth-rpc.polkadot.io"
     ],
   },
+  688689: {
+    rpcs: [
+      {
+        url: "https://rpc.evm.pharos.testnet.cosmostation.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Cosmostation
+      }
+    ]
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
