@@ -17,11 +17,11 @@ export const data = {
   "shortName": "xgr",
   "chainId": 1643,
   "networkId": 1643,
-  "icon": "https://xgr.network//Graphics/xgr_logo200.png",
+  "icon": "xgr",
   "explorers": [{
     "name": "XGR Explorer",
     "url": "https://explorer.xgr.network",
-    "icon": "https://xgr.network//Graphics/xgr_logo200.png",
+    "icon": "xgr",
     "standard": "EIP3091"
   }]
 }
