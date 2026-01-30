@@ -122,6 +122,7 @@ export default {
   "1514": "sty",
   "1559": "tenet",
   "1625": "gravity",
+  "1643": "xgr",
   "1729": "reya network",
   "1818": "cube",
   "1868": "soneium",
