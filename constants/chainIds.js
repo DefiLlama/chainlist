@@ -251,7 +251,7 @@ export default {
   "81457": "blast",
   "88888": "chiliz",
   "97477": "doma",
-  "97741": "pepe",
+  "97741": "pepu",
   "98865": "plume_deprecated",
   "98866": "plume",
   "105105": "stratis",
