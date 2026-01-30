@@ -17,11 +17,11 @@ export const data = {
   "shortName": "qelt-testnet",
   "chainId": 771,
   "networkId": 771,
-  "icon": "https://i.postimg.cc/DzvDjBrT/Q-mark-Blue.png",
+  "icon": "qelt",
   "explorers": [{
     "name": "QELTScan Testnet",
     "url": "https://testnet.qeltscan.ai",
-    "icon": "https://i.postimg.cc/DzvDjBrT/Q-mark-Blue.png",
+    "icon": "qelt",
     "standard": "EIP3091"
   }]
 }
