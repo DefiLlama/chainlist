@@ -2,7 +2,7 @@ export const data = {
     "name": "Creator Chain Testnet",
     "chain": "Creator Chain",
     "rpc": [
-      "https://zksync-os-testnet-creator.zksync.dev",
+      "https://rpc.testnet.oncreator.com",
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -11,14 +11,14 @@ export const data = {
       "decimals": 18
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-    "infoURL": "https://x.com/oncreator_",
+    "infoURL": "https://www.oncreator.com",
     "shortName": "creator-chain-testnet",
     "chainId": 278701,
     "networkId": 278701,
     "explorers": [
       {
         "name": "Creator Chain Testnet Explorer",
-        "url": "https://block-explorer.zksync-os-testnet-creator.zksync.dev",
+        "url": "https://explorer.testnet.oncreator.com",
         "standard": "EIP3091"
       }
     ]
