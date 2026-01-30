@@ -52,7 +52,7 @@ export function populateChain(chain, chainTvls) {
     const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
 
     return defiChain === undefined
-      ? chain
+      ? { ...chain, chainSlug }
       : {
           ...chain,
           tvl: defiChain.tvl,
