@@ -20,8 +20,8 @@ export const data = {
   ],
   "infoURL": "https://datachain.network",
   "shortName": "datachain",
-  "chainId": 314159,
-  "networkId": 314159,
+  "chainId": 271828,
+  "networkId": 271828,
   "icon": "datachain",
   "explorers": [
     {
