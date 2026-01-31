@@ -1,7 +1,7 @@
 export const data = {
     "name": "Celes Testnet",
     "chain": "CLES",
-    "rpc": ["https://rpc-testnet.celeschain.org", "wss://rpc-testnet.celeschain.org"],
+    "rpc": ["https://rpc-testnet.celeschain.xyz", "wss://rpc-testnet.celeschain.org"],
     "faucets": [],
     "nativeCurrency": {
         name: "CLES",
@@ -20,7 +20,7 @@ export const data = {
     "explorers": [
       {
         "name": "Celes Testnet Explorer",
-        "url": "https://testnet-explorer.celeschain.org",
+        "url": "https://testnet-explorer.celeschain.xyz/",
         "icon": "celes",
         "standard": "EIP3091"
       }
