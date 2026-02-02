@@ -566,17 +566,17 @@ export const extraRpcs = {
   },
   2517: {
     rpcs: [
-          "https://svp-dataseed1-testnet.svpchain.org",
-          "https://svp-dataseed2-testnet.svpchain.org",
-          "https://svp-dataseed3-testnet.svpchain.org"
-        ],
+      "https://svp-dataseed1-testnet.svpchain.org",
+      "https://svp-dataseed2-testnet.svpchain.org",
+      "https://svp-dataseed3-testnet.svpchain.org"
+    ],
   },
   2518: {
     rpcs: [
-          "https://svp-dataseed1.svpchain.org",
-          "https://svp-dataseed2.svpchain.org",
-          "https://svp-dataseed3.svpchain.org"
-        ],
+      "https://svp-dataseed1.svpchain.org",
+      "https://svp-dataseed2.svpchain.org",
+      "https://svp-dataseed3.svpchain.org"
+    ],
   },
   80001: {
     rpcs: [
@@ -8766,13 +8766,13 @@ export const extraRpcs = {
       "https://eth.nodebridge.xyz/assetchaintestnet/exec/b903e07d-54ee-4c4d-bffb-8b073e8163fa",
     ],
   },
-    42429: {
+  42429: {
     rpcs: [
       "https://tempo-testnet.drpc.org",
       "wss://tempo-testnet.drpc.org",
     ],
   },
-      6281971: {
+  6281971: {
     rpcs: [
       "https://dogeos-testnet.drpc.org",
       "wss://dogeos-testnet.drpc.org",
@@ -9298,8 +9298,8 @@ export const extraRpcs = {
   },
   420420418: {
     rpcs: [
-        "https://eth-rpc.kusama.polkadot.io",
-        "wss://eth-rpc.kusama.polkadot.io"
+      "https://eth-rpc.kusama.polkadot.io",
+      "wss://eth-rpc.kusama.polkadot.io"
     ],
   },
   420420419: {
@@ -9324,6 +9324,15 @@ export const extraRpcs = {
         url: "https://rpc.evm.pharos.testnet.cosmostation.io",
         tracking: "none",
         trackingDetails: privacyStatement.Cosmostation
+      }
+    ]
+  },
+  1148: {
+    rpcs: [
+      {
+        url: "https://rpc.evm.pharos.testnet.cosmostation.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       }
     ]
   }
