@@ -1,3 +1,5 @@
+import { privacyStatement } from "../extraRpcs.js";
+
 export const data = {
     "name": "X Layer Testnet",
     "chain": "X Layer",
