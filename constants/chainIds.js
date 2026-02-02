@@ -260,8 +260,6 @@ export default {
   "167000": "taiko",
   "190415": "hpp",
   "200901": "bitlayer",
-  "770": "qelt",
-  "771": "qelt-testnet",
   "222222": "hydradx",
   "256256": "cmp",
   "258432": "standx",
