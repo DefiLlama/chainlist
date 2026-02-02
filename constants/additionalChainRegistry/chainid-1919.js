@@ -7,8 +7,8 @@ export const data = {
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "TURKCHAIN",
-    "symbol": "TC-20",
+    "name": "TC",
+    "symbol": "TURK",
     "decimals": 18
   },
   "features": [
