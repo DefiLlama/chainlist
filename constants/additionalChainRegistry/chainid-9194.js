@@ -1,4 +1,4 @@
-module.exports = {
+export const data = {
   "name": "Xyberchain Testnet",
   "chain": "XYB",
   "rpc": [
