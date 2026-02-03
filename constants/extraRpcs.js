@@ -231,6 +231,7 @@ const privacyStatement = {
     "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
 };
 
+
 export const extraRpcs = {
   1: {
     rpcs: [
