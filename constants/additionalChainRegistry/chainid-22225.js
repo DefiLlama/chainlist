@@ -1,7 +1,7 @@
 export const data = {
     "name": "Celes Testnet",
     "chain": "CLES",
-    "rpc": ["https://rpc-testnet.celeschain.xyz", "wss://rpc-testnet.celeschain.org"],
+    "rpc": ["https://rpc-testnet.celeschain.xyz", "wss://rpc-testnet.celeschain.xyz"],
     "faucets": [],
     "nativeCurrency": {
         name: "CLES",
