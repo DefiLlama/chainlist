@@ -1,7 +1,7 @@
 export const data = {
   name: "Somnia Mainnet",
   chain: "SOMNIA",
-  rpc: ["https://api.infra.mainnet.somnia.network", "https://somnia-json-rpc.stakely.io"],
+  rpc: ["https://api.infra.mainnet.somnia.network", "https://somnia-rpc.publicnode.com", "https://rpc.ankr.com/somnia_mainnet"],
   faucets: [],
   nativeCurrency: {
     name: "SOMI",
