@@ -15,9 +15,11 @@ export const data = {
   "shortName": "alpha",
   "chainId": 3111,
   "networkId": 3111,
+  "icon": "alphachain",
   "explorers": [{
     "name": "Alpha Chain Scan",
     "url": "https://scan.goalpha.org",
+    "icon": "alphachain",
     "standard": "EIP3091"
   }]
 }

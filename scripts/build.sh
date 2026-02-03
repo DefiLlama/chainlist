@@ -65,6 +65,18 @@ if [ -n "$ONLY_LIST_FILE" ]; then
   exit 0
 fi
 
+# Run duplicate key checks
+echo ""
+echo "🔍 Running duplicate key checks..."
+node tests/check-duplicate-keys.js
+DUPLICATE_CHECK_STATUS=$?
+
+if [ $DUPLICATE_CHECK_STATUS -ne 0 ]; then
+  echo ""
+  echo "🚨 Duplicate key check failed! Fix duplicates before building."
+  exit 1
+fi
+
 next build 2>&1 | tee build.log
 BUILD_STATUS=${PIPESTATUS[0]}
 
