@@ -12,7 +12,7 @@ export const data = {
       { "name": "EIP155" },
       { "name": "EIP1559" }
     ],
-    "infoURL": "https://celeschain.org",
+    "infoURL": "https://celeschain.xyz",
     "shortName": "cles",
     "chainId": 22225,
     "networkId": 22225,
