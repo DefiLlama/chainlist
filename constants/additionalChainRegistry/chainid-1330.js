@@ -6,9 +6,9 @@ export const data = {
   ],
   faucets: [],
   nativeCurrency: {
-    name: “ONNCoin”,
+    name: “ONN”,
     symbol: “ONN”,
-    decimals: 18,
+    decimals: 18
   },
   infoURL: "https://onnscan.com",
   shortName: “onn”,
@@ -19,7 +19,7 @@ export const data = {
     {
       name: “ONNChain Explorer",
       url: "https://onnscan.com",
-      standard: "EIP3091",
-    },
-  ],
+      standard: "EIP3091"
+    }
+  ]
 }
