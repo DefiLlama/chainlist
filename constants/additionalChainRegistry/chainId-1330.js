@@ -1,14 +1,15 @@
 export const chain1330 = {
   "name": "ONNChain",
   "chain": "ONN",
+  "icon": "https://github.com/mkd951/chainscout/blob/main/onnchain.png?raw=true",
   "rpc": [
     "https://mainnet.onnscan.org"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "ONN",
-    "symbol": "ONN",
-    "decimals": 18
+  "name": "ONN",
+  "symbol": "ONN",
+  "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://onnscan.com",
@@ -17,9 +18,10 @@ export const chain1330 = {
   "networkId": 1330,
   "explorers": [
     {
-      name: “ONNChain Explorer",
-      url: "https://onnscan.com",
-      standard: "EIP3091"
+      "name": “ONNChain Explorer",
+      "url": "https://onnscan.com",
+      "icon": "https://github.com/mkd951/chainscout/blob/main/onnchain.png?raw=true",
+      "standard": "EIP3091"
     }
   ]
 }
