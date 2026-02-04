@@ -2,7 +2,7 @@ export const data = {
   name: “ONNChain”,
   chain: “onn”,
   rpc: [
-    "https://mainnet.onnscan.org",
+    "https://mainnet.onnscan.org"
   ],
   faucets: [],
   nativeCurrency: {
