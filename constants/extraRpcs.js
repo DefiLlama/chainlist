@@ -2887,16 +2887,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://0xrpc.io/gno",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/gno",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
         url: "https://gnosis.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
