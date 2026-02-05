@@ -229,6 +229,8 @@ const privacyStatement = {
     "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy",
   GlobalStake:
     "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
+  datachain:
+    "Datachain Rope does not collect, store, or track any user data including IP addresses, wallet addresses, or request metadata. All RPC requests are processed without logging. Only publicly available on-chain data is accessible. https://datachain.network/privacy",
 };
 
 
@@ -9493,6 +9495,30 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Cosmostation
       }
     ]
+  },
+  271828: {
+    rpcs: [
+      {
+        url: "https://erpc.datachain.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.datachain,
+      },
+      {
+        url: "https://erpc.rope.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.datachain,
+      },
+      {
+        url: "wss://ws.datachain.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.datachain,
+      },
+      {
+        url: "wss://ws.rope.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.datachain,
+      },
+    ],
   }
 };
 
