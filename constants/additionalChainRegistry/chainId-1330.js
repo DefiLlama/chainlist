@@ -1,4 +1,4 @@
-export const chain1330 = {
+export const data = {
   "name": "ONNChain",
   "chain": "ONN",
   "icon": "https://github.com/mkd951/chainscout/blob/main/onnchain.png?raw=true",
@@ -18,7 +18,7 @@ export const chain1330 = {
   "networkId": 1330,
   "explorers": [
     {
-      "name": “ONNChain Explorer",
+      "name": "ONNChain Explorer",
       "url": "https://onnscan.com",
       "icon": "https://github.com/mkd951/chainscout/blob/main/onnchain.png?raw=true",
       "standard": "EIP3091"
