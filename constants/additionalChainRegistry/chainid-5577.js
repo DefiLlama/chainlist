@@ -1,4 +1,4 @@
-﻿export const chain5577 = {
+export const data = {
   "name": "MSC Blockchain",
   "chain": "MSC",
   "rpc": [
