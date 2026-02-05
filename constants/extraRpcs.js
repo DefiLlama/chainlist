@@ -7581,6 +7581,9 @@ export const extraRpcs = {
       },
     ],
   },
+  5577: {
+  rpcs: ["https://rpc.taaqo.com"]
+},
   1750: {
     rpcs: [
       "https://rpc.metall2.com",
@@ -7616,6 +7619,7 @@ export const extraRpcs = {
       "https://moksha-vana-rpc.tech-coha05.xyz",
     ],
   },
+
   55244: {
     rpcs: [
       {
