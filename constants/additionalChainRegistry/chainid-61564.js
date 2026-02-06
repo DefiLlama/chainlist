@@ -1,4 +1,4 @@
-export const data = {
+module.exports = {
   name: "Gelatine Network",
   chain: "JELLO",
   rpc: [
