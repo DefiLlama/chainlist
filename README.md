@@ -5,37 +5,57 @@
 Submit a PR that adds a new file to the [constants/additionalChainRegistry folder](https://github.com/DefiLlama/chainlist/tree/main/constants/additionalChainRegistry). The new file should be named `chainid-{chainid_number}.js` and the contents should follow this structure:
 ```
 {
-  "name": "Ethereum Mainnet",
-  "chain": "ETH",
+{
+  "name": "BlockGoldCoin Mainnet",
+  "chain": "BGC",
   "rpc": [
-    "https://eth.llamarpc.com",
+    "https://rpc.blockgoldcoin.org"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Ether",
-    "symbol": "ETH",
+    "name": "BlockGoldCoin",
+    "symbol": "BGC",
     "decimals": 18
   },
-  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://ethereum.org",
-  "shortName": "eth",
-  "chainId": 1,
-  "networkId": 1,
-  "icon": "ethereum",
-  "explorers": [{
-    "name": "etherscan",
-    "url": "https://etherscan.io",
-    "icon": "etherscan",
-    "standard": "EIP3091"
-  }]
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
+  "infoURL": "https://blockgoldcoin.org",
+  "shortName": "bgc",
+  "chainId": 12345,
+  "networkId": 12345,
+  "icon": "blockgoldcoin",
+  "explorers": [
+    {
+      "name": "BlockGoldCoin Explorer",
+      "url": "https://explorer.blockgoldcoin.org",
+      "standard": "EIP3091"
+    }
+  ]
 }
+
+{
+  "chainId": 12345,
+  "name": "BlockGoldCoin Mainnet",
+  "rpc": [
+    { "url": "https://rpc.blockgoldcoin.org" }
+  ],
+  "explorers": [
+    { "name": "BlockGoldCoin Explorer", "url": "https://explorer.blockgoldcoin.org" }
+  ],
+  "nativeCurrency": {
+    "name": "BlockGoldCoin",
+    "symbol": "BGC",
+    "decimals": 18
+  }
+}
+curl https://chainlist.org/rpcs.json | jq '.[] | select(.chainId == 12345)'
+const data = await fetch("https://chainlist.org/rpcs.json").then(res => res.json());
+const bgc = data.find(c => c.chainId === 12345);
+console.log(bgc);
+
 ```
 
-## Add an RPC to a chain that is already listed
-
-If you wish to add your RPC, please submit a PR modifying [constants/extraRpcs.js](https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js) to add your RPC to the given chains.
-
-## API
-The following API returns all the data in our website, including chain data along with all of their RPCs:
 
 https://chainlist.org/rpcs.json
