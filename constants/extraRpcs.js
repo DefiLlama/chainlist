@@ -5204,6 +5204,12 @@ export const extraRpcs = {
   70002: {
     rpcs: ["https://proxy2.thinkiumrpc.net/"],
   },
+  70003: {
+    rpcs: [
+      "https://rpc.pyrachain.io",
+      "wss://ws.pyrachain.io",
+    ],
+  },
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
