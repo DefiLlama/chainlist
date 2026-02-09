@@ -5204,6 +5204,12 @@ export const extraRpcs = {
   70002: {
     rpcs: ["https://proxy2.thinkiumrpc.net/"],
   },
+  70003: {
+    rpcs: [
+      "https://rpc.pyrachain.io",
+      "wss://ws.pyrachain.io",
+    ],
+  },
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
   },
@@ -9498,7 +9504,31 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Cosmostation
       }
     ]
-  }
+  },
+  1122: {
+    rpcs: [
+      {
+        url: "https://rpc.luxeports.com",
+        tracking: "none",
+        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+      {
+        url: "https://erpc.luxeports.com",
+        tracking: "none",
+        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+      {
+        url: "wss://rpc.luxeports.com/ws",
+        tracking: "none",
+        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+      {
+        url: "wss://erpc.luxeports.com/ws",
+        tracking: "none",
+        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
