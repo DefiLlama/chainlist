@@ -9056,11 +9056,6 @@ export const extraRpcs = {
   737373: {
     rpcs: [
       {
-        url: "https://subnets.avax.network/cx/mainnet/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://mainnet-cx-yfa61.avax.network/ext/bc/25xjR3fvh7aXkxs36n1xRc3wLUAuqnS1wBxJD1BC4z3y6mHsEV/ws?token=f538541aa85c54fd5e1bae54881851f39c538dbd1ae9f4ef23b280ec5b87b51f",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
