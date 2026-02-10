@@ -4813,6 +4813,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.GlobalStake,
       },
+      {
+        url: "https://megaeth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://megaeth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   2612: {
