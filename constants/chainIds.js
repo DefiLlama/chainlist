@@ -259,6 +259,7 @@ export default {
   "111188": "real",
   "153153": "odyssey",
   "167000": "taiko",
+  "181228": "hpp",
   "190415": "hpp",
   "200901": "bitlayer",
   "222222": "hydradx",
