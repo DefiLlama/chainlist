@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "BOT Chain Mainnet",
   "chain": "BOT",
   "rpc": [
@@ -15,7 +15,7 @@
   "shortName": "bot",
   "chainId": 677,
   "networkId": 677,
-  icon: "bot",
+  "icon": "bot",
   "explorers": [{
     "name": "botscan",
     "url": "https://scan.botchain.ai/"
