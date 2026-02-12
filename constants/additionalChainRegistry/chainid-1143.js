@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "ION Network",
   "chain": "ION",
   "rpc": [
