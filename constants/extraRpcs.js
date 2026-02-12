@@ -4124,7 +4124,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pulsechainstats,
       },
       {
-        url: "https://rpc.hairylabs.io/rpc",
+        url: "https://rpc.hairylabs.io",
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
       },
