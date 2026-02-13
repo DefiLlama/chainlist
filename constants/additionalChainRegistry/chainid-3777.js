@@ -1,4 +1,4 @@
-export default {
+export const data = {
   name: "INRI CHAIN",
   chain: "INRI",
   rpc: ["https://rpc.inri.life"],
