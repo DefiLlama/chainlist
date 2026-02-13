@@ -9555,6 +9555,20 @@ export const extraRpcs = {
       },
     ],
   },
+  677: {
+    rpcs: [
+      {
+        url: "https://rpc.botchain.ai",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://rpc.botchain.ai",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
