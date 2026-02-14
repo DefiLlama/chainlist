@@ -15,7 +15,7 @@ export const data = {
   "shortName": "hpp-mainnet",
   "chainId": 190415,
   "networkId": 190415,
-  "icon": "ethereum",
+  "icon": "https://ipfs.io/ipfs/QmX5MTCNX4wKb7B9pK6UH7oHGcWj5m8XywhzXqLA7gtVAJ",
   "explorers": [{
     "name": "HPP Mainnet Explorer",
     "url": "https://explorer.hpp.io",
