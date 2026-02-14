@@ -7,8 +7,8 @@ export const data = {
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "TURKCHAIN",
-    "symbol": "TC-20",
+    "name": "TC",
+    "symbol": "TURK",
     "decimals": 18
   },
   "features": [
@@ -27,7 +27,7 @@ export const data = {
   "explorers": [
     {
       "name": "TURKCHAIN Explorer",
-      "url": "https://explorer.turkchain1919.com",
+      "url": "https://turkscan.com",
       "icon": "turkchain",
       "standard": "EIP3091"
     }

@@ -1,14 +1,14 @@
 {
   "name": "chainlist",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "./scripts/build.sh",
     "export": "echo deprecated",
     "build2": "./scripts/build.sh",
     "start": "next start",
-    "serve": "serve out"
+    "serve": "serve out",
+    "test": "node tests/check-duplicate-keys.js"
   },
   "dependencies": {
     "@ariakit/react": "^0.2.12",
