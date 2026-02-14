@@ -6746,6 +6746,22 @@ export const extraRpcs = {
   1339: {
     rpcs: ["https://rpc.elysiumchain.tech/", "https://rpc.elysiumchain.us/"],
   },
+  1342: {
+    rpcs: [
+      {
+        url: "https://rpc.bie.ai",
+        tracking: "none",
+        trackingDetails:
+          "BIE RPC does not collect or store any PII information. IP addresses are only used for rate-limiting purposes.",
+      },
+      {
+        url: "https://api.bie.ai",
+        tracking: "none",
+        trackingDetails:
+          "BIE API does not collect or store any PII information. IP addresses are only used for rate-limiting purposes.",
+      },
+    ],
+  },
   1338: {
     rpcs: ["https://rpc.atlantischain.network/"],
   },
