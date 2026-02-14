@@ -9068,6 +9068,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://plasma.blockpi.network/v1/rpc/create_your_free_key",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
     ],
     websiteDead: false,
     rpcWorking: true,
