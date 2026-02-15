@@ -4124,7 +4124,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pulsechainstats,
       },
       {
-        url: "https://rpc.hairylabs.io/rpc",
+        url: "https://rpc.hairylabs.io",
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
       },
@@ -4815,6 +4815,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.GlobalStake,
       },
+      {
+        url: "https://megaeth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://megaeth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   2612: {
@@ -5205,6 +5215,12 @@ export const extraRpcs = {
   },
   70002: {
     rpcs: ["https://proxy2.thinkiumrpc.net/"],
+  },
+  70003: {
+    rpcs: [
+      "https://rpc.pyrachain.io",
+      "wss://ws.pyrachain.io",
+    ],
   },
   70103: {
     rpcs: ["https://proxy103.thinkiumrpc.net/"],
@@ -8941,10 +8957,15 @@ export const extraRpcs = {
       "wss://tempo-testnet.drpc.org",
     ],
   },
-      6281971: {
+  6281971: {
     rpcs: [
       "https://dogeos-testnet.drpc.org",
       "wss://dogeos-testnet.drpc.org",
+      {
+        url: "https://dogeos-testnet-public.unifra.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra,
+      },
     ],
   },
   43111: {
