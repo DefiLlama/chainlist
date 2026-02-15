@@ -7566,12 +7566,12 @@ export const extraRpcs = {
       },
     ],
   },
-  8691942025: {
+  12082025: {
     rpcs: [
       "https://rpc.onfachain.com", 
-      "https://rpc.onfa.io", 
+      "https://rpc.onfachain.net", 
       "wss://ws.onfachain.com", 
-      "wss://ws.onfa.io"
+      "wss://ws.onfachain.net"
     ], 
   }, 
   37111: {
