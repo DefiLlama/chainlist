@@ -5061,11 +5061,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://eth.bd.evmos.org:8545/",
-      {
-        url: "https://evmos-json-rpc.stakely.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.Stakely,
-      },
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
