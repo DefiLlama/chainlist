@@ -2,9 +2,9 @@ export const data = {
   "name": "Alpen Testnet II",
   "chain": "Alpen",
   "rpc": [
-    "https://rpc.pectra-testnet.alpenlabs.io",
+    "https://rpc.testnet.alpenlabs.io",
   ],
-  "faucets": ["https://faucet.pectra-testnet.alpenlabs.io/"],
+  "faucets": ["https://faucet.testnet.alpenlabs.io/"],
   "nativeCurrency": {
     "name": "Signet BTC",
     "symbol": "sBTC",
@@ -18,7 +18,7 @@ export const data = {
     "icon": "https://avatars.githubusercontent.com/u/113091135",
   "explorers": [{
     "name": "Alpen Testnet Explorer",
-    "url": "https://explorer.pectra-testnet.alpenlabs.io",
+    "url": "https://explorer.testnet.alpenlabs.io",
     "icon": "",
     "standard": "EIP3091"
   }]

@@ -1,0 +1,33 @@
+export const data = {
+  name: "RISE Testnet",
+  chain: "ETH",
+  rpc: ["https://testnet.riselabs.xyz", "wss://testnet.riselabs.xyz/ws"],
+  faucets: ["https://faucet.testnet.riselabs.xyz"],
+  features: [{ name: "EIP155" }, { name: "EIP1559" }, { name: "EIP7702" }],
+  nativeCurrency: {
+    name: "RISE Testnet Ether",
+    symbol: "ETH",
+    decimals: 18,
+  },
+  infoURL: "https://www.riselabs.xyz/",
+  shortName: "rise-testnet",
+  chainId: 11155931,
+  networkId: 11155931,
+  explorers: [
+    {
+      name: "blockscout",
+      url: "https://explorer.testnet.riselabs.xyz",
+      icon: "blockscout",
+      standard: "EIP3091",
+    },
+  ],
+  parent: {
+    type: "L2",
+    chain: "eip155-11155111",
+    bridges: [
+      {
+        url: "https://bridge-ui.testnet.riselabs.xyz",
+      },
+    ],
+  },
+};
