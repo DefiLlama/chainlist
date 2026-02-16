@@ -4124,7 +4124,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pulsechainstats,
       },
       {
-        url: "https://rpc.hairylabs.io/rpc",
+        url: "https://rpc.hairylabs.io",
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
       },
@@ -9552,6 +9552,20 @@ export const extraRpcs = {
         url: "wss://ws-testnet.dilithium3.com",
         tracking: "none",
         trackingDetails: privacyStatement.dilithium3,
+      },
+    ],
+  },
+  677: {
+    rpcs: [
+      {
+        url: "https://rpc.botchain.ai",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://rpc.botchain.ai",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
