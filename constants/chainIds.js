@@ -188,7 +188,7 @@ export default {
   "8453": "base",
   "8668": "hela",
   "8811": "haven1",
-  "8822": "iotaevm",
+  "8822": "iota evm",
   "8899": "jbc",
   "9001": "evmos",
   "9745": "plasma",
