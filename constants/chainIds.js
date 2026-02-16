@@ -244,6 +244,7 @@ export default {
   "57073": "ink",
   "59144": "linea",
   "60808": "bob",
+  "70003": "pyra",
   "71394": "godwoken",
   "71402": "godwoken",
   "78887": "lung",
