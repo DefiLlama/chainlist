@@ -236,7 +236,7 @@ export default {
   "50104": "sophon",
   "52014": "etn",
   "53935": "dfk",
-  "55244": "superposition",
+  "55244": "spn",
   "55555": "reichain",
   "55930": "datahaven",
   "55931": "datahaven-testnet",
