@@ -15,11 +15,11 @@ export const chain5577 = {
   "shortName": "TAAQO",
   "chainId": 5577,
   "networkId": 5577,
-  "icon": "taaqo",
+  "icon": "https://taaqo.com/TAAQOScan.png",
   "explorers": [{
     "name": "TaaqoScan",
     "url": "https://taaqoscan.com",
-    "icon": "taaqo",
+    "icon": "https://taaqo.com/TAAQOScan.png",
     "standard": "EIP3091"
   }]
 }
