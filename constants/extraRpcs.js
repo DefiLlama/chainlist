@@ -8545,39 +8545,14 @@ export const extraRpcs = {
       },
     ],
   },
-  8691942025: {
-    rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
-  },
-  232: {
+  12082025: {
     rpcs: [
-      "https://rpc.lens.xyz",
-      {
-        url: "https://light-icy-dinghy.lens-mainnet.quiknode.pro",
-        tracking: "yes",
-        trackingDetails: privacyStatement.quicknode,
-      },
-      {
-        url: "https://lens-mainnet.g.alchemy.com/public",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
-      {
-        url: "https://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
+      "https://rpc.onfachain.com", 
+      "https://rpc.onfachain.net", 
+      "wss://ws.onfachain.com", 
+      "wss://ws.onfachain.net"
+    ], 
+  }, 
   37111: {
     rpcs: [
       "https://rpc.testnet.lens.dev",
