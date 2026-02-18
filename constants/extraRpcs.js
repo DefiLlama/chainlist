@@ -219,6 +219,8 @@ const privacyStatement = {
     "We store minimal PII related to your login information. We will retain Users’ PII (including Sensitive PII, where applicable) while they maintain an account with us or to the extent necessary to provide the services through the Service. Thereafter, we will keep PII for as long as reasonably necessary. See our Privacy Policy for more details: https://grove.city/privacy",
   Chainlink:
     "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy.",
+  TBurn:
+    "We may collect publicly available blockchain information to provide our services. This may include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status. https://tburn.io/legal/privacy-policy.",
   fullsend:
     "Full Send RPC does not track any kind of PII (i.e., IP address, location, etc.) in our backend services. We use Cloudflare strictly for DDoS protection, rate limiting, and performance optimization. Cloudflare may collect standard edge-level metadata such as IP addresses and request headers as part of its security and traffic-management functions; this data is processed according to Cloudflare’s own privacy policies and is not stored or used by Full Send. Only signed transactions are preserved for status tracking and service improvements. For more information about our privacy practices, please reference https://www.spire.dev/docs/terms-and-conditions",
   OpsLayer:
@@ -300,6 +302,11 @@ export const extraRpcs = {
       },
       {
         url: "https://eth.rpc.blxrbdn.com/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
+      {
+        url: "https://tburn.io/rpc",
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
@@ -3587,6 +3594,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
+  },
+  6000: {
+    rpcs: ["https://tburn.io/rpc"],
   },
   246: {
     rpcs: ["https://rpc.energyweb.org"],
