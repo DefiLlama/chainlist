@@ -125,6 +125,7 @@ const privacyStatement = {
     "Information about your computer hardware and software may be automatically collected by Tokenview. This information can include such details as your IP address, browser type, domain names, access times, etc.https://services.tokenview.io/en/protocol",
   thirdweb:
     "Server logs automatically record information and details about your online interactions with us. For example, server logs may record information about your visit to our Site on a particular time and day and collect information such as your device ID and IP address.https://thirdweb.com/privacy",
+  hgraph: "When you interact with our Site, our servers automatically collect certain technical information to help us operate, maintain, and improve our services. This information may include details such as your device identifier, IP address, browser type, operating system, and the date and time of your visit. https://hgraph.com/privacy",
   itrocket:
     "We do not track, store or process any personal data. You can check our privacy policy here: https://itrocket.net/privacy-policy/",
   nodeconnect:
@@ -8718,10 +8719,25 @@ export const extraRpcs = {
     ],
   },
   295: {
-    rpcs: ["https://hedera.linkpool.pro", "https://295.rpc.thirdweb.com"],
+    rpcs: [
+      "https://hedera.linkpool.pro",
+      "https://295.rpc.thirdweb.com",
+      {
+        url: "https://mainnet.hedera.api.hgraph.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hgraph,
+      }
+    ],
   },
   296: {
-    rpcs: ["https://296.rpc.thirdweb.com"],
+    rpcs: [
+      "https://296.rpc.thirdweb.com",
+      {
+        url: "https://testnet.hedera.api.hgraph.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hgraph,
+      }
+    ],
   },
   11124: {
     rpcs: [
