@@ -1,4 +1,4 @@
-{
+export const data = {
    "name":"Advance Blockchain Mainnet",
    "chain":"ABC",
    "rpc":[
