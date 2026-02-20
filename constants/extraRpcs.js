@@ -4608,12 +4608,12 @@ export const extraRpcs = {
     {
       url: "https://moca.drpc.org",
       tracking: "none",
-      trackingDetails: privacyStatement.dRPC,
+      trackingDetails: privacyStatement.drpc,
     },
       {
         url: "wss://moca.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.dRPC,
+        trackingDetails: privacyStatement.drpc,
       },
     ], 
   },
@@ -4622,12 +4622,12 @@ export const extraRpcs = {
     {
       url: "https://moca-testnet.drpc.org",
       tracking: "none",
-      trackingDetails: privacyStatement.dRPC,
+      trackingDetails: privacyStatement.drpc,
     },
       {
         url: "wss://moca-testnet.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.dRPC,
+        trackingDetails: privacyStatement.drpc,
       },
     ], 
   },
