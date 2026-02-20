@@ -231,7 +231,7 @@ const privacyStatement = {
     "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
   dilithium3:
     "Dilithium3 RPC does not store or track any user data including IP addresses, wallet addresses, or transaction metadata. All data needed to process requests is ephemeral and not logged. Our quantum-resistant blockchain uses NIST FIPS 203/204/205 compliant post-quantum cryptography. No analytics, tracking cookies, or third-party services are used. https://dilithium3.com/privacy",
-  Huginn:
+  huginn:
     "Huginn Tech is a community-focused blockchain infrastructure provider offering node services, RPC endpoints, custom tools for blockchains. We do not collect, store, or track any user information (IP addresses, locations, etc.) through our RPC endpoints. For more information, visit https://huginn.tech/privacy",
 
 };
