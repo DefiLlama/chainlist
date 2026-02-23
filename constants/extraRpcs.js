@@ -8574,13 +8574,8 @@ export const extraRpcs = {
     ],
   },
   12082025: {
-    rpcs: [
-      "https://rpc.onfachain.com", 
-      "https://rpc.onfachain.net", 
-      "wss://ws.onfachain.com", 
-      "wss://ws.onfachain.net"
-    ], 
-  }, 
+    rpcs: ["https://rpc.onfachain.com", "https://rpc.onfachain.net", "wss://ws.onfachain.com", "wss://ws.onfachain.net"],
+  },
   232: {
     rpcs: [
       "https://rpc.lens.xyz",
