@@ -1,6 +1,6 @@
 export const data = {
   "name": "ONFA Chain",
-  "chain": "OFC",
+  "chain": "ONFA",
   "rpc": [
     "https://rpc.onfachain.com","https://rpc.onfachain.net"
   ],
@@ -12,7 +12,7 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://onfachain.com",
-  "shortName": "ofc",
+  "shortName": "onfacoin",
   "chainId": 12082025,
   "networkId": 12082025,
   "icon": "onfacoin",
