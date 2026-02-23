@@ -4603,6 +4603,34 @@ export const extraRpcs = {
       },
     ],
   },
+  2288: {
+    rpcs: [
+    {
+      url: "https://moca.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+    },
+      {
+        url: "wss://moca.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ], 
+  },
+  222888: {
+    rpcs: [
+    {
+      url: "https://moca-testnet.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+    },
+      {
+        url: "wss://moca-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ], 
+  },
   3636: {
     rpcs: [
       {
@@ -8553,6 +8581,36 @@ export const extraRpcs = {
       "wss://ws.onfachain.net"
     ], 
   }, 
+  232: {
+    rpcs: [
+      "https://rpc.lens.xyz",
+      {
+        url: "https://light-icy-dinghy.lens-mainnet.quiknode.pro",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
+      {
+        url: "https://lens-mainnet.g.alchemy.com/public",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
   37111: {
     rpcs: [
       "https://rpc.testnet.lens.dev",
