@@ -2,7 +2,8 @@ export const data = {
   "name": "ONFA Chain",
   "chain": "ONFA",
   "rpc": [
-    "https://rpc.onfachain.com","https://rpc.onfachain.net"
+    "https://rpc.onfachain.com",
+    "https://rpc.onfachain.net"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -17,7 +18,7 @@ export const data = {
   "networkId": 12082025,
   "icon": "onfachain",
   "explorers": [{
-    "name": "onfascan",
+    "name": "ONFA Scan",
     "url": "https://onfascan.io",
     "icon": "onfascan",
     "standard": "EIP3091"
