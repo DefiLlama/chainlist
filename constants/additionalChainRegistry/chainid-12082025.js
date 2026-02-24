@@ -12,10 +12,10 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://onfachain.com",
-  "shortName": "onfacoin",
+  "shortName": "onfachain",
   "chainId": 12082025,
   "networkId": 12082025,
-  "icon": "onfacoin",
+  "icon": "onfachain",
   "explorers": [{
     "name": "onfascan",
     "url": "https://onfascan.io",
