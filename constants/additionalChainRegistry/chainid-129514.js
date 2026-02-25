@@ -3,7 +3,7 @@ export const data = {
     "chain": "ETH",
     "icon": "fuel",
     "rpc": [
-      "https://fuel-testnet.zappayment.org"
+      "https://fuel-testnet-rpc.getzapped.org"
     ],
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": ["https://faucet-testnet.fuel.network/"],
@@ -19,7 +19,7 @@ export const data = {
     "explorers": [
       {
         "name": "Fuel Sepolia Testnet Explorer",
-        "url": "https://app-testnet.fuel.network",
+        "url": "https://fuel-testnet-explorer.getzapped.org",
         "standard": "none"
       }
     ],

@@ -8,7 +8,7 @@ export const data = {
     "faucets": ["https://faucet.ibvm.io"],
     "nativeCurrency": {
       "name": "IBVM Bitcoin",
-      "symbol": "BTC",
+      "symbol": "IBVM",
       "decimals": 18
     },
     "infoURL": "https://ibvm.io/",
@@ -18,7 +18,7 @@ export const data = {
     "explorers": [
       {
         "name": "IBVM Testnet explorer",
-        "url": "https://testnet-explorer.ibvm.io",
+        "url": "https://testnet.ibvmscan.io",
         "standard": "EIP3091"
       }
     ],

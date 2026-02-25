@@ -2,7 +2,7 @@ export const data = {
 	name: "Ozone Testnet",
 	chain: "OZONE",
 	icon: "ozone",
-	rpc: ["https://chain.ozonescan.com"],
+	rpc: ["https://rpc-testnet.ozonescan.com"],
 	features: [{
 		name: "EIP155"
 	}, {
