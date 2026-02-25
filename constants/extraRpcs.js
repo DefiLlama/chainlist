@@ -229,8 +229,8 @@ const privacyStatement = {
     "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy",
   GlobalStake:
     "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
-  dilithium3:
-    "Dilithium3 RPC does not store or track any user data including IP addresses, wallet addresses, or transaction metadata. All data needed to process requests is ephemeral and not logged. Our quantum-resistant blockchain uses NIST FIPS 203/204/205 compliant post-quantum cryptography. No analytics, tracking cookies, or third-party services are used. https://dilithium3.com/privacy",
+  datachain:
+    "Datachain Rope does not collect, store, or track any user data including IP addresses, wallet addresses, or request metadata. All RPC requests are processed without logging. Only publicly available on-chain data is accessible. https://datachain.network/privacy",
 };
 
 
@@ -9550,58 +9550,30 @@ export const extraRpcs = {
       }
     ]
   },
-  1122: {
+  271828: {
     rpcs: [
       {
-        url: "https://rpc.luxeports.com",
+        url: "https://erpc.datachain.network",
         tracking: "none",
-        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+        trackingDetails: privacyStatement.datachain,
       },
       {
-        url: "https://erpc.luxeports.com",
+        url: "https://erpc.rope.network",
         tracking: "none",
-        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+        trackingDetails: privacyStatement.datachain,
       },
       {
-        url: "wss://rpc.luxeports.com/ws",
+        url: "wss://ws.datachain.network",
         tracking: "none",
-        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+        trackingDetails: privacyStatement.datachain,
       },
       {
-        url: "wss://erpc.luxeports.com/ws",
+        url: "wss://ws.rope.network",
         tracking: "none",
-        trackingDetails: "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+        trackingDetails: privacyStatement.datachain,
       },
     ],
-  },
-  30939: {
-    rpcs: [
-      {
-        url: "https://rpc-testnet.dilithium3.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.dilithium3,
-      },
-      {
-        url: "wss://ws-testnet.dilithium3.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.dilithium3,
-      },
-    ],
-  },
-  677: {
-    rpcs: [
-      {
-        url: "https://rpc.botchain.ai",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://rpc.botchain.ai",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
+  }
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
