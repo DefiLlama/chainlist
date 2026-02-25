@@ -9596,7 +9596,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://rpc.botchain.ai",
+        url: "wss://ws-rpc.botchain.ai",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
