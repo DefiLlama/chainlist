@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512"
+xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+<!-- Background Gradient -->
+<radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+  <stop offset="0%" stop-color="#141a2e"/>
+  <stop offset="100%" stop-color="#05070f"/>
+</radialGradient>
+
+<!-- Infinity Gradient -->
+<linearGradient id="infGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#00C6FF"/>
+  <stop offset="50%" stop-color="#6A5CFF"/>
+  <stop offset="100%" stop-color="#FF2DA3"/>
+</linearGradient>
+
+<!-- Glow -->
+<filter id="glow">
+  <feGaussianBlur stdDeviation="8" result="blur"/>
+  <feMerge>
+    <feMergeNode in="blur"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+</defs>
+
+<!-- Coin Background -->
+<circle cx="256" cy="256" r="250" fill="url(#bgGradient)"/>
+
+<!-- Infinity Symbol -->
+<path
+d="M140,256
+C140,170 230,170 256,256
+C282,342 372,342 372,256
+C372,170 282,170 256,256
+C230,342 140,342 140,256"
+fill="none"
+stroke="url(#infGradient)"
+stroke-width="32"
+stroke-linecap="round"
+filter="url(#glow)"
+/>
+
+
+
+  <!-- iTani Text -->
+<text x="256" y="410"
+font-family="Arial, Helvetica, sans-serif"
+font-size="72"
+fill="white"
+text-anchor="middle"
+font-weight="600">
+iTani
+</text>
+
+<!-- Subtitle -->
+<text x="256" y="445"
+font-family="Arial, Helvetica, sans-serif"
+font-size="24"
+fill="#9aa4b2"
+text-anchor="middle">
+Network Chain
+</text>
+</svg>
