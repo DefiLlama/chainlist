@@ -579,6 +579,14 @@ export const extraRpcs = {
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
+  1492: {
+    rpcs: [
+      {
+        url: "https://rpc.roonchain.com",
+        tracking: "unspecified",
+      },
+    ],
+  },
   2517: {
     rpcs: [
           "https://svp-dataseed1-testnet.svpchain.org",
