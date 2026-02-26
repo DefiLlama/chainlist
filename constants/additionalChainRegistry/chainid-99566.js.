@@ -1,0 +1,25 @@
+{
+  "name": "Tractsafe Mainnet",
+  "chain": "TRCT",
+  "rpc": [
+    "https://xapi.tractsafe.com",
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Tractsafe",
+    "symbol": "TRCT",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://tractsafe.com",
+  "shortName": "trct",
+  "chainId": 99566,
+  "networkId": 99566,
+  "icon": "tractsafe",
+  "explorers": [{
+    "name": "tractsafescan",
+    "url": "https://explorer.tractsafe.com",
+    "icon": "tractsafe",
+    "standard": "EIP3091"
+  }]
+}
