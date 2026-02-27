@@ -4603,6 +4603,34 @@ export const extraRpcs = {
       },
     ],
   },
+  2288: {
+    rpcs: [
+    {
+      url: "https://moca.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+    },
+      {
+        url: "wss://moca.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ], 
+  },
+  222888: {
+    rpcs: [
+    {
+      url: "https://moca-testnet.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+    },
+      {
+        url: "wss://moca-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ], 
+  },
   3636: {
     rpcs: [
       {
@@ -5061,11 +5089,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://eth.bd.evmos.org:8545/",
-      {
-        url: "https://evmos-json-rpc.stakely.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.Stakely,
-      },
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
@@ -8252,7 +8275,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bctech,
       },
       "https://evm-rpc-archive.story.node75.org",
-      "https://rpc.evm.mainnet.story.despreadlabs.io"
+      "https://rpc.evm.mainnet.story.despreadlabs.io",
+      {
+        url: "https://story-json-rpc.stakely.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
     ],
   },
   3030: {
@@ -9054,7 +9082,7 @@ export const extraRpcs = {
     rpcWorking: true,
   },
   5031: {
-    rpcs: ["https://somnia-json-rpc.stakely.io", "https://somnia-rpc.publicnode.com"],
+    rpcs: ["https://somnia-rpc.publicnode.com"],
   },
   9745: {
     rpcs: [
@@ -9067,6 +9095,11 @@ export const extraRpcs = {
         url: "wss://plasma.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://plasma.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
     websiteDead: false,
@@ -9563,7 +9596,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://rpc.botchain.ai",
+        url: "wss://ws-rpc.botchain.ai",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
