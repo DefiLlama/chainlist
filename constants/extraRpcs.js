@@ -9602,6 +9602,20 @@ export const extraRpcs = {
       },
     ],
   },
+  42357: {
+    rpcs: [
+      {
+        url: "https://datasheed.pioscan.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://datasheed.pioscan.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
