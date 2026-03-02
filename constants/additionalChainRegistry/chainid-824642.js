@@ -1,24 +1,24 @@
-{
+export const data = {
   "name": "ZugChain Testnet", 
   "chain": "ZUG",
   "rpc": [
-    "https://rpc.zugchain.org" // Kendi RPC URL'nizi buraya yazın
+    "https://rpc.zugchain.org" 
   ],
   "faucets": [
-    "https://testnet.zugchain.org/faucet" // Varsa Faucet adresiniz
+    "https://testnet.zugchain.org/faucet" 
   ],
   "nativeCurrency": {
     "name": "ZUG",
     "symbol": "ZUG",
     "decimals": 18
   },
-  "infoURL": "https://zugchain.org", // Ana web siteniz
+  "infoURL": "https://zugchain.org", 
   "shortName": "zug",
-  "chainId": 824642, // ZUG Chain Testnet/Mainnet ID'niz (Dosya adıyla aynı olmalı)
-  "networkId": 824642, // Genelde Chain ID ile aynıdır
+  "chainId": 824642, 
+  "networkId": 824642, 
   "explorers": [{
     "name": "ZugChain Explorer",
-    "url": "https://explorer.zugchain.org", // Block Explorer URL'niz
+    "url": "https://explorer.zugchain.org",
     "standard": "EIP3091"
   }]
 }
