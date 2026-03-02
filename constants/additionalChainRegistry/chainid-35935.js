@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Tractsafe Testnet",
   "chain": "TRCT",
   "rpc": [
