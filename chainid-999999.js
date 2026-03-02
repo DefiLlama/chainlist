@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "iTani Network Chain",
   "chain": "ITN",
   "rpc": [
