@@ -2,7 +2,7 @@ export const data = {
   name: "Marschain",
   chain: "MARS",
   rpc: [
-    "https://rpc.marschain.net"
+    "https://marsdata.tuibi.com"
   ],
   faucets: [],
   nativeCurrency: {
