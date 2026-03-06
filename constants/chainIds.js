@@ -130,6 +130,7 @@ export default {
   "1907": "bitcichain",
   "1923": "swellchain",
   "1975": "onus",
+  "1990": "qie",
   "1992": "hubblenet",
   "1996": "sanko",
   "2000": "dogechain",
