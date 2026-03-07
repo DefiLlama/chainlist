@@ -48,8 +48,7 @@ export function populateChain(chain, chainTvls) {
 
   const chainSlug = chainIds[chain.chainId];
 
-  if (chainSlug !== undefined) {
-    const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
+
 
     return {
       ...chain,
