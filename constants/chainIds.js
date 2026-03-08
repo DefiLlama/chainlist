@@ -220,6 +220,7 @@ export default {
   "33139": "apechain",
   "34443": "mode",
   "35441": "q_protocol",
+  "38833": "igra",
   "39797": "energi",
   "41455": "aleph_zero_evm",
   "41923": "edu chain",
