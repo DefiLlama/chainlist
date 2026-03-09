@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "FyroChain Mainnet",
   "chain": "FYRO",
   "rpc": [
