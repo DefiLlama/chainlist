@@ -21,5 +21,7 @@ export const chain5577 = {
     "url": "https://taaqoscan.com",
     "icon": "https://taaqo.com/TAAQOScan.png",
     "standard": "EIP3091"
+    
   }]
+  
 }
