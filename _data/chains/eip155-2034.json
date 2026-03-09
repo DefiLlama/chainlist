@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "FST Smart Chain",
   "chain": "FST",
   "network": "mainnet",
