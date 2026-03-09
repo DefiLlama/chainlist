@@ -1,4 +1,4 @@
-module.exports = {
+export const data = {
   "name": "EGoldChain Mainnet",
   "chain": "EGold",
   "rpc": [
