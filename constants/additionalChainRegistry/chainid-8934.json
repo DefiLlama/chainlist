@@ -1,0 +1,25 @@
+{
+  "name": "YatriPay MainNet",
+  "chain": "YTP",
+  "rpc": [
+    "https://mnrpc.yatripay.in"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "YatriPay",
+    "symbol": "YTP",
+    "decimals": 18
+  },
+  "infoURL": "https://yatripay.com",
+  "shortName": "ytp",
+  "chainId": 8934,
+  "networkId": 8934,
+  "icon": "yatripay",
+  "explorers": [
+    {
+      "name": "YatriPay Explorer",
+      "url": "https://yvmexplorer.yatripay.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
