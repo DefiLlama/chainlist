@@ -4762,6 +4762,9 @@ export const extraRpcs = {
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
   },
+  2028: {
+    rpcs: ["https://rpc.armascan.io"],
+  },
   2077: {
     rpcs: ["http://rpc.qkacoin.org:8548"],
   },
