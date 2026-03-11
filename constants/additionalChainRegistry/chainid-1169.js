@@ -14,14 +14,14 @@
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://solariuschain.org",
-  "shortName": "sol",
+  "shortName": "solu",
   "chainId": 1,
   "networkId": 1,
-  "icon": "ethereum",
+  "icon": "solu",
   "explorers": [{
     "name": "Solarius Explorer",
     "url": "https://explorer.solariuschain.org",
-    "icon": "solariusscan",
+    "icon": "soluscan",
     "standard": "EIP3091"
   }]
 }
