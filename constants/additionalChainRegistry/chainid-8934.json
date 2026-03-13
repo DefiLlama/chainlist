@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "YatriPay MainNet",
   "chain": "YTP",
   "rpc": [
