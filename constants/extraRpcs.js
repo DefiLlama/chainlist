@@ -4762,6 +4762,9 @@ export const extraRpcs = {
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
   },
+  2028: {
+    rpcs: ["https://rpc.armascan.io"],
+  },
   2077: {
     rpcs: ["http://rpc.qkacoin.org:8548"],
   },
@@ -9653,6 +9656,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails:
           "Mars Credit does not collect or store any user information (IP addresses, locations, etc.) transmitted via our RPC.",
+      },
+    ],
+  },
+  3303: {
+    rpcs: [
+      {
+        url: "https://qbc.network/rpc",
+        tracking: "none",
+        trackingDetails:
+          "Quantum Blockchain does not collect or store any user information transmitted via the RPC endpoint.",
       },
     ],
   },
