@@ -229,8 +229,6 @@ const privacyStatement = {
     "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy",
   GlobalStake:
     "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
-  dilithium3:
-    "Dilithium3 RPC does not store or track any user data including IP addresses, wallet addresses, or transaction metadata. All data needed to process requests is ephemeral and not logged. Our quantum-resistant blockchain uses NIST FIPS 203/204/205 compliant post-quantum cryptography. No analytics, tracking cookies, or third-party services are used. https://dilithium3.com/privacy",
   huginn:
     "Huginn Tech is a community-focused blockchain infrastructure provider offering node services, RPC endpoints, custom tools for blockchains. We do not collect, store, or track any user information (IP addresses, locations, etc.) through our RPC endpoints. For more information, visit https://huginn.tech/privacy",
   hgraph:
@@ -9618,20 +9616,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails:
           "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
-      },
-    ],
-  },
-  30939: {
-    rpcs: [
-      {
-        url: "https://rpc-testnet.dilithium3.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.dilithium3,
-      },
-      {
-        url: "wss://ws-testnet.dilithium3.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.dilithium3,
       },
     ],
   },
