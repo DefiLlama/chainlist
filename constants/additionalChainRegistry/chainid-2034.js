@@ -3,9 +3,15 @@ export const data = {
   "chain": "FST",
   "network": "mainnet",
   "rpc": [
-    "https://mainnet.fenixst.io"
+    "https://mainnet.fenixst.io",
+    "https://node2.fenixst.io",
+    "https://node3.fenixst.io",
+    "https://node4.fenixst.io",
+    "https://node5.fenixst.io"
   ],
-  "faucets": [],
+  "faucets": [
+    "https://faucet.fenixst.io"
+  ],
   "nativeCurrency": {
     "name": "FST",
     "symbol": "FST",
