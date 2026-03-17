@@ -1,0 +1,23 @@
+export const data = {
+  "name": "NeutronX Mainnet",
+  "chain": "NTX",
+  "icon": "neutronx",
+  "rpc": ["https://rpc.neutronchain.io"],
+  "features": [{ "name": "EIP155" }],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "NeutronX",
+    "symbol": "NTX",
+    "decimals": 18
+  },
+  "infoURL": "https://neutronx.com",
+  "shortName": "ntx",
+  "chainId": 2070,
+  "networkId": 2070,
+  "explorers": [
+    {
+      "name": "NeutronX Explorer",
+      "url": "https://explorer.neutronchain.io"
+    }
+  ]
+}
