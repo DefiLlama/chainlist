@@ -1,4 +1,4 @@
-export default {
+export const data = {
       "name": "BotCash Sovereign L2",
       "chain": "BOTCY",
       "rpc": [
