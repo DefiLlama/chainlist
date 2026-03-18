@@ -4867,6 +4867,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.GlobalStake,
       },
       {
+        url: "https://gateway.liquify.com/chain/megaeth",
+        tracking: "limited",
+        trackingDetails: privacyStatement.liquify,
+      },      
+      {
         url: "https://megaeth.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -9196,6 +9201,11 @@ export const extraRpcs = {
     ],
     websiteDead: false,
     rpcWorking: true,
+      {
+        url: "https://gateway.liquify.com/chain/hypeevm",
+        tracking: "yes",
+        trackingDetails: privacyStatement.liquify,
+      },    
   },
   12127: {
     rpcs: [
