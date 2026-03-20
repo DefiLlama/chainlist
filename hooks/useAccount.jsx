@@ -2,15 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 
 async function getAccount() {
   try {
-    if (window.ethereum) {
-      const accounts = await window.ethereum.request({
-        method: "eth_accounts",
+    if (window.ethereum && window.ethereum.selectedAddress) {
+      const chainId = await window.ethereum.request({
+        method: "net_version",
       });
-
+      
       return {
-        chainId: window.networkVersion ? Number(window.networkVersion) : null,
-        address: accounts && accounts.length > 0 ? (accounts[0]) : null,
-        isConnected: window.ethereum.connected ? true : false,
+        chainId: Number(chainId),
+        address: window.ethereum.selectedAddress,
+        isConnected: window.ethereum.selectedAddress ? true : false,
       };
     } else {
       throw new Error("No Ethereum Wallet");
@@ -22,5 +22,5 @@ async function getAccount() {
 }
 
 export default function useAccount() {
-  return useQuery(["accounts"], () => getAccount());
+  return useQuery(["accounts"], () => getAccount(), { retry: 0 });
 }

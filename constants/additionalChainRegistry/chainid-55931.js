@@ -1,0 +1,29 @@
+export const data = 
+{
+  "name": "DataHaven Testnet",
+  "chain": "datahaven-testnet",
+  "icon": "datahaven",
+  "rpc": [
+    "https://services.datahaven-testnet.network/testnet",
+    "wss://services.datahaven-testnet.network/testnet"
+  ],
+  "faucets": [
+    "https://apps.datahaven.xyz/faucet"
+  ],
+  "nativeCurrency": {
+    "name": "MOCK",
+    "symbol": "MOCK",
+    "decimals": 18
+  },
+  "infoURL": "https://datahaven.xyz",
+  "shortName": "datahaven",
+  "chainId": 55931,
+  "networkId": 55931,
+  "explorers": [
+    {
+      "name": "Blockscout",
+      "url": "https://testnet.dhscan.io",
+      "standard": "none"
+    }
+  ]
+}
