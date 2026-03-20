@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Native } from "@hypelab/sdk-react";
-import { HYPELAB_NATIVE_PLACEMENT_SLUG } from "../../constants/hypelab";
+import { Native } from "@hype lab/sdk-react";
+import { HYPE LAB_NATIVE_PLACEMENT_SLUG } from "../../constants/hypelab";
 
 export const AdBanner = () => {
   const [isSquare, setIsSquare] = useState(false);
@@ -23,7 +23,7 @@ export const AdBanner = () => {
   }, [setIsSquare, setHideNativeTextContent]);
 
   return (
-    <Native placement={HYPELAB_NATIVE_PLACEMENT_SLUG}>
+    <Native placement={HYPE LAB_NATIVE_PLACEMENT_SLUG}>
       <div className="flex flex-col w-full h-full items-center justify-center">
         <div
           className={`flex flex-col w-fit max-w-full bg-white dark:bg-[#0D0D0D] rounded-[10px] shadow overflow-hidden ${
