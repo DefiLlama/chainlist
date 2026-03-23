@@ -1,0 +1,29 @@
+export const data = {
+    "name": "Citrate Testnet",
+    "chain": "CITRATE",
+    "rpc": [
+      "https://rpc.citrate.ai"
+    ],
+    "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+    "faucets": [
+      "https://faucet.citrate.ai"
+    ],
+    "nativeCurrency": {
+      "name": "SALT",
+      "symbol": "SALT",
+      "decimals": 18
+    },
+    "infoURL": "https://citrate.ai",
+    "shortName": "salt",
+    "chainId": 40204,
+    "networkId": 40204,
+    "slip44": 1,
+    "status": "active",
+    "explorers": [
+      {
+        "name": "Citrate Explorer",
+        "url": "https://explorer.citrate.ai",
+        "standard": "EIP3091"
+      }
+    ]
+  }
