@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "AXC World",
   "chain": "ETH",
   "rpc": [
