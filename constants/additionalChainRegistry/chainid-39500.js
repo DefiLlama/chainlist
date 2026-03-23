@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Cincoin Mainnet",
   "chain": "CIN",
   "rpc": [
