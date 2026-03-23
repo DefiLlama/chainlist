@@ -9690,6 +9690,16 @@ export const extraRpcs = {
       },
     ],
   },
+  2366: {
+  rpcs: [
+    {
+      url: "https://rpc.gokite.ai/",
+      tracking: "none",
+      trackingDetails:
+        "KiteAI RPC does not collect or store personal data from requests. Standard infrastructure-level logs may be used for monitoring and reliability.",
+    },
+  ],
+},
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
