@@ -1,7 +1,7 @@
 {
     "name": "HashSphere-4612",
     "chain": "HashSphere",
-    "rpc": [],
+    "rpc": ["http://rpc-4612.champagnesphere.net/"],
     "faucets": [],
     "nativeCurrency": {
       "name": "hbar",
