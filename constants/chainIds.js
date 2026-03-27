@@ -10,6 +10,7 @@ export default {
   "24": "kardia",
   "25": "cronos",
   "30": "rsk",
+  "31": "trsk",
   "40": "telos",
   "42": "lukso",
   "44": "crab",
