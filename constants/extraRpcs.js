@@ -212,7 +212,7 @@ const privacyStatement = {
   fastnode:
     "Fastnode temporarily logs request metadata (IP address, method, headers, timestamps, status, latency) for rate-limiting, security, DDoS protection and debugging. We do not correlate logs with on-chain wallet addresses, use them to front-run transactions, or sell personal data.https://fastnode.gitbook.io/privacy-policy/",
   Hightower:
-    "We may collect publicly available blockchain information in order to provide our services. This can include wallet addresses, transaction IDs, timestamps, amounts and fees, and transaction status. https://www.htw.tech/privacy-policy",
+    "We do not log, track, or archive IP addresses for requests made through our RPC, API, LCD, or WebSocket endpoints.We do not track wallet addresses, transaction signatures, or any metadata that could link an on-chain identity to a specific user. We do not monitor or record the content of your queries or the specific data you access on the blockchain. https://www.htw.tech/privacy-policy",
   poolz:
     "For service delivery and abuse prevention, we temporarily record IP addresses at the infrastructure level (via AWS) to set usage limits and monitor for denial of service attacks. These logs are used only for rate limiting and security purposes, and are automatically purged according to AWS retention policies. We do not correlate wallet addresses with IPs, and we do not store, exploit, or share any Personal Identifiable Information (PII). https://www.poolz.finance/privacy/",
   grove:
@@ -4012,6 +4012,16 @@ export const extraRpcs = {
         url: "wss://wss.monad-rpc.huginn.tech",
         tracking: "none",
         trackingDetails: privacyStatement.huginn,
+      },
+      {
+        url: "https://gm.monad.at.htw.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.Hightower,
+      },
+      {
+        url: "wss://gm.monad.at.htw.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.Hightower,
       },
     ],
   },
