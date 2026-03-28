@@ -15,12 +15,7 @@ export const data ={
   "shortName": "r0ar",
   "chainId": 193939,
   "networkId": 193939,
-  "icon": {
-    "url": "https://amaranth-elaborate-primate-236.mypinata.cloud/ipfs/bafkreibqk63qcgukyunft3h2qxh56cg6mtvzlrnxw4mbpxgahdk2litxqi",
-    "format": "svg",
-    "width": 512,
-    "height": 512
-  },
+  "icon": "r0ar",
   "explorers": [
     {
       "name": "R0ARscan",
