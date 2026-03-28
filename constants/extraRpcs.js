@@ -9423,6 +9423,11 @@ export const extraRpcs = {
         url: "https://evm-rpc-ql1.foxxone.one",
         tracking: "none",
         trackingDetails: "No user tracking or data collection",
+      }, 
+      {
+        url: "https://evm-rpc-ql1.mschihuahua.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
       },
     ],
   },
@@ -9690,8 +9695,16 @@ export const extraRpcs = {
       },
     ],
   },
-};
-
+  421018: {
+    rpcs: [
+      {
+        url: "https://evm-rpc-infinite.mschihuahua.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+  }
+};  
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
 export default allExtraRpcs;
