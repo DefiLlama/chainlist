@@ -4,8 +4,8 @@ export const data = {
   rpc: ["https://rpc.stable.xyz"],
   faucets: [],
   nativeCurrency: {
-    name: "gUSDT",
-    symbol: "gUSDT",
+    name: "USDT0",
+    symbol: "USDT0",
     decimals: 18,
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],

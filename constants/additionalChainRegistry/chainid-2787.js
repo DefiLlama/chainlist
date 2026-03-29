@@ -1,8 +1,8 @@
 export const data = {
-    "name": "Creator Chain Testnet",
+    "name": "Creator Chain Mainnet",
     "chain": "Creator Chain",
     "rpc": [
-      "https://rpc.testnet.oncreator.com",
+      "https://rpc.mainnet.oncreator.com",
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -12,13 +12,13 @@ export const data = {
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "infoURL": "https://www.oncreator.com",
-    "shortName": "creator-chain-testnet",
-    "chainId": 278701,
-    "networkId": 278701,
+    "shortName": "creator-chain-mainnet",
+    "chainId": 2787,
+    "networkId": 2787,
     "explorers": [
       {
-        "name": "Creator Chain Testnet Explorer",
-        "url": "https://explorer.testnet.oncreator.com",
+        "name": "Creator Chain Mainnet Explorer",
+        "url": "https://explorer.mainnet.oncreator.com",
         "standard": "EIP3091"
       }
     ]
