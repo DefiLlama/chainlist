@@ -5102,11 +5102,6 @@ export const extraRpcs = {
       },
       "https://jsonrpc-evmos.goldenratiostaking.net",
       {
-        url: "https://evmos.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://evmos-jsonrpc.cyphercore.io",
         tracking: "yes",
         trackingDetails: privacyStatement.cyphercore,
