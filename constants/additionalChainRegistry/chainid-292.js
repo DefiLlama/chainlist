@@ -1,6 +1,6 @@
 {
-    "name": "HashSphere",
-    "chain": "HashSphere",
+    "name": "HashSphere Private Network 292",
+    "chain": "HashSphere-292",
     "rpc": ["http://rpc-292.champagnesphere.net/"],
     "faucets": [],
     "nativeCurrency": {
@@ -10,7 +10,7 @@
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "infoURL": "https://hashgraph.com",
-    "shortName": "hbar",
+    "shortName": "hsp-292",
     "chainId": 292,
     "networkId": 292,
     "explorers": []
