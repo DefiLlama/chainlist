@@ -119,6 +119,7 @@ export default {
   "1234": "step",
   "1284": "moonbeam",
   "1285": "moonriver",
+  "1306": "stoc",
   "1329": "sei",
   "1424": "perennial",
   "1514": "sty",

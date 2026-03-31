@@ -1,0 +1,27 @@
+export const data = {
+  "name": "STO Chain",
+  "chain": "STOC",
+  "rpc": [
+    "https://evm-stoc-mainnet.stochainscan.io"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "STOC",
+    "symbol": "STOC",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }],
+  "infoURL": "https://www.stochain.io/",
+  "shortName": "stoc",
+  "chainId": 1306,
+  "networkId": 1306,
+  "icon": "stoc",
+  "explorers": [
+    {
+      "name": "STO Chain Explorer",
+      "url": "https://stochainscan.io/en",
+      "standard": "none"
+    }
+  ],
+  "status": "active"
+};
