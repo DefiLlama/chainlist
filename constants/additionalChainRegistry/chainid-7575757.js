@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "NovaMoney",
   "chain": "NVM",
   "rpc": [
