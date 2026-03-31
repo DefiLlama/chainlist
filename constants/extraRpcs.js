@@ -584,6 +584,12 @@ export const extraRpcs = {
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
+  2500: {
+    rpcs: [
+      "https://rpc.cchain.cc",
+      "wss://wss.cchain.cc"
+    ],
+  },
   2517: {
     rpcs: [
       "https://svp-dataseed1-testnet.svpchain.org",
