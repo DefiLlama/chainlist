@@ -5102,11 +5102,6 @@ export const extraRpcs = {
       },
       "https://jsonrpc-evmos.goldenratiostaking.net",
       {
-        url: "https://evmos.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://evmos-jsonrpc.cyphercore.io",
         tracking: "yes",
         trackingDetails: privacyStatement.cyphercore,
@@ -9700,7 +9695,18 @@ export const extraRpcs = {
           },
               ],
   },
-  };
+ 
+  2366: {
+  rpcs: [
+    {
+      url: "https://rpc.gokite.ai/",
+      tracking: "none",
+      trackingDetails:
+        "KiteAI RPC does not collect or store personal data from requests. Standard infrastructure-level logs may be used for monitoring and reliability.",
+    },
+  ],
+},
+};
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
