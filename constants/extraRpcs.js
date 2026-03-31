@@ -9690,7 +9690,17 @@ export const extraRpcs = {
       },
     ],
   },
-};
+
+  73790: {
+        rpcs: [
+          {
+                    url: "https://rpc.neurovatic.ai/rpc",
+                    tracking: "none",
+                    trackingDetails: "NV-CHAIN does not collect or store any user information (IP, location, wallet) transmitted via our RPC. Data is used solely for on-chain operations.",
+          },
+              ],
+  },
+  };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
