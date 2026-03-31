@@ -108,6 +108,7 @@ export default {
   "1024": "clv",
   "1030": "conflux",
   "1088": "metis",
+  "1096": "xenea",
   "1100": "dymension",
   "1101": "polygon zkevm",
   "1110": "grx",
