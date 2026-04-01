@@ -15,10 +15,9 @@ export default {
     { "name": "EIP1559" }
   ],
   "infoURL": "https://www.venturesblockchain.io",
-  "shortName": "vb",
-  "chainId": 77717,   // ← replace with number only, no quotes
-  "networkId": 77717,  // ← usually same as chainId
-  "icon": "ventures",               // optional — you can remove this line if you want
+  "shortName": "ventures",
+  "chainId": 77717,
+  "networkId": 77717,
   "explorers": [{
     "name": "Ventures Explorer",
     "url": "https://explorer.venturesblockchain.io",
