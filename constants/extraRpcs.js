@@ -4153,6 +4153,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
       },
+      {
+        url: "wss://rpc.hairylabs.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.hairylabs,
+      },
     ],
   },
   385: {
