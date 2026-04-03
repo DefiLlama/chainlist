@@ -9687,13 +9687,33 @@ export const extraRpcs = {
   },
 
   73790: {
-        rpcs: [
-          {
-                    url: "https://rpc.neurovatic.ai/rpc",
-                    tracking: "none",
-                    trackingDetails: "NV-CHAIN does not collect or store any user information (IP, location, wallet) transmitted via our RPC. Data is used solely for on-chain operations.",
-          },
-              ],
+    rpcs: [
+      {
+        url: "https://rpc.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails: "NV-CHAIN sovereign RPC - no logs, no tracking. IRMINSUL node, Helsinki FI. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-eu.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails: "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-EU node, Nuremberg DE. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-apac.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails: "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-APAC node, Singapore SG. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-usw.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails: "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-USW node, Hillsboro OR US. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-use.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails: "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-USE node, Ashburn VA US. https://neurovatic.ai/whitepaper",
+      },
+    ],
   },
  
   2366: {
