@@ -53,6 +53,7 @@ export default {
   "199": "bittorrent",
   "200": "xdaiarb",
   "204": "op_bnb",
+  "206": "vinuchain testnet",
   "207": "vinuchain",
   "225": "lachain",
   "228": "mind network",
