@@ -11,7 +11,7 @@
     "decimals": 18
   },
   "infoURL": "https://tipspay.org",
-  "shortName": "Tips",
+  "shortName": "tips",
   "chainId": 19251925,
   "networkId": 19251925,
   "icon": "tpc",
