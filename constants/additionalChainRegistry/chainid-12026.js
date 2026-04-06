@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "MOC Blockchain",
   "chain": "MOC",
   "rpc": [
