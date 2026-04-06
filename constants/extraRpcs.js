@@ -9700,6 +9700,20 @@ export const extraRpcs = {
     },
   ],
 },
+  1229800785: {
+    rpcs: [
+      {
+        url: "https://relay.itaninetworkchain.com/jsonrpc",
+        tracking: "none",
+        trackingDetails: "iTani Network Chain relay node — no user tracking, no data collection.",
+      },
+      {
+        url: "https://node.itaninetworkchain.com/jsonrpc",
+        tracking: "none",
+        trackingDetails: "iTani Network Chain primary node — no user tracking, no data collection.",
+      },
+    ],
+  },
 };
 
   421018: {
