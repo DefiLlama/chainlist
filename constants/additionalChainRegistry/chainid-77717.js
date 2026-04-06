@@ -1,4 +1,4 @@
-export default {
+export const data =  {
   "name": "Ventures Blockchain",
   "chain": "Ventures",
   "rpc": [

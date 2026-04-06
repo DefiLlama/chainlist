@@ -9766,8 +9766,6 @@ export const extraRpcs = {
       },
     ],
   },
-};
-
   421018: {
     rpcs: [
       {
