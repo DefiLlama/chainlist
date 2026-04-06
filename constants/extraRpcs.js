@@ -9658,6 +9658,16 @@ export const extraRpcs = {
       },
     ],
   },
+  30485: {
+    rpcs: [
+      {
+        url: "https://rpc.tronclassicscan.org:8545",
+        tracking: "limited",
+        trackingDetails:
+          "TronClassicScan public RPC may log IP addresses and request metadata for rate limiting, security, and service reliability.",
+      },
+    ],
+  },
   677: {
     rpcs: [
       {
