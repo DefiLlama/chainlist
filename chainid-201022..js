@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "FONChain Mainnet",
   "chain": "FSC",
   "rpc": [
