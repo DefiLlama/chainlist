@@ -24,6 +24,7 @@
     {
       "name": "QTS Explorer",
       "url": "https://explorer.qts-chain.com",
+      "icon": "https://qts-chain.com/icon/qts.png",
       "standard": "EIP3091"
     }
   ]
