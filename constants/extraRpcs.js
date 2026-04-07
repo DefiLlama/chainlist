@@ -3307,12 +3307,12 @@ export const extraRpcs = {
   },
   287: {
     rpcs: [
-      "https://rpc.tsccan.io",
+      "https://rpc.netxscan.io",
     ],
   },
   587: {
     rpcs: [
-      "https://test-rpc.tsccan.io",
+      "https://test-rpc.netxscan.io",
     ],
   },
   288: {
