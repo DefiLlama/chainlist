@@ -3,7 +3,7 @@ export const data = {
   "chain": "BDAG",
   "icon": "BDAG",
   "rpc": [
-    "​https://rpc.bdagscan.com",
+    "https://rpc.bdagscan.com",
   ],
   "faucets": [],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
