@@ -11,12 +11,12 @@ export const data = {
     symbol: "tBESA",
     decimals: 18
   },
-  infoURL: "https://besachain.io",
+  infoURL: "https://besachain.com",
   shortName: "besa-l2-testnet",
   chainId: 19120,
   networkId: 19120,
   explorers: [],
   rpc: [
-    "https://testnet-l2-rpc.besachain.io"
+    "https://testnet-l2-rpc.besachain.com"
   ]
 };
