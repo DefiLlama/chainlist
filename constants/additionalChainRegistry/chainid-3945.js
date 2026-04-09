@@ -11,13 +11,13 @@ export const data = {
   infoURL: "https://nexus.xyz",
   shortName: "NEX",
   chainId: 3945,
-  networkId: 3495,
-  icon: "https://framerusercontent.com/images/AeDwlPlZaXChRFVGExpfgFn1crs.png?width=433&height=497",
+  networkId: 3945,
+  icon: "https://drive.google.com/uc?export=view&id=1-JcN3A-KXivWKtxP9LF7YKV5c0AMBrzg",
   explorers: [
     {
       name: "Nexus Testnet Explorer",
       url: "https://nexus.testnet.blockscout.com",
-      icon: "https://framerusercontent.com/images/AeDwlPlZaXChRFVGExpfgFn1crs.png?width=433&height=497",
+      icon: "https://drive.google.com/uc?export=view&id=1-JcN3A-KXivWKtxP9LF7YKV5c0AMBrzg",
       standard: "EIP3091",
     },
   ],
