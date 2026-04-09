@@ -1,9 +1,6 @@
 export const data = {
   name: "BesaChain L2",
   chain: "BESA",
-  rpc: [
-    "https://l2-rpc.besachain.io"
-  ],
   features: [
     { name: "EIP155" },
     { name: "EIP1559" }
@@ -18,5 +15,8 @@ export const data = {
   shortName: "besa-l2",
   chainId: 1912,
   networkId: 1912,
-  explorers: []
+  explorers: [],
+  rpc: [
+    "https://l2-rpc.besachain.io"
+  ]
 };
