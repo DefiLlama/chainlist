@@ -19,7 +19,7 @@ export const data = {
   "explorers": [
     {
       "name": "TBURN Scan",
-      "url": "https://scan.tburn.io",
+      "url": "https://scan.tburn.io/scan",
       "standard": "EIP3091"
     }
   ]
