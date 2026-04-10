@@ -3,9 +3,13 @@ export const data = {
   "chain": "TBURN",
   "icon": "tburn",
   "rpc": [
-    "https://rpc.tburn.io"
+    "https://rpc.tburn.io",
+    "https://rpc2.tburn.io",
+    "https://rpc3.tburn.io",
+    "https://rpc4.tburn.io",
+    "https://rpc5.tburn.io"
   ],
-  "features": [{ "name": "EIP155" }],
+  "features": [{"name": "EIP155"}, {"name": "EIP1559"}],
   "faucets": [],
   "nativeCurrency": {
     "name": "TBURN",
@@ -18,7 +22,7 @@ export const data = {
   "networkId": 5800,
   "explorers": [
     {
-      "name": "TBURN Scan",
+      "name": "TBURNScan",
       "url": "https://scan.tburn.io/scan",
       "standard": "EIP3091"
     }
