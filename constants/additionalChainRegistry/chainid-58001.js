@@ -18,8 +18,8 @@ export const data = {
   "networkId": 58001,
   "explorers": [
     {
-      "name": "TBURN Subnet Scan",
-      "url": "https://subscan.tburn.io",
+      "name": "TBURN Scan",
+      "url": "https://scan.tburn.io/scan",
       "standard": "EIP3091"
     }
   ]
