@@ -3305,6 +3305,16 @@ export const extraRpcs = {
       },
     ],
   },
+  287: {
+    rpcs: [
+      "https://rpc.netxscan.io",
+    ],
+  },
+  587: {
+    rpcs: [
+      "https://test-rpc.netxscan.io",
+    ],
+  },
   288: {
     rpcs: [
       "https://mainnet.boba.network/",
