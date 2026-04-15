@@ -2,7 +2,7 @@ export const data = {
   "name": "Anannta",
   "chain": "ANANT",
   "rpc": [
-    "http://rpc-anant.ananntascan.io",
+    "https://rpc-anant.ananntascan.io",
   ],
   "faucets": [],
   "nativeCurrency": {
