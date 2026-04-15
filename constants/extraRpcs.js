@@ -6479,11 +6479,6 @@ export const extraRpcs = {
   248: {
     rpcs: [
       "https://rpc.mainnet.oasys.games",
-      {
-        url: "https://oasys.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       "wss://ws.mainnet.oasys.games/",
       {
         url: "https://oasys.api.pocket.network",
