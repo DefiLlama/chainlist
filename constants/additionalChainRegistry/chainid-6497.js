@@ -6,7 +6,7 @@
   ],
   "faucets": ["https://faucet.awaji.mizuhiki.io"],
   "nativeCurrency": {
-    "name": "Mizu",
+    "name": "MIZU",
     "symbol": "MIZU",
     "decimals": 18
   },
