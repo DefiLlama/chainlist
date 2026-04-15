@@ -26,8 +26,8 @@ export const data = {
     "networkId": 999,
     "explorers": [
       {
-        "name": "Purrsec",
-        "url": "https://purrsec.com/"
+        "name": "HyperEVMScan",
+        "url": "https://hyperevmscan.io/"
       }
     ]
   }

@@ -1,0 +1,26 @@
+export const data = {
+    "name": "VirBiCoin",
+    "chain": "VBC",
+    "rpc": [
+        "https://rpc.digitalregion.jp"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+        "name": "VBC",
+        "symbol": "VBC",
+        "decimals": 18
+    },
+    "infoURL": "https://vbc.digitalregion.jp",
+    "shortName": "virbicoin",
+    "chainId": 329,
+    "networkId": 329,
+    "icon": "vbc",
+    "explorers": [
+        {
+            "name": "VirBiCoin Explorer",
+            "url": "https://explorer.digitalregion.jp",
+            "icon": "vbc",
+            "standard": "EIP3091"
+        }
+    ]
+}

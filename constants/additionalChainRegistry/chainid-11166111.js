@@ -18,8 +18,8 @@ export const data ={
   "chainId": 11166111,
   "networkId": 11166111,
   "icon": {
-    "url": "ipfs://bafkreidkjnapgtiklxnefhflatxs72t6knhft6ma7oaqkbfebr67uouyke",
-    "format": "png",
+    "url": "https://amaranth-elaborate-primate-236.mypinata.cloud/ipfs/bafkreibqk63qcgukyunft3h2qxh56cg6mtvzlrnxw4mbpxgahdk2litxqi",
+    "format": "svg",
     "width": 512,
     "height": 512
   },
