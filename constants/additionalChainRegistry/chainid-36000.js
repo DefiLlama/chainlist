@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Voidchain Mainnet",
   "chain": "TC",
   "rpc": [
