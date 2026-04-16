@@ -1,0 +1,25 @@
+export const data = {
+  "name": "Seven Chain",
+  "chain": "7chain",
+  "network": "mainnet",
+  "rpc": [
+    "https://theseven.meme/api/seven-chain/jsonrpc"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Seven",
+    "symbol": "SEVEN",
+    "decimals": 18
+  },
+  "infoURL": "https://theseven.meme",
+  "shortName": "7chain",
+  "chainId": 70007,
+  "networkId": 70007,
+  "explorers": [
+    {
+      "name": "Seven Chain Explorer",
+      "url": "https://theseven.meme/blockchain/explorer",
+      "standard": "EIP3091"
+    }
+  ]
+}
