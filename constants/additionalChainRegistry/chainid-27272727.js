@@ -13,7 +13,7 @@ export const data = {
   "infoURL": "https://www.pecunovus.com",
   "shortName": "pecu",
   "chainId": 27272727,
-  "networkId": 1,
+  "networkId": 27272727,
   "icon": "pecu",
   "explorers": [{
     "name": "pecuscan",
