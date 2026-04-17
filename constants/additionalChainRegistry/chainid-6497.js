@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "MIZUHIKI Testnet Awaji",
   "chain": "MIZU",
   "rpc": [
