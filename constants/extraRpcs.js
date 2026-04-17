@@ -3766,6 +3766,9 @@ export const extraRpcs = {
   35: {
     rpcs: ["https://rpc.tbwg.io"],
   },
+  3600: {
+    rpcs: ["https://rpc.aifisc.io", "https://rpc.ascscan.io", "https://rpc.aifiv2.ai"],
+  },
   38: {
     rpcs: ["https://rpc.valorbit.com/v2"],
     websiteDead: true,
