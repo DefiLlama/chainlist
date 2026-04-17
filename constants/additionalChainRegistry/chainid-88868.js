@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "QTSCHAIN Mainnet",
   "chain": "QTS",
   "icon": "https://qts-chain.com/icon/qts.png",
