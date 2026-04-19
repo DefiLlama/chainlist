@@ -1,14 +1,14 @@
 export const data = {
-  "name": "TURKCHAIN",
-  "chain": "TURKCHAIN",
+  "name": "Turkchain",
+  "chain": "Turkchain",
   "rpc": [
-    "https://rpc.turkchain1919.com",
-    "wss://evm-ws.turkchain1919.com"
+    "https://rpc.turkscan.com",
+    "wss://evm-ws.turkscan.com"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "TURKCHAIN",
-    "symbol": "TC-20",
+    "name": "TC",
+    "symbol": "TURK",
     "decimals": 18
   },
   "features": [
@@ -20,14 +20,14 @@ export const data = {
     }
   ],
   "infoURL": "https://turkchain1919.com",
-  "shortName": "tchain",
+  "shortName": "turkchain",
   "chainId": 1919,
   "networkId": 1919,
   "icon": "turkchain",
   "explorers": [
     {
       "name": "TURKCHAIN Explorer",
-      "url": "https://explorer.turkchain1919.com",
+      "url": "https://turkscan.com",
       "icon": "turkchain",
       "standard": "EIP3091"
     }

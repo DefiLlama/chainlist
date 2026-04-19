@@ -51,13 +51,11 @@ export function populateChain(chain, chainTvls) {
   if (chainSlug !== undefined) {
     const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
 
-    return defiChain === undefined
-      ? chain
-      : {
-          ...chain,
-          tvl: defiChain.tvl,
-          chainSlug,
-        };
+    return {
+      ...chain,
+      ...(defiChain !== undefined && { tvl: defiChain.tvl }),
+      chainSlug,
+    };
   }
 
   return chain;
