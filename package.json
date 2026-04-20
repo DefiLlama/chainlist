@@ -14,15 +14,15 @@
     "@ariakit/react": "^0.2.12",
     "@hypelab/sdk-react": "^1.0.2",
     "@tanstack/react-query": "^4.19.1",
-    "axios": "^1.2.1",
+    "axios": "^1.15.0",
     "fathom-client": "^3.5.0",
     "next": "^14.0.0",
-    "next-intl": "^2.10.2",
+    "next-intl": "^4.9.1",
     "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-linkify": "^1.0.0-alpha",
-    "serve": "^14.1.2",
+    "serve": "^14.2.6",
     "zustand": "^4.1.5"
   },
   "devDependencies": {
