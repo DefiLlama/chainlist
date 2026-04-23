@@ -240,6 +240,14 @@ const privacyStatement = {
 };
 
 export const extraRpcs = {
+  224488: {
+    rpcs: [
+      {
+        url: 'https://rpc.egloble.site',
+        tracking: 'none',
+      },
+    ],
+  },
   1: {
     rpcs: [
       // Quicknode -> tracks IP
