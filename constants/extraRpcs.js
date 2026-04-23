@@ -1524,6 +1524,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+          url: "https://rpc.private.mev-x.com/polygon",
+          tracking: "limited",
+          trackingDetails: "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
+        },
     ],
   },
   25: {
