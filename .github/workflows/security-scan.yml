@@ -1,0 +1,22 @@
+name: safety-scan
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  safety-scan:
+    with:
+      enable_gitleaks: true
+      enable_trivy_package: true
+      enable_trivy_dockerfile: true
+      enable_hadolint: true
+    uses: node-real/github-workflows/.github/workflows/security-scan.yml@main
+    secrets: inherit
