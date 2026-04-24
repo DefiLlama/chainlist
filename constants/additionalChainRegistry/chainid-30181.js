@@ -26,14 +26,6 @@ export const data = {
   "chainId": 30181,
   "networkId": 30181,
   "icon": "https://aic-assets.aicchain.io/android-chrome-192x192.png",
-  "icons": [
-    {
-      "url": "https://aic-assets.aicchain.io/android-chrome-192x192.png",
-      "width": 192,
-      "height": 192,
-      "format": "png"
-    }
-  ],
   "explorers": [
     {
       "name": "AICChain Testnet Explorer",
