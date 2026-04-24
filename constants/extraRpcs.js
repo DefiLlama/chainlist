@@ -8202,15 +8202,16 @@ export const extraRpcs = {
       "https://public-node.api.boraportal.com/bora/mainnet",
     ],
   },
-  // 267: {
-  //   rpcs: [
-  //     {
-  //       url: "https://lb.routeme.sh/rpc/evm/267",
-  //       tracking: "limited",
-  //       trackingDetails: privacyStatement.routemesh,
-  //     },
-  //     "https://rpc.ankr.com/neura_testnet"],
-  // },
+  267: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/267",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.ankr.com/neura_testnet",
+    ],
+  },
   60808: {
     rpcs: [
       {
@@ -11335,7 +11336,6 @@ export const extraRpcs = {
       },
     ],
   },
-
   73790: {
     rpcs: [
       {
@@ -11370,7 +11370,6 @@ export const extraRpcs = {
       },
     ],
   },
-
   2366: {
     rpcs: [
       {
@@ -11477,9 +11476,6 @@ export const extraRpcs = {
       },
     ],
   },
-  47: {
-    rpcs: [],
-  },
   53: {
     rpcs: [
       {
@@ -11497,9 +11493,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  73: {
-    rpcs: [],
   },
   75: {
     rpcs: [
@@ -11690,12 +11683,6 @@ export const extraRpcs = {
       },
     ],
   },
-  185: {
-    rpcs: [],
-  },
-  195: {
-    rpcs: [],
-  },
   207: {
     rpcs: [
       {
@@ -11731,9 +11718,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  261: {
-    rpcs: [],
   },
   269: {
     rpcs: [
@@ -11834,9 +11818,6 @@ export const extraRpcs = {
       },
     ],
   },
-  401: {
-    rpcs: [],
-  },
   404: {
     rpcs: [
       {
@@ -11845,9 +11826,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  414: {
-    rpcs: [],
   },
   418: {
     rpcs: [
@@ -11893,9 +11871,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  478: {
-    rpcs: [],
   },
   500: {
     rpcs: [
@@ -11987,18 +11962,6 @@ export const extraRpcs = {
       },
     ],
   },
-  841: {
-    rpcs: [],
-  },
-  842: {
-    rpcs: [],
-  },
-  898: {
-    rpcs: [],
-  },
-  899: {
-    rpcs: [],
-  },
   957: {
     rpcs: [
       {
@@ -12080,9 +12043,6 @@ export const extraRpcs = {
       },
     ],
   },
-  1050: {
-    rpcs: [],
-  },
   1113: {
     rpcs: [
       {
@@ -12100,9 +12060,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  1123: {
-    rpcs: [],
   },
   1149: {
     rpcs: [
@@ -12122,15 +12079,6 @@ export const extraRpcs = {
       },
     ],
   },
-  1188: {
-    rpcs: [],
-  },
-  1221: {
-    rpcs: [],
-  },
-  1230: {
-    rpcs: [],
-  },
   1234: {
     rpcs: [
       {
@@ -12139,9 +12087,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  1248: {
-    rpcs: [],
   },
   1300: {
     rpcs: [
@@ -12179,9 +12124,6 @@ export const extraRpcs = {
       },
     ],
   },
-  1409: {
-    rpcs: [],
-  },
   1424: {
     rpcs: [
       {
@@ -12190,9 +12132,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  1490: {
-    rpcs: [],
   },
   1570: {
     rpcs: [
@@ -12211,9 +12150,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  1687: {
-    rpcs: [],
   },
   1717: {
     rpcs: [
@@ -12287,12 +12223,6 @@ export const extraRpcs = {
       },
     ],
   },
-  1908: {
-    rpcs: [],
-  },
-  1909: {
-    rpcs: [],
-  },
   1952: {
     rpcs: [
       {
@@ -12320,12 +12250,6 @@ export const extraRpcs = {
       },
     ],
   },
-  1996: {
-    rpcs: [],
-  },
-  2001: {
-    rpcs: [],
-  },
   2013: {
     rpcs: [
       {
@@ -12334,9 +12258,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  2026: {
-    rpcs: [],
   },
   2031: {
     rpcs: [
@@ -12347,9 +12268,6 @@ export const extraRpcs = {
       },
     ],
   },
-  2032: {
-    rpcs: [],
-  },
   2035: {
     rpcs: [
       {
@@ -12358,9 +12276,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  2039: {
-    rpcs: [],
   },
   2043: {
     rpcs: [
@@ -12389,9 +12304,6 @@ export const extraRpcs = {
       },
     ],
   },
-  2092: {
-    rpcs: [],
-  },
   2109: {
     rpcs: [
       {
@@ -12418,9 +12330,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  2187: {
-    rpcs: [],
   },
   2201: {
     rpcs: [
@@ -12449,9 +12358,6 @@ export const extraRpcs = {
       },
     ],
   },
-  2331: {
-    rpcs: [],
-  },
   2391: {
     rpcs: [
       {
@@ -12460,9 +12366,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  2400: {
-    rpcs: [],
   },
   2410: {
     rpcs: [
@@ -12509,12 +12412,6 @@ export const extraRpcs = {
       },
     ],
   },
-  2810: {
-    rpcs: [],
-  },
-  2911: {
-    rpcs: [],
-  },
   3003: {
     rpcs: [
       {
@@ -12559,12 +12456,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  3490: {
-    rpcs: [],
-  },
-  3500: {
-    rpcs: [],
   },
   3601: {
     rpcs: [
@@ -12782,18 +12673,6 @@ export const extraRpcs = {
       },
     ],
   },
-  5002: {
-    rpcs: [],
-  },
-  5005: {
-    rpcs: [],
-  },
-  5101: {
-    rpcs: [],
-  },
-  5112: {
-    rpcs: [],
-  },
   5234: {
     rpcs: [
       {
@@ -12838,9 +12717,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  6321: {
-    rpcs: [],
   },
   6322: {
     rpcs: [
@@ -12887,9 +12763,6 @@ export const extraRpcs = {
       },
     ],
   },
-  6779: {
-    rpcs: [],
-  },
   6789: {
     rpcs: [
       {
@@ -12934,12 +12807,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  7027: {
-    rpcs: [],
-  },
-  7077: {
-    rpcs: [],
   },
   7244: {
     rpcs: [
@@ -13004,12 +12871,6 @@ export const extraRpcs = {
       },
     ],
   },
-  7672: {
-    rpcs: [],
-  },
-  7771: {
-    rpcs: [],
-  },
   7897: {
     rpcs: [
       {
@@ -13018,9 +12879,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  7923: {
-    rpcs: [],
   },
   7979: {
     rpcs: [
@@ -13040,9 +12898,6 @@ export const extraRpcs = {
       },
     ],
   },
-  8194: {
-    rpcs: [],
-  },
   8333: {
     rpcs: [
       {
@@ -13051,9 +12906,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  8338: {
-    rpcs: [],
   },
   8726: {
     rpcs: [
@@ -13091,9 +12943,6 @@ export const extraRpcs = {
       },
     ],
   },
-  8866: {
-    rpcs: [],
-  },
   8869: {
     rpcs: [
       {
@@ -13111,9 +12960,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  8881: {
-    rpcs: [],
   },
   8882: {
     rpcs: [
@@ -13223,9 +13069,6 @@ export const extraRpcs = {
       },
     ],
   },
-  9395: {
-    rpcs: [],
-  },
   9496: {
     rpcs: [
       {
@@ -13252,12 +13095,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  9788: {
-    rpcs: [],
-  },
-  9789: {
-    rpcs: [],
   },
   9790: {
     rpcs: [
@@ -13294,9 +13131,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  9901: {
-    rpcs: [],
   },
   9996: {
     rpcs: [
@@ -13406,15 +13240,6 @@ export const extraRpcs = {
       },
     ],
   },
-  13746: {
-    rpcs: [],
-  },
-  14324: {
-    rpcs: [],
-  },
-  14333: {
-    rpcs: [],
-  },
   14853: {
     rpcs: [
       {
@@ -13442,9 +13267,6 @@ export const extraRpcs = {
       },
     ],
   },
-  15430: {
-    rpcs: [],
-  },
   16116: {
     rpcs: [
       {
@@ -13453,12 +13275,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  16507: {
-    rpcs: [],
-  },
-  16601: {
-    rpcs: [],
   },
   16602: {
     rpcs: [
@@ -13477,9 +13293,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  16718: {
-    rpcs: [],
   },
   16888: {
     rpcs: [
@@ -13508,9 +13321,6 @@ export const extraRpcs = {
       },
     ],
   },
-  17171: {
-    rpcs: [],
-  },
   17180: {
     rpcs: [
       {
@@ -13528,21 +13338,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  18122: {
-    rpcs: [],
-  },
-  18181: {
-    rpcs: [],
-  },
-  18881: {
-    rpcs: [],
-  },
-  18888: {
-    rpcs: [],
-  },
-  18889: {
-    rpcs: [],
   },
   19011: {
     rpcs: [
@@ -13562,15 +13357,6 @@ export const extraRpcs = {
       },
     ],
   },
-  19224: {
-    rpcs: [],
-  },
-  19991: {
-    rpcs: [],
-  },
-  20736: {
-    rpcs: [],
-  },
   20993: {
     rpcs: [
       {
@@ -13588,12 +13374,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  21337: {
-    rpcs: [],
-  },
-  22040: {
-    rpcs: [],
   },
   22776: {
     rpcs: [
@@ -13613,9 +13393,6 @@ export const extraRpcs = {
       },
     ],
   },
-  24076: {
-    rpcs: [],
-  },
   25925: {
     rpcs: [
       {
@@ -13633,9 +13410,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  29112: {
-    rpcs: [],
   },
   29548: {
     rpcs: [
@@ -13655,9 +13429,6 @@ export const extraRpcs = {
       },
     ],
   },
-  31414: {
-    rpcs: [],
-  },
   32769: {
     rpcs: [
       {
@@ -13666,9 +13437,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  32990: {
-    rpcs: [],
   },
   33033: {
     rpcs: [
@@ -13696,9 +13464,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  33401: {
-    rpcs: [],
   },
   33469: {
     rpcs: [
@@ -13861,9 +13626,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  51828: {
-    rpcs: [],
   },
   55556: {
     rpcs: [
@@ -14036,9 +13798,6 @@ export const extraRpcs = {
       },
     ],
   },
-  77677: {
-    rpcs: [],
-  },
   78110: {
     rpcs: [
       {
@@ -14065,9 +13824,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  80888: {
-    rpcs: [],
   },
   81224: {
     rpcs: [
@@ -14176,9 +13932,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  98865: {
-    rpcs: [],
   },
   98867: {
     rpcs: [
@@ -14360,9 +14113,6 @@ export const extraRpcs = {
       },
     ],
   },
-  271271: {
-    rpcs: [],
-  },
   309075: {
     rpcs: [
       {
@@ -14407,12 +14157,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  333666: {
-    rpcs: [],
-  },
-  333777: {
-    rpcs: [],
   },
   355110: {
     rpcs: [
@@ -14467,9 +14211,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  513100: {
-    rpcs: [],
   },
   552981: {
     rpcs: [
@@ -14543,9 +14284,6 @@ export const extraRpcs = {
       },
     ],
   },
-  810181: {
-    rpcs: [],
-  },
   923018: {
     rpcs: [
       {
@@ -14572,9 +14310,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  998899: {
-    rpcs: [],
   },
   999999: {
     rpcs: [
@@ -14630,12 +14365,6 @@ export const extraRpcs = {
       },
     ],
   },
-  5167004: {
-    rpcs: [],
-  },
-  7225878: {
-    rpcs: [],
-  },
   10241024: {
     rpcs: [
       {
@@ -14671,9 +14400,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
     ],
-  },
-  19850818: {
-    rpcs: [],
   },
   19880818: {
     rpcs: [
