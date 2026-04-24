@@ -1,0 +1,23 @@
+export const data = {
+  "name": "LiterMark Chain",
+  "chain": "LMK",
+  "icon": "litermark",
+  "rpc": ["https://litermark.org/rpc"],
+  "features": [{ "name": "EIP155" }],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "LiterMark",
+    "symbol": "LMK",
+    "decimals": 18
+  },
+  "infoURL": "https://litermark.com",
+  "shortName": "lmk",
+  "chainId": 5232,
+  "networkId": 5232,
+  "explorers": [
+    {
+      "name": "LMKscan",
+      "url": "https://litermark.org"
+    }
+  ]
+}
