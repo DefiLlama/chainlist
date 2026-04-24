@@ -239,6 +239,8 @@ const privacyStatement = {
     "When you interact with our Site, our servers automatically collect certain technical information to help us operate, maintain, and improve our services. This information may include details such as your device identifier, IP address, browser type, operating system, and the date and time of your visit. https://hgraph.com/privacy",
   mirasmanda:
     "Mirasmanda RPC does not collect or store any personally identifiable information (PII), including IP addresses, wallet addresses, or request metadata. The only data recorded on our infrastructure is what is publicly available on the blockchain. No user data is shared with third parties. For more information, visit https://asterium.uz",
+  mevx:
+    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse)."
 };
 
 export const extraRpcs = {
@@ -1550,6 +1552,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/polygon",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpc.private.mev-x.com/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mevx,
       },
     ],
   },
