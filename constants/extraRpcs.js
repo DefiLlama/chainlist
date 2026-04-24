@@ -4584,6 +4584,15 @@ export const extraRpcs = {
   1657: {
     rpcs: ["https://dataseed1.btachain.com/"],
   },
+  1672: {
+    rpcs: [
+      {
+        url: "https://infra.originstake.com/pharos/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      },
+    ],
+  },
   1856: {
     rpcs: ["rpcWorking:false"],
     rpcWorking: false,
