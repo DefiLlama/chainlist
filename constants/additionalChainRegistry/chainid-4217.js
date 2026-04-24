@@ -10,9 +10,9 @@ export const data = {
   ],
   faucets: ["https://docs.tempo.xyz/quickstart/faucet"],
   nativeCurrency: {
-    name: "USD",
-    symbol: "USD",
-    decimals: 6,
+    name: "US Dollar",
+    symbol: "USD", 
+    decimals: 18,
   },
   infoURL: "https://tempo.xyz",
   shortName: "tempo-presto",
