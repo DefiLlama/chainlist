@@ -852,7 +852,7 @@ export const extraRpcs = {
   80002: {
     rpcs: [
       "https://rpc-amoy.polygon.technology",
-      "https://satelink-dashboard.vercel.app/gateway/rpc/amoy"
+      "https://satelink-dashboard.vercel.app/gateway/rpc/amoy",
       {
         url: "https://polygon-bor-amoy-rpc.publicnode.com",
         tracking: "none",
