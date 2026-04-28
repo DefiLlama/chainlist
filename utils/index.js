@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import en from "../translations/en.json" with { type: "json" };
 import zh from "../translations/zh.json" with { type: "json" };
 
+export function getChainIcon(chain) {
+  if (!chain?.chainSlug) return "/unknown-logo.png";
+  const base = `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg`;
+  return chain.iconVersion ? `${base}?v=${chain.iconVersion}` : base;
+}
+
 export function formatCurrency(amount, decimals = 2) {
   if (!isNaN(amount)) {
     const formatter = new Intl.NumberFormat(undefined, {

@@ -2,7 +2,7 @@ import * as React from "react";
 import Head from "next/head";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
-import { notTranslation as useTranslations } from "../../../utils";
+import { notTranslation as useTranslations, getChainIcon } from "../../../utils";
 import { populateChain, fetchWithCache } from "../../../utils/fetch";
 import AddNetwork from "../../../components/chain";
 import Layout from "../../../components/Layout";
@@ -72,7 +72,7 @@ function Chain({ chain }) {
   const t = useTranslations("Common", "zh");
 
   const icon = React.useMemo(() => {
-    return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return getChainIcon(chain);
   }, [chain]);
 
   return (

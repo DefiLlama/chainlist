@@ -16,6 +16,7 @@ export const data = {
   "chainId": 190415,
   "networkId": 190415,
   "icon": "ethereum",
+  "iconVersion": 2,
   "explorers": [{
     "name": "HPP Mainnet Explorer",
     "url": "https://explorer.hpp.io",
