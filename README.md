@@ -31,20 +31,6 @@ Submit a PR that adds a new file to the [constants/additionalChainRegistry folde
 }
 ```
 
-## Update a chain icon
-
-Chain icons are served from `https://icons.llamao.fi/icons/chains/rsz_<slug>.jpg` and may be cached by the CDN. If you've updated an icon in the icons repo but Chainlist still shows the old image, add an optional `iconVersion` field to your chain's override file:
-
-```
-{
-  ...
-  "icon": "ethereum",
-  "iconVersion": 2
-}
-```
-
-This appends `?v=<n>` to the icon URL, forcing the CDN to fetch a fresh copy. Bump the number on each subsequent update.
-
 ## Add an RPC to a chain that is already listed
 
 If you wish to add your RPC, please submit a PR modifying [constants/extraRpcs.js](https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js) to add your RPC to the given chains.
