@@ -1,0 +1,49 @@
+export const data = {
+  "name": "Ethereum Sepolia",
+  "title": "Ethereum Testnet Sepolia",
+  "chain": "ETH",
+  "rpc": [
+    "https://rpc.sepolia.org",
+    "https://rpc2.sepolia.org",
+    "https://rpc.sepolia.ethpandaops.io",
+    "https://sepolia.infura.io/v3/${INFURA_API_KEY}",
+    "wss://sepolia.infura.io/v3/${INFURA_API_KEY}",
+    "https://sepolia.gateway.tenderly.co",
+    "wss://sepolia.gateway.tenderly.co",
+    "https://ethereum-sepolia-rpc.publicnode.com",
+    "wss://ethereum-sepolia-rpc.publicnode.com",
+    "https://sepolia.drpc.org",
+    "wss://sepolia.drpc.org"
+  ],
+  "faucets": [
+    "https://sepolia-faucet.pk910.de",
+    "https://cloud.google.com/application/web3/faucet/ethereum/sepolia"
+  ],
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "infoURL": "https://sepolia.otterscan.io",
+  "shortName": "sep",
+  "chainId": 11155111,
+  "networkId": 11155111,
+  "slip44": 1,
+  "explorers": [
+    {
+      "name": "etherscan-sepolia",
+      "url": "https://sepolia.etherscan.io",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "otterscan-sepolia",
+      "url": "https://sepolia.otterscan.io",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "Routescan",
+      "url": "https://11155111.testnet.routescan.io",
+      "standard": "EIP3091"
+    }
+  ]
+}
