@@ -102,7 +102,7 @@ export default {
   "888": "wanchain",
   "957": "lyra",
   "964": "bittensor_evm",
-  "988": "seda",
+  "988": "stable",
   "996": "bifrost",
   "999": "hyperliquid",
   "1024": "clv",
