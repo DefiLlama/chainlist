@@ -19,11 +19,6 @@ export const data = {
       {
         "name": "Sentrix Scan",
         "url": "https://scan.sentrixchain.com",
-        "standard": "none"
-      },
-      {
-        "name": "Blockscout",
-        "url": "https://blockscout.sentrixchain.com",
         "standard": "EIP3091"
       }
     ]
