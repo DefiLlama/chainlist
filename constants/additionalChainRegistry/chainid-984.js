@@ -1,13 +1,11 @@
 export const data = {
-    "name": "OPN Chain Mainnet",
+    "name": "OPN Chain Testnet",
     "chain": "IOPN",
     "rpc": [
-      "https://mainnet-rpc.iopn.tech",
-      "https://mainnet-rpc2.iopn.tech",
-      "https://mainnet-rpc3.iopn.tech",
-      "wss://mainnet-rpc.iopn.tech/ws",
-      "wss://mainnet-rpc2.iopn.tech/ws",
-      "wss://mainnet-rpc3.iopn.tech/ws"
+      "https://testnet-rpc.iopn.tech",
+      "https://testnet-rpc2.iopn.tech",
+      "wss://testnet-rpc.iopn.tech/ws",
+      "wss://testnet-rpc2.iopn.tech/ws"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -18,12 +16,12 @@ export const data = {
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }, {"name": "EIP7702"}],
     "infoURL": "https://chain.iopn.io",
     "shortName": "iopn",
-    "chainId": 222,
-    "networkId": 222,
+    "chainId": 984,
+    "networkId": 984,
     "icon": "iopn",
     "explorers": [{
-      "name": "OPNScan",
-      "url": "https://opnscan.io",
+      "name": "OPNScan Testnet",
+      "url": "https://testnet.iopn.tech",
       "icon": "iopn",
       "standard": "none"
     }]

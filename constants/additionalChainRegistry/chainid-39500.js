@@ -1,0 +1,24 @@
+export const data = {
+  "name": "Cincoin Mainnet",
+  "chain": "CIN",
+  "rpc": [
+    "https://rpc.cincoin.asia/"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Cincoin",
+    "symbol": "CIN",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://cincoin.asia",
+  "shortName": "cin",
+  "chainId": 39500,
+  "networkId": 39500,
+  "icon": "cincoin",
+  "explorers": [{
+    "name": "cincoin explorer",
+    "url": "https://scan.cincoin.asia",
+    "standard": "EIP3091"
+  }]
+}
