@@ -10012,7 +10012,7 @@ export const extraRpcs = {
       },
     ],
   },
-  998: {
+  988: {
     rpcs: [
       {
         url: "https://stable-mainnet.rpc.sentio.xyz",
