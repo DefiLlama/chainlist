@@ -179,6 +179,7 @@ export default {
   "6969": "tombchain",
   "7000": "zetachain",
   "7070": "planq",
+  "7119": "sentrix",
   "7171": "bitrock",
   "7200": "xsat",
   "7332": "horizen_eon",
