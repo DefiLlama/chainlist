@@ -1319,7 +1319,6 @@ export const extraRpcs = {
       "https://rpc.fantom.network",
       "https://rpc2.fantom.network",
       "https://rpc3.fantom.network",
-      "https://rpc99.seignioragecircus.org",
       {
         url: "https://fantom-mainnet.public.blastapi.io",
         tracking: "limited",
