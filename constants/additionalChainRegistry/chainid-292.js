@@ -13,5 +13,11 @@
     "shortName": "hsp-292",
     "chainId": 292,
     "networkId": 292,
-    "explorers": []
+    "explorers": [
+      {
+        "name": "HashSphere Explorer 292",
+        "url": "http://explorer-292.champagnesphere.net",
+        "standard": "none"
+      }
+    ]
   }

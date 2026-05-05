@@ -13,5 +13,11 @@
     "shortName": "hsp-4612",
     "chainId": 4612,
     "networkId": 4612,
-    "explorers": []
+    "explorers": [
+      {
+        "name": "HashSphere Explorer 4612",
+        "url": "http://explorer-4612.champagnesphere.net",
+        "standard": "none"
+      }
+    ]
   }
