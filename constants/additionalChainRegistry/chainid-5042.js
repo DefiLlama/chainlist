@@ -1,7 +1,7 @@
 export const data = {
   "name": "Arc",
   "chain": "arc",
-  "rpc": ["https://rpc.testnet.arc.network"],
+  "rpc": ["https://rpc.arc.network"],
   "faucets": [],
   "nativeCurrency": {
     "name": "USDC",
@@ -13,5 +13,5 @@ export const data = {
   "chainId": 5042,
   "networkId": 5042,
   "icon": "arc",
-  "explorers": ["https://testnet.arcscan.app"]
+  "explorers": ["https://arcscan.app"]
 }
