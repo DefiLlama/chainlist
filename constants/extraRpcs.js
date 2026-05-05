@@ -10012,7 +10012,16 @@ export const extraRpcs = {
         trackingDetails: "No user tracking or data collection",
       },
     ],
-  }
+  },
+  1404: {
+    rpcs: [
+      {
+        url: "https://mainnet-rpc.bdagscan.com",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ]
+  },
 };  
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
