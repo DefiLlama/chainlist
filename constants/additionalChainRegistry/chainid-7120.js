@@ -20,8 +20,8 @@ export const data = {
     "explorers": [
       {
         "name": "Sentrix Scan (Testnet)",
-        "url": "https://scan.sentrixchain.com",
-        "standard": "none"
+        "url": "https://scan-testnet.sentrixchain.com",
+        "standard": "EIP3091"
       }
     ]
   }
