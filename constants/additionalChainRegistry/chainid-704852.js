@@ -4,8 +4,8 @@ export const data = {
   "shortName": "marschain-testnet",
   "chain": "MARS",
   "rpc": [
-    "https://rpc-testnet.mars-scan.io",
-    "wss://rpc-testnet.mars-scan.io"
+    "https://testnet-rpc.mars-chain.io",
+    "wss://testnet-rpc.mars-chain.io"
   ],
   "faucets": [],
   "nativeCurrency": {
