@@ -474,7 +474,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodifi,
       },
-      "https://ethereum.rpc.subquery.network/public",
       {
         url: "https://rpc.graffiti.farm",
         tracking: "limited",
@@ -1057,7 +1056,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
-      "https://bnb.rpc.subquery.network/public",
       {
         url: "wss://bsc.callstaticrpc.com",
         tracking: "none",
@@ -1496,7 +1494,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      "https://polygon.rpc.subquery.network/public",
       {
         url: "https://polygon-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
@@ -1838,7 +1835,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
-      "https://arbitrum.rpc.subquery.network/public",
       {
         url: "https://arbitrum.gateway.tenderly.co",
         tracking: "yes",
@@ -2686,7 +2682,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      "https://optimism.rpc.subquery.network/public",
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -5601,7 +5596,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      "https://base.rpc.subquery.network/public",
       {
         url: "wss://base.callstaticrpc.com",
         tracking: "none",
@@ -6001,7 +5995,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
-      "https://ethereum-sepolia.rpc.subquery.network/public",
       {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
         tracking: "none",
