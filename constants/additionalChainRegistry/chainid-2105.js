@@ -6,8 +6,8 @@ export const data = {
       "https://rpc-mainnet.ibvm.io/"
     ],
     "nativeCurrency": {
-      "name": "IBVM Bitcoin",
-      "symbol": "BTC",
+      "name": "IBVM",
+      "symbol": "IBVM",
       "decimals": 18
     },
     "infoURL": "https://ibvm.io/",

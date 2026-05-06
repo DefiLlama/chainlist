@@ -1,0 +1,29 @@
+export const data = {
+  "name": "Vexidus Testnet",
+  "chain": "VXS",
+  "rpc": [
+    "https://testnet.vexidus.io"
+  ],
+  "faucets": [
+    "https://vexswap.xyz"
+  ],
+  "nativeCurrency": {
+    "name": "Vexidus",
+    "symbol": "VXS",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" }
+  ],
+  "infoURL": "https://vexidus.io",
+  "shortName": "vxs-testnet",
+  "chainId": 1618032,
+  "networkId": 1618032,
+  "explorers": [
+    {
+      "name": "VexScan",
+      "url": "https://vexscan.io",
+      "standard": "EIP3091"
+    }
+  ]
+}
