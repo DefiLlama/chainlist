@@ -8531,7 +8531,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bctech,
       },
       "https://evm-rpc-archive.story.node75.org",
-      "https://rpc.evm.mainnet.story.despreadlabs.io",
       {
         url: "https://story-json-rpc.stakely.io/",
         tracking: "none",
