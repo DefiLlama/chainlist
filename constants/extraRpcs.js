@@ -8536,7 +8536,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Stakely,
       },
-    
       {
         url: "https://rpc.swiftnodes.io/rpc/story",
         tracking: "limited",
