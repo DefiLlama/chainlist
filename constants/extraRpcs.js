@@ -10029,6 +10029,20 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.sentio,
       }
     ]
+  },
+  89001: {
+    rpcs: [
+      {
+        url: "https://rpc.jamiroqu.ai",
+        tracking: "limited",
+        trackingDetails: "We do not actively profile or store user data. IP addresses may be temporarily visible in operational logs for incident response and DDoS mitigation, and only consulted on user request for support. Operated by Capital Exchange Markets (NL).",
+      },
+      {
+        url: "https://rpc.capitalexchange.digital",
+        tracking: "limited",
+        trackingDetails: "We do not actively profile or store user data. IP addresses may be temporarily visible in operational logs for incident response and DDoS mitigation, and only consulted on user request for support. Operated by Capital Exchange Markets (NL).",
+      },
+    ],
   }
 };  
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
