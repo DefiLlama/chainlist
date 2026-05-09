@@ -10033,4 +10033,14 @@ export const extraRpcs = {
 };  
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
-export default allExtraRpcs;
+export default allExtraRpcs;,
+  8472: {
+    rpcs: [
+      {
+        url: "https://rpc.myrxwallet.io",
+        tracking: "none",
+        trackingDetails: "MyRxWallet does not log or store RPC request data.",
+      },
+    ],
+  },
+}
