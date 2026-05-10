@@ -1,0 +1,20 @@
+{
+  "name": "BEXChain",
+  "chainId": 140586,
+  "shortName": "bex",
+  "nativeCurrency": {
+    "name": "BEX",
+    "symbol": "BEX",
+    "decimals": 18
+  },
+  "rpc": [
+    "https://rpc.bexchain.com"
+  ],
+  "explorers": [
+    {
+      "name": "BEX Explorer",
+      "url": "https://scan.bexchain.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
