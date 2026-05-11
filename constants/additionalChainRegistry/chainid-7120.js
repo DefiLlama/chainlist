@@ -9,8 +9,8 @@ export const data = {
       "https://faucet.sentrixchain.com"
     ],
     "nativeCurrency": {
-      "name": "Sentrix Testnet",
-      "symbol": "tSRX",
+      "name": "Sentrix",
+      "symbol": "SRX",
       "decimals": 18
     },
     "infoURL": "https://sentrixchain.com",
