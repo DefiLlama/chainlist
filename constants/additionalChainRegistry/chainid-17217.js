@@ -19,7 +19,7 @@ export const data = {
     "explorers": [
         {
             "name": "konet-explorer",
-            "url": "https://konetexplorer.io/",
+            "url": "https://konetexplorer.io",
             "standard": "EIP3091"
         }
     ]
