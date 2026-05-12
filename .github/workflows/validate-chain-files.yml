@@ -31,7 +31,8 @@ jobs:
           if ! git cat-file -e "$HEAD_SHA^{commit}"; then
             git fetch --no-tags --depth=1 origin "pull/$PR_NUMBER/head"
           fi
-          CHANGED_FILES="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")"
+          CHANGED_FILES="$(git diff --name-only --diff-filter=AM "$BASE_SHA" "$HEAD_SHA")"
+          printf 'Changed files:\n%s\n' "$CHANGED_FILES"
           echo "FILES_CHANGED=$(printf '%s\n' "$CHANGED_FILES" | grep '^constants/additionalChainRegistry/' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
           echo "EXTRA_RPC_CHANGED=$(printf '%s\n' "$CHANGED_FILES" | grep '^constants/extraRpcs.js$' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
 
