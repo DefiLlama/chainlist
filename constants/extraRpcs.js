@@ -242,7 +242,7 @@ const privacyStatement = {
   mevx:
     "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
   rpcfree:
-    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://etox.io/privacy"
+    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy"
 };
 
 export const extraRpcs = {
