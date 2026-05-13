@@ -158,7 +158,7 @@ export default {
   "4048": "earnm",
   "4114": "citrea",
   "4158": "crossfi",
-  "4326": "polymesh",
+  "4326": "megaeth",
   "4337": "beam",
   "4442": "denergy testnet",
   "4488": "hydra chain",
