@@ -1,0 +1,25 @@
+export const data = {
+    "name": "MYRX-MAINNET",
+    "chain": "MYRX",
+    "rpc": [
+      "https://rpc.myrxwallet.io"
+    ],
+    "features": [{"name": "EIP155"}, {"name": "EIP1559"}],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "MYRX",
+      "symbol": "MYRX",
+      "decimals": 18
+    },
+    "infoURL": "https://myrxwallet.io",
+    "shortName": "myrx",
+    "chainId": 8472,
+    "networkId": 8472,
+    "explorers": [
+      {
+        "name": "MYRX-MAINNET Explorer",
+        "url": "https://explorer.myrxwallet.io",
+        "standard": "EIP3091"
+      }
+    ]
+}
