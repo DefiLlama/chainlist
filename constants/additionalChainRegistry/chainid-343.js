@@ -15,7 +15,7 @@ export const data = {
   "networkId": 343,
   "explorers": [
     {
-      "name": "Capital Exchange Markets - Digital",
+      "name": "Capital Exchange Markets | Digital",
       "url": "https://explorer.capitalexchange.se",
       "standard": "EIP3091"
     }
