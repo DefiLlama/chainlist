@@ -16,7 +16,8 @@ export const data = {
   "explorers": [
     {
       "name": "Capital Exchange Markets | Digital",
-      "url": "https://explorer.capitalexchange.se"
+      "url": "https://explorer.capitalexchange.se",
+      "standard": "none"
     }
   ]
 };
