@@ -1,0 +1,23 @@
+export const data = {
+  name: "MyRxWallet Network",
+  chain: "MRT",
+  rpc: ["https://rpc.myrxwallet.io"],
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  faucets: [],
+  nativeCurrency: {
+    name: "MyRx Token",
+    symbol: "MRT",
+    decimals: 18,
+  },
+  infoURL: "https://myrxwallet.io",
+  shortName: "mrt",
+  chainId: 8472,
+  networkId: 8472,
+  explorers: [
+    {
+      name: "MyRxWallet Explorer",
+      url: "https://explorer.myrxwallet.io",
+      standard: "EIP3091",
+    },
+  ],
+}
