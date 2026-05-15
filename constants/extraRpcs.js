@@ -599,6 +599,16 @@ export const extraRpcs = {
       "wss://wss.cchain.cc"
     ],
   },
+  1492: {
+    rpcs: [
+      {
+        url: "https://rpc.roonchain.com",
+        tracking: "yes",
+        trackingDetails:
+          "Official ROON Mainnet public RPC provided by the RoonChain team. Privacy policy is not publicly available yet.",
+      },
+    ],
+  },
   2517: {
     rpcs: [
       "https://svp-dataseed1-testnet.svpchain.org",
