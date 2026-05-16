@@ -12,7 +12,7 @@ export const data = {
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://panchain.io",
-  "shortName": "pcn",
+  "shortName": "pc",
   "chainId": 7890,
   "networkId": 7890,
   "explorers": [{

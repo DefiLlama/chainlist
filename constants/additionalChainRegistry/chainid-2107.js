@@ -8,7 +8,7 @@ export const data = {
     "faucets": ["https://faucet.ibvm.io"],
     "nativeCurrency": {
       "name": "IBVM Bitcoin",
-      "symbol": "BTC",
+      "symbol": "IBVM",
       "decimals": 18
     },
     "infoURL": "https://ibvm.io/",
