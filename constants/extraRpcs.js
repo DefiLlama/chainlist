@@ -1,7 +1,3 @@
-import { mergeDeep } from "../utils/fetch.js";
-
-import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
-
 const privacyStatement = {
   blockswap:
     "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",
@@ -10021,7 +10017,6 @@ export const extraRpcs = {
       }
     ]
   }
-};  
-const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
+};
 
-export default allExtraRpcs;
+export default extraRpcs;
