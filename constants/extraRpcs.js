@@ -10020,7 +10020,23 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.sentio,
       }
     ]
-  }
+  },
+  8472: {
+    rpcs: [
+      {
+        url: "https://rpc.myrxwallet.io",
+        tracking: "none",
+        trackingDetails:
+          "MyRx Network does not collect or store any user information (IP addresses, wallet addresses, location, etc.) transmitted via our RPC. https://myrxwallet.io",
+      },
+      {
+        url: "wss://rpc.myrxwallet.io",
+        tracking: "none",
+        trackingDetails:
+          "MyRx Network does not collect or store any user information (IP addresses, wallet addresses, location, etc.) transmitted via our RPC. https://myrxwallet.io",
+      },
+    ],
+  },
 };  
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
