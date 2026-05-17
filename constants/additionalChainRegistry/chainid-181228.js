@@ -15,7 +15,7 @@ export const data = {
   "shortName": "hpp-sepolia",
   "chainId": 181228,
   "networkId": 181228,
-  "icon": "ethereum",
+  "icon": "https://ipfs.io/ipfs/QmX5MTCNX4wKb7B9pK6UH7oHGcWj5m8XywhzXqLA7gtVAJ",
   "explorers": [{
     "name": "HPP Sepolia Explorer",
     "url": "https://sepolia-explorer.hpp.io",
