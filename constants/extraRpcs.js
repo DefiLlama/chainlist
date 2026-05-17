@@ -1563,8 +1563,10 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-      { url: "https://rpc.satelink.network/rpc/polygon",
-       tracking: "none" },
+      { 
+        url: "https://rpc.satelink.network/rpc/polygon",
+       tracking: "none", 
+      },
     ],
   },
   25: {
