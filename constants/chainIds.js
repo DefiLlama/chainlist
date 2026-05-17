@@ -137,6 +137,7 @@ export default {
   "2000": "dogechain",
   "2001": "milkomeda",
   "2002": "milkomeda_a1",
+  "20261": "macos",
   "2020": "ronin",
   "2152": "findora",
   "2222": "kava",
