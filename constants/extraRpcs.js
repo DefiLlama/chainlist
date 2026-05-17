@@ -10021,6 +10021,12 @@ export const extraRpcs = {
       }
     ]
   }
+      // InfinitePanda QL1 Public EVM RPC
+    766: {
+      rpcs: [
+        "https://evm-rpc.infinitepanda.xyz"
+      ]
+    },
 };  
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
