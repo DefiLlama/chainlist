@@ -223,6 +223,7 @@ export default {
   "34443": "mode",
   "35441": "q_protocol",
   "39797": "energi",
+  "41443": "nesa",
   "41455": "aleph_zero_evm",
   "41923": "edu chain",
   "42161": "arbitrum",
