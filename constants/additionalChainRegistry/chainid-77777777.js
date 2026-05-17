@@ -14,6 +14,9 @@ export const data = {
     "shortName": "cryptos-testnet-beta",
     "chainId": 77777777,
     "networkId": 77777777,
+    "icon": "cryptos",
+    "chainSlug": "cryptos",
+    "isTestnet": true,
     "explorers": [
       {
         "name": "Cryptos Explorer (Testnet Beta)",
