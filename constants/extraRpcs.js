@@ -1562,7 +1562,7 @@ export const extraRpcs = {
         url: "https://matic.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
-      }
+      },
       { url: "https://rpc.satelink.network/rpc/polygon",
        tracking: "none" },
     ],
