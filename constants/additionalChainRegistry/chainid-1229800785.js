@@ -1,8 +1,15 @@
 export const data = {
   "name": "iTani Network Chain",
-  "chain": "ITANI",
+  "chain": "ITN",
+  "icon": "itani",
   "rpc": [
-    "https://itani-network-chain-kirdnwz4rq-uc.a.run.app/"
+    "https://node.itaninetworkchain.com/jsonrpc",
+    "https://relay.itaninetworkchain.com/jsonrpc"
+  ],
+  "features": [
+    {
+      "name": "EIP155"
+    }
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -10,11 +17,22 @@ export const data = {
     "symbol": "ITANI",
     "decimals": 18
   },
-  "features": [{ "name": "EIP155" }],
-  "infoURL": "https://github.com/iTaniCore/iTani-Network-Chain",
+  "infoURL": "https://github.com/itanidreams-dev/iTani-Network-Chain",
   "shortName": "itani",
   "chainId": 1229800785,
   "networkId": 1229800785,
-  "icon": "itani",
-  "explorers": []
-}
+  "explorers": [
+    {
+      "name": "iTani Explorer",
+      "url": "https://node.itaninetworkchain.com",
+      "icon": "itani",
+      "standard": "EIP3091"
+    },
+    {
+      "name": "iTani Explorer (Relay)",
+      "url": "https://relay.itaninetworkchain.com",
+      "icon": "itani",
+      "standard": "EIP3091"
+    }
+  ]
+};
