@@ -11,7 +11,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://lightchain.ai",
-  "shortName": "lcai",
+  "shortName": "lcai-t",
   "chainId": 8200,
   "networkId": 8200,
   "icon": "lcai",
