@@ -14,6 +14,9 @@ jobs:
         with:
           fetch-depth: 100
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Set changed files
         id: files
         run: |
@@ -29,8 +32,8 @@ jobs:
             echo "No relevant files changed."
             exit 0
           fi
-          yarn
-          ONLY_LIST_FILE=true npm run build
+          pnpm install --frozen-lockfile
+          ONLY_LIST_FILE=true pnpm run build
           node .github/scripts/validate-chain-files.js
           
         env:

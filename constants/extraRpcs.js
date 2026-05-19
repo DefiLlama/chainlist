@@ -241,7 +241,10 @@ const privacyStatement = {
     "Mirasmanda RPC does not collect or store any personally identifiable information (PII), including IP addresses, wallet addresses, or request metadata. The only data recorded on our infrastructure is what is publicly available on the blockchain. No user data is shared with third parties. For more information, visit https://asterium.uz",
   routemesh:
     "RouteMesh may process basic request metadata (for example: chain ID, method, timestamp, request size, and coarse location from network edge data) to run routing, apply rate limits, improve reliability, and monitor service health. For more details visit https://routeme.sh/privacy",
-  mevx: "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
+  mevx:
+    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
+  rpcfree:
+    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy"
 };
 
 export const extraRpcs = {
@@ -480,7 +483,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodifi,
       },
-      "https://ethereum.rpc.subquery.network/public",
       {
         url: "https://rpc.graffiti.farm",
         tracking: "limited",
@@ -591,6 +593,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/eth",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/ethereum-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
       },
     ],
   },
@@ -1088,7 +1095,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
-      "https://bnb.rpc.subquery.network/public",
       {
         url: "wss://bsc.callstaticrpc.com",
         tracking: "none",
@@ -1547,7 +1553,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      "https://polygon.rpc.subquery.network/public",
       {
         url: "https://polygon-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
@@ -1613,6 +1618,11 @@ export const extraRpcs = {
         url: "https://matic.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpcfree.com/polygon-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
       },
     ],
   },
@@ -1919,7 +1929,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
-      "https://arbitrum.rpc.subquery.network/public",
       {
         url: "https://arbitrum.gateway.tenderly.co",
         tracking: "yes",
@@ -1995,6 +2004,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/arbitrum",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/arbitrum-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
       },
     ],
   },
@@ -2852,7 +2866,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
       },
-      "https://optimism.rpc.subquery.network/public",
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
@@ -6315,7 +6328,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      "https://base.rpc.subquery.network/public",
       {
         url: "wss://base.callstaticrpc.com",
         tracking: "none",
@@ -6396,6 +6408,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/base",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/base-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
       },
     ],
   },
@@ -6804,7 +6821,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
-      "https://ethereum-sepolia.rpc.subquery.network/public",
       {
         url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
         tracking: "none",
@@ -9916,13 +9932,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bctech,
       },
       "https://evm-rpc-archive.story.node75.org",
-      "https://rpc.evm.mainnet.story.despreadlabs.io",
       {
         url: "https://story-json-rpc.stakely.io/",
         tracking: "none",
         trackingDetails: privacyStatement.Stakely,
       },
-
       {
         url: "https://rpc.swiftnodes.io/rpc/story",
         tracking: "limited",
