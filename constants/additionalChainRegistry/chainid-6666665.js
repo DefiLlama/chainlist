@@ -20,7 +20,7 @@ export const data = {
   "explorers": [
     {
       "name": "Safe(AnWang) Explorer",
-      "url": "http://safe4.anwang.com",
+      "url": "https://safe4.anwang.com",
       "standard": "EIP3091"
     }
   ],
