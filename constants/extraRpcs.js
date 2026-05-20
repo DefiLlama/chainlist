@@ -236,7 +236,9 @@ const privacyStatement = {
   mirasmanda:
     "Mirasmanda RPC does not collect or store any personally identifiable information (PII), including IP addresses, wallet addresses, or request metadata. The only data recorded on our infrastructure is what is publicly available on the blockchain. No user data is shared with third parties. For more information, visit https://asterium.uz",
   mevx:
-    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse)."
+    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
+  rpcfree:
+    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy"
 };
 
 export const extraRpcs = {
@@ -581,6 +583,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://rpcfree.com/ethereum-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
+      },
     ],
   },
   2: {
@@ -593,6 +600,16 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.cchain.cc",
       "wss://wss.cchain.cc"
+    ],
+  },
+  1492: {
+    rpcs: [
+      {
+        url: "https://rpc.roonchain.com",
+        tracking: "yes",
+        trackingDetails:
+          "Official ROON Mainnet public RPC provided by the RoonChain team. Privacy policy is not publicly available yet.",
+      },
     ],
   },
   2517: {
@@ -1555,7 +1572,12 @@ export const extraRpcs = {
         url: "https://matic.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
-      }
+      },
+      {
+        url: "https://rpcfree.com/polygon-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
+      },
     ],
   },
   25: {
@@ -1906,6 +1928,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/arbitrum",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/arbitrum-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
       },
     ],
   },
@@ -5672,6 +5699,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/base",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/base-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
       },
     ],
   },
