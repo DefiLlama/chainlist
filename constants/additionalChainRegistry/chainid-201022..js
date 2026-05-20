@@ -5,12 +5,12 @@ export const data = {
     "https://fsc-dataseed1.fonscan.io",
     "https://fsc-dataseed2.fonscan.io",
     "https://fsc-dataseed3.fonscan.io",
-    "https://fsc-dataseed4.fonscan.io"
-    "https://rpc.hieswap.com"
+    "https://fsc-dataseed4.fonscan.io",
+    "https://rpc.hieswap.com",
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "FONChain",
+    "name": "FON",
     "symbol": "FON",
     "decimals": 18
   },
