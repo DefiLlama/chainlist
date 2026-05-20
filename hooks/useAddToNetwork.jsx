@@ -39,13 +39,7 @@ export async function addToNetwork({ address, chain, rpc }) {
 
       // the 'wallet_addEthereumChain' method returns null if the request was successful
       if (result === null && CHAINS_MONITOR.includes(chain.chainId)) {
-        if (rpc && rpc.includes("llamarpc")) {
-          Fathom.trackGoal(FATHOM_DROPDOWN_EVENTS_ID[chain.chainId], 0);
-        } else if (!rpc && chain.rpc?.length > 0 && chain.rpc[0].url.includes("llamarpc")) {
-            Fathom.trackGoal(FATHOM_EVENTS_ID[chain.chainId], 0);
-        } else {
-          Fathom.trackGoal(FATHOM_NO_EVENTS_ID[chain.chainId], 0);
-        }
+        Fathom.trackGoal(FATHOM_NO_EVENTS_ID[chain.chainId], 0);
       }
 
       return result;
