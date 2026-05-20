@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "AXION Mainnet",
   "chain": "AXION",
   "rpc": [
