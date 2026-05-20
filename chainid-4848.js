@@ -1,11 +1,11 @@
 export const data = {
-  "chainId": 484,
+  "chainId": 4848,
   "name": "BlockSurety",
   "shortName": "BSURE",
   "chain": "BSURE",
-  "networkId": 484,
-  "infoURL": "https://main.blocksurety.net:484",
-  "rpc": ["https://main.blocksurety.net:484/"],
+  "networkId": 4848,
+  "infoURL": "https://rpc.blocksurety.net/",
+  "rpc": ["https://rpc.blocksurety.net/"],
   "nativeCurrency": {
     "name": "BSURE",
     "symbol": "BSURE",
