@@ -10089,6 +10089,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       }
+         12126: {
+    rpcs: [
+      {
+        url: "https://gateway.liquify.com/chain/hypeevm",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+  },
     ]
   }
 };
