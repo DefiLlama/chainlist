@@ -1,7 +1,3 @@
-import { mergeDeep } from "../utils/fetch.js";
-
-import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
-
 const privacyStatement = {
   blockswap:
     "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",
@@ -244,7 +240,9 @@ const privacyStatement = {
   mevx:
     "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
   rpcfree:
-    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy"
+    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy",
+  nodeflare:
+    "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy"
 };
 
 export const extraRpcs = {
@@ -254,6 +252,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/1",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/eth/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
       },
       // Quicknode -> tracks IP
       {
@@ -618,6 +621,16 @@ export const extraRpcs = {
   2500: {
     rpcs: ["https://rpc.cchain.cc", "wss://wss.cchain.cc"],
   },
+  1492: {
+    rpcs: [
+      {
+        url: "https://rpc.roonchain.com",
+        tracking: "yes",
+        trackingDetails:
+          "Official ROON Mainnet public RPC provided by the RoonChain team. Privacy policy is not publicly available yet.",
+      },
+    ],
+  },
   2517: {
     rpcs: [
       "https://svp-dataseed1-testnet.svpchain.org",
@@ -957,6 +970,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
+      {
+        url: "https://rpc.nodeflare.app/bnb/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://bsc-dataseed.bnbchain.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
@@ -1242,6 +1260,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/43114",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/avax/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
       },
       "https://api.avax.network/ext/bc/C/rpc",
       "https://avalanche.public-rpc.com",
@@ -1852,6 +1875,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/42161",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/arb/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
       },
       "https://arb1.arbitrum.io/rpc",
       {
@@ -2749,6 +2777,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/10",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/op/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
       },
       "https://mainnet.optimism.io/",
       {
@@ -4032,6 +4065,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/88",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/vic/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
       },
       {
         url: "https://viction.blockpi.network/v1/rpc/public",
@@ -6253,6 +6291,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/8453",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/base/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
       },
       "https://mainnet.base.org",
       "https://developer-access-mainnet.base.org",
@@ -12268,6 +12311,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://rpc.nodeflare.app/hl/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
     ],
   },
   1007: {
@@ -14983,4 +15031,4 @@ export const extraRpcs = {
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
-export default allExtraRpcs;
+export default extraRpcs;
