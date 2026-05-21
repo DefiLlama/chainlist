@@ -21,4 +21,4 @@ export const data = {
     "url": "https://axscan.axiondefi.com",
     "standard": "EIP3091"
   }]
-}
+} 
