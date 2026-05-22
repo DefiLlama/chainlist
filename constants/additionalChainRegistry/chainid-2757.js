@@ -25,7 +25,7 @@
   "explorers": [
     {
       "name": "MedorExplorer",
-      "url": "https://medorcoin.org",
+      "url": "https://medorcoin.org/blockchain.html",
       "standard": "EIP3091"
     }
   ]
