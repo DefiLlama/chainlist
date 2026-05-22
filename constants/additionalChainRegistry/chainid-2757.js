@@ -10,7 +10,7 @@
   "infoURL": "https://medorcoin.org",
   "shortName": "medor",
   "chainId": 2757,
-  "networkId": 8888,
+  "networkId": 2757,
   "explorers": [{
     "name": "MedorExplorer",
     "url": "https://medorcoin.org",
