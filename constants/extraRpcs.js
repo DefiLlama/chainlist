@@ -1726,6 +1726,14 @@ export const extraRpcs = {
       },
     ],
   },
+  1236: {
+    rpcs: [
+      {
+        url: "https://rpc.brainark.online",
+        tracking: "none",
+      },
+    ],
+  },
   2340: {
     rpcs: [
       {
