@@ -3,7 +3,6 @@ import { notTranslation as useTranslations } from "../../utils";
 import CopyUrl from "../CopyUrl";
 import useRPCData from "../../hooks/useRPCData";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
-import { useLlamaNodesRpcData } from "../../hooks/useLlamaNodesRpcData";
 import { useRpcStore } from "../../stores";
 import { renderProviderText } from "../../utils";
 import { Tooltip } from "../../components/Tooltip";
@@ -75,8 +74,6 @@ export default function RPCList({ chain, lang }) {
     });
   }, [chains]);
 
-  const { rpcData, hasLlamaNodesRpc } = useLlamaNodesRpcData(chain.chainId, data);
-
   return (
     <div className="shadow dark:bg-[#0D0D0D] bg-white p-8 rounded-[10px] flex flex-col gap-3 col-span-full relative overflow-x-auto">
       <table className="m-0 border-collapse whitespace-nowrap dark:text-[#B3B3B3] text-black">
@@ -116,13 +113,7 @@ export default function RPCList({ chain, lang }) {
         </thead>
 
         <tbody>
-          {rpcData.map((item, index) => {
-            let className = "bg-inherit";
-
-            if (hasLlamaNodesRpc && index === 0) {
-              className = "dark:bg-[#0D0D0D] bg-[#F9F9F9]";
-            }
-
+          {data.map((item, index) => {
             return (
               <Row
                 values={item}
@@ -130,7 +121,7 @@ export default function RPCList({ chain, lang }) {
                 key={"rpc" + index}
                 privacy={urlToData[item.data.url]}
                 lang={lang}
-                className={className}
+                className="bg-inherit"
               />
             );
           })}
