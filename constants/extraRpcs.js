@@ -240,7 +240,9 @@ const privacyStatement = {
   rpcfree:
     "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy",
   nodeflare:
-    "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy"
+    "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy",
+  agentqlTomo:
+    "AgentQL Tomo states that it may process technical and usage information needed to operate the service, including browser or device metadata, page requests, API key actions, request logs, stream activity, error events, and service diagnostics. https://agentql.tomo.inc/privacy-policy",
 };
 
 export const extraRpcs = {
@@ -594,6 +596,16 @@ export const extraRpcs = {
         url: "https://rpcfree.com/ethereum-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://gw-aql.tomo.services/v1/ethereum/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
+      },
+      {
+        url: "wss://gw-aql.tomo.services/v1/ethereum/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
       },
     ],
   },
@@ -1142,6 +1154,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
+      },
+      {
+        url: "wss://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
+      },
     ],
   },
   97: {
@@ -1594,6 +1616,10 @@ export const extraRpcs = {
         url: "https://rpcfree.com/polygon-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
+      },
+      { 
+        url: "https://rpc.satelink.network/rpc/polygon",
+       tracking: "none", 
       },
     ],
   },
