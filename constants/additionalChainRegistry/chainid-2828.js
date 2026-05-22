@@ -1,7 +1,9 @@
 {
   "name": "Candy Chain",
   "chain": "CANDY",
-  "rpc": ["https://publicrpc.candychain.io"],
+  "rpc": [
+    "https://publicrpc.candychain.io"
+  ],
   "faucets": [],
   "nativeCurrency": {
     "name": "CANDY",
@@ -12,6 +14,7 @@
   "shortName": "candy",
   "chainId": 2828,
   "networkId": 2828,
+  "logo": "https://azure-payable-elk-245.mypinata.cloud/ipfs/bafkreigprs6s7dcrmouiuafv5mm4ikdqphso2qidcduozqykqowmtxuvwu",
   "explorers": [
     {
       "name": "Candy Chain Explorer",
