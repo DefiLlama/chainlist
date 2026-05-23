@@ -10116,7 +10116,35 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.sentio,
       }
     ]
-  }
+  },
+  7771777: {
+    rpcs: [
+      {
+        url: "https://rpc-gw-1.vyoscan.com/ext/bc/2t51dXsuxUvd9teY9TKEJmgxmxMk3CRF88UYTA4HQgjeYZqzSX/rpc",
+        tracking: "none",
+        trackingDetails: "VALYGO does not collect or store any user data through its RPC endpoints.",
+      },
+      {
+        url: "https://rpc-gw-2.vyoscan.com/ext/bc/2t51dXsuxUvd9teY9TKEJmgxmxMk3CRF88UYTA4HQgjeYZqzSX/rpc",
+        tracking: "none",
+        trackingDetails: "VALYGO does not collect or store any user data through its RPC endpoints.",
+      },
+    ],
+  },
+  7773777: {
+    rpcs: [
+      {
+        url: "https://rpc-gw-1.vyoscan.com/ext/bc/2RyzsmGypNQZPby1miwMMV8spTvhgd9qd2peNRzU1mErUQqSSw/rpc",
+        tracking: "none",
+        trackingDetails: "VALYGO does not collect or store any user data through its RPC endpoints.",
+      },
+      {
+        url: "https://rpc-gw-2.vyoscan.com/ext/bc/2RyzsmGypNQZPby1miwMMV8spTvhgd9qd2peNRzU1mErUQqSSw/rpc",
+        tracking: "none",
+        trackingDetails: "VALYGO does not collect or store any user data through its RPC endpoints.",
+      },
+    ],
+  },
 };
 
 export default extraRpcs;
