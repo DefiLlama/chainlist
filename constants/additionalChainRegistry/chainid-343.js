@@ -13,6 +13,7 @@ export const data = {
   "shortName": "bourse",
   "chainId": 343,
   "networkId": 343,
+  icon: "bourse",
   "explorers": [
     {
       "name": "Capital Exchange Markets | Digital",
