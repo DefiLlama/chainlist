@@ -1,0 +1,26 @@
+export const data = {
+  "name": "BitVault BVM20",
+  "chain": "BVM20",
+  "network": "mainnet",
+  "rpc": [
+    "https://rpc.bitvault.club",
+    "wss://rpc.bitvault.club:8549"
+  ],
+  "faucets": ["https://faucet.bitvault.club"],
+  "nativeCurrency": {
+    "name": "BitVault Token",
+    "symbol": "BVTW",
+    "decimals": 18
+  },
+  "infoURL": "https://bitvault.club",
+  "shortName": "bvm20",
+  "chainId": 31338,
+  "networkId": 31338,
+  "explorers": [
+    {
+      "name": "BitVault Explorer",
+      "url": "https://explorer.bitvault.club",
+      "standard": "EIP3091"
+    }
+  ]
+}
