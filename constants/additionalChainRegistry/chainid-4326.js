@@ -16,13 +16,13 @@ export const data = {
   "networkId": 4326,
   "explorers": [
     {
-      "name": "Blockscout",
-      "url": "https://megaeth.blockscout.com",
+      "name": "Etherscan",
+      "url": "https://mega.etherscan.io",
       "standard": "EIP3091"
     },
     {
-      "name": "Etherscan",
-      "url": "https://mega.etherscan.com",
+      "name": "Blockscout",
+      "url": "https://megaeth.blockscout.com",
       "standard": "EIP3091"
     }
   ]

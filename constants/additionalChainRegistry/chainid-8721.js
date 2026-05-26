@@ -4,26 +4,23 @@ export const data = {
   "rpc": [
     "https://rpc.ebcscan.net"
   ],
-  "faucets": [],
+  "faucets": ["https://ebcscan.net/faucet"],
   "nativeCurrency": {
     "name": "EBC Token",
     "symbol": "EBC",
     "decimals": 18
   },
   "features": [
-    { "name": "EIP155" },
-    { "name": "EIP1559" }
+    { "name": "EIP155" }
   ],
-  "infoURL": "https://ebcscan.net",
+  "infoURL": "https://eb-chain.com",
   "shortName": "ebc",
   "chainId": 8721,
   "networkId": 8721,
-  "icon": "ebc",
   "explorers": [
     {
-      "name": "EBC Scan",
+      "name": "EBCScan",
       "url": "https://ebcscan.net",
-      "icon": "ebc",
       "standard": "EIP3091"
     }
   ]
