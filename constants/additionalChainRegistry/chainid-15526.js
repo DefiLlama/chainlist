@@ -10,7 +10,7 @@ export default {
     symbol: "NRXN",
     decimals: 18
   },
-  infoURL: "https://nirmalxscan.com/",
+  infoURL: "https://nirmalxscan.com",
   shortName: "nrxn",
   chainId: 15526,
   networkId: 15526,

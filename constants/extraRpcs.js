@@ -10043,16 +10043,14 @@ export const extraRpcs = {
       }
     ]
   },
-  15526: {
-    rpcs: [
-      {
-        url: "https://rpc.nirmalxscan.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.sentio,
-      }
-    ]
-  },
-
+15526: {
+  rpcs: [
+    {
+      url: "https://rpc.nirmalxscan.com",
+      tracking: "none"
+    }
+  ]
+},
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
