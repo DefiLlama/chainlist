@@ -4677,16 +4677,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.bloxroute,
       },
       {
-        url: "https://okx-xlayer.rpc.blxrbdn.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
-      },
-      {
-        url: "https://flap-xlayer.rpc.blxrbdn.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
-      },
-      {
         url: "https://xlayer-mainnet.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
