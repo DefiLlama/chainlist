@@ -1,0 +1,23 @@
+export const data = {
+  "name": "NirmalX Smart Chain",
+  "chain": "NRXN",
+  "network": "mainnet",
+  "rpc": ["https://rpc.nirmalxscan.com"],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "NirmalX Nova",
+    "symbol": "NRXN",
+    "decimals": 18
+  },
+  "infoURL": "https://nirmalx.io",
+  "shortName": "nrxn",
+  "chainId": 15526,
+  "networkId": 15526,
+  "explorers": [
+    {
+      "name": "NirmalXScan",
+      "url": "https://nirmalxscan.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
