@@ -245,6 +245,8 @@ const privacyStatement = {
     "To route your requests, blockmachine temporarily processes your IP address for up to 2 minutes - used only to count and rate-limit requests. It is never stored beyond that window and cannot be linked to any individual user or account.",
   keccakio:
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
+  azul:
+    "Azul does not log IP addresses, request bodies, wallet addresses, or any other identifying information. No cookies or session identifiers are set on the RPC path. No third-party analytics or trackers run on the RPC endpoint. https://baseazul.dev/privacy",
 };
 
 export const extraRpcs = {
@@ -5856,6 +5858,11 @@ export const extraRpcs = {
         url: "https://base-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc.baseazul.dev",
+        tracking: "none",
+        trackingDetails: privacyStatement.azul,
       },
     ],
   },
