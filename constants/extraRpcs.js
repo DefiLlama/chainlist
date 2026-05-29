@@ -243,6 +243,8 @@ const privacyStatement = {
     "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy",
   agentqlTomo:
     "AgentQL Tomo states that it may process technical and usage information needed to operate the service, including browser or device metadata, page requests, API key actions, request logs, stream activity, error events, and service diagnostics. https://agentql.tomo.inc/privacy-policy",
+  azul:
+    "Azul does not log IP addresses, request bodies, wallet addresses, or any other identifying information. No cookies or session identifiers are set on the RPC path. No third-party analytics or trackers run on the RPC endpoint. https://baseazul.dev/privacy",
 };
 
 export const extraRpcs = {
@@ -5767,6 +5769,11 @@ export const extraRpcs = {
         url: "https://rpcfree.com/base-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://rpc.baseazul.dev",
+        tracking: "none",
+        trackingDetails: privacyStatement.azul,
       },
     ],
   },
