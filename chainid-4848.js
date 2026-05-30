@@ -14,11 +14,11 @@ export const data = {
   "explorers": [
     {
       "name": "BlockSurety Explorer",
-      "url": "https://main.blocksurety.net:484",
+      "url": "https://blocksurety.net",
       "standard": "EIP3091"
     }
   ],
   "faucets": [],
-  "features": ["EVM Compatible", "MetaMask Supported"],
+  "features": ["EVM Compatible"],
   "icon": " "
 };
