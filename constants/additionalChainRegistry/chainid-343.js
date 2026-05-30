@@ -1,7 +1,7 @@
 export const data = {
   "name": "Capital Exchange",
   "chain": "BOURSE",
-  "rpc": ["https://rpc.capitalexchange.com"],
+  "rpc": ["https://rpc.capitalexchange.digital"],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "faucets": [],
   "nativeCurrency": {
@@ -9,7 +9,7 @@ export const data = {
     "symbol": "BOURSE",
     "decimals": 18
   },
-  "infoURL": "https://www.capitalexchange.digital",
+  "infoURL": "https://www.capitalexchange.com",
   "shortName": "bourse",
   "chainId": 343,
   "networkId": 343,
