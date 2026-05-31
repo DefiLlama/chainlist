@@ -1,7 +1,10 @@
 export const data = {
   "name": "Capital Exchange",
   "chain": "BOURSE",
-  "rpc": ["https://rpc.capitalexchange.digital"],
+  "rpc": [
+    "https://rpc.capitalexchange.com",
+    "https://rpc.capitalexchange.digital"
+  ],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "faucets": [],
   "nativeCurrency": {
@@ -17,7 +20,8 @@ export const data = {
   "explorers": [
     {
       "name": "Capital Exchange | Digital",
-      "url": "https://explorer.capitalexchange.se",
+      "url": "https://explorer.capitalexchange.com",
+      "icon": "bourse",
       "standard": "none"
     }
   ]
