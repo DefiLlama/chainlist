@@ -5279,6 +5279,15 @@ export const extraRpcs = {
       "https://canto.dexrouting.com",
     ],
   },
+  7777: {
+    rpcs: [
+      {
+        url: "https://rpc.ttl1.top",
+        tracking: "none",
+        trackingDetails: "TTL Coin official RPC operated by TTL Inc. No request logging, no user tracking.",
+      },
+    ],
+  },
   7924: {
     rpcs: ["https://mainnet-rpc.mochain.app/"],
   },
