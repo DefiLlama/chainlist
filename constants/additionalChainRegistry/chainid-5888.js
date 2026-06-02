@@ -1,0 +1,25 @@
+export const data = {
+  "name": "MANTRA Chain",
+  "chain": "MANTRA",
+  "rpc": [
+    "https://evm.mantrachain.io",
+    "wss://evm.mantrachain.io/ws"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "MANTRA",
+    "symbol": "MANTRA",
+    "decimals": 18
+  },
+  "infoURL": "https://mantrachain.io",
+  "shortName": "mantra",
+  "chainId": 5888,
+  "networkId": 5888,
+  "explorers": [
+    {
+      "name": "MANTRA Explorer",
+      "url": "https://blockscout.mantrascan.io",
+      "standard": "EIP3091"
+    }
+  ]
+}
