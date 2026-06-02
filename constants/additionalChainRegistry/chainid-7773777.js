@@ -1,0 +1,27 @@
+export default {
+  "name": "VALYGO NFT",
+  "chain": "VYO",
+  "rpc": [
+    "https://rpc-gw-1.vyoscan.com/ext/bc/2RyzsmGypNQZPby1miwMMV8spTvhgd9qd2peNRzU1mErUQqSSw/rpc"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "VYO",
+    "symbol": "VYO",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }],
+  "infoURL": "https://vyochain.com",
+  "shortName": "vyonft",
+  "chainId": 7773777,
+  "networkId": 7773777,
+  "icon": "valygo",
+  "explorers": [
+    {
+      "name": "VYOScan NFT",
+      "url": "https://nft.vyoscan.com",
+      "icon": "valygo",
+      "standard": "EIP3091"
+    }
+  ]
+}
