@@ -43,6 +43,7 @@ export default {
   "146": "sonic",
   "148": "shimmer_evm",
   "151": "rbn",
+  "1492": "roonchain",
   "166": "nomina",
   "169": "manta",
   "173": "eni",
@@ -307,4 +308,5 @@ export default {
   "383414847825": "zeniq",
   "836542336838601": "curio",
   "2716446429837000": "dchain",
+  "15526": "nrxn",
 }

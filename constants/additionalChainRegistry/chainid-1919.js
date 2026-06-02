@@ -3,7 +3,7 @@ export const data = {
   "chain": "Turkchain",
   "rpc": [
     "https://rpc.turkscan.com",
-    "wss://evm-ws.turkscan.com"
+    "ws://evm-ws.turkscan.com"
   ],
   "faucets": [],
   "nativeCurrency": {
