@@ -1,0 +1,24 @@
+export const data = {
+  "name": "AXION Mainnet",
+  "chain": "AXION",
+  "rpc": [
+    "https://rpc.axiondefi.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "AXION",
+    "symbol": "AXION",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://www.axiondefi.com",
+  "shortName": "axion",
+  "chainId": 303030,
+  "networkId": 303030,
+  "icon": "axion",
+  "explorers": [{
+    "name": "AXSCAN",
+    "url": "https://axscan.axiondefi.com",
+    "standard": "EIP3091"
+  }]
+}
