@@ -9331,6 +9331,7 @@ export const extraRpcs = {
       },
       "https://tokyo.fullnode.mainnet.coti.io/rpc",
       "wss://tokyo.fullnode.mainnet.coti.io/ws",
+      "wss://mainnet.coti.io/ws",
       "https://virginia.fullnode.mainnet.coti.io/rpc",
       "wss://virginia.fullnode.mainnet.coti.io/ws",
       "https://new-york.fullnode.mainnet.coti.io/rpc",
