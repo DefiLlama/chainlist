@@ -5962,6 +5962,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://go.getblock.io/78430635365141ba810c0a9351ab03e5",
+        tracking: "none",
+        trackingDetails: privacyStatement.getblock,
+      },
     ],
   },
   88888: {
