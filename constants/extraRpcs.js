@@ -10098,8 +10098,13 @@ export const extraRpcs = {
         url: "https://stable-mainnet.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
-      }
-    ]
+      },
+      {
+      url: "https://infra.originstake.com/stable/evm",
+      tracking: "none",
+      trackingDetails: privacyStatement.originstake,
+      },
+    ],
   },
   999: {
     rpcs: [
