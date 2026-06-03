@@ -9338,6 +9338,8 @@ export const extraRpcs = {
       "wss://new-york.fullnode.mainnet.coti.io/ws",
       "https://community-enabler-1.fullnode.mainnet.coti.io/rpc",
       "wss://community-enabler-1.fullnode.mainnet.coti.io/ws",
+      "https://frankfurt.fullnode.mainnet.coti.io/rpc",
+      "wss://frankfurt.fullnode.mainnet.coti.io/ws",
     ],
   },
   7082400: {
