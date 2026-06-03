@@ -8612,7 +8612,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
-      "https://evm-rpc-archive.story.node75.org",
       {
         url: "https://story-json-rpc.stakely.io/",
         tracking: "none",
@@ -9008,7 +9007,6 @@ export const extraRpcs = {
       },
       "https://aeneid-evm-rpc.krews.xyz",
       "https://story-aeneid-rpc.spidernode.net",
-      "https://evm-rpc.story.testnet.node75.org",
       "https://story-aeneid-json-rpc.auranode.xyz",
     ],
   },
