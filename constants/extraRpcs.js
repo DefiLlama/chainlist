@@ -1460,6 +1460,10 @@ export const extraRpcs = {
       },
       "https://polygon-rpc.com",
       {
+        url: "https://rpc.satelink.network/rpc/polygon",
+        tracking: "limited",
+      },
+      {
         url: "https://rpc-mainnet.matic.quiknode.pro",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
