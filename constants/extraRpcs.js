@@ -1459,10 +1459,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       "https://polygon-rpc.com",
-      {
-        url: "https://rpc.satelink.network/rpc/polygon",
-        tracking: "limited",
-      },
+      "https://rpc.satelink.network/rpc/polygon",
       {
         url: "https://rpc-mainnet.matic.quiknode.pro",
         tracking: "yes",
@@ -10122,3 +10119,4 @@ export const extraRpcs = {
 };
 
 export default extraRpcs;
+
