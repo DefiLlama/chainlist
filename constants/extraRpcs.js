@@ -1618,10 +1618,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
       },
-      { 
-        url: "https://rpc.satelink.network/rpc/polygon",
-       tracking: "none", 
-      },
+
     ],
   },
   25: {
@@ -10119,4 +10116,5 @@ export const extraRpcs = {
 };
 
 export default extraRpcs;
+
 
