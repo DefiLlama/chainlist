@@ -10114,7 +10114,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.sentio,
       }
     ]
-  }
+  },
+  5124: {
+    rpcs: [
+      {
+        url: "https://testnet-1.seismictest.net/rpc",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+  },
 };
 
 export default extraRpcs;
