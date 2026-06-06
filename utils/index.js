@@ -22,7 +22,7 @@ export function formatAddress(address, length = "short") {
   } else if (address && length === "long") {
     address = address.substring(0, 12) + "..." + address.substring(address.length - 8, address.length);
     return address;
-  } else {
+  } else {  
     return null;
   }
 }

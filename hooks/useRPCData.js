@@ -122,8 +122,13 @@ const useSocketQuery = (url) => {
 };
 
 const useRPCData = (urls) => {
-  const queries =
-    urls?.map((url) => (url.url.includes("wss://") ? useSocketQuery(url.url) : useHttpQuery(url.url))) ?? [];
+  const rpcUrls = Array.isArray(urls) ? urls : [];
+
+  const queries = rpcUrls.map((url) =>
+    url.url.includes("wss://")
+      ? useSocketQuery(url.url)
+      : useHttpQuery(url.url)
+  );
 
   return useQueries({ queries });
 };

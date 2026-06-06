@@ -14,27 +14,34 @@ export async function addToNetwork({ address, chain, rpc }) {
         await connectWallet();
       }
 
-      const rpcUrls = rpc ? [rpc] : chain.rpc.map((r) => r?.url ?? r)
+      const rpcUrls = rpc
+        ? [typeof rpc === "string" ? rpc : rpc.url]
+        : (chain.rpc ?? []).map((r) => r?.url ?? r);
 
       const params = {
-        chainId: toHex(chain.chainId), // A 0x-prefixed hexadecimal string
+        chainId: toHex(chain.chainId),
         chainName: chain.name,
-        nativeCurrency: {
-          name: chain.nativeCurrency.name,
-          symbol: chain.nativeCurrency.symbol, // 2-6 characters long
-          decimals: chain.nativeCurrency.decimals,
-        },
-        rpcUrls,
-        blockExplorerUrls: [
-          chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url
-            ? chain.explorers[0].url
-            : chain.infoURL,
-        ],
+        rpcUrls: rpcUrls.filter(Boolean),
       };
+
+      if (chain.nativeCurrency) {
+        params.nativeCurrency = {
+          name: chain.nativeCurrency.name,
+          symbol: chain.nativeCurrency.symbol,
+          decimals: chain.nativeCurrency.decimals,
+        };
+      }
+
+      const explorer =
+        chain.explorers?.[0]?.url || chain.infoURL;
+
+      if (explorer) {
+        params.blockExplorerUrls = [explorer];
+      }
 
       const result = await window.ethereum.request({
         method: "wallet_addEthereumChain",
-        params: [params, address],
+        params: [params],
       });
 
       // the 'wallet_addEthereumChain' method returns null if the request was successful
