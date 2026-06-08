@@ -1,6 +1,6 @@
 export const data = {
   "name": "Unitsky String Technologies",
-  "chain": "Unitsky String Technologies",
+  "chain": "Unitsky",
   "rpc": [
     "https://147-45-143-23.sslip.io/rpc"
   ],
@@ -20,8 +20,7 @@ export const data = {
     {
       "name": "Unitsky Explorer",
       "url": "https://147-45-143-23.sslip.io",
-      "icon": "https://147-45-143-23.sslip.io/icon.svg",
-      "standard": "EIP3091"
+      "standard": "none"
     }
   ]
 }
