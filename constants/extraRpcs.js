@@ -10116,5 +10116,3 @@ export const extraRpcs = {
 };
 
 export default extraRpcs;
-
-
