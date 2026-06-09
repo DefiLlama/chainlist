@@ -2,7 +2,7 @@ export const data = {
   "name": "PopDEX Testnet",
   "chain": "PopDEX",
   "rpc": [
-    "https://testnet-api.popdex.xyz"
+    "https://testnet-api.popdex.xyz/api/v1/web3/rpc"
   ],
   "faucets": [],
   "nativeCurrency": {

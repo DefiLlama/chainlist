@@ -242,7 +242,9 @@ const privacyStatement = {
   rpcfree:
     "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy",
   nodeflare:
-    "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy"
+    "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy",
+  agentqlTomo:
+    "AgentQL Tomo states that it may process technical and usage information needed to operate the service, including browser or device metadata, page requests, API key actions, request logs, stream activity, error events, and service diagnostics. https://agentql.tomo.inc/privacy-policy",
 };
 
 export const extraRpcs = {
@@ -601,6 +603,16 @@ export const extraRpcs = {
         url: "https://rpcfree.com/ethereum-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://gw-aql.tomo.services/v1/ethereum/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
+      },
+      {
+        url: "wss://gw-aql.tomo.services/v1/ethereum/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
       },
     ],
   },
@@ -1174,6 +1186,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
+      },
+      {
+        url: "wss://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
+        tracking: "yes",
+        trackingDetails: privacyStatement.agentqlTomo,
+      },
     ],
   },
   97: {
@@ -1647,6 +1669,10 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
       },
+      { 
+        url: "https://rpc.satelink.network/rpc/polygon",
+       tracking: "none", 
+      },
     ],
   },
   25: {
@@ -1790,6 +1816,14 @@ export const extraRpcs = {
         url: "https://iota-testnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  1236: {
+    rpcs: [
+      {
+        url: "https://rpc.brainark.online",
+        tracking: "none",
       },
     ],
   },
@@ -3716,6 +3750,15 @@ export const extraRpcs = {
   587: {
     rpcs: ["https://test-rpc.netxscan.io"],
   },
+  589: {
+      rpcs: [
+        {
+          url: "https://ladyrpc.us/rpc",
+          tracking: "none",
+          trackingDetails: "LadyRPC does not collect or store any user data including IP addresses or transaction details.",
+        },
+      ],
+    },
   288: {
     rpcs: [
       {
@@ -5196,16 +5239,6 @@ export const extraRpcs = {
       },
       {
         url: "https://xlayer.rpc.blxrbdn.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
-      },
-      {
-        url: "https://okx-xlayer.rpc.blxrbdn.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
-      },
-      {
-        url: "https://flap-xlayer.rpc.blxrbdn.com",
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
@@ -15024,6 +15057,15 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/2716446429837000",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  5124: {
+    rpcs: [
+      {
+        url: "https://testnet-1.seismictest.net/rpc",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
       },
     ],
   },
