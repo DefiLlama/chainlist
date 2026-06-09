@@ -1,32 +1,19 @@
-{
-  "name": {
-    "name": "Medorcoin Mainnet",
-    "history": [
-      {
-        "url": "https://medorcoin.org",
-        "name": "Medorcoin Mainnet"
-      }
-    ]
+export const data = {
+  chainId: 2757,
+  chainName: "Medorcoin Mainnet",
+  rpcUrls: ["https://medorcoin.org"],
+  nativeCurrency: {
+    name: "Medorcoin",
+    symbol: "MEDOR",
+    decimals: 18
   },
-  "chain": "MEDOR",
-  "rpc": [
-    "https://rpc.medorcoin.org"
-  ],
-  "faucets": [],
-  "nativeCurrency": {
-    "name": "Medorcoin",
-    "symbol": "MDC",
-    "decimals": 18
-  },
-  "infoURL": "https://medorcoin.org",
-  "shortName": "medor",
-  "chainId": 2757,
-  "networkId": 2757,
-  "explorers": [
+  infoURL: "https://medorcoin.org",
+  shortName: "medor",
+  explorers: [
     {
-      "name": "MedorExplorer",
-      "url": "https://medorcoin.org/blockchain.html",
-      "standard": "EIP3091"
+      name: "MedorExplorer",
+      url: "https://medorcoin.org",
+      standard: "EIP3091"
     }
   ]
-}
+};
