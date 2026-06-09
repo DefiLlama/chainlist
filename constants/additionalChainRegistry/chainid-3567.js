@@ -1,7 +1,7 @@
 export const data = {
   name: "Trustgreen Chain",
   chain: "Trustgreen",
-  rpc: ["http://rpc.trustgreenchain.com"],
+  rpc: ["https://rpc.trustgreenscan.com"],
   faucets: [],
   nativeCurrency: {
     name: "Trustgreen",
