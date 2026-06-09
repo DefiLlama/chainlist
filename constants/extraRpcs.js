@@ -3493,6 +3493,15 @@ export const extraRpcs = {
       "https://test-rpc.netxscan.io",
     ],
   },
+  589: {
+      rpcs: [
+        {
+          url: "https://ladyrpc.us/rpc",
+          tracking: "none",
+          trackingDetails: "LadyRPC does not collect or store any user data including IP addresses or transaction details.",
+        },
+      ],
+    },
   288: {
     rpcs: [
       "https://mainnet.boba.network/",
