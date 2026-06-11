@@ -98,7 +98,6 @@ export default {
   "747": "flow",
   "757": "capx",
   "820": "callisto",
-  "824": "daily-network",
   "8379": "bery",
   "841": "tara",
   "888": "wanchain",
