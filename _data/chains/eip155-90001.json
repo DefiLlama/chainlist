@@ -1,0 +1,25 @@
+{
+  "name": "Nexos Chain",
+  "chain": "NEXOS",
+  "icon": "nexoschain",
+  "rpc": [
+    "https://rpc.nexoschain.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Nexos",
+    "symbol": "NXOS",
+    "decimals": 18
+  },
+  "infoURL": "https://nexoschain.com",
+  "shortName": "nexos",
+  "chainId": 90001,
+  "networkId": 90001,
+  "explorers": [
+    {
+      "name": "Nexos Explorer",
+      "url": "https://explorer.nexoschain.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
