@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "CHEESE Blockchain",
   "chain": "CHEESE",
   "rpc": [
