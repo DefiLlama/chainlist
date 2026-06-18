@@ -956,6 +956,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodeflare,
       },
       "https://bsc-dataseed.bnbchain.org/",
+      "https://bsc.campioneinfrastructure.com",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
       "https://bsc-dataseed2.defibit.io/",
