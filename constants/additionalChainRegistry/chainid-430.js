@@ -1,0 +1,20 @@
+export const data = {
+  "name": "Dchain testnet",
+  "chain": "Dchain",
+  "rpc": [
+    "https://eth-testnet.dfoundation.io"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Dchain",
+    "symbol": "DT",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP1559" }],
+  "infoURL": "https://dfoundation.io",
+  "shortName": "dchain",
+  "chainId": 430,
+  "networkId": 430,
+  "icon": "dchain",
+  "explorers": []
+}
