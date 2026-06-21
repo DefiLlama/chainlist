@@ -1,0 +1,14 @@
+{
+  "name": "SPR Chain",
+  "chain": "SPR",
+  "icon": "spr",
+  "rpc": ["http://127.0.0.1:8545"],
+  "chainId": 88888,
+  "nativeCurrency": {
+    "name": "SPR",
+    "symbol": "SPR",
+    "decimals": 18
+  },
+  "infoURL": "",
+  "shortName": "spr"
+}
