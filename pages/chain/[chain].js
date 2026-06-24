@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
-import { populateChain, fetchWithCache } from "../../utils/fetch";
+import { fetchWithCache, isHiddenChain, populateChain } from "../../utils/fetch";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
         c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
     );
 
-  if (!chain) {
+  if (!chain || isHiddenChain(chain)) {
     return {
       notFound: true,
     };
@@ -50,6 +50,7 @@ export async function getStaticPaths() {
   const chains = await fetchWithCache("https://chainid.network/chains.json");
 
   const paths = chains
+    .filter((chain) => !isHiddenChain(chain))
     .map((chain) => [
       {
         params: {
@@ -63,18 +64,20 @@ export async function getStaticPaths() {
       },
     ])
     .concat(
-      overwrittenChains.map((chain) => [
-        {
-          params: {
-            chain: chain.chainId.toString(),
+      overwrittenChains
+        .filter((chain) => !isHiddenChain(chain))
+        .map((chain) => [
+          {
+            params: {
+              chain: chain.chainId.toString(),
+            },
           },
-        },
-        {
-          params: {
-            chain: chain.name.toLowerCase(),
+          {
+            params: {
+              chain: chain.name.toLowerCase(),
+            },
           },
-        },
-      ]),
+        ]),
     )
     .flat();
 
