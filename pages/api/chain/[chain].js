@@ -1,4 +1,4 @@
-import { fetcher, populateChain } from "../../../utils/fetch";
+import { fetcher, isHiddenChain, populateChain } from "../../../utils/fetch";
 import { overwrittenChains } from "../../../constants/additionalChainRegistry/list";
 
 export default async function handler(req, res) {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         (chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName,
       ) ?? chains.find((chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName);
 
-    if (!chain) {
+    if (!chain || isHiddenChain(chain)) {
       return res.status(404).json({ message: "chain not found" });
     }
 
