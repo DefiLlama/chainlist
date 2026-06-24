@@ -17,7 +17,7 @@ export const data = {
   "infoURL": "https://cmxofficial.com/",
   "shortName": "CMX-R",
   "chainId": 1475,
-  "networkId": 1,
+  "networkId": 1475,
   "explorers": [
     {
       "name": "crymadchain explorers",
