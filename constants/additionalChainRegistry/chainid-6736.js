@@ -1,5 +1,5 @@
 export const data = {
-    "name": "Vexanium EVM",
+    "name": "Vexanium Mainnet",
     "chain": "VEX",
     "rpc": [
       "https://vexascan.com/rpc"
