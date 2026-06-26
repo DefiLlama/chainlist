@@ -18,7 +18,7 @@ export const data = {
     "explorers": [
       {
         "name": "Vexascan",
-        "url": "https://vexascan.com",
+        "url": "https://vexascan.com/evm",
         "standard": "EIP3091"
       }
     ]
