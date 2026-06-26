@@ -4,7 +4,10 @@ export const data = {
     "rpc": [
       "https://vexascan.com/rpc"
     ],
-    "features": [{ "name": "EIP155" }],
+    "features": [
+      { "name": "EIP155" },
+      { "name": "EIP1559" }
+    ],
     "faucets": [],
     "nativeCurrency": {
       "name": "Vexanium",
@@ -22,4 +25,4 @@ export const data = {
         "standard": "EIP3091"
       }
     ]
-  }
+}
