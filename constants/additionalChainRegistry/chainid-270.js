@@ -1,9 +1,10 @@
 export const data = {
     "name": "Orbinum",
     "chain": "ORB",
-    "icon": "https://orbinum.network/isotipo-black.svg",
+    "icon": "https://cdn.orbinum.io/assets/isotipo-black.png",
     "rpc": [
-      "https://rpc.orbinum.io"
+      "https://rpc-1.orbinum.io",
+      "https://rpc-2.orbinum.io"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -18,8 +19,8 @@ export const data = {
     "explorers": [
       {
         "name": "Orbinum Privacy Explorer",
-        "url": "https://explorer.orbinum.network/",
-        "icon": "https://orbinum.network/isotipo-black.svg",
+        "url": "https://explorer.orbinum.network",
+        "icon": "https://cdn.orbinum.io/assets/isotipo-black.png",
         "standard": "EIP3091"
       }
     ]
