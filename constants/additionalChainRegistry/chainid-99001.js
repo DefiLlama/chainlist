@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Gogo Mainnet",
   "chain": "GOGO",
   "icon": "https://gogoblockchain.wuaze.com/gogoimg/gogoimg.png",
