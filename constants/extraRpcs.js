@@ -4337,6 +4337,7 @@ export const extraRpcs = {
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
       "wss://evex.cloud/pulsews",
+      "https://rpc.degenprotocol.io",
       {
         url: "https://pulsechain-rpc.publicnode.com",
         tracking: "none",
