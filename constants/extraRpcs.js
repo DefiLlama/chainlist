@@ -4793,6 +4793,9 @@ export const extraRpcs = {
     rpcs: [],
     rpcWorking: false,
   },
+  1404: {
+    rpcs: ["https://rpc.blockdag.engineering"],
+  },
   1440: {
     rpcs: [
       {
