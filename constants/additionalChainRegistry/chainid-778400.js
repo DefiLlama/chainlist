@@ -1,4 +1,4 @@
-export default {
+export default data{
   name: "Felix Smart Chain",
   chain: "FLXG",
   icon: "https://plum-geographical-dinosaur-799.mypinata.cloud/ipfs/bafybeiaq6gzygs2hx2xh2rl4nbeaegcnww65xcmjcevdxdols56jsyskeu",
