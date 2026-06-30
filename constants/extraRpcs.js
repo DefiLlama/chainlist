@@ -4375,10 +4375,10 @@ export const extraRpcs = {
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
       "wss://evex.cloud/pulsews",
-       {
+      {
         url: "https://rpc.degenprotocol.io",
         tracking: "none",
-        trackingDetails: privacyStatement.degenprotocol,
+        trackingDetails: "Degen Protocol RPC does not track or store any user data, IP addresses, or transaction logs. https://degenprotocol.io/privacy",
       },
       {
         url: "https://pulsechain-rpc.publicnode.com",
