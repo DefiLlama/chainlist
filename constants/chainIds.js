@@ -86,6 +86,7 @@ export default {
   "466": "appchain",
   "478": "form network",
   "480": "wc",
+  "505": "dotone",
   "510": "syndicate",
   "529": "firechain",
   "534": "candle",
