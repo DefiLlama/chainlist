@@ -1,13 +1,13 @@
 export const data = {
-  "name": "PopDEX Testnet",
-  "chain": "PopDEX",
+  "name": "Morph Tachyon Testnet",
+  "chain": "Morph Tachyon",
   "rpc": [
     "https://testnet-api.popdex.xyz/api/v1/web3/rpc"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "POP",
-    "symbol": "POP",
+    "name": "BGB",
+    "symbol": "BGB",
     "decimals": 18
   },
   "features": [
@@ -19,7 +19,7 @@ export const data = {
   "networkId": 34952,
   "explorers": [
     {
-      "name": "PopDEX Testnet Explorer",
+      "name": "Morph Tachyon Testnet Explorer",
       "url": "https://testnet-app.popdex.xyz/explorer",
       "standard": "EIP3091"
     }

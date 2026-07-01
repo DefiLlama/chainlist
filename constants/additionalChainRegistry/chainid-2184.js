@@ -1,13 +1,13 @@
 export const data = {
-  "name": "PopDEX Mainnet",
-  "chain": "PopDEX",
+  "name": "Morph Tachyon Mainnet",
+  "chain": "Morph Tachyon",
   "rpc": [
     "https://rpc.popdex.xyz"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "POP",
-    "symbol": "POP",
+    "name": "BGB",
+    "symbol": "BGB",
     "decimals": 18
   },
   "features": [
@@ -19,7 +19,7 @@ export const data = {
   "networkId": 2184,
   "explorers": [
     {
-      "name": "PopDEX Explorer",
+      "name": "Morph Tachyon Explorer",
       "url": "https://app.popdex.xyz/explorer",
       "standard": "EIP3091"
     }
