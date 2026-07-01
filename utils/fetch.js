@@ -4,15 +4,6 @@ import fetch from "node-fetch";
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
 import { isTestnet } from "./index.js";
 
-export const hiddenChainIds = new Set([
-  4663, // robinhood
-  46630, // robinhood testnet
-]);
-
-export function isHiddenChain(chain) {
-  return hiddenChainIds.has(Number(chain?.chainId));
-}
-
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const cache = {};
@@ -121,7 +112,7 @@ function getBaseName(name) {
 
 function handleTestnets(activeChains) {
   const parentChainTvls = {};
-
+  
   // map testnets to their parent's TVL
   activeChains.forEach((chain) => {
     if (chain.tvl && !isTestnet(chain)) {
@@ -165,8 +156,8 @@ export async function generateChainData() {
   }, {});
 
   const activeChains = chains
-    .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId] && !isHiddenChain(c))
-    .concat(overwrittenChains.filter((chain) => !isHiddenChain(chain)))
+    .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
+    .concat(overwrittenChains)
     .map((chain) => populateChain(chain, chainTvls));
 
   const chainsWithTestnetTvls = handleTestnets(activeChains);
