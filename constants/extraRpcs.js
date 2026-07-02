@@ -8631,51 +8631,7 @@ export const extraRpcs = {
   },
   1514: {
     rpcs: [
-      "https://mainnet.storyrpc.io",
-      "https://story-evm-rpc.spidernode.net",
-      {
-        url: "https://evm-rpc.story.mainnet.dteam.tech",
-        tracking: "none",
-        trackingDetails: privacyStatement.DTEAM,
-      },
-      {
-        url: "https://infra.originstake.com/story/evm",
-        tracking: "none",
-        trackingDetails: privacyStatement.originstake,
-      },
-      {
-        url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.GrandValley,
-      },
-      {
-        url: "https://story-mainnet-evm.itrocket.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.itrocket,
-      },
-      "https://evm-rpc-story.j-node.net",
-      "https://story-evm-rpc.krews.xyz",
-      "https://evmrpc.story.nodestake.org",
-      "https://story-mainnet.zenithnode.xyz",
-      "https://evm-rpc.story.silentvalidator.com",
-      "https://story-mainnet-evmrpc.mandragora.io",
-      "https://rpc-storyevm.aldebaranode.xyz",
-      "https://evm.story.cumulo.me",
-      {
-        url: "https://rpc.ankr.com/story_mainnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.bctech,
-      },
-      {
-        url: "https://story-json-rpc.stakely.io/",
-        tracking: "none",
-        trackingDetails: privacyStatement.Stakely,
-      },
-      {
-        url: "https://rpc.swiftnodes.io/rpc/story",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
+      "https://mainnet.datarpc.io",
     ],
   },
   3030: {
@@ -9040,28 +8996,7 @@ export const extraRpcs = {
   },
   1315: {
     rpcs: [
-      "https://aeneid.storyrpc.io/",
-      "https://evm-aeneid-story.j-node.net",
-      "https://evmrpc-t.story.nodestake.org",
-      "https://json-rpc.story-aeneid.cumulo.me",
-      {
-        url: "https://lightnode-json-rpc-story.grandvalleys.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.GrandValley,
-      },
-      {
-        url: "https://story-testnet-evm.itrocket.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.itrocket,
-      },
-      {
-        url: "https://rpc.ankr.com/story_aeneid_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-      "https://aeneid-evm-rpc.krews.xyz",
-      "https://story-aeneid-rpc.spidernode.net",
-      "https://story-aeneid-json-rpc.auranode.xyz",
+      "https://aeneid.datarpc.io",
     ],
   },
   224433: {
