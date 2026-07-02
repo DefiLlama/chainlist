@@ -2,7 +2,7 @@ export const data = {
   "name": "Morph Tachyon Mainnet",
   "chain": "Morph Tachyon",
   "rpc": [
-    "https://rpc.popdex.xyz"
+    "https://api.popdex.xyz/api/v1/web3/rpc"
   ],
   "faucets": [],
   "nativeCurrency": {
