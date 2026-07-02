@@ -14,7 +14,7 @@ export const data = {
     { "name": "EIP155" }
   ],
   "infoURL": "https://popdex.xyz",
-  "shortName": "Morph Tachyon",
+  "shortName": "morphtachyon",
   "chainId": 2184,
   "networkId": 2184,
   "explorers": [
