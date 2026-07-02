@@ -12,7 +12,7 @@ export const data = {
   },
   "features": [{ "name": "EIP1559" }],
   "infoURL": "https://dfoundation.io",
-  "shortName": "dchain",
+  "shortName": "dchain testnet",
   "chainId": 430,
   "networkId": 430,
   "icon": "dchain",
