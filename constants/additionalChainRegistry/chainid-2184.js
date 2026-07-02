@@ -1,5 +1,5 @@
 export const data = {
-  "name": "Morph Tachyon Mainnet",
+  "name": "Morph Tachyon",
   "chain": "Morph Tachyon",
   "rpc": [
     "https://api.popdex.xyz/api/v1/web3/rpc"
@@ -14,7 +14,7 @@ export const data = {
     { "name": "EIP155" }
   ],
   "infoURL": "https://popdex.xyz",
-  "shortName": "popdex",
+  "shortName": "Morph Tachyon",
   "chainId": 2184,
   "networkId": 2184,
   "explorers": [
