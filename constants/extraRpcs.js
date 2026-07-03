@@ -1458,6 +1458,11 @@ export const extraRpcs = {
   137: {
     rpcs: [
       {
+        url: "https://rpc.nodeflare.app/polygon/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
+      {
         url: "https://rpc.ankr.com/polygon",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -1629,6 +1634,11 @@ export const extraRpcs = {
   },
   25: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/cronos/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
       {
@@ -2032,6 +2042,11 @@ export const extraRpcs = {
   },
   42170: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/nova/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://nova.arbitrum.io/rpc",
       {
         url: "https://arbitrum-nova.public.blastapi.io",
@@ -4711,6 +4726,11 @@ export const extraRpcs = {
   },
   196: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/xlayer/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.xlayer.tech",
       "https://xlayerrpc.okx.com",
       {
@@ -5167,6 +5187,11 @@ export const extraRpcs = {
   },
   5000: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/mantle/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.mantle.xyz",
       {
         url: "https://mantle-mainnet.public.blastapi.io",
@@ -6583,6 +6608,11 @@ export const extraRpcs = {
   },
   59144: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/linea/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.linea.build",
       {
         url: "https://1rpc.io/linea",
@@ -7228,6 +7258,11 @@ export const extraRpcs = {
   },
   34443: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/mode/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://mainnet.mode.network",
       {
         url: "https://1rpc.io/mode",
@@ -7395,6 +7430,11 @@ export const extraRpcs = {
   // },
   60808: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/bob/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.gobob.xyz",
       "wss://rpc.gobob.xyz",
       {
@@ -7551,6 +7591,11 @@ export const extraRpcs = {
   },
   48900: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/zircuit/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
@@ -8194,6 +8239,11 @@ export const extraRpcs = {
   },
   1329: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/sei/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://evm-rpc.sei-apis.com",
       {
         url: "https://sei.drpc.org",
@@ -8235,6 +8285,11 @@ export const extraRpcs = {
   },
   130: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/unichain/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://mainnet.unichain.org/",
       {
         url: "https://unichain.api.onfinality.io/public",
@@ -8353,6 +8408,11 @@ export const extraRpcs = {
   },
   57073: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/ink/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc-gel.inkonchain.com",
       "https://rpc-qnd.inkonchain.com",
       "wss://rpc-gel.inkonchain.com",
@@ -8541,6 +8601,11 @@ export const extraRpcs = {
   },
   146: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/sonic/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.soniclabs.com",
       {
         url: "https://sonic.drpc.org",
@@ -8807,6 +8872,11 @@ export const extraRpcs = {
   },
   1868: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/soneium/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.soneium.org",
       {
         url: "https://soneium.drpc.org",
@@ -9447,6 +9517,11 @@ export const extraRpcs = {
   },
   9745: {
     rpcs: [
+      {
+        url: "https://rpc.nodeflare.app/plasma/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       {
         url: "https://plasma.drpc.org",
         tracking: "none",
