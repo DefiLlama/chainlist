@@ -8,18 +8,18 @@ export const data = {
   "nativeCurrency": {
     "name": "NCheese",
     "symbol": "NCH",
-    "decimals": 18
+    "decimals": 6
   },
   "features": [{ "name": "EIP155" }],
   "infoURL": "https://cheeseblockchain.com",
   "shortName": "cheese",
   "chainId": 20250,
   "networkId": 20250,
-  "icon": "https://cheeseblockchain.com/wallet-logos/cheese-blockchain-256.png",
+  "icon": "cheese",
   "explorers": [{
     "name": "CHEESE Explorer",
     "url": "https://cheeseblockchain.com/explorer",
-    "icon": "https://cheeseblockchain.com/wallet-logos/cheese-blockchain-128.png",
+    "icon": "cheese",
     "standard": "EIP3091"
   }]
 }
