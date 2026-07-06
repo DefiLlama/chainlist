@@ -241,6 +241,8 @@ const privacyStatement = {
     "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy",
   agentqlTomo:
     "AgentQL Tomo states that it may process technical and usage information needed to operate the service, including browser or device metadata, page requests, API key actions, request logs, stream activity, error events, and service diagnostics. https://agentql.tomo.inc/privacy-policy",
+  blockmachine:
+    "To route your requests, blockmachine temporarily processes your IP address for up to 2 minutes - used only to count and rate-limit requests. It is never stored beyond that window and cannot be linked to any individual user or account.",
 };
 
 export const extraRpcs = {
@@ -604,6 +606,11 @@ export const extraRpcs = {
         url: "wss://gw-aql.tomo.services/v1/ethereum/aql_live_2dba7f55b5cf0f356538a727da2079fe",
         tracking: "yes",
         trackingDetails: privacyStatement.agentqlTomo,
+      },
+      {
+        url: "https://rpc-eth.blockmachine.io",
+        tracking: "no",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
