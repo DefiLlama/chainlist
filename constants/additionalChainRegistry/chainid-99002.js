@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Mars Mainnet",
   "chain": "MC",
   "icon": "https://mars.free.nf/mars.png",
