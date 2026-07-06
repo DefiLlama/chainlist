@@ -1859,11 +1859,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
       {
-        url: "https://arbitrum.public.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://arbitrum-one.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
@@ -2141,11 +2136,6 @@ export const extraRpcs = {
         url: "https://alpha-hardworking-orb.kaia-mainnet.quiknode.pro/",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
-      },
-      {
-        url: "https://kaia.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://kaia.api.pocket.network",
@@ -3801,11 +3791,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.jellypool,
       },
-      {
-        url: "https://meter.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
     ],
   },
   5551: {
@@ -3817,11 +3802,6 @@ export const extraRpcs = {
         url: "https://rpc.nodeflare.app/vic/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
-      },
-      {
-        url: "https://viction.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://viction.drpc.org",
@@ -4507,11 +4487,6 @@ export const extraRpcs = {
         url: "https://responsive-green-emerald.kaia-kairos.quiknode.pro/",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
-      },
-      {
-        url: "https://kaia-kairos.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://rpc.ankr.com/kaia_testnet",
