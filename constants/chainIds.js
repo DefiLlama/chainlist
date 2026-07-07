@@ -122,7 +122,7 @@ export default {
   "1285": "moonriver",
   "1329": "sei",
   "1424": "perennial",
-  "1514": "sty",
+  "1514": "data",
   "1559": "tenet",
   "1625": "gravity",
   "1729": "reya network",
