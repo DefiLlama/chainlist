@@ -12,6 +12,7 @@ export const data = {
   shortName: "robinhoodchain",
   chainId: 4663,
   networkId: 4663,
+  icon: "robinhood-chain",
   explorers: [
     {
       name: "Robinhood Chain Blockscout Explorer",
