@@ -1,5 +1,5 @@
 export const data = {
-  "name": "ONE Mainnet",
+  "name": "ONE Chain Mainnet",
   "chain": "ONE",
   "rpc": [
     "https://mainnet.onechain.nexus:22001",
