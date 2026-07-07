@@ -278,7 +278,6 @@ export default {
   "510003": "commons",
   "534352": "scroll",
   "543210": "zero_network",
-  "612055": "allora",
   "747474": "katana",
   "777777": "winr",
   "810180": "zklink nova",
