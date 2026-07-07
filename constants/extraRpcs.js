@@ -6347,15 +6347,6 @@ export const extraRpcs = {
   167: {
     rpcs: ["https://node.atoshi.io", "https://node2.atoshi.io", "https://node3.atoshi.io"],
   },
-  7777: {
-    rpcs: [
-      "https://testnet1.rotw.games",
-      "https://testnet2.rotw.games",
-      "https://testnet3.rotw.games",
-      "https://testnet4.rotw.games",
-      "https://testnet5.rotw.games",
-    ],
-  },
   103090: {
     rpcs: ["https://evm.cryptocurrencydevs.org", "https://rpc.crystaleum.org"],
   },
