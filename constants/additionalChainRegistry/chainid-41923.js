@@ -1,7 +1,6 @@
 export const data = {
   "name": "EDU Chain",
   "chain": "EDU Chain",
-  "icon": "edu",
   "rpc": [
     "https://rpc.educhain.xyz"
   ],
