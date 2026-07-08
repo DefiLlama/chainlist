@@ -16,6 +16,7 @@ export const data = {
   "shortName": "edu-chain",
   "chainId": 41923,
   "networkId": 41923,
+  "icon": "edu-chain",
   "explorers": [{
     "name": "EDU Chain Explorer",
     "url": "https://explorer.educhain.xyz",
