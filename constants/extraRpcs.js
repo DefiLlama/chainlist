@@ -243,6 +243,8 @@ const privacyStatement = {
     "AgentQL Tomo states that it may process technical and usage information needed to operate the service, including browser or device metadata, page requests, API key actions, request logs, stream activity, error events, and service diagnostics. https://agentql.tomo.inc/privacy-policy",
   blockmachine:
     "To route your requests, blockmachine temporarily processes your IP address for up to 2 minutes - used only to count and rate-limit requests. It is never stored beyond that window and cannot be linked to any individual user or account.",
+  keccakio:
+    "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
 };
 
 export const extraRpcs = {
@@ -611,6 +613,11 @@ export const extraRpcs = {
         url: "https://rpc-eth.blockmachine.io",
         tracking: "no",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://eth-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
       },
     ],
   },
@@ -1170,6 +1177,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.agentqlTomo,
       },
+      {
+        url: "https://bsc-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
+      },
     ],
   },
   97: {
@@ -1365,6 +1377,11 @@ export const extraRpcs = {
         url: "https://avax-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://avax-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
       },
     ],
   },
@@ -1631,6 +1648,11 @@ export const extraRpcs = {
       { 
         url: "https://rpc.satelink.network/rpc/polygon",
        tracking: "none", 
+      },
+      {
+        url: "https://polygon-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
       },
     ],
   },
@@ -2005,6 +2027,11 @@ export const extraRpcs = {
         url: "https://arbitrum-one-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://arb-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
       },
     ],
   },
@@ -2822,6 +2849,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/optimism",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://op-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
       },
     ],
   },
@@ -5816,6 +5848,11 @@ export const extraRpcs = {
         url: "https://rpcfree.com/base-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://base-rpc.keccak.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.keccakio,
       },
     ],
   },
