@@ -1,13 +1,13 @@
 export const data = {
   name: "Tempo Testnet",
-  chain: "Tempo 42431",
-  icon: "tempotestnet",
+  chain: "Tempo",
+  icon: "tempo",
   rpc: ["https://rpc.testnet.tempo.xyz", "wss://rpc.testnet.tempo.xyz"],
   faucets: ["https://docs.tempo.xyz/quickstart/faucet"],
   nativeCurrency: {
-    name: "USD",
+    name: "US Dollar",
     symbol: "USD",
-    decimals: 6,
+    decimals: 18,
   },
   infoURL: "https://tempo.xyz",
   shortName: "tempo-moderato",
@@ -15,7 +15,7 @@ export const data = {
   networkId: 42431,
   explorers: [
     {
-      name: "Tempo Testnet explorer",
+      name: "Tempo Testnet Explorer",
       url: "https://explore.testnet.tempo.xyz",
       standard: "EIP3091",
     },
