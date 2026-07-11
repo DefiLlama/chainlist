@@ -1,0 +1,20 @@
+{
+  "name": "Infinite Mainnet",
+  "chain": "Infinite",
+  "rpc": [
+    "https://evm-rpc.infinitepanda.xyz"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "42",
+    "symbol": "42",
+    "decimals": 18
+  },
+  "infoURL": "https://infinitedrive.xyz",
+  "shortName": "infinite",
+  "chainId": 421018,
+  "networkId": 421018,
+  "slip44": 60,
+  "icon": "infinite",
+  "explorers": []
+}
