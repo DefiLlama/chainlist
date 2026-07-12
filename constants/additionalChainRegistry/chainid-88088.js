@@ -1,0 +1,17 @@
+{
+  "name": "PLUS Mainnet",
+  "chain": "PLUS",
+  "rpc": [
+    "https://plusmain.net/api/rpc"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "PLUS",
+    "symbol": "PLUS",
+    "decimals": 18
+  },
+  "infoURL": "https://plusmain.net",
+  "shortName": "plus",
+  "chainId": 88088,
+  "networkId": 88088
+}
