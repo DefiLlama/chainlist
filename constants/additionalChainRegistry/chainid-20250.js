@@ -1,25 +1,25 @@
 export const data = {
   "name": "CHEESE Blockchain",
   "chain": "CHEESE",
+  "icon": "cheese",
   "rpc": [
     "https://cheeseblockchain.com/api/rpc"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "NCheese",
+    "name": "Native Cheesecoin",
     "symbol": "NCH",
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }],
   "infoURL": "https://cheeseblockchain.com",
-  "shortName": "cheese",
+  "shortName": "nch",
   "chainId": 20250,
   "networkId": 20250,
-  "icon": "https://cheeseblockchain.com/wallet-logos/cheese-blockchain-256.png",
   "explorers": [{
-    "name": "CHEESE Explorer",
+    "name": "CHEESE Blockchain Explorer",
     "url": "https://cheeseblockchain.com/explorer",
-    "icon": "https://cheeseblockchain.com/wallet-logos/cheese-blockchain-128.png",
     "standard": "EIP3091"
-  }]
+  }],
+  "chainSlug": "cheese"
 }
