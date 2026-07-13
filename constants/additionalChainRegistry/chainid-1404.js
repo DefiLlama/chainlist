@@ -21,6 +21,10 @@ export const data = {
       "name": "BlockDAG Explorer",
       "url": "https://bdagscan.com/",
     },
+    {
+      "name": "BlockDAG Engineering Explorer",
+      "url": "https://explorer.blockdag.engineering/",
+    },
   ],
   "status": "active"
 };
