@@ -10113,6 +10113,15 @@ export const extraRpcs = {
       },
     ],
   },
+  46630: {
+    rpcs: [
+      {
+        url: "https://robinhood-testnet.drpc.org",
+        tracking: "yes",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 
 export default extraRpcs;
