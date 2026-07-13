@@ -12,7 +12,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "",
-  "shortName": "OMA mainnet",
+  "shortName": "oma-mainnet",
   "chainId": 6623,
   "networkId": 6623,
   "explorers": [
