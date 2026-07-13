@@ -401,6 +401,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "wss://eth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
         url: "https://mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -3902,6 +3907,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://flare.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   15: {
@@ -4029,6 +4039,11 @@ export const extraRpcs = {
       "https://earpc.apothem.network/",
       "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
+      {
+        url: "https://xdc-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   58: {
@@ -4816,6 +4831,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.originstake,
       },
+      {
+        url: "https://pharos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   1856: {
@@ -4945,6 +4965,11 @@ export const extraRpcs = {
         url: "https://tac.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://tac.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -6942,6 +6967,11 @@ export const extraRpcs = {
       "wss://rpc.morphl2.io:8443",
       "https://rpc-quicknode.morphl2.io",
       "wss://rpc-quicknode.morphl2.io",
+      {
+        url: "https://morph.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   570: {
@@ -10051,6 +10081,11 @@ export const extraRpcs = {
       trackingDetails:
         "KiteAI RPC does not collect or store personal data from requests. Standard infrastructure-level logs may be used for monitoring and reliability.",
     },
+    {
+        url: "https://kite.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
   ],
 },
   1229800785: {
@@ -10082,6 +10117,11 @@ export const extraRpcs = {
         url: "https://stable-mainnet.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://stable.drpc.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.drpc,
       }
     ]
   },
@@ -10117,7 +10157,88 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://robinhood-testnet.drpc.org",
-        tracking: "yes",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  291: {
+    rpcs: [
+      {
+        url: "https://orderly.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  102030: {
+    rpcs: [
+      {
+        url: "https://creditcoin.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+   102031: {
+    rpcs: [
+      {
+        url: "https://creditcoin-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  36900: {
+    rpcs: [
+      {
+        url: "https://adi.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  3343: {
+    rpcs: [
+      {
+        url: "https://edge.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  5734951: {
+    rpcs: [
+      {
+        url: "https://jovay.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  6122: {
+    rpcs: [
+      {
+        url: "https://tea.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2910: {
+    rpcs: [
+      {
+        url: "https://morph-hoodi.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  114: {
+    rpcs: [
+      {
+        url: "https://flare-testnet.drpc.org",
+        tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
     ],
