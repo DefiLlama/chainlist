@@ -15,7 +15,7 @@ export const data = {
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
   infoURL: "https://blockmaze.com",
-  shortName: "BMZ",
+  shortName: "bmz",
   chainId: 6162,
   networkId: 6162,
   icon: "BMZ",
