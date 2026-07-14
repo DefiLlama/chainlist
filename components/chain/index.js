@@ -1,6 +1,6 @@
 import * as React from "react";
 import RPCList from "../RPCList";
-import { renderProviderText } from "../../utils";
+import { getChainIcon, renderProviderText } from "../../utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
@@ -15,7 +15,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
   const router = useRouter();
 
   const icon = React.useMemo(() => {
-    return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return getChainIcon(chain);
   }, [chain]);
 
   const chainId = useChain((state) => state.id);
