@@ -6998,6 +6998,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.nodies,
       },
+      {
+        url: "https://rpc.blockmachine.io",
+        tracking: "no",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   945: {
