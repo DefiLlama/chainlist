@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Bradicoin",
   "chain": "BRADI",
   "rpc": ["https://bradicoin-api.onrender.com"],
