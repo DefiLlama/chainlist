@@ -1,7 +1,7 @@
 export const data = {
   "name": "XRPL EVM",
   "chain": "XRPL",
-  "icon": "xrpl evm",
+  "icon": "xrplevm",
   "rpc": [
     "https://rpc.xrplevm.org/",
   ],
@@ -20,6 +20,7 @@ export const data = {
     {
       "name": "XRPL EVM Explorer",
       "url": "https://explorer.xrplevm.org",
+      "icon": "xrplevm",
     }
   ]
 }
