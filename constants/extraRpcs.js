@@ -234,7 +234,7 @@ const privacyStatement = {
   mirasmanda:
     "Mirasmanda RPC does not collect or store any personally identifiable information (PII), including IP addresses, wallet addresses, or request metadata. The only data recorded on our infrastructure is what is publicly available on the blockchain. No user data is shared with third parties. For more information, visit https://asterium.uz",
   mevx:
-    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
+    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in <<REGION>>. Lawful basis: legitimate interest (service protection and anti-abuse).",
   rpcfree:
     "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy",
   nodeflare:
@@ -1641,7 +1641,7 @@ export const extraRpcs = {
       {
         url: "https://rpc.private.mev-x.com/polygon",
         tracking: "limited",
-        trackingDetails: privacyStatement.mevx,
+        trackingDetails: privacyStatement.mevx.replace("<<REGION>>", "EU (Germany)"),
       },
       {
         url: "https://matic.rpc.sentio.xyz",
@@ -10186,6 +10186,15 @@ export const extraRpcs = {
         url: "https://hyperevm-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  4663: {
+    rpcs: [
+      {
+        url: "https://rpc.robinhood.mev-x.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mevx.replace("<<REGION>>", "North America"),
       },
     ],
   },
