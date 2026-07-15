@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Shinzo Testnet",
   "chain": "SHNZ",
   "rpc": [
