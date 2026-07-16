@@ -3551,7 +3551,7 @@ export const extraRpcs = {
   },
   587: {
     rpcs: [
-      "https://test-rpc.netxscan.io",
+      "https://testnetrpc.netxscan.io",
     ],
   },
   589: {
