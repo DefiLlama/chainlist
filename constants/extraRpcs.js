@@ -10189,6 +10189,15 @@ export const extraRpcs = {
       },
     ],
   },
+  4663: {
+    rpcs: [
+      {
+        url: "https://robinhood.rpc.blxrbdn.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
+    ],
+  },
   46630: {
     rpcs: [
       {
