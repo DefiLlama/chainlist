@@ -4010,7 +4010,9 @@ export const extraRpcs = {
     websiteUrl: "https://shibachain.net/",
   },
   29: {
-    rpcs: ["https://rpc.genesisl1.org"],
+    rpcs: ["https://rpc.genesisl1.org",
+           "https://evm.gl1infra.online",
+    ],
   },
   33: {
     rpcs: ["https://rpc.goodata.io"],
