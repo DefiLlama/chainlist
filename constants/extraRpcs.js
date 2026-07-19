@@ -257,6 +257,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.valve,
       },
       {
+        url: "wss://rpc.valve.city/v1/vk_demo/evm/1",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
         url: "https://rpc.nodeflare.app/eth/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
@@ -4425,6 +4430,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.valve,
       },
       {
+        url: "wss://rpc.valve.city/v1/vk_demo/evm/369",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
         url: "https://pulsechain-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -6455,6 +6465,11 @@ export const extraRpcs = {
       "https://rpc.v4.testnet.pulsechain.com",
       {
         url: "https://rpc.valve.city/v1/vk_demo/evm/943",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://rpc.valve.city/v1/vk_demo/evm/943",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
