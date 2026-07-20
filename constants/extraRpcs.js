@@ -252,12 +252,12 @@ export const extraRpcs = {
   1: {
     rpcs: [
       {
-        url: "https://rpc.valve.city/v1/vk_demo/evm/1",
+        url: "https://one.valve.city/rpc/vk_demo/evm/1",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
       {
-        url: "wss://rpc.valve.city/v1/vk_demo/evm/1",
+        url: "wss://one.valve.city/rpc/vk_demo/evm/1",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
@@ -4425,12 +4425,12 @@ export const extraRpcs = {
       "wss://evex.cloud/pulsews",
       "https://rpc.degenprotocol.io",
       {
-        url: "https://rpc.valve.city/v1/vk_demo/evm/369",
+        url: "https://one.valve.city/rpc/vk_demo/evm/369",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
       {
-        url: "wss://rpc.valve.city/v1/vk_demo/evm/369",
+        url: "wss://one.valve.city/rpc/vk_demo/evm/369",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
@@ -6464,12 +6464,12 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.v4.testnet.pulsechain.com",
       {
-        url: "https://rpc.valve.city/v1/vk_demo/evm/943",
+        url: "https://one.valve.city/rpc/vk_demo/evm/943",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
       {
-        url: "wss://rpc.valve.city/v1/vk_demo/evm/943",
+        url: "wss://one.valve.city/rpc/vk_demo/evm/943",
         tracking: "none",
         trackingDetails: privacyStatement.valve,
       },
