@@ -637,6 +637,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
       },
+      {
+        url: "wss://eth.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   2: {
@@ -980,7 +985,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://poly-amoy.api.pocket.network",
+        url: "https://poly-amoy-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -1217,6 +1222,11 @@ export const extraRpcs = {
         url: "https://bsc-rpc-public.chainpulse.cc/",
         tracking: "limited",
         trackingDetails: privacyStatement.chainpulse,
+      },
+      {
+        url: "wss://bsc.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -1688,6 +1698,11 @@ export const extraRpcs = {
         url: "https://polygon-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "wss://poly.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -2298,6 +2313,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "wss://harmony.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   168587773: {
@@ -2413,6 +2433,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "wss://blast.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   5611: {
@@ -2492,6 +2517,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/opbnb",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://opbnb.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -2855,7 +2885,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       },
       {
-        url: "https://optimism.api.pocket.network",
+        url: "https://op.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -2884,6 +2914,11 @@ export const extraRpcs = {
         url: "https://op-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "wss://op.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -2926,7 +2961,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.therpc,
       },
       {
-        url: "https://optimism-sepolia-testnet.api.pocket.network",
+        url: "https://op-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -3168,6 +3203,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "wss://gnosis.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   10200: {
@@ -3322,6 +3362,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/moonriver",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://moonriver.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -3493,6 +3538,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "wss://moonbeam.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   30: {
@@ -3633,6 +3683,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "wss://boba.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   321: {
@@ -3725,6 +3780,11 @@ export const extraRpcs = {
       },
       {
         url: "https://fuse.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://fuse.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -4786,6 +4846,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "wss://zksync-era.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   196: {
@@ -5513,7 +5578,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-
       {
         url: "https://rpc.swiftnodes.io/rpc/evmos",
         tracking: "limited",
@@ -5909,6 +5973,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
       },
+      {
+        url: "wss://base.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   11235: {
@@ -6271,6 +6340,11 @@ export const extraRpcs = {
         url: "https://sepolia.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "wss://eth-sepolia-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -6675,7 +6749,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.Histori,
       },
       {
-        url: "https://polygon-zkevm.api.pocket.network",
+        url: "https://poly-zkevm.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://poly-zkevm.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -8359,6 +8438,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "wss://sei.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   130: {
@@ -8868,7 +8952,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://berachain.api.pocket.network",
+        url: "https://bera.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -8887,6 +8971,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/berachain",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://bera.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -10281,12 +10370,12 @@ export const extraRpcs = {
   },
   4663: {
     rpcs: [
+      "https://rpc.mainnet.chain.robinhood.com",
       {
         url: "https://robinhood.rpc.blxrbdn.com",
         tracking: "yes",
         trackingDetails: privacyStatement.bloxroute,
       },
-          "https://rpc.mainnet.chain.robinhood.com",
       {
         url: "https://robinhood-rpc.publicnode.com",
         tracking: "none",
@@ -10296,6 +10385,16 @@ export const extraRpcs = {
         url: "wss://robinhood-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://robinhood.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://robinhood.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
