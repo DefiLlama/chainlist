@@ -245,6 +245,8 @@ const privacyStatement = {
     "To route your requests, blockmachine temporarily processes your IP address for up to 2 minutes - used only to count and rate-limit requests. It is never stored beyond that window and cannot be linked to any individual user or account.",
   keccakio:
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
+  solidrpc:
+    "SolidRPC records request metadata including timestamp, chain, RPC method, response status, and byte count for service operation and usage analytics, but does not log RPC request bodies or responses. Cloudflare processes IP addresses for DDoS protection and edge rate limiting. https://solidrpc.io/privacy",
 };
 
 export const extraRpcs = {
@@ -616,13 +618,18 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc-eth.blockmachine.io",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
       {
         url: "https://eth-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1190,6 +1197,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
       },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/56",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
+      },
     ],
   },
   97: {
@@ -1390,6 +1402,11 @@ export const extraRpcs = {
         url: "https://avax-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1661,6 +1678,11 @@ export const extraRpcs = {
         url: "https://polygon-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/137",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -2035,6 +2057,11 @@ export const extraRpcs = {
         url: "https://arb-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -2852,6 +2879,11 @@ export const extraRpcs = {
         url: "https://op-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -5857,6 +5889,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
       },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
+      },
     ],
   },
   11235: {
@@ -7070,7 +7107,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.blockmachine.io",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
     ],
@@ -10276,6 +10313,15 @@ export const extraRpcs = {
         url: "https://flare-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  4663: {
+    rpcs: [
+      {
+        url: "https://rpc.solidrpc.io/public/evm/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
