@@ -618,7 +618,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc-eth.blockmachine.io",
-        tracking: "none",
+        tracking: "no",
         trackingDetails: privacyStatement.blockmachine,
       },
       {
@@ -7107,7 +7107,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.blockmachine.io",
-        tracking: "none",
+        tracking: "no",
         trackingDetails: privacyStatement.blockmachine,
       },
     ],
