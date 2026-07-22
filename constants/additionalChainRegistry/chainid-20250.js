@@ -20,6 +20,5 @@ export const data = {
     "name": "CHEESE Blockchain Explorer",
     "url": "https://cheeseblockchain.com/explorer",
     "standard": "EIP3091"
-  }],
-  "chainSlug": "cheese"
+  }]
 }
