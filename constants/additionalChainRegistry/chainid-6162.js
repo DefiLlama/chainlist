@@ -2,10 +2,10 @@ export const data = {
   name: "Blockmaze Testnet V2",
   chain: "BLOCKMAZE",
   rpc: [
-    "https://v2-evm-rpc.testnet.stackflow.site",
-    "https://v2-evm-rpc-arc.testnet.stackflow.site",
-    "wss://v2-evm-ws-arc.testnet.stackflow.site",
-    "wss://v2-evm-ws.testnet.stackflow.site",
+    "https://testnet-evm-rpc.blockmaze.com",
+    "https://testnet-evm-rpc-arc.blockmaze.com",
+    "wss://testnet-evm-ws-arc.blockmaze.com",
+    "wss://testnet-evm-ws.blockmaze.com",
   ],
   faucets: [],
   nativeCurrency: {
@@ -22,7 +22,7 @@ export const data = {
   explorers: [
     {
       name: "Blockmaze testnet explorer",
-      url: "https://explorer.testnet.stackflow.site",
+      url: "https://testnet-explorer.bmzscan.com/",
     },
   ],
 };
