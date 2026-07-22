@@ -1,6 +1,7 @@
 export const data = {
   "name": "CHEESE Blockchain",
   "chain": "CHEESE",
+  "icon": "cheese",
   "rpc": [
     "https://cheeseblockchain.com/api/rpc"
   ],
@@ -15,7 +16,6 @@ export const data = {
   "shortName": "cheese",
   "chainId": 20250,
   "networkId": 20250,
-  "icon": "cheese",
   "explorers": [{
     "name": "CHEESE Explorer",
     "url": "https://cheeseblockchain.com/explorer",
