@@ -8,7 +8,7 @@ export const data = {
   "nativeCurrency": {
     "name": "NCheese",
     "symbol": "NCH",
-    "decimals": 6
+    "decimals": 18
   },
   "features": [{ "name": "EIP155" }],
   "infoURL": "https://cheeseblockchain.com",
