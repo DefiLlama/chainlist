@@ -103,12 +103,12 @@ export default function RPCList({ chain, lang }) {
         </caption>
         <thead>
           <tr>
-            <th className="px-3 py-1 font-medium border">RPC Server Address</th>
-            <th className="px-3 py-1 font-medium border">Height</th>
-            <th className="px-3 py-1 font-medium border">Latency</th>
-            <th className="px-3 py-1 font-medium border">Score</th>
-            <th className="px-3 py-1 font-medium border">Privacy</th>
-            <th className="px-3 py-1 font-medium border"></th>
+            <th scope="col" className="px-3 py-1 font-medium border">RPC Server Address</th>
+            <th scope="col" className="px-3 py-1 font-medium border">Height</th>
+            <th scope="col" className="px-3 py-1 font-medium border">Latency</th>
+            <th scope="col" className="px-3 py-1 font-medium border">Score</th>
+            <th scope="col" className="px-3 py-1 font-medium border">Privacy</th>
+            <th scope="col" className="px-3 py-1 font-medium border"></th>
           </tr>
         </thead>
 

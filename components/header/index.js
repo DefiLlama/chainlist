@@ -54,6 +54,7 @@ function Header({ lang, chainName, setChainName }) {
                   }}
                   onKeyUp={(event) => {
                     clearTimeout(timeout.current);
+                    // 300ms — fast enough to feel instant, slow enough to skip per-keystroke navigation
                     timeout.current = setTimeout(() => {
                       router
                         .push(
@@ -67,7 +68,7 @@ function Header({ lang, chainName, setChainName }) {
                         .then(() => {
                           clearTimeout(timeout.current);
                         });
-                    }, 1000);
+                    }, 300);
                   }}
                   className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
                 />
@@ -78,6 +79,7 @@ function Header({ lang, chainName, setChainName }) {
                   defaultValue={search ?? ""}
                   onKeyUp={(event) => {
                     clearTimeout(timeout.current);
+                    // 300ms — fast enough to feel instant, slow enough to skip per-keystroke navigation
                     timeout.current = setTimeout(() => {
                       router
                         .push(
@@ -91,7 +93,7 @@ function Header({ lang, chainName, setChainName }) {
                         .then(() => {
                           clearTimeout(timeout.current);
                         });
-                    }, 100);
+                    }, 300);
                   }}
                   className="dark:bg-[#0D0D0D] bg-white dark:text-[#B3B3B3] text-black flex-1 px-3 sm:px-2 pb-4 pt-2 sm:py-4 outline-none"
                 />
@@ -113,7 +115,13 @@ function Header({ lang, chainName, setChainName }) {
           </div>
           <div className="dark:text-[#B3B3B3] text-black py-2 px-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <label className="flex items-center gap-2">
-              <input type="checkbox" name="testnets" checked={includeTestnets} onChange={toggleTestnets} />
+              <input
+                type="checkbox"
+                name="testnets"
+                aria-label="Include Testnets"
+                checked={includeTestnets}
+                onChange={toggleTestnets}
+              />
               <span>Include Testnets</span>
             </label>
 

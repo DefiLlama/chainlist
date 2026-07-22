@@ -36,17 +36,24 @@ function Home({ chains }) {
 
       <Layout chainName={chainName} setChainName={setChainName}>
         <React.Suspense fallback={<div className="h-screen"></div>}>
-          <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
-            {finalChains.slice(0, 2).map((chain) => {
-              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
-            })}
-            <AdBanner />
-            {finalChains.slice(2, end).map((chain) => {
-              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
-            })}
-          </div>
+          {finalChains.length === 0 ? (
+            <div className="dark:text-[#B3B3B3] text-black flex flex-col items-center justify-center gap-2 py-16 text-center">
+              <p className="text-lg font-medium">No chains found</p>
+              <p className="text-sm opacity-70">Try a different search term, or remove filters to see all chains.</p>
+            </div>
+          ) : (
+            <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
+              {finalChains.slice(0, 2).map((chain) => {
+                return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
+              })}
+              <AdBanner />
+              {finalChains.slice(2, end).map((chain) => {
+                return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
+              })}
+            </div>
+          )}
         </React.Suspense>
-        {end < finalChains.length ? (
+        {finalChains.length > 0 && end < finalChains.length ? (
           <button
             onClick={() => setEnd(finalChains.length)}
             className="w-full border dark:border-[#171717] border-[#EAEAEA] px-4 py-2 rounded-[50px] mb-auto text-white bg-[#2F80ED] mx-auto"
