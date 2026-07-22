@@ -11,6 +11,7 @@ const privacyStatement = {
     "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, location information (including approximate location derived from IP address), and Internet service provider. https://www.alchemy.com/policies/privacy-policy",
   nodereal: `We may automatically record certain information about how you use our Sites (we refer to this information as "Log Data"). Log Data may include information such as a user's Internet Protocol (IP) address, device and browser type, operating system, the pages or features of our Sites to which a user browsed and the time spent on those pages or features, the frequency with which the Sites are used by a user, search terms, the links on our Sites that a user clicked on or used, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users' needs and preferences. https://nodereal.io/terms`,
   publicnode: `We do not store or track any user data with the exception of data that will be public on chain. We do not correlate wallets address's with IP's,  any data which is needed to transact is deleted after 24 hours. We also do no use any Analytics or 3rd party website tracking. https://www.publicnode.com/privacy`,
+  valve: `Valve runs a privacy-respecting public RPC. For this public endpoint we retain no request logs and store no client IP addresses: access logging is disabled for the public key, request analytics record no IP, and per-IP rate-limiting uses ephemeral, salted-hashed counters (auto-expiring, no raw IP at rest). We do not correlate wallet addresses with IP addresses, sell user data, or run third-party analytics. RPC calls are served by Valve's own nodes. https://valve.city/#/privacy`,
   onerpc:
     "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.1rpc.io/technology/zero-tracking",
   builder0x69: "Private transactions / MM RPC: https://twitter.com/builder0x69",
@@ -250,6 +251,16 @@ const privacyStatement = {
 export const extraRpcs = {
   1: {
     rpcs: [
+      {
+        url: "https://one.valve.city/rpc/vk_demo/evm/1",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://one.valve.city/rpc/vk_demo/evm/1",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
       {
         url: "https://rpc.nodeflare.app/eth/public",
         tracking: "none",
@@ -4414,6 +4425,16 @@ export const extraRpcs = {
       "wss://evex.cloud/pulsews",
       "https://rpc.degenprotocol.io",
       {
+        url: "https://one.valve.city/rpc/vk_demo/evm/369",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://one.valve.city/rpc/vk_demo/evm/369",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
         url: "https://pulsechain-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -6442,6 +6463,16 @@ export const extraRpcs = {
   943: {
     rpcs: [
       "https://rpc.v4.testnet.pulsechain.com",
+      {
+        url: "https://one.valve.city/rpc/vk_demo/evm/943",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://one.valve.city/rpc/vk_demo/evm/943",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
       {
         url: "https://pulsechain-testnet-rpc.publicnode.com",
         tracking: "none",
