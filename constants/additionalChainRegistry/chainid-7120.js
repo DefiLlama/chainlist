@@ -9,8 +9,8 @@ export const data = {
       "https://faucet.sentrixchain.com"
     ],
     "nativeCurrency": {
-      "name": "Sentrix Testnet",
-      "symbol": "tSRX",
+      "name": "Sentrix",
+      "symbol": "SRX",
       "decimals": 18
     },
     "infoURL": "https://sentrixchain.com",
@@ -20,8 +20,8 @@ export const data = {
     "explorers": [
       {
         "name": "Sentrix Scan (Testnet)",
-        "url": "https://scan.sentrixchain.com",
-        "standard": "none"
+        "url": "https://scan-testnet.sentrixchain.com",
+        "standard": "EIP3091"
       }
     ]
   }

@@ -1,8 +1,8 @@
   export const data = {
-  "name": "Tipschain",
-  "chain": "Tipschain",
+  "name": "Tipschain TESTNET",
+  "chain": "Tipschain TESTNET",
   "rpc": [
-    "http://rpc.tipspay.org"
+    "http://rpc2.tipspay.org"
   ],
   "faucets": ["http://faucet.tipspay.org"],
   "nativeCurrency": {
