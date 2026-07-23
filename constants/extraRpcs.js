@@ -3490,6 +3490,22 @@ export const extraRpcs = {
     ],
   },
 
+  4663: {
+    rpcs: [
+      "https://rpc.mainnet.chain.robinhood.com",
+      {
+        url: "https://robinhood-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://robinhood-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
+
   4689: {
     rpcs: [
       "https://babel-api.mainnet.iotex.io",
