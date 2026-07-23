@@ -1,0 +1,1 @@
+﻿{"name":"NEXABIT","chain":"NXB","rpc":["https://nexabit.io","https://76.13.191.136:8333"],"faucets":[],"nativeCurrency":{"name":"Nexabit","symbol":"NXB","decimals":18},"infoURL":"https://nexabit.io","shortName":"nxb","chainId":7333,"networkId":7333,"explorers":[{"name":"Nexabit Explorer","url":"https://nexabit.io","standard":"EIP3029"}],"icon":"nexabit"}
