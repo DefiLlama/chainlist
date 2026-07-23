@@ -3506,22 +3506,6 @@ export const extraRpcs = {
     ],
   },
 
-  46630: {
-    rpcs: [
-      "https://rpc.testnet.chain.robinhood.com",
-      {
-        url: "https://robinhood-sepolia-rpc.publicnode.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "wss://robinhood-sepolia-rpc.publicnode.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-    ],
-  },
-
   4689: {
     rpcs: [
       "https://babel-api.mainnet.iotex.io",
@@ -10223,10 +10207,21 @@ export const extraRpcs = {
   },
   46630: {
     rpcs: [
+      "https://rpc.testnet.chain.robinhood.com",
       {
         url: "https://robinhood-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://robinhood-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://robinhood-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
