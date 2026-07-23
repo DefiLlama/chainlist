@@ -18,7 +18,7 @@ export const data = {
   "icon": "https://mizuhiki.io/mizuhiki-logo-256.png",
   "explorers": [{
     "name": "blockscout",
-    "url": "https://blockscout.mizuhiki.io",
+    "url": "https://mizuhiki.blockscout.com",
     "icon": "blockscout",
     "standard": "EIP3091"
   }]
