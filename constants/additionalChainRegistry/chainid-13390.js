@@ -1,14 +1,13 @@
 export const data = {
-  "name": "MeeChain Ritual",
+  "name": "MeeChain Network",
   "chain": "MeeChain",
   "rpc": [
-    "https://meechain.run.place",
-    "https://rpc.meechain.run.place"
+    "https://rpc.meechain.live/rpc"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "MeeCoin",
-    "symbol": "MCB",
+    "name": "Mee",
+    "symbol": "MEE",
     "decimals": 18
   },
   "features": [
@@ -19,7 +18,7 @@ export const data = {
       "name": "EIP1559"
     }
   ],
-  "infoURL": "https://meechain.run.place",
+  "infoURL": "https://scan.meechain.live",
   "shortName": "mee",
   "chainId": 13390,
   "networkId": 13390,
@@ -27,7 +26,7 @@ export const data = {
   "explorers": [
     {
       "name": "MeeScan",
-      "url": "https://meechainScan.run.place",
+      "url": "https://scan.meechain.live",
       "standard": "EIP3091"
     }
   ]

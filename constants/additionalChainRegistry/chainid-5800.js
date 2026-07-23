@@ -3,11 +3,14 @@ export const data = {
   "chain": "TBURN",
   "icon": "tburn",
   "rpc": [
-    "https://tburn.io/rpc"
+    "https://rpc.tburn.io",
+    "https://rpc2.tburn.io",
+    "https://rpc3.tburn.io",
+    "https://rpc4.tburn.io",
+    "https://rpc5.tburn.io"
   ],
-  "faucets": [
-    "https://tburn.io/faucet"
-  ],
+  "features": [{"name": "EIP155"}, {"name": "EIP1559"}],
+  "faucets": [],
   "nativeCurrency": {
     "name": "TBURN",
     "symbol": "TBURN",
@@ -17,11 +20,11 @@ export const data = {
   "shortName": "tburn",
   "chainId": 5800,
   "networkId": 5800,
-  "icon": "tburn",
-  "explorers": [{
-    "name": "TBURNScan",
-    "url": "https://tburn.io/scan",
-    "icon": "tburn",
-    "standard": "EIP3091"
-  }]
+  "explorers": [
+    {
+      "name": "TBURNScan",
+      "url": "https://scan.tburn.io/scan",
+      "standard": "EIP3091"
+    }
+  ]
 }
