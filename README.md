@@ -1,1 +1,0 @@
-Chainid 1925 TipsChain Mainnet 
