@@ -122,7 +122,7 @@ export default {
   "1285": "moonriver",
   "1329": "sei",
   "1424": "perennial",
-  "1514": "sty",
+  "1514": "data",
   "1559": "tenet",
   "1625": "gravity",
   "1729": "reya network",
@@ -163,6 +163,7 @@ export default {
   "4337": "beam",
   "4442": "denergy testnet",
   "4488": "hydra chain",
+  "4663": "robinhood",
   "4689": "iotex",
   "5000": "mantle",
   "5031": "somnia",
@@ -308,4 +309,5 @@ export default {
   "383414847825": "zeniq",
   "836542336838601": "curio",
   "2716446429837000": "dchain",
+  "15526": "nrxn",
 }

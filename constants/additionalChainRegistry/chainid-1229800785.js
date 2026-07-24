@@ -1,10 +1,10 @@
 export const data = {
   "name": "iTani Network Chain",
-  "chain": "ITN",
+  "chain": "ITANI",
   "icon": "itani",
   "rpc": [
-    "https://node.itaninetworkchain.com/jsonrpc",
-    "https://relay.itaninetworkchain.com/jsonrpc"
+    "https://rpc.itaninetworkchain.com/jsonrpc",
+    "https://node.itaninetworkchain.com/jsonrpc"
   ],
   "features": [
     {
@@ -17,20 +17,14 @@ export const data = {
     "symbol": "ITANI",
     "decimals": 18
   },
-  "infoURL": "https://github.com/itanidreams-dev/iTani-Network-Chain",
+  "infoURL": "https://www.itaninetworkchain.com",
   "shortName": "itani",
   "chainId": 1229800785,
   "networkId": 1229800785,
   "explorers": [
     {
       "name": "iTani Explorer",
-      "url": "https://node.itaninetworkchain.com",
-      "icon": "itani",
-      "standard": "EIP3091"
-    },
-    {
-      "name": "iTani Explorer (Relay)",
-      "url": "https://relay.itaninetworkchain.com",
+      "url": "https://explorer.itaninetworkchain.com",
       "icon": "itani",
       "standard": "EIP3091"
     }
