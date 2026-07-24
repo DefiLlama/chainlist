@@ -1,0 +1,118 @@
+‏name": "my-bad-‏‏package"
+‏package main
+
+import (
+	"bytes"
+	"context"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"os"
+	"strconv"
+	"strings"
+
+	"github.com/google/go-github/v53/github" /
+	"golang.org/x/oauth2"
+)
+
+// GitHub
+type IssueName struct {
+	Name string `json:"name"`
+}
+
+type IssueValue struct {
+	Value string `json:"value"`
+}
+
+type IssueKey struct {
+	Key string `json:"key"`
+}
+
+// IssueFields  Jira)
+type IssueFields struct {
+	Project     Project     `json:"project"`
+	Summary     string      `json:"summary"`
+	Description string      `json:"description"`
+	IssueType   IssueType   `json:"issuetype"`
+	Priority    Priority    `json:"priority"`
+	Labels      []string    `json:"labels"`
+}
+
+type Project struct {
+	Key string `json:"key"`
+}
+
+type IssueType struct {
+	Name string `json:"name"`
+}
+
+type Priority struct {
+	Name string `json:"name"`
+}
+
+// 
+func main() {
+	ctx := context.Background()
+	token := os.Getenv("GITHUB_TOKEN") //  Environment Variable بخوانید
+	if token == "" {
+		log.Fatal("Please set GITHUB_TOKEN environment variable")
+	}
+
+	ts := oauth2.StaticTokenSource(
+		&oauth2.Token{AccessToken: token},
+	)
+	tc := oauth2.NewClient(ctx, ts)
+
+	client := github.NewClient(tc)
+
+	// Issue
+	owner := "google"
+	repo := "go-github"
+
+	issues, _, err := client.Issues.List(ctx, owner, repo, &github.IssueListOptions{
+		State: "open",
+	})
+	if err != nil {
+		log.Fatalf("Error fetching issues: %v", err)
+	}
+
+	for _, issue := range issues {
+		fmt.Printf("Issue #%d: %s\n", issue.GetNumber(), issue.GetTitle())
+		// 
+
+	
+}token := os.Getenv("GH_TOKEN") // 
+ Workflow 
+name: Sync GitHub Issues
+
+on:
+  schedule:
+    #  (UTC)
+    - cron: '0 0 * * *'
+ 
+
+jobs:
+GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'# 
+
+      - name: Install dependencies
+        run: go mod tidy && go mod download
+
+      - name: Run Sync Script
+        env:
+          # 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: go run main.go
+
