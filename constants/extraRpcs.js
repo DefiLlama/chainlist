@@ -2540,6 +2540,11 @@ export const extraRpcs = {
       },
     ],
   },
+  165: {
+    rpcs: [
+      "https://rpc.fmcscan.com",
+    ],
+  },
   256: {
     rpcs: ["https://hecotestapi.terminet.io/rpc"],
   },
