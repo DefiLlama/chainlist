@@ -5,7 +5,7 @@ export const data = {
     "https://seleman.monarcaproject.com/rpc",
     "https://seleman-edge.mineriafjs.workers.dev/rpc"
   ],
-  faucets: [],
+  faucets: ["https://seleman.monarcaproject.com/trust-wallet"],
   nativeCurrency: {
     name: "SELEMAN",
     symbol: "SMN",
