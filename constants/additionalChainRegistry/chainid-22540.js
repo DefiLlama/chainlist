@@ -1,5 +1,5 @@
 export const data = {
-    "name": "LXS Network",
+    "name": "LXS",
     "chain": "LXS",
     "rpc": [
       "https://lxsnetwork.duckdns.org"
