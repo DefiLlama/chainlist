@@ -1190,6 +1190,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
       },
+      {
+        url: "https://rpc-bsc.blockmachine.io",
+        tracking: "no",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   97: {
