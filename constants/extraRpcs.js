@@ -1,4 +1,6 @@
 const privacyStatement = {
+  chainpulse:
+      "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
     "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",
   "48Club":
@@ -593,7 +595,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/eth",
         tracking: "limited",
@@ -1169,7 +1171,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/bsc",
         tracking: "limited",
@@ -1189,6 +1191,11 @@ export const extraRpcs = {
         url: "https://bsc-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://bsc-rpc-public.chainpulse.cc/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.chainpulse,
       },
     ],
   },
@@ -1259,6 +1266,11 @@ export const extraRpcs = {
         url: "https://bsc-testnet.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://bsc-rpc-public.chainpulse.cc/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.chainpulse,
       },
     ],
   },
@@ -1375,7 +1387,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/avalanche",
         tracking: "limited",
@@ -1632,7 +1644,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/polygon",
         tracking: "limited",
@@ -1653,9 +1665,9 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
       },
-      { 
+      {
         url: "https://rpc.satelink.network/rpc/polygon",
-       tracking: "none", 
+       tracking: "none",
       },
       {
         url: "https://polygon-rpc.keccak.io",
@@ -1721,7 +1733,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/cronos",
         tracking: "limited",
@@ -2015,7 +2027,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/arbitrum",
         tracking: "limited",
@@ -2380,7 +2392,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/blast",
         tracking: "limited",
@@ -2460,7 +2472,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/opbnb",
         tracking: "limited",
@@ -2619,7 +2631,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/celo",
         tracking: "limited",
@@ -2842,7 +2854,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/optimism",
         tracking: "limited",
@@ -3020,7 +3032,7 @@ export const extraRpcs = {
       },
       "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm",
       "https://metis.rpc.hypersync.xyz/",
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/metis",
         tracking: "limited",
@@ -3130,7 +3142,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/gnosis",
         tracking: "limited",
@@ -3285,7 +3297,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/moonriver",
         tracking: "limited",
@@ -3455,7 +3467,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/moonbeam",
         tracking: "limited",
@@ -4142,7 +4154,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.tatum,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/etc",
         tracking: "limited",
@@ -4311,7 +4323,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Hightower,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/monad",
         tracking: "limited",
@@ -4453,7 +4465,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/pulsechain",
         tracking: "limited",
@@ -5168,7 +5180,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/kava",
         tracking: "limited",
@@ -5280,7 +5292,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/mantle",
         tracking: "limited",
@@ -5461,7 +5473,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/evmos",
         tracking: "limited",
@@ -5841,7 +5853,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/base",
         tracking: "limited",
@@ -6047,7 +6059,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/scroll",
         tracking: "limited",
@@ -6072,7 +6084,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/chiliz",
         tracking: "limited",
@@ -6672,7 +6684,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/linea",
         tracking: "limited",
@@ -6897,7 +6909,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/taiko",
         tracking: "limited",
@@ -7323,7 +7335,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/dymension",
         tracking: "limited",
@@ -7683,7 +7695,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/fraxtal",
         tracking: "limited",
@@ -8273,7 +8285,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/sei",
         tracking: "limited",
@@ -8334,7 +8346,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/unichain",
         tracking: "limited",
@@ -8640,7 +8652,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/sonic",
         tracking: "limited",
@@ -8802,7 +8814,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/berachain",
         tracking: "limited",
@@ -8871,7 +8883,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/soneium",
         tracking: "limited",
@@ -9510,7 +9522,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/plasma",
         tracking: "limited",
@@ -9655,7 +9667,7 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-    
+
       {
         url: "https://rpc.swiftnodes.io/rpc/katana",
         tracking: "limited",
@@ -9791,7 +9803,7 @@ export const extraRpcs = {
         url: "https://evm-rpc-ql1.foxxone.one",
         tracking: "none",
         trackingDetails: "No user tracking or data collection",
-      }, 
+      },
       {
         url: "https://evm-rpc-ql1.mschihuahua.org",
         tracking: "none",
@@ -10108,7 +10120,7 @@ export const extraRpcs = {
       },
     ],
   },
- 
+
   2366: {
   rpcs: [
     {
