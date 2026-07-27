@@ -38,11 +38,25 @@ function Home({ chains }) {
         <React.Suspense fallback={<div className="h-screen"></div>}>
           <div className="dark:text-[#B3B3B3] text-black grid gap-5 grid-cols-1 place-content-between pb-4 sm:pb-10 sm:grid-cols-[repeat(auto-fit,_calc(50%_-_15px))] 3xl:grid-cols-[repeat(auto-fit,_calc(33%_-_20px))] isolate grid-flow-dense">
             {finalChains.slice(0, 2).map((chain) => {
-              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
+              return (
+                <Chain
+                  chain={chain}
+                  autoExpand={finalChains.length === 1}
+                  key={JSON.stringify(chain) + "en"}
+                  lang="en"
+                />
+              );
             })}
             <AdBanner />
             {finalChains.slice(2, end).map((chain) => {
-              return <Chain chain={chain} key={JSON.stringify(chain) + "en"} lang="en" />;
+              return (
+                <Chain
+                  chain={chain}
+                  autoExpand={finalChains.length === 1}
+                  key={JSON.stringify(chain) + "en"}
+                  lang="en"
+                />
+              );
             })}
           </div>
         </React.Suspense>

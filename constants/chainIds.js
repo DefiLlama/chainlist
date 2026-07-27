@@ -163,6 +163,7 @@ export default {
   "4337": "beam",
   "4442": "denergy testnet",
   "4488": "hydra chain",
+  "4663": "robinhood",
   "4689": "iotex",
   "5000": "mantle",
   "5031": "somnia",

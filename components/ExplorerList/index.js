@@ -1,5 +1,4 @@
 import { notTranslation as useTranslations } from "../../utils";
-import CopyUrl from "../CopyUrl";
 import { explorerBlacklist } from "../../constants/explorerBlacklist";
 
 export default function ExplorerList({ chain, lang }) {
@@ -46,7 +45,18 @@ const ExplorerRow = ({ isLoading, explorer, className }) => {
     <tr className={className}>
       <td className="px-3 py-1 text-sm border text-center">{isLoading ? <Shimmer /> : explorer?.name}</td>
       <td className="border px-3 py-1 max-w-[40ch] text-center">
-        {isLoading ? <Shimmer /> : explorer?.url ? <CopyUrl url={explorer.url} /> : null}
+        {isLoading ? (
+          <Shimmer />
+        ) : explorer?.url ? (
+          <a
+            href={explorer.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-[40ch] px-2 py-[2px] -my-[2px] overflow-hidden text-ellipsis dark:hover:text-white hover:underline"
+          >
+            {explorer.url}
+          </a>
+        ) : null}
       </td>
     </tr>
   );
