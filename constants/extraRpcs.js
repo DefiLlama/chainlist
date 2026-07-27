@@ -661,6 +661,16 @@ export const extraRpcs = {
       },
     ],
   },
+  1404: {
+    rpcs: [
+      {
+        url: "https://rpc.kenny-us-pool.com",
+        tracking: "yes",
+        trackingDetails:
+          "This RPC endpoint may log request metadata (IP address, request method, timestamps) for rate-limiting, abuse prevention, and service reliability purposes.",
+      },
+    ],
+  },
   2517: {
     rpcs: [
       "https://svp-dataseed1-testnet.svpchain.org",
