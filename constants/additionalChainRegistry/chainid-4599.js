@@ -1,4 +1,4 @@
-{
+export const data ={
   "name": "GTBS Chain",
   "chain": "GTBS",
   "rpc": [
