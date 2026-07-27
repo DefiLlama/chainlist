@@ -1,4 +1,4 @@
-{
+export const data ={
   "name": "Tipschain Mainnet",
   "chain": "TPC",
   "rpc": [
