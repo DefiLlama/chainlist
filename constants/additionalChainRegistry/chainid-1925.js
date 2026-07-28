@@ -12,7 +12,7 @@ export const data ={
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://tipschain.org",
-  "shortName": "tpc"
+  "shortName": "tpc",
   "chainId": 1925,
   "networkId": 1925,
   "icon": "TPC",
