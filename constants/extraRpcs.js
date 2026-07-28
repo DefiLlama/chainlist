@@ -7636,6 +7636,11 @@ export const extraRpcs = {
       "https://cronos-rpc.ecroxscan.com",
     ],
   },
+  4599: {
+    rpcs: [
+      "https://mainnet-rpc.gtbsblockchain.com",
+    ],
+  },
   7865: {
     rpcs: [
       {
