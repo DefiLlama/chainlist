@@ -3,7 +3,8 @@ export const data = {
   chain: "SMN",
   rpc: [
     "https://seleman.monarcaproject.com/rpc",
-    "https://seleman-edge.mineriafjs.workers.dev/rpc"
+    "https://seleman-edge.mineriafjs.workers.dev/rpc",
+    "wss://seleman.monarcaproject.com/ws"
   ],
   faucets: ["https://seleman.monarcaproject.com/trust-wallet"],
   nativeCurrency: {
