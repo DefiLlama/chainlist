@@ -4,7 +4,7 @@ export const data = {
   rpc: [
     "https://seleman.monarcaproject.com/rpc",
     "https://seleman-edge.mineriafjs.workers.dev/rpc",
-    "wss://seleman.monarcaproject.com/ws"
+    "wss://seleman-ws.monarcaproject.com"
   ],
   faucets: ["https://seleman.monarcaproject.com/trust-wallet"],
   nativeCurrency: {
