@@ -1,4 +1,4 @@
-const privacyStatement = {
+  const privacyStatement = {
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -204,6 +204,7 @@ const privacyStatement = {
     "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
   PulseChainRpc:
     "We do not store or track any user data other than the data publicly available on-chain.https://rpc.pulsechainrpc.com/privacy",
+  mijkpro: = "We log IP addresses and request metadata for rate-limiting and abuse-prevention purposes only. No data is sold, shared with third parties. This data is only used for dashboard analytics.",
   MBF: "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
   DHF: "DHF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
   Stakely:
@@ -4442,7 +4443,7 @@ export const extraRpcs = {
   360: {
     rpcs: ["https://mainnet.shape.network", "https://shape-mainnet.g.alchemy.com/public"],
   },
-  369: {
+369: {
     rpcs: [
       "https://rpc.pulsechain.com",
       "https://rpc.gigatheminter.com",
@@ -4500,11 +4501,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
       },
-
       {
         url: "https://rpc.swiftnodes.io/rpc/pulsechain",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://sophia-rpc.mijk.pro",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mijkpro,
       },
     ],
   },
