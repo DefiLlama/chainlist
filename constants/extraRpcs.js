@@ -4511,6 +4511,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.mijkpro,
       },
+      {
+        url: "https://mystica-rpc.mijk.pro",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mijkpro,
+      },
     ],
   },
   385: {
