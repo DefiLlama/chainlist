@@ -2985,7 +2985,7 @@ export const extraRpcs = {
     ],
   },
   2330: {
-    rpcs: ["http://138.197.152.181:8145", "https://rpc0.altcoinchain.org/rpc"],
+    rpcs: ["https://rpc.wattxchange.app"],
   },
   1773: {
     rpcs: ["http://138.197.152.181:8245"],
