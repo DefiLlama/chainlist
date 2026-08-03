@@ -248,6 +248,8 @@ const privacyStatement = {
     "To route your requests, blockmachine temporarily processes your IP address for up to 2 minutes - used only to count and rate-limit requests. It is never stored beyond that window and cannot be linked to any individual user or account.",
   keccakio:
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
+  seleman:
+    "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
 };
 
 export const extraRpcs = {
@@ -10571,6 +10573,20 @@ export const extraRpcs = {
         url: "https://flare-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  73571: {
+    rpcs: [
+      {
+        url: "https://seleman.monarcaproject.com/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
+      {
+        url: "https://seleman-edge.mineriafjs.workers.dev/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
       },
     ],
   },
