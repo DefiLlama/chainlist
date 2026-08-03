@@ -17,5 +17,6 @@ export const data = {
   "infoURL": "https://cmxofficial.com/",
   "shortName": "CMX-U",
   "chainId": 7373,
+  "networkId": 7373,
   "status": "active"
 }
