@@ -1,0 +1,14 @@
+export const data = {
+    "name": "HIPERCAPITAL FINANCE Chain",
+    "chain": "HIPCF",
+    "icon": "hipercapital",
+    "rpc": ["https://rpc.hipercapitalfinance.com"],
+    "features": [{ "name": "EIP155" }],
+    "faucets": [],
+    "nativeCurrency": { "name": "HIPERCAPITAL FINANCE Token", "symbol": "HIP", "decimals": 18 },
+    "infoURL": "https://hipercapitalfinance.com",
+    "shortName": "hipcf",
+    "chainId": 240884,
+    "networkId": 240884,
+    "explorers": [{ "name": "HIPERCAPITAL FINANCE Explorer", "url": "https://explorer.hipercapitalfinance.com", "standard": "EIP3091" }]
+  }
