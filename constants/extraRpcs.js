@@ -15,7 +15,7 @@ const privacyStatement = {
   publicnode: `We do not store or track any user data with the exception of data that will be public on chain. We do not correlate wallets address's with IP's,  any data which is needed to transact is deleted after 24 hours. We also do no use any Analytics or 3rd party website tracking. https://www.publicnode.com/privacy`,
   valve: `Valve runs a privacy-respecting public RPC. For this public endpoint we retain no request logs and store no client IP addresses: access logging is disabled for the public key, request analytics record no IP, and per-IP rate-limiting uses ephemeral, salted-hashed counters (auto-expiring, no raw IP at rest). We do not correlate wallet addresses with IP addresses, sell user data, or run third-party analytics. RPC calls are served by Valve's own nodes. https://valve.city/#/privacy`,
   onerpc:
-    "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.1rpc.io/technology/zero-tracking",
+    "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.1rpc.io/web3-relay/overview",
   builder0x69: "Private transactions / MM RPC: https://twitter.com/builder0x69",
   MEVBlockerRPC:
     "Privacy notice: MEV Blocker RPC does not store any kind of user information (i.e. IP, location, user agent, etc.) in any data bases. Only transactions are preserved to be displayed via status endpoint like https://rpc.mevblocker.io/tx/0x627b09d5a9954a810cd3c34b23694439da40558a41b0d87970f2c3420634a229. Connect to MEV Blocker via https://rpc.mevblocker.io",
@@ -295,7 +295,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/eth",
+        url: "https://public.1rpc.io/eth",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1058,7 +1058,7 @@ export const extraRpcs = {
       "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       "https://nodes.vefinetwork.org/smartchain",
       {
-        url: "https://1rpc.io/bnb",
+        url: "https://public.1rpc.io/bnb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1334,7 +1334,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/avax/c",
+        url: "https://public.1rpc.io/avax/c",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1454,7 +1454,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/ftm",
+        url: "https://public.1rpc.io/ftm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1554,7 +1554,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/matic",
+        url: "https://public.1rpc.io/matic",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1721,7 +1721,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/cro",
+        url: "https://public.1rpc.io/cro",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1918,7 +1918,7 @@ export const extraRpcs = {
       },
       "https://arb1.arbitrum.io/rpc",
       {
-        url: "https://1rpc.io/arb",
+        url: "https://public.1rpc.io/arb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2242,7 +2242,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://1rpc.io/klay",
+        url: "https://public.1rpc.io/klay",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2279,7 +2279,7 @@ export const extraRpcs = {
       "https://a.api.s0.t.hmny.io",
       "https://api.s0.t.hmny.io",
       {
-        url: "https://1rpc.io/one",
+        url: "https://public.1rpc.io/one",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2483,7 +2483,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/opbnb",
+        url: "https://public.1rpc.io/opbnb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2539,7 +2539,7 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.aurora.dev",
       {
-        url: "https://1rpc.io/aurora",
+        url: "https://public.1rpc.io/aurora",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2765,7 +2765,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/op",
+        url: "https://public.1rpc.io/op",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3168,7 +3168,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/gnosis",
+        url: "https://public.1rpc.io/gnosis",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3377,7 +3377,7 @@ export const extraRpcs = {
     rpcs: [
       "https://emerald.oasis.io",
       {
-        url: "https://1rpc.io/oasis/emerald",
+        url: "https://public.1rpc.io/oasis/emerald",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3392,7 +3392,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.telos.net",
       {
-        url: "https://1rpc.io/telos/evm",
+        url: "https://public.1rpc.io/telos/evm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3457,7 +3457,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "https://1rpc.io/glmr",
+        url: "https://public.1rpc.io/glmr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3610,7 +3610,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/oktc",
+        url: "https://public.1rpc.io/oktc",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3659,7 +3659,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://1rpc.io/boba/eth",
+        url: "https://public.1rpc.io/boba/eth",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3840,7 +3840,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       {
-        url: "https://1rpc.io/astr",
+        url: "https://public.1rpc.io/astr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -4050,7 +4050,7 @@ export const extraRpcs = {
   17000: {
     rpcs: [
       {
-        url: "https://1rpc.io/holesky",
+        url: "https://public.1rpc.io/holesky",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -4435,7 +4435,7 @@ export const extraRpcs = {
     rpcs: [
       "https://pacific-rpc.manta.network/http",
       {
-        url: "https://1rpc.io/manta",
+        url: "https://public.1rpc.io/manta",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -4706,7 +4706,7 @@ export const extraRpcs = {
       "https://rpc.coredao.org",
       "wss://ws.coredao.org",
       {
-        url: "https://1rpc.io/core",
+        url: "https://public.1rpc.io/core",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -4804,7 +4804,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://1rpc.io/zksync2-era",
+        url: "https://public.1rpc.io/zksync2-era",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -5360,7 +5360,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://1rpc.io/mantle",
+        url: "https://public.1rpc.io/mantle",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -5777,11 +5777,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/base-goerli",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
-      },
-      {
         url: "https://base-goerli.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -5824,7 +5819,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://1rpc.io/base",
+        url: "https://public.1rpc.io/base",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -6116,7 +6111,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.unifra,
       },
       {
-        url: "https://1rpc.io/scroll",
+        url: "https://public.1rpc.io/scroll",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -6274,7 +6269,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/sepolia",
+        url: "https://public.1rpc.io/sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -6721,7 +6716,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.gateway,
       },
       {
-        url: "https://1rpc.io/polygon/zkevm",
+        url: "https://public.1rpc.io/polygon/zkevm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -6766,7 +6761,7 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.linea.build",
       {
-        url: "https://1rpc.io/linea",
+        url: "https://public.1rpc.io/linea",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -7295,7 +7290,7 @@ export const extraRpcs = {
     rpcs: [
       "https://sapphire.oasis.io",
       {
-        url: "https://1rpc.io/oasis/sapphire",
+        url: "https://public.1rpc.io/oasis/sapphire",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -7403,11 +7398,6 @@ export const extraRpcs = {
     rpcs: [
       "https://api.kroma.network",
       {
-        url: "https://1rpc.io/kroma",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
-      },
-      {
         url: "https://kroma.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -7424,7 +7414,7 @@ export const extraRpcs = {
     rpcs: [
       "https://mainnet.mode.network",
       {
-        url: "https://1rpc.io/mode",
+        url: "https://public.1rpc.io/mode",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
