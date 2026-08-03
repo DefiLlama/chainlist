@@ -1,4 +1,4 @@
-{
+export const data = {
     "name": "HashSphere Private Network 292",
     "chain": "HashSphere-292",
     "rpc": ["http://rpc-292.champagnesphere.net/"],
