@@ -1,27 +1,23 @@
 export const data = {
-  "name": "Morph Tachyon",
-  "chain": "Morph Tachyon",
-  "rpc": [
-    "https://api.popdex.xyz/api/v1/web3/rpc"
-  ],
-  "faucets": [],
-  "nativeCurrency": {
-    "name": "BGB",
-    "symbol": "BGB",
-    "decimals": 18
+  name: "c8ntinuum",
+  chain: "CTM",
+  rpc: ["https://public-evm-rpc.c8ntinuum.com", "https://public-evm-rpc.c8ntinuum.io"],
+  faucets: [],
+  nativeCurrency: {
+    name: "c8ntinuum",
+    symbol: "CTM",
+    decimals: 18,
   },
-  "features": [
-    { "name": "EIP155" }
-  ],
-  "infoURL": "https://popdex.xyz",
-  "shortName": "morphtachyon",
-  "chainId": 2184,
-  "networkId": 2184,
-  "explorers": [
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://c8ntinuum.com",
+  shortName: "c8",
+  chainId: 2184,
+  networkId: 2184,
+  explorers: [
     {
-      "name": "Morph Tachyon Explorer",
-      "url": "https://app.popdex.xyz/explorer",
-      "standard": "EIP3091"
-    }
-  ]
-}
+      name: "CTMScan",
+      url: "https://ctmscan.io",
+      standard: "EIP3091",
+    },
+  ],
+};
