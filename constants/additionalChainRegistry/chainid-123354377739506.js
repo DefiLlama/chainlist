@@ -16,7 +16,7 @@ export const data = {
   "chainId": 123354377739506,
   "networkId": 123354377739506,
   "explorers": [{
-    "name": "Strato Explorer",
+    "name": "Strato Explorer",ว
     "url": "https://stratoscan.strato.nexus/",
     "standard": "EIP3091"
   }]
