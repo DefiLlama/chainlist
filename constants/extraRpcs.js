@@ -4280,20 +4280,6 @@ export const extraRpcs = {
   5551: {
     rpcs: ["https://l2.nahmii.io/"],
   },
-  4663: {
-    rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/88",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
-      {
-        url: "https://rpc.nodeflare.app/robinhood/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
-      },
-    ],
-  },
   88: {
     rpcs: [
       {
@@ -12466,6 +12452,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
+      {
+        url: "https://orderly.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   297: {
@@ -12771,15 +12762,6 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://lb.routeme.sh/rpc/evm/1113",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
-    ],
-  },
-  1114: {
-    rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/1114",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
@@ -15491,6 +15473,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/robinhood/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
     ],
   },
   46630: {
@@ -15510,15 +15502,6 @@ export const extraRpcs = {
         url: "wss://robinhood-sepolia-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-    ],
-  },
-  291: {
-    rpcs: [
-      {
-        url: "https://orderly.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
