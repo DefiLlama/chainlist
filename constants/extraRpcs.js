@@ -12256,6 +12256,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/114",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },      
+      {
+        url: "https://flare-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -15566,15 +15571,6 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://morph-hoodi.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  114: {
-    rpcs: [
-      {
-        url: "https://flare-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
