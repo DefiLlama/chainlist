@@ -1766,7 +1766,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc-polygon.blockmachine.io/",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
     ],
@@ -2180,7 +2180,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc-arbitrum.blockmachine.io/",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
     ],
@@ -3117,7 +3117,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc-optimism.blockmachine.io/",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
     ],
