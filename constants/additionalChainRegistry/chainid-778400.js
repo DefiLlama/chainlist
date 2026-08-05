@@ -1,15 +1,13 @@
-export default data{
+export const data = {
   name: "Felix Smart Chain",
   chain: "FLXG",
   icon: "https://plum-geographical-dinosaur-799.mypinata.cloud/ipfs/bafybeiaq6gzygs2hx2xh2rl4nbeaegcnww65xcmjcevdxdols56jsyskeu",
-  rpc: [
-    "https://rpc.felixexplorer.com"
-  ],
+  rpc: ["https://rpc.felixexplorer.com"],
   faucets: [],
   nativeCurrency: {
     name: "FLXG",
     symbol: "FLXG",
-    decimals: 18
+    decimals: 18,
   },
   infoURL: "https://felixexplorer.com",
   shortName: "flxg",
@@ -19,7 +17,7 @@ export default data{
     {
       name: "Felix Smart Chain Explorer",
       url: "https://felixexplorer.com",
-      standard: "EIP3091"
-    }
-  ]
+      standard: "EIP3091",
+    },
+  ],
 };
