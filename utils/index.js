@@ -82,6 +82,20 @@ export const renderProviderText = (address) => {
   }
 };
 
+export const getChainIcon = (chain) => {
+  if (!chain) {
+    return "/unknown-logo.png";
+  }
+
+  if (chain.chainSlug) {
+    return `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg`;
+  }
+
+  const icon = typeof chain.icon === "string" ? chain.icon : chain.icon?.url;
+
+  return icon?.startsWith("http") ? icon : "/unknown-logo.png";
+};
+
 export const notTranslation =
   (ns, lang = "en") =>
   (key) => {
