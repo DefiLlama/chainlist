@@ -6727,7 +6727,7 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc-base.blockmachine.io",
-        tracking: "no",
+        tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
     ],
