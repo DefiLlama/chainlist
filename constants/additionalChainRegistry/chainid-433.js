@@ -1,5 +1,5 @@
 export const data = {
-  "name": "Dchain mainnet",
+  "name": "D Mainnet",
   "chain": "Dchain",
   "rpc": [
     "https://eth.dfoundation.io"
@@ -12,9 +12,9 @@ export const data = {
   },
   "features": [{ "name": "EIP1559" }],
   "infoURL": "https://dfoundation.io",
-  "shortName": "dchain mainnet",
+  "shortName": "d-mainnet",
   "chainId": 433,
   "networkId": 433,
-  "icon": "dchain",
+  "icon": "d-chain",
   "explorers": []
 }
