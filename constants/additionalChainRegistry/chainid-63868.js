@@ -1,7 +1,7 @@
 export const data = {
   "name": "Veri5",
   "chain": "VERI5",
-  "icon": "https://explorer.veri5.network/assets/configs/network_icon.png",
+  "icon": "https://gateway.pinata.cloud/ipfs/bafybeihqekabx2rg2m2crfg3r63fmcngqj5ghk4gucknmr66empihp6bfq",
   "rpc": [
     "https://rpc0.veri5.network"
   ],
@@ -19,7 +19,7 @@ export const data = {
     {
       "name": "Veri5 Explorer",
       "url": "https://explorer.veri5.network",
-      "icon": "https://explorer.veri5.network/assets/configs/network_icon.png",
+      "icon": "https://gateway.pinata.cloud/ipfs/bafybeihqekabx2rg2m2crfg3r63fmcngqj5ghk4gucknmr66empihp6bfq",
       "standard": "EIP3091"
     }
   ]
