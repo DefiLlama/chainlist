@@ -689,6 +689,12 @@ export const extraRpcs = {
         trackingDetails:
           "This RPC endpoint may log request metadata (IP address, request method, timestamps) for rate-limiting, abuse prevention, and service reliability purposes.",
       },
+      {
+        url: "https://rpc.welshdag.trade",
+        tracking: "limited",
+        trackingDetails:
+          "Cloudflare and WelshDAG infrastructure may log IP addresses, RPC methods, timestamps, and request metadata for rate limiting, abuse prevention, security, and service reliability. Privacy policy: https://welshdag.trade/rpc-privacy/",
+      },
     ],
   },
   2517: {
