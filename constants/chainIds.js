@@ -264,6 +264,7 @@ export default {
   "98866": "plume",
   "105105": "stratis",
   "111188": "real",
+  "122605": "swss",
   "153153": "odyssey",
   "167000": "taiko",
   "171717": "wchain",
