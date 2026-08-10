@@ -188,6 +188,7 @@ export default {
   "7332": "horizen_eon",
   "7560": "cyeth",
   "7700": "canto",
+  "7777": "ttl",
   "7887": "kinto",
   "8008": "polynomial",
   "8217": "klaytn",
