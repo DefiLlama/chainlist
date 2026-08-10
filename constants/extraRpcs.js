@@ -15499,6 +15499,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
       },
+            {
+      url: "https://rpc.degenprotocol.io/robinhood",
+      tracking: "none",
+      trackingDetails: privacyStatement.degenprotocol,
+    },
     ],
   },
   46630: {
