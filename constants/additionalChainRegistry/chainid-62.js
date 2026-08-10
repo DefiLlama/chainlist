@@ -2,7 +2,7 @@ export const data = {
   "name": "Plato Testnet",
   "chain": "Plato",
   "rpc": [
-    "https://api-testnet.plato.exchange",
+    "https://api-testnet.plato.xyz",
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -16,7 +16,7 @@ export const data = {
   "explorers": [
     {
       "name": "Plato Testnet Explorer",
-      "url": "https://testnet.plato.exchange/explorer"
+      "url": "https://app.plato.xyz/explorer"
     }
   ]
 }
