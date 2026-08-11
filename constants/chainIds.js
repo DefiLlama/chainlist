@@ -102,7 +102,6 @@ export default {
   "8379": "bery",
   "841": "tara",
   "888": "wanchain",
-  "890": "marschain",
   "957": "lyra",
   "964": "bittensor_evm",
   "988": "stable",
