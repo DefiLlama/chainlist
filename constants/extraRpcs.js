@@ -1764,6 +1764,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://rpc-polygon.blockmachine.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   25: {
@@ -2172,6 +2177,11 @@ export const extraRpcs = {
         url: "https://arb-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc-arbitrum.blockmachine.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -3104,6 +3114,11 @@ export const extraRpcs = {
         url: "wss://op.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc-optimism.blockmachine.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
