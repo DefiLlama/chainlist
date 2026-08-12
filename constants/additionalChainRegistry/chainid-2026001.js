@@ -1,4 +1,4 @@
-{
+export const data ={
   "name": "Duckpot Testnet",
   "chain": "DUCK",
   "rpc": [
