@@ -13,5 +13,11 @@ export const data = {
   shortName: "agls",
   chainId: 20033,
   networkId: 20033,
-  explorers: [],
+  explorers: [
+    {
+      name: "Aglais Explorer",
+      url: "https://explorer.testnet.quip.network",
+      standard: "EIP3091",
+    },
+  ],
 };
