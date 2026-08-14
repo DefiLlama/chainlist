@@ -11,7 +11,7 @@ export const data = {
       "decimals": 18
     },
     "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-    "shortName": "smart technology chain",
+    "shortName": "STC Mainnet",
     "chainId": 19518,
     "networkId": 19518,
     "icon": "sep",
