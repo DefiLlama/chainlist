@@ -19,10 +19,5 @@ export const data = {
       url: "https://explorer.pex.li",
       standard: "EIP3091",
     },
-    {
-      name: "Pexli Testscan",
-      url: "https://testscan.pex.li",
-      standard: "EIP3091",
-    },
   ],
 };
