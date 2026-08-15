@@ -16,7 +16,7 @@ export const data = {
   shortName: "mars",
   chainId: 890,
   networkId: 890,
-  icon: "https://marschain.net/logo-mars.png",
+  icon: "marschain",
   explorers: [
     {
       name: "Mars Explorer",
