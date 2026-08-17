@@ -15601,6 +15601,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
       },
+      {
+        url: "wss://seleman-ws.monarcaproject.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
     ],
   },
   72020: {
