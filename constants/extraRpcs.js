@@ -15617,6 +15617,16 @@ export const extraRpcs = {
       },
     ],
   },
+  13113: {
+    rpcs: [
+      {
+        url: "https://rpc.rannta.com/",
+        tracking: "none",
+        trackingDetails:
+          "RANNTA X-Chain public RPC does not track users or correlate RPC requests with individual users. No advertising or third-party analytics are used on the public RPC endpoint. https://rannta.com/privacy",
+      },
+    ],
+  },
 };
 
 export default extraRpcs;
