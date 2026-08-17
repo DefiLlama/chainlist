@@ -1,9 +1,7 @@
 export const data = {
   name: "Marschain",
   chain: "MARS",
-  rpc: [
-    "https://marsdata.tuibi.com"
-  ],
+  rpc: ["https://rpcs.marschain.net/"],
   faucets: [],
   nativeCurrency: {
     name: "Mars",
@@ -26,4 +24,4 @@ export const data = {
       standard: "EIP3091"
     }
   ]
-}
+};
