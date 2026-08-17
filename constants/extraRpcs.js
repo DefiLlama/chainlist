@@ -9769,11 +9769,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      {
-        url: "https://rpc.nodeflare.app/sei/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
-      },
       "https://evm-rpc.sei-apis.com",
       {
         url: "https://sei.drpc.org",
