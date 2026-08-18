@@ -20,7 +20,7 @@ export default {
   "networkId": 4959,
   "explorers": [
     {
-      "name": "Matrix BlockScout",
+      "name": "blockscout",
       "url": "https://scan.matrix.io",
       "standard": "EIP3091"
     }
