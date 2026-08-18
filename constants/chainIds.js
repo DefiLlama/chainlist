@@ -176,6 +176,7 @@ export default {
   "5551": "nahmii",
   "5887": "flynet",
   "6001": "bouncebit",
+  "6423": "ynx",
   "6699": "ox",
   "6880": "mtt network",
   "6900": "nibiru",
