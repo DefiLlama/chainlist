@@ -1265,6 +1265,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://rpc-bsc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   97: {
@@ -1480,6 +1485,11 @@ export const extraRpcs = {
         url: "https://avax-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc-avalanche.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -6062,6 +6072,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://rpc-mantle.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   5003: {
@@ -7001,6 +7016,11 @@ export const extraRpcs = {
         url: "https://scroll.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpc-scroll.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -15503,6 +15523,11 @@ export const extraRpcs = {
         url: "https://rpc.nodeflare.app/robinhood/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
+      },
+      {
+        url: "https://rpc-robinhood.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
