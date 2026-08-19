@@ -17,6 +17,7 @@ export const data = {
   shortName: "seleman",
   chainId: 73571,
   networkId: 73571,
+  chainSlug: "seleman",
   explorers: [
     {
       name: "seleman",
