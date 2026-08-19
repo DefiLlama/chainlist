@@ -254,7 +254,7 @@ export default {
   "70003": "pyra",
   "71394": "godwoken",
   "71402": "godwoken",
- "73571": "seleman",
+  "73571": "seleman",
   "78887": "lung",
   "80094": "berachain",
   "81457": "blast",
