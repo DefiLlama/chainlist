@@ -267,6 +267,7 @@ export default {
   "153153": "odyssey",
   "167000": "taiko",
   "171717": "wchain",
+  "177155": "mfenx",
   "190415": "hpp",
   "200901": "bitlayer",
   "222222": "hydradx",
