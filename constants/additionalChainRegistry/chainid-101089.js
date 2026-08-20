@@ -1,0 +1,24 @@
+export const data = {
+  name: "Xitcoin Testnet",
+  chain: "XITCOIN",
+  rpc: ["https://evm-rpc-testnet.xitcoin.org"],
+  faucets: ["https://faucet-testnet.xitcoin.org/"],
+  nativeCurrency: {
+    name: "Xitcoin",
+    symbol: "XTC",
+    decimals: 18
+  },
+  infoURL: "https://xitcoin.gitbook.io/guide/",
+  shortName: "xtct",
+  chainId: 101089,
+  networkId: 101089,
+  icon: "xitcoin",
+  explorers: [
+    {
+      name: "Xitcoin Testnet Explorer",
+      url: "https://evm-explorer-testnet.xitcoin.org",
+      standard: "EIP3091"
+    }
+  ],
+  status: "active"
+}
