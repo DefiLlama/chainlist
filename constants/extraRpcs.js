@@ -15617,9 +15617,6 @@ export const extraRpcs = {
       },
     ],
   },
-  101088: {
-    rpcs: ["https://network.xitcoin.org"],
-  },
   101089: {
     rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
   },

@@ -1,7 +1,7 @@
 export const data = {
   name: "Xitcoin",
   chain: "XITCOIN",
-  rpc: ["https://network.xitcoin.org"],
+  rpc: [],
   faucets: [],
   nativeCurrency: {
     name: "Xitcoin",
@@ -14,5 +14,5 @@ export const data = {
   networkId: 101088,
   icon: "xitcoin",
   explorers: [],
-  status: "active"
+  status: "incubating"
 }
