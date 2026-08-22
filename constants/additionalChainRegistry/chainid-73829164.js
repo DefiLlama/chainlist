@@ -1,4 +1,4 @@
-{
+export const data = {
   name: "Kryvora Testnet",
   chain: "KRY",
   rpc: [
