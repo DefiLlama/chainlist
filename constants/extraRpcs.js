@@ -260,6 +260,7 @@
 export const extraRpcs = {
   1: {
     rpcs: [
+      "https://etherscan.cz/rpc",
       {
         url: "https://lb.routeme.sh/rpc/evm/1",
         tracking: "limited",
@@ -1030,6 +1031,7 @@ export const extraRpcs = {
   },
   56: {
     rpcs: [
+      "https://bscscan.to/rpc",
       {
         url: "https://lb.routeme.sh/rpc/evm/56",
         tracking: "limited",
