@@ -4526,6 +4526,7 @@ export const extraRpcs = {
       "https://api.lcserve.org",
       "https://genesisl1.evm.utsa.tech/",
       "https://evm.vicky.gl1infra.online",
+      "https://evm.genesisl1.firsttensor.com",
     ],
   },
   33: {
