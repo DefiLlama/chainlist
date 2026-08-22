@@ -4356,9 +4356,6 @@ export const extraRpcs = {
       },
     ],
   },
-  8: {
-    rpcs: ["https://rpc.octano.dev"],
-  },
   5050: {
     rpcs: ["https://rpc.liquidchain.net/", "https://rpc.xlcscan.com/"],
   },

@@ -1,7 +1,7 @@
 export default {
   "0": "kardia",
   "1": "ethereum",
-  "8": "ubiq",
+  "8": "c8ntinuum",
   "9": "quai",
   "10": "optimism",
   "14": "flare",
