@@ -1,4 +1,4 @@
-export default {
+export const data = {
   "name": "Matrix AI Network",
   "chain": "MATRIX",
   "rpc": [
