@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "HOLODAO TESTNET",
   "chain": "HOLODAO",
   "rpc": [
@@ -12,7 +12,7 @@
   },
   "features": [{ "name": "EIP155" }],
   "infoURL": "https://holodao.ai",
-  "shortName": "holo",
+  "shortName": "holo-testnet",
   "chainId": 15676,
   "networkId": 15676,
   "icon": "holo testnet",
@@ -20,6 +20,5 @@
     "name": "holoscan",
     "url": "https://holoscan-testnet.holodao.ai",
     "icon": "holoscan",
-    "standard": ""
   }]
 }
