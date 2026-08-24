@@ -16,6 +16,7 @@ export default {
   ],
   "infoURL": "https://matrix.io",
   "shortName": "MATRIX",
+  "icon": "MATRIX",
   "chainId": 4959,
   "networkId": 4959,
   "explorers": [
