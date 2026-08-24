@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Univex Network",
   "chain": "UNIVEX",
   "rpc": [
