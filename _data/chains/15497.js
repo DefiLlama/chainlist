@@ -2,7 +2,7 @@
   "name": "Bimbo Chain",
   "chain": "BMC",
   "rpc": [
-    "http://bimborpc.com"
+    "https://bimborpc.com"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -10,14 +10,14 @@
     "symbol": "BMC",
     "decimals": 18
   },
-  "infoURL": "http://bimbochain.com",
+  "infoURL": "https://bimbochain.com",
   "shortName": "bmc",
   "chainId": 15497,
   "networkId": 15497,
   "explorers": [
     {
       "name": "BimboScan",
-      "url": "http://bimboscan.com",
+      "url": "https://bimboscan.com",
       "standard": "EIP3091"
     }
   ]
