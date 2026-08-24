@@ -3,7 +3,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Chain from "../components/chain";
-import { AdBanner } from "../components/AdBanner";
 import { generateChainData } from "../utils/fetch";
 import { useFilteredChains } from '../hooks/useFilteredChains';
 
@@ -47,7 +46,6 @@ function Home({ chains }) {
                 />
               );
             })}
-            <AdBanner />
             {finalChains.slice(2, end).map((chain) => {
               return (
                 <Chain

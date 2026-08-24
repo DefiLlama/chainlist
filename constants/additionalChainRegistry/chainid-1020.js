@@ -1,6 +1,7 @@
 export const data = {
   name: "Nura Chain",
   chain: "Nura",
+  icon: "ipfs://bafkreiefrfdeu63qoclrozh5pguctlu3zcoqqeyqaqofocgsxqvljjr4u4",
   rpc: ["https://rpc.nurachain.net"],
   features: [
     {

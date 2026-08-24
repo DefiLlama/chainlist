@@ -1265,6 +1265,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://rpc-bsc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   97: {
@@ -1480,6 +1485,11 @@ export const extraRpcs = {
         url: "https://avax-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc-avalanche.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -4526,6 +4536,7 @@ export const extraRpcs = {
       "https://api.lcserve.org",
       "https://genesisl1.evm.utsa.tech/",
       "https://evm.vicky.gl1infra.online",
+      "https://evm.genesisl1.firsttensor.com",
     ],
   },
   33: {
@@ -6062,6 +6073,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://rpc-mantle.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   5003: {
@@ -7001,6 +7017,11 @@ export const extraRpcs = {
         url: "https://scroll.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpc-scroll.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -15504,6 +15525,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
       },
+      {
+        url: "https://rpc-robinhood.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   46630: {
@@ -15614,6 +15640,16 @@ export const extraRpcs = {
         url: "https://rpc.eavscan.com",
         tracking: "limited",
         trackingDetails: privacyStatement.eav7,
+      },
+    ],
+  },
+  13113: {
+    rpcs: [
+      {
+        url: "https://rpc.rannta.com/",
+        tracking: "none",
+        trackingDetails:
+          "RANNTA X-Chain public RPC does not track users or correlate RPC requests with individual users. No advertising or third-party analytics are used on the public RPC endpoint. https://rannta.com/privacy",
       },
     ],
   },
