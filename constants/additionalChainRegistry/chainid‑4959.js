@@ -16,13 +16,14 @@ export default {
   ],
   "infoURL": "https://matrix.io",
   "shortName": "MATRIX",
-  "icon": "MATRIX",
   "chainId": 4959,
   "networkId": 4959,
+  "icon": "MATRIX",
   "explorers": [
     {
       "name": "blockscout",
       "url": "https://scan.matrix.io",
+      "icon": "MATRIX",
       "standard": "EIP3091"
     }
   ]
