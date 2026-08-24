@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "HOLODAO Mainnet",
   "chain": "HOLODAO",
   "rpc": [
@@ -14,12 +14,11 @@
   "infoURL": "https://holodao.ai",
   "shortName": "holo",
   "chainId": 15675,
-  "networkId": 1,
+  "networkId": 15675,
   "icon": "holo",
   "explorers": [{
     "name": "holoscan",
     "url": "https://holoscan.holodao.ai",
     "icon": "holoscan",
-    "standard": ""
   }]
 }
