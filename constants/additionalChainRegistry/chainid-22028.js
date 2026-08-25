@@ -1,0 +1,26 @@
+{
+  "name": "KriptoAman Mainnet",
+  "chain": "KAM",
+  "rpc": [
+    "https://rpc.kriptoaman.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "KriptoAman",
+    "symbol": "KAM",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }],
+  "infoURL": "https://kriptoaman.com",
+  "shortName": "kriptoaman",
+  "chainId": 22028,
+  "networkId": 22028,
+  "icon": "kriptoaman",
+  "explorers": [
+    {
+      "name": "KriptoAman Explorer",
+      "url": "https://explorer.kriptoaman.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
