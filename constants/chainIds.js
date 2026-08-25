@@ -310,4 +310,10 @@ export default {
   "836542336838601": "curio",
   "2716446429837000": "dchain",
   "15526": "nrxn",
+  "36888": "abcore",
+  "97476": "doma-testnet",
+  "7080969": "humanity-testnet",
+  "202601": "ronin-saigon",
+  "53302": "superseed-sepolia",
+  "167013": "taiko-hoodi",
 }
