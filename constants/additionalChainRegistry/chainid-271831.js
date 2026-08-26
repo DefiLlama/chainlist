@@ -3,7 +3,7 @@ export const data = {
   "chain": "MBTX",
   "icon": "https://mbtux.uxi.rocks/static/photo_mainnet.jpg",
   "rpc": [
-    "https://p7project.mbtx.workers.dev"
+    "https://respected-translations-volumes-tones.trycloudflare.com"
   ],
   "faucets": [],
   "nativeCurrency": {
