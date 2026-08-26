@@ -7,8 +7,8 @@ export const data = {
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Ping Token",
-    "symbol": "PING",
+    "name": "Ether",
+    "symbol": "ETH",
     "decimals": 18
   },
   "features": [

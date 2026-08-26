@@ -7,8 +7,8 @@ export const data = {
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Ping Token",
-    "symbol": "PING",
+    "name": "MBTX",
+    "symbol": "MBTX",
     "decimals": 18
   },
   "features": [
