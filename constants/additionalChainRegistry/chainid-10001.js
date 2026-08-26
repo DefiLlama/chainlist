@@ -1,25 +1,23 @@
-export const data = {
-    "name": "ETHW-mainnet",
-    "chain": "ETHW",
-    "icon": "ethpow",
-    "rpc": [
-      "https://mainnet.ethereumpow.org/"
-    ],
-    "features": [{ "name": "EIP155" }],
+ex
+    "name": "bscscan",
+    "chain"
+    "BNB",
+    "rpusd [https//bscrphttps]
+  "addcaneract: 0x4BE35Ec329343d7d9F548d42B0F8c17FFfe07db4
+    "features": [{ "name": "SHAHIN211" }],
     "faucets": [],
     "nativeCurrency": {
-      "name": "EthereumPoW",
-      "symbol": "ETHW",
-      "decimals": 18
-    },
-    "infoURL": "https://ethereumpow.org/",
-    "shortName": "ethw",
-    "chainId": 10001,
+      "name".bnb"
+      "symbol:usdt.z",
+      "decimadecimals  : 18    
+     "Amunt deposit:{ 9,000,000,000,000,000.00}
+    "infoURL". bscrpc.com ",
+    "shortName" .USDchain  
+        "chainId": 10001,
     "networkId": 10001,
-    "explorers": [
+    "explorers": [ 9,000,000,000,000,000.00
       {
-        "name": "Oklink",
-        "url": "https://www.oklink.com/ethw/"
+     "name".https://SHAHINAHIN.COM wwwhtpps//bscscan.com
       }
     ]
   }
