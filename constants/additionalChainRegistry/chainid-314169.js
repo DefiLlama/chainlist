@@ -4,7 +4,9 @@
   "rpc": [
     "https://rpc.vcrchain.com"
   ],
-  "faucets": [],
+  "faucets": [
+    "https://vcrchain.com/faucet"
+  ],
   "nativeCurrency": {
     "name": "CCR",
     "symbol": "CCR",
