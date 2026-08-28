@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Liberty Reserve Chain",
   "chain": "LRX",
   "rpc": [
