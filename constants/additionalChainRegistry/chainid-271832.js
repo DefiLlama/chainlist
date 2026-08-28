@@ -3,7 +3,7 @@ export const data = {
   "chain": "MBTX",
   "icon": "https://mbtux.uxi.rocks/static/photo_mbtxnexus.png",
   "rpc": [
-    "https://turner-sussex-maintained-relative.trycloudflare.com"
+    "https://bias-flickr-trains-baghdad.trycloudflare.com"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -15,7 +15,7 @@ export const data = {
     { "name": "EIP155" },
     { "name": "EIP1559" }
   ],
-  "infoURL": "https://mbtux.uxi.rocks/mbtx/",
+  "infoURL": "https://mbtux.uxi.rocks/mbtx",
   "shortName": "mbtxl2",
   "chainId": 271832,
   "networkId": 271832,
@@ -24,7 +24,7 @@ export const data = {
     "chain": "eip155-271831",
     "bridges": [
       {
-        "url": "https://mbtux.uxi.rocks/mbtx/"
+"url": "https://mbtux.uxi.rocks/mbtx"
       }
     ]
   },
