@@ -3,7 +3,7 @@ export const data = {
   "chain": "MBTX",
   "icon": "https://mbtux.uxi.rocks/static/photo_mainnet.jpg",
   "rpc": [
-    "https://jackson-sells-receipt-african.trycloudflare.com"
+    "https://candied-undecided-straggler.ngrok-free.dev/l1"
   ],
   "faucets": [],
   "nativeCurrency": {
