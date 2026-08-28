@@ -103,6 +103,8 @@
     "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://hairylabs.io",
   pulsechainstats:
     "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
+  pulsechain:
+    "rpc.pulsechain.com does not log, store, or track user data. It retains no request or access logs, including IP addresses, request origins, request contents, wallet addresses, or transaction metadata, and does not sell or share user data. Signed transactions broadcast through the RPC may be recorded publicly on PulseChain as part of normal blockchain operation. https://rpc.pulsechain.com/privacy",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
@@ -5030,7 +5032,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.pulsechain.com",
+      {
+        url: "https://rpc.pulsechain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.pulsechain,
+      },
       "https://rpc.gigatheminter.com",
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
