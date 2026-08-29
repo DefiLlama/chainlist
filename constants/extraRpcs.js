@@ -1,4 +1,6 @@
-  const privacyStatement = {
+const privacyStatement = {
+    degenprotocol:
+    "We do not track, log, or store user IP addresses, location metadata, or wallet details. Any temporary data is used strictly for service rate limiting and load balancing. https://degenprotocol.io/privacy",
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -6750,6 +6752,7 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+         
       {
         url: "https://rpcfree.com/base-rpc",
         tracking: "limited",
@@ -6761,10 +6764,15 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.keccakio,
       },
       {
-        url: "wss://base.api.pocket.network",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
+      url: "https://rpc.degenprotocol.io/base",
+      tracking: "none",
+      trackingDetails: privacyStatement.degenprotocol,
+    },
+    {
+      url: "wss://base.api.pocket.network",
+      tracking: "none",
+      trackingDetails: privacyStatement.pokt,
+    },
     ],
   },
   11235: {
@@ -15536,6 +15544,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
       },
+            {
+      url: "https://rpc.degenprotocol.io/robinhood",
+      tracking: "none",
+      trackingDetails: privacyStatement.degenprotocol,
+    },
       {
         url: "https://rpc-robinhood.blockmachine.io",
         tracking: "none",
