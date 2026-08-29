@@ -205,6 +205,7 @@ export default {
   "10507": "numbers",
   "11235": "islm",
   "11820": "artela",
+  "13113": "rannta",
   "13371": "immutable zkevm",
   "15551": "loop",
   "16116": "defiverse",
