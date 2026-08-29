@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "VCR Chain",
   "chain": "VCR",
   "rpc": [
