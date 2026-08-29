@@ -1,0 +1,25 @@
+module.exports = {
+  name: "Shark Network",
+  chain: "SHARK",
+  rpc: [
+    "https://rpc.rpcshark.com"
+  ],
+  faucets: [],
+  nativeCurrency: {
+    name: "Shark",
+    symbol: "SHARK",
+    decimals: 18
+  },
+  infoURL: "https://swapshark.net",
+  shortName: "shark",
+  chainId: 88118,
+  networkId: 88118,
+  icon: "shark",
+  explorers: [
+    {
+      name: "SharkScan",
+      url: "https://sharkscan.app",
+      standard: "EIP3091"
+    }
+  ]
+};
