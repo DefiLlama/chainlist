@@ -1137,6 +1137,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
+        url: "http://174.138.31.158:8645",
+        tracking: "none",
+        trackingDetails: "blockchainexplorer.me BSC RPC - self-hosted multichain infrastructure",
+      },
+      {
+        url: "https://rpc.bscscan.to",
+        tracking: "none",
+        trackingDetails: "blockchainexplorer.me BSC RPC - bscscan.to gateway",
+      },
+      {
         url: "https://bsc.meowrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.meowrpc,
