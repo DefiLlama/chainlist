@@ -103,6 +103,8 @@
     "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://hairylabs.io",
   pulsechainstats:
     "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
+  pulsechain:
+    "rpc.pulsechain.com does not log, store, or track user data. It retains no request or access logs, including IP addresses, request origins, request contents, wallet addresses, or transaction metadata, and does not sell or share user data. Signed transactions broadcast through the RPC may be recorded publicly on PulseChain as part of normal blockchain operation. https://rpc.pulsechain.com/privacy",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
@@ -260,6 +262,11 @@
 export const extraRpcs = {
   1: {
     rpcs: [
+      {
+        url: "http://174.138.31.158:8550/1",
+        tracking: "none",
+        trackingDetails: "blockchainexplorer.me ETH RPC - self-hosted geth infrastructure",
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/1",
         tracking: "limited",
@@ -1265,6 +1272,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://rpc-bsc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "http://174.138.31.158:8645",
+        tracking: "none",
+        trackingDetails: "blockchainexplorer.me BSC RPC - self-hosted infrastructure",
+      },
+      {
+        url: "https://rpc.bscscan.to",
+        tracking: "none",
+        trackingDetails: "blockchainexplorer.me BSC RPC alternate - self-hosted infrastructure",
+      },
     ],
   },
   97: {
@@ -1480,6 +1502,11 @@ export const extraRpcs = {
         url: "https://avax-rpc.keccak.io",
         tracking: "none",
         trackingDetails: privacyStatement.keccakio,
+      },
+      {
+        url: "https://rpc-avalanche.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -4526,6 +4553,7 @@ export const extraRpcs = {
       "https://api.lcserve.org",
       "https://genesisl1.evm.utsa.tech/",
       "https://evm.vicky.gl1infra.online",
+      "https://evm.genesisl1.firsttensor.com",
     ],
   },
   33: {
@@ -5019,7 +5047,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.pulsechain.com",
+      {
+        url: "https://rpc.pulsechain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.pulsechain,
+      },
       "https://rpc.gigatheminter.com",
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
@@ -6062,6 +6094,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://rpc-mantle.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   5003: {
@@ -7001,6 +7038,11 @@ export const extraRpcs = {
         url: "https://scroll.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpc-scroll.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
@@ -11061,6 +11103,11 @@ export const extraRpcs = {
         url: "https://api-ronin-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://ronin.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
       },
     ],
   },
@@ -15504,6 +15551,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
       },
+      {
+        url: "https://rpc-robinhood.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   46630: {
@@ -15614,6 +15666,16 @@ export const extraRpcs = {
         url: "https://rpc.eavscan.com",
         tracking: "limited",
         trackingDetails: privacyStatement.eav7,
+      },
+    ],
+  },
+  13113: {
+    rpcs: [
+      {
+        url: "https://rpc.rannta.com/",
+        tracking: "none",
+        trackingDetails:
+          "RANNTA X-Chain public RPC does not track users or correlate RPC requests with individual users. No advertising or third-party analytics are used on the public RPC endpoint. https://rannta.com/privacy",
       },
     ],
   },
