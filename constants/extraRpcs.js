@@ -5039,11 +5039,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pulsechain,
       },
-      {
-        url: "https://rpc.levko.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.levko,
-      },
       "https://rpc.gigatheminter.com",
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
@@ -5117,6 +5112,11 @@ export const extraRpcs = {
         url: "https://mystica-rpc.mijk.pro",
         tracking: "limited",
         trackingDetails: privacyStatement.mijkpro,
+      },
+      {
+        url: "https://rpc.levko.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.levko,
       },
     ],
   },
