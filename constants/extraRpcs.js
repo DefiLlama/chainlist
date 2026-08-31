@@ -4321,6 +4321,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
     ],
   },
   246: {
