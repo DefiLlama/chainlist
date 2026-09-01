@@ -4321,6 +4321,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
     ],
   },
   246: {
@@ -5110,6 +5115,11 @@ export const extraRpcs = {
         url: "https://mystica-rpc.mijk.pro",
         tracking: "limited",
         trackingDetails: privacyStatement.mijkpro,
+      },
+      {
+        url: "https://rpc.pulseheartbeat.com",
+        tracking: "none",
+        trackingDetails: "PulseHeartBeat RPC does not track, log, or store user data.",
       },
     ],
   },
@@ -15531,7 +15541,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://lb.routeme.sh/rpc/evm/88",
+        url: "https://lb.routeme.sh/rpc/evm/4663",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
