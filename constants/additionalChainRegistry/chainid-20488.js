@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Efikcoin Mainnet",
   "chain": "EFIK",
   "rpc": [
