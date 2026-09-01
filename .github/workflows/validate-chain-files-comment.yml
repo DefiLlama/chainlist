@@ -1,0 +1,86 @@
+name: Comment on Chain File Validation Failure
+
+# Runs after "Validate Chain Files" completes, with elevated (write) permissions
+# to comment on the PR. It never checks out or executes any code from the PR.
+# It downloads the plain-text artifact the validation job produced, but only
+# for the ERROR MESSAGE - which PR to comment on is resolved independently via
+# the GitHub API from workflow_run.head_sha (a field GitHub itself sets on the
+# trusted workflow_run event, populated before the validation job - which runs
+# attacker-controlled build/validation code - ever executes). The artifact is
+# never treated as authoritative for *which* PR to comment on: a PR's own build
+# step could otherwise pre-plant a read-only pr_number file that this job's
+# "if: failure()" upload step would publish even if a later overwrite failed,
+# letting one PR spoof a validation-failure comment onto an unrelated issue.
+# This split exists so untrusted PR code only ever runs under the limited,
+# read-only token that `pull_request` (not `pull_request_target`) grants; this
+# workflow is the only place with write access, and it has nothing to exploit.
+
+on:
+  workflow_run:
+    workflows: ['Validate Chain Files']
+    types:
+      - completed
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve PR number from head SHA
+        id: pr
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.payload.workflow_run.head_sha,
+            });
+            const open = data.find((pr) => pr.state === 'open');
+            if (!open) {
+              throw new Error(`No open PR found for head SHA ${context.payload.workflow_run.head_sha}`);
+            }
+            core.setOutput('number', String(open.number));
+
+      - name: Download validation errors
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-comment-info
+          path: /tmp/pr-comment-info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Comment on PR
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require('fs');
+
+            const prNumber = parseInt('${{ steps.pr.outputs.number }}', 10);
+
+            const MAX_LEN = 2000;
+            let errorContent = 'See workflow logs for details.';
+            try {
+              if (fs.existsSync('/tmp/pr-comment-info/validation-errors.txt')) {
+                errorContent = fs.readFileSync('/tmp/pr-comment-info/validation-errors.txt', 'utf8');
+              }
+            } catch (error) {
+              console.log('Could not read validation errors file:', error.message);
+            }
+            // Neutralize embedded fences so attacker-influenced error text can't
+            // break out of the surrounding code block, and cap the length.
+            errorContent = errorContent.replace(/```/g, "'''");
+            if (errorContent.length > MAX_LEN) {
+              errorContent = errorContent.slice(0, MAX_LEN) + '\n... (truncated)';
+            }
+
+            github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + errorContent + "\n```"
+            })
