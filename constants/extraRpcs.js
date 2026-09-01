@@ -5111,6 +5111,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.mijkpro,
       },
+      {
+        url: "https://rpc.pulseheartbeat.com",
+        tracking: "none",
+        trackingDetails: "PulseHeartBeat RPC does not track, log, or store user data.",
+      },
     ],
   },
   385: {
