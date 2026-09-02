@@ -1,4 +1,6 @@
-import allExtraRpcs from "../constants/extraRpcs.js";
+import allExtraRpcs, { privacyStatement } from "../constants/extraRpcs.js";
+import { rpcProviders } from "../constants/rpcProviders.js";
+import { providerRpcChainIds } from "../constants/providerRpcs.js";
 import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch";
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
@@ -33,6 +35,10 @@ function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
+// providers exposing one public endpoint per chain id, paired with the verified
+// chain list from scripts/generate-provider-rpcs.mjs
+const verifiedProviders = rpcProviders.map((p) => ({ ...p, chains: new Set(providerRpcChainIds[p.key] ?? []) }));
+
 export function populateChain(chain, chainTvls) {
   let rpcs = (allExtraRpcs[chain.chainId]?.rpcs ?? []).map(removeEndingSlashObject);
 
@@ -42,6 +48,21 @@ export function populateChain(chain, chainTvls) {
     if (!rpc.url.includes("${INFURA_API_KEY}") && !rpcs.find((r) => r.url === rpc.url)) {
       rpcs = [...rpcs, rpc];
     }
+  }
+
+  // add each provider's public endpoint where it is verified for this chain.
+  // matched on host so entries already written by hand aren't duplicated.
+  for (const provider of verifiedProviders) {
+    if (!provider.chains.has(chain.chainId)) continue;
+    if (rpcs.some((r) => r.url.includes(provider.host))) continue;
+    rpcs = [
+      ...rpcs,
+      {
+        url: provider.rpcUrl(chain.chainId),
+        tracking: provider.tracking,
+        trackingDetails: privacyStatement[provider.key],
+      },
+    ];
   }
 
   chain.rpc = rpcs;
