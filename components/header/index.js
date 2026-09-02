@@ -6,6 +6,8 @@ import { formatAddress, getProvider } from "../../utils";
 import { walletIcons } from "../../constants/walletIcons";
 import useConnect from "../../hooks/useConnect";
 import useAccount from "../../hooks/useAccount";
+import useEip6963Providers from "../../hooks/useEip6963";
+import { resolveConnectedWalletInfo } from "../../utils/eip6963";
 
 function Header({ lang, chainName, setChainName }) {
   const t = useTranslations("Common", lang);
@@ -34,6 +36,13 @@ function Header({ lang, chainName, setChainName }) {
   const { data: accountData } = useAccount();
 
   const address = accountData?.address ?? null;
+
+  // Prefer the connected wallet's own EIP-6963 name/icon; fall back to the
+  // legacy `is*` allowlist (getProvider/walletIcons) for wallets that don't
+  // announce yet.
+  const eip6963Providers = useEip6963Providers();
+  const connectedProvider = typeof window !== "undefined" ? window.ethereum : null;
+  const discoveredWallet = resolveConnectedWalletInfo(eip6963Providers, connectedProvider);
 
   return (
     <div className="sticky top-0 z-50 rounded-[10px] dark:bg-[#181818] bg-[#f3f3f3] p-5 -m-5">
@@ -123,7 +132,12 @@ function Header({ lang, chainName, setChainName }) {
             >
               {address ? (
                 <>
-                  <img src={walletIcons[getProvider()]} width={20} height={20} alt="" />
+                  <img
+                    src={discoveredWallet?.icon ?? walletIcons[getProvider()]}
+                    width={20}
+                    height={20}
+                    alt={discoveredWallet?.name ?? getProvider()}
+                  />
                   <span>{formatAddress(address)}</span>
                 </>
               ) : (
