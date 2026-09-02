@@ -50,19 +50,26 @@ export function populateChain(chain, chainTvls) {
     }
   }
 
-  // add each provider's public endpoint where it is verified for this chain.
-  // matched on host so entries already written by hand aren't duplicated.
+  // For each provider: backfill privacy metadata onto urls other sources contributed
+  // without it, then add the public endpoint if this chain has no url for it yet.
+  // Existing values are never overwritten, so hand-written entries keep their own.
   for (const provider of verifiedProviders) {
-    if (!provider.chains.has(chain.chainId)) continue;
-    if (rpcs.some((r) => r.url.includes(provider.host))) continue;
-    rpcs = [
-      ...rpcs,
-      {
-        url: provider.rpcUrl(chain.chainId),
-        tracking: provider.tracking,
-        trackingDetails: privacyStatement[provider.key],
-      },
-    ];
+    const trackingDetails = privacyStatement[provider.key];
+    let matched = false;
+
+    rpcs = rpcs.map((rpc) => {
+      if (!rpc.url.includes(provider.host)) return rpc;
+      matched = true;
+      if (rpc.tracking !== undefined && rpc.trackingDetails !== undefined) return rpc;
+      return {
+        ...rpc,
+        tracking: rpc.tracking ?? provider.tracking,
+        trackingDetails: rpc.trackingDetails ?? trackingDetails,
+      };
+    });
+
+    if (matched || !provider.chains.has(chain.chainId)) continue;
+    rpcs = [...rpcs, { url: provider.rpcUrl(chain.chainId), tracking: provider.tracking, trackingDetails }];
   }
 
   chain.rpc = rpcs;
