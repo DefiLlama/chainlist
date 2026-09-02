@@ -257,6 +257,8 @@
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
+  solidrpc:
+    "SolidRPC records request metadata including timestamp, chain, RPC method, response status, and byte count for service operation and usage analytics, but does not log RPC request bodies or responses. Cloudflare processes IP addresses for DDoS protection and edge rate limiting. https://solidrpc.io/privacy",
 };
 
 export const extraRpcs = {
@@ -655,6 +657,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1272,6 +1279,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/56",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
+      },
     ],
   },
   97: {
@@ -1492,6 +1504,11 @@ export const extraRpcs = {
         url: "https://rpc-avalanche.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1782,6 +1799,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/137",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -2196,6 +2218,11 @@ export const extraRpcs = {
         url: "https://rpc-arbitrum.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -3133,6 +3160,11 @@ export const extraRpcs = {
         url: "https://rpc-optimism.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -6774,6 +6806,11 @@ export const extraRpcs = {
         url: "wss://base.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -15550,6 +15587,11 @@ export const extraRpcs = {
         url: "https://rpc-robinhood.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
