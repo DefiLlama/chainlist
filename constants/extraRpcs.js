@@ -103,6 +103,8 @@
     "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://hairylabs.io",
   pulsechainstats:
     "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
+  pulsechain:
+    "rpc.pulsechain.com does not log, store, or track user data. It retains no request or access logs, including IP addresses, request origins, request contents, wallet addresses, or transaction metadata, and does not sell or share user data. Signed transactions broadcast through the RPC may be recorded publicly on PulseChain as part of normal blockchain operation. https://rpc.pulsechain.com/privacy",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
@@ -4319,6 +4321,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
     ],
   },
   246: {
@@ -5030,7 +5037,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.pulsechain.com",
+      {
+        url: "https://rpc.pulsechain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.pulsechain,
+      },
       "https://rpc.gigatheminter.com",
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
@@ -5104,6 +5115,11 @@ export const extraRpcs = {
         url: "https://mystica-rpc.mijk.pro",
         tracking: "limited",
         trackingDetails: privacyStatement.mijkpro,
+      },
+      {
+        url: "https://rpc.pulseheartbeat.com",
+        tracking: "none",
+        trackingDetails: "PulseHeartBeat RPC does not track, log, or store user data.",
       },
     ],
   },
@@ -11083,6 +11099,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://ronin.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   31: {
@@ -15516,7 +15537,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://lb.routeme.sh/rpc/evm/88",
+        url: "https://lb.routeme.sh/rpc/evm/4663",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
