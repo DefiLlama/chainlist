@@ -257,6 +257,8 @@ export const privacyStatement = {
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
+  ordofi:
+    "OrdoFi's gateway keeps no request logs and no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. What is stored is the hash, sender, recipient and value of transactions submitted through the endpoint, which are public on-chain once mined, for the network's public counters. The endpoint is served through Cloudflare, which processes connection metadata under its own privacy policy. Transactions are simulated before submission and delivered directly to the sequencer. No third-party analytics.",
 };
 
 export const extraRpcs = {
@@ -15550,6 +15552,11 @@ export const extraRpcs = {
         url: "https://rpc-robinhood.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.ordofi.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ordofi,
       },
     ],
   },
