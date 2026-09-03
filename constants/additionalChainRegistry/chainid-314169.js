@@ -20,6 +20,7 @@
   "shortName": "vcr",
   "chainId": 314169,
   "networkId": 314169,
+  "icon": "vcr",
   "explorers": [
     {
       "name": "VCR Chain Explorer",
