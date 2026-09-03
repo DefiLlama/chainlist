@@ -23,8 +23,9 @@ export const data = {
   explorers: [
     {
       name: "Nowa Testnet Explorer",
-      url: "https://explorer.nowa.finance",
-      standard: "EIP3091"
+      url: "https://testnet.nowa.finance",
+      standard: "EIP3091",
+      icon: "https://nowa.finance/favicon.svg",
     }
   ]
 };
