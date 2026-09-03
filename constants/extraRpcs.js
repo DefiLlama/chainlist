@@ -3671,7 +3671,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.telos.net",
+      {
+        url: "https://rpc.telos.net",
+        tracking: "limited",
+        trackingDetails:
+          "Requests pass through Cloudflare, which processes end-user IP addresses and traffic metadata for security, routing, and analytics. The RPC origins also retain limited HTTP request metadata.",
+      },
       {
         url: "https://public.1rpc.io/telos/evm",
         tracking: "none",
