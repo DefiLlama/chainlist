@@ -1,0 +1,30 @@
+export const data = {
+  "name": "Rabbit Chain Testnet",
+  "chain": "RAB",
+  "rpc": [
+    "https://rpc-testnet.rabbitchain.org"
+  ],
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
+  "faucets": [
+    "https://rabbitchain.org/platform/faucet"
+  ],
+  "nativeCurrency": {
+    "name": "Test RAB",
+    "symbol": "tRAB",
+    "decimals": 18
+  },
+  "infoURL": "https://rabbitchain.org",
+  "shortName": "rabt",
+  "chainId": 9280,
+  "networkId": 9280,
+  "explorers": [
+    {
+      "name": "Rabbit Chain Testnet Explorer",
+      "url": "https://explorer-testnet.rabbitchain.org",
+      "standard": "EIP3091"
+    }
+  ]
+}
