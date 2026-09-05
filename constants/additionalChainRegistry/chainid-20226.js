@@ -1,0 +1,25 @@
+export const data = {
+  "name": "Molibra",
+  "chain": "MOLI",
+  "rpc": [
+    "https://molibra.org"
+  ],
+  "features": [{ "name": "EIP155" }],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Molibra",
+    "symbol": "MOLI",
+    "decimals": 18
+  },
+  "infoURL": "https://molibra.org",
+  "shortName": "moli",
+  "chainId": 20226,
+  "networkId": 20226,
+  "explorers": [
+    {
+      "name": "Moliscan",
+      "url": "https://molibra.org/molibra/moliscan",
+      "standard": "none"
+    }
+  ]
+}
