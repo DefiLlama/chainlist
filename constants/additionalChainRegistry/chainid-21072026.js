@@ -15,6 +15,7 @@ export const data = {
     "shortName": "zagros",
     "chainId": 21072026,
     "networkId": 21072026,
+    "icon": "zagros",
     "explorers": [
       {
         "name": "ZagrosRadar",
