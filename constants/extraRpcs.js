@@ -1,4 +1,4 @@
-  const privacyStatement = {
+export const privacyStatement = {
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -4322,6 +4322,11 @@ export const extraRpcs = {
         url: "wss://viction.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
     ],
   },
@@ -15534,7 +15539,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://lb.routeme.sh/rpc/evm/88",
+        url: "https://lb.routeme.sh/rpc/evm/4663",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
