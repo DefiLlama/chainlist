@@ -18,6 +18,7 @@ export const data = {
   chainId: 73571,
   networkId: 73571,
   chainSlug: "seleman",
+  icon: "seleman",
   explorers: [
     {
       name: "seleman",
