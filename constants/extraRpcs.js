@@ -1,4 +1,6 @@
 export const privacyStatement = {
+  xrpc:
+    "XRPC operates sovereign privacy infrastructure. We enforce a strict Zero-Logs Policy: access logging is permanently disabled, no client IP addresses are retained, and wallet addresses are never tracked or correlated. https://xrpc.cl/#privacy",
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -262,6 +264,11 @@ export const privacyStatement = {
 export const extraRpcs = {
   1: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/1",
         tracking: "limited",
@@ -1033,6 +1040,11 @@ export const extraRpcs = {
   56: {
     rpcs: [
       {
+        url: "https://xrpc.cl/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://lb.routeme.sh/rpc/evm/56",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
@@ -1360,6 +1372,11 @@ export const extraRpcs = {
   43114: {
     rpcs: [
       {
+        url: "https://xrpc.cl/avalanche",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://lb.routeme.sh/rpc/evm/43114",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
@@ -1596,6 +1613,11 @@ export const extraRpcs = {
   },
   137: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/polygon",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/137",
         tracking: "limited",
@@ -2020,6 +2042,11 @@ export const extraRpcs = {
   },
   42161: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/arbitrum",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/42161",
         tracking: "limited",
@@ -2957,6 +2984,11 @@ export const extraRpcs = {
   },
   10: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/optimism",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/10",
         tracking: "limited",
@@ -6596,6 +6628,11 @@ export const extraRpcs = {
   8453: {
     rpcs: [
       {
+        url: "https://xrpc.cl/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://lb.routeme.sh/rpc/evm/8453",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
@@ -7106,6 +7143,11 @@ export const extraRpcs = {
   },
   11155111: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/11155111",
         tracking: "limited",
