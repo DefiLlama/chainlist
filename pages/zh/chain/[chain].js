@@ -1,3 +1,4 @@
+import { getChainIconUrl } from "../../../utils/chainIcon";
 import * as React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -72,7 +73,7 @@ function Chain({ chain }) {
   const t = useTranslations("Common", "zh");
 
   const icon = React.useMemo(() => {
-    return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return getChainIconUrl(chain);
   }, [chain]);
 
   return (
