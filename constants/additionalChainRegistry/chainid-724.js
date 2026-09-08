@@ -1,9 +1,9 @@
-export const data = {
+export default {
   name: 'LXON Mainnet',
   chain: 'LXON',
   rpc: [
-    'https://rpc.lxon.network',
-    'http://35.206.121.139:8545'
+    'https://rpc.lxon.in',
+    'http://13.61.177.64:8546'
   ],
   faucets: [],
   nativeCurrency: {
@@ -19,7 +19,7 @@ export const data = {
   explorers: [
     {
       name: 'LXON Explorer',
-      url: 'https://explorer.lxon.network',
+      url: 'https://explorer.lxon.in',
       standard: 'EIP3091'
     }
   ],
