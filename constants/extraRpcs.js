@@ -10147,7 +10147,11 @@ export const extraRpcs = {
     ],
   },
   151: {
-    rpcs: ["https://governors.mainnet.redbelly.network"],
+    rpcs: [
+      "https://governors.mainnet.redbelly.network",
+      "https://rpc.ankr.com/redbelly_mainnet",
+      "https://api.uniblock.dev/uni/v1/json-rpc?chainId=151"
+    ],
   },
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
