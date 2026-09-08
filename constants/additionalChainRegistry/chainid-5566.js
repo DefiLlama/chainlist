@@ -2,7 +2,9 @@ export const data = {
   "name": "TAAQO Mainnet",
   "chain": "TAAQO",
   "rpc": [
-    "https://rpc.taaqo.com"
+    "https://rpc.taaqo.com",
+    "https://rpc2.taaqo.com",
+    "https://rpc3.taaqo.com"
   ],
   "faucets": [],
   "nativeCurrency": {

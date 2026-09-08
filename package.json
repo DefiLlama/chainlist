@@ -1,7 +1,7 @@
 {
   "name": "chainlist",
   "version": "1.0.0",
-  "packageManager": "pnpm@11.1.0",
+  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1",
   "scripts": {
     "dev": "next dev",
     "build": "./scripts/build.sh",
@@ -9,11 +9,11 @@
     "build2": "./scripts/build.sh",
     "start": "next start",
     "serve": "serve out",
-    "test": "node tests/check-duplicate-keys.js"
+    "test": "node tests/check-duplicate-keys.js",
+    "generate-provider-rpcs": "node scripts/generate-provider-rpcs.mjs"
   },
   "dependencies": {
     "@ariakit/react": "0.2.17",
-    "@hypelab/sdk-react": "1.1.0",
     "@tanstack/react-query": "4.44.0",
     "axios": "1.16.0",
     "fathom-client": "3.7.2",

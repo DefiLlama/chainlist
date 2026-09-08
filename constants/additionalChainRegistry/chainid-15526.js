@@ -1,4 +1,4 @@
-export default {
+export const data = {
   name: "NirmalX Smart Chain",
   chain: "NRXN",
   rpc: [

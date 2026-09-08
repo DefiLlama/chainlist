@@ -1,6 +1,7 @@
 export const data = {
   name: "BEXChain",
   chain: "BEX",
+  icon: "bexchain",
   rpc: [
     "https://rpc.bexchain.com",
   ],

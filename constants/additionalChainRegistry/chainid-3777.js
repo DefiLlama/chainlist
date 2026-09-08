@@ -1,7 +1,8 @@
 export const data = {
   name: "INRI CHAIN",
   chain: "INRI",
-  rpc: ["https://rpc.inri.life"],
+  icon: "inri",
+  rpc: ["https://rpc.inri.life", "https://rpc-chain.inri.life"],
   faucets: [],
   nativeCurrency: {
     name: "INRI",

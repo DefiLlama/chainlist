@@ -1,8 +1,8 @@
 export const data = {
-  "name": "Infinite Improbability Drive",
+  "name": "Infinite Drive",
   "chain": "INFINITE",
   "rpc": [
-    "https://evm-rpc.infinitedrive.xyz"
+    "https://evm.infinitedrive.xyz"
   ],
   "faucets": [],
   "nativeCurrency": {

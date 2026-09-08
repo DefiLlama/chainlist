@@ -2,7 +2,7 @@ export const data = {
   "name": "NetX Testnet",
   "chain": "NETX",
   "rpc": [
-    "https://test-rpc.netxscan.io"
+    "https://testnetrpc.netxscan.io"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -14,14 +14,14 @@ export const data = {
     { "name": "EIP155" },
     { "name": "EIP1559" }
   ],
-  "infoURL": "https://test.netxscan.io/",
+  "infoURL": "https://netx.world/",
   "shortName": "netx-testnet",
   "chainId": 587,
   "networkId": 587,
   "explorers": [
     {
       "name": "NetXScan Testnet",
-      "url": "https://test.netxscan.io",
+      "url": "https://testnet.netxscan.io",
       "standard": "EIP3091"
     }
   ]

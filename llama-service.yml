@@ -1,0 +1,33 @@
+apiVersion: llama/v1
+
+service: chainlist
+team: frontend
+tier: 1
+description: "Chainlist: public chain and RPC directory"
+
+defaults:
+  interval: 5m
+  timeout: 60s
+  consecutive_failures: 3
+  severity: ticket
+
+checks:
+  - name: home-up-and-renders-chains
+    type: contains
+    url: https://chainlist.org
+    interval: 5m
+    must_find: 'Ethereum Mainnet'
+    must_not_find:
+      - 'This page could not be found'
+      - 'Application error'
+
+  - name: rpc-list-sane
+    type: json_assert
+    url: https://chainlist.org/rpcs.json
+    interval: 15m
+    timeout: 120s
+    assert:
+      - path: $
+        min_length: 2000
+      - path: $[?(@.chainId==1)].name
+        equals: Ethereum Mainnet

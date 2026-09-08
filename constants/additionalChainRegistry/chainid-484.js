@@ -2,7 +2,7 @@ export const data ={
     "name": "Camp Network Mainnet",
     "chain": "CAMP",
     "rpc": [
-      "https://rpc.camp.raas.gelato.cloud"
+      "https://rpc-mainnet.campnetwork.xyz/"
     ],
     "faucets": [],
     "nativeCurrency": {
