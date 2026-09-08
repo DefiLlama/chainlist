@@ -9607,20 +9607,6 @@ export const extraRpcs = {
     ],
   },
 
-  55244: {
-    rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/55244",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
-      {
-        url: "https://rpc.superposition.so",
-        tracking: "yes",
-        trackingDetails: privacyStatement.conduit,
-      },
-    ],
-  },
   8668: {
     rpcs: [
       {
