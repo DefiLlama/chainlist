@@ -259,6 +259,8 @@ export const privacyStatement = {
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
+  g4mm4:
+    "G4MM4 does not retain RPC request logs and does not store client IP addresses. We do not correlate wallet addresses with IP addresses, and we do not sell or share user data with third parties. https://www.g4mm4.io/disclaimer",
 };
 
 export const extraRpcs = {
@@ -5055,7 +5057,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pulsechain,
       },
       "https://rpc.gigatheminter.com",
-      "https://rpc-pulsechain.g4mm4.io",
+      {
+        url: "https://rpc-pulsechain.g4mm4.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.g4mm4,
+      },
       "https://evex.cloud/pulserpc",
       "wss://evex.cloud/pulsews",
       {
@@ -7567,7 +7573,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      "https://rpc-testnet-pulsechain.g4mm4.io",
+      {
+        url: "https://rpc-testnet-pulsechain.g4mm4.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.g4mm4,
+      },
     ],
   },
   10086: {
