@@ -39,6 +39,8 @@ export const privacyStatement = {
     "Except for the data that is publicly accessible on the blockchain, RadiumBlock does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our customer privacy policy please visit https://radiumblock.com/privacy.html",
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days We do use these infos to improve our services.",
+  etcmc:
+    "ETCMC public RPC minimizes data collection. We do not log request payloads or correlate wallet addresses with IP addresses. Limited operational data may be processed for rate limiting, abuse prevention, and service reliability. https://etcmc.xyz/privacy",
   omnia:
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
@@ -3671,7 +3673,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.telos.net",
+      {
+        url: "https://rpc.telos.net",
+        tracking: "limited",
+        trackingDetails:
+          "Requests pass through Cloudflare, which processes end-user IP addresses and traffic metadata for security, routing, and analytics. The RPC origins also retain limited HTTP request metadata.",
+      },
       {
         url: "https://public.1rpc.io/telos/evm",
         tracking: "none",
@@ -4676,6 +4683,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://etc.etcdesktop.com",
+      {
+        url: "https://rpc.etcmc.xyz",
+        tracking: "none",
+        trackingDetails: privacyStatement.etcmc,
+      },
       {
         url: "https://etc.rivet.link",
         tracking: "none",
@@ -10135,7 +10147,11 @@ export const extraRpcs = {
     ],
   },
   151: {
-    rpcs: ["https://governors.mainnet.redbelly.network"],
+    rpcs: [
+      "https://governors.mainnet.redbelly.network",
+      "https://rpc.ankr.com/redbelly_mainnet",
+      "https://api.uniblock.dev/uni/v1/json-rpc?chainId=151"
+    ],
   },
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
