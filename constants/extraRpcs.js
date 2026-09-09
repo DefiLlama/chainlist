@@ -5119,6 +5119,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.mijkpro,
       },
       {
+        url: "https://rpc.pulseheartbeat.com",
+        tracking: "none",
+        trackingDetails: "PulseHeartBeat RPC does not track, log, or store user data.",
+      },
+      {
         url: "https://rpc.levko.io",
         tracking: "none",
         trackingDetails: privacyStatement.levko,
