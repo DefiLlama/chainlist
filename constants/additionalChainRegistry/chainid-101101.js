@@ -10,7 +10,7 @@ export const data ={
     "symbol": "VORD",
     "decimals": 18
   },
-  "features": [{ "name": "EIP155" }],
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "infoURL": "https://vordium.com",
   "shortName": "vord",
   "chainId": 101101,
