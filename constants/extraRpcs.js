@@ -15576,6 +15576,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ordofi,
       },
+      {
+        url: "https://rpc-robinhood.globalstake.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "wss://rpc-robinhood.globalstake.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
     ],
   },
   46630: {
