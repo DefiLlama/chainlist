@@ -39,6 +39,8 @@ export const privacyStatement = {
     "Except for the data that is publicly accessible on the blockchain, RadiumBlock does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our customer privacy policy please visit https://radiumblock.com/privacy.html",
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days We do use these infos to improve our services.",
+  etcmc:
+    "ETCMC public RPC minimizes data collection. We do not log request payloads or correlate wallet addresses with IP addresses. Limited operational data may be processed for rate limiting, abuse prevention, and service reliability. https://etcmc.xyz/privacy",
   omnia:
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
@@ -105,6 +107,8 @@ export const privacyStatement = {
     "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
   pulsechain:
     "rpc.pulsechain.com does not log, store, or track user data. It retains no request or access logs, including IP addresses, request origins, request contents, wallet addresses, or transaction metadata, and does not sell or share user data. Signed transactions broadcast through the RPC may be recorded publicly on PulseChain as part of normal blockchain operation. https://rpc.pulsechain.com/privacy",
+  levko:
+    "rpc.levko.io is a private PulseChain RPC that sells limited wallet seats. No RPC request or access logs are retained (including IP addresses, request contents, or headers). To operate seats we process only generated account numbers, the funding wallet address, on-chain payment details, and seat duration/expiry, solely for allocation, payment verification, and recovery by signature. We do not collect emails or other off-chain personal identifiers, use trackers, or sell data. Public blockchain data remains public. https://rpc.levko.io/privacy",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
@@ -257,6 +261,8 @@ export const privacyStatement = {
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
+  ordofi:
+    "OrdoFi's gateway keeps no request logs and no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. What is stored is the hash, sender, recipient and value of transactions submitted through the endpoint, which are public on-chain once mined, for the network's public counters. The endpoint is served through Cloudflare, which processes connection metadata under its own privacy policy. Transactions are simulated before submission and delivered directly to the sequencer. No third-party analytics.",
 };
 
 export const extraRpcs = {
@@ -3671,7 +3677,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.telos.net",
+      {
+        url: "https://rpc.telos.net",
+        tracking: "limited",
+        trackingDetails:
+          "Requests pass through Cloudflare, which processes end-user IP addresses and traffic metadata for security, routing, and analytics. The RPC origins also retain limited HTTP request metadata.",
+      },
       {
         url: "https://public.1rpc.io/telos/evm",
         tracking: "none",
@@ -4532,11 +4543,6 @@ export const extraRpcs = {
   },
   29: {
     rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/29",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
       "https://rpc.genesisl1.org",
       "https://evm.gl1infra.online",
       "https://api.lcserve.net",
@@ -4676,6 +4682,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://etc.etcdesktop.com",
+      {
+        url: "https://rpc.etcmc.xyz",
+        tracking: "none",
+        trackingDetails: privacyStatement.etcmc,
+      },
       {
         url: "https://etc.rivet.link",
         tracking: "none",
@@ -5120,6 +5131,11 @@ export const extraRpcs = {
         url: "https://rpc.pulseheartbeat.com",
         tracking: "none",
         trackingDetails: "PulseHeartBeat RPC does not track, log, or store user data.",
+      },
+      {
+        url: "https://rpc.levko.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.levko,
       },
     ],
   },
@@ -10135,7 +10151,11 @@ export const extraRpcs = {
     ],
   },
   151: {
-    rpcs: ["https://governors.mainnet.redbelly.network"],
+    rpcs: [
+      "https://governors.mainnet.redbelly.network",
+      "https://rpc.ankr.com/redbelly_mainnet",
+      "https://api.uniblock.dev/uni/v1/json-rpc?chainId=151"
+    ],
   },
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
@@ -15552,6 +15572,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockmachine,
       },
       {
+        url: "https://rpc.ordofi.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ordofi,
+      },
+      {
         url: "https://rpc-robinhood.globalstake.io",
         tracking: "none",
         trackingDetails: privacyStatement.GlobalStake,
@@ -15683,6 +15708,9 @@ export const extraRpcs = {
           "RANNTA X-Chain public RPC does not track users or correlate RPC requests with individual users. No advertising or third-party analytics are used on the public RPC endpoint. https://rannta.com/privacy",
       },
     ],
+  },
+  101089: {
+    rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
   },
 };
 
