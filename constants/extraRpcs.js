@@ -1,4 +1,6 @@
 export const privacyStatement = {
+  ggchain:
+    "The GGCHAIN public RPC does not store or track any user information. IP addresses are used only in-memory for rate limiting and DDoS protection and are never logged to disk, sold, or correlated with wallet addresses. No third-party analytics. https://gghyper.net/rpc-privacy.html",
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -11718,6 +11720,15 @@ export const extraRpcs = {
         url: "wss://shibarium.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2121217: {
+    rpcs: [
+      {
+        url: "https://rpc.gghyper.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.ggchain,
       },
     ],
   },
