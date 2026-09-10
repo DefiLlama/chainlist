@@ -7,8 +7,8 @@ export const data = {
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Ether",
-    "symbol": "ETH",
+    "name": "XTBM",
+    "symbol": "XTBM",
     "decimals": 18
   },
   "features": [
