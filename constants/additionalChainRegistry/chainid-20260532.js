@@ -13,6 +13,7 @@ export const data = {
   shortName: "gridmindt",
   chainId: 20260532,
   networkId: 20260532,
+  icon: "https://www.grid-mind.com/logo.png",
   explorers: [
     {
       name: "GridMind Testnet Explorer",
