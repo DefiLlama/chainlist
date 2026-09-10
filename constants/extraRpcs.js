@@ -4541,11 +4541,6 @@ export const extraRpcs = {
   },
   29: {
     rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/29",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
       "https://rpc.genesisl1.org",
       "https://evm.gl1infra.online",
       "https://api.lcserve.net",
