@@ -3,7 +3,7 @@ export const data = {
   "chain": "BDAG",
   "icon": "BDAG",
   "rpc": [
-    "​https://rpc.bdagscan.com",
+    "https://rpc.bdagscan.com",
   ],
   "faucets": [],
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
@@ -20,6 +20,11 @@ export const data = {
     {
       "name": "BlockDAG Explorer",
       "url": "https://bdagscan.com/",
+    },
+    {
+      "name": "WelshDAG Explorer",
+      "url": "https://scan.welshdag.trade",
+      "standard": "EIP3091",
     },
   ],
   "status": "active"
