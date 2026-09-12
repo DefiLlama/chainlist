@@ -146,6 +146,64 @@ function checkChainIdsDuplicates() {
   console.log(`✓ No duplicate keys found in chainIds (checked ${chainIds.size} keys)`);
 }
 
+/**
+ * Check for the same rpc url listed more than once inside one chain's rpcs array.
+ * Arrays keep every entry, so these are invisible to the duplicate-key checks above.
+ */
+function checkDuplicateRpcUrls() {
+  console.log("Checking extraRpcs for duplicate rpc urls within a chain...");
+
+  const filePath = path.join(__dirname, "../constants/extraRpcs.js");
+  const lines = fs.readFileSync(filePath, "utf-8").split("\n");
+
+  const normalize = (url) => url.trim().replace(/\/+$/, "").toLowerCase();
+  const duplicates = [];
+  let chainId = null;
+  let inRpcs = false;
+  let seen = new Set();
+  let checked = 0;
+
+  for (const line of lines) {
+    const chainMatch = line.match(/^\s{2}(\d+):\s*\{/);
+    if (chainMatch) {
+      chainId = chainMatch[1];
+      inRpcs = false;
+      seen = new Set();
+      continue;
+    }
+    if (/^\s{4}rpcs:\s*\[/.test(line)) {
+      inRpcs = true;
+      continue;
+    }
+    if (inRpcs && /^\s{4}\],/.test(line)) {
+      inRpcs = false;
+      continue;
+    }
+    if (!inRpcs || chainId === null) continue;
+
+    const urlMatch =
+      line.match(/^\s{6}"((?:https?|wss?):\/\/[^"]+)",?\s*$/) ||
+      line.match(/^\s{8}url:\s*"([^"]+)"/);
+    if (!urlMatch) continue;
+
+    const key = normalize(urlMatch[1]);
+    checked++;
+    if (seen.has(key)) {
+      duplicates.push(`${chainId}: ${urlMatch[1]}`);
+    } else {
+      seen.add(key);
+    }
+  }
+
+  if (duplicates.length > 0) {
+    console.error("ERROR: Duplicate rpc urls found in extraRpcs:");
+    duplicates.forEach((d) => console.error(`  - ${d}`));
+    throw new Error(`Duplicate rpc urls found in extraRpcs: ${duplicates.length}`);
+  }
+
+  console.log(`✓ No duplicate rpc urls found in extraRpcs (checked ${checked} urls)`);
+}
+
 // Run all tests and collect errors
 console.log("=".repeat(60));
 console.log("Running syntax and duplicate key checks...");
@@ -181,6 +239,12 @@ try {
 
 try {
   checkChainIdsDuplicates();
+} catch (error) {
+  errors.push(error.message);
+}
+
+try {
+  checkDuplicateRpcUrls();
 } catch (error) {
   errors.push(error.message);
 }
