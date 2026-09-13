@@ -26,7 +26,7 @@ export const data = {
     {
       name: "RobinScanner",
       url: "https://robinscanner.com",
-      standard: "none",
+      standard: "EIP3091",
     },
   ],
   status: "active",
