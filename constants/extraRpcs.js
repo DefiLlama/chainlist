@@ -15702,6 +15702,27 @@ export const extraRpcs = {
   101089: {
     rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
   },
+
+  108108: {
+    name: "KasturiChain",
+    rpcs: [
+      "https://rpc.yugala.org"
+    ],
+    icon: "108108",
+    infoURL: "https://yugala.org",
+    nativeCurrency: {
+      name: "Nilashyam",
+      symbol: "NILA",
+      decimals: 18
+    },
+    explorers: [
+      {
+        name: "Satya Explorer",
+        url: "https://satya.kasturisundari.xyz",
+        standard: "EIP3091"
+      }
+    ]
+  },
 };
 
 export default extraRpcs;
