@@ -6,7 +6,7 @@
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Imperium",
+    "name": "imp-mainnet",
     "symbol": "IMP",
     "decimals": 18
   },
@@ -18,6 +18,6 @@
   "explorers": [{
     "name": "Imperium Scan",
     "url": "https://imperiumscan.com",
-    "standard": "EIP3091"
+    "standard": "none"
   }]
 }
