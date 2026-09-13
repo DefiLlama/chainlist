@@ -7,7 +7,7 @@
   "faucets": [],
   "nativeCurrency": {
     "name": "Test Imperium",
-    "symbol": "tIMP",
+    "symbol": "imp-testnet"",
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
@@ -18,6 +18,6 @@
   "explorers": [{
     "name": "Imperium Scan",
     "url": "https://imperiumscan.com",
-    "standard": "EIP3091"
+    "standard": "none"
   }]
 }
