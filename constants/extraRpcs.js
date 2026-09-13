@@ -15703,12 +15703,12 @@ export const extraRpcs = {
     rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
   },
 
-  108108: {
+108108: {
     name: "KasturiChain",
     rpcs: [
       "https://rpc.yugala.org"
     ],
-    icon: "108108",
+    icon: "ipfs://bafkreibtkw6rb3foe67j7na2x3zia74sq3dt7qjde4spjjuikm4virfejm",
     infoURL: "https://yugala.org",
     nativeCurrency: {
       name: "Nilashyam",
