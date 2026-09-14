@@ -17,8 +17,8 @@ export const data = {
   explorers: [
     {
       name: "Tajirchain Explorer",
-      url: "https://explorer.tajirchain.com",
-      icon: "tajirchain",
+      url: "https://tjrscan.com/",
+      icon: "tajir",
       standard: "EIP3091",
     },
   ],
