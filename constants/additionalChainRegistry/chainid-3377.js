@@ -13,7 +13,7 @@ export const data = {
   shortName: "tjr",
   chainId: 3377,
   networkId: 3377,
-  status: "incubating",
+  status: "active",
   explorers: [
     {
       name: "Tajirchain Explorer",
