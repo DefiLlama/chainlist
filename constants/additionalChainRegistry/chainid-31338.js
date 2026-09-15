@@ -4,7 +4,7 @@ export const data = {
   rpc: ["https://rpc.bitvault.club"],
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
   faucets: [],
-  nativeCurrency: { name: "BitVault Wrapped", symbol: "BVTW", decimals: 18 },
+  nativeCurrency: { name: "BitVault", symbol: "BVT", decimals: 18 },
   infoURL: "https://bitvault.club",
   shortName: "bvm20",
   chainId: 31338,
