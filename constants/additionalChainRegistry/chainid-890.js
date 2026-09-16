@@ -5,7 +5,7 @@ export const data = {
   faucets: [],
   nativeCurrency: {
     name: "Mars",
-    symbol: "MARS",
+    symbol: "MARSCHAIN",
     decimals: 18
   },
   features: [
