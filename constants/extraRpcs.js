@@ -1,4 +1,6 @@
 export const privacyStatement = {
+  beam:
+    "Beam does not log or store IP addresses, user agents or request bodies. Rate limiting uses the client IP in memory only for the current one-second window. Only aggregate counts (per method, per hour, per referring dApp origin) and a daily-salted, non-reversible unique-client estimate are kept. Signed transactions submitted via eth_sendRawTransaction are forwarded unchanged and retained for operational records (they are public once mined). https://beamrpc.com/privacy/",
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -11686,6 +11688,20 @@ export const extraRpcs = {
         url: "wss://doma.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  5042: {
+    rpcs: [
+      {
+        url: "https://rpc.beamrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.beam,
+      },
+      {
+        url: "wss://rpc.beamrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.beam,
       },
     ],
   },
