@@ -257,6 +257,7 @@ export default {
   "78887": "lung",
   "80094": "berachain",
   "81457": "blast",
+  "88788": "ptek",
   "88888": "chiliz",
   "97477": "doma",
   "97741": "pepu",
