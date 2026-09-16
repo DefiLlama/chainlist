@@ -11689,6 +11689,20 @@ export const extraRpcs = {
       },
     ],
   },
+  5042: {
+    rpcs: [
+      {
+        url: "https://arc-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://arc-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
   5042002: {
     rpcs: [
       {
