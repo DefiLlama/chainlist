@@ -1059,7 +1059,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodeflare,
       },
       "https://bsc-dataseed.bnbchain.org/",
-      "https://bsc.campioneinfrastructure.com",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
       "https://bsc-dataseed2.defibit.io/",
@@ -1072,7 +1071,6 @@ export const extraRpcs = {
       "https://bsc-dataseed2.bnbchain.org/",
       "https://bsc-dataseed3.bnbchain.org/",
       "https://bsc-dataseed4.bnbchain.org/",
-      "https://bsc-dataseed6.dict.life/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -1104,14 +1102,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       "https://bscrpc.com",
-      "https://bsc.rpcgator.com/",
       {
         url: "https://binance.nodereal.io",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
-      "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-      "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://public.1rpc.io/bnb",
         tracking: "none",
@@ -1173,11 +1168,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.polysplit,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/bsc-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://bsc-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -1228,16 +1218,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://bsc.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/bsc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
-      {
         url: "https://bsc.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -1267,26 +1247,6 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/bsc",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "https://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
-        tracking: "yes",
-        trackingDetails: privacyStatement.agentqlTomo,
-      },
-      {
-        url: "wss://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
-        tracking: "yes",
-        trackingDetails: privacyStatement.agentqlTomo,
-      },
-      {
-        url: "https://bsc-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
-      },
-      {
-        url: "https://bsc-rpc-public.chainpulse.cc/",
-        tracking: "limited",
-        trackingDetails: privacyStatement.chainpulse,
       },
       {
         url: "wss://bsc.api.pocket.network",
