@@ -263,6 +263,8 @@ export const privacyStatement = {
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
   ordofi:
     "OrdoFi's gateway keeps no request logs and no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. What is stored is the hash, sender, recipient and value of transactions submitted through the endpoint, which are public on-chain once mined, for the network's public counters. The endpoint is served through Cloudflare, which processes connection metadata under its own privacy policy. Transactions are simulated before submission and delivered directly to the sequencer. No third-party analytics.",
+  novacula:
+    "Novacula public RPC keeps no access logs and does not store client IP addresses, request bodies or authorization headers. Rate limits are enforced per API key and per pool for unauthenticated traffic; where per-client guest limiting is enabled it uses short-lived in-memory counters keyed by a truncated IP prefix, never written to disk or exported. Aggregate per-method metrics contain no IP or wallet data, and wallet addresses are never correlated with IP addresses. Served directly from our own infrastructure with no CDN or third-party analytics on the request path. https://novacula.io/privacy#3-6-public-rpc-request-data",
 };
 
 export const extraRpcs = {
@@ -671,6 +673,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://eth.rpc.novacula.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.novacula,
       },
     ],
   },
