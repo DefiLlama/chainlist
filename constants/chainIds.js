@@ -286,6 +286,7 @@ export default {
   "888888": "vision",
   "900000": "posichain",
   "1440000": "xrpl_evm",
+  "2121217": "ggchain",
   "5064014": "ethereal",
   "7000700": "jmdt",
   "7225878": "saakuru",
