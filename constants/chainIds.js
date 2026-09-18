@@ -310,4 +310,6 @@ export default {
   "836542336838601": "curio",
   "2716446429837000": "dchain",
   "15526": "nrxn",
+  "1247": "miraclechain",
+  "886699": "miraclechain-testnet",
 }
