@@ -15722,6 +15722,24 @@ export const extraRpcs = {
   101089: {
     rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
   },
+  9819: {
+    rpcs: [
+      {
+        url: "https://rpc.imperiumscan.com",
+        tracking: "none",
+        trackingDetails: "Imperium Mainnet RPC. No user data collection beyond standard operational logs. https://imperiumscan.com/privacy",
+      },
+    ],
+  },
+  9818: {
+    rpcs: [
+      {
+        url: "https://rpc-testnet.imperiumscan.com",
+        tracking: "none",
+        trackingDetails: "Imperium Testnet RPC. No user data collection beyond standard operational logs. https://imperiumscan.com/privacy",
+      },
+    ],
+  },
 };
 
 export default extraRpcs;
