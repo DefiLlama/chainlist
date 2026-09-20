@@ -712,18 +712,10 @@ export const extraRpcs = {
     ],
   },
   2517: {
-    rpcs: [
-      "https://svp-dataseed1-testnet.svpchain.org",
-      "https://svp-dataseed2-testnet.svpchain.org",
-      "https://svp-dataseed3-testnet.svpchain.org",
-    ],
+    rpcs: ["https://svp-dataseeds-testnet.svpchain.org"],
   },
   2518: {
-    rpcs: [
-      "https://svp-dataseed1.svpchain.org",
-      "https://svp-dataseed2.svpchain.org",
-      "https://svp-dataseed3.svpchain.org",
-    ],
+    rpcs: ["https://svp-dataseeds.svpchain.org"],
   },
   80001: {
     rpcs: [
