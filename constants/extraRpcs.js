@@ -1,4 +1,6 @@
 export const privacyStatement = {
+  beam:
+    "Beam does not log or store IP addresses, user agents or request bodies. Rate limiting uses the client IP in memory only for the current one-second window. Only aggregate counts (per method, per hour, per referring dApp origin) and a daily-salted, non-reversible unique-client estimate are kept. Signed transactions submitted via eth_sendRawTransaction are forwarded unchanged and retained for operational records (they are public once mined). https://beamrpc.com/privacy/",
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -262,7 +264,7 @@ export const privacyStatement = {
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
   ordofi:
-    "OrdoFi's gateway keeps no request logs and no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. What is stored is the hash, sender, recipient and value of transactions submitted through the endpoint, which are public on-chain once mined, for the network's public counters. The endpoint is served through Cloudflare, which processes connection metadata under its own privacy policy. Transactions are simulated before submission and delivered directly to the sequencer. No third-party analytics.",
+    "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
 };
 
 export const extraRpcs = {
@@ -1059,7 +1061,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodeflare,
       },
       "https://bsc-dataseed.bnbchain.org/",
-      "https://bsc.campioneinfrastructure.com",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
       "https://bsc-dataseed2.defibit.io/",
@@ -1072,7 +1073,6 @@ export const extraRpcs = {
       "https://bsc-dataseed2.bnbchain.org/",
       "https://bsc-dataseed3.bnbchain.org/",
       "https://bsc-dataseed4.bnbchain.org/",
-      "https://bsc-dataseed6.dict.life/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -1104,14 +1104,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       "https://bscrpc.com",
-      "https://bsc.rpcgator.com/",
       {
         url: "https://binance.nodereal.io",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
-      "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-      "https://nodes.vefinetwork.org/smartchain",
       {
         url: "https://public.1rpc.io/bnb",
         tracking: "none",
@@ -1173,11 +1170,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.polysplit,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/bsc-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://bsc-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -1228,16 +1220,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://bsc.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/bsc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
-      {
         url: "https://bsc.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -1267,26 +1249,6 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/bsc",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "https://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
-        tracking: "yes",
-        trackingDetails: privacyStatement.agentqlTomo,
-      },
-      {
-        url: "wss://gw-aql.tomo.services/v1/bnbchain/aql_live_2dba7f55b5cf0f356538a727da2079fe",
-        tracking: "yes",
-        trackingDetails: privacyStatement.agentqlTomo,
-      },
-      {
-        url: "https://bsc-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
-      },
-      {
-        url: "https://bsc-rpc-public.chainpulse.cc/",
-        tracking: "limited",
-        trackingDetails: privacyStatement.chainpulse,
       },
       {
         url: "wss://bsc.api.pocket.network",
@@ -11721,6 +11683,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
+      {
+        url: "https://rpc.beamrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.beam,
+      },
+      {
+        url: "wss://rpc.beamrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.beam,
+      },
     ],
   },
   5042002: {
@@ -15637,7 +15609,12 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.ordofi.network",
-        tracking: "limited",
+        tracking: "none",
+        trackingDetails: privacyStatement.ordofi,
+      },
+      {
+        url: "wss://rpc.ordofi.network",
+        tracking: "none",
         trackingDetails: privacyStatement.ordofi,
       },
     ],
