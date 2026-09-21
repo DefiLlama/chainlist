@@ -119,7 +119,7 @@ export default {
   "1110": "grx",
   "1116": "core",
   "1124": "ecm",
-  "1130": "defichain_evm",
+  "1130": "defichain evm",
   "1135": "lisk",
   "1231": "ultron",
   "1234": "step",
