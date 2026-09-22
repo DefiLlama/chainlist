@@ -1,7 +1,7 @@
 export const data = {
   name: "Elysium Testnet",
   chain: "Elysium Testnet",
-  icon: "https://elysium.kinetiq.xyz/assets/brand/elysium/elysium-logomark-colorized.png",
+  icon: "https://elysium.kinetiq.xyz/assets/brand/elysium/elysium-logomark-colorized.svg",
   rpc: ["https://testnet-rpc.elysium.kinetiq.xyz"],
   faucets: [],
   nativeCurrency: {
