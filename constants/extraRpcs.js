@@ -7310,23 +7310,7 @@ export const extraRpcs = {
   },
   245022934: {
     rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/245022934",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
-      "https://neon-proxy-mainnet.solana.p2p.org",
-      "https://neon-mainnet.everstake.one",
-      {
-        url: "https://neon-evm.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://neon-evm.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
+      "https://operator-proxy.neonevm.org",
     ],
   },
   311752642: {
