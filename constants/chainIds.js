@@ -202,6 +202,7 @@ export default {
   "7332": "horizen eon",
   "7560": "cyber",
   "7700": "canto",
+  "7847": "hyvechain",
   "7887": "kinto",
   "8008": "polynomial",
   "8217": "klaytn",
