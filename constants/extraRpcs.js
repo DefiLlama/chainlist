@@ -2085,7 +2085,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-      {
         url: "https://rpc.driftguard.live/nova",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
@@ -2268,11 +2267,6 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.swiftnodes.io/rpc/harmony",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/harmony",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
@@ -2526,11 +2520,6 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.swiftnodes.io/rpc/aurora",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/aurora",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
@@ -3447,11 +3436,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/telos",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
     ],
   },
   41: {
@@ -3897,11 +3881,6 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.swiftnodes.io/rpc/fuse",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/fuse",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
@@ -5270,7 +5249,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-      {
       {
         url: "https://rpc.driftguard.live/zksync",
         tracking: "none",
@@ -7494,11 +7472,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/polygon-zkevm",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
     ],
   },
   59144: {
@@ -8349,11 +8322,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/mode",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
     ],
   },
   217: {
@@ -8898,11 +8866,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/immutable-zkevm",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
     ],
   },
   4202: {
@@ -9055,11 +9018,6 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.swiftnodes.io/rpc/zora",
-        tracking: "limited",
-        trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "wss://rpc.swiftnodes.io/ws/zora",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
@@ -9787,7 +9745,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
-      {
       {
         url: "https://ink-rpc.publicnode.com",
         tracking: "none",
@@ -11317,7 +11274,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.beam,
       },
-      {
       {
         url: "https://rpc-arc.blockmachine.io",
         tracking: "none",
