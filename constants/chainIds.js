@@ -160,6 +160,7 @@ export default {
   "2649": "ailayer",
   "2741": "abstract",
   "2818": "morph",
+  "2828": "candychain",
   "3030": "bchyper",
   "3073": "move",
   "3109": "svm",
