@@ -265,6 +265,8 @@ export const privacyStatement = {
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
   ordofi:
     "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
+  backrunshield:
+    "Backrun Shield keeps web access logs (IP, time, path) for 7 days to count visitors; its limit of 600 requests per minute counts each IP in memory. For each transaction sent with eth_sendRawTransaction it stores the signed transaction, its hash, the sending address, a timestamp and the requesting IP, to count what the endpoint handles for its public numbers; it does not trade behind these transactions. Transactions go only to block builders (48Club, BlockRazor) and are broadcast publicly if no builder includes them within 2 blocks. No keys are held, nothing is placed in front of a user's transaction, and order flow is not sold. https://backrunshield.com/",
 };
 
 export const extraRpcs = {
@@ -1259,6 +1261,11 @@ export const extraRpcs = {
         url: "https://rpc-bsc.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.backrunshield.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.backrunshield,
       },
     ],
   },
