@@ -4429,11 +4429,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       {
-        url: "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b",
-        tracking: "limited",
-        trackingDetails: privacyStatement.infura,
-      },
-      {
         url: "https://palm-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
