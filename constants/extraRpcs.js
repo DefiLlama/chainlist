@@ -3210,11 +3210,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/merlin/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://merlin.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -3798,16 +3793,6 @@ export const extraRpcs = {
         url: "https://moonbeam.public.curie.radiumblock.co/ws",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
-      },
-      {
-        url: "https://moonbeam.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://moonbeam.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
       },
       {
         url: "https://rpc.poolz.finance/moonbeam",
@@ -4580,7 +4565,6 @@ export const extraRpcs = {
       "https://rpc.xdc.org",
       "https://rpc.xdc.network",
       "https://earpc.xinfin.network/",
-      "https://erpc.xinfin.network/",
       "wss://ews.xinfin.network/ws",
       {
         url: "https://rpc.ankr.com/xdc",
@@ -4605,7 +4589,6 @@ export const extraRpcs = {
       "https://apothem.xdcrpc.com",
       "https://rpc.ankr.com/xdc_testnet",
       "https://earpc.apothem.network/",
-      "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
       {
         url: "https://xdc-testnet.drpc.org",
@@ -5669,7 +5652,6 @@ export const extraRpcs = {
       "https://rpc.dogechain.dog",
       "https://rpc-us.dogechain.dog",
       "https://rpc-sg.dogechain.dog",
-      "https://rpc.dogechain.dog",
       "https://rpc01-sg.dogechain.dog",
       "https://rpc02-sg.dogechain.dog",
       "https://rpc03-sg.dogechain.dog",
@@ -6228,7 +6210,6 @@ export const extraRpcs = {
       "https://rpc-evm.testnet.evmos.dragonstake.io",
       "https://evmos-testnet-rpc.stake-town.com",
       "https://evmos-testnet-jsonrpc.stake-town.com",
-      "https://api.evmos-test.theamsolutions.info",
       "https://jsonrpc-t.evmos.nodestake.top",
       "https://evmos-testnet-jsonrpc.autostake.com",
       "https://evmos-testnet-jsonrpc.alkadeta.com",
@@ -6739,11 +6720,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.dwellir,
       },
       {
-        url: "https://base.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "wss://base.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -7016,11 +6992,6 @@ export const extraRpcs = {
         url: "https://scroll.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://scroll.api.pocket.network",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://api-scroll-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
@@ -7368,7 +7339,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://palm-testnet.infura.io/v3/${INFURA_API_KEY}",
-      "https://palm-testnet.public.blastapi.io",
       {
         url: "https://palm-testnet.public.blastapi.io",
         tracking: "limited",
@@ -7661,7 +7631,6 @@ export const extraRpcs = {
   },
   50001: {
     rpcs: [
-      "https://rpc.oracle.liveplex.io",
       {
         url: "https://rpc.oracle.liveplex.io",
         tracking: "yes",
@@ -7922,11 +7891,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://rpc.ankr.com/scroll_sepolia_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
         url: "https://scroll-sepolia.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
@@ -7998,7 +7962,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.jfinchain.com",
       {
         url: "https://rpc.jfinchain.com",
         tracking: "limited",
@@ -8974,7 +8937,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc-v2.powerloom.network",
       {
         url: "https://rpc-v2.powerloom.network",
         tracking: "yes",
@@ -9151,8 +9113,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://rpc.immutable.com",
-      "https://immutable-zkevm.drpc.org",
-      "wss://immutable-zkevm.drpc.org",
       {
         url: "https://immutable-zkevm.drpc.org",
         tracking: "none",
@@ -9360,7 +9320,6 @@ export const extraRpcs = {
   },
   20230825: {
     rpcs: [
-      "https://testnet.vcity.app",
       {
         url: "https://testnet.vcity.app",
         tracking: "none",
@@ -9496,7 +9455,6 @@ export const extraRpcs = {
   16600: {
     rpcs: [
       "https://evmrpc-testnet.0g.ai",
-      "https://0g-json-rpc-public.originstake.com",
       "https://og-testnet-jsonrpc.blockhub.id",
       {
         url: "https://0g-json-rpc-public.originstake.com",
@@ -10448,11 +10406,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://rpc.ankr.com/monad_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
         url: "https://monad-testnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -10463,11 +10416,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       "https://rpc-testnet.monadinfra.com",
-      {
-        url: "https://monad-testnet.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
       {
         url: "https://monad-testnet-rpc.huginn.tech",
         tracking: "none",
@@ -10800,11 +10748,6 @@ export const extraRpcs = {
         url: "https://lens-mainnet.g.alchemy.com/public",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
-      },
-      {
-        url: "https://lens.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
       },
       {
         url: "https://lens.drpc.org",
