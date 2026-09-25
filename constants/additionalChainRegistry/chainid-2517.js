@@ -3,11 +3,7 @@ export const data ={
   "title": "SVP Testnet",
   "chain": "SVPTEST",
   "status": "active",
-  "rpc": [
-    "https://svp-dataseed1-testnet.svpchain.org",
-    "https://svp-dataseed2-testnet.svpchain.org",
-    "https://svp-dataseed3-testnet.svpchain.org"
-  ],
+  "rpc": ["https://svp-dataseeds-testnet.svpchain.org"],
   "nativeCurrency": {
     "name": "SVP Coin",
     "symbol": "SVP",
