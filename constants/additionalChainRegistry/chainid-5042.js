@@ -1,7 +1,12 @@
 export const data = {
   "name": "Arc",
   "chain": "arc",
-  "rpc": ["https://rpc.mainnet.arc.io"],
+  "rpc": [
+    "https://rpc.mainnet.arc.io",
+    "https://rpc.blockdaemon.mainnet.arc.io",
+    "https://rpc.drpc.mainnet.arc.io",
+    "https://rpc.quicknode.mainnet.arc.io"
+  ],
   "faucets": [],
   "nativeCurrency": {
     "name": "USDC",
