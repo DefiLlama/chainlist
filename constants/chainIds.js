@@ -277,6 +277,7 @@ export default {
   "71394": "godwoken",
   "71402": "godwoken",
   "72957": "rayls",
+  "73571": "seleman",
   "78887": "lung",
   "80094": "berachain",
   "81224": "codex",
