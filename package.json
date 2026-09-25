@@ -9,7 +9,7 @@
     "build2": "./scripts/build.sh",
     "start": "next start",
     "serve": "serve out",
-    "test": "node tests/check-duplicate-keys.js",
+    "test": "node tests/check-duplicate-keys.js && node --experimental-vm-modules --test tests/useAddToNetwork.test.mjs",
     "generate-provider-rpcs": "node scripts/generate-provider-rpcs.mjs"
   },
   "dependencies": {

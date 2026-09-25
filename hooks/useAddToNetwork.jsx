@@ -34,7 +34,7 @@ export async function addToNetwork({ address, chain, rpc }) {
 
       const result = await window.ethereum.request({
         method: "wallet_addEthereumChain",
-        params: [params, address],
+        params: [params],
       });
 
       // the 'wallet_addEthereumChain' method returns null if the request was successful
