@@ -7196,26 +7196,6 @@ export const extraRpcs = {
   192837465: {
     rpcs: ["https://mainnet.gather.network"],
   },
-  245022926: {
-    rpcs: [
-      {
-        url: "https://lb.routeme.sh/rpc/evm/245022926",
-        tracking: "limited",
-        trackingDetails: privacyStatement.routemesh,
-      },
-      "https://devnet.neonevm.org",
-      {
-        url: "https://neon-evm-devnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://neon-evm-devnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
   245022934: {
     rpcs: [
       "https://operator-proxy.neonevm.org",
