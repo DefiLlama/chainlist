@@ -15638,6 +15638,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.GlobalStake,
       },
+      {
+        url: "https://robinhood-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   46630: {
