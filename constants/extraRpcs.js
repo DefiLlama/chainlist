@@ -267,6 +267,8 @@ export const privacyStatement = {
     "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
   hostdefi:
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
+  novacula:
+    "Novacula public RPC keeps no access logs and does not store client IP addresses, request bodies or authorization headers. Rate limits are enforced per API key and per pool for unauthenticated traffic; where per-client guest limiting is enabled it uses short-lived in-memory counters keyed by a truncated IP prefix, never written to disk or exported. Aggregate per-method metrics contain no IP or wallet data, and wallet addresses are never correlated with IP addresses. Served directly from our own infrastructure with no CDN or third-party analytics on the request path. https://novacula.io/privacy#3-6-public-rpc-request-data",
 
 };
 
@@ -545,6 +547,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://eth.rpc.novacula.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.novacula,
       },
     ],
   },
