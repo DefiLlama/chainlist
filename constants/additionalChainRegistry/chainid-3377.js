@@ -13,12 +13,12 @@ export const data = {
   shortName: "tjr",
   chainId: 3377,
   networkId: 3377,
-  status: "incubating",
+  status: "active",
   explorers: [
     {
       name: "Tajirchain Explorer",
-      url: "https://explorer.tajirchain.com",
-      icon: "tajirchain",
+      url: "https://tjrscan.com/",
+      icon: "tajir",
       standard: "EIP3091",
     },
   ],

@@ -1,4 +1,4 @@
-export default {
+export const data = {
   name: 'LXON Mainnet',
   chain: 'LXON',
   rpc: [
