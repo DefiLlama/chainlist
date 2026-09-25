@@ -890,11 +890,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://fantom.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://fantom-testnet.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -4430,7 +4425,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://api.metadium.com/dev",
     ],
   },
   14: {
@@ -8888,9 +8882,6 @@ export const extraRpcs = {
       },
     ],
   },
-  2014: {
-    rpcs: ["https://rpc.nowscan.io"],
-  },
   16180: {
     rpcs: ["https://subnets.avax.network/plyr/mainnet/rpc"],
   },
@@ -9466,11 +9457,6 @@ export const extraRpcs = {
       "https://story.evm.t.stavr.tech",
       "https://story-testnet-jsonrpc.blockhub.id",
       "https://story-testnet-jsonrpc.daaps-j4ran.cloud",
-      {
-        url: "https://story-testnet-evm.itrocket.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.itrocket,
-      },
       "https://story-rpc-evm.validatorvn.com",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
       "https://rpc-evm-story.rawaki.xyz",
@@ -9495,7 +9481,6 @@ export const extraRpcs = {
 
   16600: {
     rpcs: [
-      "https://evmrpc-testnet.0g.ai",
       "https://0g-json-rpc-public.originstake.com",
       "https://og-testnet-jsonrpc.blockhub.id",
       {
@@ -9545,9 +9530,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
-  },
-  5577: {
-    rpcs: ["https://rpc.taaqo.com"],
   },
   1750: {
     rpcs: [
@@ -10781,7 +10763,7 @@ export const extraRpcs = {
     ],
   },
   8691942025: {
-    rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
+    rpcs: ["https://rpc.onfa.io", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
   232: {
     rpcs: [
@@ -10874,7 +10856,6 @@ export const extraRpcs = {
   224433: {
     rpcs: [
       "https://cancun-rpc.conet.network",
-      "https://rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -10884,7 +10865,6 @@ export const extraRpcs = {
   },
   224400: {
     rpcs: [
-      "https://mainnet-rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -11476,105 +11456,6 @@ export const extraRpcs = {
         url: "https://plasma-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12123: {
-    rpcs: [
-      {
-        url: "https://hoodi.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12124: {
-    rpcs: [
-      {
-        url: "https://eth-beacon-chain-hoodi.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12125: {
-    rpcs: [
-      {
-        url: "https://sonic-testnet-v2.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12126: {
-    rpcs: [
-      {
-        url: "https://hyperliquid.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12127: {
-    rpcs: [
-      {
-        url: "https://monad-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12128: {
-    rpcs: [
-      {
-        url: "https://hemi.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12129: {
-    rpcs: [
-      {
-        url: "https://hemi-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12130: {
-    rpcs: [
-      {
-        url: "https://gnosis-beacon-chain.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
-    ],
-    websiteDead: false,
-    rpcWorking: true,
-  },
-  12131: {
-    rpcs: [
-      {
-        url: "https://gnosis-chiado.drpc.org",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
       },
     ],
     websiteDead: false,
@@ -15527,11 +15408,6 @@ export const extraRpcs = {
         url: "https://testnet-1.seismictest.net/rpc",
         tracking: "none",
         trackingDetails: "No user tracking or data collection",
-      },
-      {
-        url: "https://hyperevm-mainnet.gateway.tatum.io",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
