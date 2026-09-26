@@ -262,7 +262,7 @@ export const privacyStatement = {
   keccakio:
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
-    "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
+    "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://explorer.primevertexlabs.com.mx/privacy",
   ordofi:
     "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
   hostdefi:
@@ -15628,10 +15628,22 @@ export const extraRpcs = {
   73571: {
     rpcs: [
       {
-        url: "https://seleman.monarcaproject.com/rpc",
+        url: "https://explorer.primevertexlabs.com.mx/rpc",
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
       },
+      {
+        url: "https://seleman-edge.mineriafjs.workers.dev/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
+      {
+        url: "wss://explorer-ws.primevertexlabs.com.mx",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
+    ],
+  },
       {
         url: "https://seleman-edge.mineriafjs.workers.dev/rpc",
         tracking: "none",
