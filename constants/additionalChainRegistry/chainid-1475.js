@@ -7,7 +7,8 @@ export const data = {
   ],
   "faucets": [],
   "features": [
-    { "name": "EIP155" }
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
   ],
   "nativeCurrency": {
     "name": "CRYMADX REAL",
