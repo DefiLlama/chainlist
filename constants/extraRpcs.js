@@ -589,6 +589,12 @@ export const extraRpcs = {
         trackingDetails:
           "Cloudflare and WelshDAG infrastructure may log IP addresses, RPC methods, timestamps, and request metadata for rate limiting, abuse prevention, security, and service reliability. Privacy policy: https://welshdag.trade/rpc-privacy/",
       },
+      {
+        url: "https://rpc.bdagexplorer.com/",
+        tracking: "limited",
+        trackingDetails:
+          "Normal, successful RPC requests are not logged. Only abuse/anomaly events (rate-limit bans, oversized requests, malformed JSON, blocked methods, upstream errors) are logged, recording the client IP and a reason, with no automatic expiry on that log. This endpoint is proxied through Cloudflare, whose own edge network may separately log standard request metadata per their own policies, independent of the origin server.",
+      },
     ],
   },
   2517: {
