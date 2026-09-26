@@ -265,6 +265,8 @@ export const privacyStatement = {
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
   ordofi:
     "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
+  hostdefi:
+    "HostDeFi logs standard request metadata (client IP, JSON-RPC method, timestamps) for per-IP rate limiting and abuse prevention on its public endpoints. Request logs are not sold or used for advertising profiles. https://hostdefi.com/rpc/",
 };
 
 export const extraRpcs = {
@@ -673,6 +675,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/ethereum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
       },
     ],
   },
@@ -1260,6 +1267,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/bsc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
     ],
   },
   97: {
@@ -1480,6 +1492,11 @@ export const extraRpcs = {
         url: "https://rpc-avalanche.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/avalanche",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
       },
     ],
   },
@@ -1770,6 +1787,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
       },
     ],
   },
@@ -2184,6 +2206,11 @@ export const extraRpcs = {
         url: "https://rpc-arbitrum.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/arbitrum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
       },
     ],
   },
@@ -3121,6 +3148,11 @@ export const extraRpcs = {
         url: "https://rpc-optimism.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/optimism",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
       },
     ],
   },
@@ -6772,6 +6804,11 @@ export const extraRpcs = {
         url: "wss://base.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
       },
     ],
   },
