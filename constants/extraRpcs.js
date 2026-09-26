@@ -6510,11 +6510,6 @@ export const extraRpcs = {
       "https://developer-access-mainnet.base.org",
       "https://li-fi-base.intustechno.workers.dev/rpc",
       {
-        url: "https://base-mainnet.diamondswap.org/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.diamondswap,
-      },
-      {
         url: "https://base.public.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
@@ -6571,11 +6566,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/base-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://base-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -6591,16 +6581,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://base.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://rpc.numa.network/base",
         tracking: "yes",
         trackingDetails: privacyStatement.numa,
@@ -6609,16 +6589,6 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/base/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://base.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/base",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://base.api.pocket.network",
@@ -6646,11 +6616,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpcbase.hairylabs.io/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.hairylabs,
-      },
-      {
         url: "https://base.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
@@ -6665,11 +6630,6 @@ export const extraRpcs = {
         url: "https://rpcfree.com/base-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
-      },
-      {
-        url: "https://base-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
       },
       {
         url: "wss://base.api.pocket.network",
