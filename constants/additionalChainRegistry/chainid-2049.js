@@ -1,6 +1,7 @@
 export const data = {
     "name": "PikoChain",
     "chain": "PIKO",
+    "icon": "https://pikochain.serveousercontent.com/piko-icon.webp",
     "rpc": [
       "https://pikochain.serveousercontent.com"
     ],
