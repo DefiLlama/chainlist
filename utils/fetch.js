@@ -1,4 +1,6 @@
-import allExtraRpcs from "../constants/extraRpcs.js";
+import allExtraRpcs, { privacyStatement } from "../constants/extraRpcs.js";
+import { rpcProviders } from "../constants/rpcProviders.js";
+import { providerRpcChainIds } from "../constants/providerRpcs.js";
 import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch";
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
@@ -33,6 +35,10 @@ function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
+// providers exposing one public endpoint per chain id, paired with the verified
+// chain list from scripts/generate-provider-rpcs.mjs
+const verifiedProviders = rpcProviders.map((p) => ({ ...p, chains: new Set(providerRpcChainIds[p.key] ?? []) }));
+
 export function populateChain(chain, chainTvls) {
   let rpcs = (allExtraRpcs[chain.chainId]?.rpcs ?? []).map(removeEndingSlashObject);
 
@@ -42,6 +48,28 @@ export function populateChain(chain, chainTvls) {
     if (!rpc.url.includes("${INFURA_API_KEY}") && !rpcs.find((r) => r.url === rpc.url)) {
       rpcs = [...rpcs, rpc];
     }
+  }
+
+  // For each provider: backfill privacy metadata onto urls other sources contributed
+  // without it, then add the public endpoint if this chain has no url for it yet.
+  // Existing values are never overwritten, so hand-written entries keep their own.
+  for (const provider of verifiedProviders) {
+    const trackingDetails = privacyStatement[provider.key];
+    let matched = false;
+
+    rpcs = rpcs.map((rpc) => {
+      if (!rpc.url.includes(provider.host)) return rpc;
+      matched = true;
+      if (rpc.tracking !== undefined && rpc.trackingDetails !== undefined) return rpc;
+      return {
+        ...rpc,
+        tracking: rpc.tracking ?? provider.tracking,
+        trackingDetails: rpc.trackingDetails ?? trackingDetails,
+      };
+    });
+
+    if (matched || !provider.chains.has(chain.chainId)) continue;
+    rpcs = [...rpcs, { url: provider.rpcUrl(chain.chainId), tracking: provider.tracking, trackingDetails }];
   }
 
   chain.rpc = rpcs;

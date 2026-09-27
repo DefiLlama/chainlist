@@ -23,6 +23,11 @@ export const data = {
       url: "https://robinhoodchain.blockscout.com",
       standard: "EIP3091",
     },
+    {
+      name: "RobinScanner",
+      url: "https://robinscanner.com",
+      standard: "EIP3091",
+    },
   ],
   status: "active",
 };
