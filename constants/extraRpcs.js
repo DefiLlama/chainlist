@@ -9665,6 +9665,10 @@ export const extraRpcs = {
       "https://aia-dataseed4.aiachain.org",
       "https://aiachain.bycrpc.com",
       "https://aiachain.znodes.net",
+      "wss://dataseed1.aiachain.org",
+      "wss://dataseed2.aiachain.org",
+      "wss://dataseed3.aiachain.org",
+      "wss://dataseed4.aiachain.org",
     ],
   },
   2192: {
