@@ -148,50 +148,39 @@ function checkChainIdsDuplicates() {
 
 /**
  * Check for the same rpc url listed more than once inside one chain's rpcs array.
- * Arrays keep every entry, so these are invisible to the duplicate-key checks above.
+ * Arrays keep every entry, so these are invisible to the duplicate-key checks above,
+ * and unlike keys they survive an import intact, so this reads the exported object
+ * instead of parsing lines (rpcs written on one line would otherwise be skipped).
  */
 function checkDuplicateRpcUrls() {
   console.log("Checking extraRpcs for duplicate rpc urls within a chain...");
 
   const filePath = path.join(__dirname, "../constants/extraRpcs.js");
-  const lines = fs.readFileSync(filePath, "utf-8").split("\n");
+  const script = [
+    `import { extraRpcs } from ${JSON.stringify(filePath)};`,
+    "const out = {};",
+    "for (const [chainId, { rpcs = [] }] of Object.entries(extraRpcs)) out[chainId] = rpcs.map((rpc) => (typeof rpc === 'string' ? rpc : rpc.url));",
+    "console.log(JSON.stringify(out));",
+  ].join("\n");
+  const rpcsByChain = JSON.parse(
+    execSync("node --input-type=module", { input: script, encoding: "utf-8", stdio: "pipe", maxBuffer: 64 * 1024 * 1024 })
+  );
 
   const normalize = (url) => url.trim().replace(/\/+$/, "").toLowerCase();
   const duplicates = [];
-  let chainId = null;
-  let inRpcs = false;
-  let seen = new Set();
   let checked = 0;
 
-  for (const line of lines) {
-    const chainMatch = line.match(/^\s{2}(\d+):\s*\{/);
-    if (chainMatch) {
-      chainId = chainMatch[1];
-      inRpcs = false;
-      seen = new Set();
-      continue;
-    }
-    if (/^\s{4}rpcs:\s*\[/.test(line)) {
-      inRpcs = true;
-      continue;
-    }
-    if (inRpcs && /^\s{4}\],/.test(line)) {
-      inRpcs = false;
-      continue;
-    }
-    if (!inRpcs || chainId === null) continue;
-
-    const urlMatch =
-      line.match(/^\s{6}"((?:https?|wss?):\/\/[^"]+)",?\s*$/) ||
-      line.match(/^\s{8}url:\s*"([^"]+)"/);
-    if (!urlMatch) continue;
-
-    const key = normalize(urlMatch[1]);
-    checked++;
-    if (seen.has(key)) {
-      duplicates.push(`${chainId}: ${urlMatch[1]}`);
-    } else {
-      seen.add(key);
+  for (const [chainId, urls] of Object.entries(rpcsByChain)) {
+    const seen = new Set();
+    for (const url of urls) {
+      if (typeof url !== "string") continue;
+      checked++;
+      const key = normalize(url);
+      if (seen.has(key)) {
+        duplicates.push(`${chainId}: ${url}`);
+      } else {
+        seen.add(key);
+      }
     }
   }
 
