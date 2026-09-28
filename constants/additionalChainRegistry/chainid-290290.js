@@ -18,6 +18,8 @@ export const data = {
   "shortName": "pmt",
   "chainId": 290290,
   "networkId": 290290,
+  "chainSlug": "pmt",
+  "icon": "pmt",
   "explorers": [
     {
       "name": "PMTScan",
