@@ -15633,24 +15633,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.seleman,
       },
       {
-        url: "https://seleman-edge.mineriafjs.workers.dev/rpc",
+        url: "https://seleman.monarcaproject.com/rpc",
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
       },
       {
         url: "wss://explorer-ws.primevertexlabs.com.mx",
-        tracking: "none",
-        trackingDetails: privacyStatement.seleman,
-      },
-    ],
-  },
-      {
-        url: "https://seleman-edge.mineriafjs.workers.dev/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.seleman,
-      },
-      {
-        url: "wss://seleman-ws.monarcaproject.com",
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
       },

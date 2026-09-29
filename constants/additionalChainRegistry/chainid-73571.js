@@ -3,11 +3,10 @@ export const data = {
   chain: "SMN",
   rpc: [
     "https://explorer.primevertexlabs.com.mx/rpc",
-    "https://seleman-edge.mineriafjs.workers.dev/rpc",
+    "https://seleman.monarcaproject.com/rpc",
     "wss://explorer-ws.primevertexlabs.com.mx"
   ],
   faucets: [
-    "https://explorer.primevertexlabs.com.mx/trust-wallet",
     "https://explorer.primevertexlabs.com.mx/faucet"
   ],
   nativeCurrency: {
@@ -16,7 +15,7 @@ export const data = {
     decimals: 18,
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
-  infoURL: "https://explorer.primevertexlabs.com.mx/seleman-chain",
+  infoURL: "https://explorer.primevertexlabs.com.mx/explorer",
   shortName: "seleman",
   chainId: 73571,
   networkId: 73571,
