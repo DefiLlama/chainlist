@@ -16,7 +16,7 @@ export const data = {
     "decimals": 18
   },
   "infoURL": "https://cmxofficial.com/",
-  "shortName": "CMX-U",
+  "shortName": "cmxr-l2",
   "chainId": 7373,
   "networkId": 7373,
   "parent": {
