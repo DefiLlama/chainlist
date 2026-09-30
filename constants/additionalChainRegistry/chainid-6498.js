@@ -21,5 +21,6 @@ export const data = {
     "url": "https://mizuhiki.blockscout.com",
     "icon": "blockscout",
     "standard": "EIP3091"
-  }]
+  }],
+  "chainSlug": "mizuhiki"
 }

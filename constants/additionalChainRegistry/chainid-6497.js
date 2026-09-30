@@ -19,5 +19,6 @@ export const data = {
     "name": "blockscout",
     "url": "https://awaji.blockscout.com",
     "standard": "EIP3091"
-  }]
+  }],
+  "chainSlug": "mizuhiki"
 }
