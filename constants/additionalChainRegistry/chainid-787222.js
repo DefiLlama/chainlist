@@ -6,7 +6,7 @@ export const data = {
     "https://rpc.nvnm.canary.mantrachain.dev",
     "wss://ws.nvnm.canary.mantrachain.dev"
   ],
-  faucets: ["https://faucet.nvnm.testnet.nvnmchain.io"],
+  faucets: ["https://faucet.nvnm.canary.mantrachain.dev"],
   nativeCurrency: {
     name: "NVNM USD",
     symbol: "nUSD", 
