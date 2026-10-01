@@ -1,4 +1,6 @@
 export const privacyStatement = {
+  xrpc:
+    "XRPC.CL operates zero-log public RPC endpoints on sovereign infrastructure in Chile. We do not store IP addresses, request bodies, wallet addresses or transaction metadata. Anonymous rate limiting uses the client IP in memory only for the current window. Metrics are aggregate counters only (network, method, outcome). No KYC required. https://xrpc.cl/tos.html",
   beam:
     "Beam does not log or store IP addresses, user agents or request bodies. Rate limiting uses the client IP in memory only for the current one-second window. Only aggregate counts (per method, per hour, per referring dApp origin) and a daily-salted, non-reversible unique-client estimate are kept. Signed transactions submitted via eth_sendRawTransaction are forwarded unchanged and retained for operational records (they are public once mined). https://beamrpc.com/privacy/",
   chainpulse:
@@ -273,6 +275,11 @@ export const privacyStatement = {
 export const extraRpcs = {
   1: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/ethereum",
         tracking: "limited",
@@ -929,6 +936,11 @@ export const extraRpcs = {
   56: {
     rpcs: [
       {
+        url: "https://xrpc.cl/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://rpc.hostdefi.com/api/rpc/bsc",
         tracking: "limited",
         trackingDetails: privacyStatement.hostdefi,
@@ -1231,6 +1243,11 @@ export const extraRpcs = {
   43114: {
     rpcs: [
       {
+        url: "https://xrpc.cl/avalanche",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://rpc.hostdefi.com/api/rpc/avalanche",
         tracking: "limited",
         trackingDetails: privacyStatement.hostdefi,
@@ -1472,6 +1489,11 @@ export const extraRpcs = {
   },
   137: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/polygon",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/polygon",
         tracking: "limited",
@@ -1901,6 +1923,11 @@ export const extraRpcs = {
   },
   42161: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/arbitrum",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/arbitrum",
         tracking: "limited",
@@ -2843,6 +2870,11 @@ export const extraRpcs = {
   },
   10: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/optimism",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/optimism",
         tracking: "limited",
@@ -6492,6 +6524,11 @@ export const extraRpcs = {
   8453: {
     rpcs: [
       {
+        url: "https://xrpc.cl/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://rpc.hostdefi.com/api/rpc/base",
         tracking: "limited",
         trackingDetails: privacyStatement.hostdefi,
@@ -7012,6 +7049,11 @@ export const extraRpcs = {
   },
   11155111: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/11155111",
         tracking: "limited",
