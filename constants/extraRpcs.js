@@ -1664,6 +1664,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://polygon-bor-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   25: {
