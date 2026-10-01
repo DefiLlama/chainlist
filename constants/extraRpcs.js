@@ -546,6 +546,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://ethereum-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   2: {
@@ -924,6 +928,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://polygon-amoy-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   56: {
@@ -1142,6 +1150,10 @@ export const extraRpcs = {
         url: "https://rpc-bsc.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://bsc-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -1368,6 +1380,10 @@ export const extraRpcs = {
         url: "https://rpc-avalanche.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://avalanche-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -1664,6 +1680,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://polygon-bor-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   25: {
@@ -1738,6 +1758,10 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/cronos",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://cronos-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -2083,6 +2107,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://arbitrum-one-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   421613: {
@@ -2230,6 +2258,10 @@ export const extraRpcs = {
         url: "https://arbitrum-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://arbitrum-sepolia-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -2478,6 +2510,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://blast-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   5611: {
@@ -2572,6 +2608,10 @@ export const extraRpcs = {
         url: "wss://opbnb.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://opbnb-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -2766,6 +2806,10 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/celo",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://celo-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -3025,6 +3069,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://optimism-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   11155420: {
@@ -3074,6 +3122,10 @@ export const extraRpcs = {
         url: "https://op-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://optimism-sepolia-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -3338,6 +3390,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://gnosis-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   10200: {
@@ -3372,6 +3428,10 @@ export const extraRpcs = {
         url: "https://gnosis-chiado.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://gnosis-chiado-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -6453,6 +6513,10 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://base-sepolia-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   84531: {
@@ -6680,6 +6744,10 @@ export const extraRpcs = {
         url: "https://rpc-base.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://base-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -6945,6 +7013,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://scroll-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   88888: {
@@ -7142,6 +7214,10 @@ export const extraRpcs = {
         url: "wss://eth-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://ethereum-sepolia-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -7718,6 +7794,10 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/linea",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://linea-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -9828,6 +9908,10 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://unichain-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   1301: {
@@ -10238,6 +10322,10 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://sonic-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
+      },
     ],
   },
   57054: {
@@ -10465,6 +10553,10 @@ export const extraRpcs = {
         url: "wss://bera.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://berachain-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -11600,6 +11692,10 @@ export const extraRpcs = {
         url: "wss://rpc.beamrpc.com",
         tracking: "none",
         trackingDetails: privacyStatement.beam,
+      },
+      {
+        url: "https://arc-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
@@ -15539,6 +15635,10 @@ export const extraRpcs = {
         url: "https://robinhood-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://robinhood-mainnet-rpc.blockreq.com/v1/rpc/public",
+        tracking: "unspecified",
       },
     ],
   },
