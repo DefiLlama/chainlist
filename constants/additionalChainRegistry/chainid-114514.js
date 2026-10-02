@@ -2,7 +2,7 @@ export const data = {
   "name": "MetaFlux Devnet",
   "chain": "MetaFluxEVM",
   "rpc": [
-    "https://devnet-gateway.mtf.exchange/evm"
+    "https://api.devnet.mtf.exchange/evm"
   ],
   "faucets": [
     "https://devnet.mtf.exchange/faucet"

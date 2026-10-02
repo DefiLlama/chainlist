@@ -15,7 +15,7 @@ export default function Chain({ chain, autoExpand = false, buttonOnly, lang }) {
   const router = useRouter();
 
   const icon = React.useMemo(() => {
-    return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}` : "/unknown-logo.png";
   }, [chain]);
 
   const chainId = useChain((state) => state.id);
