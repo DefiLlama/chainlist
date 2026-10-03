@@ -466,11 +466,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.graffiti,
       },
       {
-        url: "wss://ethereum.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
         url: "https://eth.blockrazor.xyz",
         tracking: "none",
         trackingDetails: privacyStatement.BlockRazor,
@@ -1073,11 +1068,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "wss://bsc.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
         url: "https://bsc.blockrazor.xyz",
         tracking: "none",
         trackingDetails: privacyStatement.BlockRazor,
@@ -1172,11 +1162,6 @@ export const extraRpcs = {
         url: "https://api.zan.top/bsc-testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/bsc-testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
       },
       {
         url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -3588,11 +3573,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      {
-        url: "https://rpc.poolz.finance/telos",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
     ],
   },
   41: {
@@ -3966,7 +3946,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://songbird-api.flare.network/ext/C/rpc",
-      "https://rpc.ftso.au/songbird",
       "https://songbird.solidifi.app/ext/C/rpc",
       {
         url: "https://flare-songbird.gateway.tatum.io",
@@ -3992,11 +3971,6 @@ export const extraRpcs = {
         url: "https://fuse-mainnet.chainstacklabs.com",
         tracking: "yes",
         trackingDetails: privacyStatement.chainstack,
-      },
-      {
-        url: "https://fuse.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
       },
       {
         url: "https://fuse.liquify.com",
@@ -4181,9 +4155,7 @@ export const extraRpcs = {
       "https://api.elastos.io/esc",
       "https://api.trinity-tech.io/esc",
       "https://api2.elastos.io/esc",
-      "https://api2.elastos.net/esc",
       "https://api2.elastos.io/eth",
-      "https://api2.elastos.net/eth",
       "https://rpc.glidefinance.io/",
     ],
   },
@@ -4195,11 +4167,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://rpc.meter.io",
-      {
-        url: "https://rpc-meter.jellypool.xyz/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.jellypool,
-      },
     ],
   },
   5551: {
@@ -4260,7 +4227,6 @@ export const extraRpcs = {
     ],
   },
   8: {
-    rpcs: ["https://rpc.octano.dev"],
   },
   5050: {
     rpcs: ["https://rpc.liquidchain.net/", "https://rpc.xlcscan.com/"],
@@ -4566,11 +4532,6 @@ export const extraRpcs = {
         url: "https://rpc.etcmc.xyz",
         tracking: "none",
         trackingDetails: privacyStatement.etcmc,
-      },
-      {
-        url: "https://etc.rivet.link",
-        tracking: "none",
-        trackingDetails: privacyStatement.rivet,
       },
       {
         url: "https://0xrpc.io/etc",
