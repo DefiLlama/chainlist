@@ -1,4 +1,4 @@
-export default {
+export const data = {
   name: 'LXON Mainnet',
   chain: 'LXON',
   rpc: [
@@ -11,7 +11,7 @@ export default {
     symbol: 'XON',
     decimals: 18
   },
-  infoURL: 'https://lxon.io',
+  infoURL: 'https://www.lxon.in',
   shortName: 'lxon',
   chainId: 724,
   networkId: 724,
