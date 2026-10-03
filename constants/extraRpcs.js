@@ -1923,11 +1923,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://rpc.ankr.com/arbitrum/c4cc6a8c87ec30258076de433ab2cf3d834228aae3fc4d76087873e4fea11635",
-        tracking: "yes",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
         url: "https://arbitrum-one-public.nodies.app",
         tracking: "limited",
         trackingDetails: privacyStatement.nodies,
@@ -1941,16 +1936,6 @@ export const extraRpcs = {
         url: "https://arbitrum-one.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://arb-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
-        url: "https://rpc.arb1.arbitrum.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
       },
       {
         url: "https://arbitrum-one-rpc.publicnode.com",
@@ -1978,11 +1963,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/arbitrum-one",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://api.stateless.solutions/arbitrum-one/v1/demo",
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
@@ -1998,24 +1978,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.callstatic,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://arb1.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://rpc.owlracle.info/arb/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://arbitrum.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://arbitrum.api.onfinality.io/public",
@@ -2026,11 +1991,6 @@ export const extraRpcs = {
         url: "https://arb-one-mainnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://rpc.poolz.finance/arbitrum",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://arb-one.api.pocket.network",
@@ -2072,11 +2032,6 @@ export const extraRpcs = {
         url: "https://arbitrum-one-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://arb-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
       },
       {
         url: "https://rpc-arbitrum.blockmachine.io/",
