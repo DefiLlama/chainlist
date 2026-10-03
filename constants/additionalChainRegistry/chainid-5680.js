@@ -4,7 +4,7 @@ export const data = {
   "rpc": [
     "https://scdoscan.io/rpc/0"
   ],
-  "faucets": ["https://scdoscan.io/start.html#faucet"],
+  "faucets": [],
   "nativeCurrency": {
     "name": "SCDO",
     "symbol": "SCDO",
