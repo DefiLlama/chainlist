@@ -1483,6 +1483,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       {
+      url: "https://public.blazingnode.com",
+      tracking: "none",
+      },
+      {
         url: "https://rpc.nodeflare.app/polygon/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
