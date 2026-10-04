@@ -16,6 +16,7 @@ export const data = {
   "shortName": "nch",
   "chainId": 20250,
   "networkId": 20250,
+  "chainSlug": "cheese",
   "explorers": [{
     "name": "CHEESE Blockchain Explorer",
     "url": "https://cheeseblockchain.com/explorer",

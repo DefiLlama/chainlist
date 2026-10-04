@@ -231,6 +231,7 @@ export default {
   "17777": "eos evm",
   "18686": "moonchain",
   "18888": "titan",
+  "20250": "cheese",
   "20402": "muuchain",
   "22776": "map protocol",
   "23294": "sapphire",
