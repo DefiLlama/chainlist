@@ -2101,7 +2101,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockmachine,
       },
       {
-        url: "https://api.blockvectra.com/v1/arb_one/public",
+        url: "https://api.blockvectra.com/v1/arb_mainnet/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockvectra,
       },
