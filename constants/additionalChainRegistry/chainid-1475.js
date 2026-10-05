@@ -1,5 +1,5 @@
 export const data = {
-  "name": "CRYMAD Chain Mainnet Network",
+  "name": "CRYMAD Chain",
   "chain": "CMX",
   "icon": "crymadchain",
   "rpc": [
@@ -11,17 +11,17 @@ export const data = {
     { "name": "EIP1559" }
   ],
   "nativeCurrency": {
-    "name": "CRYMADX REAL",
+    "name": "CryMadX",
     "symbol": "CMX-R",
     "decimals": 18
   },
   "infoURL": "https://cmxofficial.com/",
-  "shortName": "CMX-R",
+  "shortName": "cmxr",
   "chainId": 1475,
   "networkId": 1475,
   "explorers": [
     {
-      "name": "crymadchain explorers",
+      "name": "CRYMAD Chain Explorer",
       "url": "https://explorer.cmxofficial.com/"
     }
   ],
