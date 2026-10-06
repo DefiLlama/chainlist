@@ -4169,16 +4169,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://astar-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://astar-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
         url: "https://astar.public.curie.radiumblock.co/http",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
@@ -4903,7 +4893,6 @@ export const extraRpcs = {
       "https://manta-pacific-gascap.calderachain.xyz/http",
       "https://www.tencentcloud-rpc.com/v2/manta/manta-rpc",
       "https://r1.pacific.manta.systems/http",
-      "https://manta.nirvanalabs.xyz/mantapublic",
       "https://manta-pacific.calderachain.xyz/http",
       "wss://manta-pacific.calderachain.xyz/ws",
       {
@@ -4956,7 +4945,6 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   222: {
-    rpcs: ["https://blockchain-api-mainnet.permission.io/rpc"],
   },
   258: {
     rpcs: [],
@@ -5114,7 +5102,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://eth-rpc-karura.aca-staging.network",
       "https://rpc.evm.karura.network",
       {
         url: "https://karura.api.onfinality.io/public",
@@ -5457,11 +5444,6 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/xlayer",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://xlayer.rpc.blxrbdn.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
       },
       {
         url: "https://xlayer-mainnet.rpc.sentio.xyz",
@@ -7545,11 +7527,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ChainUpCloud,
       },
-      {
-        url: "https://infura.sftproject.io/filecoin/rpc/v1",
-        tracking: "yes",
-        trackingDetails: privacyStatement.SFTProtocol,
-      },
       "https://api.chain.love/rpc/v1",
       {
         url: "https://filecoin.drpc.org",
@@ -8144,8 +8121,6 @@ export const extraRpcs = {
       },
       "wss://rpc.rollux.com/wss",
       "https://rpc.rollux.com",
-      "https://rollux.rpc.syscoin.org",
-      "wss://rollux.rpc.syscoin.org/wss",
       {
         url: "https://rpc.ankr.com/rollux",
         tracking: "none",
@@ -8805,7 +8780,6 @@ export const extraRpcs = {
       },
       "https://rpc.bsquared.network",
       "https://b2-mainnet.alt.technology",
-      "https://b2-mainnet-public.s.chainbase.com",
       "https://mainnet.b2-rpc.com",
       {
         url: "https://b2-mainnet.rpc.sentio.xyz",
@@ -9033,11 +9007,6 @@ export const extraRpcs = {
         url: "https://fraxtal.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://node.histori.xyz/fraxtal-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://fraxtal.api.pocket.network",
@@ -9839,11 +9808,6 @@ export const extraRpcs = {
         url: "https://unichain-mainnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://rpc.poolz.finance/unichain",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://api-unichain-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
