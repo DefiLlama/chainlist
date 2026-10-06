@@ -591,6 +591,26 @@ export const extraRpcs = {
       },
     ],
   },
+  1475: {
+    rpcs: [
+      {
+        url: "https://rpc.cmxofficial.com",
+        tracking: "limited",
+        trackingDetails:
+          "Official CRYMAD Chain public RPC operated by CryMadX. Cloudflare sits in front of the endpoint and may process IP addresses and request metadata for rate limiting, abuse prevention and service reliability: https://www.cloudflare.com/privacypolicy/",
+      },
+    ],
+  },
+  7373: {
+    rpcs: [
+      {
+        url: "https://rpcl2.cmxofficial.com",
+        tracking: "limited",
+        trackingDetails:
+          "Official CRYMAD Chain L2 public RPC operated by CryMadX. Cloudflare sits in front of the endpoint and may process IP addresses and request metadata for rate limiting, abuse prevention and service reliability: https://www.cloudflare.com/privacypolicy/",
+      },
+    ],
+  },
   2517: {
     rpcs: [
       "https://svp-dataseed1-testnet.svpchain.org",
