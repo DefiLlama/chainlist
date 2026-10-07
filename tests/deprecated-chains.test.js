@@ -74,6 +74,14 @@ test("homepage and RPC registry generation also reject deprecated overrides", as
 });
 
 for (const file of pageFiles) {
+  test(`${file}: override name lookup retains precedence over a different base ID`, async () => {
+    const override = { chainId: 5, name: "Active Network", shortName: "active", status: "active" };
+    const page = loadPage(file, chains, [override]);
+    assert.equal((await page.getStaticProps({ params: { chain: "active network" } })).props.chain, override);
+    override.status = "deprecated";
+    assert.equal((await page.getStaticProps({ params: { chain: "active network" } })).notFound, true);
+  });
+
   test(`${file}: deprecated numeric, name and mapped-slug lookups fail closed`, async () => {
     const page = loadPage(file);
     for (const query of ["1", "retired network", "RETIRED%20NETWORK", "retired-slug", "missing"]) {
@@ -144,6 +152,30 @@ test("single-chain API rejects deprecated numeric/short-name lookups and depreca
     await handler({ method: "GET", query: { chain: query } }, response);
     assert.equal(response.code, 200, query);
   }
+});
+
+test("single-chain API retains override short-name precedence over a different base ID", async () => {
+  const source = readFileSync(path.join(__dirname, "../pages/api/chain/[chain].js"), "utf8")
+    .replace(/^import .*;\n/gm, "")
+    .replace("export default async function", "async function");
+  const override = { chainId: 5, name: "Override Network", shortName: "active", status: "active" };
+  const handler = vm.runInNewContext(`${source}\nhandler;`, {
+    getActiveChains,
+    overwrittenChains: [override],
+    fetcher: async (url) => url === "https://chainid.network/chains.json" ? chains : [],
+    populateChain: (chain) => chain,
+  });
+  const response = {
+    setHeader() {},
+    status(code) { this.code = code; return this; },
+    json(body) { this.body = body; return this; },
+  };
+  await handler({ method: "GET", query: { chain: "active" } }, response);
+  assert.equal(response.code, 200);
+  assert.equal(response.body, override);
+  override.status = "deprecated";
+  await handler({ method: "GET", query: { chain: "active" } }, response);
+  assert.equal(response.code, 404);
 });
 
 test("sitemap excludes deprecated IDs, names and every mapped alias", async () => {

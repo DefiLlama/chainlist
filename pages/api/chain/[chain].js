@@ -13,7 +13,9 @@ export default async function handler(req, res) {
       fetcher("https://api.llama.fi/chains")
     ]);
 
-    let chain = getActiveChains(chains, overwrittenChains).find(
+    let chain = overwrittenChains.find(
+      (chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName,
+    ) ?? getActiveChains(chains, overwrittenChains).find(
       (chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName,
     );
 

@@ -18,6 +18,12 @@ export async function getStaticProps({ params }) {
   ]);
 
   const chain =
+    overwrittenChains.find(
+      (c) =>
+        c.chainId?.toString() === params.chain ||
+        c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
+        c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
+    ) ??
     getActiveChains(chains, overwrittenChains).find(
       (c) =>
         c.chainId?.toString() === params.chain ||
