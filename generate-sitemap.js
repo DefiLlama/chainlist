@@ -1,6 +1,12 @@
 const fs = require("fs");
 
 async function generateSiteMap(chains, chainIds) {
+  chains = chains.filter((chain) => chain.status !== "deprecated");
+  const activeIds = new Set(chains.map((chain) => chain.chainId.toString()));
+  const chainSlugs = Object.entries(chainIds)
+    .filter(([chainId]) => activeIds.has(chainId))
+    .map(([, name]) => name);
+
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <!--We manually set the two URLs we know already-->
@@ -25,7 +31,7 @@ async function generateSiteMap(chains, chainIds) {
      `;
        })
        .join("")}
-     ${Object.values(chainIds)
+     ${chainSlugs
        .map((name) => {
          return `
        <url>
@@ -34,7 +40,7 @@ async function generateSiteMap(chains, chainIds) {
      `;
        })
        .join("")}
-       ${Object.values(chainIds)
+       ${chainSlugs
          .map((name) => {
            return `
        <url>
@@ -43,7 +49,7 @@ async function generateSiteMap(chains, chainIds) {
      `;
          })
          .join("")}
-     ${Object.values(chainIds)
+     ${chainSlugs
        .map((name) => {
          return `
        <url>
@@ -52,7 +58,7 @@ async function generateSiteMap(chains, chainIds) {
      `;
        })
        .join("")}
-     ${Object.values(chainIds)
+     ${chainSlugs
        .map((name) => {
          return `
        <url>
@@ -81,4 +87,8 @@ async function writeSiteMap() {
   fs.writeFileSync("out/sitemap.xml", sitemap);
 }
 
-writeSiteMap();
+if (require.main === module) {
+  writeSiteMap();
+}
+
+module.exports = { generateSiteMap };

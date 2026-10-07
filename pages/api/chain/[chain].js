@@ -1,4 +1,5 @@
 import { fetcher, populateChain } from "../../../utils/fetch";
+import { getActiveChains } from "../../../utils/chains.js";
 import { overwrittenChains } from "../../../constants/additionalChainRegistry/list";
 
 export default async function handler(req, res) {
@@ -12,12 +13,11 @@ export default async function handler(req, res) {
       fetcher("https://api.llama.fi/chains")
     ]);
 
-    let chain =
-      overwrittenChains.find(
-        (chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName,
-      ) ?? chains.find((chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName);
+    let chain = getActiveChains(chains, overwrittenChains).find(
+      (chain) => chain.chainId.toString() === chainIdOrName || chain.shortName === chainIdOrName,
+    );
 
-    if (!chain) {
+    if (!chain || chain.status === "deprecated") {
       return res.status(404).json({ message: "chain not found" });
     }
 

@@ -1,0 +1,33 @@
+name: Check Deprecated Chains
+
+on:
+  pull_request:
+    paths:
+      - 'pages/**'
+      - 'utils/chains.js'
+      - 'utils/fetch.js'
+      - 'generate-sitemap.js'
+      - 'tests/deprecated-chains.test.js'
+      - 'package.json'
+      - '.github/workflows/check-deprecated-chains.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'pages/**'
+      - 'utils/chains.js'
+      - 'utils/fetch.js'
+      - 'generate-sitemap.js'
+      - 'tests/deprecated-chains.test.js'
+      - 'package.json'
+      - '.github/workflows/check-deprecated-chains.yml'
+
+jobs:
+  check-deprecated-chains:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '18'
+      - run: node --test tests/deprecated-chains.test.js
