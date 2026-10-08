@@ -1,4 +1,6 @@
 export const privacyStatement = {
+  xrpc:
+    "XRPC.CL operates zero-log public RPC endpoints on sovereign infrastructure in Chile. We do not store IP addresses, request bodies, wallet addresses or transaction metadata. Anonymous rate limiting uses the client IP in memory only for the current window. Metrics are aggregate counters only (network, method, outcome). No KYC required. https://xrpc.cl/tos.html",
   beam:
     "Beam does not log or store IP addresses, user agents or request bodies. Rate limiting uses the client IP in memory only for the current one-second window. Only aggregate counts (per method, per hour, per referring dApp origin) and a daily-salted, non-reversible unique-client estimate are kept. Signed transactions submitted via eth_sendRawTransaction are forwarded unchanged and retained for operational records (they are public once mined). https://beamrpc.com/privacy/",
   chainpulse:
@@ -262,20 +264,25 @@ export const privacyStatement = {
   keccakio:
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
-    "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://seleman.monarcaproject.com/privacy",
+    "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://explorer.primevertexlabs.com.mx/privacy",
   ordofi:
     "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
   backrunshield:
     "Backrun Shield keeps web access logs for 7 days (IP, time, method, host, path, response and request headers such as the user agent), then deletes them; its limit of 600 requests per minute counts each IP in memory. For each transaction sent with eth_sendRawTransaction it records the hash, sender, recipient, nonce, value and size, the time, the requesting IP, the block height, each builder's acknowledgement and whether it was included privately or broadcast; the signed transaction itself is not stored. These records are not deleted on a schedule. It does not trade in front of or behind these transactions and pays no rebate. Transactions go only to block builders (48Club, BlockRazor) and are broadcast publicly if no builder includes them within 2 blocks. No keys are held and order flow is not sold. https://backrunshield.com/privacy",
   hostdefi:
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
-
-
+  Saxemberg:
+    "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
 };
 
 export const extraRpcs = {
   1: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/ethereum",
         tracking: "limited",
@@ -591,6 +598,32 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails:
           "Cloudflare and WelshDAG infrastructure may log IP addresses, RPC methods, timestamps, and request metadata for rate limiting, abuse prevention, security, and service reliability. Privacy policy: https://welshdag.trade/rpc-privacy/",
+      },
+      {
+        url: "https://rpc.bdagexplorer.com/",
+        tracking: "limited",
+        trackingDetails:
+          "Normal, successful RPC requests are not logged. Only abuse/anomaly events (rate-limit bans, oversized requests, malformed JSON, blocked methods, upstream errors) are logged, recording the client IP and a reason, with no automatic expiry on that log. This endpoint is proxied through Cloudflare, whose own edge network may separately log standard request metadata per their own policies, independent of the origin server.",
+      },
+    ],
+  },
+  1475: {
+    rpcs: [
+      {
+        url: "https://rpc.cmxofficial.com",
+        tracking: "limited",
+        trackingDetails:
+          "Official CRYMAD Chain public RPC operated by CryMadX. Cloudflare sits in front of the endpoint and may process IP addresses and request metadata for rate limiting, abuse prevention and service reliability: https://www.cloudflare.com/privacypolicy/",
+      },
+    ],
+  },
+  7373: {
+    rpcs: [
+      {
+        url: "https://rpcl2.cmxofficial.com",
+        tracking: "limited",
+        trackingDetails:
+          "Official CRYMAD Chain L2 public RPC operated by CryMadX. Cloudflare sits in front of the endpoint and may process IP addresses and request metadata for rate limiting, abuse prevention and service reliability: https://www.cloudflare.com/privacypolicy/",
       },
     ],
   },
@@ -932,6 +965,11 @@ export const extraRpcs = {
   56: {
     rpcs: [
       {
+        url: "https://xrpc.cl/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://rpc.hostdefi.com/api/rpc/bsc",
         tracking: "limited",
         trackingDetails: privacyStatement.hostdefi,
@@ -1239,6 +1277,11 @@ export const extraRpcs = {
   43114: {
     rpcs: [
       {
+        url: "https://xrpc.cl/avalanche",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://rpc.hostdefi.com/api/rpc/avalanche",
         tracking: "limited",
         trackingDetails: privacyStatement.hostdefi,
@@ -1480,6 +1523,11 @@ export const extraRpcs = {
   },
   137: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/polygon",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/polygon",
         tracking: "limited",
@@ -1909,6 +1957,11 @@ export const extraRpcs = {
   },
   42161: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/arbitrum",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/arbitrum",
         tracking: "limited",
@@ -2851,6 +2904,11 @@ export const extraRpcs = {
   },
   10: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/optimism",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://rpc.hostdefi.com/api/rpc/optimism",
         tracking: "limited",
@@ -6500,6 +6558,11 @@ export const extraRpcs = {
   8453: {
     rpcs: [
       {
+        url: "https://xrpc.cl/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
         url: "https://rpc.hostdefi.com/api/rpc/base",
         tracking: "limited",
         trackingDetails: privacyStatement.hostdefi,
@@ -6517,11 +6580,6 @@ export const extraRpcs = {
       "https://mainnet.base.org",
       "https://developer-access-mainnet.base.org",
       "https://li-fi-base.intustechno.workers.dev/rpc",
-      {
-        url: "https://base-mainnet.diamondswap.org/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.diamondswap,
-      },
       {
         url: "https://base.public.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -6579,11 +6637,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/base-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://base-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -6599,16 +6652,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://base.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://rpc.numa.network/base",
         tracking: "yes",
         trackingDetails: privacyStatement.numa,
@@ -6617,16 +6660,6 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/base/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://base.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/base",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://base.api.pocket.network",
@@ -6654,11 +6687,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://rpcbase.hairylabs.io/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.hairylabs,
-      },
-      {
         url: "https://base.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
@@ -6673,11 +6701,6 @@ export const extraRpcs = {
         url: "https://rpcfree.com/base-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
-      },
-      {
-        url: "https://base-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
       },
       {
         url: "wss://base.api.pocket.network",
@@ -7020,6 +7043,11 @@ export const extraRpcs = {
   },
   11155111: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/11155111",
         tracking: "limited",
@@ -9673,6 +9701,10 @@ export const extraRpcs = {
       "https://aia-dataseed4.aiachain.org",
       "https://aiachain.bycrpc.com",
       "https://aiachain.znodes.net",
+      "wss://dataseed1.aiachain.org",
+      "wss://dataseed2.aiachain.org",
+      "wss://dataseed3.aiachain.org",
+      "wss://dataseed4.aiachain.org",
     ],
   },
   2192: {
@@ -11941,6 +11973,16 @@ export const extraRpcs = {
       },
       "https://eth-rpc.polkadot.io",
       "wss://eth-rpc.polkadot.io",
+      {
+        url: "https://doteth.saxemberg.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.Saxemberg,
+      },
+      {
+        url: "wss://dothub.saxemberg.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.Saxemberg,
+      },
     ],
   },
   688689: {
@@ -15636,17 +15678,17 @@ export const extraRpcs = {
   73571: {
     rpcs: [
       {
+        url: "https://explorer.primevertexlabs.com.mx/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
+      {
         url: "https://seleman.monarcaproject.com/rpc",
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
       },
       {
-        url: "https://seleman-edge.mineriafjs.workers.dev/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.seleman,
-      },
-      {
-        url: "wss://seleman-ws.monarcaproject.com",
+        url: "wss://explorer-ws.primevertexlabs.com.mx",
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
       },
