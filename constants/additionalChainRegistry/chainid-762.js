@@ -2,7 +2,7 @@
   "name": "QRDX Mainnet",
   "chain": "QRDX",
   "rpc": [
-    "https://rpc.qrdx.org",
+    "https://rpc.qrdx.org"
   ],
   "faucets": [],
   "nativeCurrency": {
