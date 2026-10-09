@@ -1,0 +1,26 @@
+export const data = {
+  "name": "Bitcoin Swap",
+  "chain": "BTCw",
+  "rpc": [
+    "https://rpc.btcw.tech",
+    "wss://rpc.btcw.tech/ws"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Bitcoin Swap",
+    "symbol": "BTCw",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
+  "infoURL": "https://btcw.tech",
+  "shortName": "btcwchain",
+  "chainId": 482120,
+  "networkId": 482120,
+  "explorers": [
+    {
+      "name": "Bitcoin Swap Explorer",
+      "url": "https://explorer.btcw.tech",
+      "standard": "EIP3091"
+    }
+  ]
+}
