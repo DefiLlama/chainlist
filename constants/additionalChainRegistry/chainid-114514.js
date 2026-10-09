@@ -1,11 +1,11 @@
 export const data = {
-  "name": "MetaFlux Devnet",
+  "name": "MetaFlux Testnet",
   "chain": "MetaFluxEVM",
   "rpc": [
-    "https://api.devnet.mtf.exchange/evm"
+    "https://api.testnet.mtf.exchange/evm"
   ],
   "faucets": [
-    "https://devnet.mtf.exchange/faucet"
+    "https://app.mtf.exchange/faucet?cluster=testnet"
   ],
   "nativeCurrency": {
     "name": "MetaFlux",
