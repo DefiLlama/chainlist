@@ -11634,6 +11634,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.beam,
       },
+      {
+        url: "https://rpc-arc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
     ],
   },
   5042002: {
