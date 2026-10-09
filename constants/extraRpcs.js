@@ -269,6 +269,8 @@ export const privacyStatement = {
     "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
   hostdefi:
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
+  blocktailor:
+    "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
   Saxemberg:
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
 };
@@ -548,6 +550,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://eth.blocktailor.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.blocktailor,
       },
     ],
   },
