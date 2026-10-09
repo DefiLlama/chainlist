@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "QRDX Mainnet",
   "chain": "QRDX",
   "rpc": [
