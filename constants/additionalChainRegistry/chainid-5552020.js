@@ -15,9 +15,9 @@ export const data = {
   "shortName": "WIND",
   "chainId": 5552020,
   "networkId": 5552020,
-  "icon": "https://github.com/xwindpay/logo/blob/main/photo_2026-09-01_23-52-06%20(2).jpg",
+  "icon": "https://github.com/xwindpay/logo/blob/main/windpay%20logo.jpeg?raw=true",
   "explorers": [{
-    "name": "windpayscan",
+    "name": "windpay explorer",
     "url": "https://explorer.windpay.org",
     "icon": "windpay",
     "standard": "EIP3091"
