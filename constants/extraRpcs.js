@@ -2893,11 +2893,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.optimism.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
-      },
-      {
         url: "https://optimism-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -2906,11 +2901,6 @@ export const extraRpcs = {
         url: "wss://optimism-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://optimism.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
       },
       {
         url: "https://api.zan.top/opt-mainnet",
@@ -2938,24 +2928,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stateless,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/optimism-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://optimism-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://go.getblock.io/e8a75f8dcf614861becfbcb185be6eb4",
-        tracking: "yes",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
-        url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
       },
       {
         url: "wss://opt-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -2963,29 +2938,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "https://endpoints.omniatech.io/v1/op/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://rpc.buildbear.io/esquivelfabian/",
         tracking: "yes",
         trackingDetails: privacyStatement.buildbear,
       },
       {
-        url: "https://optimism.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://optimism.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://op.api.pocket.network",
@@ -3012,11 +2972,6 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/optimism",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
-      },
-      {
-        url: "https://op-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
       },
       {
         url: "wss://op.api.pocket.network",
