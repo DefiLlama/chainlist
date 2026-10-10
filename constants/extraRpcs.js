@@ -271,6 +271,8 @@ export const privacyStatement = {
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
   Saxemberg:
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
+  blockvectra:
+    "BlockVectra's keyless public endpoints are rate-limited by client IP address; request metadata, including client IP addresses, is processed for rate limiting, abuse prevention and service operation. Traffic passes through Cloudflare. https://blockvectra.com/en/privacy/",
 };
 
 export const extraRpcs = {
@@ -548,6 +550,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/eth_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -1172,6 +1179,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://api.blockvectra.com/v1/bsc_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   97: {
@@ -1702,6 +1714,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://api.blockvectra.com/v1/polygon_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   25: {
@@ -2080,6 +2097,11 @@ export const extraRpcs = {
         url: "https://rpc-arbitrum.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/arb_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -6562,6 +6584,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://api.blockvectra.com/v1/base_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   11235: {
@@ -6897,6 +6924,11 @@ export const extraRpcs = {
         url: "https://xrpc.cl/sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/eth_sepolia/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
       {
         url: "https://lb.routeme.sh/rpc/evm/11155111",
@@ -12638,6 +12670,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
       },
+      {
+        url: "https://api.blockvectra.com/v1/hyperevm_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   1007: {
@@ -15422,10 +15459,20 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://api.blockvectra.com/v1/robinhood_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   46630: {
     rpcs: [
+      {
+        url: "https://api.blockvectra.com/v1/robinhood_testnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
       "https://rpc.testnet.chain.robinhood.com",
       {
         url: "https://robinhood-testnet.drpc.org",
