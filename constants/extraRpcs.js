@@ -587,12 +587,6 @@ export const extraRpcs = {
           "This RPC endpoint may log request metadata (IP address, request method, timestamps) for rate-limiting, abuse prevention, and service reliability purposes.",
       },
       {
-        url: "https://rpc.welshdag.trade",
-        tracking: "limited",
-        trackingDetails:
-          "Cloudflare and WelshDAG infrastructure may log IP addresses, RPC methods, timestamps, and request metadata for rate limiting, abuse prevention, security, and service reliability. Privacy policy: https://welshdag.trade/rpc-privacy/",
-      },
-      {
         url: "https://rpc.bdagexplorer.com/",
         tracking: "limited",
         trackingDetails:
@@ -3164,7 +3158,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm",
-      "https://metis.rpc.hypersync.xyz/",
 
       {
         url: "https://rpc.swiftnodes.io/rpc/metis",
@@ -4341,7 +4334,6 @@ export const extraRpcs = {
     ],
   },
   22: {
-    rpcs: ["https://api.trinity-tech.io/eid", "https://api.elastos.io/eid"],
   },
   24: {
     rpcs: ["https://rpc.kardiachain.io"],
@@ -4999,7 +4991,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://eth-rpc-acala.aca-staging.network",
       "https://rpc.evm.acala.network",
     ],
   },
@@ -5102,7 +5093,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://evm.confluxrpc.com",
-      "https://conflux-espace-public.unifra.io",
       {
         url: "https://conflux-espace.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -5747,11 +5737,6 @@ export const extraRpcs = {
         url: "wss://kava.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://node.histori.xyz/kava-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://kava.therpc.io",
@@ -8403,9 +8388,6 @@ export const extraRpcs = {
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
       "wss://dymension.drpc.org",
-      "https://rpc.mainnet.dymension.aviaone.com",
-      "https://evm.rpc.mainnet.dymension.aviaone.com",
-      "wss://evm.webSocket.mainnet.dymension.aviaone.com",
       {
         url: "https://dymension.api.onfinality.io/public",
         tracking: "limited",
@@ -10065,11 +10047,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "wss://sonic.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
         url: "https://sonic.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -10162,11 +10139,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.originstake,
       },
       {
-        url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.GrandValley,
-      },
-      {
         url: "https://story-mainnet-evm.itrocket.net",
         tracking: "none",
         trackingDetails: privacyStatement.itrocket,
@@ -10184,7 +10156,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
-      "https://evm-rpc-archive.story.node75.org",
       {
         url: "https://story-json-rpc.stakely.io/",
         tracking: "none",
@@ -10638,12 +10609,6 @@ export const extraRpcs = {
       "https://aeneid.storyrpc.io/",
       "https://evm-aeneid-story.j-node.net",
       "https://evmrpc-t.story.nodestake.org",
-      "https://json-rpc.story-aeneid.cumulo.me",
-      {
-        url: "https://lightnode-json-rpc-story.grandvalleys.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.GrandValley,
-      },
       {
         url: "https://story-testnet-evm.itrocket.net",
         tracking: "none",
@@ -10656,8 +10621,6 @@ export const extraRpcs = {
       },
       "https://aeneid-evm-rpc.krews.xyz",
       "https://story-aeneid-rpc.spidernode.net",
-      "https://evm-rpc.story.testnet.node75.org",
-      "https://story-aeneid-json-rpc.auranode.xyz",
     ],
   },
   224433: {
