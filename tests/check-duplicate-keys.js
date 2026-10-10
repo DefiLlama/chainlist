@@ -146,6 +146,53 @@ function checkChainIdsDuplicates() {
   console.log(`✓ No duplicate keys found in chainIds (checked ${chainIds.size} keys)`);
 }
 
+/**
+ * Check for the same rpc url listed more than once inside one chain's rpcs array.
+ * Arrays keep every entry, so these are invisible to the duplicate-key checks above,
+ * and unlike keys they survive an import intact, so this reads the exported object
+ * instead of parsing lines (rpcs written on one line would otherwise be skipped).
+ */
+function checkDuplicateRpcUrls() {
+  console.log("Checking extraRpcs for duplicate rpc urls within a chain...");
+
+  const filePath = path.join(__dirname, "../constants/extraRpcs.js");
+  const script = [
+    `import { extraRpcs } from ${JSON.stringify(filePath)};`,
+    "const out = {};",
+    "for (const [chainId, { rpcs = [] }] of Object.entries(extraRpcs)) out[chainId] = rpcs.map((rpc) => (typeof rpc === 'string' ? rpc : rpc.url));",
+    "console.log(JSON.stringify(out));",
+  ].join("\n");
+  const rpcsByChain = JSON.parse(
+    execSync("node --input-type=module", { input: script, encoding: "utf-8", stdio: "pipe", maxBuffer: 64 * 1024 * 1024 })
+  );
+
+  const normalize = (url) => url.trim().replace(/\/+$/, "").toLowerCase();
+  const duplicates = [];
+  let checked = 0;
+
+  for (const [chainId, urls] of Object.entries(rpcsByChain)) {
+    const seen = new Set();
+    for (const url of urls) {
+      if (typeof url !== "string") continue;
+      checked++;
+      const key = normalize(url);
+      if (seen.has(key)) {
+        duplicates.push(`${chainId}: ${url}`);
+      } else {
+        seen.add(key);
+      }
+    }
+  }
+
+  if (duplicates.length > 0) {
+    console.error("ERROR: Duplicate rpc urls found in extraRpcs:");
+    duplicates.forEach((d) => console.error(`  - ${d}`));
+    throw new Error(`Duplicate rpc urls found in extraRpcs: ${duplicates.length}`);
+  }
+
+  console.log(`✓ No duplicate rpc urls found in extraRpcs (checked ${checked} urls)`);
+}
+
 // Run all tests and collect errors
 console.log("=".repeat(60));
 console.log("Running syntax and duplicate key checks...");
@@ -181,6 +228,12 @@ try {
 
 try {
   checkChainIdsDuplicates();
+} catch (error) {
+  errors.push(error.message);
+}
+
+try {
+  checkDuplicateRpcUrls();
 } catch (error) {
   errors.push(error.message);
 }
