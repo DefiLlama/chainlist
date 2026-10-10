@@ -1893,11 +1893,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://public-atla-mainnet.fastnode.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.fastnode,
-      },
-      {
         url: "https://rpc.atleta.at.htw.tech",
         tracking: "yes",
         trackingDetails: privacyStatement.Hightower,
@@ -3058,7 +3053,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       "https://rpc-merlin.rockx.com",
-      "https://merlin-mainnet-enterprise.unifra.io",
       {
         url: "https://endpoints.omniatech.io/v1/merlin/mainnet/public",
         tracking: "none",
@@ -3730,7 +3724,6 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.one",
       "https://babel-api.fastblocks.io",
       "https://rpc.depinscan.io/iotex",
-      "https://rpc.chainanalytics.org/iotex",
       // {
       //   url: "https://iotexrpc.com",
       //   tracking: "limited",
@@ -6465,7 +6458,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://rpc.notadegen.com/base",
       {
         url: "https://base-rpc.publicnode.com",
         tracking: "none",
@@ -6490,11 +6482,6 @@ export const extraRpcs = {
         url: "https://base-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "wss://base.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
       },
       {
         url: "https://api.zan.top/base-mainnet",
@@ -9370,7 +9357,6 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.moksha.vana.org",
       "https://rpc-moksha-vana.josephtran.xyz",
-      "https://moksha-vana-rpc.tech-coha05.xyz",
     ],
   },
 
@@ -11183,11 +11169,6 @@ export const extraRpcs = {
         trackingDetails: "No user tracking or data collection",
       },
 
-      {
-        url: "https://splendor-rpc.org/",
-        tracking: "none",
-        trackingDetails: "No user tracking or data collection",
-      },
     ],
     websiteDead: false,
     rpcWorking: true,
