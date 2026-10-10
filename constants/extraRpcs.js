@@ -1530,7 +1530,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://polygon-rpc.com",
       {
         url: "https://rpc-mainnet.matic.quiknode.pro",
         tracking: "yes",
@@ -1569,19 +1568,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
       {
-        url: "https://go.getblock.io/02667b699f05444ab2c64f9bff28f027",
-        tracking: "yes",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
         url: "https://polygon.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://polygon.rpc.blxrbdn.com/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
       },
       {
         url: "https://polygon.drpc.org",
@@ -1604,24 +1593,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://polygon.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/polygon-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://polygon-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://polygon-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
       },
       {
         url: "wss://polygon-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -1629,29 +1603,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://polygon.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://rpc.owlracle.info/poly/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://polygon.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/polygon",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://poly.api.pocket.network",
@@ -1686,11 +1640,6 @@ export const extraRpcs = {
       {
         url: "https://rpc.satelink.network/rpc/polygon",
        tracking: "none",
-      },
-      {
-        url: "https://polygon-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
       },
       {
         url: "wss://poly.api.pocket.network",
