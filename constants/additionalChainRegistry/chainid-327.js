@@ -1,7 +1,8 @@
 export const data = {
-  "name": "Goliath",
-  "chain": "GOLIATH",
+  "name": "Onyx",
+  "chain": "ONYX",
   "rpc": [
+    "https://rpc.onyx.org",
     "https://rpc.goliath.net"
   ],
   "faucets": [],
@@ -11,13 +12,14 @@ export const data = {
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://docs.goliath.net",
-  "shortName": "goliath",
+  "infoURL": "https://onyx.org",
+  "shortName": "onyx",
   "chainId": 327,
   "networkId": 327,
+  "icon": "onyx",
   "explorers": [{
-    "name": "Goliath Explorer",
-    "url": "https://explorer.goliath.net",
+    "name": "Onyx Explorer",
+    "url": "https://explorer.onyx.org",
     "standard": "EIP3091"
   }]
 }
