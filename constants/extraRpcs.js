@@ -1308,16 +1308,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/avax/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://avax.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
-      },
-      {
         url: "https://api.zan.top/avax-mainnet/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
@@ -1326,11 +1316,6 @@ export const extraRpcs = {
         url: "https://avalanche.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/avalanche-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
       },
       {
         url: "https://avax-x-mainnet.gateway.tatum.io",
@@ -1351,16 +1336,6 @@ export const extraRpcs = {
         url: "https://spectrum-01.simplystaking.xyz/avalanche-mn-rpc/ext/bc/C/rpc",
         tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
-      },
-      {
-        url: "https://avalanche.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
-        url: "https://rpc.poolz.finance/avalanche",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://avax.api.pocket.network",
@@ -1387,16 +1362,6 @@ export const extraRpcs = {
         url: "https://avax-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://avax-rpc.keccak.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.keccakio,
-      },
-      {
-        url: "https://rpc-avalanche.blockmachine.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.blockmachine,
       },
     ],
   },
