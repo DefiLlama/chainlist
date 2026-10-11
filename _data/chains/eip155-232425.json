@@ -1,5 +1,5 @@
 {
-  "name": "Aries Chain",
+  "name": "Aries Chain Mainnet",
   "chain": "ARES",
   "rpc": [
     "https://rpc.arieschain.org"
@@ -10,14 +10,20 @@
     "symbol": "ARES",
     "decimals": 18
   },
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
   "infoURL": "https://arieschain.org",
-  "shortName": "aries",
+  "shortName": "ares",
   "chainId": 232425,
   "networkId": 232425,
+  "icon": "aries",
   "explorers": [
     {
-      "name": "Aries Explorer",
+      "name": "AriesScan",
       "url": "https://scan.arieschain.org",
+      "icon": "blockscout",
       "standard": "EIP3091"
     }
   ]
