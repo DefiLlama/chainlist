@@ -1,0 +1,24 @@
+export const data = {
+  name: "Dancore",
+  chain: "DNC",
+  icon: "dancore",
+  rpc: ["https://rpc.dancorescan.com"],
+  faucets: [],
+  nativeCurrency: {
+    name: "Dancore",
+    symbol: "DNC",
+    decimals: 18,
+  },
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://dancore.io",
+  shortName: "dnc",
+  chainId: 362,
+  networkId: 362,
+  explorers: [
+    {
+      name: "dancorescan",
+      url: "https://dancorescan.com",
+      standard: "EIP3091",
+    },
+  ],
+};
