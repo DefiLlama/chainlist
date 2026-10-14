@@ -5213,6 +5213,11 @@ export const extraRpcs = {
   324: {
     rpcs: [
       {
+        url: "https://rpc.hostdefi.com/api/rpc/zksync-era",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
         url: "https://lb.routeme.sh/rpc/evm/324",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
@@ -6738,6 +6743,11 @@ export const extraRpcs = {
   },
   534352: {
     rpcs: [
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/scroll",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
       {
         url: "https://lb.routeme.sh/rpc/evm/534352",
         tracking: "limited",
