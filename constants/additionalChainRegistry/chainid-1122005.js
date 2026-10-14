@@ -1,0 +1,18 @@
+export const data = {
+  name: "DogeOS",
+  chain: "DogeOS",
+  rpc: [],
+  faucets: [],
+  nativeCurrency: {
+    name: "Dogecoin",
+    symbol: "DOGE",
+    decimals: 18,
+  },
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://www.dogeos.com",
+  shortName: "dogeos",
+  chainId: 1122005,
+  networkId: 1122005,
+  status: "incubating",
+  icon: "dogeos",
+};
