@@ -3,7 +3,7 @@ export const data = {
     "chain": "INFRA",
     "icon": "infra",
     "rpc": [
-      "https://ppprototype.vercel.app/api/infra-rpc"
+      "https://uat.infraworld.org/"
     ],
     "features": [{ "name": "EIP155" }],
     "faucets": [],
@@ -12,14 +12,14 @@ export const data = {
       "symbol": "reAED",
       "decimals": 18
     },
-    "infoURL": "https://infrablockchain.com/",
+    "infoURL": "https://infraworld.com/",
     "shortName": "infra-testnet",
     "chainId": 15324,
     "networkId": 15324,
     "explorers": [
       {
         "name": "Block Explorer",
-        "url": "http://208.115.109.202",
+        "url": "https://uat.scan.infraworld.org/",
         "standard": "EIP3091"
       }
     ]
