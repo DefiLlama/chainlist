@@ -25,5 +25,10 @@ export const data = {
       icon: "blockscout",
       standard: "EIP3091",
     },
+    {
+      name: "L2Scan",
+      url: "https://dogeos-testnet.l2scan.co",
+      standard: "EIP3091",
+    },
   ],
 };
