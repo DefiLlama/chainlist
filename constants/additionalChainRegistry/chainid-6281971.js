@@ -14,7 +14,7 @@ export const data = {
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
   infoURL: "https://www.dogeos.com",
-  shortName: "dogeos-chykyu",
+  shortName: "dogeos-chikyu",
   chainId: 6281971,
   networkId: 6281971,
   icon: "dogeos",
