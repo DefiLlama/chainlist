@@ -15468,11 +15468,6 @@ export const extraRpcs = {
   },
   46630: {
     rpcs: [
-      {
-        url: "https://api.blockvectra.com/v1/robinhood_testnet/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockvectra,
-      },
       "https://rpc.testnet.chain.robinhood.com",
       {
         url: "https://robinhood-testnet.drpc.org",
@@ -15488,6 +15483,11 @@ export const extraRpcs = {
         url: "wss://robinhood-sepolia-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/robinhood_testnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
