@@ -13433,6 +13433,14 @@ export const extraRpcs = {
       },
     ],
   },
+  724: {
+    rpcs: [
+      {
+        url: "https://rpc.lxon.in",
+        tracking: "none",
+      },
+    ],
+  },
   7244: {
     rpcs: [
       {
