@@ -6,6 +6,7 @@ export const data = {
   ],
   faucets: [
     "https://faucet.testnet.dogeos.com",
+    "https://faucets.chain.link/dogeos-testnet-chikyu",
   ],
   nativeCurrency: {
     name: "Dogecoin",
