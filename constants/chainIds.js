@@ -303,6 +303,7 @@ export default {
   "369369": "denergy",
   "420420": "kekchain",
   "432204": "dexalot",
+  "482120": "bitcoin swap",
   "510003": "commons",
   "534352": "scroll",
   "543210": "zero_network",
