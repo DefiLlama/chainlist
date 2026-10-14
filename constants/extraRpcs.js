@@ -271,6 +271,8 @@ export const privacyStatement = {
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
   Saxemberg:
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
+  daybreak:
+    "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
 };
 
 export const extraRpcs = {
@@ -6561,6 +6563,11 @@ export const extraRpcs = {
         url: "https://rpc-base.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://base.daybreak-rpc.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.daybreak,
       },
     ],
   },
@@ -15421,6 +15428,11 @@ export const extraRpcs = {
         url: "https://robinhood-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://robinhood.daybreak-rpc.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.daybreak,
       },
     ],
   },
