@@ -13,5 +13,6 @@ export const data = {
   shortName: "dogeos",
   chainId: 1122005,
   networkId: 1122005,
+  status: "incubating",
   icon: "dogeos",
 };
