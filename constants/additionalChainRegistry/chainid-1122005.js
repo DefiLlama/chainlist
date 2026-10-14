@@ -1,5 +1,5 @@
 export const data = {
-  name: "DogeOS Mainnet",
+  name: "DogeOS",
   chain: "DogeOS",
   rpc: [],
   faucets: [],
