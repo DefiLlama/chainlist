@@ -287,6 +287,7 @@ export default {
   "97741": "pepu",
   "98865": "plume",
   "98866": "plume mainnet",
+  "101101": "vordium",
   "105105": "stratis",
   "111188": "real",
   "153153": "odyssey",
