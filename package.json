@@ -9,7 +9,7 @@
     "build2": "./scripts/build.sh",
     "start": "next start",
     "serve": "serve out",
-    "test": "node tests/check-duplicate-keys.js",
+    "test": "node tests/check-duplicate-keys.js && node --test tests/deprecated-chains.test.js",
     "generate-provider-rpcs": "node scripts/generate-provider-rpcs.mjs"
   },
   "dependencies": {
