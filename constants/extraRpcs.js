@@ -281,6 +281,8 @@ export const privacyStatement = {
     "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
   driftguard:
     "DriftGuard operates zero-log, privacy-preserving public RPC endpoints with private mempool routing and MEV protection. We do not store IP addresses, request payloads, or wallet addresses. Rate limiting uses transient in-memory counters only. https://driftguard.live",
+  moltnode:
+    "MoltNode has no accounts or API keys and does not store JSON-RPC requests or responses; rate limiting uses IP-keyed counters (IPv4 address or IPv6 /64) held in memory and in Cloudflare's rate-limit counters for seconds to a day, Cloudflare keeps its standard request logs (including IP) for a few days for debugging, upstream providers see MoltNode rather than the user's IP, and no data is sold or shared with advertisers. https://moltnode.ag/privacy",
 };
 
 export const extraRpcs = {
@@ -563,6 +565,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/eth",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://moltnode.ag/ethereum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -1176,6 +1183,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.backrunshield,
       },
+      {
+        url: "https://moltnode.ag/bnb",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   97: {
@@ -1367,6 +1379,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://moltnode.ag/avalanche",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   250: {
@@ -1465,6 +1482,11 @@ export const extraRpcs = {
         url: "https://public-ftm-mainnet.fastnode.io",
         tracking: "none",
         trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://moltnode.ag/fantom",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -1619,6 +1641,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://moltnode.ag/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -1993,6 +2020,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/arb",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://moltnode.ag/arbitrum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -2464,6 +2496,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://moltnode.ag/opbnb",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   1666700000: {
@@ -2876,6 +2913,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://moltnode.ag/optimism",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   11155420: {
@@ -3182,6 +3224,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://moltnode.ag/gnosis",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   10200: {
@@ -3235,6 +3282,11 @@ export const extraRpcs = {
         url: "https://swell-mainnet.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://moltnode.ag/swell",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -4631,6 +4683,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://moltnode.ag/monad",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   163: {
@@ -5182,6 +5239,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://moltnode.ag/zksync",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   196: {
@@ -5222,6 +5284,11 @@ export const extraRpcs = {
         url: "https://xlayer-mainnet.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://moltnode.ag/xlayer",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -5479,6 +5546,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://moltnode.ag/tac",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   7001: {
@@ -5556,6 +5628,11 @@ export const extraRpcs = {
         url: "https://api-zetachain-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://moltnode.ag/zetachain",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -5801,6 +5878,11 @@ export const extraRpcs = {
         url: "https://rpc-mantle.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://moltnode.ag/mantle",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -6452,6 +6534,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/base",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://moltnode.ag/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -7736,6 +7823,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://moltnode.ag/taiko",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   167009: {
@@ -7845,6 +7937,11 @@ export const extraRpcs = {
         url: "https://morph.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://moltnode.ag/morph",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -8476,6 +8573,11 @@ export const extraRpcs = {
         url: "https://bob.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://moltnode.ag/bob",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -9473,6 +9575,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://moltnode.ag/sei",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   130: {
@@ -9944,6 +10051,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://moltnode.ag/sonic",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   57054: {
@@ -10166,6 +10278,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://moltnode.ag/berachain",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   2741: {
@@ -10195,6 +10312,11 @@ export const extraRpcs = {
         url: "https://abstract-mainnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://moltnode.ag/abstract",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -11127,6 +11249,11 @@ export const extraRpcs = {
         url: "https://katana.rpc.sentio.xyz",
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://moltnode.ag/katana",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -12281,7 +12408,12 @@ export const extraRpcs = {
         url: "https://stable.drpc.org",
         tracking: "limited",
         trackingDetails: privacyStatement.drpc,
-      }
+      },
+      {
+        url: "https://moltnode.ag/stable",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   995: {
@@ -12309,6 +12441,11 @@ export const extraRpcs = {
         url: "https://rpc.nodeflare.app/hl/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
+      },
+      {
+        url: "https://moltnode.ag/hyperevm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
       },
     ],
   },
@@ -15155,6 +15292,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://moltnode.ag/edge",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
     ],
   },
   5734951: {
@@ -15222,6 +15364,15 @@ export const extraRpcs = {
   },
   6736: {
     rpcs: ["https://api.windcrypto.com/rpc"],
+  },
+  16661: {
+    rpcs: [
+      {
+        url: "https://moltnode.ag/0g",
+        tracking: "limited",
+        trackingDetails: privacyStatement.moltnode,
+      },
+    ],
   },
 };
 
