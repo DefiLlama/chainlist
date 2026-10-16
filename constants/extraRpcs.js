@@ -271,6 +271,8 @@ export const privacyStatement = {
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
   Saxemberg:
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
+  taifoon:
+    "Taifoon's public RPC gateway serves reads and relays transactions the caller already signed. For each request it keeps the JSON-RPC methods, request and answer sizes, SHA-256 digests of the request and the answer, the latency and the outcome; it does not keep request or answer bodies and does not store IP addresses. A caller without a key is counted under a salted SHA-256 hash of its IP, cut to 16 hex characters, for the rate limit. For a relayed transaction it keeps the hash, the signed bytes and the node's answer. https://www.taifoon.io/privacy#rpc-gateway",
 };
 
 export const extraRpcs = {
@@ -548,6 +550,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
@@ -1172,6 +1179,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/56",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
     ],
   },
   97: {
@@ -1397,6 +1409,16 @@ export const extraRpcs = {
         url: "https://rpc-avalanche.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
@@ -1701,6 +1723,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/137",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
@@ -2080,6 +2107,16 @@ export const extraRpcs = {
         url: "https://rpc-arbitrum.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
@@ -2765,6 +2802,16 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/42220",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/42220",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
     ],
   },
   11142220: {
@@ -2982,6 +3029,16 @@ export const extraRpcs = {
         url: "https://rpc-optimism.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
@@ -6566,6 +6623,16 @@ export const extraRpcs = {
         url: "https://rpc-base.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
@@ -11483,6 +11550,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.beam,
       },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/5042",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/5042",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
     ],
   },
   5042002: {
@@ -15431,6 +15508,16 @@ export const extraRpcs = {
         url: "https://robinhood-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://coord.taifoon.dev/gw/rpc/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
+      },
+      {
+        url: "wss://coord.taifoon.dev/gw/ws/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.taifoon,
       },
     ],
   },
