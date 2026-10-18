@@ -4189,8 +4189,6 @@ export const extraRpcs = {
       },
     ],
   },
-  8: {
-  },
   5050: {
     rpcs: ["https://rpc.liquidchain.net/", "https://rpc.xlcscan.com/"],
   },
@@ -4818,8 +4816,6 @@ export const extraRpcs = {
     rpcs: [],
     websiteDead: true,
     rpcWorking: false,
-  },
-  222: {
   },
   258: {
     rpcs: [],
