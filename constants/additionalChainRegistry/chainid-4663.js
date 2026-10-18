@@ -14,11 +14,6 @@ export const data = {
   networkId: 4663,
   explorers: [
     {
-      name: "Robinscan",
-      url: "https://robinscan.io",
-      standard: "EIP3091",
-    },
-    {
       name: "Robinhood Chain Blockscout Explorer",
       url: "https://robinhoodchain.blockscout.com",
       standard: "EIP3091",
