@@ -1,4 +1,4 @@
-export const chain = {
+export const data = {
   name: "TOOG Chain",
   chain: "TOOG",
   rpc: ["https://toog-proxy.toog-chain.workers.dev/rpc"],
@@ -21,4 +21,4 @@ export const chain = {
   ],
 };
 
-export default chain;
+
