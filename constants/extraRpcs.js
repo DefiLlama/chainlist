@@ -2097,11 +2097,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/arbitrum-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://arbitrum-sepolia.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -2900,11 +2895,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://sepolia.optimism.io",
-      {
-        url: "https://public.stackup.sh/api/v1/node/optimism-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
       {
         url: "https://endpoints.omniatech.io/v1/op/sepolia/public",
         tracking: "none",
@@ -6833,11 +6823,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://eth-sepolia-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
         url: "https://sepolia.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -6846,16 +6831,6 @@ export const extraRpcs = {
         url: "https://gateway.tenderly.co/public/sepolia",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://sphinx.shardeum.org/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.shardeum,
-      },
-      {
-        url: "https://dapps.shardeum.org/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.shardeum,
       },
       {
         url: "https://api.zan.top/eth-sepolia",
@@ -6882,11 +6857,6 @@ export const extraRpcs = {
         url: "https://eth-sepolia.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/ethereum-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
       },
       {
         url: "https://ethereum-sepolia-public.nodies.app",
@@ -9016,7 +8986,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.sx-rollup-testnet.t.raas.gelato.cloud",
     ],
   },
   388: {
@@ -10965,11 +10934,6 @@ export const extraRpcs = {
       },
       "https://coti-rpc.Hyperflow.finance",
       "wss://coti-rpc.Hyperflow.finance",
-      {
-        url: "https://rpc.poolz.finance/coti",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
-      },
       "https://tokyo.fullnode.mainnet.coti.io/rpc",
       "wss://tokyo.fullnode.mainnet.coti.io/ws",
       "https://virginia.fullnode.mainnet.coti.io/rpc",
@@ -11440,16 +11404,6 @@ export const extraRpcs = {
   1440000: {
     rpcs: [
       {
-        url: "https://xrplevm.buildintheshade.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.grove,
-      },
-      {
-        url: "wss://xrplevm.buildintheshade.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.grove,
-      },
-      {
         url: "https://xrpl.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -11463,16 +11417,6 @@ export const extraRpcs = {
   },
   1449000: {
     rpcs: [
-      {
-        url: "https://xrplevm-testnet.buildintheshade.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.grove,
-      },
-      {
-        url: "wss://xrplevm-testnet.buildintheshade.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.grove,
-      },
     ],
   },
   766: {
@@ -11670,16 +11614,6 @@ export const extraRpcs = {
   },
   420420417: {
     rpcs: [
-      {
-        url: "https://services.polkadothub-rpc.com/testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.OpsLayer,
-      },
-      {
-        url: "wss://services.polkadothub-rpc.com/testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.OpsLayer,
-      },
       "https://eth-rpc.testnet.polkadot.io",
       "wss://eth-rpc.testnet.polkadot.io",
     ],
@@ -11689,16 +11623,6 @@ export const extraRpcs = {
   },
   420420419: {
     rpcs: [
-      {
-        url: "https://services.polkadothub-rpc.com/mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.OpsLayer,
-      },
-      {
-        url: "wss://services.polkadothub-rpc.com/mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.OpsLayer,
-      },
       "https://eth-rpc.polkadot.io",
       "wss://eth-rpc.polkadot.io",
       {
