@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "TeQoin Sepolia Testnet",
   "chain": "ETH",
   "rpc": [
