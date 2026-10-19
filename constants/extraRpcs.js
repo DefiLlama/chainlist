@@ -4089,8 +4089,6 @@ export const extraRpcs = {
       },
     ],
   },
-  8: {
-  },
   5050: {
     rpcs: ["https://rpc.liquidchain.net/", "https://rpc.xlcscan.com/"],
   },
@@ -4239,8 +4237,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.pokt,
       },
     ],
-  },
-  22: {
   },
   24: {
     rpcs: ["https://rpc.kardiachain.io"],
@@ -4717,8 +4713,6 @@ export const extraRpcs = {
     rpcs: [],
     websiteDead: true,
     rpcWorking: false,
-  },
-  222: {
   },
   258: {
     rpcs: [],
