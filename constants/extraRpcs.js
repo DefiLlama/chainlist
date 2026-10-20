@@ -3,6 +3,8 @@ export const privacyStatement = {
     "XRPC.CL operates zero-log public RPC endpoints on sovereign infrastructure in Chile. We do not store IP addresses, request bodies, wallet addresses or transaction metadata. Anonymous rate limiting uses the client IP in memory only for the current window. Metrics are aggregate counters only (network, method, outcome). No KYC required. https://xrpc.cl/tos.html",
   beam:
     "Beam does not log or store IP addresses, user agents or request bodies. Rate limiting uses the client IP in memory only for the current one-second window. Only aggregate counts (per method, per hour, per referring dApp origin) and a daily-salted, non-reversible unique-client estimate are kept. Signed transactions submitted via eth_sendRawTransaction are forwarded unchanged and retained for operational records (they are public once mined). https://beamrpc.com/privacy/",
+  degenprotocol:
+    "We do not track, log, or store user IP addresses, location metadata, or wallet details. Any temporary data is used strictly for service rate limiting and load balancing. https://degenprotocol.io/privacy",
   chainpulse:
       "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
@@ -6460,6 +6462,11 @@ export const extraRpcs = {
         url: "https://rpcfree.com/base-rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://rpc.degenprotocol.io/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.degenprotocol,
       },
       {
         url: "wss://base.api.pocket.network",
@@ -15287,6 +15294,11 @@ export const extraRpcs = {
         url: "https://rpc.nodeflare.app/robinhood/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
+      },
+      {
+        url: "https://rpc.degenprotocol.io/robinhood",
+        tracking: "none",
+        trackingDetails: privacyStatement.degenprotocol,
       },
       {
         url: "https://rpc-robinhood.blockmachine.io",
