@@ -1177,6 +1177,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://triport.io/public/bsc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
+      },
     ],
   },
   97: {
