@@ -6845,11 +6845,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.xrpc,
       },
       {
-        url: "https://api.blockvectra.com/v1/eth_sepolia/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockvectra,
-      },
-      {
         url: "https://lb.routeme.sh/rpc/evm/11155111",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
@@ -6979,6 +6974,11 @@ export const extraRpcs = {
         url: "wss://eth-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/eth_sepolia/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
