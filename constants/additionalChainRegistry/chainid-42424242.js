@@ -10,6 +10,7 @@ export const data = {
   },
   "infoURL": "https://genlayer.com",
   "shortName": "genlayer",
+  "icon": "genlayer",
   "chainId": 42424242,
   "networkId": 42424242,
   "explorers": [
