@@ -3,7 +3,7 @@ export const data = {
   "chain": "GenLayer",
   "rpc": ["https://rpc.chain.genlayer.com"],
   "faucets": [],
-  "features": [{ "name": "EIP155" }],
+  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
   "nativeCurrency": {
     "name": "GEN",
     "symbol": "GEN",
