@@ -17,13 +17,13 @@ export const data = {
   "networkId": 6292,
   "explorers": [{
     "name": "MayaScan",
-    "url": "https://mayachain.io",
+    "url": "https://scan.mayachain.io",
     "icon": "blockscout",
     "standard": "EIP3091"
   }],
   "parent": {
     "type": "L2",
     "chain": "eip155-1",
-    "bridges": [{ "url": "https://mayachain.io/bridge" }]
+    "bridges": [{ "url": "https://scan.mayachain.io/bridge" }]
   }
 }
