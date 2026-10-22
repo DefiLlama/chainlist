@@ -328,6 +328,7 @@ export default {
   "420420417": "polkadot-testnet",
   "420420418": "kusama",
   "420420419": "polkadot",
+  "42424242": "genlayer",
   "666666666": "degen",
   "888888888": "ancient8",
   "994873017": "lumia",
