@@ -5118,11 +5118,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       {
-        url: "https://zksync.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
-      },
-      {
         url: "https://zksync.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -6629,11 +6624,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://scroll-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
         url: "https://public.1rpc.io/scroll",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
@@ -7451,11 +7441,6 @@ export const extraRpcs = {
         url: "https://linea.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://rpc.poolz.finance/linea",
-        tracking: "limited",
-        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://api-linea-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
