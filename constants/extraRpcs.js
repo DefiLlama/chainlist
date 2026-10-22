@@ -15452,6 +15452,9 @@ export const extraRpcs = {
   101089: {
     rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
   },
+  6736: {
+    rpcs: ["https://api.windcrypto.com/rpc"],
+  },
 };
 
 export default extraRpcs;
