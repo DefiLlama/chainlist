@@ -20,7 +20,7 @@ export const data = {
   explorers: [
     {
       name: "Blockmaze mainnet explorer",
-      url: "https://bmzexplorer.com/",
+      url: "https://bmzscan.com/",
     },
   ],
 };
