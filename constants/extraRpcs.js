@@ -858,11 +858,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/avalanche-fuji",
-        tracking: "limited",
-        trackingDetails: privacyStatement.zan,
-      },
-      {
         url: "https://avalanche-fuji.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -1923,11 +1918,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "wss://arbitrum.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
         url: "https://rpc.owlracle.info/arb/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
@@ -2061,11 +2051,6 @@ export const extraRpcs = {
         url: "https://arbitrum-nova.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://arbnova-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
       },
       {
         url: "https://${QUICKNODE_IDENTIFIER}.nova-mainnet.quiknode.pro/${QUICKNODE_API_KEY}",
@@ -2296,16 +2281,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      {
-        url: "https://blast.gasswap.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.gasswap,
-      },
-      {
-        url: "wss://blast.gasswap.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.gasswap,
-      },
 
       {
         url: "https://blast-rpc.publicnode.com",
@@ -2331,11 +2306,6 @@ export const extraRpcs = {
         url: "https://blast.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "wss://blast.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
       },
       {
         url: "https://endpoints.omniatech.io/v1/blast/mainnet/public",
@@ -6135,14 +6105,6 @@ export const extraRpcs = {
   32520: {
     rpcs: [
       "https://rpc-bitgert.icecreamswap.com",
-      "https://nodes.vefinetwork.org/bitgert",
-      "https://flux-rpc.brisescan.com",
-      "https://flux-rpc1.brisescan.com",
-      "https://flux-rpc2.brisescan.com",
-      "https://rpc-1.chainrpc.com",
-      "https://rpc-2.chainrpc.com",
-      "https://node1.serverrpc.com",
-      "https://node2.serverrpc.com",
     ],
   },
   39797: {
@@ -6240,12 +6202,6 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/84532",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
-      },
-      "https://rpc.notadegen.com/base/sepolia",
-      {
-        url: "https://public.stackup.sh/api/v1/node/base-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
       },
       {
         url: "https://base-sepolia.gateway.tenderly.co",
@@ -7762,11 +7718,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://taiko-mainnet.rpc.porters.xyz/taiko-public",
-        tracking: "none",
-        trackingDetails: privacyStatement.porters,
-      },
-      {
         url: "https://taiko-mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
@@ -8732,11 +8683,6 @@ export const extraRpcs = {
         url: "wss://zircuit-mainnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://zircuit1-mainnet.liquify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.liquify,
       },
       {
         url: "https://zircuit.rpc.sentio.xyz",
@@ -11007,7 +10953,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://enugu-rpc.assetchain.org",
-      "https://eth.nodebridge.xyz/assetchaintestnet/exec/b903e07d-54ee-4c4d-bffb-8b073e8163fa",
     ],
   },
   42429: {
@@ -11071,7 +11016,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://mainnet-rpc.assetchain.org",
-      "https://eth.nodebridge.xyz/assetchain/exec/b2da3d33-5708-4f61-8d1e-2c677124c35a",
     ],
   },
   2691: {
