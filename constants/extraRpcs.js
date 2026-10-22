@@ -4733,6 +4733,9 @@ export const extraRpcs = {
   70: {
     rpcs: ["https://http-mainnet.hoosmartchain.com"],
   },
+  210: {
+    rpcs: ["https://rpc.bitnetmoney.org", "https://rpc.bitnetmoney.com"],
+  },
   211: {
     rpcs: [],
     websiteDead: true,
