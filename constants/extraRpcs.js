@@ -9232,9 +9232,6 @@ export const extraRpcs = {
       },
     ],
   },
-  5577: {
-    rpcs: ["https://rpc.taaqo.com"],
-  },
   1750: {
     rpcs: [
       {
