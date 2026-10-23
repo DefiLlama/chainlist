@@ -7,11 +7,11 @@ export const data = {
   faucets: [],
   nativeCurrency: {
     name: "JOA Coin",
-    symbol: "JC",
+    symbol: "JOA",
     decimals: 18
   },
   infoURL: "https://joachain.live",
-  shortName: "joa",
+  shortName: "JOA",
   chainId: 1191,
   networkId: 1191,
   explorers: [
