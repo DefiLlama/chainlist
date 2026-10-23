@@ -14,13 +14,13 @@ export const data = {
   networkId: 4663,
   explorers: [
     {
-      name: "Robinscan",
-      url: "https://robinscan.io",
+      name: "Robinhood Chain Blockscout Explorer",
+      url: "https://robinhoodchain.blockscout.com",
       standard: "EIP3091",
     },
     {
-      name: "Robinhood Chain Blockscout Explorer",
-      url: "https://robinhoodchain.blockscout.com",
+      name: "RobinScanner",
+      url: "https://robinscanner.com",
       standard: "EIP3091",
     },
   ],
