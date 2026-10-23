@@ -8104,6 +8104,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://rpc.atlantischain.network/",
+      {
+        url: "https://rpc-elysium-testnet.globalstake.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "wss://rpc-robinhood.globalstake.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
     ],
   },
   6363: {
