@@ -1401,11 +1401,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.fantom.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
-      },
-      {
         url: "https://fantom.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -1421,16 +1416,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.callstatic,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/fantom/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://fantom-json-rpc.stakely.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.Stakely,
-      },
-      {
         url: "https://api.zan.top/ftm-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
@@ -1441,19 +1426,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://fantom.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://fantom.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://public-ftm-mainnet.fastnode.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.fastnode,
       },
     ],
   },
