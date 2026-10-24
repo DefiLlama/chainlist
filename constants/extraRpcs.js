@@ -275,6 +275,8 @@ export const privacyStatement = {
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
   daybreak:
     "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
+  triport:
+    "Triport logs request metadata (originating IP address, timestamp, network, method, response status and payload size) to enforce rate limits and route traffic. Request parameters and payloads, including signed transactions and queried addresses, are not logged or stored. Usage logs are deleted or irreversibly anonymized within 90 days, and data is not sold or used for advertising. https://triport.io/privacy",
 };
 
 export const extraRpcs = {
@@ -552,6 +554,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://triport.io/public/eth",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
       },
     ],
   },
@@ -1165,6 +1172,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://triport.io/public/bsc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
+      },
     ],
   },
   97: {
@@ -1608,6 +1620,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://triport.io/public/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
       },
     ],
   },
@@ -6435,6 +6452,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
       },
+      {
+        url: "https://triport.io/public/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
+      },
     ],
   },
   11235: {
@@ -10854,6 +10876,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://triport.io/public/tron",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
+      },
     ],
   },
 
@@ -15269,6 +15296,11 @@ export const extraRpcs = {
         url: "https://robinhood.daybreak-rpc.network",
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
+      },
+      {
+        url: "https://triport.io/public/robinhood",
+        tracking: "limited",
+        trackingDetails: privacyStatement.triport,
       },
     ],
   },
