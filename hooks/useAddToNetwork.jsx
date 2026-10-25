@@ -1,5 +1,5 @@
 import * as Fathom from "fathom-client";
-import { useMutation, QueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { FATHOM_EVENTS_ID, FATHOM_DROPDOWN_EVENTS_ID, FATHOM_NO_EVENTS_ID, CHAINS_MONITOR } from "./useAnalytics";
 import { connectWallet } from "./useConnect";
 
@@ -53,7 +53,7 @@ export async function addToNetwork({ address, chain, rpc }) {
 }
 
 export default function useAddToNetwork() {
-  const queryClient = new QueryClient();
+  const queryClient = useQueryClient();
 
   return useMutation(addToNetwork, {
     onSettled: () => {

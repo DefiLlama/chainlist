@@ -1,4 +1,4 @@
-import { useMutation, QueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export async function connectWallet() {
   try {
@@ -20,7 +20,7 @@ export async function connectWallet() {
 }
 
 export default function useConnect() {
-  const queryClient = new QueryClient();
+  const queryClient = useQueryClient();
 
   return useMutation(() => connectWallet(), {
     onSettled: () => {
