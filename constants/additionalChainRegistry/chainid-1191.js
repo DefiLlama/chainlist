@@ -11,7 +11,7 @@ export const data = {
     decimals: 18
   },
   infoURL: "https://joachain.live",
-  shortName: "JOA",
+  shortName: "joa",
   chainId: 1191,
   networkId: 1191,
   explorers: [
