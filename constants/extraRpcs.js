@@ -275,6 +275,8 @@ export const privacyStatement = {
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
   daybreak:
     "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
+  solidrpc:
+    "SolidRPC records request metadata including timestamp, chain, RPC method, response status, and byte count for service operation and usage analytics, but does not log RPC request bodies or responses. Cloudflare processes IP addresses for DDoS protection and edge rate limiting. https://solidrpc.io/privacy",
 };
 
 export const extraRpcs = {
@@ -552,6 +554,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1165,6 +1172,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/56",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
+      },
     ],
   },
   97: {
@@ -1355,6 +1367,11 @@ export const extraRpcs = {
         url: "https://avax-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1608,6 +1625,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/137",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1977,6 +1999,11 @@ export const extraRpcs = {
         url: "https://rpc-arbitrum.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -2859,6 +2886,11 @@ export const extraRpcs = {
         url: "https://rpc-optimism.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -6434,6 +6466,11 @@ export const extraRpcs = {
         url: "https://base.daybreak-rpc.network",
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -15269,6 +15306,11 @@ export const extraRpcs = {
         url: "https://robinhood.daybreak-rpc.network",
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
