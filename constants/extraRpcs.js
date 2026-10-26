@@ -275,6 +275,8 @@ export const privacyStatement = {
     "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
   daybreak:
     "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
+  driftguard:
+    "DriftGuard operates zero-log, privacy-preserving public RPC endpoints with private mempool routing and MEV protection. We do not store IP addresses, request payloads, or wallet addresses. Rate limiting uses transient in-memory counters only. https://driftguard.live",
 };
 
 export const extraRpcs = {
@@ -552,6 +554,11 @@ export const extraRpcs = {
         url: "wss://eth.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.driftguard.live/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -1978,6 +1985,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://rpc.driftguard.live/arb",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   421613: {
@@ -2066,6 +2078,11 @@ export const extraRpcs = {
         url: "wss://arbitrum-nova.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.driftguard.live/nova",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -6434,6 +6451,11 @@ export const extraRpcs = {
         url: "https://base.daybreak-rpc.network",
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
+      },
+      {
+        url: "https://rpc.driftguard.live/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
