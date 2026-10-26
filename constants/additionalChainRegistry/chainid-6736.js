@@ -24,6 +24,11 @@ export const data = {
         "name": "Vexascan",
         "url": "https://vexascan.com/evm",
         "standard": "EIP3091"
+      },
+      {
+        "name": "WIND Explorer",
+        "url": "https://explorer.windcrypto.com/evm",
+        "standard": "EIP3091"
       }
     ]
 }
