@@ -15309,11 +15309,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.seleman,
       },
       {
-        url: "https://seleman.monarcaproject.com/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.seleman,
-      },
-      {
         url: "wss://explorer-ws.primevertexlabs.com.mx",
         tracking: "none",
         trackingDetails: privacyStatement.seleman,
