@@ -5558,6 +5558,9 @@ export const extraRpcs = {
   2028: {
     rpcs: ["https://rpc.armascan.io"],
   },
+  2061: {
+    rpcs: ["https://public-zigchain-testnet-evm-rpc.numia.xyz"],
+  },
   2077: {
     rpcs: ["http://rpc.qkacoin.org:8548"],
   },
