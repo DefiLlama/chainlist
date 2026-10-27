@@ -2,8 +2,6 @@ export const data = {
   "name": "Polkadot Testnet",
   "chain": "PAS",
   "rpc": [
-    "https://services.polkadothub-rpc.com/testnet",
-    "wss://services.polkadothub-rpc.com/testnet",
     "https://eth-rpc-testnet.polkadot.io",
     "wss://eth-rpc-testnet.polkadot.io"
   ],
