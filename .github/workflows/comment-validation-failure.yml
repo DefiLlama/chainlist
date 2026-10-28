@@ -1,0 +1,84 @@
+name: Comment on validation failure
+
+# Validate Chain Files runs on pull_request, where forks get a read-only token.
+# This workflow runs in the base repository's context and posts the result.
+on:
+  workflow_run:
+    workflows: ["Validate Chain Files"]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download validation results
+        uses: actions/download-artifact@v8
+        with:
+          name: validation-results
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: ${{ runner.temp }}/validation
+        continue-on-error: true
+
+      - name: Comment on pull request
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const dir = path.join(process.env.RUNNER_TEMP, 'validation');
+            const numberFile = path.join(dir, 'pr-number.txt');
+            if (!fs.existsSync(numberFile)) {
+              console.log('No pull request number in the artifact.');
+              return;
+            }
+
+            const number = Number(fs.readFileSync(numberFile, 'utf8').trim());
+            if (!Number.isInteger(number) || number <= 0) {
+              console.log('Invalid pull request number in the artifact.');
+              return;
+            }
+
+            // Bind the artifact to the pull request that produced this run, so a
+            // modified workflow in a fork cannot comment on an unrelated one.
+            const run = context.payload.workflow_run;
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: number,
+            });
+            if (pr.head.ref !== run.head_branch || pr.head.repo?.full_name !== run.head_repository?.full_name) {
+              console.log(`Pull request #${number} does not match this workflow run.`);
+              return;
+            }
+
+            let errorContent = 'See workflow logs for details.';
+            const file = path.join(dir, 'validation-errors.txt');
+
+            try {
+              if (fs.existsSync(file)) {
+                errorContent = fs.readFileSync(file, 'utf8');
+              }
+            } catch (error) {
+              console.log('Could not read validation errors file:', error.message);
+            }
+
+            // Comments are capped at 65536 characters.
+            if (errorContent.length > 60000) {
+              errorContent = errorContent.slice(0, 60000) + '\n... (truncated)';
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: number,
+              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + errorContent + "\n```"
+            });

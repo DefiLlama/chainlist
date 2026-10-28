@@ -1,10 +1,13 @@
 name: Validate Chain Files
 
 on:
-  pull_request_target:
+  pull_request:
     paths:
       - 'constants/additionalChainRegistry/*'
       - 'constants/extraRpcs.js'
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -12,7 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 100
+          # Full history so the pull request's merge base is available below.
+          fetch-depth: 0
+
+      # workflow_run.pull_requests is empty for fork pull requests, so carry the
+      # number in the artifact for comment-validation-failure.yml to read.
+      - name: Record pull request number
+        run: |
+          mkdir -p validation
+          echo "${{ github.event.pull_request.number }}" > validation/pr-number.txt
 
       - uses: pnpm/action-setup@v6
         name: Install pnpm
@@ -22,14 +33,16 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22.13
+          node-version: 24
           cache: 'pnpm'
 
       - name: Set changed files
         id: files
         run: |
-          echo "FILES_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/additionalChainRegistry/' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
-          echo "EXTRA_RPC_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep 'constants/extraRpcs.js' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
+          # Three-dot diff: the pull request's own changes since it diverged from
+          # the base, even when the base branch has moved on since.
+          echo "FILES_CHANGED=$(git diff --name-only --diff-filter=ACMR ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} | grep 'constants/additionalChainRegistry/' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
+          echo "EXTRA_RPC_CHANGED=$(git diff --name-only --diff-filter=ACMR ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} | grep 'constants/extraRpcs.js' | tr '\n' ' ' | sed 's/ $//' || true)" >> $GITHUB_ENV
 
       - name: Validate chain and extracRpcs files
         run: |
@@ -47,26 +60,14 @@ jobs:
         env:
           FILES_CHANGED: ${{ env.FILES_CHANGED }}
           EXTRA_RPC_CHANGED: ${{ env.EXTRA_RPC_CHANGED }}
+          VALIDATION_ERRORS_FILE: validation/validation-errors.txt
 
-      - name: Comment on PR if validation fails
+      # The token is read-only here, so the comment itself is posted by
+      # comment-validation-failure.yml from the workflow_run event.
+      - name: Upload validation results
         if: failure()
-        uses: actions/github-script@v8
+        uses: actions/upload-artifact@v7
         with:
-          script: |
-            const fs = require('fs');
-            let errorContent = 'See workflow logs for details.';
-            
-            try {
-              if (fs.existsSync('/tmp/validation-errors.txt')) {
-                errorContent = fs.readFileSync('/tmp/validation-errors.txt', 'utf8');
-              }
-            } catch (error) {
-              console.log('Could not read validation errors file:', error.message);
-            }
-            
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + errorContent + "\n```"
-            })
+          name: validation-results
+          path: validation
+          if-no-files-found: ignore
