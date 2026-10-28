@@ -16,7 +16,7 @@
   "explorers": [
     {
       "name": "DimeX Chain Explorer",
-      "url": "https://explorer.dimexchain.tech",
+      "url": "https://dimexscan.tech",
       "standard": "EIP3091"
     }
   ]
