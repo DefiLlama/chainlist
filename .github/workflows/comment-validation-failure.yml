@@ -9,6 +9,7 @@ on:
 
 permissions:
   actions: read
+  contents: read
   pull-requests: write
 
 jobs:
@@ -18,6 +19,13 @@ jobs:
       github.event.workflow_run.conclusion == 'failure'
     runs-on: ubuntu-latest
     steps:
+      # The decision itself lives in .github/scripts/pr-match.js so it can be
+      # tested without a workflow run; this checkout supplies that file.
+      - name: Check out pull request matching logic
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
       - name: Download validation results
         uses: actions/download-artifact@v8
         with:
@@ -33,6 +41,9 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
+            const { selectPullRequest } = require(
+              path.join(process.env.GITHUB_WORKSPACE, '.github/scripts/pr-match.js')
+            );
 
             const dir = path.join(process.env.RUNNER_TEMP, 'validation');
             const numberFile = path.join(dir, 'pr-number.txt');
@@ -47,16 +58,39 @@ jobs:
               return;
             }
 
-            // Bind the artifact to the pull request that produced this run, so a
-            // modified workflow in a fork cannot comment on an unrelated one.
+            // The artifact is untrusted. List every PR using this source
+            // branch, then let the tested matcher decide which one, if any,
+            // may receive the comment.
             const run = context.payload.workflow_run;
-            const { data: pr } = await github.rest.pulls.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: number,
-            });
-            if (pr.head.ref !== run.head_branch || pr.head.repo?.full_name !== run.head_repository?.full_name) {
-              console.log(`Pull request #${number} does not match this workflow run.`);
+            if (!run.head_repository?.full_name || !run.head_branch) {
+              console.log('Workflow run is missing its pull request identity.');
+              return;
+            }
+            const headOwner = run.head_repository.full_name.split('/')[0];
+            const pullRequests = [];
+            let listingTruncated = false;
+            for (let page = 1; page <= 10; page++) {
+              const { data } = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'all',
+                head: `${headOwner}:${run.head_branch}`,
+                per_page: 100,
+                page,
+              });
+              pullRequests.push(...data);
+              if (data.length < 100) break;
+              if (page === 10) listingTruncated = true;
+            }
+            // An incomplete list could hide the real match. Fail closed instead
+            // of reading "no match" into a truncated page set.
+            if (listingTruncated) {
+              console.log('Pull request listing hit the page cap; not commenting.');
+              return;
+            }
+            const match = selectPullRequest({ run, pullRequests, artifactNumber: number });
+            if (!match.number) {
+              console.log(match.reason);
               return;
             }
 
@@ -76,9 +110,17 @@ jobs:
               errorContent = errorContent.slice(0, 60000) + '\n... (truncated)';
             }
 
+            // Replace backticks with a visually similar character: Markdown
+            // ignores backslash escapes inside fenced code blocks.
+            const escapeFences = (s) => s.replace(/`/g, '\u02cb');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: number,
-              body: "Validation failed for chain files. Please check the workflow logs for details.\n\nError message:\n```\n" + errorContent + "\n```"
+              issue_number: match.number,
+              body:
+                'Validation failed for chain files. Please check the workflow logs for details.\n\n' +
+                'Error message:\n```\n' +
+                escapeFences(errorContent) +
+                '\n```'
             });

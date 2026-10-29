@@ -36,6 +36,9 @@ jobs:
           node-version: 24
           cache: 'pnpm'
 
+      - name: Test the pull request matcher
+        run: node --test tests/pr-match.test.js
+
       - name: Set changed files
         id: files
         run: |
