@@ -1,23 +1,23 @@
-{
-  "name": "StarChain",
-  "chain": "SVS",
-  "rpc": [
-    "https://rpc.starryscan.com/",
-  ],
-  "faucets": [],
-  "nativeCurrency": {
-    "name": "SVS",
-    "symbol": "SVS",
-    "decimals": 18
+export const data = {
+  name: "StarChain",
+  chain: "SVS",
+  rpc: ["https://rpc.starryscan.com"],
+  faucets: [],
+  nativeCurrency: {
+    name: "SVS",
+    symbol: "SVS",
+    decimals: 18,
   },
-  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://www.starrychain.net/",
-  "shortName": "SVS",
-  "chainId": 202308,
-  "networkId": 202308,
-  "explorers": [{
-    "name": "starryscan",
-    "url": "https://www.starryscan.com/",
-    "standard": "EIP3091"
-  }]
-}
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://www.starrychain.net",
+  shortName: "SVS",
+  chainId: 202308,
+  networkId: 202308,
+  explorers: [
+    {
+      name: "starryscan",
+      url: "https://www.starryscan.com",
+      standard: "EIP3091",
+    },
+  ],
+};
