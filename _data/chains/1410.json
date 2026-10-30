@@ -1,0 +1,23 @@
+{
+  "name": "LRX Chain",
+  "chain": "LRX",
+  "chainId": 1410,
+  "networkId": 1410,
+  "nativeCurrency": {
+    "name": "Liberty Reserve",
+    "symbol": "LRX",
+    "decimals": 18
+  },
+  "rpc": [
+    "https://rpc.lrxmining.com"
+  ],
+  "faucets": [],
+  "explorers": [
+    {
+      "name": "LRX Explorer",
+      "url": "https://scan.lrxmining.com",
+      "standard": "EIP3091"
+    }
+  ],
+  "infoURL": "https://lrxmining.com"
+}
