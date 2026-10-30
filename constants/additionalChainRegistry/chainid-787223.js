@@ -1,10 +1,10 @@
 export const data = {
-  name: "NVNM Tempo Testnet 1",
+  name: "NVNM Chain Testnet",
   chain: "NVNM",
   icon: "nvnm",
   rpc: [
     "https://rpc.nvnm.testnet.nvnmchain.io",
-    "wss://ws.nvnm.testnet.nvnmchain.io"
+    "wss://rpc.nvnm.testnet.nvnmchain.io"
   ],
   faucets: ["https://faucet.nvnm.testnet.nvnmchain.io"],
   nativeCurrency: {
@@ -13,7 +13,7 @@ export const data = {
     decimals: 6,
   },
   infoURL: "https://www.nvnmchain.io",
-  shortName: "nvnm-tempo-testnet-1",
+  shortName: "nvnm-chain-testnet",
   chainId: 787223,
   networkId: 787223,
   explorers: [

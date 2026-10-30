@@ -1,10 +1,10 @@
 export const data = {
-  name: "NVNM Tempo Devnet 1",
+  name: "NVNM Chain Devnet",
   chain: "NVNM",
   icon: "nvnm",
   rpc: [
     "https://rpc.nvnm.canary.mantrachain.dev",
-    "wss://ws.nvnm.canary.mantrachain.dev"
+    "wss://rpc.nvnm.canary.mantrachain.dev"
   ],
   faucets: ["https://faucet.nvnm.canary.mantrachain.dev"],
   nativeCurrency: {
@@ -13,7 +13,7 @@ export const data = {
     decimals: 6,
   },
   infoURL: "https://www.nvnmchain.io",
-  shortName: "nvnm-tempo-devnet-1",
+  shortName: "nvnm-chain-devnet",
   chainId: 787222,
   networkId: 787222,
   explorers: [
