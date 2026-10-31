@@ -3,7 +3,6 @@ export const data = {
   chain: "SMN",
   rpc: [
     "https://explorer.primevertexlabs.com.mx/rpc",
-    "https://seleman.monarcaproject.com/rpc",
     "wss://explorer-ws.primevertexlabs.com.mx"
   ],
   faucets: [
