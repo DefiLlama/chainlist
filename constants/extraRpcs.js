@@ -566,6 +566,11 @@ export const extraRpcs = {
       "https://node.expanse.tech",
     ],
   },
+
+2026: [
+    "https://compile-substitute-entrepreneurs-acrylic.trycloudflare.com",
+    "https://rpc.sovereignreserve.network"
+},  
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
@@ -596,10 +601,7 @@ export const extraRpcs = {
         trackingDetails:
           "Normal, successful RPC requests are not logged. Only abuse/anomaly events (rate-limit bans, oversized requests, malformed JSON, blocked methods, upstream errors) are logged, recording the client IP and a reason, with no automatic expiry on that log. This endpoint is proxied through Cloudflare, whose own edge network may separately log standard request metadata per their own policies, independent of the origin server.",
   137: [
-    "https://polygon-rpc.com"
-  ],
-  2026: [
-    "https://jonathan-arms-reception-remix.trycloudflare.com",
+    "https://compile-substitute-entrepreneurs-acrylic.trycloudflare.com",    "https://jonathan-arms-reception-remix.trycloudflare.com",
     "https://rpc.sovereignreserve.network"
   ],
   ],
