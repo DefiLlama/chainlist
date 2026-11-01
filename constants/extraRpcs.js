@@ -565,11 +565,11 @@ export const extraRpcs = {
       "https://node.eggs.cool",
       "https://node.expanse.tech",
     ],
-  },
 
-2026: [
+      2026: [
     "https://compile-substitute-entrepreneurs-acrylic.trycloudflare.com",
     "https://rpc.sovereignreserve.network"
+  ],"
 },  
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
