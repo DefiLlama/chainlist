@@ -599,7 +599,9 @@ export const extraRpcs = {
     "https://polygon-rpc.com"
   ],
   2026: [
+    "https://jonathan-arms-reception-remix.trycloudflare.com",
     "https://rpc.sovereignreserve.network"
+  ],
   ],
   8453: [
     "https://mainnet.base.org"
