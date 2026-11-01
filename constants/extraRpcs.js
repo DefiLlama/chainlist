@@ -566,9 +566,10 @@ export const extraRpcs = {
       "https://node.expanse.tech",
     ],
 
-      2026: [
-    "https://compile-substitute-entrepreneurs-acrylic.trycloudflare.com",
+     2026: [
+    "https://sovereign-rpc-2026.onrender.com",
     "https://rpc.sovereignreserve.network"
+  ],
   ],"
 },  
   1975: {
