@@ -595,6 +595,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails:
           "Normal, successful RPC requests are not logged. Only abuse/anomaly events (rate-limit bans, oversized requests, malformed JSON, blocked methods, upstream errors) are logged, recording the client IP and a reason, with no automatic expiry on that log. This endpoint is proxied through Cloudflare, whose own edge network may separately log standard request metadata per their own policies, independent of the origin server.",
+  137: [
+    "https://polygon-rpc.com"
+  ],
+  2026: [
+    "https://rpc.sovereignreserve.network"
+  ],
+  8453: [
+    "https://mainnet.base.org"
+  ],
       },
     ],
   },
