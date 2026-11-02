@@ -1,7 +1,7 @@
 {
-  "name": "Efikcoin Mainnet",
+  "name": "EfikChain Mainnet",
   "chain": "EFIK",
-  "icon": "efikchain",
+  "icon": "https://ipfs.io/ipfs/bafybeib3kqwbp3derktpxcvrmkecnmk25du5w5hqsgjfcfktxhfdi3cviy",
   "rpc": [
     "https://rpc.efikcoin.com"
   ],
@@ -15,13 +15,10 @@
   "shortName": "efik",
   "chainId": 199714,
   "networkId": 199714,
-  "name": "Efikchain",
-  "description": "Efikchain is the high-performance decentralized mainnet ecosystem for EFIK, providing fast and secure smart contract deployment powered by the Efikcoin community. Official website: https://efikcoin.com",
   "explorers": [
     {
-      "name": "Efikchain Explorer",
+      "name": "EfikChain Explorer",
       "url": "https://explorer.efikcoin.com",
-      "icon": "efikchain",
       "standard": "EIP3091"
     }
   ]
