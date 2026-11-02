@@ -2163,11 +2163,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://kaia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://kaia-mainnet.gateway.tatum.io/",
         tracking: "limited",
         trackingDetails: privacyStatement.tatum,
@@ -2354,11 +2349,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       {
-        url: "https://opbnb-testnet.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://opbnb-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -2412,11 +2402,6 @@ export const extraRpcs = {
         url: "wss://opbnb-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
-      },
-      {
-        url: "https://opbnb.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://opbnb.api.pocket.network",
@@ -3127,19 +3112,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://gnosis.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://gnosis.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://public-gno-mainnet.fastnode.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.fastnode,
       },
       {
         url: "wss://gnosis.drpc.org",
@@ -3186,11 +3161,6 @@ export const extraRpcs = {
         url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://gnosis-chiado.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
     ],
   },
@@ -5445,11 +5415,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://tac.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://tac.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -5750,11 +5715,6 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/mantle/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://mantle.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://mantle.api.pocket.network",
@@ -9438,11 +9398,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodies,
       },
       {
-        url: "https://sei.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://sei.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -9558,11 +9513,6 @@ export const extraRpcs = {
         url: "wss://unichain-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://unichain-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
     ],
   },
@@ -9837,7 +9787,6 @@ export const extraRpcs = {
       "https://rpc.vana.org",
       "https://evm-rpc-vana.josephtran.xyz",
       "https://evm-rpc-vana.j-node.net",
-      "https://islander-vana-rpc.spidernode.net",
     ],
   },
   543210: {
