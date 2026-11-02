@@ -111,6 +111,7 @@ export default {
   "988": "stable",
   "996": "bifrost",
   "999": "hyperliquid",
+  "1015": "phase",
   "1024": "clv",
   "1030": "conflux",
   "1088": "metis",
