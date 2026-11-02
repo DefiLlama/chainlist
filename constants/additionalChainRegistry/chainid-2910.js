@@ -1,7 +1,7 @@
 export const data = {
   name: "Morph Hoodi",
   chain: "ETH",
-  rpc: ["https://rpc-hoodi.morphl2.io"],
+  rpc: ["https://rpc-hoodi-bgw.morph.network", "https://rpc-hoodi.morph.network"],
   faucets: [],
   nativeCurrency: {
     name: "Ether",
@@ -9,7 +9,7 @@ export const data = {
     decimals: 18,
   },
   features: [{ name: "EIP155" }, { name: "EIP1559" }],
-  infoURL: "https://www.morphl2.io",
+  infoURL: "https://www.morph.network",
   shortName: "morph",
   chainId: 2910,
   networkId: 2910,
@@ -17,7 +17,7 @@ export const data = {
   explorers: [
     {
       name: "Morph Hoodi Testnet Explorer",
-      url: "https://explorer-hoodi.morphl2.io",
+      url: "https://explorer-hoodi.morph.network",
       standard: "EIP3091",
     },
   ],

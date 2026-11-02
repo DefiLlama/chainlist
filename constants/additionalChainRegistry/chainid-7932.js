@@ -2,7 +2,7 @@ export const data = {
   "name": "Univex Network",
   "chain": "UNIVEX",
   "rpc": [
-    "https://rpc.univexnetwork.com"
+    "https://rpc.univexnetwork.org"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -14,7 +14,7 @@ export const data = {
     { "name": "EIP155" },
     { "name": "EIP1559" }
   ],
-  "infoURL": "https://project.univexnetwork.xyz",
+  "infoURL": "https://univexnetwork.org",
   "shortName": "univex",
   "chainId": 7932,
   "networkId": 7932,
@@ -22,7 +22,7 @@ export const data = {
   "explorers": [
     {
       "name": "Univex Explorer",
-      "url": "https://explorer.univexnetwork.com",
+      "url": "https://explorer.univexnetwork.org",
       "standard": "EIP3091"
     }
   ]
