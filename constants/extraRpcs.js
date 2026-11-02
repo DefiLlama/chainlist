@@ -269,8 +269,6 @@ export const privacyStatement = {
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://explorer.primevertexlabs.com.mx/privacy",
-  ordofi:
-    "OrdoFi keeps no request logs and stores no client IP addresses: anonymous rate limits are counted per IP in memory for a rolling 60-second window and never written to disk. No accounts, no analytics, no third-party trackers. Wallet addresses are never correlated with IPs. The only thing recorded is data that is public on-chain once a transaction is mined (its hash, sender, recipient and value), for the network's public counters. Every transaction is simulated before submission and delivered directly to the sequencer, never through a public relay. Served through Cloudflare like most public endpoints, under Cloudflare's own policy. https://app.ordofi.network/docs#trust",
   backrunshield:
     "Backrun Shield keeps web access logs (IP, time, request details) for 7 days and counts rate limits per IP in memory only. For each eth_sendRawTransaction it records the hash, sender, recipient, value, call data, time and requesting IP (never the signed bytes), with no set deletion date. Transactions go privately to block builders (48Club, BlockRazor) and are broadcast publicly if not included within 2 blocks. It never trades in front of them; it may backrun one and pays 60 % of that profit to the sender. Nothing is sold or shared. https://backrunshield.com/privacy", 
   hostdefi:
@@ -281,6 +279,8 @@ export const privacyStatement = {
     "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
   driftguard:
     "DriftGuard operates zero-log, privacy-preserving public RPC endpoints with private mempool routing and MEV protection. We do not store IP addresses, request payloads, or wallet addresses. Rate limiting uses transient in-memory counters only. https://driftguard.live",
+  blocktailor:
+    "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
 };
 
 export const extraRpcs = {
@@ -563,6 +563,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/eth",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://eth.blocktailor.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.blocktailor,
       },
     ],
   },
@@ -1412,11 +1417,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.fantom.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
-      },
-      {
         url: "https://fantom.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -1432,16 +1432,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.callstatic,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/fantom/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://fantom-json-rpc.stakely.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.Stakely,
-      },
-      {
         url: "https://api.zan.top/ftm-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
@@ -1452,19 +1442,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://fantom.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://fantom.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://public-ftm-mainnet.fastnode.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.fastnode,
       },
     ],
   },
@@ -2188,11 +2168,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://kaia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://kaia-mainnet.gateway.tatum.io/",
         tracking: "limited",
         trackingDetails: privacyStatement.tatum,
@@ -2379,11 +2354,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       {
-        url: "https://opbnb-testnet.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://opbnb-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -2437,11 +2407,6 @@ export const extraRpcs = {
         url: "wss://opbnb-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
-      },
-      {
-        url: "https://opbnb.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://opbnb.api.pocket.network",
@@ -3152,19 +3117,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://gnosis.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://gnosis.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://public-gno-mainnet.fastnode.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.fastnode,
       },
       {
         url: "wss://gnosis.drpc.org",
@@ -3211,11 +3166,6 @@ export const extraRpcs = {
         url: " https://endpoints.omniatech.io/v1/gnosis/chiado/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://gnosis-chiado.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
     ],
   },
@@ -5470,11 +5420,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://tac.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://tac.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -5775,11 +5720,6 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/mantle/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://mantle.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://mantle.api.pocket.network",
@@ -8092,6 +8032,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://rpc.atlantischain.network/",
+      {
+        url: "https://rpc-elysium-testnet.globalstake.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "wss://rpc-robinhood.globalstake.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
     ],
   },
   6363: {
@@ -9453,11 +9403,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodies,
       },
       {
-        url: "https://sei.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://sei.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -9573,11 +9518,6 @@ export const extraRpcs = {
         url: "wss://unichain-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://unichain-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
     ],
   },
@@ -9852,7 +9792,6 @@ export const extraRpcs = {
       "https://rpc.vana.org",
       "https://evm-rpc-vana.josephtran.xyz",
       "https://evm-rpc-vana.j-node.net",
-      "https://islander-vana-rpc.spidernode.net",
     ],
   },
   543210: {
@@ -15068,16 +15007,6 @@ export const extraRpcs = {
         url: "https://rpc-robinhood.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
-      },
-      {
-        url: "https://rpc.ordofi.network",
-        tracking: "none",
-        trackingDetails: privacyStatement.ordofi,
-      },
-      {
-        url: "wss://rpc.ordofi.network",
-        tracking: "none",
-        trackingDetails: privacyStatement.ordofi,
       },
       {
         url: "https://rpc-robinhood.globalstake.io",
