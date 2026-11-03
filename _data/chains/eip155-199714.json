@@ -1,16 +1,10 @@
 {
   "name": "EfikChain Mainnet",
   "chain": "EFIK",
-  "icon": "https://ipfs.io/ipfs/bafybeib3kqwbp3derktpxcvrmkecnmk25du5w5hqsgjfcfktxhfdi3cviy",
-  "rpc": [
-    "https://rpc.efikcoin.com"
-  ],
+  "icon": "efikchain",
+  "rpc": ["https://rpc.efikcoin.com"],
   "faucets": [],
-  "nativeCurrency": {
-    "name": "EFIK",
-    "symbol": "EFIK",
-    "decimals": 18
-  },
+  "nativeCurrency": { "name": "EFIK", "symbol": "EFIK", "decimals": 18 },
   "infoURL": "https://efikcoin.com",
   "shortName": "efik",
   "chainId": 199714,
@@ -19,7 +13,7 @@
     {
       "name": "EfikChain Explorer",
       "url": "https://explorer.efikcoin.com",
+      "icon": "efikchain",
       "standard": "EIP3091"
     }
   ]
-}
