@@ -3,6 +3,7 @@ import { useQueries } from "@tanstack/react-query";
 import axios from "axios";
 
 const refetchInterval = 60_000;
+const websocketRequestTimeout = 15_000;
 
 export const rpcBody = JSON.stringify({
   jsonrpc: "2.0",
@@ -69,45 +70,74 @@ const useHttpQuery = (url) => {
   };
 };
 
-function createPromise() {
-  let resolve, reject;
-  const promise = new Promise((_resolve, _reject) => {
-    resolve = _resolve;
-    reject = _reject;
-  });
-
-  promise.resolve = resolve;
-  promise.reject = reject;
-
-  return promise;
-}
-
-const fetchWssChain = async (baseURL) => {
+const fetchWssChain = async (baseURL, signal) => {
   try {
-    // small hack to wait until socket connection opens to show loading indicator on table row
-    const queryFn = createPromise();
+    return await new Promise((resolve, reject) => {
+      const socket = new WebSocket(baseURL);
+      let requestStart;
+      let timeoutId;
+      let settled = false;
 
-    const socket = new WebSocket(baseURL);
-    let requestStart;
+      const cleanup = () => {
+        clearTimeout(timeoutId);
+        signal?.removeEventListener("abort", onAbort);
+        socket.onopen = null;
+        socket.onmessage = null;
+        socket.onerror = null;
+        socket.onclose = null;
+        socket.close();
+      };
 
-    socket.onopen = function () {
-      socket.send(rpcBody);
-      requestStart = Date.now();
-    };
+      const finish = (callback, value) => {
+        if (settled) return;
+        settled = true;
+        cleanup();
+        callback(value);
+      };
 
-    socket.onmessage = function (event) {
-      const data = JSON.parse(event.data);
+      const onAbort = () => {
+        const error = new Error("WebSocket query was cancelled");
+        error.name = "AbortError";
+        finish(reject, error);
+      };
 
-      const latency = Date.now() - requestStart;
-      queryFn.resolve({ ...data, latency });
-    };
+      timeoutId = setTimeout(() => finish(reject, new Error("WebSocket request timed out")), websocketRequestTimeout);
+      signal?.addEventListener("abort", onAbort, { once: true });
 
-    socket.onerror = function (e) {
-      queryFn.reject(e);
-    };
+      if (signal?.aborted) {
+        onAbort();
+        return;
+      }
 
-    return await queryFn;
+      socket.onopen = function () {
+        try {
+          socket.send(rpcBody);
+          requestStart = Date.now();
+        } catch (error) {
+          finish(reject, error);
+        }
+      };
+
+      socket.onmessage = function (event) {
+        try {
+          const data = JSON.parse(event.data);
+          const latency = Date.now() - requestStart;
+          finish(resolve, { ...data, latency });
+        } catch (error) {
+          finish(reject, error);
+        }
+      };
+
+      socket.onerror = function (error) {
+        finish(reject, error);
+      };
+
+      socket.onclose = function () {
+        finish(resolve, null);
+      };
+    });
   } catch (error) {
+    if (signal?.aborted) throw error;
     return null;
   }
 };
@@ -115,7 +145,7 @@ const fetchWssChain = async (baseURL) => {
 const useSocketQuery = (url) => {
   return {
     queryKey: [url],
-    queryFn: () => fetchWssChain(url),
+    queryFn: ({ signal }) => fetchWssChain(url, signal),
     select: useCallback((data) => formatData(url, data), []),
     refetchInterval,
   };
