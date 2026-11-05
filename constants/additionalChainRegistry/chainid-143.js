@@ -31,6 +31,11 @@ export const data = {
       "name": "Monadscan",
       "url": "https://monadscan.com",
       "standard": "EIP3091"
+    },
+    {
+      "name": "Valopers",
+      "url": "https://monad.valopers.com",
+      "standard": "EIP3091"
     }
   ]
 }
