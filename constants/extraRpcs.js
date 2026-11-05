@@ -281,6 +281,8 @@ export const privacyStatement = {
     "DriftGuard operates zero-log, privacy-preserving public RPC endpoints with private mempool routing and MEV protection. We do not store IP addresses, request payloads, or wallet addresses. Rate limiting uses transient in-memory counters only. https://driftguard.live",
   blocktailor:
     "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
+  blockvectra:
+    "BlockVectra's keyless public endpoints are rate-limited by client IP address; request metadata, including client IP addresses, is processed for rate limiting, abuse prevention and service operation. Traffic passes through Cloudflare. https://blockvectra.com/en/privacy/",
 };
 
 export const extraRpcs = {
@@ -568,6 +570,11 @@ export const extraRpcs = {
         url: "https://eth.blocktailor.com",
         tracking: "none",
         trackingDetails: privacyStatement.blocktailor,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/eth_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -1181,6 +1188,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.backrunshield,
       },
+      {
+        url: "https://api.blockvectra.com/v1/bsc_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   97: {
@@ -1600,6 +1612,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://api.blockvectra.com/v1/polygon_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   25: {
@@ -1973,6 +1990,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/arb",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/arb_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -6393,6 +6415,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
       },
+      {
+        url: "https://api.blockvectra.com/v1/base_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   11235: {
@@ -6839,6 +6866,11 @@ export const extraRpcs = {
         url: "wss://eth-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/eth_sepolia/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -8699,6 +8731,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://api.blockvectra.com/v1/fraxtal_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   13473: {
@@ -9484,6 +9521,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
       },
+      {
+        url: "https://api.blockvectra.com/v1/unichain_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   1301: {
@@ -9608,6 +9650,11 @@ export const extraRpcs = {
         url: "wss://ink-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/ink_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -11067,6 +11114,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://api.blockvectra.com/v1/katana_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   737373: {
@@ -12248,6 +12300,11 @@ export const extraRpcs = {
         url: "https://rpc.nodeflare.app/hl/public",
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/hyperevm_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -15028,6 +15085,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
       },
+      {
+        url: "https://api.blockvectra.com/v1/robinhood_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   46630: {
@@ -15047,6 +15109,11 @@ export const extraRpcs = {
         url: "wss://robinhood-sepolia-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/robinhood_testnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
