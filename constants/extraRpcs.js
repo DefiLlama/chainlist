@@ -582,6 +582,9 @@ export const extraRpcs = {
       "https://node.expanse.tech",
     ],
   },
+  944: {
+    rpcs: ["https://public-zigchain-evm-rpc.numia.xyz"],
+  },
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
   },
