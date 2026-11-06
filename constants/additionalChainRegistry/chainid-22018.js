@@ -1,0 +1,27 @@
+
+{
+  "name": "SkyGold Mainnet",
+  "chain": "SGOLD",
+  "rpc": [
+    "https://rpc-mainnet.skygoldchainecosystem.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "SkyGold",
+    "symbol": "SGOLD",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" }
+  ],
+  "shortName": "skygold",
+  "chainId": 22018,
+  "networkId": 22018,
+  "explorers": [
+    {
+      "name": "SkyGold Explorer",
+      "url": "https://explorer.skygoldchainecosystem.com",
+      "standard": "EIP3091"
+    }
+  ]
+}
