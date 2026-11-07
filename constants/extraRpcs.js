@@ -8228,6 +8228,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://api.blockvectra.com/v1/mode_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   217: {
