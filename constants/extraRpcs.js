@@ -9923,7 +9923,6 @@ export const extraRpcs = {
       },
       "https://mainnet.datarpc.io",
       "https://mainnet.storyrpc.io",
-      "https://story-evm-rpc.spidernode.net",
       {
         url: "https://evm-rpc.story.mainnet.dteam.tech",
         tracking: "none",
@@ -9942,11 +9941,9 @@ export const extraRpcs = {
       "https://evm-rpc-story.j-node.net",
       "https://story-evm-rpc.krews.xyz",
       "https://evmrpc.story.nodestake.org",
-      "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
       "https://story-mainnet-evmrpc.mandragora.io",
       "https://rpc-storyevm.aldebaranode.xyz",
-      "https://evm.story.cumulo.me",
       {
         url: "https://rpc.ankr.com/story_mainnet",
         tracking: "none",
