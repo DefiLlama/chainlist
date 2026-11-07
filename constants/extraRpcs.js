@@ -8930,6 +8930,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
       },
+      {
+        url: "https://api.blockvectra.com/v1/zora_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   4162: {
@@ -9168,6 +9173,11 @@ export const extraRpcs = {
         url: "wss://metall2.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/metall2_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -11180,6 +11190,11 @@ export const extraRpcs = {
         url: "https://rpc-arc.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/arc_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
