@@ -17,6 +17,7 @@ export const data = {
   "infoURL": "https://juchain.org",
   "shortName": "ju",
   "chainId": 202599,
+  "networkId": 202599,
   "icon": "juchain",
   "explorers": [
     {
