@@ -56,6 +56,7 @@ export default {
   "200": "xdaiarb",
   "204": "op_bnb",
   "207": "vinuchain",
+  "210": "bitnet",
   "225": "lachain",
   "228": "mind-network",
   "232": "lens",
