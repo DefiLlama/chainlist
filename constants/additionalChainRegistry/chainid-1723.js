@@ -1,7 +1,7 @@
 export const data = {
   name: "DimeX Chain",
   chain: "DimeX",
-  icon: "https://ipfs.io/ipfs/bafkreigcvflhkeund674i4ttgxnaobei7jr6pnkgbmnyembl64g3orerfm",
+  icon: "https://www.dimex.site/assets/dimex-token-logo-navy.svg",
   rpc: ["https://rpc.dimexchain.tech"],
   faucets: [],
   nativeCurrency: {
