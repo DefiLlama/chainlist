@@ -130,6 +130,7 @@ export default {
   "1514": "story",
   "1559": "tenet",
   "1625": "gravity",
+  "1643": "xgr",
   "1672": "pharos",
   "1729": "reya network",
   "1750": "metall2",
