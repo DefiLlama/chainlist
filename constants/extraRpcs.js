@@ -4750,11 +4750,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.PulseChainRpc,
       },
       {
-        url: "https://rpc.pulsechainstats.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.pulsechainstats,
-      },
-      {
         url: "https://rpc.hairylabs.io",
         tracking: "none",
         trackingDetails: privacyStatement.hairylabs,
