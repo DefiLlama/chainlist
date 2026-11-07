@@ -8,6 +8,8 @@
     "symbol": "DMXC",
     "decimals": 18
   },
+  "features": [
+    { "name": "EIP155" }],
   "infoURL": "https://dimexchain.tech",
   "shortName": "dimex",
   "chainId": 1723,
@@ -17,6 +19,7 @@
     {
       "name": "DimeX Chain Explorer",
       "url": "https://dimexscan.tech",
+      "icon": "dimex",
       "standard": "EIP3091"
     }
   ]
