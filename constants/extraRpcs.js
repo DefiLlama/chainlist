@@ -2263,8 +2263,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.blast.io",
-      "https://blast.din.dev/rpc",
       "https://blastl2-mainnet.public.blastapi.io",
       "https://li-fi-blast.intustechno.workers.dev/rpc",
       {
@@ -2297,11 +2295,6 @@ export const extraRpcs = {
         url: "https://blast.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/blast/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://rpc.owlracle.info/blast/70d38ce1826c4a60bb2a8e05a6c8b20f",
