@@ -2,8 +2,6 @@ export const data = {
   "name": "Polkadot",
   "chain": "DOT",
   "rpc": [
-    "https://services.polkadothub-rpc.com/mainnet",
-    "wss://services.polkadothub-rpc.com/mainnet",
     "https://eth-rpc.polkadot.io",
     "wss://eth-rpc.polkadot.io"
   ],

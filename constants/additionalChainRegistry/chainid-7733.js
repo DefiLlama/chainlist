@@ -19,9 +19,9 @@ export const data = {
     status: "active",
     explorers: [
       {
-        name: "Blockscout",
-        url: "https://explorer.testnet.tajirchain.com",
-        icon: "blockscout",
+        name: "TJR Scan",
+        url: "https://testnet.tjrscan.com",
+        icon: "tajir",
         standard: "EIP3091",
       },
     ],

@@ -71,7 +71,7 @@ function Chain({ chain }) {
   const t = useTranslations("Common", "en");
 
   const icon = React.useMemo(() => {
-    return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}` : "/unknown-logo.png";
   }, [chain]);
 
   const chainName = chain.name === "OP Mainnet" ? "Optimism Maninnet" : chain.name;

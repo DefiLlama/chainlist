@@ -9,11 +9,11 @@
     "build2": "./scripts/build.sh",
     "start": "next start",
     "serve": "serve out",
-    "test": "node tests/check-duplicate-keys.js"
+    "test": "node tests/check-duplicate-keys.js",
+    "generate-provider-rpcs": "node scripts/generate-provider-rpcs.mjs"
   },
   "dependencies": {
     "@ariakit/react": "0.2.17",
-    "@hypelab/sdk-react": "1.1.0",
     "@tanstack/react-query": "4.44.0",
     "axios": "1.16.0",
     "fathom-client": "3.7.2",

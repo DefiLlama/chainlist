@@ -72,7 +72,7 @@ function Chain({ chain }) {
   const t = useTranslations("Common", "zh");
 
   const icon = React.useMemo(() => {
-    return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return chain?.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}` : "/unknown-logo.png";
   }, [chain]);
 
   return (
