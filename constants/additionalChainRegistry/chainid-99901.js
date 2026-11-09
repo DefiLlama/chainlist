@@ -16,7 +16,7 @@ export const data = {
   explorers: [
     {
       name: "Elysium Explorer",
-      url: "https://elysium.kinetiq.xyz/explorer"
+      url: "https://elysium.kinetiq.xyz"
     },
   ],
   status: "active",
