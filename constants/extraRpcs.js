@@ -11537,6 +11537,15 @@ export const extraRpcs = {
       },
     ],
   },
+  1215655279: {
+    rpcs: [
+      {
+        url: "https://rpc-uat.evm.mirasmanda.uz",
+        tracking: "none",
+        trackingDetails: privacyStatement.mirasmanda,
+      },
+    ],
+  },
   73790: {
     rpcs: [
       {
