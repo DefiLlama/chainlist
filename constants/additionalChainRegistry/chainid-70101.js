@@ -1,4 +1,4 @@
-const data = {
+export const data = {
   name: "EKI Chain",
   chain: "EKI",
   chainId: 70101,
@@ -21,5 +21,3 @@ const data = {
     }
   ]
 }
-
-module.exports = { data }
