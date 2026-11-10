@@ -324,6 +324,7 @@ export default {
   "7777777": "zora",
   "9999999": "fluence",
   "20250217": "xphere",
+  "20261001": "cookchain",
   "21000000": "corn",
   "245022934": "neon",
   "253368190": "flame",
