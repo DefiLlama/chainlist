@@ -16,12 +16,16 @@ function writeToStepSummary(content) {
   }
 }
 
-// Function to write errors to a file that persists between steps
+/**
+ * Writes errors to the file the workflow uploads for the comment job.
+ * @param {string[]} errors Validation messages to persist.
+ */
 function writeErrorsToFile(errors) {
+  const errorsFile = process.env.VALIDATION_ERRORS_FILE || '/tmp/validation-errors.txt';
   try {
     const errorContent = errors.join('\n');
-    fs.writeFileSync('/tmp/validation-errors.txt', errorContent);
-    console.log('Errors written to /tmp/validation-errors.txt');
+    fs.writeFileSync(errorsFile, errorContent);
+    console.log(`Errors written to ${errorsFile}`);
   } catch (error) {
     console.error('Failed to write errors to file:', error.message);
   }
@@ -92,7 +96,7 @@ async function validateChainFile(filePath) {
     stringCheck(data, 'name', true);
     stringCheck(data, 'shortName', true);
     stringCheck(data, 'chain', true);
-    stringCheck(data, 'icon');
+    iconCheck(data);
     stringCheck(data, 'infoURL')
     stringCheck(data, 'title')
 
@@ -264,6 +268,19 @@ function stringCheck(obj, field, isMandatory = false) {
   if (obj.hasOwnProperty(field) && typeof obj[field] !== 'string') {
     throw new Error(`Chain ${field} is not a string`);
   }
+}
+
+/**
+ * Accepts a plain icon string or the richer { url, format, width, height } form.
+ * @param {object} data Chain registry entry.
+ */
+function iconCheck(data) {
+  if (!data.hasOwnProperty('icon')) return;
+  const icon = data.icon;
+  if (typeof icon === 'string') return;
+  // Some chain teams use the richer { url, format, width, height } form.
+  if (icon && typeof icon === 'object' && typeof icon.url === 'string') return;
+  throw new Error('Chain icon should be a string or an object with a url string');
 }
 
 function numberCheck(obj, field, isMandatory = false) {
