@@ -2,7 +2,7 @@ export const data = {
   "name": "D Testnet",
   "chain": "Dchain",
   "rpc": [
-    "https://eth-testnet.dfoundation.io"
+    "https://eth-testnet.platformd.io"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -11,7 +11,7 @@ export const data = {
     "decimals": 18
   },
   "features": [{ "name": "EIP1559" }],
-  "infoURL": "https://dfoundation.io",
+  "infoURL": "https://platformd.io",
   "shortName": "d-testnet",
   "chainId": 430,
   "networkId": 430,
