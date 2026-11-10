@@ -281,6 +281,8 @@ export const privacyStatement = {
     "DriftGuard operates zero-log, privacy-preserving public RPC endpoints with private mempool routing and MEV protection. We do not store IP addresses, request payloads, or wallet addresses. Rate limiting uses transient in-memory counters only. https://driftguard.live",
   blocktailor:
     "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
+  thyme:
+    "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
 };
 
 export const extraRpcs = {
@@ -568,6 +570,11 @@ export const extraRpcs = {
         url: "https://eth.blocktailor.com",
         tracking: "none",
         trackingDetails: privacyStatement.blocktailor,
+      },
+      {
+        url: "https://ethereum-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
@@ -960,6 +967,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://polygon-amoy.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
     ],
   },
   56: {
@@ -1167,6 +1179,11 @@ export const extraRpcs = {
         url: "https://rpc.backrunshield.com",
         tracking: "limited",
         trackingDetails: privacyStatement.backrunshield,
+      },
+      {
+        url: "https://bnb-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
@@ -1581,6 +1598,11 @@ export const extraRpcs = {
         url: "https://rpc-polygon.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://polygon-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
@@ -2815,6 +2837,11 @@ export const extraRpcs = {
         url: "https://rpc-optimism.blockmachine.io/",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://optimism-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
@@ -6799,6 +6826,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://ethereum-sepolia.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
     ],
   },
   7762959: {
@@ -9477,6 +9509,11 @@ export const extraRpcs = {
         url: "wss://unichain-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://unichain-sepolia.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
