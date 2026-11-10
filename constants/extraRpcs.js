@@ -1023,12 +1023,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodereal,
       },
       {
-        url: "https://go.getblock.io/cc778cdbdf5c4b028ec9456e0e6c0cf3",
-        tracking: "limited",
-        trackingDetails: privacyStatement.getblock,
-      },
-      "https://bscrpc.com",
-      {
         url: "https://binance.nodereal.io",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
@@ -1104,11 +1098,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nownodes,
       },
       {
-        url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
-      },
-      {
         url: "wss://bsc-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
@@ -1127,11 +1116,6 @@ export const extraRpcs = {
         url: "https://bsc.blockrazor.xyz/maxbackrun",
         tracking: "none",
         trackingDetails: privacyStatement.BlockRazor,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://rpc.owlracle.info/bsc/70d38ce1826c4a60bb2a8e05a6c8b20f",
