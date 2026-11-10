@@ -7997,6 +7997,11 @@ export const extraRpcs = {
       },
       "https://rpc.elysiumchain.tech/",
       "https://rpc.elysiumchain.us/",
+      {
+        url: "https://elysium.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   1342: {
@@ -8032,6 +8037,11 @@ export const extraRpcs = {
         url: "wss://rpc-robinhood.globalstake.io/ws",
         tracking: "none",
         trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "https://robinhood.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -11116,6 +11126,11 @@ export const extraRpcs = {
         url: "https://rpc-arc.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://arc.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
