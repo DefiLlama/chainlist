@@ -3,6 +3,7 @@ import { useQueries } from "@tanstack/react-query";
 import axios from "axios";
 
 const refetchInterval = 60_000;
+const httpRequestTimeout = 15_000;
 
 export const rpcBody = JSON.stringify({
   jsonrpc: "2.0",
@@ -11,11 +12,12 @@ export const rpcBody = JSON.stringify({
   id: 1,
 });
 
-const fetchChain = async (baseURL) => {
+const fetchChain = async (baseURL, signal) => {
   if (baseURL.includes("API_KEY")) return null;
   try {
     let API = axios.create({
       baseURL,
+      timeout: httpRequestTimeout,
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,10 +42,11 @@ const fetchChain = async (baseURL) => {
       },
     );
 
-    let { data, latency } = await API.post("", rpcBody);
+    let { data, latency } = await API.post("", rpcBody, { signal });
 
     return { ...data, latency };
   } catch (error) {
+    if (signal?.aborted) throw error;
     return null;
   }
 };
@@ -63,7 +66,7 @@ const formatData = (url, data) => {
 const useHttpQuery = (url) => {
   return {
     queryKey: [url],
-    queryFn: () => fetchChain(url),
+    queryFn: ({ signal }) => fetchChain(url, signal),
     refetchInterval,
     select: useCallback((data) => formatData(url, data), []),
   };
