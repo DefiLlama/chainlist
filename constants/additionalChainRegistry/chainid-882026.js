@@ -1,4 +1,4 @@
-{
+export const data = {
   "name": "Warga Network L1",
   "chain": "WRG",
   "rpc": [
