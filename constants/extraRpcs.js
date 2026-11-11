@@ -1619,7 +1619,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodeflare,
       },
       "https://evm.cronos.org",
-      "https://cronos-rpc.elk.finance/",
       {
         url: "https://cronos-evm-rpc.publicnode.com",
         tracking: "none",
@@ -1646,13 +1645,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://rpc.vvs.finance",
-      "https://mmf-rpc.xstaking.sg",
       "https://rpc.nebkas.ro",
-      {
-        url: "https://endpoints.omniatech.io/v1/cronos/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       {
         url: "https://rpc.owlracle.info/cro/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
