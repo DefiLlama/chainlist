@@ -137,6 +137,7 @@ export default {
   "1750": "metall2",
   "1818": "cube",
   "1868": "soneium",
+  "1875": "whitechain",
   "1890": "lightlink",
   "1907": "bitcichain",
   "1923": "swellchain",
