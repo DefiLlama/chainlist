@@ -11,6 +11,7 @@ export const data = {
   features: [{ name: "EIP155" }],
   infoURL: "https://github.com/snforem-cpu/sobya-chain",
   shortName: "sobya",
+  icon: "sobya",
   chainId: 357812033857,
   networkId: 357812033857,
   explorers: [
