@@ -2,7 +2,7 @@ export const data = {
   "name": "D Mainnet",
   "chain": "Dchain",
   "rpc": [
-    "https://eth.dfoundation.io"
+    "https://eth.platformd.io"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -11,7 +11,7 @@ export const data = {
     "decimals": 18
   },
   "features": [{ "name": "EIP1559" }],
-  "infoURL": "https://dfoundation.io",
+  "infoURL": "https://platformd.io",
   "shortName": "d-mainnet",
   "chainId": 433,
   "networkId": 433,
