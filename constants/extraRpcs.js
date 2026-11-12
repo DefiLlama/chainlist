@@ -1613,11 +1613,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      {
-        url: "https://rpc.nodeflare.app/cronos/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
-      },
       "https://evm.cronos.org",
       "https://cronos-rpc.elk.finance/",
       {
@@ -2015,11 +2010,6 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/42170",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
-      },
-      {
-        url: "https://rpc.nodeflare.app/nova/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
       },
       "https://nova.arbitrum.io/rpc",
       {
@@ -5657,11 +5647,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      {
-        url: "https://rpc.nodeflare.app/mantle/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
-      },
       "https://rpc.mantle.xyz",
       {
         url: "https://mantle-mainnet.public.blastapi.io",
@@ -7339,11 +7324,6 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/59144",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
-      },
-      {
-        url: "https://rpc.nodeflare.app/linea/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
       },
       "https://rpc.linea.build",
       {
@@ -10972,11 +10952,6 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/9745",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
-      },
-      {
-        url: "https://rpc.nodeflare.app/plasma/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodeflare,
       },
       {
         url: "https://plasma.drpc.org",
