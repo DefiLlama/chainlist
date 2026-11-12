@@ -2701,6 +2701,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://api.blockvectra.com/v1/world_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
   4801: {
@@ -3726,6 +3731,11 @@ export const extraRpcs = {
         url: "wss://boba.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/boba_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
@@ -10293,6 +10303,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/soneium",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://api.blockvectra.com/v1/soneium_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
       },
     ],
   },
