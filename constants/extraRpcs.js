@@ -3601,6 +3601,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://api.blockvectra.com/v1/rootstock_mainnet/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockvectra,
+      },
     ],
   },
 
