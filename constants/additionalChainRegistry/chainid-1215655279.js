@@ -1,5 +1,5 @@
 export const data = {
-  "name": "Mirasmanda UAT",
+  "name": "Mirasmanda UAT Testnet",
   "chain": "MIRASMANDA",
   "rpc": ["https://rpc-uat.evm.mirasmanda.uz"],
   "faucets": ["https://faucet-uat.evm.mirasmanda.uz"],
@@ -13,6 +13,7 @@ export const data = {
   "shortName": "mirasmanda-uat",
   "chainId": 1215655279,
   "networkId": 1215655279,
+  "slip44": 1,
   "icon": "mirasmanda",
   "explorers": [
     {
