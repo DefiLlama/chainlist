@@ -4666,7 +4666,7 @@ export const extraRpcs = {
     rpcs: ["https://http-mainnet.hoosmartchain.com"],
   },
   210: {
-    rpcs: ["https://rpc.bitnetmoney.org", "https://rpc.bitnetmoney.com"],
+    rpcs: ["https://rpc.bitnetmoney.org", "https://rpc.bitnetmoney.com", "https://rpc.bitnet-community.org"],
   },
   211: {
     rpcs: [],
