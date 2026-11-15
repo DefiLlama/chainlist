@@ -7612,16 +7612,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://rpc.taiko.tools",
-        tracking: "none",
-        trackingDetails: privacyStatement.taikotools,
-      },
-      {
-        url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
-      },
-      {
         url: "wss://taiko-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
@@ -7640,11 +7630,6 @@ export const extraRpcs = {
         url: "https://taiko-mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://taiko-json-rpc.stakely.io/",
-        tracking: "none",
-        trackingDetails: privacyStatement.Stakely,
       },
       {
         url: "https://taiko.therpc.io",
