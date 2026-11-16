@@ -1,9 +1,9 @@
 export const data = {
   name: "LitVM Liteforge Testnet",
   chain: "Liteforge",
-  rpc: ["https://liteforge.rpc.caldera.xyz/http"],
+  rpc: ["https://rpc.testnet.liteforge.zeeve.net/"],
   features: [{ name: "EIP155" }],
-  faucets: [],
+  faucets: ["https://faucet.testnet.liteforge.zeeve.net/"],
   nativeCurrency: {
     name: "zkLTC",
     symbol: "zkLTC",
@@ -15,7 +15,7 @@ export const data = {
   explorers: [
     {
       name: "Liteforge Explorer",
-      url: "https://liteforge.explorer.caldera.xyz",
+      url: "https://explorer.testnet.liteforge.zeeve.net",
       standard: "EIP3091",
     },
   ],
