@@ -15163,4 +15163,40 @@ export const extraRpcs = {
   },
 };
 
+/**
+ * RpcNode.dev public RPC endpoints
+ * https://rpcnode.dev/public-nodes
+ */
+const rpcNodeEndpoints = {
+  1: "https://public-ethereum-mainnet.rpcnode.dev",
+  10: "https://public-optimism-mainnet.rpcnode.dev",
+  56: "https://public-bsc-mainnet.rpcnode.dev",
+  137: "https://public-matic-mainnet.rpcnode.dev",
+  143: "https://public-monad-mainnet.rpcnode.dev",
+  5042: "https://public-arc-mainnet.rpcnode.dev",
+  8453: "https://public-base-mainnet.rpcnode.dev",
+  42161: "https://public-arb-mainnet.rpcnode.dev",
+  43114: "https://public-avax-mainnet.rpcnode.dev",
+};
+
+for (const [chainId, url] of Object.entries(rpcNodeEndpoints)) {
+  if (!extraRpcs[chainId]) {
+    extraRpcs[chainId] = { rpcs: [] };
+  }
+
+  const exists = extraRpcs[chainId].rpcs.some(
+    (rpc) => (typeof rpc === "string" ? rpc : rpc.url) === url
+  );
+
+  if (!exists) {
+    extraRpcs[chainId].rpcs.push({
+      url,
+      tracking: "limited",
+      trackingDetails:
+        "RpcNode.dev uses IP-based rate limiting (5 requests per second per IP). See https://rpcnode.dev/privacy-policy for data handling details.",
+    });
+  }
+}
+
 export default extraRpcs;
+
