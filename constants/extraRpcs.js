@@ -283,6 +283,8 @@ export const privacyStatement = {
     "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
   thyme:
     "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
+  ethras:
+    "Ethras does not store RPC request bodies, wallet addresses or signed transactions in application request logs. Client IPs are used temporarily for rate limiting. https://ethras.org/privacy",
 };
 
 export const extraRpcs = {
@@ -575,6 +577,11 @@ export const extraRpcs = {
         url: "https://ethereum-mainnet.rpc.thyme.sh/public",
         tracking: "none",
         trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://ethras.org/public/ethereum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ethras,
       },
     ],
   },
