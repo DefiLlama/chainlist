@@ -189,6 +189,7 @@ export default {
   "5330": "superseed",
   "5432": "yeying",
   "5464": "saga",
+  "5291": "src-chain",
   "5551": "nahmii",
   "5887": "flynet",
   "6001": "bouncebit",
