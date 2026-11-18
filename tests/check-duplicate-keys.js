@@ -146,54 +146,96 @@ function checkChainIdsDuplicates() {
   console.log(`✓ No duplicate keys found in chainIds (checked ${chainIds.size} keys)`);
 }
 
+/**
+ * Check for duplicate RPC URLs within each chain in extraRpcs
+ */
+async function checkDuplicateRpcs() {
+  console.log("Checking extraRpcs for duplicate RPC URLs within each chain...");
+
+  const { extraRpcs } = await import("../constants/extraRpcs.js");
+  const normalize = (u) => String(u).replace(/\/+$/, "");
+  const duplicates = [];
+
+  for (const [chainId, config] of Object.entries(extraRpcs)) {
+    const urls = (config.rpcs || [])
+      .map((r) => (typeof r === "string" ? r : r && r.url))
+      .filter(Boolean)
+      .map(normalize);
+    const seen = new Set();
+    for (const url of urls) {
+      if (seen.has(url)) {
+        duplicates.push(`Duplicate RPC URL "${url}" in chain ${chainId}`);
+      }
+      seen.add(url);
+    }
+  }
+
+  if (duplicates.length > 0) {
+    console.error(`ERROR: Duplicate RPC URLs found within chains:\n${duplicates.map((d) => `  - ${d}`).join("\n")}`);
+    throw new Error("Duplicate RPC URLs found within extraRpcs!");
+  }
+
+  console.log(`✓ No duplicate RPC URLs found within any chain (checked ${Object.keys(extraRpcs).length} chains)`);
+}
+
 // Run all tests and collect errors
-console.log("=".repeat(60));
-console.log("Running syntax and duplicate key checks...");
-console.log("=".repeat(60));
-
-const errors = [];
-
-// First check syntax validity
-try {
-  checkJsSyntax(path.join(__dirname, "../constants/extraRpcs.js"), "extraRpcs.js");
-} catch (error) {
-  errors.push(error.message);
-}
-
-try {
-  checkJsSyntax(path.join(__dirname, "../constants/chainIds.js"), "chainIds.js");
-} catch (error) {
-  errors.push(error.message);
-}
-
-// Then check for duplicates
-try {
-  checkPrivacyStatementDuplicates();
-} catch (error) {
-  errors.push(error.message);
-}
-
-try {
-  checkExtraRpcsDuplicates();
-} catch (error) {
-  errors.push(error.message);
-}
-
-try {
-  checkChainIdsDuplicates();
-} catch (error) {
-  errors.push(error.message);
-}
-
-console.log("=".repeat(60));
-
-if (errors.length > 0) {
-  console.error(`✗ ${errors.length} test(s) failed:`);
-  errors.forEach((err) => console.error(`  - ${err}`));
-  console.error("=".repeat(60));
-  process.exit(1);
-} else {
-  console.log("✓ All duplicate key checks passed!");
+async function runTests() {
   console.log("=".repeat(60));
-  process.exit(0);
+  console.log("Running syntax and duplicate key checks...");
+  console.log("=".repeat(60));
+
+  const errors = [];
+
+  // First check syntax validity
+  try {
+    checkJsSyntax(path.join(__dirname, "../constants/extraRpcs.js"), "extraRpcs.js");
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  try {
+    checkJsSyntax(path.join(__dirname, "../constants/chainIds.js"), "chainIds.js");
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  // Then check for duplicates
+  try {
+    checkPrivacyStatementDuplicates();
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  try {
+    checkExtraRpcsDuplicates();
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  try {
+    checkChainIdsDuplicates();
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  try {
+    await checkDuplicateRpcs();
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  console.log("=".repeat(60));
+
+  if (errors.length > 0) {
+    console.error(`✗ ${errors.length} test(s) failed:`);
+    errors.forEach((err) => console.error(`  - ${err}`));
+    console.error("=".repeat(60));
+    process.exit(1);
+  } else {
+    console.log("✓ All duplicate key and RPC checks passed!");
+    console.log("=".repeat(60));
+    process.exit(0);
+  }
 }
+
+runTests();
