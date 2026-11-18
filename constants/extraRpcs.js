@@ -271,6 +271,8 @@ export const privacyStatement = {
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://explorer.primevertexlabs.com.mx/privacy",
   backrunshield:
     "Backrun Shield keeps web access logs (IP, time, request details) for 7 days and counts rate limits per IP in memory only. For each eth_sendRawTransaction it records the hash, sender, recipient, value, call data, time and requesting IP (never the signed bytes), with no set deletion date. Transactions go privately to block builders (48Club, BlockRazor) and are broadcast publicly if not included within 2 blocks. It never trades in front of them; it may backrun one and pays 60 % of that profit to the sender. Nothing is sold or shared. https://backrunshield.com/privacy", 
+  backrun:
+    "backrun does not store IP addresses or signed transactions. For each transaction it records the transaction hash and whether each route accepted it; route logs are kept for up to 15 days. Transactions are sent privately (not to the public mempool) to Flashbots Protect and MEV Blocker on Ethereum, to BNB Chain builders' private RPCs (48 Club, BlockRazor) on BNB Chain, and to a block builder operated with backrun. https://backrun.io/privacy",
   hostdefi:
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
   Saxemberg:
@@ -290,6 +292,11 @@ export const privacyStatement = {
 export const extraRpcs = {
   1: {
     rpcs: [
+      {
+        url: "https://eth.backrun.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.backrun,
+      },
       {
         url: "https://xrpc.cl/eth",
         tracking: "none",
@@ -983,6 +990,11 @@ export const extraRpcs = {
   },
   56: {
     rpcs: [
+      {
+        url: "https://bsc.backrun.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.backrun,
+      },
       {
         url: "https://xrpc.cl/bsc",
         tracking: "none",
