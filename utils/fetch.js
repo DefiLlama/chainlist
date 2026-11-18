@@ -5,6 +5,7 @@ import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch";
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
 import { isTestnet } from "./index.js";
+import { getActiveChains } from "./chains.js";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -178,14 +179,7 @@ export async function generateChainData() {
     fetchWithCache("https://api.llama.fi/chains"),
   ]);
 
-  const overwrittenIds = overwrittenChains.reduce((acc, curr) => {
-    acc[curr.chainId] = true;
-    return acc;
-  }, {});
-
-  const activeChains = chains
-    .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
-    .concat(overwrittenChains)
+  const activeChains = getActiveChains(chains, overwrittenChains)
     .map((chain) => populateChain(chain, chainTvls));
 
   const chainsWithTestnetTvls = handleTestnets(activeChains);

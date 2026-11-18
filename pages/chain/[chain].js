@@ -4,6 +4,7 @@ import Link from "next/link";
 // import { useTranslations } from "next-intl";
 import { notTranslation as useTranslations } from "../../utils";
 import { populateChain, fetchWithCache } from "../../utils/fetch";
+import { getActiveChains } from "../../utils/chains.js";
 import AddNetwork from "../../components/chain";
 import Layout from "../../components/Layout";
 import RPCList from "../../components/RPCList";
@@ -25,14 +26,14 @@ export async function getStaticProps({ params }) {
         c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
         c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
     ) ??
-    chains.find(
+    getActiveChains(chains, overwrittenChains).find(
       (c) =>
         c.chainId?.toString() === params.chain ||
         c.chainId?.toString() === Object.entries(chainIds).find(([, name]) => params.chain === name)?.[0] ||
         c.name.toLowerCase() === params.chain.toLowerCase().split("%20").join(" "),
     );
 
-  if (!chain) {
+  if (!chain || chain.status === "deprecated") {
     return {
       notFound: true,
     };
@@ -49,7 +50,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const chains = await fetchWithCache("https://chainid.network/chains.json");
 
-  const paths = chains
+  const paths = getActiveChains(chains, overwrittenChains)
     .map((chain) => [
       {
         params: {
@@ -62,20 +63,6 @@ export async function getStaticPaths() {
         },
       },
     ])
-    .concat(
-      overwrittenChains.map((chain) => [
-        {
-          params: {
-            chain: chain.chainId.toString(),
-          },
-        },
-        {
-          params: {
-            chain: chain.name.toLowerCase(),
-          },
-        },
-      ]),
-    )
     .flat();
 
   return { paths, fallback: false };
