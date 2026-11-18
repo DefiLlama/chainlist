@@ -1,17 +1,17 @@
 export const data = {
-  "name": "Infinite Improbability Drive Testnet",
+  "name": "42 Chain Testnet",
   "chain": "INFINITE",
   "rpc": [
     "https://evm-rpc-testnet.infinitedrive.xyz"
   ],
-  "faucets": [],
+  "faucets": ["https://testnet-faucet.xenia88.xyz"],
   "nativeCurrency": {
     "name": "TestImprobability",
     "symbol": "TEST42",
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://infinitedrive.xyz",
+  "infoURL": "https://42chain.org",
   "shortName": "infinite-testnet",
   "chainId": 421018001,
   "networkId": 421018001,

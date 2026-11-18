@@ -1,5 +1,5 @@
 export const data = {
-  "name": "Infinite Drive",
+  "name": "42 Chain",
   "chain": "INFINITE",
   "rpc": [
     "https://evm.infinitedrive.xyz"
@@ -11,7 +11,7 @@ export const data = {
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://infinitedrive.xyz",
+  "infoURL": "https://42chain.org",
   "shortName": "infinite",
   "chainId": 421018,
   "networkId": 421018,
