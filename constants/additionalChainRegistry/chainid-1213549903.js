@@ -21,5 +21,6 @@ export const data = {
       "icon": "blockscout",
       "standard": "EIP3091"
     }
-  ]
+  ],
+  "chainSlug": "mirasmanda"
 }
