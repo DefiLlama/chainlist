@@ -5571,11 +5571,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://evm.kava.chainstacklabs.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
-      },
-      {
         url: "wss://wevm.kava.chainstacklabs.com",
         tracking: "yes",
         trackingDetails: privacyStatement.chainstack,
