@@ -20,6 +20,6 @@ export const data ={
     }
   ],
   "faucets": [],
-  "features": ["EVM Compatible", "MetaMask Supported"],
+  "features": [{ "name": "EVM Compatible" }, { "name": "MetaMask Supported" }],
   "icon": "https://raw.githubusercontent.com/King11919/BMC-Chain/refs/heads/main/1758714840_BMC (4).png"
 };

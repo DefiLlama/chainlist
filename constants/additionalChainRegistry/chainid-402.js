@@ -1,5 +1,6 @@
 export const data = {
   "name": "Actumic Mainnet",
+  "chain": "Actumic",
   "rpc": [
     "https://scan.actumic.com/rpc"
   ],
