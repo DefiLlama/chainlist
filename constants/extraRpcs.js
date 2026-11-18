@@ -285,6 +285,8 @@ export const privacyStatement = {
     "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
   ethras:
     "Ethras does not store RPC request bodies, wallet addresses or signed transactions in application request logs. Client IPs are used temporarily for rate limiting. https://ethras.org/privacy",
+  nodely:
+    "Nodely runs these public RPCs on its own nodes in Finland and Germany, behind Cloudflare. No account, key, cookies or tracking scripts. Access logs record the client IP, time, JSON-RPC method name, status, size and user agent, never request parameters or response bodies; full IPs are kept up to 100 days for rate limiting, abuse prevention and debugging, then only a /24 (/48) prefix and a salted hash for usage statistics. Requests for data older than our pruned nodes keep are forwarded to dRPC without the client IP or headers. Nothing is sold or shared. https://nodely.io/legal/public-rpc",
 };
 
 export const extraRpcs = {
@@ -582,6 +584,16 @@ export const extraRpcs = {
         url: "https://ethras.org/public/ethereum",
         tracking: "limited",
         trackingDetails: privacyStatement.ethras,
+      },
+      {
+        url: "https://eth.nodely.dev",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodely,
+      },
+      {
+        url: "wss://eth.nodely.dev/ws",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodely,
       },
     ],
   },
@@ -6397,6 +6409,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
       },
+      {
+        url: "https://base.nodely.dev",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodely,
+      },
+      {
+        url: "wss://base.nodely.dev/ws",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodely,
+      },
     ],
   },
   11235: {
@@ -11123,6 +11145,16 @@ export const extraRpcs = {
         url: "https://rpc-arc.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://arc.nodely.dev",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodely,
+      },
+      {
+        url: "wss://arc.nodely.dev/ws",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodely,
       },
     ],
   },
