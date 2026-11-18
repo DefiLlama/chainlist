@@ -153,7 +153,7 @@ async function checkDuplicateRpcs() {
   console.log("Checking extraRpcs for duplicate RPC URLs within each chain...");
 
   const { extraRpcs } = await import("../constants/extraRpcs.js");
-  const normalize = (u) => String(u).replace(/\/+$/, "").toLowerCase();
+  const normalize = (u) => String(u).replace(/\/+$/, "");
   const duplicates = [];
 
   for (const [chainId, config] of Object.entries(extraRpcs)) {
