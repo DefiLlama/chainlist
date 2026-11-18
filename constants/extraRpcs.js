@@ -11757,6 +11757,7 @@ export const extraRpcs = {
   },
   94: {
     rpcs: [
+      "https://rpc-light.swissdlt.tech",
       {
         url: "https://lb.routeme.sh/rpc/evm/94",
         tracking: "limited",
