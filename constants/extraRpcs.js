@@ -280,7 +280,7 @@ export const privacyStatement = {
   daybreak:
     "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
   driftguard:
-    "DriftGuard operates zero-log, privacy-preserving public RPC endpoints with private mempool routing and MEV protection. We do not store IP addresses, request payloads, or wallet addresses. Rate limiting uses transient in-memory counters only. https://driftguard.live",
+    "Zero disk access logging; stateless 200ms block-head consensus routing",
   blocktailor:
     "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
   thyme:
@@ -1204,6 +1204,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.thyme,
       },
+      {
+        url: "https://rpc.driftguard.live/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   97: {
@@ -1394,6 +1399,11 @@ export const extraRpcs = {
         url: "https://avax-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc.driftguard.live/avax",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -1622,6 +1632,11 @@ export const extraRpcs = {
         url: "https://polygon-mainnet.rpc.thyme.sh/public",
         tracking: "none",
         trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://rpc.driftguard.live/pol",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -2343,6 +2358,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://rpc.driftguard.live/blast",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   5611: {
@@ -2844,6 +2864,11 @@ export const extraRpcs = {
         url: "https://optimism-mainnet.rpc.thyme.sh/public",
         tracking: "none",
         trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://rpc.driftguard.live/op",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -5131,6 +5156,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
+      {
+        url: "https://rpc.driftguard.live/zksync",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   196: {
@@ -5725,6 +5755,11 @@ export const extraRpcs = {
         url: "https://rpc-mantle.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.driftguard.live/mantle",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -6641,6 +6676,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
       },
+      {
+        url: "https://rpc.driftguard.live/scroll",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   88888: {
@@ -7378,6 +7418,11 @@ export const extraRpcs = {
         url: "https://rpc.swiftnodes.io/rpc/linea",
         tracking: "limited",
         trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpc.driftguard.live/linea",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -9855,6 +9900,11 @@ export const extraRpcs = {
         url: "https://sonic-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc.driftguard.live/sonic",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
