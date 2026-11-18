@@ -269,8 +269,6 @@ export const privacyStatement = {
     "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
   seleman:
     "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://explorer.primevertexlabs.com.mx/privacy",
-  backrunshield:
-    "Backrun Shield keeps web access logs (IP, time, request details) for 7 days and counts rate limits per IP in memory only. For each eth_sendRawTransaction it records the hash, sender, recipient, value, call data, time and requesting IP (never the signed bytes), with no set deletion date. Transactions go privately to block builders (48Club, BlockRazor) and are broadcast publicly if not included within 2 blocks. It never trades in front of them; it may backrun one and pays 60 % of that profit to the sender. Nothing is sold or shared. https://backrunshield.com/privacy", 
   hostdefi:
     "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
   Saxemberg:
@@ -1181,11 +1179,6 @@ export const extraRpcs = {
         url: "https://rpc-bsc.blockmachine.io",
         tracking: "none",
         trackingDetails: privacyStatement.blockmachine,
-      },
-      {
-        url: "https://rpc.backrunshield.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.backrunshield,
       },
       {
         url: "https://bnb-mainnet.rpc.thyme.sh/public",
