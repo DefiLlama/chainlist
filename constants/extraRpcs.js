@@ -4717,6 +4717,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pulsechain,
       },
+      {
+        url: "https://pls-rpc369.xyz",
+        tracking: "limited",
+        trackingDetails:
+          "No IP addresses or request logs are stored by the gateway. Read requests are served from public PulseChain RPC providers. Submitted transactions (eth_sendRawTransaction) are forwarded to public RPC providers and to the operator's own PulseChain node, which may inspect them (for example to back-run swaps). Rate limited, no debug/trace methods.",
+      },
       "https://rpc.gigatheminter.com",
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
