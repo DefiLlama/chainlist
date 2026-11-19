@@ -15,7 +15,8 @@ export const data = {
   "explorers": [
     {
       "name": "Zebvix Scan",
-      "url": "https://scan.zebvixchain.com"
+      "url": "https://scan.zebvixchain.com",
+      "standard": "EIP3091"
     }
   ]
 }
