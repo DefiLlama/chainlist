@@ -4717,6 +4717,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.pulsechain,
       },
+      {
+        url: "https://pls-rpc369.xyz",
+        tracking: "limited",
+        trackingDetails:
+          "No IP addresses or user identifiers are stored. Transactions you submit are forwarded to public RPC providers and to the operator's own PulseChain node, which can see them. Rate limited.",
+      },
       "https://rpc.gigatheminter.com",
       "https://rpc-pulsechain.g4mm4.io",
       "https://evex.cloud/pulserpc",
