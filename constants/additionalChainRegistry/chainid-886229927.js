@@ -1,7 +1,7 @@
 export const data = {
   "name": "Memento Mainnet",
   "chain": "Memento",
-  "rpc": ["https://rpc.mementoblockchain.com"],
+  "rpc": [],
   "faucets": [],
   "nativeCurrency": {
     "name": "Ether",
@@ -13,9 +13,13 @@ export const data = {
       "name": "EIP155"
     }
   ],
-  "infoURL": "",
-  "shortName": "memento-mainnet",
-  "chainId": 51888,
-  "networkId": 51888,
-  "explorers": []
+  "infoURL": "https://mementoblockchain.com",
+  "shortName": "memento",
+  "chainId": 886229927,
+  "networkId": 886229927,
+  "explorers": [],
+  "parent": {
+    "type": "L2",
+    "chain": "eip155-1"
+  }
 }
