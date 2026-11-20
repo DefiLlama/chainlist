@@ -2216,11 +2216,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://harmony-0.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
