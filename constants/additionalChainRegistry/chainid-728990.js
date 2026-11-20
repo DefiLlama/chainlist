@@ -1,5 +1,5 @@
 export const data = {
-  "name": "Zebvix PoS Mainnet",
+  "name": "Zebvix Mainnet",
   "chain": "ZBX",
   "rpc": ["https://rpc.zebvixchain.com/"],
   "faucets": [],
