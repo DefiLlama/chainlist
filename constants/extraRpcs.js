@@ -3502,7 +3502,6 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-        trackingDetails: privacyStatement.radiumblock,
       },
       {
         url: "https://moonbeam.public.curie.radiumblock.co/ws",
@@ -4705,7 +4704,7 @@ export const extraRpcs = {
       "https://shape-mainnet.g.alchemy.com/public",
     ],
   },
-369: {
+  369: {
     rpcs: [
       {
         url: "https://lb.routeme.sh/rpc/evm/369",
@@ -14166,6 +14165,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
+      {
+        url: "https://creditcoin-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   105105: {
@@ -15027,15 +15031,6 @@ export const extraRpcs = {
     rpcs: [
       {
         url: "https://creditcoin.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-   102031: {
-    rpcs: [
-      {
-        url: "https://creditcoin-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
