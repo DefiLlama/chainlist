@@ -3,8 +3,8 @@ export const data = {
   "chain": "PLUS",
   "icon": "plus",
   "rpc": [
-    "https://rpc.plusmain.net",
-    "https://plusmain.net/api/rpc"
+    "https://plusmain.net/api/rpc",
+    "https://rpc.plusmain.net"
   ],
   "faucets": [],
   "nativeCurrency": {
