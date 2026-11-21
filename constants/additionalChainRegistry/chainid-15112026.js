@@ -1,6 +1,7 @@
 export const data = {
   "name": "Bleno Network",
   "chain": "BLENO",
+  "icon": "bleno",
   "rpc": [
     "https://bleno.com.br/hub/rpc"
   ],
