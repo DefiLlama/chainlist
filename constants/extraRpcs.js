@@ -117,6 +117,7 @@ export const privacyStatement = {
     "rpc.pulsechain.com does not log, store, or track user data. It retains no request or access logs, including IP addresses, request origins, request contents, wallet addresses, or transaction metadata, and does not sell or share user data. Signed transactions broadcast through the RPC may be recorded publicly on PulseChain as part of normal blockchain operation. https://rpc.pulsechain.com/privacy",
   levko:
     "rpc.levko.io is a private PulseChain RPC that sells limited wallet seats. No RPC request or access logs are retained (including IP addresses, request contents, or headers). To operate seats we process only generated account numbers, the funding wallet address, on-chain payment details, and seat duration/expiry, solely for allocation, payment verification, and recovery by signature. We do not collect emails or other off-chain personal identifiers, use trackers, or sell data. Public blockchain data remains public. https://rpc.levko.io/privacy",
+  
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
@@ -4796,6 +4797,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.levko,
       },
+       {
+    url: "https://rpc.lite.projectpi.xyz",
+    tracking: "none",
+    trackingDetails: "Pi Pools free RPC does not log or store IP addresses, wallet addresses, or request data. Request counting logs only time, tier, and status, no IPs. https://pipools.xyz/rpc",
+  },
     ],
   },
   385: {
