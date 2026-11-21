@@ -3,6 +3,7 @@ export const data = {
   "chain": "PLUS",
   "icon": "plus",
   "rpc": [
+    "https://rpc.plusmain.net",
     "https://plusmain.net/api/rpc"
   ],
   "faucets": [],
@@ -18,7 +19,7 @@ export const data = {
   "explorers": [
     {
       "name": "PLUS Mainnet Explorer",
-      "url": "https://plusmain.net/scan",
+      "url": "https://scan.plusmain.net",
       "standard": "EIP3091"
     }
   ]
