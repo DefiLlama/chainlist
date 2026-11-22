@@ -284,6 +284,7 @@ export default {
   "80094": "berachain",
   "81224": "codex",
   "81457": "blast",
+  "88088": "plus",
   "88888": "chiliz",
   "97477": "doma",
   "97741": "pepu",
