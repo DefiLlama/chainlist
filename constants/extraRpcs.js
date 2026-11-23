@@ -2164,11 +2164,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodies,
       },
       {
-        url: "https://go.getblock.io/d7094dbd80ab474ba7042603fe912332",
-        tracking: "none",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
         url: "https://klaytn.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
