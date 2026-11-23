@@ -17,8 +17,8 @@ export const data = {
   ],
   "infoURL": "https://kuspin.app",
   "shortName": "ksp",
-  "chainId": 8888,
-  "networkId": 8888,
+  "chainId": 88881,
+  "networkId": 88881,
   "explorers": [
     {
       "name": "KuSpin Explorer",
