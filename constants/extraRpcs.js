@@ -2913,7 +2913,10 @@ export const extraRpcs = {
     ],
   },
   2330: {
-    rpcs: ["https://rpc.wattxchange.app"],
+    rpcs: [
+          "https://rpc.wattxchange.app",
+          "https://alt-rpc.minethepla.net",
+          ],
   },
   1773: {
     rpcs: ["http://138.197.152.181:8245"],
