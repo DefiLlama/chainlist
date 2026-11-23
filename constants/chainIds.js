@@ -131,6 +131,7 @@ export default {
   "9001": "evmos",
   "9790": "carbon",
   "10000": "smartbch",
+  "1062": "bighive",
   "11820": "artela",
   "13371": "immutable zkevm",
   "15551": "loop",
