@@ -4597,7 +4597,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onerpc,
       },
       "https://manta-pacific-gascap.calderachain.xyz/http",
-      "https://www.tencentcloud-rpc.com/v2/manta/manta-rpc",
       "https://r1.pacific.manta.systems/http",
       "https://manta-pacific.calderachain.xyz/http",
       "wss://manta-pacific.calderachain.xyz/ws",
@@ -4610,11 +4609,6 @@ export const extraRpcs = {
         url: "wss://manta-pacific.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/manta-pacific/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://manta-pacific-mainnet.rpc.sentio.xyz",
