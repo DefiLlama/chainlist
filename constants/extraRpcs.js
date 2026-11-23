@@ -253,6 +253,8 @@ export const privacyStatement = {
     "When you interact with our Site, our servers automatically collect certain technical information to help us operate, maintain, and improve our services. This information may include details such as your device identifier, IP address, browser type, operating system, and the date and time of your visit. https://hgraph.com/privacy",
   mirasmanda:
     "Mirasmanda RPC does not collect or store any personally identifiable information (PII), including IP addresses, wallet addresses, or request metadata. The only data recorded on our infrastructure is what is publicly available on the blockchain. No user data is shared with third parties. For more information, visit https://asterium.uz",
+  pulsonic:
+    "No user data is collected or stored. IP addresses are used only for rate limiting and are logged only when a request is refused, then deleted after 7 days. No request logs, no request bodies. https://pulsonic.cloud/privacy",
   routemesh:
     "RouteMesh may process basic request metadata (for example: chain ID, method, timestamp, request size, and coarse location from network edge data) to run routing, apply rate limits, improve reliability, and monitor service health. For more details visit https://routeme.sh/privacy",
   mevx:
@@ -4769,6 +4771,11 @@ export const extraRpcs = {
         url: "https://rpc.levko.io",
         tracking: "none",
         trackingDetails: privacyStatement.levko,
+      },
+      {
+        url: "https://builder.pulsonic.cloud/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.pulsonic,
       },
     ],
   },
