@@ -220,6 +220,7 @@ export default {
   "9745": "plasma",
   "9790": "carbon",
   "10000": "smartbch",
+  "1062": "bighive",
   "10088": "gatelayer",
   "10507": "numbers",
   "11235": "haqq",
