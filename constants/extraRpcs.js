@@ -902,11 +902,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://avalanche-fuji.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
     ],
   },
   80002: {
@@ -1268,11 +1263,6 @@ export const extraRpcs = {
         url: "https://bnb-testnet.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://bsc-testnet.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://bsc-testnet.rpc.sentio.xyz",
@@ -2129,11 +2119,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://arbitrum-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://arbitrum-sepolia-testnet.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -2321,11 +2306,6 @@ export const extraRpcs = {
         url: "https://blast-public.nodies.app",
         tracking: "limited",
         trackingDetails: privacyStatement.nodies,
-      },
-      {
-        url: "https://blast.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://blast.api.pocket.network",
@@ -2899,11 +2879,6 @@ export const extraRpcs = {
         url: "https://optimism-sepolia.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://optimism-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://op-sepolia-testnet.api.pocket.network",
@@ -5599,11 +5574,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://kava.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://kava.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -6170,11 +6140,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodies,
       },
       {
-        url: "https://base-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://base-sepolia.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -6615,11 +6580,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://scroll.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://api-scroll-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
         trackingDetails: privacyStatement.dwellir,
@@ -6796,11 +6756,6 @@ export const extraRpcs = {
         url: "https://rpc.owlracle.info/sepolia/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
-      },
-      {
-        url: "https://ethereum-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://ethereum-sepolia.gateway.tatum.io/",
@@ -7356,11 +7311,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://linea.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://linea.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
@@ -7618,11 +7568,6 @@ export const extraRpcs = {
         url: "https://taiko-mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://taiko.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://taiko.api.pocket.network",
@@ -9428,11 +9373,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://unichain.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://unichain-mainnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -9820,11 +9760,6 @@ export const extraRpcs = {
         url: "https://sonic.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://sonic.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://sonic-json-rpc.stakely.io/",
