@@ -15049,7 +15049,7 @@ export const extraRpcs = {
     ],
   },
   101089: {
-    rpcs: ["https://evm-rpc-testnet.xitcoin.org"],
+    rpcs: ["https://evm-rpc-testnet.xitchain.com"],
   },
   6736: {
     rpcs: ["https://api.windcrypto.com/rpc"],
