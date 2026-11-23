@@ -91,8 +91,9 @@ function checkExtraRpcsDuplicates() {
   }
 
   // Extract top-level keys (chainIds) - they appear at the start of a line followed by colon and brace
-  // Pattern matches lines like "  1: {" or "  80001: {"
-  const keyPattern = /^\s{2}(\d+):\s*\{/gm;
+  // Pattern matches lines like "  1: {" or "  80001: {", whatever their indentation,
+  // so a mis-indented duplicate cannot slip past the check
+  const keyPattern = /^[ \t]*(\d+):\s*\{/gm;
   const chainIds = new Set();
   const duplicates = [];
   let match;
@@ -112,6 +113,43 @@ function checkExtraRpcsDuplicates() {
   }
 
   console.log(`✓ No duplicate chainId keys found in extraRpcs (checked ${chainIds.size} keys)`);
+}
+
+/**
+ * Check that no RPC entry in extraRpcs sets the same property twice
+ * (e.g. two `trackingDetails`), since the last one silently wins
+ */
+function checkRpcEntryDuplicateProperties() {
+  console.log("Checking extraRpcs RPC entries for duplicate properties...");
+
+  const filePath = path.join(__dirname, "../constants/extraRpcs.js");
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const extraRpcsContent = fileContent.slice(fileContent.indexOf("export const extraRpcs = {"));
+
+  // RPC entries are the innermost object literals: `{ url: ..., tracking: ..., trackingDetails: ... }`
+  const entryPattern = /\{([^{}]*)\}/g;
+  const propertyPattern = /^\s*(\w+):/gm;
+  const duplicates = [];
+  let entry;
+
+  while ((entry = entryPattern.exec(extraRpcsContent)) !== null) {
+    const seen = new Set();
+    let property;
+    while ((property = propertyPattern.exec(entry[1])) !== null) {
+      if (seen.has(property[1])) {
+        const url = entry[1].match(/url:\s*"([^"]+)"/)?.[1] ?? "unknown url";
+        duplicates.push(`"${property[1]}" in entry ${url}`);
+      }
+      seen.add(property[1]);
+    }
+  }
+
+  if (duplicates.length > 0) {
+    console.error(`ERROR: Duplicate properties found in extraRpcs entries: ${duplicates.join(", ")}`);
+    throw new Error("Duplicate properties found in extraRpcs entries!");
+  }
+
+  console.log("✓ No duplicate properties found in extraRpcs entries");
 }
 
 /**
@@ -208,6 +246,12 @@ async function runTests() {
 
   try {
     checkExtraRpcsDuplicates();
+  } catch (error) {
+    errors.push(error.message);
+  }
+
+  try {
+    checkRpcEntryDuplicateProperties();
   } catch (error) {
     errors.push(error.message);
   }
