@@ -1,0 +1,42 @@
+name: Update provider RPCs
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # Mondays 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Probing ~1k public endpoints takes a few minutes; providers throttle
+      # above a concurrency of roughly 6, which the script retries through.
+      - name: Regenerate constants/providerRpcs.js
+        run: node scripts/generate-provider-rpcs.mjs --concurrency=6
+
+      - name: Check for duplicate keys
+        run: node tests/check-duplicate-keys.js
+
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh verified provider RPC chain lists"
+          branch: automated/provider-rpcs
+          delete-branch: true
+          title: "chore: refresh verified provider RPC chain lists"
+          body: |
+            Automated refresh of `constants/providerRpcs.js`.
+
+            For every provider in `constants/rpcProviders.js`, each candidate
+            endpoint was probed with `eth_chainId` and kept only if it returned
+            the matching chain id. Chains that were inconclusive (throttled or
+            timed out) keep their previous state rather than being dropped.
+          add-paths: constants/providerRpcs.js

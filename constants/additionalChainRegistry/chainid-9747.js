@@ -1,0 +1,18 @@
+export const data = {
+  "name": "Plasma Devnet",
+  "chain": "Plasma",
+  "rpc": ["https://devnet-rpc.plasma.to"],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Plasma",
+    "symbol": "XPL",
+    "decimals": 18
+  },
+  "infoURL": "https://plasma.to",
+  "shortName": "plasma-devnet",
+  "chainId": 9747,
+  "networkId": 9747,
+  "icon": "plasma",
+  "explorers": [],
+  "testnet": true
+}

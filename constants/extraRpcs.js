@@ -1,8 +1,12 @@
-import { mergeDeep } from "../utils/fetch.js";
-
-import { llamaNodesRpcs } from "./llamaNodesRpcs.js";
-
-const privacyStatement = {
+export const privacyStatement = {
+  xrpc:
+    "XRPC.CL operates zero-log public RPC endpoints on sovereign infrastructure in Chile. We do not store IP addresses, request bodies, wallet addresses or transaction metadata. Anonymous rate limiting uses the client IP in memory only for the current window. Metrics are aggregate counters only (network, method, outcome). No KYC required. https://xrpc.cl/tos.html",
+  beam:
+    "Beam does not log or store IP addresses, user agents or request bodies. Rate limiting uses the client IP in memory only for the current one-second window. Only aggregate counts (per method, per hour, per referring dApp origin) and a daily-salted, non-reversible unique-client estimate are kept. Signed transactions submitted via eth_sendRawTransaction are forwarded unchanged and retained for operational records (they are public once mined). https://beamrpc.com/privacy/",
+  degenprotocol:
+    "We do not track, log, or store user IP addresses, location metadata, or wallet details. Any temporary data is used strictly for service rate limiting and load balancing. https://degenprotocol.io/privacy",
+  chainpulse:
+      "We use client IP addresses for per-IP rate limiting, abuse prevention, and aggregated public RPC usage analytics. We do not sell personal data or use public RPC traffic for advertising profiles. Details: https://bsc-rpc.chainpulse.cc/privacy",
   blockswap:
     "Blockswap RPC does not track any kind of user information at the builder RPC level (i.e. IP, location, etc.) nor is any information logged. All blocks are encrypted when passed between proposers, builders, relayers, and Ethereum. It does not transmit any transactions to the relayer. We use analytical cookies to see which content on the Site is highly frequented and also to analyze if content should be updated or improved. These cookies process and save data like your browser type, referrer URLs, operating system, date/time stamp, views and clicks on the Site, and your (truncated) IP address. For more information please visit: https://docs.pon.network/pon/privacy",
   "48Club":
@@ -15,8 +19,9 @@ const privacyStatement = {
     "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, location information (including approximate location derived from IP address), and Internet service provider. https://www.alchemy.com/policies/privacy-policy",
   nodereal: `We may automatically record certain information about how you use our Sites (we refer to this information as "Log Data"). Log Data may include information such as a user's Internet Protocol (IP) address, device and browser type, operating system, the pages or features of our Sites to which a user browsed and the time spent on those pages or features, the frequency with which the Sites are used by a user, search terms, the links on our Sites that a user clicked on or used, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users' needs and preferences. https://nodereal.io/terms`,
   publicnode: `We do not store or track any user data with the exception of data that will be public on chain. We do not correlate wallets address's with IP's,  any data which is needed to transact is deleted after 24 hours. We also do no use any Analytics or 3rd party website tracking. https://www.publicnode.com/privacy`,
+  valve: `Valve runs a privacy-respecting public RPC. For this public endpoint we retain no request logs and store no client IP addresses: access logging is disabled for the public key, request analytics record no IP, and per-IP rate-limiting uses ephemeral, salted-hashed counters (auto-expiring, no raw IP at rest). We do not correlate wallet addresses with IP addresses, sell user data, or run third-party analytics. RPC calls are served by Valve's own nodes, public infrastructure, and external privately run infrastructure. https://valve.city/#/privacy`,
   onerpc:
-    "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.1rpc.io/technology/zero-tracking",
+    "With the exception of data that will be public on chain, all the other metadata / data should remain private to users and other parties should not be able to access or collect it. 1RPC uses many different techniques to prevent the unnecessary collection of user privacy, which prevents tracking from RPC providers. https://docs.1rpc.io/web3-relay/overview",
   builder0x69: "Private transactions / MM RPC: https://twitter.com/builder0x69",
   MEVBlockerRPC:
     "Privacy notice: MEV Blocker RPC does not store any kind of user information (i.e. IP, location, user agent, etc.) in any data bases. Only transactions are preserved to be displayed via status endpoint like https://rpc.mevblocker.io/tx/0x627b09d5a9954a810cd3c34b23694439da40558a41b0d87970f2c3420634a229. Connect to MEV Blocker via https://rpc.mevblocker.io",
@@ -30,7 +35,9 @@ const privacyStatement = {
     "All the information in our logs (log data) can only be accessed for the last 7 days at any certain time, and it is completely purged after 14 days. We do not store any user information for longer periods of time or with any other purposes than investigating potential errors and service failures. https://blastapi.io/privacy-policy",
   bitstack:
     "Information about your computer hardware and software may be automatically collected by BitStack. This information can include: your IP address, browser type, domain names, access times and referring website addresses. https://bitstack.com/#/privacy",
-  pokt: "What We Do Not Collect: User's IP address, request origin, request data. https://www.blog.pokt.network/rpc-logging-practices/",
+  pokt: "We do not collect any personally identifiable information (PII) including user IP address, request origin, or request data. Full logging practices here: https://pocket.network/protocol-logging-practices",
+  nodies:
+    "We collect data about the blockchain requests you make through our Service. However, we do not use this data to identify you personally. For our complete privacy polic, please visit https://www.nodies.app/privacy.txt",
   zmok: `API requests - we do NOT store any usage data, additionally, we do not store your logs. No KYC - "Darknet" style of sign-up/sign-in. Only provider that provides Ethereum endpoints as TOR/Onion hidden service. Analytical data are stored only on the landing page/web.  https://zmok.io/privacy-policy`,
   infura:
     "We collect wallet and IP address information. The purpose of this collection is to ensure successful transaction propagation, execution, and other important service functionality such as load balancing and DDoS protection. IP addresses and wallet address data relating to a transaction are not stored together or in a way that allows our systems to associate those two pieces of data. We retain and delete user data such as IP address and wallet address pursuant to our data retention policy. https://consensys.net/blog/news/consensys-data-retention-update/",
@@ -38,6 +45,8 @@ const privacyStatement = {
     "Except for the data that is publicly accessible on the blockchain, RadiumBlock does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our customer privacy policy please visit https://radiumblock.com/privacy.html",
   etcnetworkinfo:
     "We do use analytics at 3rd party tracking websites (Google Analytics & Google Search Console) the following interactions with our systems are automatically logged when you access our services, such as your Internet Protocol (IP) address as well as accessed services and pages(Packet details are discarded / not logged!). Data redemption is varying based on traffic, but deleted after 31 days We do use these infos to improve our services.",
+  etcmc:
+    "ETCMC public RPC minimizes data collection. We do not log request payloads or correlate wallet addresses with IP addresses. Limited operational data may be processed for rate limiting, abuse prevention, and service reliability. https://etcmc.xyz/privacy",
   omnia:
     "All the data and metadata remain private to the users. No third party is able to access, analyze or track it. OMNIA leverages different technologies and approaches to guarantee the privacy of their users, from front-running protection and private mempools, to obfuscation and random dispatching. https://blog.omniatech.io/how-omnia-handles-your-personal-data",
   blockpi:
@@ -46,8 +55,6 @@ const privacyStatement = {
     "Sent transactions are private: https://payload.de/docs. By default, no data is collected when using the RPC endpoint. If provided by the user, the public address for authentication is captured when using the RPC endpoint in order to prioritize requests under high load. This information is optional and solely provided at the user's discretion. https://payload.de/privacy/",
   /*gitshock:
     "We do not collect any personal data from our users. Our platform is built on blockchain technology, which ensures that all transactions are recorded on a public ledger that is accessible to all users. However, this information is anonymous and cannot be linked to any specific individual. https://docs.gitshock.com/users-guide/privacy-policy",*/ // website is down
-  gashawk:
-    "Sign-in with Ethereum on https://www.gashawk.io required prior to use. We may collect information that is publicly available in a blockchain when providing our services, such as: Public wallet identifier of the sender and recipient of a transaction, Unique identifier for a transaction, Date and time of a transaction, Transaction value, along with associated costs, Status of a transaction (such as whether the transaction is complete, in-progress, or resulted in an error), read the terms of service https://www.gashawk.io/#/terms and the privacy policy https://www.gashawk.io/#/privacy.",
   LiveplexOracleEVM:
     "Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data. When You access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data. We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device. https://www.liveplex.io/privacypolicy.html",
   jellypool:
@@ -67,6 +74,8 @@ const privacyStatement = {
   iota: "When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data; https://www.iota.org/privacy-policy",
   markrgo:
     "We only collect the minimum necessary information to provide our blockchain RPC service (caching). We do not use your data for commercial purposes. Any collected data is short-term and will be automatically deleted within 24 hours if not actively used. https://www.markr.io/privacy-policy",
+  swiftnodes:
+    "SwiftNodes does not log IP addresses or correlate wallet transactions with request origins. Usage data (request counts) is collected per API key for rate limiting only. No personal information is stored. https://swiftnodes.io/docs/privacy-policy",
   diamondswap:
     "We record limited metadata from requests. This data is stored for a maximum of 90 days and is solely used for debugging, identifying suspicious activity, and generating analytics.",
   unifra:
@@ -89,13 +98,25 @@ const privacyStatement = {
   meowrpc:
     "With the exclusion of data that will be openly visible and available on the blockchain, MEOWRPC does not track or store any kind of user information (such as location, IP address, etc.) that passes through our RPC. For further details regarding our privacy practices, we encourage you to refer to our Privacy Policy. https://privacy.meowrpc.com",
   drpc: "Specific types of technical data that we may temporarily log include:IP address (only in logs for redirecting requests to the nearest RPC nodes and rate limiting at the free level, which are cleared weekly). The user ID is hidden in the temporary logs, so it is not possible to link them to a specific user.https://drpc.org/privacy-policy",
+  pluginrpc:
+    "Plugin RPC public endpoints do not use cookies and do not collect or store personal data. IP addresses are processed in memory solely for per-IP rate limiting and are not retained. https://rpc.plugin.global/terms",
   las: "The Living Assets network does not store any personal data provided by its users. The network solely communicates on-chain signatures generated by web3 compatible wallets. However, it is possible that clients utilizing the network may necessitate supplementary information from their users to fulfill Know Your Customer obligations. In such cases, explicit consent from the users is mandatory, following standard procedures.",
   dwellir:
     "Except for the data that is publicly accessible on the blockchain, Dwellir does not collect or keep any user information (like location, IP address, etc.) transmitted via our RPC. For more information about our privacy methods, we suggest checking out our Privacy Policy at https://www.dwellir.com/privacy-policy",
+  eav7:
+    "EAV7 public RPC (https://rpc.eavscan.com) does not sell personal data and does not build advertising profiles from RPC traffic. We may temporarily process IP addresses and request metadata for rate limiting, DDoS protection and abuse prevention. We do not correlate wallet addresses with IP addresses for marketing, and we do not front-run transactions using RPC metadata. Edge/CDN logs may be processed by Cloudflare. Operational logs are retained on a short cycle (typically within 7 days). Details: https://eavscan.com/privacy#rpc",
   ard: " (ARD) Ardenium Athena, we prioritize the protection of your privacy and the security of your data. This privacy policy summary provides an overview of how we handle and safeguard your personal information when you use our Ardenium Athena Explorer Blockchain services. However, please note that this is only a summary, and for complete details, we encourage you to review the full privacy policy available at soma, Information Collection: When you use our services, we may collect personal information, such as mobile device details, operation records, transaction records, wallet addresses, and other relevant data. For a more comprehensive understanding, please refer to our full privacy policy at https://docs.ardenium.wiki/ardenium-network/disclaimer.",
   zan: "ZAN Node Service generally does not store any kind of user information (e.g. IP address, location, requst location, request data, etc.) that transits through our RPCs except for one senario ——we may track your IP address when you are using our RPCs and will delete it immediately when you stoping using our RPCs. To learn more, please review our privacy policy at https://a.zan.top/static/Privacy-Policy.pdf",
   quicknode:
     "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
+  hairylabs:
+    "No user data is collected or stored. Token-based rate limiting uses temporary session identifiers that are automatically purged after inactivity. https://hairylabs.io",
+  pulsechainstats:
+    "PulseChainStats RPC does not store or track user information. We only temporarily log IP addresses for rate limiting and DDoS protection purposes. Logs are automatically deleted after 7 days. No wallet addresses or transaction data are correlated with IP addresses.",
+  pulsechain:
+    "rpc.pulsechain.com does not log, store, or track user data. It retains no request or access logs, including IP addresses, request origins, request contents, wallet addresses, or transaction metadata, and does not sell or share user data. Signed transactions broadcast through the RPC may be recorded publicly on PulseChain as part of normal blockchain operation. https://rpc.pulsechain.com/privacy",
+  levko:
+    "rpc.levko.io is a private PulseChain RPC that sells limited wallet seats. No RPC request or access logs are retained (including IP addresses, request contents, or headers). To operate seats we process only generated account numbers, the funding wallet address, on-chain payment details, and seat duration/expiry, solely for allocation, payment verification, and recovery by signature. We do not collect emails or other off-chain personal identifiers, use trackers, or sell data. Public blockchain data remains public. https://rpc.levko.io/privacy",
   chainstack:
     "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
   shardeum:
@@ -153,7 +174,7 @@ const privacyStatement = {
     "When you use our services, we do not track user info. Check out our privacy statement here: https://sigmacore.io/privacy-statement.pdf",
   graffiti:
     "Regarding RPC (remote procedure call) data, we do not collect request data or request origin. We temporarily record request method names and IP addresses for 7 days to ensure service functionality like load balancing and DDoS protection. All data is automatically deleted after 7 days, except for RPC request amounts, which are recorded for accounting and billing purposes for a longer period.https://graffiti.farm/privacy-policy/",
-  NOWNodes:
+  nownodes:
     "We do not collect any financial data. Other data may be collected by third parties; we are not responsible for the actions of third parties. We do not collect any Personal data other than the Personal data set out in this Policy: https://nownodes.io/assets/data/privacy-pol.pdf. ",
   Envelop:
     "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
@@ -175,7 +196,7 @@ const privacyStatement = {
   buildbear:
     "Usage Data is collected automatically when using the Service.Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.https://www.buildbear.io/privacy-policy",
   BlockRazor:
-    "Privacy notice: BlockRazor RPC does not track any kind of user information (i.e. IP, location, etc.). Only information that is public on the blockchain are preserved, such as timestamp of a transaction. For more information please visit: https://blockrazor.gitbook.io/blockrazor/scutum-mev-protect-rpc#privacy-statement",
+    "Privacy notice: BlockRazor RPC does not track any kind of user information (i.e. IP, location, etc.). Only information that is public on the blockchain are preserved, such as timestamp of a transaction. For more information please visit: https://docs.blockrazor.io/statement/privacy-statement",
   numa: "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers, and other diagnostic data. Check out our Terms of use: https://app.numa.network/terms-of-use/ and Privacy Policy: https://app.numa.network/privacy-policy/",
   Histori:
     "At Histori, we do not log, store, or track your IP address, country, location, or any personal data while making RPC requests and REST API calls. Learn more at: https://histori.xyz/support/privacy-policy",
@@ -186,30 +207,129 @@ const privacyStatement = {
   DTEAM:
     "We do not log, store, or track your IP, location, or personal data during RPC requests. https://dteam.tech/privacy-policy",
   "0xRPC":
-    "Unidentifiable hashed value of IP and browser info are stored for 24 hours to prevent DDOS. See https://0xrpc.io/privacy",
+    "We don't collect IPs, hash info, browser info, or any attributes sent by the request. See https://0xrpc.io/privacy",
   RHINO:
     "We never collect, store, or track any identifying information. Data points like request volumes and success rates are only aggregated to monitor API performance. For more details, please visit https://rhinostake.com/resources/rhino-apis-terms-conditions",
   GrandValley:
     "We do not collect, store, process, or log any data from users of our Services. This includes, but is not limited to: IP addresses (we explicitly disable IP logging at both software and infrastructure levels), Device/browser identifiers (e.g., user-agent headers, screen resolution), Network metadata (requests, responses, timestamps), Wallet addresses, private keys, or transaction data, Geolocation or demographic information. https://github.com/hubofvalley/Testnet-Guides/blob/main/PRIVACY_POLICY.md",
-  reliableninjas:
-    "Reliable Ninjas does not collect or track personal user information. IP addresses are only temporarily processed in volatile memory for the sole purpose of rate limiting RPC usage and are purged as soon as they are no longer needed. No identifiable or sensitive information is logged, stored, or retained. Reliable Ninjas does not use cookies or tracking technologies. We do not sell, share, or disclose user data to third parties. For more information, please visit: https://reliableninjas.com/privacy-policy",
   therpc:
     "We temporarily record request method names and IP addresses for 7 days solely for service functionality, such as load balancing and DDoS protection.https://therpc.io/agreement/privacy-policy",
   Spectrum:
     "At SpectrumNodes.com, we collect and process personal information to deliver, secure, and improve our RPC services, and we do so only with a valid legal basis such as your consent or to fulfill contractual obligations. We do not process sensitive personal data, sell user information, or collect from third parties, and we employ strong technical safeguards to protect your privacy. Users have rights to access, correct, or delete their data, and can contact us anytime at privacy@spectrumnodes.com or https://spectrumnodes.com/contact",
   STAKEME:
-    "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection, we temporarily $"
+    "We do not collect or store personal request data or request origins. To ensure the functionality of our services, such as load balancing and DDoS protection",
+  PulseChainRpc:
+    "We do not store or track any user data other than the data publicly available on-chain.https://rpc.pulsechainrpc.com/privacy",
+  mijkpro: "We log IP addresses and request metadata for rate-limiting and abuse-prevention purposes only. No data is sold, shared with third parties. This data is only used for dashboard analytics.",
+  MBF: "MBF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  DHF: "DHF does not use user accounts and does not intentionally collect personally identifying information. When you access our RPC endpoints, the only data we may process are the requesting IP address and the requested method name. We use this limited data solely for operating the service—for example, rate limiting, abuse and DDoS mitigation, debugging, uptime monitoring, and reliability analytics.",
+  Stakely:
+    "References are processed in hashed form exclusively for load balancing purposes and remain strictly volatile. No personal data is collected, and IP addresses are never associated with wallets or individual requests. https://stakely.io/policies/privacy-policy#rpc-load-balancer",
+  fastnode:
+    "Fastnode temporarily logs request metadata (IP address, method, headers, timestamps, status, latency) for rate-limiting, security, DDoS protection and debugging. We do not correlate logs with on-chain wallet addresses, use them to front-run transactions, or sell personal data.https://fastnode.gitbook.io/privacy-policy/",
+  Hightower:
+    "We do not log, track, or archive IP addresses for requests made through our RPC, API, LCD, or WebSocket endpoints.We do not track wallet addresses, transaction signatures, or any metadata that could link an on-chain identity to a specific user. We do not monitor or record the content of your queries or the specific data you access on the blockchain. https://www.htw.tech/privacy-policy",
+  poolz:
+    "For service delivery and abuse prevention, we temporarily record IP addresses at the infrastructure level (via AWS) to set usage limits and monitor for denial of service attacks. These logs are used only for rate limiting and security purposes, and are automatically purged according to AWS retention policies. We do not correlate wallet addresses with IPs, and we do not store, exploit, or share any Personal Identifiable Information (PII). https://www.poolz.finance/privacy/",
+  grove:
+    "We store minimal PII related to your login information. We will retain Users’ PII (including Sensitive PII, where applicable) while they maintain an account with us or to the extent necessary to provide the services through the Service. Thereafter, we will keep PII for as long as reasonably necessary. See our Privacy Policy for more details: https://grove.city/privacy",
+  Chainlink:
+    "We collect IP address information for security and troubleshooting purposes. For more information about our privacy practices please reference https://chain.link/privacy-policy.",
+  fullsend:
+    "Full Send RPC does not track any kind of PII (i.e., IP address, location, etc.) in our backend services. We use Cloudflare strictly for DDoS protection, rate limiting, and performance optimization. Cloudflare may collect standard edge-level metadata such as IP addresses and request headers as part of its security and traffic-management functions; this data is processed according to Cloudflare’s own privacy policies and is not stored or used by Full Send. Only signed transactions are preserved for status tracking and service improvements. For more information about our privacy practices, please reference https://www.spire.dev/docs/terms-and-conditions",
+  OpsLayer:
+    "OpsLayer does not require user accounts and does not deliberately gather personally identifiable information. When our RPC endpoints are accessed, the only information that may be processed is the requester’s IP address and the method name being called. This minimal data is used exclusively to operate and maintain the service, such as for rate limiting, preventing abuse or DDoS attacks, debugging issues, monitoring uptime, and analyzing reliability.",
+  sentio:
+    "We may collect IP address information to support security measures and troubleshooting activities. For additional details about our privacy practices, please refer to this Privacy Statement https://www.sentio.xyz/privacy",
+  Cosmostation:
+    "We do not collect or store any PII, including IP addresses or wallet information. Temporary logs for rate limiting are purged within 24 hours. https://www.cosmostation.io/service_en?target=privacy",
+  GlobalStake:
+    "GlobalStake, LLC and its affiliates are committed to protecting your privacy in accordance with applicable data protection laws. We may share information with affiliates, service providers, and partners as needed to deliver services and comply with legal requirements. By using our services, you agree to the terms of our privacy practices. Full policy: https://globalstake.io/privacy-policy/",
+  dilithium3:
+    "Dilithium3 RPC does not store or track any user data including IP addresses, wallet addresses, or transaction metadata. All data needed to process requests is ephemeral and not logged. Our quantum-resistant blockchain uses NIST FIPS 203/204/205 compliant post-quantum cryptography. No analytics, tracking cookies, or third-party services are used. https://dilithium3.com/privacy",
+  huginn:
+    "Huginn Tech is a community-focused blockchain infrastructure provider offering node services, RPC endpoints, custom tools for blockchains. We do not collect, store, or track any user information (IP addresses, locations, etc.) through our RPC endpoints. For more information, visit https://huginn.tech/privacy",
+  hgraph:
+    "When you interact with our Site, our servers automatically collect certain technical information to help us operate, maintain, and improve our services. This information may include details such as your device identifier, IP address, browser type, operating system, and the date and time of your visit. https://hgraph.com/privacy",
+  mirasmanda:
+    "Mirasmanda RPC does not collect or store any personally identifiable information (PII), including IP addresses, wallet addresses, or request metadata. The only data recorded on our infrastructure is what is publicly available on the blockchain. No user data is shared with third parties. For more information, visit https://asterium.uz",
+  pulsonic:
+    "No user data is collected or stored. IP addresses are used only for rate limiting and are logged only when a request is refused, then deleted after 7 days. No request logs, no request bodies. https://pulsonic.cloud/privacy",
+  routemesh:
+    "RouteMesh may process basic request metadata (for example: chain ID, method, timestamp, request size, and coarse location from network edge data) to run routing, apply rate limits, improve reliability, and monitor service health. For more details visit https://routeme.sh/privacy",
+  mevx:
+    "Source IP address is stored in an in-memory cache for the rate-limit sliding window (seconds) and is not written to persistent logs. No cookies, no cross-site tracking, no third-party analytics. Data is processed in the EU (Germany). Lawful basis: legitimate interest (service protection and anti-abuse).",
+  rpcfree:
+    "rpcfree (operated by Etox) logs IP addresses transiently for rate limiting, DDoS protection, and abuse prevention via Cloudflare. Logs are retained for up to 24 hours and not correlated with wallet addresses. No analytics or third-party trackers run on the RPC endpoint itself. Privacy details: https://rpcfree.com/privacy",
+  nodeflare:
+    "NodeFlare does not collect or store any personally identifiable information. IP addresses may be temporarily used for rate limiting and DDoS protection and are not correlated with wallet addresses or request data. https://nodeflare.app/privacy",
+  agentqlTomo:
+    "AgentQL Tomo states that it may process technical and usage information needed to operate the service, including browser or device metadata, page requests, API key actions, request logs, stream activity, error events, and service diagnostics. https://agentql.tomo.inc/privacy-policy",
+  blockmachine:
+    "To route your requests, blockmachine temporarily processes your IP address for up to 2 minutes - used only to count and rate-limit requests. It is never stored beyond that window and cannot be linked to any individual user or account.",
+  keccakio:
+    "keccak.io does not require accounts, email, or KYC, does not log client IP addresses, and does not correlate requests to users. https://keccak.io/privacy",
+  seleman:
+    "SELEMAN public JSON-RPC does not store or track user data, does not log client IP addresses to persistent storage, and does not correlate requests with wallet addresses. Ephemeral in-memory rate-limit counters (≤60s) may be used solely for abuse prevention and are not retained as historical logs. No analytics or third-party tracking on the RPC path. https://explorer.primevertexlabs.com.mx/privacy",
+  backrunshield:
+    "Backrun Shield keeps web access logs (IP, time, request details) for 7 days and counts rate limits per IP in memory only. For each eth_sendRawTransaction it records the hash, sender, recipient, value, call data, time and requesting IP (never the signed bytes), with no set deletion date. Transactions go privately to block builders (48Club, BlockRazor) and are broadcast publicly if not included within 2 blocks. It never trades in front of them; it may backrun one and pays 60 % of that profit to the sender. Nothing is sold or shared. https://backrunshield.com/privacy", 
+  backrun:
+    "backrun does not store IP addresses or signed transactions. For each transaction it records the transaction hash and whether each route accepted it; route logs are kept for up to 15 days. Transactions are sent privately (not to the public mempool) to Flashbots Protect and MEV Blocker on Ethereum, to BNB Chain builders' private RPCs (48 Club, BlockRazor) on BNB Chain, and to a block builder operated with backrun. https://backrun.io/privacy",
+  hostdefi:
+    "HostDeFi's public RPC relay forwards JSON-RPC reads to a rotating pool of upstream nodes; it temporarily records request metadata and client IP addresses for rate limiting and abuse prevention, and does not correlate wallet addresses or build advertising profiles. https://hostdefi.com/validators/",
+  Saxemberg:
+    "No logs, no tracking ever. Temporary logs for rate limiting and threat protection are purged automatically within hours.",
+  daybreak:
+    "Daybreak receives each request's IP address and contents (including signed transactions and queried addresses) to serve it, route transactions and rate limit. This data is kept for no longer than 14 days and is not sold or used for advertising or profiling. https://daybreak-rpc.network/privacy",
+  driftguard:
+    "Zero disk access logging; stateless 200ms block-head consensus routing",
+  blocktailor:
+    "BlockTailor's public RPC runs on our own Ethereum nodes behind an edge proxy. We do not log client IP addresses: rate limiting counts requests per IP in memory only, for a rolling ten-minute window, and the nodes behind the edge never receive the client IP. Request bodies, JSON-RPC methods and URLs are not recorded either. The edge keeps only aggregate counts and anonymous status logs for operations. No accounts, no cookies, no third-party analytics, nothing shared or sold. https://www.blocktailor.com/privacy",
+  thyme:
+    "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
+  ethras:
+    "Ethras does not store RPC request bodies, wallet addresses or signed transactions in application request logs. Client IPs are used temporarily for rate limiting. https://ethras.org/privacy",
 };
 
 export const extraRpcs = {
   1: {
     rpcs: [
-      // Quicknode -> tracks IP
       {
-        url: "https://go.getblock.io/aefd01aa907c4805ba3c00a9e5b48c6b",
-        tracking: "none",
-        trackingDetails: privacyStatement.getblock,
+        url: "https://eth.backrun.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.backrun,
       },
+      {
+        url: "https://xrpc.cl/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/ethereum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://one.valve.city/rpc/vk_demo/evm/1",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://one.valve.city/rpc/vk_demo/evm/1",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "https://rpc.nodeflare.app/eth/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
+      // Quicknode -> tracks IP
       {
         url: "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7",
         tracking: "yes",
@@ -226,14 +346,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/eth",
+        url: "https://public.1rpc.io/eth",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://rpc.builder0x69.io/",
-        tracking: "none",
-        trackingDetails: privacyStatement.builder0x69,
       },
       {
         url: "https://rpc.mevblocker.io",
@@ -277,23 +392,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://api.securerpc.com/v1",
-        tracking: "unspecified",
-      },
-      {
-        url: "https://openapi.bitstack.com/v1/wNFxbiJyQsSeLrX8RRCHi7NpRxrlErZk/DjShIqLishPCTB9HiMkPHXjUM9CNM9Na/ETH/mainnet",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bitstack,
-      },
-      {
-        url: "https://eth-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://eth-mainnet-public.unifra.io",
+        url: "https://ethereum-public.nodies.app",
         tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://ethereum.public.blockpi.network/v1/rpc/public",
@@ -301,29 +402,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://rpc.payload.de",
-        tracking: "none",
-        trackingDetails: privacyStatement.payload,
-      },
-      {
-        url: "https://api.zmok.io/mainnet/oaen6dy8ff6hju9k",
-        tracking: "none",
-        trackingDetails: privacyStatement.zmok,
-      },
-      {
-        url: "https://node.histori.xyz/eth-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://eth-mainnet.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
-      },
-      {
-        url: "https://core.gashawk.io/rpc",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gashawk,
       },
       //"http://127.0.0.1:8545",
       //"https://yolo-intensive-paper.discover.quiknode.pro/45cad3065a05ccb632980a7ee67dd4cbb470ffbd/",
@@ -335,7 +416,6 @@ export const extraRpcs = {
       "https://ethereumnodelight.app.runonflux.io",
       "https://eth-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
       //"http://18.211.207.34:8545",
-      "https://main-light.eth.linkpool.io",
       {
         url: "https://rpc.eth.gateway.fm",
         tracking: "yes",
@@ -357,12 +437,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://mainnet.gateway.tenderly.co",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tenderly,
+        url: "wss://eth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://virtual.mainnet.rpc.tenderly.co/7355b215-ef17-4e3e-8f64-d494284ef18a",
+        url: "https://mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -382,20 +462,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://eth-mainnet.diamondswap.org/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.diamondswap,
-      },
-      "https://rpc.notadegen.com/eth",
-      {
         url: "https://eth.merkle.io",
         tracking: "none",
         trackingDetails: privacyStatement.merkle,
-      },
-      {
-        url: "https://rpc.lokibuilder.xyz/wallet",
-        tracking: "none",
-        trackingDetails: privacyStatement.lokibuilder,
       },
       {
         url: "https://services.tokenview.io/vipapi/nodeservice/eth?apikey=qVHq2o6jpaakcw3lRstl",
@@ -403,24 +472,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tokenview,
       },
       {
-        url: "https://eth.nodeconnect.org/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.nodeconnect,
-      },
-      {
-        url: "https://api.stateless.solutions/ethereum/v1/demo",
-        tracking: "none",
-        trackingDetails: privacyStatement.stateless,
-      },
-      {
         url: "https://rpc.polysplit.cloud/v1/chain/1",
         tracking: "none",
         trackingDetails: privacyStatement.polysplit,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/ethereum-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
       },
       {
         url: "https://ethereum-mainnet.gateway.tatum.io",
@@ -428,30 +482,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://eth.nownodes.io",
+        url: "https://public-eth.nownodes.io",
         tracking: "yes",
-        trackingDetails: privacyStatement.NOWNodes,
-      },
-      {
-        url: "https://rpc.nodifi.ai/api/rpc/free",
-        tracking: "none",
-        trackingDetails: privacyStatement.nodifi,
-      },
-      "https://ethereum.rpc.subquery.network/public",
-      {
-        url: "https://rpc.graffiti.farm",
-        tracking: "limited",
-        trackingDetails: privacyStatement.graffiti,
-      },
-      {
-        url: "https://rpc.public.curie.radiumblock.co/http/ethereum",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
-        url: "https://eth-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
+        trackingDetails: privacyStatement.nownodes,
       },
       {
         url: "wss://eth-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -459,19 +492,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "https://rpc.public.curie.radiumblock.co/ws/ethereum",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
         url: "wss://ws-rpc.graffiti.farm",
         tracking: "limited",
         trackingDetails: privacyStatement.graffiti,
-      },
-      {
-        url: "wss://ethereum.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
       },
       {
         url: "https://eth.blockrazor.xyz",
@@ -479,23 +502,23 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.BlockRazor,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+        url: "https://eth.blockrazor.xyz/fullprivacy",
         tracking: "none",
-        trackingDetails: privacyStatement.omnia,
+        trackingDetails: privacyStatement.BlockRazor,
       },
       {
-        url: "https://eth1.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
+        url: "https://eth.blockrazor.xyz/maxbackrun",
+        tracking: "none",
+        trackingDetails: privacyStatement.BlockRazor,
       },
       {
         url: "https://0xrpc.io/eth",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/eth",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -504,17 +527,152 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://ethereum.therpc.io",
+        url: "https://eth.api.onfinality.io/public",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://ethereum-json-rpc.stakely.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
+      {
+        url: "https://eth.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-ethereum-mainnet-reth.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://rpc.fullsend.to/",
+        tracking: "none",
+        trackingDetails: privacyStatement.fullsend,
+      },
+      {
+        url: "https://mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/eth",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpc-eth.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "wss://eth.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.driftguard.live/eth",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://eth.blocktailor.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.blocktailor,
+      },
+      {
+        url: "https://ethereum-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://ethras.org/public/ethereum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ethras,
       },
     ],
   },
   2: {
-    rpcs: ["https://node.eggs.cool", "https://node.expanse.tech"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://node.eggs.cool",
+      "https://node.expanse.tech",
+    ],
+  },
+  944: {
+    rpcs: ["https://public-zigchain-evm-rpc.numia.xyz"],
   },
   1975: {
     rpcs: ["https://rpc.onuschain.io"],
+  },
+  2500: {
+    rpcs: ["https://rpc.cchain.cc", "wss://wss.cchain.cc"],
+  },
+  1492: {
+    rpcs: [
+      {
+        url: "https://rpc.roonchain.com",
+        tracking: "yes",
+        trackingDetails:
+          "Official ROON Mainnet public RPC provided by the RoonChain team. Privacy policy is not publicly available yet.",
+      },
+    ],
+  },
+  1404: {
+    rpcs: [
+      {
+        url: "https://rpc.kenny-us-pool.com",
+        tracking: "yes",
+        trackingDetails:
+          "This RPC endpoint may log request metadata (IP address, request method, timestamps) for rate-limiting, abuse prevention, and service reliability purposes.",
+      },
+      {
+        url: "https://rpc.bdagexplorer.com/",
+        tracking: "limited",
+        trackingDetails:
+          "Normal, successful RPC requests are not logged. Only abuse/anomaly events (rate-limit bans, oversized requests, malformed JSON, blocked methods, upstream errors) are logged, recording the client IP and a reason, with no automatic expiry on that log. This endpoint is proxied through Cloudflare, whose own edge network may separately log standard request metadata per their own policies, independent of the origin server.",
+      },
+    ],
+  },
+  1475: {
+    rpcs: [
+      {
+        url: "https://rpc.cmxofficial.com",
+        tracking: "limited",
+        trackingDetails:
+          "Official CRYMAD Chain public RPC operated by CryMadX. Cloudflare sits in front of the endpoint and may process IP addresses and request metadata for rate limiting, abuse prevention and service reliability: https://www.cloudflare.com/privacypolicy/",
+      },
+    ],
+  },
+  7373: {
+    rpcs: [
+      {
+        url: "https://rpcl2.cmxofficial.com",
+        tracking: "limited",
+        trackingDetails:
+          "Official CRYMAD Chain L2 public RPC operated by CryMadX. Cloudflare sits in front of the endpoint and may process IP addresses and request metadata for rate limiting, abuse prevention and service reliability: https://www.cloudflare.com/privacypolicy/",
+      },
+    ],
+  },
+  2517: {
+    rpcs: [
+      "https://svp-dataseed1-testnet.svpchain.org",
+      "https://svp-dataseed2-testnet.svpchain.org",
+      "https://svp-dataseed3-testnet.svpchain.org",
+    ],
+  },
+  2518: {
+    rpcs: [
+      "https://svp-dataseed1.svpchain.org",
+      "https://svp-dataseed2.svpchain.org",
+      "https://svp-dataseed3.svpchain.org",
+    ],
   },
   80001: {
     rpcs: [
@@ -523,6 +681,11 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://rpc.ankr.com/polygon/c4cc6a8c87ec30258076de433ab2cf3d834228aae3fc4d76087873e4fea11635",
+        tracking: "yes",
+        trackingDetails: privacyStatement.ankr,
       },
       "https://polygontestapi.terminet.io/rpc",
       {
@@ -544,11 +707,6 @@ export const extraRpcs = {
         url: "wss://polygon-mumbai-bor-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://polygon-mumbai-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://polygon-mumbai.gateway.tenderly.co",
@@ -644,11 +802,13 @@ export const extraRpcs = {
   3: {
     rpcs: ["https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"],
   },
-  195: {
-    rpcs: ["https://xlayertestrpc.okx.com", "https://testrpc.xlayer.tech"],
-  },
   4002: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.testnet.fantom.network/",
       {
         url: "https://endpoints.omniatech.io/v1/fantom/testnet/public",
@@ -671,14 +831,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://fantom.api.onfinality.io/public",
+        url: "https://fantom-testnet.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://node.histori.xyz/fantom-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://fantom-testnet.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://fantom-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -697,6 +862,11 @@ export const extraRpcs = {
   },
   43113: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/43113",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.avax-test.network/ext/bc/C/rpc",
       {
         url: "https://endpoints.omniatech.io/v1/avax/fuji/public",
@@ -720,24 +890,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://avalanche-fuji.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://api.zan.top/avax-fuji/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/avalanche-fuji",
-        tracking: "limited",
-        trackingDetails: privacyStatement.zan,
-      },
-      {
-        url: "https://node.histori.xyz/avalanche-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://avalanche-fuji.drpc.org",
@@ -753,7 +908,16 @@ export const extraRpcs = {
   },
   80002: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/80002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc-amoy.polygon.technology",
+      {
+        url: "https://rpc.satelink.network/rpc/amoy",
+        tracking: "none",
+      },
       {
         url: "https://polygon-bor-amoy-rpc.publicnode.com",
         tracking: "none",
@@ -790,19 +954,64 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://node.histori.xyz/matic-amoy-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://polygon-amoy-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://polygon-amoy.therpc.io",
         tracking: "limited",
         trackingDetails: privacyStatement.therpc,
       },
+      {
+        url: "https://polygon-amoy.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://poly-amoy-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://polygon-amoy.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://polygon-amoy.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
     ],
   },
   56: {
     rpcs: [
+      {
+        url: "https://bsc.backrun.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.backrun,
+      },
+      {
+        url: "https://xrpc.cl/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/bsc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/56",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/bnb/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://bsc-dataseed.bnbchain.org/",
       "https://bsc-dataseed1.defibit.io/",
       "https://bsc-dataseed1.ninicoin.io/",
@@ -816,7 +1025,6 @@ export const extraRpcs = {
       "https://bsc-dataseed2.bnbchain.org/",
       "https://bsc-dataseed3.bnbchain.org/",
       "https://bsc-dataseed4.bnbchain.org/",
-      "https://bsc-dataseed6.dict.life/",
       {
         url: "https://rpc-bsc.48.club",
         tracking: "limited",
@@ -833,9 +1041,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["48Club"],
       },
       {
-        url: "https://bsc-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://binance-smart-chain-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
@@ -843,21 +1051,12 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodereal,
       },
       {
-        url: "https://go.getblock.io/cc778cdbdf5c4b028ec9456e0e6c0cf3",
-        tracking: "limited",
-        trackingDetails: privacyStatement.getblock,
-      },
-      "https://bscrpc.com",
-      "https://bsc.rpcgator.com/",
-      {
         url: "https://binance.nodereal.io",
         tracking: "yes",
         trackingDetails: privacyStatement.nodereal,
       },
-      "https://bsc-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
-      "https://nodes.vefinetwork.org/smartchain",
       {
-        url: "https://1rpc.io/bnb",
+        url: "https://public.1rpc.io/bnb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -917,35 +1116,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.polysplit,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/bsc-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://bsc-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://bsc.nownodes.io",
+        url: "https://public-bsc.nownodes.io",
         tracking: "yes",
-        trackingDetails: privacyStatement.NOWNodes,
-      },
-      {
-        url: "https://bsc-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
+        trackingDetails: privacyStatement.nownodes,
       },
       {
         url: "wss://bsc-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
-      },
-      "https://bnb.rpc.subquery.network/public",
-      {
-        url: "wss://bsc.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
       },
       {
         url: "https://bsc.blockrazor.xyz",
@@ -953,14 +1136,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.BlockRazor,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
+        url: "https://bsc.blockrazor.xyz/fullprivacy",
         tracking: "none",
-        trackingDetails: privacyStatement.omnia,
+        trackingDetails: privacyStatement.BlockRazor,
       },
       {
-        url: "https://node.histori.xyz/bsc-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://bsc.blockrazor.xyz/maxbackrun",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.BlockRazor,
       },
       {
         url: "https://rpc.owlracle.info/bsc/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -968,14 +1151,70 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://bsc.therpc.io",
+        url: "https://bsc.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://public-bsc-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://api-bsc-mainnet-full.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "wss://bsc.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://bsc.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/bsc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://bsc.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc-bsc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.backrunshield.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.backrunshield,
+      },
+      {
+        url: "https://bnb-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://rpc.driftguard.live/bsc",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
   97: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/97",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://bsctestapi.terminet.io/rpc",
       {
         url: "https://bsc-testnet.public.blastapi.io",
@@ -998,16 +1237,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://bsc-testnet.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/bsc-testnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://bsc-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
@@ -1021,11 +1250,6 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/bsc/testnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/bsc-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://bsc-testnet.drpc.org",
@@ -1043,9 +1267,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://bsc-testnet.therpc.io",
+        url: "https://bsc-testnet.rpc.sentio.xyz",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://bsc-rpc-public.chainpulse.cc/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.chainpulse,
       },
     ],
   },
@@ -1054,6 +1283,26 @@ export const extraRpcs = {
   },
   43114: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/avalanche",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/avalanche",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/avax/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://api.avax.network/ext/bc/C/rpc",
       "https://avalanche.public-rpc.com",
       {
@@ -1073,34 +1322,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/avax/c",
+        url: "https://public.1rpc.io/avax/c",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://avalanche.blockpi.network/v1/rpc/private",
+        url: "https://avalanche-public.nodies.app/ext/bc/C/rpc",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://avax-pokt.nodies.app/ext/bc/C/rpc",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://avalanche.api.onfinality.io/public/ext/bc/C/rpc",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/avax/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://avax.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
       },
       {
         url: "https://api.zan.top/avax-mainnet/ext/bc/C/rpc",
@@ -1113,11 +1347,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/avalanche-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://avax-x-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -1126,21 +1355,6 @@ export const extraRpcs = {
         url: "https://avalanche-mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://node.histori.xyz/avalanche-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://0xrpc.io/avax",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/avax",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://rpc.owlracle.info/avax/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -1152,20 +1366,51 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
-    ],
-  },
-  250: {
-    rpcs: [
-      "https://rpcapi.fantom.network",
       {
-        url: "https://fantom-pokt.nodies.app",
+        url: "https://avax.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://node.histori.xyz/fantom-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "wss://avalanche.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://avalanche.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/avalanche",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://avax-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc.driftguard.live/avax",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
+    ],
+  },
+  250: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/250",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpcapi.fantom.network",
+      {
+        url: "https://fantom-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       "https://rpc.ftm.tools/",
       "https://rpc.fantom.network",
@@ -1177,14 +1422,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/ftm",
+        url: "https://public.1rpc.io/ftm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://fantom.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://fantom-rpc.publicnode.com",
@@ -1202,11 +1442,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.fantom.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
-      },
-      {
         url: "https://fantom.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -1217,50 +1452,62 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "wss://fantom.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/fantom/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      "https://fantom-json-rpc.stakely.io",
-      {
         url: "https://api.zan.top/ftm-mainnet",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
-      },
-      {
-        url: "https://node.histori.xyz/fantom-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://rpc.owlracle.info/ftm/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://fantom.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   137: {
     rpcs: [
       {
+        url: "https://xrpc.cl/polygon",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/137",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+      url: "https://public.blazingnode.com",
+      tracking: "none",
+      },
+      {
+        url: "https://rpc.nodeflare.app/polygon/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
+      {
         url: "https://rpc.ankr.com/polygon",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
-      "https://polygon-rpc.com",
       {
         url: "https://rpc-mainnet.matic.quiknode.pro",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
       {
-        url: "https://polygon-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://polygon-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://polygon-mainnet.public.blastapi.io",
@@ -1268,7 +1515,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/matic",
+        url: "https://public.1rpc.io/matic",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1290,24 +1537,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
       {
-        url: "https://polygon.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://go.getblock.io/02667b699f05444ab2c64f9bff28f027",
-        tracking: "yes",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
         url: "https://polygon.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://polygon.rpc.blxrbdn.com/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.bloxroute,
       },
       {
         url: "https://polygon.drpc.org",
@@ -1330,25 +1562,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://polygon.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/polygon-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://polygon-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      "https://polygon.rpc.subquery.network/public",
-      {
-        url: "https://polygon-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
       },
       {
         url: "wss://polygon-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -1356,41 +1572,74 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "https://endpoints.omniatech.io/v1/matic/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://polygon.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://node.histori.xyz/matic-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/poly/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://polygon.therpc.io",
+        url: "https://poly.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-polygon-mainnet-full.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "yes",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://rpc.swiftnodes.io/rpc/polygon",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpc.private.mev-x.com/polygon",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mevx,
+      },
+      {
+        url: "https://matic.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpcfree.com/polygon-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://rpc.satelink.network/rpc/polygon",
+       tracking: "none",
+      },
+      {
+        url: "wss://poly.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc-polygon.blockmachine.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://polygon-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://rpc.driftguard.live/pol",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
   25: {
     rpcs: [
-      "https://evm.cronos.org",
-      "https://cronos-rpc.elk.finance/",
       {
-        url: "https://cronos.blockpi.network/v1/rpc/private",
+        url: "https://lb.routeme.sh/rpc/evm/25",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://evm.cronos.org",
       {
         url: "https://cronos-evm-rpc.publicnode.com",
         tracking: "none",
@@ -1402,7 +1651,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/cro",
+        url: "https://public.1rpc.io/cro",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1417,27 +1666,52 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://rpc.vvs.finance",
-      "https://mmf-rpc.xstaking.sg",
       "https://rpc.nebkas.ro",
-      {
-        url: "https://endpoints.omniatech.io/v1/cronos/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       {
         url: "https://rpc.owlracle.info/cro/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://cro-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://api-cronos-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "yes",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://cronos.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/cronos",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   338: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/338",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm-t3.cronos.org/",
       {
         url: "https://endpoints.omniatech.io/v1/cronos/testnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
+      },
+      {
+        url: "https://cro-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -1452,6 +1726,11 @@ export const extraRpcs = {
   },
   8822: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8822",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://json-rpc.evm.iotaledger.net",
       {
         url: "https://iota-mainnet-evm.public.blastapi.io",
@@ -1462,6 +1741,11 @@ export const extraRpcs = {
         url: "https://rpc.ankr.com/iota_evm",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://iota-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -1478,14 +1762,66 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://iota-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  1236: {
+    rpcs: [
+      {
+        url: "https://rpc.brainark.online",
+        tracking: "none",
+      },
     ],
   },
   2340: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/2340",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/atleta_olympia",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  2440: {
+    rpcs: [
+      {
+        url: "https://rpc.atleta.mainnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "wss://rpc.atleta.mainnet.dteam.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.DTEAM,
+      },
+      {
+        url: "https://rpc.ankr.com/atleta_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://rpc.atleta.at.htw.tech",
+        tracking: "yes",
+        trackingDetails: privacyStatement.Hightower,
+      },
+      {
+        url: "wss://rpc.atleta.at.htw.tech",
+        tracking: "yes",
+        trackingDetails: privacyStatement.Hightower,
+      },
+      {
+        url: "https://atleta.nownodes.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.nownodes,
       },
     ],
   },
@@ -1501,6 +1837,11 @@ export const extraRpcs = {
   1559: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/1559",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/tenet_evm",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -1509,16 +1850,36 @@ export const extraRpcs = {
   },
   42161: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/arbitrum",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/arbitrum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/arb/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://arb1.arbitrum.io/rpc",
       {
-        url: "https://1rpc.io/arb",
+        url: "https://public.1rpc.io/arb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://arb-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://arbitrum-one-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://arb-mainnet.g.alchemy.com/v2/demo",
@@ -1526,24 +1887,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.alchemy,
       },
       {
-        url: "https://arbitrum.public.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://arbitrum-one.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://arb-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
-        url: "https://rpc.arb1.arbitrum.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
       },
       {
         url: "https://arbitrum-one-rpc.publicnode.com",
@@ -1571,40 +1917,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/arbitrum-one",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://api.stateless.solutions/arbitrum-one/v1/demo",
         tracking: "none",
         trackingDetails: privacyStatement.stateless,
       },
-      "https://arbitrum.rpc.subquery.network/public",
       {
         url: "https://arbitrum.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "wss://arbitrum.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/arbitrum/one/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://arb1.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://node.histori.xyz/arbitrum-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://rpc.owlracle.info/arb/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -1612,9 +1932,65 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://arbitrum.therpc.io",
+        url: "https://arbitrum.api.onfinality.io/public",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://arb-one-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://arb-one.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://public-arb-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://api-arbitrum-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "wss://arbitrum.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://arbitrum-one.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/arbitrum",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/arbitrum-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://arbitrum-one-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc-arbitrum.blockmachine.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.driftguard.live/arb",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
@@ -1649,16 +2025,16 @@ export const extraRpcs = {
   },
   42170: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42170",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://nova.arbitrum.io/rpc",
       {
         url: "https://arbitrum-nova.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://arbitrum-nova.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://arbitrum-nova-rpc.publicnode.com",
@@ -1686,16 +2062,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://node.histori.xyz/arbitrum-nova-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://arbnova-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
-        tracking: "yes",
-        trackingDetails: privacyStatement.alchemy,
-      },
-      {
         url: "https://${QUICKNODE_IDENTIFIER}.nova-mainnet.quiknode.pro/${QUICKNODE_API_KEY}",
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
@@ -1705,19 +2071,24 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.quicknode,
       },
+      {
+        url: "wss://arbitrum-nova.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.driftguard.live/nova",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   421614: {
     rpcs: [
       {
-        url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/private ",
+        url: "https://lb.routeme.sh/rpc/evm/421614",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/arbitrum-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
+        trackingDetails: privacyStatement.routemesh,
       },
       {
         url: "https://endpoints.omniatech.io/v1/arbitrum/sepolia/public",
@@ -1735,12 +2106,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://node.histori.xyz/arbitrum-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://polygon-mumbai.api.onfinality.io/public",
+        url: "https://arbitrum-sepolia.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
@@ -1755,14 +2121,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://arbitrum-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        url: "https://arbitrum-sepolia-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
   8217: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8217",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://public-en.node.kaia.io",
       {
         url: "https://alpha-hardworking-orb.kaia-mainnet.quiknode.pro/",
@@ -1770,19 +2141,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.quicknode,
       },
       {
-        url: "https://kaia.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://kaia-mainnet.rpc.grove.city/v1/803ceedf",
+        url: "https://kaia.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://go.getblock.io/d7094dbd80ab474ba7042603fe912332",
-        tracking: "none",
-        trackingDetails: privacyStatement.getblock,
+        url: "https://kaia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://klaytn.api.onfinality.io/public",
@@ -1790,7 +2156,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://1rpc.io/klay",
+        url: "https://public.1rpc.io/klay",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1805,31 +2171,31 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://node.histori.xyz/kaia-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://kaia-mainnet.gateway.tatum.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "wss://klaytn.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   1666600000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1666600000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.harmony.one",
       "https://a.api.s0.t.hmny.io",
       "https://api.s0.t.hmny.io",
       {
-        url: "https://1rpc.io/one",
+        url: "https://public.1rpc.io/one",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://hmyone-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://harmony-0.drpc.org",
@@ -1842,33 +2208,44 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/harmony-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/one/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://harmony.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://one-mainnet-s0.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "wss://harmony.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
   168587773: {
     rpcs: [
       {
-        url: "https://blast-sepolia.blockpi.network/v1/rpc/private",
+        url: "https://lb.routeme.sh/rpc/evm/168587773",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://sepolia.blast.io",
       {
         url: "https://endpoints.omniatech.io/v1/blast/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://node.histori.xyz/blast-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://blast-testnet-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://rpc.ankr.com/blast_testnet_sepolia",
@@ -1879,29 +2256,17 @@ export const extraRpcs = {
   },
   81457: {
     rpcs: [
-      "https://rpc.blast.io",
-      "https://blast.din.dev/rpc",
-      "https://blastl2-mainnet.public.blastapi.io",
-      "https://blast.blockpi.network/v1/rpc/private",
       {
-        url: "https://blast.blockpi.network/v1/rpc/private",
+        url: "https://lb.routeme.sh/rpc/evm/81457",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://blastl2-mainnet.public.blastapi.io",
+      "https://li-fi-blast.intustechno.workers.dev/rpc",
       {
         url: "https://rpc.ankr.com/blast",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://blast.gasswap.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.gasswap,
-      },
-      {
-        url: "wss://blast.gasswap.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.gasswap,
       },
 
       {
@@ -1930,34 +2295,74 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "wss://blast.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/blast/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/blast-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/blast/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://blast.therpc.io",
+        url: "https://blast-public.nodies.app",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
+        url: "https://blast.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-blast-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://blast-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/blast",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://blast.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.driftguard.live/blast",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
+    ],
+  },
+  5611: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5611",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://opbnb-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://opbnb-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   204: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/204",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://opbnb-mainnet-rpc.bnbchain.org",
       {
         url: "https://opbnb.drpc.org",
@@ -1980,7 +2385,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/opbnb",
+        url: "https://public.1rpc.io/opbnb",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -1994,10 +2399,36 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
+      {
+        url: "https://opbnb.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-opbnb-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/opbnb",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://opbnb.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   1666700000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1666700000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.s0.b.hmny.io",
       {
         url: "https://endpoints.omniatech.io/v1/harmony/testnet-0/public",
@@ -2008,9 +2439,14 @@ export const extraRpcs = {
   },
   1313161554: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1313161554",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mainnet.aurora.dev",
       {
-        url: "https://1rpc.io/aurora",
+        url: "https://public.1rpc.io/aurora",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2030,11 +2466,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://node.histori.xyz/aurora-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/aurora/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
@@ -2043,6 +2474,11 @@ export const extraRpcs = {
   },
   1313161555: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1313161555",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://testnet.aurora.dev",
       "https://aurora-testnet.drpc.org",
       "wss://aurora-testnet.drpc.org",
@@ -2050,11 +2486,6 @@ export const extraRpcs = {
         url: "https://endpoints.omniatech.io/v1/aurora/testnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/aurora-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
     ],
   },
@@ -2078,11 +2509,21 @@ export const extraRpcs = {
       },
     ],
   },
+  165: {
+    rpcs: [
+      "https://rpc.fmcscan.com",
+    ],
+  },
   256: {
     rpcs: ["https://hecotestapi.terminet.io/rpc"],
   },
   5165: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5165",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc1.bahamut.io",
       "https://rpc2.bahamut.io",
       "https://rpc1.ftnscan.io",
@@ -2112,6 +2553,11 @@ export const extraRpcs = {
   2552: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/2552",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/bahamut_horizon",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -2120,7 +2566,13 @@ export const extraRpcs = {
   },
   42220: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42220",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://forno.celo.org",
+      "https://rpc.celocolombia.org",
       {
         url: "https://rpc.ankr.com/celo",
         tracking: "limited",
@@ -2141,20 +2593,49 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      "https://celo-json-rpc.stakely.io",
+      {
+        url: "https://celo-json-rpc.stakely.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
+      {
+        url: "https://celo.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://api-celo-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/celo",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
-  44787: {
+  11142220: {
     rpcs: [
-      "https://alfajores-forno.celo-testnet.org",
-      "wss://alfajores-forno.celo-testnet.org/ws",
+      "https://forno.celo-sepolia.celo-testnet.org",
       {
-        url: "https://celo-alfajores.drpc.org",
+        url: "https://rpc.ankr.com/celo_sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://celo-sepolia.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://celo-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://celo-alfajores.drpc.org",
+        url: "wss://celo-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -2162,15 +2643,15 @@ export const extraRpcs = {
   },
   480: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/480",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://worldchain-mainnet.g.alchemy.com/public",
       "https://480.rpc.thirdweb.com",
       "https://worldchain-mainnet.gateway.tenderly.co",
       "wss://worldchain-mainnet.gateway.tenderly.co",
-      {
-        url: "https://node.histori.xyz/worldchain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
       "https://sparkling-autumn-dinghy.worldchain-mainnet.quiknode.pro",
       {
         url: "https://worldchain.drpc.org",
@@ -2186,15 +2667,15 @@ export const extraRpcs = {
   },
   4801: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4801",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://worldchain-sepolia.g.alchemy.com/public",
       "https://4801.rpc.thirdweb.com",
       "https://worldchain-sepolia.gateway.tenderly.co",
       "wss://worldchain-sepolia.gateway.tenderly.co",
-      {
-        url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
       {
         url: "https://worldchain-sepolia.drpc.org",
         tracking: "none",
@@ -2209,6 +2690,26 @@ export const extraRpcs = {
   },
   10: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/optimism",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/optimism",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/op/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://mainnet.optimism.io/",
       {
         url: "https://optimism-mainnet.public.blastapi.io",
@@ -2216,14 +2717,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://1rpc.io/op",
+        url: "https://public.1rpc.io/op",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://op-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://optimism-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://opt-mainnet.g.alchemy.com/v2/demo",
@@ -2241,11 +2742,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://rpc.optimism.gateway.fm",
-        tracking: "yes",
-        trackingDetails: privacyStatement.gateway,
-      },
-      {
         url: "https://optimism-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
@@ -2254,11 +2750,6 @@ export const extraRpcs = {
         url: "wss://optimism-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://optimism.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
       },
       {
         url: "https://api.zan.top/opt-mainnet",
@@ -2286,24 +2777,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.stateless,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/optimism-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://optimism-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      {
-        url: "https://go.getblock.io/e8a75f8dcf614861becfbcb185be6eb4",
-        tracking: "yes",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
-        url: "https://opt-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
       },
       {
         url: "wss://opt-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -2311,35 +2787,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement["4everland"],
       },
       {
-        url: "https://endpoints.omniatech.io/v1/op/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://rpc.buildbear.io/esquivelfabian/",
         tracking: "yes",
         trackingDetails: privacyStatement.buildbear,
-      },
-      {
-        url: "https://optimism.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      "https://optimism.rpc.subquery.network/public",
-      {
-        url: "https://node.histori.xyz/optimism-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://0xrpc.io/op",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/op",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://rpc.owlracle.info/opt/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -2347,25 +2797,61 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://optimism.therpc.io",
+        url: "https://op.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://public-op-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://api-optimism-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://optimism.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/optimism",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://op.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc-optimism.blockmachine.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://optimism-mainnet.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
+      },
+      {
+        url: "https://rpc.driftguard.live/op",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
   11155420: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11155420",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://sepolia.optimism.io",
-      {
-        url: "https://optimism-sepolia.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/optimism-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
       {
         url: "https://endpoints.omniatech.io/v1/op/sepolia/public",
         tracking: "none",
@@ -2382,9 +2868,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://node.histori.xyz/optimism-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://optimism-sepolia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://optimism-sepolia.api.onfinality.io/public",
@@ -2392,14 +2878,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://optimism-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        url: "https://op-sepolia-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
   2330: {
-    rpcs: ["http://138.197.152.181:8145", "https://rpc0.altcoinchain.org/rpc"],
+    rpcs: [
+          "https://rpc.wattxchange.app",
+          "https://alt-rpc.minethepla.net",
+          ],
   },
   1773: {
     rpcs: ["http://138.197.152.181:8245"],
@@ -2409,6 +2898,11 @@ export const extraRpcs = {
   },
   4200: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4200",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.merlinchain.io",
       {
         url: "https://merlin.blockpi.network/v1/rpc/public",
@@ -2416,12 +2910,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blockpi,
       },
       "https://rpc-merlin.rockx.com",
-      "https://merlin-mainnet-enterprise.unifra.io",
-      {
-        url: "https://endpoints.omniatech.io/v1/merlin/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       {
         url: "https://endpoints.omniatech.io/v1/merlin/mainnet/public",
         tracking: "none",
@@ -2480,6 +2968,11 @@ export const extraRpcs = {
   },
   1088: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1088",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://andromeda.metis.io/?owner=1088",
       {
         url: "https://metis-mainnet.public.blastapi.io",
@@ -2492,9 +2985,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://metis-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://metis-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://metis.drpc.org",
@@ -2507,11 +3000,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://metis-pokt.nodies.app/",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
-      },
-      {
         url: "https://metis-andromeda.rpc.thirdweb.com/",
         tracking: "yes",
         trackingDetails: privacyStatement.thirdweb,
@@ -2522,11 +3010,21 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       "https://api.blockeden.xyz/metis/67nCBdZQSH9z3YqDDjdm",
-      "https://metis.rpc.hypersync.xyz/",
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/metis",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   59902: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/59902",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "wss://metis-sepolia-rpc.publicnode.com",
         tracking: "none",
@@ -2550,12 +3048,17 @@ export const extraRpcs = {
   },
   100: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.gnosischain.com",
       "https://xdai-archive.blockscout.com",
       {
-        url: "https://gnosis-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://gnosis-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://rpc.gnosis.gateway.fm",
@@ -2571,11 +3074,6 @@ export const extraRpcs = {
         url: "https://rpc.ap-southeast-1.gateway.fm/v4/gnosis/non-archival/mainnet",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
-      },
-      {
-        url: "https://gnosis.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://gnosis.api.onfinality.io/public",
@@ -2603,7 +3101,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/gnosis",
+        url: "https://public.1rpc.io/gnosis",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2613,24 +3111,35 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "https://node.histori.xyz/gnosis-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://gnosis.api.pocket.network",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.pokt,
       },
       {
-        url: "https://0xrpc.io/gno",
+        url: "wss://gnosis.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/gnosis",
         tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.swiftnodes,
       },
       {
-        url: "wss://0xrpc.io/gno",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
+        url: "wss://gnosis.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
   10200: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10200",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.chiadochain.net",
       {
         url: "https://rpc.chiado.gnosis.gateway.fm",
@@ -2652,24 +3161,34 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-      {
-        url: "https://node.histori.xyz/gnosis-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   1923: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/1923",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/swell",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://swell-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
   1924: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1924",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.ankr.com/swell_sepolia",
         tracking: "none",
@@ -2690,6 +3209,11 @@ export const extraRpcs = {
   1625: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/1625",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/gravity",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -2701,8 +3225,21 @@ export const extraRpcs = {
   },
   1285: {
     rpcs: [
-      "https://rpc.api.moonriver.moonbeam.network",
-      "wss://wss.api.moonriver.moonbeam.network",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1285",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.api.moonriver.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "wss://wss.api.moonriver.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
       {
         url: "wss://moonriver.api.onfinality.io/public-ws",
         tracking: "limited",
@@ -2714,19 +3251,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://moonriver.unitedbloc.com:2000",
+        url: "https://moonriver.unitedbloc.com",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "wss://moonriver.unitedbloc.com:2001",
+        url: "wss://moonriver.unitedbloc.com",
         tracking: "yes",
         trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "https://moonriver.public.blastapi.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
       },
       {
         url: "https://moonriver-rpc.dwellir.com",
@@ -2749,16 +3281,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://moonriver.public.curie.radiumblock.co/http",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
-        url: "https://moonriver.public.curie.radiumblock.co/ws",
-        tracking: "none",
-        trackingDetails: privacyStatement.radiumblock,
-      },
-      {
         url: "https://moonriver.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -2769,35 +3291,73 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/moonriver-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/movr/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://moonriver.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/moonriver",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://moonriver.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   361: {
-    rpcs: ["https://eth-rpc-api.thetatoken.org/rpc"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/361",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://eth-rpc-api.thetatoken.org/rpc",
+    ],
   },
   42262: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42262",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://emerald.oasis.io",
       {
-        url: "https://1rpc.io/oasis/emerald",
+        url: "https://public.1rpc.io/oasis/emerald",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
+      },
+      {
+        url: "https://oasis-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
   40: {
     rpcs: [
-      "https://rpc.telos.net",
       {
-        url: "https://1rpc.io/telos/evm",
+        url: "https://lb.routeme.sh/rpc/evm/40",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.telos.net",
+        tracking: "limited",
+        trackingDetails:
+          "Requests pass through Cloudflare, which processes end-user IP addresses and traffic metadata for security, routing, and analytics. The RPC origins also retain limited HTTP request metadata.",
+      },
+      {
+        url: "https://public.1rpc.io/telos/evm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2812,11 +3372,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/telos-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.ankr.com/telos",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
@@ -2825,12 +3380,12 @@ export const extraRpcs = {
   },
   41: {
     rpcs: [
-      "https://testnet.telos.net/evm",
       {
-        url: "https://node.histori.xyz/telos-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lb.routeme.sh/rpc/evm/41",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://testnet.telos.net/evm",
     ],
   },
   32659: {
@@ -2838,7 +3393,21 @@ export const extraRpcs = {
   },
   1284: {
     rpcs: [
-      "https://rpc.api.moonbeam.network",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1284",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.api.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "wss://wss.api.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
       {
         url: "https://moonbeam.api.onfinality.io/public",
         tracking: "limited",
@@ -2850,22 +3419,17 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://moonbeam.unitedbloc.com:3000",
-        tracking: "yes",
-        trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "wss://moonbeam.unitedbloc.com:3001",
-        tracking: "yes",
-        trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "https://moonbeam.public.blastapi.io",
+        url: "https://moonbeam.unitedbloc.com",
         tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
-        url: "https://1rpc.io/glmr",
+        url: "wss://moonbeam.unitedbloc.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+        url: "https://public.1rpc.io/glmr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -2880,9 +3444,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.dwellir,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
+        url: "https://moonbeam.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.omnia,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moonbeam.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://moonbeam.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://moonbeam-rpc.publicnode.com",
@@ -2895,8 +3469,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://moonbeam.public.curie.radiumblock.co/http",
+        url: "https://endpoints.omniatech.io/v1/moonbeam/mainnet/public",
         tracking: "none",
+        trackingDetails: privacyStatement.omnia,
         trackingDetails: privacyStatement.radiumblock,
       },
       {
@@ -2905,35 +3480,40 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.radiumblock,
       },
       {
-        url: "https://moonbeam.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://moonbeam.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
+        url: "https://rpc.poolz.finance/moonbeam",
+        tracking: "limited",
+        trackingDetails: privacyStatement.poolz,
       },
       {
         url: "https://node.histori.xyz/moonbeam-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
-    ],
-  },
-  31: {
-    rpcs: [
-      "https://public-node.testnet.rsk.co",
-      "https://mycrypto.testnet.rsk.co",
       {
-        url: "https://node.histori.xyz/rsk-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://moonbeam.api.pocket.network",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.pokt,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/moonbeam",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://moonbeam.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
   30: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/30",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mycrypto.rsk.co",
       "https://public-node.rsk.co",
       {
@@ -2951,22 +3531,25 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-
       {
-        url: "https://node.histori.xyz/rsk-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://rsk-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
 
   4689: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4689",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://babel-api.mainnet.iotex.io",
       "https://babel-api.mainnet.iotex.one",
       "https://babel-api.fastblocks.io",
       "https://rpc.depinscan.io/iotex",
-      "https://rpc.chainanalytics.org/iotex",
       // {
       //   url: "https://iotexrpc.com",
       //   tracking: "limited",
@@ -2982,10 +3565,20 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://api-iotex-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
     ],
   },
   66: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/66",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://exchainrpc.okex.org",
       {
         url: "https://oktc-mainnet.public.blastapi.io",
@@ -2993,12 +3586,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://okt-chain.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
-        url: "https://1rpc.io/oktc",
+        url: "https://public.1rpc.io/oktc",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3014,8 +3602,30 @@ export const extraRpcs = {
       },
     ],
   },
+  287: {
+    rpcs: ["https://rpc.netxscan.io"],
+  },
+  587: {
+    rpcs: [
+      "https://testnetrpc.netxscan.io",
+    ],
+  },
+  589: {
+      rpcs: [
+        {
+          url: "https://ladyrpc.us/rpc",
+          tracking: "none",
+          trackingDetails: "LadyRPC does not collect or store any user data including IP addresses or transaction details.",
+        },
+      ],
+    },
   288: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/288",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mainnet.boba.network/",
       {
         url: "https://boba-ethereum.gateway.tenderly.co",
@@ -3028,7 +3638,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://1rpc.io/boba/eth",
+        url: "https://public.1rpc.io/boba/eth",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3042,10 +3652,30 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://boba.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-boba-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "wss://boba.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   321: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/321",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc-mainnet.kcc.network",
       "https://kcc.mytokenpocket.vip",
       "https://kcc-rpc.com",
@@ -3054,19 +3684,42 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tokenview,
       },
+      {
+        url: "https://kcs-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   888: {
-    rpcs: ["https://gwan-ssl.wandevs.org:56891", "https://gwan2-ssl.wandevs.org"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://gwan-ssl.wandevs.org:56891",
+      "https://gwan2-ssl.wandevs.org",
+    ],
   },
   106: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/106",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evmexplorer.velas.com/rpc",
       "https://velas-mainnet.rpcfast.com?api_key=xbhWBI1Wkguk8SNMu1bvvLurPGLXmgwYeC4S6g2H7WdwFigZSmPWVZRxrskEQwIf",
     ],
   },
   10000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://smartbch.fountainhead.cash/mainnet",
       "https://global.uat.cash",
       "https://rpc.uatvo.com",
@@ -3079,28 +3732,37 @@ export const extraRpcs = {
   },
   19: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/19",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://songbird-api.flare.network/ext/C/rpc",
-      "https://rpc.ftso.au/songbird",
       "https://songbird.solidifi.app/ext/C/rpc",
+      {
+        url: "https://flare-songbird.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   122: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/122",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.fuse.io",
       {
-        url: "https://fuse-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://fuse-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://fuse-mainnet.chainstacklabs.com",
         tracking: "yes",
         trackingDetails: privacyStatement.chainstack,
-      },
-      {
-        url: "https://fuse.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
       },
       {
         url: "https://fuse.liquify.com",
@@ -3122,10 +3784,25 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
       },
+      {
+        url: "https://fuse.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://fuse.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   336: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/336",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.shiden.astar.network:8545/",
       {
         url: "https://shiden.public.blastapi.io",
@@ -3161,6 +3838,11 @@ export const extraRpcs = {
   },
   592: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/592",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm.astar.network/",
       "https://rpc.astar.network:8545",
       {
@@ -3174,7 +3856,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.getblock,
       },
       {
-        url: "https://1rpc.io/astr",
+        url: "https://public.1rpc.io/astr",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3194,16 +3876,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://astar-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
-        url: "wss://astar-rpc.dwellir.com",
-        tracking: "limited",
-        trackingDetails: privacyStatement.dwellir,
-      },
-      {
         url: "https://astar.public.curie.radiumblock.co/http",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
@@ -3213,12 +3885,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
       },
-
-      {
-        url: "https://node.histori.xyz/astar-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   71394: {
@@ -3226,6 +3892,11 @@ export const extraRpcs = {
   },
   52: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/52",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.coinex.net/",
       "https://rpc1.coinex.net/",
       "https://rpc2.coinex.net/",
@@ -3238,6 +3909,11 @@ export const extraRpcs = {
   },
   108: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/108",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mainnet-rpc.thundercore.com",
       {
         url: "https://thundercore.drpc.org",
@@ -3253,28 +3929,26 @@ export const extraRpcs = {
   },
   20: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.elastos.io/esc",
       "https://api.trinity-tech.io/esc",
       "https://api2.elastos.io/esc",
-      "https://api2.elastos.net/esc",
       "https://api2.elastos.io/eth",
-      "https://api2.elastos.net/eth",
       "https://rpc.glidefinance.io/",
     ],
   },
   82: {
     rpcs: [
-      "https://rpc.meter.io",
       {
-        url: "https://rpc-meter.jellypool.xyz/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.jellypool,
-      },
-      {
-        url: "https://meter.blockpi.network/v1/rpc/public",
+        url: "https://lb.routeme.sh/rpc/evm/82",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://rpc.meter.io",
     ],
   },
   5551: {
@@ -3282,12 +3956,6 @@ export const extraRpcs = {
   },
   88: {
     rpcs: [
-      "https://rpc.tomochain.com",
-      {
-        url: "https://viction.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
       {
         url: "https://viction.drpc.org",
         tracking: "none",
@@ -3298,13 +3966,30 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
     ],
   },
   246: {
-    rpcs: ["https://rpc.energyweb.org"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/246",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.energyweb.org",
+    ],
   },
   57: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/57",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.syscoin.org",
       {
         url: "https://rpc.ankr.com/syscoin",
@@ -3323,9 +4008,6 @@ export const extraRpcs = {
       },
     ],
   },
-  8: {
-    rpcs: ["https://rpc.octano.dev"],
-  },
   5050: {
     rpcs: ["https://rpc.liquidchain.net/", "https://rpc.xlcscan.com/"],
   },
@@ -3341,14 +4023,21 @@ export const extraRpcs = {
     ],
   },
   60: {
-    rpcs: ["https://rpc.gochain.io"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/60",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.gochain.io",
+    ],
   },
   11297108109: {
     rpcs: [
       {
-        url: "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b",
+        url: "https://lb.routeme.sh/rpc/evm/11297108109",
         tracking: "limited",
-        trackingDetails: privacyStatement.infura,
+        trackingDetails: privacyStatement.routemesh,
       },
       {
         url: "https://palm-mainnet.public.blastapi.io",
@@ -3360,30 +4049,60 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
-      {
-        url: "https://node.histori.xyz/palm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   7: {
-    rpcs: ["https://rpc.dome.cloud"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.dome.cloud",
+    ],
   },
   11: {
-    rpcs: ["https://api.metadium.com/dev"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
   },
   14: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/14",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: " https://rpc.ankr.com/flare",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://flare-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://flare.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   15: {
-    rpcs: ["https://prenet.diode.io:8443/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/15",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://prenet.diode.io:8443/",
+    ],
   },
   17: {
     rpcs: ["https://rpc.thaifi.com"],
@@ -3391,14 +4110,14 @@ export const extraRpcs = {
   17000: {
     rpcs: [
       {
-        url: "https://1rpc.io/holesky",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
+        url: "https://lb.routeme.sh/rpc/evm/17000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
       {
-        url: "https://ethereum-holesky.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        url: "https://public.1rpc.io/holesky",
+        tracking: "none",
+        trackingDetails: privacyStatement.onerpc,
       },
       {
         url: "https://ethereum-holesky-rpc.publicnode.com",
@@ -3430,10 +4149,12 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
+      {
+        url: "https://eth-holesky-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
-  },
-  22: {
-    rpcs: ["https://api.trinity-tech.io/eid", "https://api.elastos.io/eid"],
   },
   24: {
     rpcs: ["https://rpc.kardiachain.io"],
@@ -3443,7 +4164,15 @@ export const extraRpcs = {
     websiteUrl: "https://shibachain.net/",
   },
   29: {
-    rpcs: ["https://rpc.genesisl1.org"],
+    rpcs: [
+      "https://rpc.genesisl1.org",
+      "https://evm.gl1infra.online",
+      "https://api.lcserve.net",
+      "https://api.lcserve.org",
+      "https://genesisl1.evm.utsa.tech/",
+      "https://evm.vicky.gl1infra.online",
+      "https://evm.genesisl1.firsttensor.com",
+    ],
   },
   33: {
     rpcs: ["https://rpc.goodata.io"],
@@ -3451,6 +4180,9 @@ export const extraRpcs = {
   },
   35: {
     rpcs: ["https://rpc.tbwg.io"],
+  },
+  3600: {
+    rpcs: ["https://rpc.aifisc.io", "https://rpc.ascscan.io", "https://rpc.aifiv2.ai"],
   },
   38: {
     rpcs: ["https://rpc.valorbit.com/v2"],
@@ -3468,6 +4200,11 @@ export const extraRpcs = {
   },
   50: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/50",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.xdcrpc.com",
       "wss://rpc.xdcrpc.com/ws",
       "https://rpc1.xinfin.network",
@@ -3475,8 +4212,8 @@ export const extraRpcs = {
       "https://erpc.xdcrpc.com",
       "wss://erpc.xdcrpc.com/ws",
       "https://rpc.xdc.org",
+      "https://rpc.xdc.network",
       "https://earpc.xinfin.network/",
-      "https://erpc.xinfin.network/",
       "wss://ews.xinfin.network/ws",
       {
         url: "https://rpc.ankr.com/xdc",
@@ -3488,6 +4225,21 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
       },
+      {
+        url: "https://api-xdc-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://rpc.plugin.global/xdcmainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.pluginrpc,
+      },
+      {
+        url: "wss://rpc.plugin.global/ws/xdcmainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.pluginrpc,
+      },
     ],
   },
   51: {
@@ -3496,12 +4248,31 @@ export const extraRpcs = {
       "https://apothem.xdcrpc.com",
       "https://rpc.ankr.com/xdc_testnet",
       "https://earpc.apothem.network/",
-      "https://erpc.apothem.network/",
       "wss://eaws.apothem.network/",
+      {
+        url: "https://xdc-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.plugin.global/xdcapothem",
+        tracking: "none",
+        trackingDetails: privacyStatement.pluginrpc,
+      },
+      {
+        url: "wss://rpc.plugin.global/ws/xdcapothem",
+        tracking: "none",
+        trackingDetails: privacyStatement.pluginrpc,
+      },
     ],
   },
   58: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/58",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://dappnode1.ont.io:10339",
       "https://dappnode2.ont.io:10339",
       "https://dappnode3.ont.io:10339",
@@ -3523,9 +4294,19 @@ export const extraRpcs = {
   17777: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/17777",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://api.evm.eosnetwork.com",
         tracking: "yes",
         trackingDetails: privacyStatement.eosnetwork,
+      },
+      {
+        url: "https://eos-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -3535,38 +4316,37 @@ export const extraRpcs = {
   },
   61: {
     rpcs: [
-      "https://etc.mytokenpocket.vip",
-      "https://rpc.etcinscribe.com",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/61",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://etc.etcdesktop.com",
       {
-        url: "https://besu-at.etc-network.info",
+        url: "https://rpc.etcmc.xyz",
         tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://geth-at.etc-network.info",
-        tracking: "none",
-        trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://services.tokenview.io/vipapi/nodeservice/etc?apikey=qVHq2o6jpaakcw3lRstl",
-        tracking: "yes",
-        trackingDetails: privacyStatement.tokenview,
-      },
-      {
-        url: "https://etc.rivet.link",
-        tracking: "none",
-        trackingDetails: privacyStatement.rivet,
+        trackingDetails: privacyStatement.etcmc,
       },
       {
         url: "https://0xrpc.io/etc",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/etc",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "https://ethereum-classic-mainnet.gateway.tatum.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.tatum,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/etc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
       },
     ],
   },
@@ -3576,11 +4356,26 @@ export const extraRpcs = {
   },
   63: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/63",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.mordor.etccooperative.org",
       {
         url: "https://geth-mordor.etc-network.info",
         tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
+      },
+      {
+        url: "https://0xrpc.io/mordor",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "wss://0xrpc.io/mordor",
+        tracking: "none",
+        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -3594,7 +4389,14 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   74: {
-    rpcs: ["https://idchain.one/rpc/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/74",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://idchain.one/rpc/",
+    ],
   },
   76: {
     rpcs: [],
@@ -3605,14 +4407,28 @@ export const extraRpcs = {
     rpcs: ["https://sokol.poa.network"],
   },
   78: {
-    rpcs: ["https://ethnode.primusmoney.com/mainnet"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/78",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://ethnode.primusmoney.com/mainnet",
+    ],
   },
   80: {
     rpcs: ["website:https://genechain.io/en/index.html"],
     rpcWorking: false,
   },
   86: {
-    rpcs: ["https://evm.gatenode.cc"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/86",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://evm.gatenode.cc",
+    ],
   },
   87: {
     rpcs: [
@@ -3641,7 +4457,15 @@ export const extraRpcs = {
     rpcs: ["https://s3.garizon.net/rpc"],
   },
   96: {
-    rpcs: ["https://rpc.bitkubchain.io", "wss://wss.bitkubchain.io"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/96",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.bitkubchain.io",
+      "wss://wss.bitkubchain.io",
+    ],
   },
   99: {
     rpcs: ["https://core.poanetwork.dev"],
@@ -3655,7 +4479,14 @@ export const extraRpcs = {
     rpcs: ["https://rpc.etherlite.org"],
   },
   123: {
-    rpcs: ["https://rpc.fusespark.io"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/123",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.fusespark.io",
+    ],
   },
   124: {
     rpcs: [],
@@ -3670,6 +4501,69 @@ export const extraRpcs = {
   },
   142: {
     rpcs: ["https://rpc.prodax.io"],
+  },
+  143: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/143",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://monad-mainnet.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://monad-mainnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://monad-mainnet-rpc.spidernode.net/",
+      },
+      {
+        url: "https://infra.originstake.com/monad/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      },
+      {
+        url: "https://monad-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://monad-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://monad-rpc.huginn.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.huginn,
+      },
+      {
+        url: "wss://wss.monad-rpc.huginn.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.huginn,
+      },
+      {
+        url: "https://gm.monad.at.htw.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.Hightower,
+      },
+      {
+        url: "wss://gm.monad.at.htw.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.Hightower,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/monad",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+    ],
   },
   163: {
     rpcs: ["https://node.mainnet.lightstreams.io"],
@@ -3691,16 +4585,22 @@ export const extraRpcs = {
   },
   169: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/169",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://pacific-rpc.manta.network/http",
       {
-        url: "https://1rpc.io/manta",
+        url: "https://public.1rpc.io/manta",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
       "https://manta-pacific-gascap.calderachain.xyz/http",
       "https://www.tencentcloud-rpc.com/v2/manta/manta-rpc",
       "https://r1.pacific.manta.systems/http",
-      "https://manta.nirvanalabs.xyz/mantapublic",
+      "https://manta-pacific.calderachain.xyz/http",
+      "wss://manta-pacific.calderachain.xyz/ws",
       {
         url: "https://manta-pacific.drpc.org",
         tracking: "none",
@@ -3716,11 +4616,10 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
-
       {
-        url: "https://node.histori.xyz/manta-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://manta-pacific-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
@@ -3731,7 +4630,14 @@ export const extraRpcs = {
     rpcs: ["https://mainnet.bmcchain.com/"],
   },
   199: {
-    rpcs: ["https://rpc.bittorrentchain.io/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/199",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.bittorrentchain.io/",
+    ],
   },
   200: {
     rpcs: ["https://arbitrum.xdaichain.com"],
@@ -3739,13 +4645,13 @@ export const extraRpcs = {
   70: {
     rpcs: ["https://http-mainnet.hoosmartchain.com"],
   },
+  210: {
+    rpcs: ["https://rpc.bitnetmoney.org", "https://rpc.bitnetmoney.com", "https://rpc.bitnet-community.org"],
+  },
   211: {
     rpcs: [],
     websiteDead: true,
     rpcWorking: false,
-  },
-  222: {
-    rpcs: ["https://blockchain-api-mainnet.permission.io/rpc"],
   },
   258: {
     rpcs: [],
@@ -3760,18 +4666,52 @@ export const extraRpcs = {
   },
   360: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/360",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mainnet.shape.network",
       "https://shape-mainnet.g.alchemy.com/public",
-      {
-        url: "https://node.histori.xyz/shape-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
-  369: {
+369: {
     rpcs: [
-      "https://rpc.pulsechain.com",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/369",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.pulsechain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.pulsechain,
+      },
+      {
+        url: "https://pls-rpc369.xyz",
+        tracking: "limited",
+        trackingDetails:
+          "No IP addresses or user identifiers are stored. Transactions you submit are forwarded to public RPC providers and to the operator's own PulseChain node, which can see them. Rate limited.",
+      },
+      "https://rpc.gigatheminter.com",
+      "https://rpc-pulsechain.g4mm4.io",
+      "https://evex.cloud/pulserpc",
+      "wss://evex.cloud/pulsews",
+      {
+        url: "https://rpc.degenprotocol.io",
+        tracking: "none",
+        trackingDetails: "Degen Protocol RPC does not track or store any user data, IP addresses, or transaction logs. https://degenprotocol.io/privacy",
+      },
+      {
+        url: "https://one.valve.city/rpc/vk_demo/evm/369",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://one.valve.city/rpc/vk_demo/evm/369",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
       {
         url: "https://pulsechain-rpc.publicnode.com",
         tracking: "none",
@@ -3782,13 +4722,60 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      "https://rpc-pulsechain.g4mm4.io",
-      "https://evex.cloud/pulserpc",
-      "wss://evex.cloud/pulsews",
       {
         url: "https://rpc.owlracle.info/pulse/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://rpc.pulsechainrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.PulseChainRpc,
+      },
+      {
+        url: "wss://ws.pulsechainrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.PulseChainRpc,
+      },
+      {
+        url: "https://rpc.hairylabs.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.hairylabs,
+      },
+      {
+        url: "wss://rpc.hairylabs.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.hairylabs,
+      },
+      {
+        url: "https://rpc.swiftnodes.io/rpc/pulsechain",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://sophia-rpc.mijk.pro",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mijkpro,
+      },
+      {
+        url: "https://mystica-rpc.mijk.pro",
+        tracking: "limited",
+        trackingDetails: privacyStatement.mijkpro,
+      },
+      {
+        url: "https://rpc.pulseheartbeat.com",
+        tracking: "none",
+        trackingDetails: "PulseHeartBeat RPC does not track, log, or store user data.",
+      },
+      {
+        url: "https://rpc.levko.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.levko,
+      },
+      {
+        url: "https://builder.pulsonic.cloud/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.pulsonic,
       },
     ],
   },
@@ -3798,7 +4785,14 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   416: {
-    rpcs: ["https://rpc.sx.technology"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/416",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.sx.technology",
+    ],
   },
   499: {
     rpcs: [],
@@ -3814,12 +4808,13 @@ export const extraRpcs = {
   558: {
     rpcs: ["https://rpc.tao.network"],
   },
-  595: {
-    rpcs: [],
-  },
   686: {
     rpcs: [
-      "https://eth-rpc-karura.aca-staging.network",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/686",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.evm.karura.network",
       {
         url: "https://karura.api.onfinality.io/public",
@@ -3836,7 +4831,14 @@ export const extraRpcs = {
     rpcs: ["https://node.cheapeth.org/rpc"],
   },
   787: {
-    rpcs: ["https://eth-rpc-acala.aca-staging.network", "https://rpc.evm.acala.network"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/787",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.evm.acala.network",
+    ],
   },
   803: {
     rpcs: [],
@@ -3855,16 +4857,31 @@ export const extraRpcs = {
   },
   998: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/998",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.hyperliquid-testnet.xyz/evm",
       {
         url: "https://spectrum-01.simplystaking.xyz/hyperliquid-tn-rpc/evm",
         tracking: "yes",
         trackingDetails: privacyStatement.Spectrum,
       },
+      {
+        url: "https://rpcs.chain.link/hyperevm/testnet",
+        tracking: "yes",
+        trackingDetails: privacyStatement.Chainlink,
+      },
     ],
   },
   1001: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://public-en-kairos.node.kaia.io",
       {
         url: "https://responsive-green-emerald.kaia-kairos.quiknode.pro/",
@@ -3872,19 +4889,24 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.quicknode,
       },
       {
-        url: "https://kaia-kairos.blockpi.network/v1/rpc/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://rpc.ankr.com/kaia_testnet",
         tracking: "limited",
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://node.histori.xyz/kaia-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://kaia-kairos.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://klaytn-baobab.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://klaytn-baobab.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -3892,7 +4914,14 @@ export const extraRpcs = {
     rpcs: ["https://meta.evrice.com"],
   },
   1012: {
-    rpcs: ["https://global.rpc.mainnet.newtonproject.org"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1012",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://global.rpc.mainnet.newtonproject.org",
+    ],
   },
   1022: {
     rpcs: [],
@@ -3904,8 +4933,12 @@ export const extraRpcs = {
   },
   1030: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1030",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm.confluxrpc.com",
-      "https://conflux-espace-public.unifra.io",
       {
         url: "https://conflux-espace.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -3913,28 +4946,17 @@ export const extraRpcs = {
       },
     ],
   },
-  1115: {
-    rpcs: [
-      "https://rpc.test.btcs.network",
-      {
-        url: "https://core-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://core-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
   1116: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1116",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.coredao.org",
-      "https://core.public.infstones.com",
       "wss://ws.coredao.org",
       {
-        url: "https://1rpc.io/core",
+        url: "https://public.1rpc.io/core",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -3990,50 +5012,58 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   1280: {
-    rpcs: ["https://nodes.halo.land"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1280",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://nodes.halo.land",
+    ],
   },
   300: {
     rpcs: [
-      "https://sepolia.era.zksync.dev",
       {
-        url: "https://zksync-era-sepolia.blockpi.network/v1/rpc/private",
+        url: "https://lb.routeme.sh/rpc/evm/300",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://sepolia.era.zksync.dev",
       {
         url: "https://endpoints.omniatech.io/v1/zksync-era/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://node.histori.xyz/zksync-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.ankr.com/zksync_era_sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://zksync-sepolia.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
   },
   324: {
     rpcs: [
-      "https://mainnet.era.zksync.io",
       {
-        url: "https://zksync-era.blockpi.network/v1/rpc/private",
+        url: "https://rpc.hostdefi.com/api/rpc/zksync-era",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.hostdefi,
       },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/324",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet.era.zksync.io",
+      "https://li-fi-redirect.intustechno.workers.dev/rpc",
       {
         url: "https://go.getblock.io/f76c09905def4618a34946bf71851542",
         tracking: "limited",
         trackingDetails: privacyStatement.getblock,
-      },
-      {
-        url: "https://zksync.meowrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.meowrpc,
       },
       {
         url: "https://zksync.drpc.org",
@@ -4041,7 +5071,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://1rpc.io/zksync2-era",
+        url: "https://public.1rpc.io/zksync2-era",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -4056,11 +5086,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://node.histori.xyz/zksync-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://zksync.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -4070,12 +5095,52 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://zksync-era.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-zksync-era-mainnet-full.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://zksync-era.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://zksync-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "wss://zksync-era.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.driftguard.live/zksync",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   196: {
     rpcs: [
-      "https://rpc.xlayer.tech",
       "https://xlayerrpc.okx.com",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/196",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/xlayer/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
+      "https://rpc.xlayer.tech",
       {
         url: "https://endpoints.omniatech.io/v1/xlayer/mainnet/public",
         tracking: "none",
@@ -4092,65 +5157,43 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/xlayer-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.ankr.com/xlayer",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
-    ],
-  },
-  195: {
-    rpcs: [
-      "https://xlayertestrpc.okx.com",
-      "https://testrpc.xlayer.tech",
       {
-        url: "https://endpoints.omniatech.io/v1/xlayer/testnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/xlayer-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://rpc.ankr.com/xlayer_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://xlayer-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://xlayer-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
+        url: "https://xlayer-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
   1287: {
     rpcs: [
-      "https://rpc.testnet.moonbeam.network",
       {
-        url: "https://moonbase.unitedbloc.com:1000",
-        tracking: "yes",
-        trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "wss://moonbase.unitedbloc.com:1001",
-        tracking: "yes",
-        trackingDetails: privacyStatement.unitedbloc,
-      },
-      {
-        url: "https://moonbase-alpha.public.blastapi.io",
+        url: "https://lb.routeme.sh/rpc/evm/1287",
         tracking: "limited",
-        trackingDetails: privacyStatement.blastapi,
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.api.moonbase.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "wss://wss.api.moonbase.moonbeam.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.MBF,
+      },
+      {
+        url: "https://moonbase.unitedbloc.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
+      },
+      {
+        url: "wss://moonbase.unitedbloc.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.unitedbloc,
       },
       {
         url: "https://moonbeam-alpha.api.onfinality.io/public",
@@ -4171,11 +5214,6 @@ export const extraRpcs = {
         url: "wss://moonbase-alpha.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://node.histori.xyz/moonbeam-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
     ],
   },
@@ -4217,12 +5255,31 @@ export const extraRpcs = {
   1657: {
     rpcs: ["https://dataseed1.btachain.com/"],
   },
+  1672: {
+    rpcs: [
+      {
+        url: "https://infra.originstake.com/pharos/evm",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      },
+      {
+        url: "https://pharos.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
   1856: {
     rpcs: ["rpcWorking:false"],
     rpcWorking: false,
   },
   1890: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1890",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://replicator.phoenix.lightlink.io/rpc/v1",
       {
         url: "https://endpoints.omniatech.io/v1/lightlink/phoenix/public",
@@ -4233,6 +5290,11 @@ export const extraRpcs = {
   },
   1891: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1891",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://replicator.pegasus.lightlink.io/rpc/v1",
       {
         url: "https://endpoints.omniatech.io/v1/lightlink/pegasus/public",
@@ -4248,10 +5310,14 @@ export const extraRpcs = {
   },
   2000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.dogechain.dog",
       "https://rpc-us.dogechain.dog",
       "https://rpc-sg.dogechain.dog",
-      "https://rpc.dogechain.dog",
       "https://rpc01-sg.dogechain.dog",
       "https://rpc02-sg.dogechain.dog",
       "https://rpc03-sg.dogechain.dog",
@@ -4285,10 +5351,33 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+    ],
+  },
+  2288: {
+    rpcs: [
       {
-        url: "https://node.histori.xyz/lens-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://moca.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moca.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  222888: {
+    rpcs: [
+      {
+        url: "https://moca-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://moca-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -4313,14 +5402,29 @@ export const extraRpcs = {
   239: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/239",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/tac",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
+      },
+      {
+        url: "https://tac.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   7001: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -4346,20 +5450,15 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
-      {
-        url: "https://node.histori.xyz/zetachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://zetachain-testnet-evm.reliableninjas.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.reliableninjas,
-      },
     ],
   },
   7000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://zetachain-evm.blockpi.network/v1/rpc/public",
         tracking: "limited",
@@ -4391,19 +5490,20 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.thirdweb,
       },
       {
-        url: "https://node.histori.xyz/zetachain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://zetachain-mainnet-evm.reliableninjas.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.reliableninjas,
+        url: "https://api-zetachain-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
   2025: {
     rpcs: ["https://mainnet.rangersprotocol.com/api/jsonrpc"],
+  },
+  2028: {
+    rpcs: ["https://rpc.armascan.io"],
+  },
+  2061: {
+    rpcs: ["https://public-zigchain-testnet-evm-rpc.numia.xyz"],
   },
   2077: {
     rpcs: ["http://rpc.qkacoin.org:8548"],
@@ -4416,20 +5516,25 @@ export const extraRpcs = {
   },
   2221: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2221",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm.testnet.kava.io",
       "https://kava-evm-testnet.rpc.thirdweb.com",
       "wss://wevm.testnet.kava.io",
       "https://kava-testnet.drpc.org",
       "wss://kava-testnet.drpc.org",
-      {
-        url: "https://node.histori.xyz/kava-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   2222: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2222",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm.kava.io",
       {
         url: "https://kava.api.onfinality.io/public",
@@ -4442,19 +5547,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://kava-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://kava-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "wss://kava-evm-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://evm.kava.chainstacklabs.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
       },
       {
         url: "wss://wevm.kava.chainstacklabs.com",
@@ -4482,15 +5582,50 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/kava-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://kava.api.pocket.network",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.pokt,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/kava",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
       },
     ],
   },
   2559: {
     rpcs: [],
     rpcWorking: false,
+  },
+  4326: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4326",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc-megaeth-mainnet.globalstake.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "https://megaeth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://megaeth.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://megaeth.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+    ],
   },
   2612: {
     rpcs: ["https://api.ezchain.com/ext/bc/C/rpc"],
@@ -4502,11 +5637,21 @@ export const extraRpcs = {
   },
   5000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.mantle.xyz",
       {
         url: "https://mantle-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://mantle-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://mantle-rpc.publicnode.com",
@@ -4529,7 +5674,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://1rpc.io/mantle",
+        url: "https://public.1rpc.io/mantle",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -4544,34 +5689,50 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/mantle/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/mantle-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/mantle/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://mantle.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-mantle-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/mantle",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpc-mantle.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.driftguard.live/mantle",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
   5003: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5003",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.sepolia.mantle.xyz",
       {
         url: "https://endpoints.omniatech.io/v1/mantle/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/mantle-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://mantle-sepolia.drpc.org",
@@ -4609,6 +5770,11 @@ export const extraRpcs = {
   },
   6688: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6688",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evmrpc.irishub-1.irisnet.org",
       {
         url: "https://iris-evm-rpc.publicnode.com",
@@ -4626,10 +5792,22 @@ export const extraRpcs = {
     rpcs: ["https://rpc-sepolia.uxlinkone.com/"],
   },
   7341: {
-    rpcs: ["https://rpc.shyft.network/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7341",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.shyft.network/",
+    ],
   },
   7700: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7700",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://canto.gravitychain.io/",
       "https://canto.evm.chandrastation.com/",
       "https://jsonrpc.canto.nodestake.top/",
@@ -4647,10 +5825,22 @@ export const extraRpcs = {
     rpcs: ["https://dataseed.testnet.teleport.network"],
   },
   8995: {
-    rpcs: ["https://core.bloxberg.org"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8995",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://core.bloxberg.org",
+    ],
   },
   9000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evmos-testnet-json.qubelabs.io",
       "https://evmos-tjson.antrixy.org",
       "https://evmos-testnet-rpc.kingsuper.services",
@@ -4659,7 +5849,6 @@ export const extraRpcs = {
       "https://rpc-evm.testnet.evmos.dragonstake.io",
       "https://evmos-testnet-rpc.stake-town.com",
       "https://evmos-testnet-jsonrpc.stake-town.com",
-      "https://api.evmos-test.theamsolutions.info",
       "https://jsonrpc-t.evmos.nodestake.top",
       "https://evmos-testnet-jsonrpc.autostake.com",
       "https://evmos-testnet-jsonrpc.alkadeta.com",
@@ -4675,14 +5864,14 @@ export const extraRpcs = {
   9001: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/9001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://evmos.lava.build",
         tracking: "yes",
         trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://evmos-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
       },
       {
         url: "https://evmos-mainnet.public.blastapi.io",
@@ -4701,11 +5890,6 @@ export const extraRpcs = {
       },
       "https://jsonrpc-evmos.goldenratiostaking.net",
       {
-        url: "https://evmos.api.onfinality.io/public",
-        tracking: "limited",
-        trackingDetails: privacyStatement.onfinality,
-      },
-      {
         url: "https://evmos-jsonrpc.cyphercore.io",
         tracking: "yes",
         trackingDetails: privacyStatement.cyphercore,
@@ -4721,7 +5905,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://eth.bd.evmos.org:8545/",
-      "https://evmos-json-rpc.stakely.io",
       "https://jsonrpc-evmos-ia.cosmosia.notional.ventures",
       "https://json-rpc.evmos.blockhunters.org",
       "https://evmos-json-rpc.agoranodes.com",
@@ -4744,6 +5927,16 @@ export const extraRpcs = {
       "https://alphab.ai/rpc/eth/evmos",
       "https://evmos-jsonrpc.kalia.network",
       "https://jsonrpc-evmos.mzonder.com",
+      {
+        url: "https://evmos.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc.swiftnodes.io/rpc/evmos",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   836542336838601: {
@@ -4759,12 +5952,12 @@ export const extraRpcs = {
   },
   11011: {
     rpcs: [
-      "https://sepolia.shape.network",
       {
-        url: "https://node.histori.xyz/shape-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lb.routeme.sh/rpc/evm/11011",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://sepolia.shape.network",
     ],
   },
   11111: {
@@ -4787,7 +5980,14 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   21816: {
-    rpcs: ["https://seed.omlira.com"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/21816",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://seed.omlira.com",
+    ],
   },
   23451: {
     rpcs: ["https://rpc.dreyerx.com"],
@@ -4801,16 +6001,21 @@ export const extraRpcs = {
   },
   24734: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/24734",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://node1.mintme.com",
       "https://node.1000x.ch",
       {
         url: "https://0xrpc.io/mint",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/mint",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
     ],
@@ -4824,18 +6029,18 @@ export const extraRpcs = {
   32520: {
     rpcs: [
       "https://rpc-bitgert.icecreamswap.com",
-      "https://nodes.vefinetwork.org/bitgert",
-      "https://flux-rpc.brisescan.com",
-      "https://flux-rpc1.brisescan.com",
-      "https://flux-rpc2.brisescan.com",
-      "https://rpc-1.chainrpc.com",
-      "https://rpc-2.chainrpc.com",
-      "https://node1.serverrpc.com",
-      "https://node2.serverrpc.com",
     ],
   },
   39797: {
-    rpcs: ["https://nodeapi.energi.network", "https://explorer.energi.network/api/eth-rpc"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/39797",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://nodeapi.energi.network",
+      "https://explorer.energi.network/api/eth-rpc",
+    ],
   },
   39815: {
     rpcs: ["https://mainnet.oho.ai", "https://mainnet-rpc.ohoscan.com", "https://mainnet-rpc2.ohoscan.com"],
@@ -4850,69 +6055,82 @@ export const extraRpcs = {
     rpcs: ["https://rpc.autobahn.network"],
   },
   47805: {
-    rpcs: ["https://rpc.rei.network"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/47805",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.rei.network",
+    ],
   },
   55555: {
-    rpcs: ["https://rei-rpc.moonrhythm.io"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/55555",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rei-rpc.moonrhythm.io",
+    ],
   },
   63000: {
     rpcs: ["https://rpc.ecredits.com"],
   },
   63157: {
-    rpcs: [
-      "https://geist-mainnet.g.alchemy.com/public",
-      {
-        url: "https://node.histori.xyz/geist-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-    ],
+    rpcs: ["https://geist-mainnet.g.alchemy.com/public"],
   },
   631571: {
-    rpcs: [
-      "https://geist-polter.g.alchemy.com/public",
-      {
-        url: "https://node.histori.xyz/geist-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-    ],
+    rpcs: ["https://geist-polter.g.alchemy.com/public"],
   },
   70000: {
     rpcs: [],
     rpcWorking: false,
   },
   70001: {
-    rpcs: ["https://proxy1.thinkiumrpc.net/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/70001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://proxy1.thinkiumrpc.net/",
+    ],
   },
   70002: {
-    rpcs: ["https://proxy2.thinkiumrpc.net/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/70002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://proxy2.thinkiumrpc.net/",
+    ],
+  },
+  70003: {
+    rpcs: ["https://rpc.pyrachain.io", "wss://ws.pyrachain.io"],
   },
   70103: {
-    rpcs: ["https://proxy103.thinkiumrpc.net/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/70103",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://proxy103.thinkiumrpc.net/",
+    ],
   },
   84532: {
     rpcs: [
-      "https://rpc.notadegen.com/base/sepolia",
       {
-        url: "https://base-sepolia.blockpi.network/v1/rpc/private",
+        url: "https://lb.routeme.sh/rpc/evm/84532",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://public.stackup.sh/api/v1/node/base-sepolia",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
+        trackingDetails: privacyStatement.routemesh,
       },
       {
         url: "https://base-sepolia.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
-      },
-      {
-        url: "https://node.histori.xyz/base-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://base-sepolia.drpc.org",
@@ -4925,9 +6143,24 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://base-sepolia.therpc.io",
+        url: "https://base-sepolia-public.nodies.app",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
+        url: "https://base-sepolia.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      {
+        url: "https://base-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://base-sepolia.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
@@ -4942,11 +6175,6 @@ export const extraRpcs = {
         url: "https://base-goerli.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://1rpc.io/base-goerli",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
       },
       {
         url: "https://base-goerli.gateway.tenderly.co",
@@ -4972,27 +6200,43 @@ export const extraRpcs = {
   },
   8453: {
     rpcs: [
+      {
+        url: "https://xrpc.cl/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/base/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://mainnet.base.org",
       "https://developer-access-mainnet.base.org",
-      {
-        url: "https://base-mainnet.diamondswap.org/rpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.diamondswap,
-      },
+      "https://li-fi-base.intustechno.workers.dev/rpc",
       {
         url: "https://base.public.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
       {
-        url: "https://1rpc.io/base",
+        url: "https://public.1rpc.io/base",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
       {
-        url: "https://base-pokt.nodies.app",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://base-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "https://base.meowrpc.com",
@@ -5014,7 +6258,6 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://rpc.notadegen.com/base",
       {
         url: "https://base-rpc.publicnode.com",
         tracking: "none",
@@ -5026,30 +6269,14 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://base.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
         url: "https://base.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/base-mainnet",
-        tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
         url: "https://base-mainnet.gateway.tatum.io",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
-      },
-      "https://base.rpc.subquery.network/public",
-      {
-        url: "wss://base.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
       },
       {
         url: "https://api.zan.top/base-mainnet",
@@ -5057,34 +6284,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.zan,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/base/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://base.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
         url: "https://rpc.numa.network/base",
         tracking: "yes",
         trackingDetails: privacyStatement.numa,
-      },
-      {
-        url: "https://node.histori.xyz/base-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://0xrpc.io/base",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/base",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://rpc.owlracle.info/base/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -5092,14 +6294,80 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://base.therpc.io",
+        url: "https://base.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://base.rpc.blxrbdn.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
+      {
+        url: "https://api-base-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://base.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://base.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/base",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpcfree.com/base-rpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.rpcfree,
+      },
+      {
+        url: "https://rpc.degenprotocol.io/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.degenprotocol,
+      },
+      {
+        url: "wss://base.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://rpc-base.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://base.daybreak-rpc.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.daybreak,
+      },
+      {
+        url: "https://rpc.driftguard.live/base",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
   11235: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11235",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.eth.haqq.network",
       {
         url: "https://haqq-evm.publicnode.com",
@@ -5146,25 +6414,67 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   100001: {
-    rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39000"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "http://eth-jrpc.mainnet.quarkchain.io:39000",
+    ],
   },
   100002: {
-    rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39001"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "http://eth-jrpc.mainnet.quarkchain.io:39001",
+    ],
   },
   100003: {
-    rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39002"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100003",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "http://eth-jrpc.mainnet.quarkchain.io:39002",
+    ],
   },
   100004: {
     rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39003"],
   },
   100005: {
-    rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39004"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100005",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "http://eth-jrpc.mainnet.quarkchain.io:39004",
+    ],
   },
   100006: {
-    rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39005"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100006",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "http://eth-jrpc.mainnet.quarkchain.io:39005",
+    ],
   },
   100007: {
-    rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39006"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/100007",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "http://eth-jrpc.mainnet.quarkchain.io:39006",
+    ],
   },
   100008: {
     rpcs: ["http://eth-jrpc.mainnet.quarkchain.io:39007"],
@@ -5206,7 +6516,13 @@ export const extraRpcs = {
     rpcs: ["https://openapi.alaya.network/rpc"],
   },
   210425: {
-    rpcs: [],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/210425",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
     rpcWorking: false,
   },
   246529: {
@@ -5219,6 +6535,16 @@ export const extraRpcs = {
   },
   534352: {
     rpcs: [
+      {
+        url: "https://rpc.hostdefi.com/api/rpc/scroll",
+        tracking: "limited",
+        trackingDetails: privacyStatement.hostdefi,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/534352",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.scroll.io",
       "https://rpc-scroll.icecreamswap.com",
       {
@@ -5227,17 +6553,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.blastapi,
       },
       {
-        url: "https://scroll-mainnet-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
-      },
-      {
-        url: "https://scroll.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://1rpc.io/scroll",
+        url: "https://public.1rpc.io/scroll",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -5247,7 +6563,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://scroll-mainnet.rpc.grove.city/v1/a7a7c8e2",
+        url: "https://scroll.api.pocket.network",
         tracking: "none",
         trackingDetails: privacyStatement.pokt,
       },
@@ -5257,39 +6573,112 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
+        url: "https://scroll-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://endpoints.omniatech.io/v1/scroll/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/scroll-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://rpc.ankr.com/scroll",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://api-scroll-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "wss://scroll.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/scroll",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://scroll.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpc-scroll.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc.driftguard.live/scroll",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   88888: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/88888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/chiliz",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
       },
+      {
+        url: "https://chiliz-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://api-chiliz-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/chiliz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   888888: {
-    rpcs: ["https://infragrid.v.network/ethereum/compatible"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/888888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://infragrid.v.network/ethereum/compatible",
+    ],
   },
   955305: {
-    rpcs: ["https://host-76-74-28-226.contentfabric.io/eth/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/955305",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://host-76-74-28-226.contentfabric.io/eth/",
+    ],
   },
   1313114: {
-    rpcs: ["https://rpc.ethoprotocol.com"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1313114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.ethoprotocol.com",
+    ],
   },
   1313500: {
     rpcs: ["https://rpc.xerom.org"],
@@ -5297,24 +6686,24 @@ export const extraRpcs = {
   11155111: {
     rpcs: [
       {
+        url: "https://xrpc.cl/sepolia",
+        tracking: "none",
+        trackingDetails: privacyStatement.xrpc,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11155111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://eth-sepolia.g.alchemy.com/v2/demo",
         tracking: "yes",
         trackingDetails: privacyStatement.alchemy,
       },
       {
-        url: "https://ethereum-sepolia.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
         url: "https://eth-sepolia.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://eth-sepolia-public.unifra.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.unifra,
       },
       {
         url: "https://sepolia.gateway.tenderly.co",
@@ -5327,21 +6716,10 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://sphinx.shardeum.org/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.shardeum,
-      },
-      {
-        url: "https://dapps.shardeum.org/",
-        tracking: "yes",
-        trackingDetails: privacyStatement.shardeum,
-      },
-      {
         url: "https://api.zan.top/eth-sepolia",
         tracking: "limited",
         trackingDetails: privacyStatement.zan,
       },
-      "https://rpc.notadegen.com/eth/sepolia",
       {
         url: "https://ethereum-sepolia-rpc.publicnode.com",
         tracking: "none",
@@ -5353,7 +6731,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.publicnode,
       },
       {
-        url: "https://1rpc.io/sepolia",
+        url: "https://public.1rpc.io/sepolia",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -5363,34 +6741,23 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://public.stackup.sh/api/v1/node/ethereum-sepolia",
+        url: "https://ethereum-sepolia-public.nodies.app",
         tracking: "limited",
-        trackingDetails: privacyStatement.stackup,
-      },
-      {
-        url: "https://eth-testnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "wss://eth-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
       },
-      "https://ethereum-sepolia.rpc.subquery.network/public",
-      {
-        url: "https://endpoints.omniatech.io/v1/eth/sepolia/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
       {
         url: "https://0xrpc.io/sep",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/sep",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
@@ -5399,9 +6766,29 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.owlracle,
       },
       {
-        url: "https://ethereum-sepolia.therpc.io",
+        url: "https://ethereum-sepolia.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://eth-sepolia-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://sepolia.rpc.sentio.xyz",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "wss://eth-sepolia-testnet.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://ethereum-sepolia.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
@@ -5422,6 +6809,11 @@ export const extraRpcs = {
   },
   20181205: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20181205",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://hz.rpc.qkiscan.cn",
       "https://rpc1.qkiscan.cn",
       "https://rpc2.qkiscan.cn",
@@ -5439,13 +6831,25 @@ export const extraRpcs = {
     rpcs: ["https://node.joys.digital"],
   },
   61717561: {
-    rpcs: ["https://c.onical.org"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/61717561",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://c.onical.org",
+    ],
   },
   192837465: {
     rpcs: ["https://mainnet.gather.network"],
   },
   245022926: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/245022926",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://devnet.neonevm.org",
       {
         url: "https://neon-evm-devnet.drpc.org",
@@ -5461,6 +6865,11 @@ export const extraRpcs = {
   },
   245022934: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/245022934",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://neon-proxy-mainnet.solana.p2p.org",
       "https://neon-mainnet.everstake.one",
       {
@@ -5473,20 +6882,17 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://node.histori.xyz/neon-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://node.histori.xyz/neon-devnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   311752642: {
-    rpcs: ["https://mainnet-rpc.oneledger.network"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/311752642",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet-rpc.oneledger.network",
+    ],
   },
   356256156: {
     rpcs: ["https://testnet.gather.network"],
@@ -5500,17 +6906,16 @@ export const extraRpcs = {
   },
   11297108099: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11297108099",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://palm-testnet.infura.io/v3/${INFURA_API_KEY}",
-      "https://palm-testnet.public.blastapi.io",
       {
         url: "https://palm-testnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
-      },
-      {
-        url: "https://node.histori.xyz/worldchain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
     ],
   },
@@ -5520,10 +6925,22 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   53935: {
-    rpcs: ["https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc"],
+    rpcs: [
+      "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc",
+      {
+        url: "https://avax-dfk.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+    ],
   },
   1666600001: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1666600001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://s1.api.harmony.one",
       {
         url: "https://harmony-1.drpc.org",
@@ -5554,7 +6971,14 @@ export const extraRpcs = {
     rpcWorking: false,
   },
   197710212030: {
-    rpcs: ["https://rpc.ntity.io"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/197710212030",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.ntity.io",
+    ],
   },
   6022140761023: {
     rpcs: ["https://molereum.jdubedition.com"],
@@ -5569,7 +6993,15 @@ export const extraRpcs = {
     ],
   },
   1501: {
-    rpcs: ["https://rpc-canary-1.bevm.io/", "https://rpc-canary-2.bevm.io/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1501",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc-canary-1.bevm.io/",
+      "https://rpc-canary-2.bevm.io/",
+    ],
   },
   1506: {
     rpcs: ["https://mainnet.sherpax.io/rpc"],
@@ -5582,15 +7014,6 @@ export const extraRpcs = {
   },
   167: {
     rpcs: ["https://node.atoshi.io", "https://node2.atoshi.io", "https://node3.atoshi.io"],
-  },
-  7777: {
-    rpcs: [
-      "https://testnet1.rotw.games",
-      "https://testnet2.rotw.games",
-      "https://testnet3.rotw.games",
-      "https://testnet4.rotw.games",
-      "https://testnet5.rotw.games",
-    ],
   },
   103090: {
     rpcs: ["https://evm.cryptocurrencydevs.org", "https://rpc.crystaleum.org"],
@@ -5605,6 +7028,11 @@ export const extraRpcs = {
   },
   42766: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42766",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.zkfair.io",
       {
         url: "https://endpoints.omniatech.io/v1/zkfair/mainnet/public",
@@ -5624,7 +7052,14 @@ export const extraRpcs = {
     ],
   },
   88882: {
-    rpcs: ["https://spicy-rpc.chiliz.com"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88882",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://spicy-rpc.chiliz.com",
+    ],
   },
   420666: {
     rpcs: ["https://testnet.kekchain.com"],
@@ -5646,7 +7081,22 @@ export const extraRpcs = {
   },
   943: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/943",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.v4.testnet.pulsechain.com",
+      {
+        url: "https://one.valve.city/rpc/vk_demo/evm/943",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
+      {
+        url: "wss://one.valve.city/rpc/vk_demo/evm/943",
+        tracking: "none",
+        trackingDetails: privacyStatement.valve,
+      },
       {
         url: "https://pulsechain-testnet-rpc.publicnode.com",
         tracking: "none",
@@ -5684,10 +7134,22 @@ export const extraRpcs = {
     ],
   },
   311: {
-    rpcs: ["https://mainapi.omaxray.com/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/311",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainapi.omaxray.com/",
+    ],
   },
   314: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/314",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.node.glif.io",
       "https://node.filutils.com/rpc/v1",
       {
@@ -5699,11 +7161,6 @@ export const extraRpcs = {
         url: "https://filecoin.chainup.net/rpc/v1",
         tracking: "limited",
         trackingDetails: privacyStatement.ChainUpCloud,
-      },
-      {
-        url: "https://infura.sftproject.io/filecoin/rpc/v1",
-        tracking: "yes",
-        trackingDetails: privacyStatement.SFTProtocol,
       },
       "https://api.chain.love/rpc/v1",
       {
@@ -5726,6 +7183,11 @@ export const extraRpcs = {
   314159: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/314159",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://filecoin-calibration.chainup.net/rpc/v1",
         tracking: "limited",
         trackingDetails: privacyStatement.ChainUpCloud,
@@ -5737,7 +7199,6 @@ export const extraRpcs = {
   },
   50001: {
     rpcs: [
-      "https://rpc.oracle.liveplex.io",
       {
         url: "https://rpc.oracle.liveplex.io",
         tracking: "yes",
@@ -5778,19 +7239,19 @@ export const extraRpcs = {
   1101: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/1101",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.polygon-zkevm.gateway.fm",
         tracking: "yes",
         trackingDetails: privacyStatement.gateway,
       },
       {
-        url: "https://1rpc.io/polygon/zkevm",
+        url: "https://public.1rpc.io/polygon/zkevm",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://polygon-zkevm.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
       },
       {
         url: "https://polygon-zkevm-mainnet.public.blastapi.io",
@@ -5803,6 +7264,11 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://polygon-zkevm-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "https://endpoints.omniatech.io/v1/polygon-zkevm/mainnet/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
@@ -5812,18 +7278,28 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.Histori,
       },
+      {
+        url: "https://poly-zkevm.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://poly-zkevm.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   59144: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/59144",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.linea.build",
       {
-        url: "https://linea.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://1rpc.io/linea",
+        url: "https://public.1rpc.io/linea",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -5838,29 +7314,60 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.decubate,
       },
       {
-        url: "https://node.histori.xyz/linea-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://rpc.owlracle.info/linea/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
+      },
+      {
+        url: "https://linea.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-linea-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://linea-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://linea.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/linea",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://rpc.driftguard.live/linea",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
       },
     ],
   },
   2442: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2442",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.cardona.zkevm-rpc.com",
       {
-        url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        url: "https://polygon-zkevm-cardona.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/polygon-zkevm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "wss://polygon-zkevm-cardona.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
@@ -5869,21 +7376,16 @@ export const extraRpcs = {
   },
   59141: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/59141",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.sepolia.linea.build",
       {
         url: "https://linea-sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
         tracking: "limited",
         trackingDetails: privacyStatement.infura,
-      },
-      {
-        url: "https://linea-sepolia.blockpi.network/v1/rpc/private",
-        tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
-      },
-      {
-        url: "https://node.histori.xyz/linea-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://linea-sepolia.drpc.org",
@@ -5895,16 +7397,21 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://linea-sepolia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      },
     ],
   },
   534351: {
     rpcs: [
-      "https://sepolia-rpc.scroll.io",
       {
-        url: "https://scroll-sepolia.blockpi.network/v1/rpc/private",
+        url: "https://lb.routeme.sh/rpc/evm/534351",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://sepolia-rpc.scroll.io",
       {
         url: "https://scroll-testnet-public.unifra.io",
         tracking: "limited",
@@ -5931,9 +7438,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://scroll-testnet.rpc.grove.city/v1/a7a7c8e2",
-        tracking: "none",
-        trackingDetails: privacyStatement.pokt,
+        url: "https://scroll-sepolia-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       "http://scroll-sepolia-rpc.01no.de:8545/",
       {
@@ -5942,19 +7449,24 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://node.histori.xyz/scroll-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://scroll-sepolia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
       },
       {
-        url: "https://rpc.ankr.com/scroll_sepolia_testnet",
+        url: "wss://scroll-sepolia.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.ankr,
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   200810: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/200810",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.ankr.com/bitlayer_testnet",
         tracking: "none",
@@ -5964,6 +7476,11 @@ export const extraRpcs = {
   },
   2390: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2390",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.ankr.com/tac_turin",
         tracking: "none",
@@ -5982,18 +7499,27 @@ export const extraRpcs = {
   },
   248: {
     rpcs: [
-      "https://rpc.mainnet.oasys.games",
       {
-        url: "https://oasys.blockpi.network/v1/rpc/public",
+        url: "https://lb.routeme.sh/rpc/evm/248",
         tracking: "limited",
-        trackingDetails: privacyStatement.blockpi,
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://rpc.mainnet.oasys.games",
       "wss://ws.mainnet.oasys.games/",
+      {
+        url: "https://oasys.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   3501: {
     rpcs: [
-      "https://rpc.jfinchain.com",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3501",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.jfinchain.com",
         tracking: "limited",
@@ -6003,6 +7529,11 @@ export const extraRpcs = {
   },
   35011: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/35011",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.j2o.io",
         tracking: "limited",
@@ -6015,21 +7546,16 @@ export const extraRpcs = {
   },
   167000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/167000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.taiko.xyz",
       {
         url: "https://rpc.ankr.com/taiko",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
-      },
-      {
-        url: "https://rpc.taiko.tools",
-        tracking: "none",
-        trackingDetails: privacyStatement.taikotools,
-      },
-      {
-        url: "https://taiko-mainnet.4everland.org/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
-        tracking: "limited",
-        trackingDetails: privacyStatement["4everland"],
       },
       {
         url: "wss://taiko-mainnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
@@ -6047,25 +7573,35 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://taiko-mainnet.rpc.porters.xyz/taiko-public",
-        tracking: "none",
-        trackingDetails: privacyStatement.porters,
-      },
-      {
         url: "https://taiko-mainnet.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      "https://taiko-json-rpc.stakely.io/",
       {
-        url: "https://node.histori.xyz/taiko-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://taiko.api.pocket.network",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.pokt,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/taiko",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://taiko.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
   167009: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/167009",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.hekla.taiko.xyz",
       {
         url: "https://rpc.ankr.com/taiko_hekla",
@@ -6107,11 +7643,15 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-
       {
-        url: "https://node.histori.xyz/taiko-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://taiko-hekla.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://taiko-hekla-testnet.api.pocket.network",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
@@ -6149,18 +7689,31 @@ export const extraRpcs = {
   },
   2818: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2818",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.morphl2.io",
       "wss://rpc.morphl2.io:8443",
       "https://rpc-quicknode.morphl2.io",
       "wss://rpc-quicknode.morphl2.io",
+      {
+        url: "https://morph.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   570: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/570",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "wss://rpc.rollux.com/wss",
       "https://rpc.rollux.com",
-      "https://rollux.rpc.syscoin.org",
-      "wss://rollux.rpc.syscoin.org/wss",
       {
         url: "https://rpc.ankr.com/rollux",
         tracking: "none",
@@ -6179,6 +7732,11 @@ export const extraRpcs = {
   },
   5700: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5700",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.tanenbaum.io",
       {
         url: "https://syscoin-tanenbaum-evm.publicnode.com",
@@ -6211,6 +7769,39 @@ export const extraRpcs = {
       },
     ],
   },
+  964: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/964",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://bittensor-lite-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
+        url: "https://rpc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+    ],
+  },
+  945: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/945",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://bittensor-testnet-lite-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+    ],
+  },
   7895: {
     rpcs: [
       {
@@ -6222,38 +7813,76 @@ export const extraRpcs = {
   },
   545: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/545",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://testnet.evm.nodes.onflow.org",
       {
-        url: "https://node.histori.xyz/flow-evm-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://flow-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
   747: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/747",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mainnet.evm.nodes.onflow.org",
       {
-        url: "https://node.histori.xyz/flow-evm-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://flow-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
   1707: {
-    rpcs: ["https://rpc.blockchain.or.th"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1707",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.blockchain.or.th",
+    ],
   },
   1708: {
-    rpcs: ["https://rpc.testnet.blockchain.or.th"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1708",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.testnet.blockchain.or.th",
+    ],
   },
   813: {
     rpcs: ["https://mainnet.meerlabs.com"],
   },
   8131: {
-    rpcs: ["https://testnet.meerlabs.com"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8131",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://testnet.meerlabs.com",
+    ],
   },
   530: {
-    rpcs: ["https://fx-json-web3.portfolio-x.xyz:8545/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/530",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://fx-json-web3.portfolio-x.xyz:8545/",
+    ],
   },
   1003: {
     rpcs: [
@@ -6272,25 +7901,88 @@ export const extraRpcs = {
   },
   23294: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/23294",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://sapphire.oasis.io",
       {
-        url: "https://1rpc.io/oasis/sapphire",
+        url: "https://public.1rpc.io/oasis/sapphire",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
     ],
   },
   1339: {
-    rpcs: ["https://rpc.elysiumchain.tech/", "https://rpc.elysiumchain.us/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1339",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.elysiumchain.tech/",
+      "https://rpc.elysiumchain.us/",
+      {
+        url: "https://elysium.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1342: {
+    rpcs: [
+      {
+        url: "https://rpc.bie.ai",
+        tracking: "none",
+        trackingDetails:
+          "BIE RPC does not collect or store any PII information. IP addresses are only used for rate-limiting purposes.",
+      },
+      {
+        url: "https://api.bie.ai",
+        tracking: "none",
+        trackingDetails:
+          "BIE API does not collect or store any PII information. IP addresses are only used for rate-limiting purposes.",
+      },
+    ],
   },
   1338: {
-    rpcs: ["https://rpc.atlantischain.network/"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1338",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.atlantischain.network/",
+      {
+        url: "https://rpc-elysium-testnet.globalstake.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "wss://rpc-robinhood.globalstake.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "https://robinhood.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   6363: {
     rpcs: ["https://dsc-rpc.digitsoul.co.th"],
   },
   363636: {
-    rpcs: ["https://dgs-rpc.digitsoul.co.th"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/363636",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://dgs-rpc.digitsoul.co.th",
+    ],
   },
   2016: {
     rpcs: ["https://eu-rpc.mainnetz.io"],
@@ -6320,14 +8012,22 @@ export const extraRpcs = {
   },
   8899: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8899",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc-l1.jibchain.net",
       "https://rpc-l1.inan.in.th",
-      "https://rpc-l1.jbc.xpool.pw",
-      "https://rpc2-l1.jbc.xpool.pw",
     ],
   },
   1089: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1089",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://humans-mainnet-evm.itrocket.net",
         tracking: "none",
@@ -6350,24 +8050,28 @@ export const extraRpcs = {
   131: {
     rpcs: ["https://tokioswift.engram.tech", "https://tokio-archive.engram.tech"],
   },
-  2358: {
+  9030: {
     rpcs: [
-      "https://api.sepolia.kroma.network",
-      {
-        url: "https://node.histori.xyz/kroma-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
+      "https://rpc.qubetics.com",
+      "https://evm.qubenode.space",
+      "https://evm.qubeticstralbo.eu",
+      "wss://socket.qubetics.com",
     ],
+  },
+  6163: {
+    rpcs: ["https://evm-rpc-arc.testnet.stackflow.site", "wss://evm-ws.testnet.stackflow.site"],
+  },
+  2358: {
+    rpcs: ["https://api.sepolia.kroma.network"],
   },
   255: {
     rpcs: [
-      "https://api.kroma.network",
       {
-        url: "https://1rpc.io/kroma",
-        tracking: "none",
-        trackingDetails: privacyStatement.onerpc,
+        url: "https://lb.routeme.sh/rpc/evm/255",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://api.kroma.network",
       {
         url: "https://kroma.drpc.org",
         tracking: "none",
@@ -6379,18 +8083,23 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       "https://rpc-kroma.rockx.com",
-      {
-        url: "https://node.histori.xyz/kroma-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   34443: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/34443",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/mode/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://mainnet.mode.network",
       {
-        url: "https://1rpc.io/mode",
+        url: "https://public.1rpc.io/mode",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
@@ -6409,6 +8118,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://mode-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
     ],
   },
   217: {
@@ -6416,28 +8130,40 @@ export const extraRpcs = {
   },
   1100: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1100",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://jsonrpc.dymension.nodestake.org",
       "https://rollapp.jrpc.cumulo.com.es",
       "https://dymension.liquify.com/json-rpc",
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
       "wss://dymension.drpc.org",
+      {
+        url: "https://dymension.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/dymension",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   7070: {
-    rpcs: ["https://planq-rpc.nodies.app", "https://jsonrpc.planq.nodestake.top/"],
-  },
-  463: {
-    rpcs: [
-      "https://mainnet-rpc.areon.network",
-      "https://mainnet-rpc2.areon.network",
-      "https://mainnet-rpc3.areon.network",
-      "https://mainnet-rpc4.areon.network",
-      "https://mainnet-rpc5.areon.network",
-    ],
+    rpcs: ["https://planq-public.nodies.app", "https://jsonrpc.planq.nodestake.top/"],
   },
   18686: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/18686",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.mxc.com",
         tracking: "none",
@@ -6453,6 +8179,11 @@ export const extraRpcs = {
   35441: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/35441",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.q.org",
         tracking: "limited",
         trackingDetails: privacyStatement.q,
@@ -6464,6 +8195,11 @@ export const extraRpcs = {
   },
   128123: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/128123",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://node.ghostnet.etherlink.com",
       {
         url: "https://rpc.ankr.com/etherlink_testnet",
@@ -6474,6 +8210,11 @@ export const extraRpcs = {
   },
   42793: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42793",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://node.mainnet.etherlink.com",
       {
         url: "https://rpc.ankr.com/etherlink_mainnet",
@@ -6489,13 +8230,25 @@ export const extraRpcs = {
     rpcs: ["https://mainnet.egochain.org"],
   },
   2525: {
-    rpcs: ["https://mainnet.rpc.inevm.com/http"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2525",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet.rpc.inevm.com/http",
+    ],
   },
   7171: {
     rpcs: ["https://connect.bit-rock.io", "https://brockrpc.io"],
   },
   28882: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/28882",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://sepolia.boba.network/",
       {
         url: "https://boba-sepolia.gateway.tenderly.co",
@@ -6511,6 +8264,11 @@ export const extraRpcs = {
   },
   200901: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/200901",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.bitlayer.org",
       {
         url: "https://rpc.ankr.com/bitlayer",
@@ -6519,17 +8277,61 @@ export const extraRpcs = {
       },
     ],
   },
+  220312: {
+    rpcs: ["https://kultrpc.kultchain.com"],
+  },
   131313: {
-    rpcs: ["https://testnode.dioneprotocol.com/ext/bc/D/rpc"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/131313",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://testnode.dioneprotocol.com/ext/bc/D/rpc",
+      {
+        url: "https://odyssey.nownodes.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.nownodes,
+      },
+      {
+        url: "wss://odyssey.nownodes.io/wss",
+        tracking: "yes",
+        trackingDetails: privacyStatement.nownodes,
+      },
+    ],
   },
   77001: {
-    rpcs: ["https://public-node.api.boraportal.com/bora/mainnet"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/77001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://public-node.api.boraportal.com/bora/mainnet",
+    ],
   },
-  // 267: {
-  //   rpcs: ["https://rpc.ankr.com/neura_testnet"],
-  // },
+  267: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/267",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.ankr.com/neura_testnet",
+    ],
+  },
   60808: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/60808",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/bob/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.gobob.xyz",
       "wss://rpc.gobob.xyz",
       {
@@ -6547,10 +8349,20 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
+      {
+        url: "https://bob.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
     ],
   },
   42: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.mainnet.lukso.network",
       {
         url: "https://rpc.lukso.sigmacore.io",
@@ -6563,22 +8375,28 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.thirdweb,
       },
       {
-        url: "https://lukso.nownodes.io",
+        url: "https://public-lukso.nownodes.io",
         tracking: "yes",
-        trackingDetails: privacyStatement.NOWNodes,
+        trackingDetails: privacyStatement.nownodes,
       },
     ],
   },
   223: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/223",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.bsquared.network",
       "https://b2-mainnet.alt.technology",
-      "https://b2-mainnet-public.s.chainbase.com",
       "https://mainnet.b2-rpc.com",
+      {
+        url: "https://b2-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
     ],
-  },
-  2014: {
-    rpcs: ["https://rpc.nowscan.io"],
   },
   16180: {
     rpcs: ["https://subnets.avax.network/plyr/mainnet/rpc"],
@@ -6617,36 +8435,6 @@ export const extraRpcs = {
   328527624: {
     rpcs: ["https://testnet-rpc.nal.network"],
   },
-  80084: {
-    rpcs: [
-      "https://bartio.rpc.berachain.com",
-      {
-        url: "https://bartio.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://bartio.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://berat2.lava.build",
-        tracking: "yes",
-        trackingDetails: privacyStatement.lava,
-      },
-      {
-        url: "https://node.histori.xyz/berachain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
-        url: "https://berachain-testnet-rpc.publicnode.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-    ],
-  },
   328527: {
     rpcs: [
       {
@@ -6672,6 +8460,11 @@ export const extraRpcs = {
       "https://cronos-rpc.ecroxscan.com",
     ],
   },
+  4599: {
+    rpcs: [
+      "https://mainnet-rpc.gtbsblockchain.com",
+    ],
+  },
   7865: {
     rpcs: [
       {
@@ -6683,7 +8476,11 @@ export const extraRpcs = {
   },
   7869: {
     rpcs: [
-      "https://rpc-v2.powerloom.network",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7869",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc-v2.powerloom.network",
         tracking: "yes",
@@ -6693,6 +8490,11 @@ export const extraRpcs = {
   },
   17071: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/17071",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.onchainpoints.xyz",
         tracking: "yes",
@@ -6707,23 +8509,34 @@ export const extraRpcs = {
     rpcs: ["https://rpc-test-d11k.dojima.network"],
   },
   18071918: {
-    rpcs: ["https://mande-mainnet.public.blastapi.io"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/18071918",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mande-mainnet.public.blastapi.io",
+    ],
   },
   48900: {
     rpcs: [
-      "https://mainnet.zircuit.com",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/48900",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/zircuit/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       {
         url: "https://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://zircuit1-mainnet.p2pify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.chainstack,
-      },
-      {
-        url: "https://zircuit-mainnet.drpc.org",
+        url: "wss://mainnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -6733,24 +8546,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://zircuit1-mainnet.liquify.com",
-        tracking: "yes",
-        trackingDetails: privacyStatement.liquify,
-      },
-      {
-        url: "https://node.histori.xyz/zircuit-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-    ],
-  },
-  48899: {
-    rpcs: [
-      "https://zircuit1-testnet.p2pify.com/",
-      {
-        url: "https://node.histori.xyz/zircuit-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://zircuit.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
@@ -6759,6 +8557,11 @@ export const extraRpcs = {
   },
   56288: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/56288",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://bnb.boba.network",
       "https://replica.bnb.boba.network",
       {
@@ -6783,18 +8586,13 @@ export const extraRpcs = {
       },
     ],
   },
-  2522: {
-    rpcs: [
-      "https://rpc.testnet.frax.com",
-      {
-        url: "https://node.histori.xyz/fraxtal-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-    ],
-  },
   252: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/252",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.frax.com",
       {
         url: "https://fraxtal.drpc.org",
@@ -6812,29 +8610,43 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://node.histori.xyz/fraxtal-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://fraxtal.api.pocket.network",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.pokt,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/fraxtal",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://frax-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
   13473: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/13473",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.testnet.immutable.com",
       "https://immutable-zkevm-testnet.drpc.org",
       "wss://immutable-zkevm-testnet.drpc.org",
-      {
-        url: "https://node.histori.xyz/immutable-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   13371: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/13371",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.immutable.com",
-      "https://immutable-zkevm.drpc.org",
-      "wss://immutable-zkevm.drpc.org",
       {
         url: "https://immutable-zkevm.drpc.org",
         tracking: "none",
@@ -6850,25 +8662,35 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
-      {
-        url: "https://node.histori.xyz/immutable-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   4202: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4202",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.sepolia-api.lisk.com",
       {
-        url: "https://node.histori.xyz/lisk-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://lisk-sepolia.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lisk-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   1135: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1135",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.api.lisk.com",
       {
         url: "https://lisk.drpc.org",
@@ -6886,14 +8708,19 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url: "https://node.histori.xyz/lisk-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lisk-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
   656476: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/656476",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.open-campus-codex.gelato.digital",
       {
         url: "https://open-campus-codex-sepolia.drpc.org",
@@ -6909,6 +8736,11 @@ export const extraRpcs = {
   },
   111188: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/111188",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.realforreal.gelato.digital",
       {
         url: "https://tangible-real.gateway.tenderly.co",
@@ -6934,16 +8766,31 @@ export const extraRpcs = {
   },
   999999999: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/999999999",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://sepolia.rpc.zora.energy",
       {
-        url: "https://node.histori.xyz/zora-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://zora-sepolia.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://zora-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   7777777: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7777777",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.zora.energy",
       {
         url: "https://zora.drpc.org",
@@ -6956,9 +8803,9 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/zora-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://api-zora-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
       },
     ],
   },
@@ -6966,10 +8813,21 @@ export const extraRpcs = {
     rpcs: ["https://rpc.sx-rollup.gelato.digital"],
   },
   79479957: {
-    rpcs: ["https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/79479957",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
   },
   388: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/388",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://mainnet.zkevm.cronos.org",
       {
         url: "https://cronos-zkevm.drpc.org",
@@ -6981,11 +8839,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://cronos-zkevm.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
     ],
   },
   20230825: {
     rpcs: [
-      "https://testnet.vcity.app",
       {
         url: "https://testnet.vcity.app",
         tracking: "none",
@@ -6996,17 +8858,14 @@ export const extraRpcs = {
   996: {
     rpcs: ["https://hk.p.bifrost-rpc.liebi.com"],
   },
-  133: {
-    rpcs: ["https://hashkeychain-testnet.alt.technology"],
-  },
   1946: {
     rpcs: [
-      "https://rpc.minato.soneium.org/",
       {
-        url: "https://node.histori.xyz/soneium-minato-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lb.routeme.sh/rpc/evm/1946",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://rpc.minato.soneium.org/",
       {
         url: "https://soneium-minato.drpc.org",
         tracking: "none",
@@ -7017,10 +8876,20 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://soneium-minato.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
     ],
   },
   41455: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/41455",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.alephzero.raas.gelato.cloud",
       "wss://ws.alephzero.raas.gelato.cloud",
       {
@@ -7033,15 +8902,15 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://node.histori.xyz/aleph-zero-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   1111: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.wemix.com",
       "wss://ws.wemix.com",
       {
@@ -7084,11 +8953,6 @@ export const extraRpcs = {
       "https://story.evm.t.stavr.tech",
       "https://story-testnet-jsonrpc.blockhub.id",
       "https://story-testnet-jsonrpc.daaps-j4ran.cloud",
-      {
-        url: "https://story-testnet-evm.itrocket.net",
-        tracking: "none",
-        trackingDetails: privacyStatement.itrocket,
-      },
       "https://story-rpc-evm.validatorvn.com",
       "https://rpc-storyevm-testnet.aldebaranode.xyz",
       "https://rpc-evm-story.rawaki.xyz",
@@ -7113,8 +8977,6 @@ export const extraRpcs = {
 
   16600: {
     rpcs: [
-      "https://evmrpc-testnet.0g.ai",
-      "https://0g-json-rpc-public.originstake.com",
       "https://og-testnet-jsonrpc.blockhub.id",
       {
         url: "https://0g-json-rpc-public.originstake.com",
@@ -7153,11 +9015,6 @@ export const extraRpcs = {
     rpcs: [
       "https://testnet.rpc.metall2.com",
       {
-        url: "https://node.histori.xyz/metal-l2-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://metall2-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -7171,6 +9028,11 @@ export const extraRpcs = {
   },
   1750: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1750",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.metall2.com",
       {
         url: "https://metall2.drpc.org",
@@ -7182,31 +9044,26 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://node.histori.xyz/metal-l2-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   80008: {
     rpcs: [
-      "https://rpc.sepolia.polynomial.fi",
       {
-        url: "https://node.histori.xyz/polynomial-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lb.routeme.sh/rpc/evm/80008",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://rpc.sepolia.polynomial.fi",
     ],
   },
   8008: {
     rpcs: [
-      "https://rpc.polynomial.fi",
       {
-        url: "https://node.histori.xyz/polynomial-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lb.routeme.sh/rpc/evm/8008",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://rpc.polynomial.fi",
     ],
   },
   8428: {
@@ -7220,11 +9077,16 @@ export const extraRpcs = {
     rpcs: [
       "https://rpc.moksha.vana.org",
       "https://rpc-moksha-vana.josephtran.xyz",
-      "https://moksha-vana-rpc.tech-coha05.xyz",
     ],
   },
+
   55244: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/55244",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.superposition.so",
         tracking: "yes",
@@ -7233,10 +9095,25 @@ export const extraRpcs = {
     ],
   },
   8668: {
-    rpcs: ["https://mainnet-rpc.helachain.com"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8668",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet-rpc.helachain.com",
+    ],
   },
   698: {
-    rpcs: ["https://rpc.matchain.io", "https://rpc.ankr.com/matchain_mainnet"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/698",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.matchain.io",
+      "https://rpc.ankr.com/matchain_mainnet",
+    ],
   },
   251: {
     rpcs: [
@@ -7269,6 +9146,11 @@ export const extraRpcs = {
   7332: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/7332",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/horizen_eon",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -7287,6 +9169,11 @@ export const extraRpcs = {
   52014: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/52014",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://rpc.ankr.com/electroneum",
         tracking: "none",
         trackingDetails: privacyStatement.ankr,
@@ -7295,6 +9182,11 @@ export const extraRpcs = {
   },
   5201420: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5201420",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.ankr.com/electroneum_testnet",
         tracking: "none",
@@ -7341,12 +9233,21 @@ export const extraRpcs = {
   },
   1319: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1319",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://aia-dataseed2.aiachain.org",
       "https://aia-dataseed3.aiachain.org",
       "https://aia-dataseed1.aiachain.org",
       "https://aia-dataseed4.aiachain.org",
       "https://aiachain.bycrpc.com",
       "https://aiachain.znodes.net",
+      "wss://dataseed1.aiachain.org",
+      "wss://dataseed2.aiachain.org",
+      "wss://dataseed3.aiachain.org",
+      "wss://dataseed4.aiachain.org",
     ],
   },
   2192: {
@@ -7366,17 +9267,22 @@ export const extraRpcs = {
   },
   1328: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1328",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm-rpc-testnet.sei-apis.com",
       "wss://evm-ws-testnet.sei-apis.com",
-      {
-        url: "https://node.histori.xyz/sei-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
       {
         url: "https://sei-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://sei-testnet-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
       },
       {
         url: "wss://sei-testnet.drpc.org",
@@ -7387,6 +9293,11 @@ export const extraRpcs = {
   },
   1329: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1329",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm-rpc.sei-apis.com",
       {
         url: "https://sei.drpc.org",
@@ -7399,19 +9310,45 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
-      {
         url: "https://sei-evm-rpc.stakeme.pro",
         tracking: "none",
         trackingDetails: privacyStatement.STAKEME,
+      },
+      {
+        url: "https://sei-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
+        url: "https://sei.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/sei",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://sei.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
       },
     ],
   },
   130: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/130",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/unichain/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://mainnet.unichain.org/",
       {
         url: "https://unichain.api.onfinality.io/public",
@@ -7439,34 +9376,40 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://0xrpc.io/uni",
-        tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
+        url: "https://unichain-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
       {
-        url: "wss://0xrpc.io/uni",
+        url: "https://api-unichain-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
         tracking: "limited",
-        trackingDetails: privacyStatement["0xRPC"],
+        trackingDetails: privacyStatement.dwellir,
       },
       {
-        url: "https://unichain.therpc.io",
+        url: "https://unichain-mainnet.rpc.sentio.xyz",
         tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/unichain",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
       },
     ],
   },
   1301: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1301",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://sepolia.unichain.org",
       {
         url: "https://endpoints.omniatech.io/v1/unichain/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
-      },
-      {
-        url: "https://node.histori.xyz/unichain-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
       },
       {
         url: "https://unichain-sepolia.api.onfinality.io/public",
@@ -7489,20 +9432,30 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://unichain-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        url: "https://unichain-sepolia.rpc.thyme.sh/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.thyme,
       },
     ],
   },
   50312: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/50312",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://dream-rpc.somnia.network",
       "https://rpc.ankr.com/somnia_testnet/6e3fd81558cf77b928b06b38e9409b4677b637118114e83364486294d5ff4811",
     ],
   },
   763373: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/763373",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc-gel-sepolia.inkonchain.com",
       "wss://ws-gel-sepolia.inkonchain.com",
       {
@@ -7515,10 +9468,30 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://ink-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://ink-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
     ],
   },
   57073: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/57073",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/ink/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc-gel.inkonchain.com",
       "https://rpc-qnd.inkonchain.com",
       "wss://rpc-gel.inkonchain.com",
@@ -7529,29 +9502,66 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
+        url: "https://ink-public.nodies.app",
+        tracking: "limited",
+        trackingDetails: privacyStatement.nodies,
+      },
+      {
         url: "wss://ink.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://ink.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://ink-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://ink-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
       },
     ],
   },
   3441006: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3441006",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://pacific-rpc.sepolia-testnet.manta.network/http",
+      "https://manta-sepolia.rpc.caldera.xyz/http",
+      "wss://manta-sepolia.rpc.caldera.xyz/ws",
       {
         url: "https://endpoints.omniatech.io/v1/manta-pacific/sepolia/public",
         tracking: "none",
         trackingDetails: privacyStatement.omnia,
       },
       {
-        url: "https://node.histori.xyz/manta-sepolia/8ry9f6t9dct1se2hlagxnd9n2a",
+        url: "https://manta-pacific-sepolia.drpc.org",
         tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://manta-pacific-sepolia.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
       },
     ],
   },
   531050104: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/531050104",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.testnet.sophon.xyz",
       {
         url: "https://rpc-quicknode.testnet.sophon.xyz",
@@ -7562,6 +9572,11 @@ export const extraRpcs = {
   },
   50104: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/50104",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.sophon.xyz",
       {
         url: "https://rpc-quicknode.sophon.xyz",
@@ -7572,7 +9587,13 @@ export const extraRpcs = {
   },
   33139: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/33139",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.apechain.com",
+      "wss://rpc.apechain.com/ws",
       {
         url: "https://apechain.drpc.org",
         tracking: "none",
@@ -7583,21 +9604,18 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://node.histori.xyz/apechain-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
-      },
     ],
   },
   33111: {
     rpcs: [
-      "https://rpc.curtis.apechain.com",
       {
-        url: "https://node.histori.xyz/apechain-testnet/8ry9f6t9dct1se2hlagxnd9n2a",
-        tracking: "none",
-        trackingDetails: privacyStatement.Histori,
+        url: "https://lb.routeme.sh/rpc/evm/33111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
       },
+      "https://rpc.curtis.apechain.com",
+      "https://curtis.rpc.caldera.xyz/http",
+      "wss://curtis.rpc.caldera.xyz/ws",
       {
         url: "https://apechain-curtis.drpc.org",
         tracking: "none",
@@ -7611,7 +9629,11 @@ export const extraRpcs = {
     ],
   },
   151: {
-    rpcs: ["https://governors.mainnet.redbelly.network"],
+    rpcs: [
+      "https://governors.mainnet.redbelly.network",
+      "https://rpc.ankr.com/redbelly_mainnet",
+      "https://api.uniblock.dev/uni/v1/json-rpc?chainId=151"
+    ],
   },
   78600: {
     rpcs: ["https://rpc-vanguard.vanarchain.com"],
@@ -7621,6 +9643,11 @@ export const extraRpcs = {
   },
   21000000: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/21000000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://mainnet.corn-rpc.com",
         tracking: "none",
@@ -7640,6 +9667,11 @@ export const extraRpcs = {
   },
   21000001: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/21000001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://testnet.corn-rpc.com",
         tracking: "none",
@@ -7677,11 +9709,15 @@ export const extraRpcs = {
       "https://rpc.vana.org",
       "https://evm-rpc-vana.josephtran.xyz",
       "https://evm-rpc-vana.j-node.net",
-      "https://islander-vana-rpc.spidernode.net",
     ],
   },
   543210: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/543210",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.zerion.io/v1/zero",
       {
         url: "https://zero.drpc.org",
@@ -7697,6 +9733,16 @@ export const extraRpcs = {
   },
   146: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/146",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/sonic/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.soniclabs.com",
       {
         url: "https://sonic.drpc.org",
@@ -7714,25 +9760,55 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "wss://sonic.callstaticrpc.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.callstatic,
-      },
-      {
         url: "https://sonic.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
       {
-        url: "https://sonic.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
+        url: "https://sonic-json-rpc.stakely.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
       },
-      "https://sonic-json-rpc.stakely.io/",
+      {
+        url: "https://sonic.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-sonic-mainnet-archive.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://sonic-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/sonic",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://sonic-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://rpc.driftguard.live/sonic",
+        tracking: "none",
+        trackingDetails: privacyStatement.driftguard,
+      },
     ],
   },
   57054: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/57054",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.ankr.com/sonic_blaze_testnet",
         tracking: "limited",
@@ -7757,38 +9833,60 @@ export const extraRpcs = {
   },
   1514: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1514",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet.datarpc.io",
       "https://mainnet.storyrpc.io",
-      "https://story-evm-rpc.spidernode.net",
       {
         url: "https://evm-rpc.story.mainnet.dteam.tech",
         tracking: "none",
         trackingDetails: privacyStatement.DTEAM,
       },
       {
-        url: "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
+        url: "https://infra.originstake.com/story/evm",
         tracking: "none",
-        trackingDetails: privacyStatement.GrandValley,
+        trackingDetails: privacyStatement.originstake,
+      },
+      {
+        url: "https://story-mainnet-evm.itrocket.net",
+        tracking: "none",
+        trackingDetails: privacyStatement.itrocket,
       },
       "https://evm-rpc-story.j-node.net",
       "https://story-evm-rpc.krews.xyz",
       "https://evmrpc.story.nodestake.org",
-      "https://story-mainnet.zenithnode.xyz",
       "https://evm-rpc.story.silentvalidator.com",
       "https://story-mainnet-evmrpc.mandragora.io",
       "https://rpc-storyevm.aldebaranode.xyz",
-      "https://evm.story.cumulo.me",
       {
         url: "https://rpc.ankr.com/story_mainnet",
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
-      "https://evm-rpc-archive.story.node75.org",
+      {
+        url: "https://story-json-rpc.stakely.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.Stakely,
+      },
+      {
+        url: "https://rpc.swiftnodes.io/rpc/story",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   3030: {
     rpcs: [
       {
         url: "https://datahub-asia01.bchscan.io/",
+        tracking: "none",
+        trackingDetails: privacyStatement.bctech,
+      },
+      {
+        url: "https://datahub-asia02.bchscan.io/",
         tracking: "none",
         trackingDetails: privacyStatement.bctech,
       },
@@ -7799,6 +9897,11 @@ export const extraRpcs = {
   },
   10143: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10143",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://monad-testnet.drpc.org",
         tracking: "none",
@@ -7815,14 +9918,35 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://rpc.ankr.com/monad_testnet",
+        url: "https://monad-testnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://monad-testnet.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+      "https://rpc-testnet.monadinfra.com",
+      {
+        url: "https://monad-testnet-rpc.huginn.tech",
         tracking: "none",
-        trackingDetails: privacyStatement.ankr,
+        trackingDetails: privacyStatement.huginn,
+      },
+      {
+        url: "wss://wss.monad-testnet-rpc.huginn.tech",
+        tracking: "none",
+        trackingDetails: privacyStatement.huginn,
       },
     ],
   },
   80094: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/80094",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.berachain.com",
       {
         url: "https://berachain-rpc.publicnode.com",
@@ -7849,10 +9973,51 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.RHINO,
       },
+      {
+        url: "https://berachain.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://berachain-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://bera.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://api-berachain-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://berachain.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/berachain",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "wss://bera.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
     ],
   },
   2741: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2741",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.mainnet.abs.xyz",
       {
         url: "https://abstract.drpc.org",
@@ -7869,10 +10034,53 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
       },
+      {
+        url: "https://abstract-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  20250217: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20250217",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.ankr.com/xphere_mainnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  1998991: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1998991",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.ankr.com/xphere_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
     ],
   },
   1868: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1868",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/soneium/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
       "https://rpc.soneium.org",
       {
         url: "https://soneium.drpc.org",
@@ -7884,10 +10092,26 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://soneium-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/soneium",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
     ],
   },
   2345: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2345",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.goat.network",
       {
         url: "https://goat-mainnet-alpha.drpc.org",
@@ -7906,17 +10130,13 @@ export const extraRpcs = {
       },
     ],
   },
-  48816: {
-    rpcs: [
-      {
-        url: "https://rpc.ankr.com/goat_testnet",
-        tracking: "none",
-        trackingDetails: privacyStatement.ankr,
-      },
-    ],
-  },
   660279: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/660279",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.ankr.com/xai",
         tracking: "none",
@@ -7980,6 +10200,11 @@ export const extraRpcs = {
   },
   1112: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1112",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://api.test.wemix.com",
       "wss://ws.test.wemix.com",
       {
@@ -7996,6 +10221,11 @@ export const extraRpcs = {
   },
   808813: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/808813",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://bob-sepolia.rpc.gobob.xyz",
       "wss://bob-sepolia.rpc.gobob.xyz",
       {
@@ -8011,13 +10241,45 @@ export const extraRpcs = {
     ],
   },
   8691942025: {
-    rpcs: ["https://rpc.onfa.io", "https://rpc.onfachain.com", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
+    rpcs: ["https://rpc.onfa.io", "wss://ws.onfachain.com", "wss://ws.onfa.io"],
   },
   232: {
-    rpcs: ["https://rpc.lens.xyz", "https://lens.drpc.org"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/232",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.lens.xyz",
+      {
+        url: "https://light-icy-dinghy.lens-mainnet.quiknode.pro",
+        tracking: "yes",
+        trackingDetails: privacyStatement.quicknode,
+      },
+      {
+        url: "https://lens-mainnet.g.alchemy.com/public",
+        tracking: "yes",
+        trackingDetails: privacyStatement.alchemy,
+      },
+      {
+        url: "https://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://lens.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   37111: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/37111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc.testnet.lens.dev",
       {
         url: "https://lens-testnet.drpc.org",
@@ -8033,14 +10295,19 @@ export const extraRpcs = {
   },
   1315: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1315",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://aeneid.datarpc.io",
       "https://aeneid.storyrpc.io/",
       "https://evm-aeneid-story.j-node.net",
       "https://evmrpc-t.story.nodestake.org",
-      "https://json-rpc.story-aeneid.cumulo.me",
       {
-        url: "https://lightnode-json-rpc-story.grandvalleys.com",
+        url: "https://story-testnet-evm.itrocket.net",
         tracking: "none",
-        trackingDetails: privacyStatement.GrandValley,
+        trackingDetails: privacyStatement.itrocket,
       },
       {
         url: "https://rpc.ankr.com/story_aeneid_testnet",
@@ -8049,14 +10316,11 @@ export const extraRpcs = {
       },
       "https://aeneid-evm-rpc.krews.xyz",
       "https://story-aeneid-rpc.spidernode.net",
-      "https://evm-rpc.story.testnet.node75.org",
-      "https://story-aeneid-json-rpc.auranode.xyz",
     ],
   },
   224433: {
     rpcs: [
       "https://cancun-rpc.conet.network",
-      "https://rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -8066,7 +10330,6 @@ export const extraRpcs = {
   },
   224400: {
     rpcs: [
-      "https://mainnet-rpc.conet.network",
       {
         url: "https://conet.network/",
         tracking: "none",
@@ -8094,6 +10357,11 @@ export const extraRpcs = {
   911867: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/911867",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://odyssey.ithaca.xyz",
         tracking: "yes",
         trackingDetails: privacyStatement.conduit,
@@ -8102,6 +10370,11 @@ export const extraRpcs = {
   },
   108160679: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/108160679",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://evm.orai.io",
       {
         url: "https://oraichain-mainnet-evm.itrocket.net",
@@ -8121,33 +10394,73 @@ export const extraRpcs = {
     ],
   },
   16166: {
-    rpcs: [
-      "https://pubnodes.cypherium.io/rpc",
-      "https://make-cph-great-again.community"
-    ],
+    rpcs: ["https://pubnodes.cypherium.io/rpc", "https://make-cph-great-again.community"],
   },
   560048: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/560048",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://rpc.hoodi.ethpandaops.io",
       },
       {
         url: "https://0xrpc.io/hoodi",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "wss://0xrpc.io/hoodi",
-        tracking: "limited",
+        tracking: "none",
         trackingDetails: privacyStatement["0xRPC"],
+      },
+      {
+        url: "https://ethereum-hoodi.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://hoodi.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
       },
     ],
   },
   295: {
-    rpcs: ["https://hedera.linkpool.pro"],
-  },
-  2741: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/295",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://hedera.linkpool.pro",
+      "https://295.rpc.thirdweb.com",
+      {
+        url: "https://mainnet.hedera.api.hgraph.io/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.hgraph,
+      },
+    ],
+  },
+  296: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/296",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://296.rpc.thirdweb.com",
+    ],
+  },
+  11124: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11124",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://abstract-sepolia.drpc.org",
         tracking: "none",
@@ -8163,6 +10476,11 @@ export const extraRpcs = {
   80069: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/80069",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://berachain-bepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -8172,10 +10490,20 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://berachain-bepolia.therpc.io",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      },
     ],
   },
   919: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/919",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://mode-testnet.drpc.org",
         tracking: "none",
@@ -8205,6 +10533,11 @@ export const extraRpcs = {
   2020: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/2020",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://ronin.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -8214,10 +10547,32 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://ronin-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://api-ronin-mainnet.n.dwellir.com/2ccf18bf-2916-4198-8856-42172854353c",
+        tracking: "limited",
+        trackingDetails: privacyStatement.dwellir,
+      },
+      {
+        url: "https://ronin.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
     ],
   },
   31: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/31",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://public-node.testnet.rsk.co",
+      "https://mycrypto.testnet.rsk.co",
       {
         url: "https://rootstock-testnet.drpc.org",
         tracking: "none",
@@ -8233,6 +10588,11 @@ export const extraRpcs = {
   713715: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/713715",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://sei-devnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -8246,6 +10606,11 @@ export const extraRpcs = {
   },
   5330: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5330",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       {
         url: "https://superseed.drpc.org",
         tracking: "none",
@@ -8261,6 +10626,11 @@ export const extraRpcs = {
   728126428: {
     rpcs: [
       {
+        url: "https://lb.routeme.sh/rpc/evm/728126428",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
         url: "https://tron.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -8270,31 +10640,43 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://tron.therpc.io/jsonrpc",
+        tracking: "limited",
+        trackingDetails: privacyStatement.therpc,
+      },
+      {
+        url: "https://tron.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "public-trx-mainnet.fastnode.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.fastnode,
+      },
+      {
+        url: "https://tron-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://tron.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
     ],
   },
+
   48898: {
     rpcs: [
       {
-        url: "https://zircuit-garfield-testnet.drpc.org",
+        url: "https://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "wss://zircuit-garfield-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-  48899: {
-    rpcs: [
-      {
-        url: "https://zircuit-testnet.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "wss://zircuit-testnet.drpc.org",
+        url: "wss://garfield-testnet.zircuit.com",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
@@ -8302,6 +10684,11 @@ export const extraRpcs = {
   },
   13505: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/13505",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc-sepolia.gravity.xyz",
       {
         url: "https://gravity-alpha-sepolia.drpc.org",
@@ -8317,25 +10704,4363 @@ export const extraRpcs = {
   },
   73115: {
     rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/73115",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
       "https://rpc1-mainnet.icbnetwork.info",
       "https://rpc2-mainnet.icbnetwork.info",
-      "https://main1.rpc-icb-network.io/",
+      "https://main1.rpc-icb-network.io",
+      "https://main2.rpc-icb-network.io",
+      "https://mahour.icbnetwork.info",
     ],
   },
   2632500: {
-    rpcs: ["https://coti-rpc.Hyperflow.finance", "wss://coti-rpc.Hyperflow.finance"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2632500",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://coti-rpc.Hyperflow.finance",
+      "wss://coti-rpc.Hyperflow.finance",
+      "https://tokyo.fullnode.mainnet.coti.io/rpc",
+      "wss://tokyo.fullnode.mainnet.coti.io/ws",
+      "https://virginia.fullnode.mainnet.coti.io/rpc",
+      "wss://virginia.fullnode.mainnet.coti.io/ws",
+      "https://new-york.fullnode.mainnet.coti.io/rpc",
+      "wss://new-york.fullnode.mainnet.coti.io/ws",
+      "https://community-enabler-1.fullnode.mainnet.coti.io/rpc",
+      "wss://community-enabler-1.fullnode.mainnet.coti.io/ws",
+      "https://mainnet.innovunode.io/rpc",
+      "wss://mainnet.innovunode.io/ws",
+    ],
   },
   7082400: {
-    rpcs: ["https://coti-test-rpc.Hyperflow.finance", "wss://coti-test-rpc.Hyperflow.finance"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7082400",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://coti-test-rpc.Hyperflow.finance",
+      "wss://coti-test-rpc.Hyperflow.finance",
+    ],
   },
   7233: {
     rpcs: ["https://rpc-mainnet.inichain.com"],
   },
   42421: {
-    rpcs: ["https://eth.nodebridge.xyz/assetchaintestnet/exec/c9359df1-29fe-4f4e-b06a-9f329217a086"],
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42421",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://enugu-rpc.assetchain.org",
+    ],
+  },
+  42429: {
+    rpcs: ["https://tempo-testnet.drpc.org", "wss://tempo-testnet.drpc.org"],
+  },
+  6281971: {
+    rpcs: [
+      "https://dogeos-testnet.drpc.org",
+      "wss://dogeos-testnet.drpc.org",
+      {
+        url: "https://dogeos-testnet-public.unifra.io/",
+        tracking: "limited",
+        trackingDetails: privacyStatement.unifra,
+      },
+    ],
+  },
+  43111: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/43111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://rpc.hemi.network/rpc",
+      {
+        url: "https://hemi.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://hemi.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  743111: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/743111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://hemi-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://hemi-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  42420: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42420",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet-rpc.assetchain.org",
+    ],
+  },
+  2691: {
+    rpcs: [
+      {
+        url: "https://mainnet-rpc.splendor.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  2692: {
+    rpcs: [
+      {
+        url: "https://testnet-rpc.splendor.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  123999: {
+    rpcs: [
+      {
+        url: "https://a-rpc.nobody.network",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  8678671: {
+    rpcs: [
+      {
+        url: "https://vncscan.io",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  5031: {
+    rpcs: ["https://somnia-rpc.publicnode.com"],
+  },
+  9745: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9745",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://plasma.drpc.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "wss://plasma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://plasma.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/plasma",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://plasma-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+    websiteDead: false,
+    rpcWorking: true,
+  },
+  98866: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/98866",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://plume.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://plume.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://plume-mainnet.gateway.tatum.io/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  747474: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/747474",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://katana.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://katana.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+
+      {
+        url: "https://rpc.swiftnodes.io/rpc/katana",
+        tracking: "limited",
+        trackingDetails: privacyStatement.swiftnodes,
+      },
+      {
+        url: "https://katana.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+    ],
+  },
+  737373: {
+    rpcs: [
+      {
+        url: "https://katana-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://katana-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  97477: {
+    rpcs: [
+      {
+        url: "https://doma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://doma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  5042: {
+    rpcs: [
+      {
+        url: "https://arc-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://arc-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://rpc.beamrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.beam,
+      },
+      {
+        url: "wss://rpc.beamrpc.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.beam,
+      },
+      {
+        url: "https://rpc-arc.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://arc.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  5042002: {
+    rpcs: [
+      {
+        url: "https://arc-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://arc-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://arc-testnet-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://arc-testnet-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
+  55930: {
+    rpcs: [
+      {
+        url: "https://services.datahaven-mainnet.network/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+      {
+        url: "wss://services.datahaven-mainnet.network/mainnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+    ],
+  },
+  55931: {
+    rpcs: [
+      {
+        url: "https://services.datahaven-testnet.network/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+      {
+        url: "wss://services.datahaven-testnet.network/testnet",
+        tracking: "limited",
+        trackingDetails: privacyStatement.DHF,
+      },
+    ],
+  },
+  109: {
+    rpcs: [
+      {
+        url: "https://shibarium.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://shibarium.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1440000: {
+    rpcs: [
+      {
+        url: "https://xrpl.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://xrpl.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1449000: {
+    rpcs: [
+    ],
+  },
+  766: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/766",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://evm-rpc-ql1.foxxone.one",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+      {
+        url: "https://evm-rpc-ql1.mschihuahua.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+  },
+  31612: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/31612",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://mezo.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://mezo.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  54211: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/54211",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://haqq-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://haqq-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  48816: {
+    rpcs: [
+      {
+        url: "https://goat-testnet3.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://goat-testnet3.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://rpc.ankr.com/goat_testnet",
+        tracking: "none",
+        trackingDetails: privacyStatement.ankr,
+      },
+    ],
+  },
+  14601: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/14601",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://sonic-testnet-v2.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://sonic-testnet-v2.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2522: {
+    rpcs: [
+      "https://rpc.testnet.frax.com",
+      {
+        url: "https://fraxtal-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://fraxtal-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  88153591557: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88153591557",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://arb-blueberry-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://arb-blueberry-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  240: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/240",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://cronos-zkevm-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://cronos-zkevm-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  397: {
+    rpcs: [
+      {
+        url: "https://near.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://near.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://near-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  2523: {
+    rpcs: [
+      {
+        url: "https://fraxtal-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://fraxtal-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2999: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2999",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      "https://mainnet.bityuan.com/eth",
+      "https://node1.bityuan.com/eth",
+      "https://node2.bityuan.com/eth",
+    ],
+  },
+  420420417: {
+    rpcs: [
+      "https://eth-rpc.testnet.polkadot.io",
+      "wss://eth-rpc.testnet.polkadot.io",
+    ],
+  },
+  420420418: {
+    rpcs: ["https://eth-rpc.kusama.polkadot.io", "wss://eth-rpc.kusama.polkadot.io"],
+  },
+  420420419: {
+    rpcs: [
+      "https://eth-rpc.polkadot.io",
+      "wss://eth-rpc.polkadot.io",
+      {
+        url: "https://doteth.saxemberg.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.Saxemberg,
+      },
+      {
+        url: "wss://dothub.saxemberg.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.Saxemberg,
+      },
+    ],
+  },
+  688689: {
+    rpcs: [
+      {
+        url: "https://rpc.evm.pharos.testnet.cosmostation.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.Cosmostation,
+      },
+    ],
+  },
+  1122: {
+    rpcs: [
+      {
+        url: "https://rpc.luxeports.com",
+        tracking: "none",
+        trackingDetails:
+          "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+      {
+        url: "https://erpc.luxeports.com",
+        tracking: "none",
+        trackingDetails:
+          "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+      {
+        url: "wss://rpc.luxeports.com/ws",
+        tracking: "none",
+        trackingDetails:
+          "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+      {
+        url: "wss://erpc.luxeports.com/ws",
+        tracking: "none",
+        trackingDetails:
+          "LuxePorts does not collect or store any user information (IP addresses, locations, etc.) through the RPC. All data transmitted is solely for blockchain transactions.",
+      },
+    ],
+  },
+  30939: {
+    rpcs: [
+      {
+        url: "https://rpc-testnet.dilithium3.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.dilithium3,
+      },
+      {
+        url: "wss://ws-testnet.dilithium3.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.dilithium3,
+      },
+    ],
+  },
+  30485: {
+    rpcs: [
+      {
+        url: "https://rpc.tronclassicscan.org:8545",
+        tracking: "limited",
+        trackingDetails:
+          "TronClassicScan public RPC may log IP addresses and request metadata for rate limiting, security, and service reliability.",
+      },
+    ],
+  },
+  677: {
+    rpcs: [
+      {
+        url: "https://rpc.botchain.ai",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://ws-rpc.botchain.ai",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  110110: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/110110",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.marscredit.xyz",
+        tracking: "none",
+        trackingDetails:
+          "Mars Credit does not collect or store any user information (IP addresses, locations, etc.) transmitted via our RPC.",
+      },
+    ],
+  },
+  3303: {
+    rpcs: [
+      {
+        url: "https://qbc.network/rpc",
+        tracking: "none",
+        trackingDetails:
+          "Quantum Blockchain does not collect or store any user information transmitted via the RPC endpoint.",
+      },
+    ],
+  },
+  1213549903: {
+    rpcs: [
+      {
+        url: "https://rpc.evm.mirasmanda.uz",
+        tracking: "none",
+        trackingDetails: privacyStatement.mirasmanda,
+      },
+    ],
+  },
+  1215655279: {
+    rpcs: [
+      {
+        url: "https://rpc-uat.evm.mirasmanda.uz",
+        tracking: "none",
+        trackingDetails: privacyStatement.mirasmanda,
+      },
+    ],
+  },
+  73790: {
+    rpcs: [
+      {
+        url: "https://rpc.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails:
+          "NV-CHAIN sovereign RPC - no logs, no tracking. IRMINSUL node, Helsinki FI. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-eu.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails:
+          "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-EU node, Nuremberg DE. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-apac.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails:
+          "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-APAC node, Singapore SG. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-usw.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails:
+          "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-USW node, Hillsboro OR US. https://neurovatic.ai/whitepaper",
+      },
+      {
+        url: "https://rpc-use.neurovatic.ai/rpc",
+        tracking: "none",
+        trackingDetails:
+          "NV-CHAIN sovereign RPC - no logs, no tracking. NEXUS-USE node, Ashburn VA US. https://neurovatic.ai/whitepaper",
+      },
+    ],
+  },
+  2366: {
+    rpcs: [
+      {
+        url: "https://rpc.gokite.ai/",
+        tracking: "none",
+        trackingDetails:
+          "KiteAI RPC does not collect or store personal data from requests. Standard infrastructure-level logs may be used for monitoring and reliability.",
+      },
+      {
+        url: "https://kite.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1229800785: {
+    rpcs: [
+      {
+        url: "https://relay.itaninetworkchain.com/jsonrpc",
+        tracking: "none",
+        trackingDetails: "iTani Network Chain relay node — no user tracking, no data collection.",
+      },
+      {
+        url: "https://node.itaninetworkchain.com/jsonrpc",
+        tracking: "none",
+        trackingDetails: "iTani Network Chain primary node — no user tracking, no data collection.",
+      },
+    ],
+  },
+  421018: {
+    rpcs: [
+      {
+        url: "https://evm-rpc-infinite.mschihuahua.org",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+  },
+  12: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/12",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  16: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/16",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  18: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/18",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  21: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/21",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  34: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/34",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  37: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/37",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  39: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/39",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  46: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/46",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  53: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/53",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  71: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/71",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  75: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/75",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  81: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/81",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  83: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/83",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  94: {
+    rpcs: [
+      "https://rpc-light.swissdlt.tech",
+      {
+        url: "https://lb.routeme.sh/rpc/evm/94",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  98: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/98",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  103: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/103",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  112: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/112",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  114: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },      
+      {
+        url: "https://flare-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  117: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/117",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  120: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/120",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  134: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/134",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  148: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/148",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  150: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/150",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  153: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/153",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  157: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/157",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  164: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/164",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  168: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/168",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  178: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/178",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  179: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/179",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  180: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/180",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  181: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/181",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  207: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/207",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  212: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/212",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  213: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/213",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  234: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/234",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  269: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/269",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  271: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/271",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  274: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/274",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  279: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/279",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  291: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/291",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://orderly.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  297: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/297",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  303: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/303",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  313: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/313",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  320: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/320",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  322: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/322",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  365: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/365",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  404: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/404",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  418: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/418",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  428: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/428",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  456: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/456",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  463: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/463",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  466: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/466",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  500: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/500",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  501: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/501",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  520: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/520",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  568: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/568",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  612: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/612",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  614: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/614",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  634: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/634",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  647: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/647",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  648: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/648",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  690: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/690",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  957: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/957",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  963: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/963",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  985: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/985",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  988: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/988",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://stable-mainnet.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://stable.drpc.org",
+        tracking: "limited",
+        trackingDetails: privacyStatement.drpc,
+      }
+    ],
+  },
+  995: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/995",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  999: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/999",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://hyperevm.rpc.sentio.xyz",
+        tracking: "limited",
+        trackingDetails: privacyStatement.sentio,
+      },
+      {
+        url: "https://rpc.nodeflare.app/hl/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
+    ],
+  },
+  1007: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1007",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1009: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1009",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1029: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1029",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1113: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1113",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1149: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1149",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1170: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1170",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1234: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1234",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1300: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1300",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1313: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1313",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1320: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1320",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1370: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1370",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1424: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1424",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1570: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1570",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1578: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1578",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1717: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1717",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1718: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1718",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1729: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1729",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1804: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1804",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1811: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1811",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1829: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1829",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1875: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1875",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1907: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1907",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1952: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1952",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1969: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1969",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1993: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1993",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2013: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2013",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2031: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2031",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2035: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2035",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2043: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2043",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2047: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2047",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2048: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2048",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2109: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2109",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2151: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2151",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2152: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2152",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2201: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2201",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2241: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2241",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2306: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2306",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2391: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2391",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2410: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2410",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2606: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2606",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2625: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2625",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2649: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2649",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2730: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2730",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3003: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3003",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3011: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3011",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3068: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3068",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3338: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3338",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3400: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3400",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3601: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3601",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3630: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3630",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3737: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3737",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3797: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3797",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3799: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3799",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3888: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3889: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3889",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3939: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3939",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3999: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3999",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4000: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4048: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4048",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4061: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4061",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4062: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4062",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4078: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4078",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4102: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4102",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4157: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4157",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4158: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4158",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4201: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4201",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4217: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4217",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4337: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4337",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4460: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4460",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4613: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4613",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4661: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4661",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4690: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4690",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  5234: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5234",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  5845: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5845",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  5851: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/5851",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6119: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6119",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6283: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6283",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6322: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6322",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6342: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6342",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6343: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6343",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6398: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6398",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6678: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6678",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6789: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6789",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6805: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6805",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6806: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6806",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6969: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6969",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  6999: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/6999",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7244: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7244",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7300: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7300",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7518: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7518",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7560: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7560",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7575: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7575",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7576: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7576",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7668: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7668",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7897: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7897",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  7979: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/7979",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8192: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8192",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8333: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8333",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8726: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8726",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8727: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8727",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8732: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8732",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8844: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8844",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8869: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8869",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8880: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8880",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8882: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8882",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8889: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8889",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8911: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8911",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8912: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8912",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8921: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8921",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8922: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8922",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  8989: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/8989",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9007: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9007",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9008: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9008",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9302: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9302",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9369: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9369",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9372: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9372",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9496: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9496",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9728: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9728",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9746: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9746",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9790: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9790",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9792: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9792",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9797: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9797",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9898: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9898",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  9996: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/9996",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10081: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10081",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10395: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10395",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10507: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10507",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10508: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10508",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10946: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10946",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10947: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10947",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  11501: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11501",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  11891: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11891",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  12306: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/12306",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  12553: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/12553",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  13337: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/13337",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  14853: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/14853",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  15257: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/15257",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  15259: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/15259",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  16116: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/16116",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  16602: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/16602",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  16688: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/16688",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  16888: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/16888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  17069: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/17069",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  17117: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/17117",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  17180: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/17180",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  17217: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/17217",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  19011: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/19011",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  19191: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/19191",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  20993: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20993",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  21223: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/21223",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  22776: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/22776",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  23295: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/23295",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  25925: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/25925",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  28518: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/28518",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  29548: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/29548",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  30088: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/30088",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  32769: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/32769",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  33033: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/33033",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  33133: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/33133",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  33333: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/33333",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  33469: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/33469",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  33979: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/33979",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  34504: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/34504",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  35443: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/35443",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  41923: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/41923",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  42261: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42261",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  42431: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42431",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  42801: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/42801",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  43419: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/43419",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  44787: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/44787",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  45510: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/45510",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  47763: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/47763",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  49049: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/49049",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  49088: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/49088",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  49321: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/49321",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  49797: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/49797",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  50005: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/50005",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  50006: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/50006",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  55556: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/55556",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  56789: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/56789",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  61803: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/61803",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  62049: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/62049",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  62050: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/62050",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  62320: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/62320",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  62621: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/62621",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  62850: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/62850",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  65349: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/65349",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  65450: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/65450",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  66665: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/66665",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  70700: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/70700",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  71111: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/71111",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  71402: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/71402",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  73114: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/73114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  73799: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/73799",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  75338: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/75338",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  75512: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/75512",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  75513: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/75513",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  78110: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/78110",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  78281: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/78281",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  80096: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/80096",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  81224: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/81224",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  83144: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/83144",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  83872: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/83872",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  88817: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88817",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  88819: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/88819",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  90001: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/90001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  91120: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/91120",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  92278: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/92278",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  96371: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/96371",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  96970: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/96970",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  97435: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/97435",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  97741: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/97741",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  98867: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/98867",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  98985: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/98985",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  101010: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/101010",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  102031: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/102031",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  105105: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/105105",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  111000: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/111000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  112358: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/112358",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  119139: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/119139",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  123456: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/123456",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  132902: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/132902",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  175177: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/175177",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  175188: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/175188",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  175200: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/175200",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  190415: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/190415",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  192940: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/192940",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  202020: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/202020",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  205205: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/205205",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  212013: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/212013",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  222222: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/222222",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  247253: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/247253",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  309075: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/309075",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  313313: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/313313",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  322202: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/322202",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  327126: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/327126",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  330844: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/330844",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  355110: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/355110",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  355113: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/355113",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  360890: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/360890",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  381931: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/381931",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  381932: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/381932",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  444444: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/444444",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  552981: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/552981",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  555666: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/555666",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  641230: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/641230",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  651940: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/651940",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  666888: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/666888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  723107: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/723107",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  761412: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/761412",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  810180: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/810180",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  923018: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/923018",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  984122: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/984122",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  984123: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/984123",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  999999: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/999999",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1398243: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1398243",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2206132: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2206132",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2702128: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2702128",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3397901: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3397901",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  4457845: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4457845",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10241024: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10241024",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  10241025: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/10241025",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  11145513: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/11145513",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  12227332: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/12227332",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  19880818: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/19880818",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  20180427: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20180427",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  20180430: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20180430",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  20201022: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20201022",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  20240603: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20240603",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  20241133: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/20241133",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  22052002: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/22052002",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  28122024: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/28122024",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  37084624: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/37084624",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  111557560: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/111557560",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  666666666: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/666666666",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  888888888: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/888888888",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  974399131: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/974399131",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  994873017: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/994873017",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1020352220: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1020352220",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1273227453: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1273227453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1313161560: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1313161560",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1313161573: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1313161573",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1350216234: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1350216234",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1380012617: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1380012617",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1417429182: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1417429182",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1444673419: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1444673419",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1482601649: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1482601649",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1523903251: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1523903251",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1564830818: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1564830818",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1660990954: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1660990954",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1666700001: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1666700001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1666900000: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1666900000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  1666900001: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/1666900001",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2046399126: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2046399126",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  3448148188: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/3448148188",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  28872323069: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/28872323069",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  37714555429: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/37714555429",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  111551119090: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/111551119090",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  123420001114: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/123420001114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  2716446429837000: {
+    rpcs: [
+      {
+        url: "https://lb.routeme.sh/rpc/evm/2716446429837000",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+    ],
+  },
+  5124: {
+    rpcs: [
+      {
+        url: "https://testnet-1.seismictest.net/rpc",
+        tracking: "none",
+        trackingDetails: "No user tracking or data collection",
+      },
+    ],
+  },
+  4663: {
+    rpcs: [
+      "https://rpc.mainnet.chain.robinhood.com",
+      {
+        url: "https://robinhood.rpc.blxrbdn.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.bloxroute,
+      },
+      {
+        url: "https://robinhood-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://robinhood-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "https://robinhood.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "wss://robinhood.api.pocket.network",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt,
+      },
+      {
+        url: "https://lb.routeme.sh/rpc/evm/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://rpc.nodeflare.app/robinhood/public",
+        tracking: "none",
+        trackingDetails: privacyStatement.nodeflare,
+      },
+      {
+        url: "https://rpc.degenprotocol.io/robinhood",
+        tracking: "none",
+        trackingDetails: privacyStatement.degenprotocol,
+      },
+      {
+        url: "https://rpc-robinhood.blockmachine.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.blockmachine,
+      },
+      {
+        url: "https://rpc-robinhood.globalstake.io",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "wss://rpc-robinhood.globalstake.io/ws",
+        tracking: "none",
+        trackingDetails: privacyStatement.GlobalStake,
+      },
+      {
+        url: "https://robinhood-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+      {
+        url: "https://robinhood.daybreak-rpc.network",
+        tracking: "limited",
+        trackingDetails: privacyStatement.daybreak,
+      },
+    ],
+  },
+  46630: {
+    rpcs: [
+      "https://rpc.testnet.chain.robinhood.com",
+      {
+        url: "https://robinhood-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://robinhood-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+      {
+        url: "wss://robinhood-sepolia-rpc.publicnode.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
+  102030: {
+    rpcs: [
+      {
+        url: "https://creditcoin.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+   102031: {
+    rpcs: [
+      {
+        url: "https://creditcoin-testnet.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  36900: {
+    rpcs: [
+      {
+        url: "https://adi.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  3343: {
+    rpcs: [
+      {
+        url: "https://edge.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  5734951: {
+    rpcs: [
+      {
+        url: "https://jovay.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  6122: {
+    rpcs: [
+      {
+        url: "https://tea.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  2910: {
+    rpcs: [
+      {
+        url: "https://morph-hoodi.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  73571: {
+    rpcs: [
+      {
+        url: "https://explorer.primevertexlabs.com.mx/rpc",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
+      {
+        url: "wss://explorer-ws.primevertexlabs.com.mx",
+        tracking: "none",
+        trackingDetails: privacyStatement.seleman,
+      },
+    ],
+  },
+  72020: {
+    rpcs: [
+      {
+        url: "https://rpc.eavscan.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.eav7,
+      },
+    ],
+  },
+  13113: {
+    rpcs: [
+      {
+        url: "https://rpc.rannta.com/",
+        tracking: "none",
+        trackingDetails:
+          "RANNTA X-Chain public RPC does not track users or correlate RPC requests with individual users. No advertising or third-party analytics are used on the public RPC endpoint. https://rannta.com/privacy",
+      },
+    ],
+  },
+  101089: {
+    rpcs: ["https://evm-rpc-testnet.xitchain.com"],
+  },
+  6736: {
+    rpcs: ["https://api.windcrypto.com/rpc"],
   },
 };
 
-const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
-
-export default allExtraRpcs;
+export default extraRpcs;

@@ -1,19 +1,22 @@
-import allExtraRpcs from "../constants/extraRpcs.js";
+import allExtraRpcs, { privacyStatement } from "../constants/extraRpcs.js";
+import { rpcProviders } from "../constants/rpcProviders.js";
+import { providerRpcChainIds } from "../constants/providerRpcs.js";
 import chainIds from "../constants/chainIds.js";
 import fetch from "node-fetch";
 import { overwrittenChains } from "../constants/additionalChainRegistry/list.js";
+import { isTestnet } from "./index.js";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const cache = {}
+const cache = {};
 export const fetchWithCache = async (url) => {
-  if(cache[url]){
-    return cache[url]
+  if (cache[url]) {
+    return cache[url];
   }
   const data = await fetch(url).then((res) => res.json());
-  cache[url] = data
-  return data
-}
+  cache[url] = data;
+  return data;
+};
 
 function removeEndingSlashObject(rpc) {
   if (typeof rpc === "string") {
@@ -32,6 +35,10 @@ function removeEndingSlash(rpc) {
   return rpc.endsWith("/") ? rpc.substr(0, rpc.length - 1) : rpc;
 }
 
+// providers exposing one public endpoint per chain id, paired with the verified
+// chain list from scripts/generate-provider-rpcs.mjs
+const verifiedProviders = rpcProviders.map((p) => ({ ...p, chains: new Set(providerRpcChainIds[p.key] ?? []) }));
+
 export function populateChain(chain, chainTvls) {
   let rpcs = (allExtraRpcs[chain.chainId]?.rpcs ?? []).map(removeEndingSlashObject);
 
@@ -43,6 +50,28 @@ export function populateChain(chain, chainTvls) {
     }
   }
 
+  // For each provider: backfill privacy metadata onto urls other sources contributed
+  // without it, then add the public endpoint if this chain has no url for it yet.
+  // Existing values are never overwritten, so hand-written entries keep their own.
+  for (const provider of verifiedProviders) {
+    const trackingDetails = privacyStatement[provider.key];
+    let matched = false;
+
+    rpcs = rpcs.map((rpc) => {
+      if (!rpc.url.includes(provider.host)) return rpc;
+      matched = true;
+      if (rpc.tracking !== undefined && rpc.trackingDetails !== undefined) return rpc;
+      return {
+        ...rpc,
+        tracking: rpc.tracking ?? provider.tracking,
+        trackingDetails: rpc.trackingDetails ?? trackingDetails,
+      };
+    });
+
+    if (matched || !provider.chains.has(chain.chainId)) continue;
+    rpcs = [...rpcs, { url: provider.rpcUrl(chain.chainId), tracking: provider.tracking, trackingDetails }];
+  }
+
   chain.rpc = rpcs;
 
   const chainSlug = chainIds[chain.chainId];
@@ -50,13 +79,11 @@ export function populateChain(chain, chainTvls) {
   if (chainSlug !== undefined) {
     const defiChain = chainTvls.find((c) => c.name.toLowerCase() === chainSlug);
 
-    return defiChain === undefined
-      ? chain
-      : {
-          ...chain,
-          tvl: defiChain.tvl,
-          chainSlug,
-        };
+    return {
+      ...chain,
+      ...(defiChain !== undefined && { tvl: defiChain.tvl }),
+      chainSlug,
+    };
   }
 
   return chain;
@@ -100,10 +127,55 @@ export function arrayMove(array, fromIndex, toIndex) {
   return newArray;
 }
 
+function getBaseName(name) {
+  if (!name) return "";
+
+  return name
+    .replace(/\s+(Sepolia|Goerli|Testnet|Mumbai|Fuji|Amoy|Hoodi)(\s+.*)?$/i, "")
+    .replace(/\s+Test\s+Network$/i, "")
+    .replace(/\s+Mainnet$/i, "")
+    .replace(/\s+(One|C-Chain)$/i, "")
+    .trim();
+}
+
+function handleTestnets(activeChains) {
+  const parentChainTvls = {};
+  
+  // map testnets to their parent's TVL
+  activeChains.forEach((chain) => {
+    if (chain.tvl && !isTestnet(chain)) {
+      const baseName = getBaseName(chain.name);
+      if (!parentChainTvls[baseName] || parentChainTvls[baseName] < chain.tvl) {
+        parentChainTvls[baseName] = chain.tvl;
+      }
+    }
+  });
+
+  return activeChains.map((chain) => {
+    const isTestnetChain = isTestnet(chain);
+
+    if (isTestnetChain && !chain.tvl) {
+      const baseName = getBaseName(chain.name);
+      const parentTvl = parentChainTvls[baseName] || 0;
+
+      return {
+        ...chain,
+        isTestnet: true,
+        tvl: parentTvl,
+      };
+    }
+
+    return {
+      ...chain,
+      isTestnet: isTestnetChain,
+    };
+  });
+}
+
 export async function generateChainData() {
   const [chains, chainTvls] = await Promise.all([
     fetchWithCache("https://chainid.network/chains.json"),
-    fetchWithCache("https://api.llama.fi/chains")
+    fetchWithCache("https://api.llama.fi/chains"),
   ]);
 
   const overwrittenIds = overwrittenChains.reduce((acc, curr) => {
@@ -111,13 +183,23 @@ export async function generateChainData() {
     return acc;
   }, {});
 
-  const sortedChains = chains
+  const activeChains = chains
     .filter((c) => c.status !== "deprecated" && !overwrittenIds[c.chainId])
     .concat(overwrittenChains)
-    .map((chain) => populateChain(chain, chainTvls))
-    .sort((a, b) => {
-      return (b.tvl ?? 0) - (a.tvl ?? 0);
-    });
+    .map((chain) => populateChain(chain, chainTvls));
+
+  const chainsWithTestnetTvls = handleTestnets(activeChains);
+
+  const sortedChains = chainsWithTestnetTvls.sort((a, b) => {
+    // First: separate mainnets and testnets (mainnets first)
+    if (!a.isTestnet && b.isTestnet) return -1;
+    if (a.isTestnet && !b.isTestnet) return 1;
+
+    // Second: within same type (mainnet or testnet), sort by TVL (descending)
+    const aTvl = a.tvl ?? 0;
+    const bTvl = b.tvl ?? 0;
+    return bTvl - aTvl;
+  });
 
   return sortedChains;
 }

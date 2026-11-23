@@ -1,0 +1,35 @@
+export const data = {
+  name: "DogeOS Chikyū Testnet",
+  chain: "DogeOS",
+  rpc: [
+    "https://rpc.testnet.dogeos.com",
+  ],
+  faucets: [
+    "https://faucet.testnet.dogeos.com",
+    "https://faucets.chain.link/dogeos-testnet-chikyu",
+  ],
+  nativeCurrency: {
+    name: "Dogecoin",
+    symbol: "DOGE",
+    decimals: 18,
+  },
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://www.dogeos.com",
+  shortName: "dogeos-chikyu",
+  chainId: 6281971,
+  networkId: 6281971,
+  icon: "dogeos",
+  explorers: [
+    {
+      name: "DogeOS Chikyū Testnet Explorer",
+      url: "https://blockscout.testnet.dogeos.com",
+      icon: "blockscout",
+      standard: "EIP3091",
+    },
+    {
+      name: "L2Scan",
+      url: "https://dogeos-testnet.l2scan.co",
+      standard: "EIP3091",
+    },
+  ],
+};

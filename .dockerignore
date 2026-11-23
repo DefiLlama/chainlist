@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+.next
+out
+build.log
+.env
+.env.*
+Dockerfile
+.dockerignore

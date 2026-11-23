@@ -1,0 +1,27 @@
+name: Check Duplicate Keys
+
+on:
+  pull_request:
+    paths:
+      - 'constants/extraRpcs.js'
+      - 'constants/chainIds.js'
+  push:
+    branches:
+      - main
+    paths:
+      - 'constants/extraRpcs.js'
+      - 'constants/chainIds.js'
+
+jobs:
+  check-duplicates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '18'
+
+      - name: Check for duplicate keys
+        run: node tests/check-duplicate-keys.js

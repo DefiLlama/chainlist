@@ -9,13 +9,13 @@ import { useChain } from "../../stores";
 import useAccount from "../../hooks/useAccount";
 import useAddToNetwork from "../../hooks/useAddToNetwork";
 
-export default function Chain({ chain, buttonOnly, lang }) {
+export default function Chain({ chain, autoExpand = false, buttonOnly, lang }) {
   const t = useTranslations("Common", lang);
 
   const router = useRouter();
 
   const icon = React.useMemo(() => {
-    return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg` : "/unknown-logo.png";
+    return chain.chainSlug ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}` : "/unknown-logo.png";
   }, [chain]);
 
   const chainId = useChain((state) => state.id);
@@ -29,7 +29,7 @@ export default function Chain({ chain, buttonOnly, lang }) {
     }
   };
 
-  const showAddlInfo = chain.chainId === chainId;
+  const showAddlInfo = autoExpand || chain.chainId === chainId;
 
   const { data: accountData } = useAccount();
 

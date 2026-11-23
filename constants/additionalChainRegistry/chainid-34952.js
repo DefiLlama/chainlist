@@ -1,0 +1,28 @@
+export const data = {
+  "name": "Morph Tachyon Testnet",
+  "chain": "Morph Tachyon",
+  "rpc": [
+    "https://testnet-api.popdex.xyz/api/v1/web3/rpc"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "BGB",
+    "symbol": "BGB",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" }
+  ],
+  "infoURL": "https://popdex.xyz",
+  "shortName": "morphtachyon testnet",
+  "chainId": 34952,
+  "networkId": 34952,
+  "explorers": [
+    {
+      "name": "Morph Tachyon Testnet Explorer",
+      "url": "https://testnet-app.popdex.xyz/explorer",
+      "standard": "EIP3091"
+    }
+  ],
+  "testnet": true
+}

@@ -1,0 +1,20 @@
+export const data = {
+  "name": "D Mainnet",
+  "chain": "Dchain",
+  "rpc": [
+    "https://eth.platformd.io"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Dchain",
+    "symbol": "DT",
+    "decimals": 18
+  },
+  "features": [{ "name": "EIP1559" }],
+  "infoURL": "https://platformd.io",
+  "shortName": "d-mainnet",
+  "chainId": 433,
+  "networkId": 433,
+  "icon": "d-chain",
+  "explorers": []
+}

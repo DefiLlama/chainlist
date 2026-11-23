@@ -1,0 +1,25 @@
+export const data = {
+  name: "Winmar Chain",
+  chain: "WMC",
+  rpc: ["https://rpc.winmarchain.io"],
+  faucets: [],
+  nativeCurrency: {
+    name: "Winmar Coin",
+    symbol: "WMC",
+    decimals: 18,
+  },
+  features: [{ name: "EIP155" }],
+  infoURL: "https://winmarchain.io",
+  shortName: "winmar",
+  chainId: 12142816,
+  networkId: 12142816,
+  chainSlug: "winmar",
+  icon: "winmar",
+  explorers: [
+    {
+      name: "Winmar Chain Explorer",
+      url: "https://scan.winmarchain.io",
+      standard: "EIP3091",
+    },
+  ],
+};

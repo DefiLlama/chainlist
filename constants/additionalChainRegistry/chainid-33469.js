@@ -1,0 +1,24 @@
+export const data = {
+  "name": "Zilliqa 2 Devnet",
+  "chain": "ZIL",
+  "rpc": ["https://api.zq2-devnet.zilliqa.com"],
+  "faucets": ["https://faucet.zq2-devnet.zilliqa.com"],
+  "nativeCurrency": {
+    "name": "Zilliqa",
+    "symbol": "ZIL",
+    "decimals": 18
+  },
+  "infoURL": "https://www.zilliqa.com/",
+  "shortName": "zq2-devnet",
+  "features": [{ "name": "EIP155" }],
+  "chainId": 33469,
+  "networkId": 33469,
+  "icon": "zilliqa",
+  "explorers": [
+    {
+      "name": "Zilliqa 2 Devnet Explorer",
+      "url": "https://otterscan.zq2-devnet.zilliqa.com",
+      "standard": "EIP3091"
+    }
+  ]
+}

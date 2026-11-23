@@ -1,0 +1,27 @@
+export const data = {
+  "name": "Morph Tachyon",
+  "chain": "Morph Tachyon",
+  "rpc": [
+    "https://api.popdex.xyz/api/v1/web3/rpc"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "BGB",
+    "symbol": "BGB",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" }
+  ],
+  "infoURL": "https://popdex.xyz",
+  "shortName": "morphtachyon",
+  "chainId": 2184,
+  "networkId": 2184,
+  "explorers": [
+    {
+      "name": "Morph Tachyon Explorer",
+      "url": "https://app.popdex.xyz/explorer",
+      "standard": "EIP3091"
+    }
+  ]
+}

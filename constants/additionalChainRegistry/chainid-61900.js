@@ -1,0 +1,23 @@
+  export const data = {
+  "name": "Mova Mainnet",
+  "chain": "MOVA",
+  "rpc": [
+    "https://rpc.movachain.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "MOVA Mainnet GasCoin",
+    "symbol": "MOVA",
+    "decimals": 18
+  },
+  "infoURL": "https://movachain.com",
+  "shortName": "mova",
+  "chainId": 61900,
+  "networkId": 61900,
+  "icon": "mova",
+  "explorers": [{
+    "name": "movascan",
+    "url": "https://scan.movachain.com",
+    "standard": "EIP3091"
+  }]
+}

@@ -1,0 +1,24 @@
+export const data = {
+  name: "Haus Chain Testnet",
+  chain: "HAUS",
+  rpc: ["https://rpc-testnet.hausserver.xyz"],
+  faucets: ["https://faucet-testnet.hausserver.xyz"],
+  nativeCurrency: {
+    name: "Haus",
+    symbol: "HAUS",
+    decimals: 18,
+  },
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://www.hausserver.xyz",
+  shortName: "t-haus",
+  chainId: 2443,
+  networkId: 2443,
+  icon: "haus",
+  explorers: [
+    {
+      name: "Haus Chain Testnet Explorer",
+      url: "https://explorer-testnet.hausserver.xyz",
+      standard: "EIP3091",
+    },
+  ],
+};

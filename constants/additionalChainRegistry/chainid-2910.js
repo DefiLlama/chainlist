@@ -1,0 +1,24 @@
+export const data = {
+  name: "Morph Hoodi",
+  chain: "ETH",
+  rpc: ["https://rpc-hoodi-bgw.morph.network", "https://rpc-hoodi.morph.network"],
+  faucets: [],
+  nativeCurrency: {
+    name: "Ether",
+    symbol: "ETH",
+    decimals: 18,
+  },
+  features: [{ name: "EIP155" }, { name: "EIP1559" }],
+  infoURL: "https://www.morph.network",
+  shortName: "morph",
+  chainId: 2910,
+  networkId: 2910,
+  icon: "https://icons.llamao.fi/icons/chains/rsz_morph.jpg",
+  explorers: [
+    {
+      name: "Morph Hoodi Testnet Explorer",
+      url: "https://explorer-hoodi.morph.network",
+      standard: "EIP3091",
+    },
+  ],
+};

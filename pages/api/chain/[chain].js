@@ -1,5 +1,4 @@
-import { fetcher, populateChain, arrayMove } from "../../../utils/fetch";
-import { llamaNodesRpcs } from "../../../constants/llamaNodesRpcs";
+import { fetcher, populateChain } from "../../../utils/fetch";
 import { overwrittenChains } from "../../../constants/additionalChainRegistry/list";
 
 export default async function handler(req, res) {
@@ -23,16 +22,6 @@ export default async function handler(req, res) {
     }
 
     chain = populateChain(chain, chainTvls);
-
-    const llamaNodesRpc = llamaNodesRpcs[chain.chainId] ?? null;
-
-    if (llamaNodesRpc) {
-      const llamaNodesRpcIndex = chain.rpc.findIndex((rpc) => rpc.url === llamaNodesRpc.rpcs[0].url);
-
-      if (llamaNodesRpcIndex || llamaNodesRpcIndex === 0) {
-        chain.rpc = arrayMove(chain.rpc, llamaNodesRpcIndex, 0);
-      }
-    }
 
     return res.status(200).json(chain);
   }
