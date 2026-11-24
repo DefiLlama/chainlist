@@ -152,6 +152,7 @@ export default {
   "2152": "findora",
   "2222": "kava",
   "2288": "moca",
+  "2325": "mcn-blockchain",
   "2332": "soma",
   "2345": "goat",
   "2355": "silicon zkevm",
