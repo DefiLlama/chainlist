@@ -9,8 +9,8 @@ export const data = {
   },
   infoURL: "https://nesa.ai",
   shortName: "nesa",
-  chainId: 41443,
-  networkId: 41443,
+  chainId: 41444,
+  networkId: 41444,
   icon: "nesa",
   explorers: [
     {
