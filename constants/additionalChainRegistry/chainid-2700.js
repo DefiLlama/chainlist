@@ -3,8 +3,7 @@ export const data = {
     "chain": "ORB",
     "icon": "https://cdn.orbinum.io/assets/isotipo-black.png",
     "rpc": [
-      "https://rpc-1.testnet.orbinum.io",
-      "https://rpc-2.testnet.orbinum.io"
+      "https://rpc.testnet.orbinum.io"
     ],
     "faucets": [
       "https://faucet.orbinum.network"
