@@ -4873,6 +4873,11 @@ export const extraRpcs = {
         tracking: "yes",
         trackingDetails: privacyStatement.Chainlink,
       },
+      {
+        url: "https://hyperevm-testnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1001: {
@@ -5166,6 +5171,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://xlayer-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1287: {
@@ -5365,6 +5375,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://mocachain-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   222888: {
@@ -5378,6 +5393,11 @@ export const extraRpcs = {
         url: "wss://moca-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://mocachain-testnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -10961,6 +10981,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.sentio,
       },
+      {
+        url: "https://katana-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   737373: {
@@ -10974,6 +10999,11 @@ export const extraRpcs = {
         url: "wss://katana-testnet.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "https://katana-bokuto.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -12158,6 +12188,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.nodeflare,
       },
+      {
+        url: "https://hyperevm-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1007: {
@@ -12364,6 +12399,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/1952",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://xlayer-testnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -12877,6 +12917,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/6343",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://megaeth-timothy.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -13570,6 +13615,11 @@ export const extraRpcs = {
         url: "https://lb.routeme.sh/rpc/evm/32769",
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
+      },
+      {
+        url: "https://zilliqa-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
       },
     ],
   },
@@ -14660,6 +14710,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
+      {
+        url: "https://lumia-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
     ],
   },
   1020352220: {
@@ -15060,6 +15115,42 @@ export const extraRpcs = {
   },
   6736: {
     rpcs: ["https://api.windcrypto.com/rpc"],
+  },
+  2030232745: {
+    rpcs: [
+      {
+        url: "https://lumia-beam.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  5888: {
+    rpcs: [
+      {
+        url: "https://mantrachain-mainnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  5887: {
+    rpcs: [
+      {
+        url: "https://mantrachain-dukongevm.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
+  },
+  33101: {
+    rpcs: [
+      {
+        url: "https://zilliqa-testnet.gateway.tatum.io",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tatum,
+      },
+    ],
   },
 };
 
