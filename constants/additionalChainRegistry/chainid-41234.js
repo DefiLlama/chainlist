@@ -1,0 +1,32 @@
+export const data = {
+  "name": "Bluewolfchain Mainnet",
+  "chain": "BWSC",
+  "rpc": [
+    "https://syncblock.network/evm"
+  ],
+  "features": [
+    {
+      "name": "EIP155"
+    },
+    {
+      "name": "EIP1559"
+    }
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Bluewolfchain",
+    "symbol": "BWSC",
+    "decimals": 18
+  },
+  "infoURL": "https://www.bluewolfchain.com",
+  "shortName": "bwsc",
+  "chainId": 41234,
+  "networkId": 41234,
+  "explorers": [
+    {
+      "name": "Bluewolfchain Explorer",
+      "url": "https://syncblock.network/evm/explorer",
+      "standard": "EIP3091"
+    }
+  ]
+}
