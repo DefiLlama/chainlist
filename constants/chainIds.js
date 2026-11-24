@@ -193,6 +193,7 @@ export default {
   "5887": "flynet",
   "6001": "bouncebit",
   "6699": "oxfun",
+  "6714": "anubis",
   "6880": "mtt-network",
   "6900": "nibiru",
   "6969": "tombchain",

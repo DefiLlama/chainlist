@@ -11,15 +11,19 @@ export const data ={
     "decimals": 18
   },
   "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://docs.anubispace.org",
+  "infoURL": "https://anubischain.ai",
   "shortName": "anubi",
   "chainId": 6714,
   "networkId": 6714,
   "icon": "https://browser.anubispace.org/images/anubis_icon_800.png",
   "explorers": [{
-    "name": "browser",
+    "name": "Blockscout",
     "url": "https://browser.anubispace.org",
     "icon": "https://browser.anubispace.org/images/anubis_icon_800.png",
+    "standard": "EIP3091"
+  }, {
+    "name": "AnubisScan",
+    "url": "https://anubisscan.io",
     "standard": "EIP3091"
   }]
 }
