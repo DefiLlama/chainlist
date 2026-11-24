@@ -19,6 +19,6 @@ export const data = {
     }
   ],
   "faucets": [],
-  "features": ["EVM Compatible", "MetaMask Supported"],
+  "features": [{ "name": "EVM Compatible" }, { "name": "MetaMask Supported" }],
   "icon": ""
 };
