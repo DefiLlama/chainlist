@@ -1,0 +1,29 @@
+export const data = {
+  "name": "MCN Blockchain",
+  "chain": "MCN",
+  "rpc": [
+    "https://rpc.mcnblockchain.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "MCN",
+    "symbol": "MCN",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
+  "infoURL": "https://mcnblockchain.com",
+  "shortName": "mcn",
+  "chainId": 2325,
+  "networkId": 2325,
+  "icon": "mcn-blockchain",
+  "explorers": [
+    {
+      "name": "MCNScan",
+      "url": "https://mcnscan.org",
+      "standard": "EIP3091"
+    }
+  ]
+}
