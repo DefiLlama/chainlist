@@ -1,0 +1,25 @@
+export const data = {
+  "name": "Bleno Network",
+  "chain": "BLENO",
+  "icon": "bleno",
+  "rpc": [
+    "https://bleno.com.br/hub/rpc"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Bleno",
+    "symbol": "BLENO",
+    "decimals": 18
+  },
+  "infoURL": "https://bleno.com.br/hub/welcome.html",
+  "shortName": "bleno",
+  "chainId": 15112026,
+  "networkId": 15112026,
+  "explorers": [
+    {
+      "name": "BlenoScan",
+      "url": "https://bleno.com.br",
+      "standard": "EIP3091"
+    }
+  ]
+};
