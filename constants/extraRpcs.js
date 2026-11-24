@@ -15328,16 +15328,6 @@ export const extraRpcs = {
     }],
   },
 
-  5042: {
-    rpcs: [
-      {
-        url: "https://arc.drpc.org",
-        tracking: "none",
-        trackingDetails: privacyStatement.drpc,
-      },
-    ],
-  },
-
   6736: {
     rpcs: ["https://api.windcrypto.com/rpc"],
   },
