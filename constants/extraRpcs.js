@@ -7309,11 +7309,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://linea.decubate.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.decubate,
-      },
-      {
         url: "https://rpc.owlracle.info/linea/70d38ce1826c4a60bb2a8e05a6c8b20f",
         tracking: "limited",
         trackingDetails: privacyStatement.owlracle,
