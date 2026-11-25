@@ -6546,7 +6546,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.routemesh,
       },
       "https://rpc.scroll.io",
-      "https://rpc-scroll.icecreamswap.com",
       {
         url: "https://scroll-mainnet.public.blastapi.io/",
         tracking: "limited",
@@ -6576,11 +6575,6 @@ export const extraRpcs = {
         url: "https://scroll-public.nodies.app",
         tracking: "limited",
         trackingDetails: privacyStatement.nodies,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/scroll/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://rpc.ankr.com/scroll",
