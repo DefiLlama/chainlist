@@ -289,6 +289,8 @@ export const privacyStatement = {
     "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
   ethras:
     "Ethras does not store RPC request bodies, wallet addresses or signed transactions in application request logs. Client IPs are used temporarily for rate limiting. https://ethras.org/privacy",
+  pagachain:
+    "The official Pagachain public RPC does not keep application-level request logs and does not use RPC traffic for advertising or profiling. Client IP addresses are processed by Cloudflare only for standard rate limiting and abuse protection.",
 };
 
 export const extraRpcs = {
@@ -15060,6 +15062,15 @@ export const extraRpcs = {
   },
   6736: {
     rpcs: ["https://api.windcrypto.com/rpc"],
+  },
+  3690369: {
+    rpcs: [
+      {
+        url: "https://pagachain.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.pagachain,
+      },
+    ],
   },
 };
 
