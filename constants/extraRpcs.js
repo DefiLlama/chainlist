@@ -959,11 +959,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.nodies,
       },
       {
-        url: "https://polygon-amoy.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://polygon-amoy.api.onfinality.io/public",
         tracking: "limited",
         trackingDetails: privacyStatement.onfinality,
@@ -6407,7 +6402,6 @@ export const extraRpcs = {
     ],
   },
   99999: {
-    rpcs: ["https://rpc.uschain.network"],
   },
   100000: {
     rpcs: [],
@@ -7396,11 +7390,6 @@ export const extraRpcs = {
         url: "wss://linea-sepolia.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://linea-sepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
     ],
   },
@@ -9974,11 +9963,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.RHINO,
       },
       {
-        url: "https://berachain.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
-      {
         url: "https://berachain-mainnet.gateway.tatum.io/",
         tracking: "yes",
         trackingDetails: privacyStatement.tatum,
@@ -10280,7 +10264,6 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.routemesh,
       },
-      "https://rpc.testnet.lens.dev",
       {
         url: "https://lens-testnet.drpc.org",
         tracking: "none",
@@ -10490,11 +10473,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
-      {
-        url: "https://berachain-bepolia.therpc.io",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
-      },
     ],
   },
   919: {
@@ -10639,11 +10617,6 @@ export const extraRpcs = {
         url: "wss://tron.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
-      },
-      {
-        url: "https://tron.therpc.io/jsonrpc",
-        tracking: "limited",
-        trackingDetails: privacyStatement.therpc,
       },
       {
         url: "https://tron.api.pocket.network",
@@ -11329,11 +11302,6 @@ export const extraRpcs = {
   },
   688689: {
     rpcs: [
-      {
-        url: "https://rpc.evm.pharos.testnet.cosmostation.io",
-        tracking: "none",
-        trackingDetails: privacyStatement.Cosmostation,
-      },
     ],
   },
   1122: {
