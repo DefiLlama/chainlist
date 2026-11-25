@@ -15,6 +15,7 @@ export const data = {
     { "name": "EIP155" },
     { "name": "EIP1559" }
   ],
+  "icon": "kuspin",
   "infoURL": "https://kuspin.app",
   "shortName": "ksp",
   "chainId": 88881,
