@@ -6359,6 +6359,12 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
       },
+            {
+        url: "https://base-public-rpc.gallonconnor2.workers.dev",
+        tracking: "none",
+        trackingDetails: privacyStatement.cloudflare,
+      },
+
     ],
   },
   11235: {
