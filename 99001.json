@@ -1,9 +1,9 @@
 {
   "name": "Gogo Mainnet",
   "chain": "GOGO",
-  "icon": "https://gogoblockchain.wuaze.com/gogoimg/gogoimg.png",
+  "icon": "GOGO",
   "rpc": [
-    "https://gogoblockchain.wuaze.com/node_rpc.php"
+    "https://rpc.gogomainnet.com"
   ],
   "faucets": [],
   "nativeCurrency": {
@@ -17,7 +17,7 @@
   "explorers": [
     {
       "name": "GogoScan",
-      "url": "https://gogoblockchain.wuaze.com/explorer.php",
+      "url": "https://explorer.gogomainnet.com",
       "standard": "EIP3091"
     }
   ]
