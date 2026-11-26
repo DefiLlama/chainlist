@@ -289,6 +289,8 @@ export const privacyStatement = {
     "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
   ethras:
     "Ethras does not store RPC request bodies, wallet addresses or signed transactions in application request logs. Client IPs are used temporarily for rate limiting. https://ethras.org/privacy",
+  ethrpceval:
+    "Temporary public Ethereum JSON-RPC endpoint (evaluation deployment). eth_chainId is answered locally; every other JSON-RPC method is forwarded unchanged to a public upstream Ethereum node provider. Only request metadata (timestamp, client IP, user-agent, HTTP method, JSON-RPC method, origin/referer) is retained for operational monitoring during the evaluation period; request bodies and signed transactions are never stored. No accounts, no cookies, no third-party analytics; no funds are held. Endpoint will be decommissioned after evaluation.",
 };
 
 export const extraRpcs = {
@@ -591,6 +593,11 @@ export const extraRpcs = {
         url: "https://ethras.org/public/ethereum",
         tracking: "limited",
         trackingDetails: privacyStatement.ethras,
+      },
+      {
+        url: "https://unable-brief-visits-hearings.trycloudflare.com",
+        tracking: "limited",
+        trackingDetails: privacyStatement.ethrpceval,
       },
     ],
   },
