@@ -1,0 +1,33 @@
+export const data = {
+  "name": "Azore Mainnet",
+  "chain": "AZE",
+  "rpc": [
+    "https://rpc-mainnet.azore.technology"
+  ],
+  "features": [
+    {
+      "name": "EIP155"
+    },
+    {
+      "name": "EIP1559"
+    }
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Azore",
+    "symbol": "AZE",
+    "decimals": 18
+  },
+  "infoURL": "https://azorescan.com",
+  "shortName": "aze",
+  "chainId": 8800,
+  "networkId": 8800,
+  "explorers": [
+    {
+      "name": "Azorescan",
+      "url": "https://azorescan.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ]
+}
