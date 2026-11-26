@@ -5061,11 +5061,6 @@ export const extraRpcs = {
       "https://mainnet.era.zksync.io",
       "https://li-fi-redirect.intustechno.workers.dev/rpc",
       {
-        url: "https://go.getblock.io/f76c09905def4618a34946bf71851542",
-        tracking: "limited",
-        trackingDetails: privacyStatement.getblock,
-      },
-      {
         url: "https://zksync.drpc.org",
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
@@ -5074,11 +5069,6 @@ export const extraRpcs = {
         url: "https://public.1rpc.io/zksync2-era",
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
-      },
-      {
-        url: "https://endpoints.omniatech.io/v1/zksync-era/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
       },
       {
         url: "https://api.zan.top/zksync-mainnet",
