@@ -289,6 +289,8 @@ export const privacyStatement = {
     "Thyme Gate's public RPC is served by Thyme Labs' own nodes through our gateway; only Polygon historical state can fall back to public archive endpoints. The client IP address is used only in memory, for per-IP rate limiting over a one-second window: it is not written to logs and is not passed to the nodes or any third party. We keep aggregate counts per chain, method and response status. Error logs can contain the parameters of a failed request, never an IP. No account, no cookies, nothing sold or shared. https://thymelabs.io/privacy",
   ethras:
     "Ethras does not store RPC request bodies, wallet addresses or signed transactions in application request logs. Client IPs are used temporarily for rate limiting. https://ethras.org/privacy",
+  solidrpc:
+    "SolidRPC records request metadata including timestamp, chain, RPC method, response status, and byte count for service operation and usage analytics, but does not log RPC request bodies or responses. Cloudflare processes IP addresses for DDoS protection and edge rate limiting. https://solidrpc.io/privacy",
 };
 
 export const extraRpcs = {
@@ -591,6 +593,11 @@ export const extraRpcs = {
         url: "https://ethras.org/public/ethereum",
         tracking: "limited",
         trackingDetails: privacyStatement.ethras,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/1",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1206,6 +1213,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
       },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/56",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
+      },
     ],
   },
   97: {
@@ -1396,6 +1408,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/avax",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/43114",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1629,6 +1646,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/pol",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/137",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -1991,6 +2013,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/arb",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/42161",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -2841,6 +2868,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/op",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/10",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -6358,6 +6390,11 @@ export const extraRpcs = {
         url: "https://rpc.driftguard.live/base",
         tracking: "none",
         trackingDetails: privacyStatement.driftguard,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/8453",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
@@ -14936,6 +14973,11 @@ export const extraRpcs = {
         url: "https://robinhood.daybreak-rpc.network",
         tracking: "limited",
         trackingDetails: privacyStatement.daybreak,
+      },
+      {
+        url: "https://rpc.solidrpc.io/public/evm/4663",
+        tracking: "limited",
+        trackingDetails: privacyStatement.solidrpc,
       },
     ],
   },
