@@ -1,0 +1,36 @@
+export const data = {
+  "name": "Azore Testnet Floripa",
+  "chain": "AZE",
+  "rpc": [
+    "https://rpc-testnet.azore.technology"
+  ],
+  "features": [
+    {
+      "name": "EIP155"
+    },
+    {
+      "name": "EIP1559"
+    }
+  ],
+  "faucets": [
+    "https://faucet.azorescan.com"
+  ],
+  "nativeCurrency": {
+    "name": "Azore",
+    "symbol": "AZE",
+    "decimals": 18
+  },
+  "infoURL": "https://azorescan.com",
+  "shortName": "aze-floripa",
+  "chainId": 88001,
+  "networkId": 88001,
+  "slip44": 1,
+  "explorers": [
+    {
+      "name": "Azorescan Floripa",
+      "url": "https://floripa.azorescan.com",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ]
+}
