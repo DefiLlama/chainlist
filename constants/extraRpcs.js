@@ -15061,6 +15061,12 @@ export const extraRpcs = {
   6736: {
     rpcs: ["https://api.windcrypto.com/rpc"],
   },
+  52401: {
+    rpcs: ["https://rpc.quinvium.com"],
+  },
+  52402: {
+    rpcs: ["https://rpc1.quinvium.com"],
+  },
 };
 
 export default extraRpcs;
