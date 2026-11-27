@@ -1,1 +1,0 @@
-constants/additionalChainRegistry/chainid-10002.js
