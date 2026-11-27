@@ -3086,11 +3086,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
       {
-        url: "https://endpoints.omniatech.io/v1/gnosis/mainnet/public",
-        tracking: "none",
-        trackingDetails: privacyStatement.omnia,
-      },
-      {
         url: "https://gnosis-rpc.publicnode.com",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
