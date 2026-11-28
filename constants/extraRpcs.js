@@ -206,8 +206,6 @@ export const privacyStatement = {
     "For rate-limiting and to prevent abuse, we collect and store the IP address of the user making the request. This data is stored for 1 month and is not shared with any third parties. https://owlracle.info/privacy",
   DTEAM:
     "We do not log, store, or track your IP, location, or personal data during RPC requests. https://dteam.tech/privacy-policy",
-  "0xRPC":
-    "We don't collect IPs, hash info, browser info, or any attributes sent by the request. See https://0xrpc.io/privacy",
   RHINO:
     "We never collect, store, or track any identifying information. Data points like request volumes and success rates are only aggregated to monitor API performance. For more details, please visit https://rhinostake.com/resources/rhino-apis-terms-conditions",
   GrandValley:
@@ -510,16 +508,6 @@ export const extraRpcs = {
         url: "https://eth.blockrazor.xyz/maxbackrun",
         tracking: "none",
         trackingDetails: privacyStatement.BlockRazor,
-      },
-      {
-        url: "https://0xrpc.io/eth",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/eth",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://rpc.owlracle.info/eth/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -4328,16 +4316,6 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.etcmc,
       },
       {
-        url: "https://0xrpc.io/etc",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/etc",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
         url: "https://ethereum-classic-mainnet.gateway.tatum.io/",
         tracking: "none",
         trackingDetails: privacyStatement.tatum,
@@ -4366,16 +4344,6 @@ export const extraRpcs = {
         url: "https://geth-mordor.etc-network.info",
         tracking: "limited",
         trackingDetails: privacyStatement.etcnetworkinfo,
-      },
-      {
-        url: "https://0xrpc.io/mordor",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/mordor",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
       },
     ],
   },
@@ -6008,16 +5976,6 @@ export const extraRpcs = {
       },
       "https://node1.mintme.com",
       "https://node.1000x.ch",
-      {
-        url: "https://0xrpc.io/mint",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/mint",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
     ],
   },
   31102: {
@@ -6749,16 +6707,6 @@ export const extraRpcs = {
         url: "wss://eth-testnet.4everland.org/ws/v1/37fa9972c1b1cd5fab542c7bdd4cde2f",
         tracking: "limited",
         trackingDetails: privacyStatement["4everland"],
-      },
-      {
-        url: "https://0xrpc.io/sep",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/sep",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://rpc.owlracle.info/sepolia/70d38ce1826c4a60bb2a8e05a6c8b20f",
@@ -10405,16 +10353,6 @@ export const extraRpcs = {
       },
       {
         url: "https://rpc.hoodi.ethpandaops.io",
-      },
-      {
-        url: "https://0xrpc.io/hoodi",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
-      },
-      {
-        url: "wss://0xrpc.io/hoodi",
-        tracking: "none",
-        trackingDetails: privacyStatement["0xRPC"],
       },
       {
         url: "https://ethereum-hoodi.gateway.tatum.io/",
